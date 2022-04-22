@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Policy</title>
+	</head>
+	<body>
+		<% files.forEach((file) => { %>
+		<h1><a href="<%= file.file  %> "
+			><%= new Intl.DateTimeFormat().format(new Date(file.released)) %></a
+		></h1>
+		<h2>Requester: <%= file.source.requester %></h2>
+		<% }) %>
+	</body>
+</html>
