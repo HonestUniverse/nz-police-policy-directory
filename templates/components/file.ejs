@@ -1,0 +1,10 @@
+<li>
+	<h2>
+		<a href="<%= file.file  %> "><%= file.file %></a>
+	</h2>
+	<p>Requested: <%= new Intl.DateTimeFormat().format(new Date(file.released)) %></p>
+	<p>Requester: <%= file.source.requester %></p>
+	<% if (file.source.url) { %>
+	<p>Source: <a href="<%= file.source.url %>"><%= file.source.name %></a></p>
+	<% } %>
+</li>

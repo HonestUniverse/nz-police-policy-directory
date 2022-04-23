@@ -80,12 +80,12 @@ switch (process.env.MODE) {
 }
 
 async function checkPolicy(entry: Dirent, masterList: Record<string, Policy>) {
-	const dir = await readdir(`./files/${entry.name}`);
+	const dir = await readdir(`./policies/${entry.name}`);
 
 	if (dir.indexOf('data.json') === -1) return;
 
 	const data: Policy = (
-		await import(`./files/${entry.name}/data.json`, {
+		await import(`./policies/${entry.name}/data.json`, {
 			assert: {
 				type: 'json',
 			},
@@ -96,7 +96,7 @@ async function checkPolicy(entry: Dirent, masterList: Record<string, Policy>) {
 }
 
 const result = (async () => {
-	const dir = await readdir('./files', {
+	const dir = await readdir('./policies', {
 		withFileTypes: true,
 	});
 
@@ -118,7 +118,7 @@ const result = (async () => {
 
 		config.plugins!.push(
 			new CopyPlugin({
-				patterns: [{ from: `./files/${key}`, to: `./${key}` }],
+				patterns: [{ from: `./policies/${key}`, to: `./${key}` }],
 			}),
 			new HtmlWebpackPlugin({
 				filename: `${key}/index.html`,
