@@ -26,7 +26,7 @@ const config: webpack.Configuration = {
 	mode: process.env.MODE === 'development' ? 'development' : 'production',
 	entry: {
 		main: `${entryPath}/js/index.ts`,
-		style: `${entryPath}/css/style.scss`,
+		//style: `${entryPath}/css/style.scss`,
 	},
 	output: {
 		path: distPath,
