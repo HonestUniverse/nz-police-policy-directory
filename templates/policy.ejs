@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Policy</title>
-	</head>
+	<%- include('components/head', { title }); %>
 	<body>
-		<% files.forEach((file) => { %>
-		<h1><a href="<%= file.file  %> "
-			><%= new Intl.DateTimeFormat().format(new Date(file.released)) %></a
-		></h1>
-		<h2>Requester: <%= file.source.requester %></h2>
-		<% }) %>
+		<%- include('components/header') %>
+		<main>
+			<h2><%= title %></h2>
+			<p><%= type %></p>
+			<ol>
+				<% files.forEach((file) => { %> <%- include('components/file', { file }) %> <% }) %>
+			</ol>
+		</main>
+		<%- include('components/footer') %>
 	</body>
 </html>
