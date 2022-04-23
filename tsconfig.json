@@ -23,7 +23,7 @@
 		"paths": {
 			"@/*": ["assets/js/*"]
 		},
-		"outDir": "../dist/assets/js"
+		"outDir": "dist/assets/js"
 	},
 	"include": ["assets/js/*"]
 }
