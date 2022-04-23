@@ -133,8 +133,6 @@ const result = (async () => {
 		);
 	});
 
-	await writeFile('./config.json', JSON.stringify(config));
-
 	return config;
 })();
 
