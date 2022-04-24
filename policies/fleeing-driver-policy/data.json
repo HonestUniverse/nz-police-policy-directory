@@ -3,80 +3,49 @@
 	"type": "Police Instructions",
 	"files": [
 		{
-			"file": "2016-12-15 Roundill 16 8540 6 Professional Distance Policy.pdf",
+			"name": "2017-10-12 Fleeing driver policy.pdf",
 			"format": "PDF (Text)",
-
-			"source": {
-				"requester": "David Horner",
-				"name": "FYI",
-				"url": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-51202"
-			},
-
-			"released": "2020-09-03T12:00:00.000+12:00"
-		},
-		{
-			"file": "2016-12-15 Roundill 16 8540 6 Professional Distance Policy.pdf",
-			"format": "PDF (Text)",
-
-			"source": {
-				"requester": "Thomas Holmes",
-				"name": "FYI",
-				"url": "https://fyi.org.nz/request/12732-fleeing-driver-and-urgent-duty-driving-policies#incoming-49533"
-			},
-
-			"released": "2020-06-29T12:00:00.000+12:00"
-		},
-		{
-			"file": "2016-12-15 Roundill 16 8540 6 Professional Distance Policy.pdf",
-			"format": "PDF (Text)",
-
-			"source": {
+			"provenance": {
+				"source": "NZ Police",
+				"method": "Released under OIA",
 				"requester": "Mark Hanna",
-				"name": "FYI",
-				"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263"
+				"published": "2017-10-12",
+				"released": "2018-03-19",
+				"retrieved": "2018-03-19",
+				"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
+				"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/11/Fleeing%20driver%20policy%20In%20force%20from%2012%20October%202017%20and%20current.pdf"
 			},
-
-			"released": "2018-03-19T12:00:00.000+12:00",
-			"period": ["2017-10-12T12:00:00.000+12:00"]
+			"version": "3.0",
+			"duration": {
+				"start": "2017-10-12",
+				"on": ["2018-03-19"],
+				"ended": true
+			},
+			"notices": [
+				{
+					"type": "Information",
+					"message": "This is an example notice"
+				}
+			]
 		},
 		{
-			"file": "2016-12-15 Roundill 16 8540 6 Professional Distance Policy.pdf",
+			"name": "2016-06-30 Fleeing driver policy.pdf",
 			"format": "PDF (Text)",
-
-			"source": {
+			"provenance": {
+				"source": "NZ Police",
+				"method": "Released under OIA",
 				"requester": "Mark Hanna",
-				"name": "FYI",
-				"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263"
+				"published": "2016-06-30",
+				"released": "2018-03-19",
+				"retrieved": "2018-03-19",
+				"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
+				"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/17/Fleeing%20driver%20policy%20In%20force%20from%2030%20June%202016.pdf"
 			},
-
-			"released": "2018-03-19T12:00:00.000+12:00",
-			"period": ["2016-06-30T12:00:00.000+12:00", "2017-10-12T12:00:00.000+12:00"]
-		},
-		{
-			"file": "2016-12-15 Roundill 16 8540 6 Professional Distance Policy.pdf",
-			"format": "PDF (Text)",
-
-			"source": {
-				"requester": "Mark Hanna",
-				"name": "FYI",
-				"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263"
-			},
-
-			"released": "2018-03-19T12:00:00.000+12:00",
-			"period": ["2016-06-15T12:00:00.000+12:00", "2016-06-30T12:00:00.000+12:00"]
-		},
-		{
-			"file": "2016-12-15 Roundill 16 8540 6 Professional Distance Policy.pdf",
-			"format": "PDF (Text)",
-
-			"source": {
-				"requester": "Mark Hanna",
-				"name": "FYI",
-				"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263"
-			},
-
-			"released": "2018-03-19T12:00:00.000+12:00",
-			"period": ["2015-07-21T12:00:00.000+12:00", "2016-06-15T12:00:00.000+12:00"]
+			"version": "3.0",
+			"duration": {
+				"start": "2016-06-30",
+				"end": "2017-10-12"
+			}
 		}
 	]
 }

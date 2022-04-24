@@ -16,8 +16,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
 import { readdir, writeFile } from 'fs/promises';
-import type { Policy } from './data';
 import type { Dirent } from 'fs';
+
+import { validatePolicy } from './schema/validate.js';
 
 const entryPath = './assets';
 const distPath = path.resolve(__dirname, '../dist');
@@ -79,18 +80,23 @@ switch (process.env.MODE) {
 		break;
 }
 
-async function checkPolicy(entry: Dirent, masterList: Record<string, Policy>) {
+async function checkPolicy(entry: Dirent, masterList: Record<string, unknown>) {
 	const dir = await readdir(`./policies/${entry.name}`);
 
 	if (dir.indexOf('data.json') === -1) return;
 
-	const data: Policy = (
+	const data: unknown = (
 		await import(`./policies/${entry.name}/data.json`, {
 			assert: {
 				type: 'json',
 			},
 		})
 	).default;
+
+	const valid = validatePolicy(data);
+	if (!valid) {
+		console.error(validatePolicy.errors);
+	}
 
 	masterList[entry.name] = data;
 }
@@ -101,7 +107,7 @@ const result = (async () => {
 	});
 
 	const promises: Promise<void>[] = [];
-	const masterList: Record<string, Policy> = {};
+	const masterList: Record<string, unknown> = {};
 
 	for (let i = 0, l = dir.length; i < l; ++i) {
 		const entry = dir[i];

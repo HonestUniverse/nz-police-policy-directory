@@ -1,0 +1,34 @@
+{
+	"title": "Policy",
+	"description": "A policy document",
+	"type": "object",
+	"properties": {
+		"title": {
+			"description": "The title of the document",
+			"type": "string"
+		},
+		"type": {
+			"description": "The type of the document",
+			"type": "string",
+			"enum": [
+				"General Instructions",
+				"Commissioner's Circular",
+
+				"Police Instructions",
+				"Police Manual",
+				"Other/Unknown"
+			]
+		},
+		"files": {
+			"description": "A list of current and historical files detailing this policy",
+			"type": "array",
+			"items": {
+				"$ref": "policy-file"
+			}
+		}
+	},
+	"required": [
+		"title",
+		"type"
+	]
+}
