@@ -1,0 +1,30 @@
+{
+	"title": "Policy Version File",
+	"description": "A file containing the content of a specific version of a policy",
+	"type": "object",
+	"properties": {
+		"name": {
+			"description": "The name of the file",
+			"type": "string"
+		},
+		"format": {
+			"description": "The format of the file",
+			"type": "string",
+			"enum": [
+				"PDF (Text)",
+				"PDF (Mixed)",
+				"PDF (Image)"
+			]
+		},
+		"provenance": {
+			"description": "The details of the file's origin",
+			"$ref": "provenance.schema.json"
+		}
+	},
+	"required": [
+		"name",
+		"format",
+		"provenance"
+	],
+	"additionalProperties": false
+}

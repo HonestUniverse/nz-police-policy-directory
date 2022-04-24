@@ -19,16 +19,18 @@
 				"Other/Unknown"
 			]
 		},
-		"files": {
-			"description": "A list of current and historical files detailing this policy",
+		"versions": {
+			"description": "A list of current and historical versions of this policy",
 			"type": "array",
 			"items": {
-				"$ref": "policy-file"
-			}
+				"$ref": "policy-version.schema.json"
+			},
+			"minItems": 1
 		}
 	},
 	"required": [
 		"title",
 		"type"
-	]
+	],
+	"additionalProperties": false
 }

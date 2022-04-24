@@ -1,0 +1,32 @@
+<% const mainFile = version.files[0]; %>
+
+<li>
+	<h2>
+		<a href="<%= mainFile.name %> "><%= mainFile.name %></a>
+	</h2>
+	<% if (mainFile.notices) { %>
+		<% mainFile.notices.forEach((notice) => { %>
+			<aside>
+				<h3><%= notice.type %></h3>
+				<p><%= notice.message %></p>
+			</aside>
+		<% }) %>
+	<% } %>
+
+	<% if (mainFile.provenance) { %>
+		<% if (mainFile.provenance.published) { %>
+			<p>Published: <%= new Intl.DateTimeFormat().format(new Date(mainFile.provenance.published)) %></p>
+		<% } else if (mainFile.provenance.released) { %>
+			<p>Released: <%= new Intl.DateTimeFormat().format(new Date(mainFile.provenance.released)) %></p>
+		<% } else if (mainFile.provenance.retrieved) { %>
+			<p>Retrieved: <%= new Intl.DateTimeFormat().format(new Date(mainFile.provenance.retrieved)) %></p>
+		<% } %>
+
+		<% if (mainFile.provenance.requester) { %>
+			<p>Requester: <%= mainFile.provenance.requester %></p>
+		<% } %>
+		<% if (mainFile.provenance.url && mainFile.provenance.method) { %>
+			<p>Source: <a href="<%= mainFile.provenance.url %>"><%= mainFile.provenance.method %></a></p>
+		<% } %>
+	<% } %>
+</li>
