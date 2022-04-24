@@ -26,7 +26,7 @@ const distPath = path.resolve(__dirname, '../dist');
 const config: webpack.Configuration = {
 	mode: process.env.MODE === 'development' ? 'development' : 'production',
 	entry: {
-		main: `${entryPath}/js/index.ts`,
+		main: `${entryPath}/js/main.ts`,
 		//style: `${entryPath}/css/style.scss`,
 	},
 	output: {
