@@ -15,9 +15,13 @@
 				"text/plain"
 			]
 		},
-		"accessibility": {
-			"description": "A list of the accessibility features that this file has or is lacking",
-			"$ref": "accessibility.schema.json"
+		"provenance": {
+			"description": "The details of the file's origin",
+			"$ref": "provenance.schema.json"
+		},
+		"original": {
+			"description": "Whether or not this file is the original file, i.e. unmodified",
+			"type": "boolean"
 		},
 		"modifications": {
 			"description": "Any modifications that have been made to the file since it was retrieved",
@@ -27,20 +31,17 @@
 			},
 			"minItems": 1
 		},
-		"original": {
-			"description": "Whether or not this file is the original file, i.e. unmodified",
-			"type": "boolean"
-		},
-		"provenance": {
-			"description": "The details of the file's origin",
-			"$ref": "provenance.schema.json"
+		"accessibility": {
+			"description": "A list of the accessibility features that this file has or is lacking",
+			"$ref": "accessibility.schema.json"
 		}
 	},
 	"required": [
 		"path",
 		"type",
 		"provenance",
-		"original"
+		"original",
+		"accessibility"
 	],
 	"not": {
 		"allOf": [
