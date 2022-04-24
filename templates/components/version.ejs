@@ -1,25 +1,77 @@
-<% const mainFile = version.files[0]; %>
+<%
+	const formatDate = (date) => new Intl.DateTimeFormat().format(date);
+	const formatDateString = (dateString) => formatDate(new Date(dateString));
+%>
 
 <li>
 	<h2>
-		<a href="<%= mainFile.name %> "><%= mainFile.name %></a>
+		<% if (version.name) { %>
+			Version <%= version.name %>
+		<% } else { %>
+			Unnamed version
+		<% } %>
 	</h2>
-	<% if (mainFile.notices) { %>
-		<% mainFile.notices.forEach((notice) => { %>
-			<aside>
-				<h3><%= notice.type %></h3>
-				<p><%= notice.message %></p>
-			</aside>
-		<% }) %>
+
+	<%
+		const { duration } = version;
+
+		const startDate = duration.start ? formatDateString(duration.start) : 'unknown';
+		const endDate = duration.end ? formatDateString(duration.end) : 'unknown';
+		const dateSpan = `${startDate} &ndash; ${endDate}`;
+	%>
+	<p><%- dateSpan %></p>
+
+	<%# If we don't have start and end dates, fill in as many of the blanks as we can %>
+	<% if (!(duration.start && duration.end)) { %>
+		<%
+			// Sort `on` dates chronologically
+			const onDates = duration.on?.map((dateString) => new Date(dateString)).sort((a, b) => a - b);
+		%>
+
+		<%# If we have `on` dates, know the policy is ended, or the policy may be current %>
+		<% if (onDates || duration.ended || !duration.end) { %>
+			<p>
+				<% if (onDates) { %>
+					<%
+						const firstDate = onDates[0];
+						const lastDate = onDates[onDates.length-1];
+
+						const showFirstDate = !duration.start;
+						const showLastDate = !duration.end && (firstDate !== lastDate || !showFirstDate);
+					%>
+					Active on
+						<% if (showFirstDate) { %>
+							<%= formatDate(firstDate) %>
+						<% } %>
+						<% if (showFirstDate && showLastDate) { %>
+							and
+						<% } %>
+						<% if (showLastDate) { %>
+							<%= formatDate(lastDate) %>
+						<% } %>
+				<% } %>
+
+				<% if (duration.ended) { %>
+					(no longer active)
+				<% } else if (!duration.end) { %>
+					(no known end date)
+				<% } %>
+			</p>
+		<% } %>
 	<% } %>
+
+	<%
+		const mainFile = version.files[0];
+	%>
+	<a href="<%= mainFile.name %> "><%= mainFile.name %></a>
 
 	<% if (mainFile.provenance) { %>
 		<% if (mainFile.provenance.published) { %>
-			<p>Published: <%= new Intl.DateTimeFormat().format(new Date(mainFile.provenance.published)) %></p>
+			<p>Published: <%= formatDateString(mainFile.provenance.published) %></p>
 		<% } else if (mainFile.provenance.released) { %>
-			<p>Released: <%= new Intl.DateTimeFormat().format(new Date(mainFile.provenance.released)) %></p>
+			<p>Released: <%= formatDateString(mainFile.provenance.released) %></p>
 		<% } else if (mainFile.provenance.retrieved) { %>
-			<p>Retrieved: <%= new Intl.DateTimeFormat().format(new Date(mainFile.provenance.retrieved)) %></p>
+			<p>Retrieved: <%= formatDateString(mainFile.provenance.retrieved) %></p>
 		<% } %>
 
 		<% if (mainFile.provenance.requester) { %>

@@ -14,12 +14,12 @@
 			"format": "date"
 		},
 		"ended": {
-			"description": "Whether or not this version of the policy is still in effect",
+			"description": "Whether or not this version of the policy is still in effect. This can be used as an alternative to `end` when a specific end date is not known",
 			"type": "boolean",
 			"enum": [true]
 		},
 		"on": {
-			"description": "One or more dates on which this version of the policy was in effect",
+			"description": "One or more dates on which this version of the policy was in effect. This can be used to provide supplementary information if either `start` and `end` is unknown, i.e. we don't have a fully defined timeframe",
 			"type": "array",
 			"minItems": 1,
 			"items": {
@@ -28,15 +28,38 @@
 			}
 		}
 	},
-	"anyOf": [
-		{ "required": ["start"] },
+
+	"allOf": [
 		{
-			"oneOf": [
+			"$comment": "We need some information so at least one property must be present",
+			"anyOf": [
+				{ "required": ["start"] },
 				{ "required": ["end"] },
-				{ "required": ["ended"] }
+				{ "required": ["ended"] },
+				{ "required": ["on"] }
 			]
 		},
-		{ "required": ["on"] }
+		{
+			"$comment": "If you have the `end` date, you don't need `ended` to tell you the policy is no longer in effect",
+			"anyOf": [
+				{
+					"not": { "required": ["ended"] }
+				},
+				{
+					"not": { "required": ["end"] }
+				}
+			]
+		},
+		{
+			"$comment": "If both `start` and `end` are present, i.e. you have a fully defined timeframe, `on` is unnecessary",
+			"not": {
+				"required": [
+					"start",
+					"end",
+					"on"
+				]
+			}
+		}
 	],
 	"additionalProperties": false
 }

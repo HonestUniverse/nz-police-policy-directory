@@ -3,8 +3,8 @@
 	"description": "A specific version of a policy",
 	"type": "object",
 	"properties": {
-		"version": {
-			"description": "The version of this instance of the policy",
+		"name": {
+			"description": "The name of this version of this instance of the policy",
 			"type": "string"
 		},
 		"duration": {
@@ -26,7 +26,7 @@
 	"anyOf": [
 		{
 			"required": [
-				"version"
+				"name"
 			]
 		},
 		{
