@@ -11,8 +11,9 @@
 			},
 			"files": [
 				{
-					"name": "2017-10-12 Fleeing driver policy.pdf",
-					"format": "PDF (Text)",
+					"path": "2017-10-12 Fleeing driver policy.pdf",
+					"type": "application/pdf",
+					"original": true,
 					"provenance": {
 						"source": "NZ Police",
 						"method": "Released under OIA",
@@ -34,8 +35,9 @@
 			},
 			"files": [
 				{
-					"name": "2016-06-30 Fleeing driver policy.pdf",
-					"format": "PDF (Text)",
+					"path": "2016-06-30 Fleeing driver policy.pdf",
+					"type": "application/pdf",
+					"original": true,
 					"provenance": {
 						"source": "NZ Police",
 						"method": "Released under OIA",

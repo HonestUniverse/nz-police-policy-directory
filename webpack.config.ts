@@ -83,10 +83,10 @@ switch (process.env.MODE) {
 async function checkPolicy(entry: Dirent, masterList: Record<string, unknown>) {
 	const dir = await readdir(`./policies/${entry.name}`);
 
-	if (dir.indexOf('data.json') === -1) return;
+	if (dir.indexOf('metadata.json') === -1) return;
 
 	const data: unknown = (
-		await import(`./policies/${entry.name}/data.json`, {
+		await import(`./policies/${entry.name}/metadata.json`, {
 			assert: {
 				type: 'json',
 			},
