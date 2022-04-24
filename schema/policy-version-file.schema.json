@@ -3,18 +3,33 @@
 	"description": "A file containing the content of a specific version of a policy",
 	"type": "object",
 	"properties": {
-		"name": {
-			"description": "The name of the file",
+		"path": {
+			"description": "The path to the file",
 			"type": "string"
 		},
-		"format": {
-			"description": "The format of the file",
+		"type": {
+			"description": "The MIME type of the file",
 			"type": "string",
 			"enum": [
-				"PDF (Text)",
-				"PDF (Mixed)",
-				"PDF (Image)"
+				"application/pdf",
+				"text/plain"
 			]
+		},
+		"accessibility": {
+			"description": "A list of the accessibility features that this file has or is lacking",
+			"$ref": "accessibility.schema.json"
+		},
+		"modifications": {
+			"description": "Any modifications that have been made to the file since it was retrieved",
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"minItems": 1
+		},
+		"original": {
+			"description": "Whether or not this file is the original file, i.e. unmodified",
+			"type": "boolean"
 		},
 		"provenance": {
 			"description": "The details of the file's origin",
@@ -22,9 +37,20 @@
 		}
 	},
 	"required": [
-		"name",
-		"format",
-		"provenance"
+		"path",
+		"type",
+		"provenance",
+		"original"
 	],
+	"not": {
+		"allOf": [
+			{
+				"required": ["modifications"]
+			},
+			{
+				"properties": { "original": { "const": true } }
+			}
+		]
+	},
 	"additionalProperties": false
 }

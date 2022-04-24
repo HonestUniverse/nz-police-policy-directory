@@ -15,6 +15,7 @@ const schemaNames = [
 	'policy-version-file',
 	'policy-version-duration',
 	'provenance',
+	'accessibility',
 ].map((name) => `${name}.schema.json`);
 
 const schemaPromises = schemaNames.map(async (name) => {
