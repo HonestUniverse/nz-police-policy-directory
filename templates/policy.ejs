@@ -7,7 +7,7 @@
 			<h2><%= title %></h2>
 			<p><%= type %></p>
 			<ol>
-				<% files.forEach((file) => { %> <%- include('components/file', { file }) %> <% }) %>
+				<% versions.forEach((version) => { %> <%- include('components/version', { version }) %> <% }) %>
 			</ol>
 		</main>
 		<%- include('components/footer') %>

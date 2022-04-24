@@ -96,6 +96,7 @@ async function checkPolicy(entry: Dirent, masterList: Record<string, unknown>) {
 	const valid = validatePolicy(data);
 	if (!valid) {
 		console.error(validatePolicy.errors);
+		throw new TypeError(`Cannot build site due to invalid metadata in ${entry.name}`);
 	}
 
 	masterList[entry.name] = data;

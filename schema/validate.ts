@@ -3,18 +3,22 @@ import addFormats from 'ajv-formats';
 
 const ajv = new Ajv();
 
+// `ajv` doesn't understand complex formats by default,
+// they need to be added using `ajv-formats`
 addFormats(ajv, ['date', 'uri']);
 
+// `ajv` needs to know about every schema,
+// so load and add them all before creating the `ValidateFunction`
 const schemaNames = [
 	'policy',
-	'policy-file',
-	'policy-file-duration',
-	'notice',
+	'policy-version',
+	'policy-version-file',
+	'policy-version-duration',
 	'provenance',
-];
+].map((name) => `${name}.schema.json`);
 
 const schemaPromises = schemaNames.map(async (name) => {
-	return (await import(`./${name}.schema.json`, {
+	return (await import(`./${name}`, {
 		assert: { type: 'json' },
 	})).default;
 });
