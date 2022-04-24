@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<%- include('components/head', { title: version.name ? `Version ${version.name}` : 'Unnamed version' }); %>
+	<body>
+		<%- include('components/header') %>
+		<main>
+			<h2>
+				<% if (version.name) { %>
+					Version <%= version.name %>
+				<% } else { %>
+					Unnamed version
+				<% } %>
+		
+				<% if (isFirst) { %>
+					(Latest)
+				<% } %>
+			</h2>
+
+			<%
+				const mainFile = version.files[0];
+			%>
+
+			<a href="../<%= mainFile.path %>">Download</a>
+
+			<object id="viewer" type="application/pdf" data="../<%= mainFile.path %>"></object>
+		</main>
+		<%- include('components/footer') %>
+	</body>
+</html>

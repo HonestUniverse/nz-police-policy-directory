@@ -28,13 +28,14 @@ const config: webpack.Configuration = {
 	entry: {
 		main: `${entryPath}/js/main.ts`,
 		//style: `${entryPath}/css/style.scss`,
+		pdf: `${entryPath}/js/pdf.ts`,
 	},
 	output: {
 		path: distPath,
 		filename: 'assets/js/[name].js',
 	},
 	resolve: {
-		fullySpecified: true,
+		fullySpecified: false,
 		plugins: [new ResolveTypeScriptPlugin()],
 	},
 	module: {
@@ -44,7 +45,7 @@ const config: webpack.Configuration = {
 				loader: 'ts-loader',
 			},
 			{
-				test: /\.scss$/,
+				test: /\.s?css$/,
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader,
@@ -133,11 +134,38 @@ const result = (async () => {
 					templatePath: './templates/policy.ejs',
 					templateEjsLoaderOption: {
 						data: policy,
-					},
+					}
 				}),
-				chunks: ['main', 'style'],
+				chunks: ['main'],
 			})
 		);
+
+		/* @ts-ignore(Using assertion instead of type guard means we're missing types. Will fix later.) */
+		const hasMultipleVersions = policy.versions.length > 1;
+
+		/* @ts-ignore(Using assertion instead of type guard means we're missing types. Will fix later.) */
+		policy.versions.forEach((version, i, arr) => {
+			const mainFile = version.files[0];
+
+			const filename = path.basename(mainFile.path, path.extname(mainFile.path))
+
+			config.plugins!.push(new HtmlWebpackPlugin({
+				filename: `${key}/${filename}/index.html`,
+				template: TemplateCustomizer({
+					templatePath: './templates/version-viewer.ejs',
+					templateEjsLoaderOption: {
+						data: {
+							version,
+							isFirst: i === 0 && hasMultipleVersions,
+						},
+					},
+					htmlLoaderOption: {
+						sources: false,
+					}
+				}),
+				chunks: ['main', 'pdf'],
+			}))
+		});
 	});
 
 	config.plugins!.push(
@@ -150,7 +178,9 @@ const result = (async () => {
 						directory
 					},
 				}
-			})
+			}),
+			templateParameters: false,
+			chunks: ['main'],
 		})
 	);
 
