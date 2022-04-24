@@ -1,0 +1,15 @@
+<%
+	const formatDate = (date) => new Intl.DateTimeFormat().format(date);
+	const formatDateString = (dateString) => formatDate(new Date(dateString));
+%>
+
+<li>
+	<a href="/<%= key %>"><h3><%= policy.title %></h3></a>
+	<p><%= policy.type %></p>
+	<% 
+		const mainFile = policy.versions[0].files[0];
+	%>
+	<% if (mainFile.provenance) { %>
+		<p>Last Updated: <%= formatDateString(mainFile.provenance.retrieved) %></p>
+	<% } %>
+</li>

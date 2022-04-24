@@ -132,3 +132,4 @@ dist
 dist/
 
 .vscode
+.DS_STORE
