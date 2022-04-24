@@ -80,7 +80,7 @@ switch (process.env.MODE) {
 		break;
 }
 
-async function checkPolicy(entry: Dirent, masterList: Record<string, unknown>) {
+async function checkPolicy(entry: Dirent, directory: Record<string, unknown>) {
 	const dir = await readdir(`./policies/${entry.name}`);
 
 	if (dir.indexOf('metadata.json') === -1) return;
@@ -99,7 +99,7 @@ async function checkPolicy(entry: Dirent, masterList: Record<string, unknown>) {
 		throw new TypeError(`Cannot build site due to invalid metadata in ${entry.name}`);
 	}
 
-	masterList[entry.name] = data;
+	directory[entry.name] = data;
 }
 
 const result = (async () => {
@@ -108,20 +108,20 @@ const result = (async () => {
 	});
 
 	const promises: Promise<void>[] = [];
-	const masterList: Record<string, unknown> = {};
+	const directory: Record<string, unknown> = {};
 
 	for (let i = 0, l = dir.length; i < l; ++i) {
 		const entry = dir[i];
 		if (!entry.isDirectory()) continue;
 
-		promises.push(checkPolicy(entry, masterList));
+		promises.push(checkPolicy(entry, directory));
 	}
 
 	await Promise.all(promises);
 
-	const policies = Object.keys(masterList);
+	const policies = Object.keys(directory);
 	policies.forEach((key) => {
-		const policy = masterList[key];
+		const policy = directory[key];
 
 		config.plugins!.push(
 			new CopyPlugin({
@@ -139,6 +139,20 @@ const result = (async () => {
 			})
 		);
 	});
+
+	config.plugins!.push(
+		new HtmlWebpackPlugin({
+			filename: 'index.html',
+			template: TemplateCustomizer({
+				templatePath: './templates/directory.ejs',
+				templateEjsLoaderOption: {
+					data: {
+						directory
+					},
+				}
+			})
+		})
+	);
 
 	return config;
 })();
