@@ -10,6 +10,10 @@
 		<% } else { %>
 			Unnamed version
 		<% } %>
+
+		<% if (isFirst) { %>
+			(Latest)
+		<% } %>
 	</h2>
 
 	<%
@@ -63,7 +67,7 @@
 	<%
 		const mainFile = version.files[0];
 	%>
-	<a href="<%= mainFile.name %> "><%= mainFile.name %></a>
+	<a href="<%= mainFile.name %>"><%= mainFile.name %></a>
 
 	<% if (mainFile.provenance) { %>
 		<% if (mainFile.provenance.published) { %>
