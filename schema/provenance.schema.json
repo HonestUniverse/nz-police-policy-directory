@@ -1,0 +1,62 @@
+{
+	"title": "Provenance",
+	"description": "The details of a file's origin",
+	"type": "object",
+	"properties": {
+		"source": {
+			"description": "The person or organisation who provided the information",
+			"type": "string"
+		},
+		"method": {
+			"description": "The method by which the information was published or released",
+			"type": "string",
+			"enum": [
+				"Released under OIA",
+				"Published proactively",
+				"Leaked"
+			]
+		},
+		"requester": {
+			"description": "If the information was released under the OIA, the person who requested it",
+			"type": "string"
+		},
+		"published": {
+			"description": "The date on which the file was published",
+			"type": "string",
+			"format": "date"
+		},
+		"released": {
+			"description": "The date on which the file was released",
+			"type": "string",
+			"format": "date"
+		},
+		"retrieved": {
+			"description": "If the file was retrieved or released after its initial publication, the date on which it was retrieved",
+			"type": "string",
+			"format": "date"
+		},
+		"url": {
+			"description": "The URL of the page where the file was retrieved from",
+			"type": "string",
+			"format": "uri"
+		},
+		"fileUrl": {
+			"description": "The URL of the file where it was originally retrieved from",
+			"type": "string",
+			"format": "uri"
+		}
+	},
+	"required": [
+		"source",
+		"method"
+	],
+	"anyOf": [
+		{
+			"required": [
+				"published",
+				"released",
+				"retrieved"
+			]
+		}
+	]
+}
