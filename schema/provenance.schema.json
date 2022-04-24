@@ -20,6 +20,10 @@
 			"description": "If the information was released under the OIA, the person who requested it",
 			"type": "string"
 		},
+		"alterations": {
+			"description": "Any alterations made to the file since it was retrieved",
+			"type": "string"
+		},
 		"published": {
 			"description": "The date on which the file was published",
 			"type": "string",
@@ -58,5 +62,6 @@
 				"retrieved"
 			]
 		}
-	]
+	],
+	"additionalProperties": false
 }
