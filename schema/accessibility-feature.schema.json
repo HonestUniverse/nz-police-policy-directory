@@ -1,0 +1,30 @@
+{
+	"title": "Accessibility Feature",
+	"description": "A flag regarding a specific accessibility feature, which may be present, partially present, absent, or have an unknown status and may have a note.",
+	"anyOf": [
+		{
+			"type": "boolean"
+		},
+		{
+			"type": "object",
+			"properties": {
+				"value": {
+					"anyOf": [
+						{ "type": "boolean" },
+						{
+							"type": "string",
+							"enum": ["partial", "unknown"]
+						}
+					]
+				},
+				"note": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"value"
+			],
+			"additionalProperties": false
+		}
+	]
+}

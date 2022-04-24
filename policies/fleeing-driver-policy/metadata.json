@@ -13,7 +13,6 @@
 				{
 					"path": "2017-10-12 Fleeing driver policy.pdf",
 					"type": "application/pdf",
-					"original": true,
 					"provenance": {
 						"source": "NZ Police",
 						"method": "Released under OIA",
@@ -23,6 +22,10 @@
 						"retrieved": "2018-03-19",
 						"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
 						"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/11/Fleeing%20driver%20policy%20In%20force%20from%2012%20October%202017%20and%20current.pdf"
+					},
+					"original": true,
+					"accessibility": {
+						"text-based": true
 					}
 				}
 			]
@@ -37,7 +40,6 @@
 				{
 					"path": "2016-06-30 Fleeing driver policy.pdf",
 					"type": "application/pdf",
-					"original": true,
 					"provenance": {
 						"source": "NZ Police",
 						"method": "Released under OIA",
@@ -47,6 +49,10 @@
 						"retrieved": "2018-03-19",
 						"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
 						"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/17/Fleeing%20driver%20policy%20In%20force%20from%2030%20June%202016.pdf"
+					},
+					"original": true,
+					"accessibility": {
+						"text-based": true
 					}
 				}
 			]
