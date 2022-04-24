@@ -1,0 +1,29 @@
+{
+	"title": "Notice",
+	"description": "A general notice",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "The type of the notice",
+			"type": "string",
+			"enum": [
+				"info",
+				"warning",
+				"error"
+			]
+		},
+		"title": {
+			"description": "The title of the notice",
+			"type": "string"
+		},
+		"message": {
+			"description": "The contents of the notice",
+			"type": "string"
+		}
+	},
+	"required": [
+		"type",
+		"message"
+	],
+	"additionalProperties": false
+}

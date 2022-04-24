@@ -16,6 +16,8 @@
 		<% } %>
 	</h2>
 
+	<!-- TODO: Render notices -->
+
 	<%
 		const { duration } = version;
 
@@ -68,6 +70,12 @@
 		const mainFile = version.files[0];
 	%>
 	<a href="<%= mainFile.name %>"><%= mainFile.name %></a>
+
+	<!-- TODO: Render file modifications -->
+
+	<!-- TODO: Specify if the file is the original -->
+
+	<!-- TODO: Render file accessibility features -->
 
 	<% if (mainFile.provenance) { %>
 		<% if (mainFile.provenance.published) { %>

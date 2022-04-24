@@ -18,6 +18,13 @@
 			"items": {
 				"$ref": "policy-version-file.schema.json"
 			}
+		},
+		"notices": {
+			"description": "Any notices attached to this policy version",
+			"type": "array",
+			"items": {
+				"$ref": "notice.schema.json"
+			}
 		}
 	},
 	"required": [
