@@ -7,7 +7,10 @@
 			<h2><%= title %></h2>
 			<p><%= type %></p>
 			<ol>
-				<% versions.forEach((version) => { %> <%- include('components/version', { version }) %> <% }) %>
+				<%
+					const hasMultipleVersions = versions.length > 1;
+				%>
+				<% versions.forEach((version, i, arr) => { %> <%- include('components/version', { version, isFirst: hasMultipleVersions && i === 0 }) %> <% }) %>
 			</ol>
 		</main>
 		<%- include('components/footer') %>
