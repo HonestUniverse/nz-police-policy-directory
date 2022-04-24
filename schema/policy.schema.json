@@ -26,6 +26,13 @@
 				"$ref": "policy-version.schema.json"
 			},
 			"minItems": 1
+		},
+		"notices": {
+			"description": "Any notices attached to this policy",
+			"type": "array",
+			"items": {
+				"$ref": "notice.schema.json"
+			}
 		}
 	},
 	"required": [
