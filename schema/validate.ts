@@ -5,7 +5,7 @@ const ajv = new Ajv();
 
 // `ajv` doesn't understand complex formats by default,
 // they need to be added using `ajv-formats`
-addFormats(ajv, ['date', 'uri']);
+addFormats(ajv, ['date', 'uri', 'uri-reference']);
 
 // `ajv` needs to know about every schema,
 // so load and add them all before creating the `ValidateFunction`

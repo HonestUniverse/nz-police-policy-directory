@@ -16,7 +16,11 @@
 		<% } %>
 	</h2>
 
-	<!-- TODO: Render notices -->
+	<% if (version.notices) { %>
+		<% for (const notice of version.notices) { %>
+			<%- include('notice', { notice }) %>
+		<% } %>
+	<% } %>
 
 	<%
 		const { duration } = version;
@@ -66,31 +70,5 @@
 		<% } %>
 	<% } %>
 
-	<%
-		const mainFile = version.files[0];
-	%>
-	<a href="<%= mainFile.path %>"><%= mainFile.path %></a>
-
-	<!-- TODO: Render file modifications -->
-
-	<!-- TODO: Specify if the file is the original -->
-
-	<!-- TODO: Render file accessibility features -->
-
-	<% if (mainFile.provenance) { %>
-		<% if (mainFile.provenance.published) { %>
-			<p>Published: <%= formatDateString(mainFile.provenance.published) %></p>
-		<% } else if (mainFile.provenance.released) { %>
-			<p>Released: <%= formatDateString(mainFile.provenance.released) %></p>
-		<% } else if (mainFile.provenance.retrieved) { %>
-			<p>Retrieved: <%= formatDateString(mainFile.provenance.retrieved) %></p>
-		<% } %>
-
-		<% if (mainFile.provenance.requester) { %>
-			<p>Requester: <%= mainFile.provenance.requester %></p>
-		<% } %>
-		<% if (mainFile.provenance.url && mainFile.provenance.method) { %>
-			<p>Source: <a href="<%= mainFile.provenance.url %>"><%= mainFile.provenance.method %></a></p>
-		<% } %>
-	<% } %>
+	<%- include('file', { file: version.files[0] }) %>
 </li>

@@ -29,6 +29,13 @@
 						"text-based": true
 					}
 				}
+			],
+			"notices": [
+				{
+					"title": "Test notice on version",
+					"type": "warning",
+					"message": "This is a test notice on a version"
+				}
 			]
 		},
 		{
@@ -41,7 +48,17 @@
 				{
 					"path": "2016-06-30 Fleeing driver policy.pdf",
 					"type": "application/pdf",
-					"licence": "none",
+					"licence": {
+						"name": "Test",
+						"url": "https://example.com/licence.txt",
+						"notices": [
+							{
+								"title": "Test notice on licence",
+								"type": "error",
+								"message": "This is a test notice on a licence"
+							}
+						]
+					},
 					"provenance": {
 						"source": "NZ Police",
 						"method": "Released under OIA",
@@ -52,12 +69,26 @@
 						"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
 						"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/17/Fleeing%20driver%20policy%20In%20force%20from%2030%20June%202016.pdf"
 					},
-					"original": true,
+					"original": false,
+					"modifications": [
+						"The name of the file was changed"
+					],
 					"accessibility": {
-						"text-based": true
+						"text-based": true,
+						"semantics": {
+							"value": "partial",
+							"note": "Some pages are missing semantics"
+						}
 					}
 				}
 			]
+		}
+	],
+	"notices": [
+		{
+			"title": "Test notice",
+			"type": "info",
+			"message": "This is a test notice"
 		}
 	]
 }

@@ -16,7 +16,7 @@
 				"url": {
 					"description": "A URL where a file containing the licence can be found",
 					"type": "string",
-					"format": "uri"
+					"format": "uri-reference"
 				},
 				"notices": {
 					"description": "Any notices attached to the licence",
