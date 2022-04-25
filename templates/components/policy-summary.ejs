@@ -6,7 +6,7 @@
 <li>
 	<a href="/<%= key %>"><h3><%= policy.title %></h3></a>
 	<p><%= policy.type %></p>
-	<% 
+	<%
 		const mainFile = policy.versions[0].files[0];
 	%>
 	<% if (mainFile.provenance) { %>

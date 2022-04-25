@@ -4,15 +4,19 @@
 	"type": "object",
 	"properties": {
 		"name": {
-			"description": "The name of this version of this instance of the policy",
+			"description": "The name of this version of the policy",
 			"type": "string"
 		},
 		"duration": {
 			"description": "When this version of the policy was in effect",
 			"$ref": "policy-version-duration.schema.json"
 		},
+		"provenance": {
+			"description": "The details of origin of the information related this version of the policy",
+			"$ref": "provenance.schema.json"
+		},
 		"files": {
-			"description": "The file containing the contents of this version of the policy",
+			"description": "A list of files containing the contents of this version of the policy",
 			"type": "array",
 			"minItems": 1,
 			"items": {
@@ -28,6 +32,8 @@
 		}
 	},
 	"required": [
+		"provenance",
+		"duration",
 		"files"
 	],
 	"anyOf": [

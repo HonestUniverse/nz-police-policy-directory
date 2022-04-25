@@ -1,0 +1,32 @@
+<%# TODO: Can we make helper format functions globally accessible? It would be good to be able to standardise them across all views %>
+<%
+	const formatDate = (date) => new Intl.DateTimeFormat().format(date);
+	const formatDateString = (dateString) => formatDate(new Date(dateString));
+%>
+
+<% if (provenance.published) { %>
+	<p>Published: <%= formatDateString(provenance.published) %></p>
+<% } else if (provenance.released) { %>
+	<p>Released: <%= formatDateString(provenance.released) %></p>
+<% } else if (provenance.retrieved) { %>
+	<p>Retrieved: <%= formatDateString(provenance.retrieved) %></p>
+<% } %>
+
+<% if (provenance.method) { %>
+	<p>Source:
+		<% if (provenance.url) { %>
+			<a href="<%= provenance.url %>"><%= provenance.method %></a>
+		<% } else { %>
+			<%= provenance.method %>
+		<% } %>
+
+		<% if (provenance.source) { %>
+			by <%= provenance.source %>
+		<% } %>
+	</p>
+<% } else if (provenance.source) { %>
+	<p>Sourced: <%= provenance.source %></p>
+<% } %>
+<% if (provenance.requester) { %>
+	<p>Requester: <%= provenance.requester %></p>
+<% } %>
