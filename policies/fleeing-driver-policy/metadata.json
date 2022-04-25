@@ -9,6 +9,16 @@
 				"on": ["2018-03-19"],
 				"ended": true
 			},
+			"provenance": {
+				"source": "NZ Police",
+				"method": "Released under OIA",
+				"requester": "Mark Hanna",
+				"published": "2017-10-12",
+				"released": "2018-03-19",
+				"retrieved": "2018-03-19",
+				"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
+				"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/11/Fleeing%20driver%20policy%20In%20force%20from%2012%20October%202017%20and%20current.pdf"
+			},
 			"files": [
 				{
 					"path": "2017-10-12 Fleeing driver policy.pdf",
@@ -17,10 +27,10 @@
 					"provenance": {
 						"source": "NZ Police",
 						"method": "Released under OIA",
-						"requester": "Mark Hanna",
-						"published": "2017-10-12",
-						"released": "2018-03-19",
-						"retrieved": "2018-03-19",
+						"requester": "Mark Hanna - this is a file-specific override",
+						"published": "2027-10-12",
+						"released": "2028-03-19",
+						"retrieved": "2028-03-19",
 						"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
 						"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/11/Fleeing%20driver%20policy%20In%20force%20from%2012%20October%202017%20and%20current.pdf"
 					},
@@ -44,6 +54,16 @@
 				"start": "2016-06-30",
 				"end": "2017-10-12"
 			},
+			"provenance": {
+				"source": "NZ Police",
+				"method": "Released under OIA",
+				"requester": "Mark Hanna",
+				"published": "2016-06-30",
+				"released": "2018-03-19",
+				"retrieved": "2018-03-19",
+				"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
+				"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/17/Fleeing%20driver%20policy%20In%20force%20from%2030%20June%202016.pdf"
+			},
 			"files": [
 				{
 					"path": "2016-06-30 Fleeing driver policy.pdf",
@@ -58,16 +78,6 @@
 								"message": "This is a test notice on a licence"
 							}
 						]
-					},
-					"provenance": {
-						"source": "NZ Police",
-						"method": "Released under OIA",
-						"requester": "Mark Hanna",
-						"published": "2016-06-30",
-						"released": "2018-03-19",
-						"retrieved": "2018-03-19",
-						"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
-						"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/17/Fleeing%20driver%20policy%20In%20force%20from%2030%20June%202016.pdf"
 					},
 					"original": false,
 					"modifications": [

@@ -1,27 +1,10 @@
-<%# TODO: Can we make helper format functions globally accessible? It would be good to be able to standardise them across all views %>
-<%
-	const formatDate = (date) => new Intl.DateTimeFormat().format(date);
-	const formatDateString = (dateString) => formatDate(new Date(dateString));
-%>
-
 <a href="<%= file.path %>"><%= file.path %></a>
 
-<% if (file.provenance) { %>
-	<% if (file.provenance.published) { %>
-		<p>Published: <%= formatDateString(file.provenance.published) %></p>
-	<% } else if (file.provenance.released) { %>
-		<p>Released: <%= formatDateString(file.provenance.released) %></p>
-	<% } else if (file.provenance.retrieved) { %>
-		<p>Retrieved: <%= formatDateString(file.provenance.retrieved) %></p>
-	<% } %>
+<%
+	const provenance = file.provenance || version.provenance;
+%>
 
-	<% if (file.provenance.requester) { %>
-		<p>Requester: <%= file.provenance.requester %></p>
-	<% } %>
-	<% if (file.provenance.url && file.provenance.method) { %>
-		<p>Source: <a href="<%= file.provenance.url %>"><%= file.provenance.method %></a></p>
-	<% } %>
-<% } %>
+<%- include('provenance', { provenance }) %>
 
 <div>
 	<% if (file.licence === "none") { %>
