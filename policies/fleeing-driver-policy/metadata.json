@@ -13,6 +13,7 @@
 				{
 					"path": "2017-10-12 Fleeing driver policy.pdf",
 					"type": "application/pdf",
+					"licence": "none",
 					"provenance": {
 						"source": "NZ Police",
 						"method": "Released under OIA",
@@ -40,6 +41,7 @@
 				{
 					"path": "2016-06-30 Fleeing driver policy.pdf",
 					"type": "application/pdf",
+					"licence": "none",
 					"provenance": {
 						"source": "NZ Police",
 						"method": "Released under OIA",

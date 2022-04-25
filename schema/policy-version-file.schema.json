@@ -19,6 +19,10 @@
 			"description": "The details of the file's origin",
 			"$ref": "provenance.schema.json"
 		},
+		"licence": {
+			"description": "The licence under which the file is made available",
+			"$ref": "licence.schema.json"
+		},
 		"original": {
 			"description": "Whether or not this file is the original file, i.e. unmodified",
 			"type": "boolean"
@@ -40,6 +44,7 @@
 		"path",
 		"type",
 		"provenance",
+		"licence",
 		"original",
 		"accessibility"
 	],
