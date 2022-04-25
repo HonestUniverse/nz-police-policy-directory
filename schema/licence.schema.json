@@ -1,0 +1,36 @@
+{
+	"title": "Licence",
+	"description": "The licence under which an item is made available",
+	"oneOf": [
+		{
+			"type": "string",
+			"enum": ["none"]
+		},
+		{
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "The name of the licence",
+					"type": "string"
+				},
+				"url": {
+					"description": "A URL where a file containing the licence can be found",
+					"type": "string",
+					"format": "uri"
+				},
+				"notices": {
+					"description": "Any notices attached to the licence",
+					"type": "array",
+					"items": {
+						"$ref": "notice.schema.json"
+					},
+					"minItems": 1
+				}
+			},
+			"required": [
+				"name"
+			],
+			"additionalProperties": false
+		}
+	]
+}
