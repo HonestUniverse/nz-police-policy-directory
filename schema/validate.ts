@@ -18,6 +18,7 @@ const schemaNames = [
 	'accessibility',
 	'accessibility-feature',
 	'notice',
+	'licence',
 ].map((name) => `${name}.schema.json`);
 
 const schemaPromises = schemaNames.map(async (name) => {
