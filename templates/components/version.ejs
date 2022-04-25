@@ -70,5 +70,6 @@
 		<% } %>
 	<% } %>
 
-	<%- include('file', { file: version.files[0] }) %>
+	<%# TODO: Render more than just the first file %>
+	<%- include('file', { file: version.files[0], version }) %>
 </li>

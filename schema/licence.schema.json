@@ -1,6 +1,6 @@
 {
 	"title": "Licence",
-	"description": "The licence under which an item is made available",
+	"description": "The licence under which content is made available",
 	"oneOf": [
 		{
 			"type": "string",
