@@ -3,11 +3,11 @@
 %>
 
 <% if (provenance.published) { %>
-	<p>Published: <%- include('date-partial', { date: provenance.published }) %></p>
+	<p>Published: <%- include('../helpers/date-partial', { date: provenance.published }) %></p>
 <% } else if (provenance.released) { %>
-	<p>Released: <%- include('date-partial', { date: provenance.released }) %></p>
+	<p>Released: <%- include('../helpers/date-partial', { date: provenance.released }) %></p>
 <% } else if (provenance.retrieved) { %>
-	<p>Retrieved: <%- include('date-partial', { date: provenance.retrieved }) %></p>
+	<p>Retrieved: <%- include('../helpers/date-partial', { date: provenance.retrieved }) %></p>
 <% } %>
 
 <% if (provenance.method) { %>

@@ -1,0 +1,37 @@
+<%
+	const formatter = new Intl.DateTimeFormat('en-nz');
+
+	const formatDate = (date) => formatter.format(date);
+	const formatDateString = (dateString) => formatDate(new Date(dateString));
+
+	const monthNames = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December',
+	];
+%><%#
+	The weird opening and closing tags are necessary to avoid inserting extra whitespace
+%><%
+	if (date instanceof Date) {
+		%><%= formatDate(date) %><%
+	} else if (typeof date === 'string') {
+		%><%= formatDateString(date) %><%
+	} else if (date.month && date.date) {
+		%><%
+			const dateObj = new Date(date.year, date.month-1, date.date);
+		%><%= formatDate(dateObj) %><%
+	} else if (date.quarter) {
+		%>Q<%= date.quarter %> <%= date.year %><%
+	} else if (date.month) {
+		%><%= monthNames[date.month-1] %> <%= date.year %><%
+	}
+%>

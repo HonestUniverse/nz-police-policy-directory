@@ -1,4 +1,15 @@
-<a href="<%= file.path %>" target="_blank"><%= file.path %></a>
+<% if (file.notices) { %>
+	<% for (const notice of file.notices) { %>
+		<%- include('notice', { notice }) %>
+	<% } %>
+<% } %>
+
+<p>
+	<a href="<%= file.path %>" target="_blank"><%= file.path %></a>
+	<% if (file.size) { %>
+		(<%= include('../helpers/file-size', { size: file.size }) %>)
+	<% } %>
+</p>
 
 <%
 	const provenance = file.provenance || version.provenance;

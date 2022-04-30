@@ -26,6 +26,7 @@
 				{
 					"path": "2017-10-12 Fleeing driver policy.pdf",
 					"type": "application/pdf",
+					"size": 351424,
 					"licence": "None",
 					"provenance": {
 						"source": "NZ Police",
@@ -80,6 +81,7 @@
 				{
 					"path": "2016-06-30 Fleeing driver policy.pdf",
 					"type": "application/pdf",
+					"size": 380978,
 					"licence": {
 						"name": "Test",
 						"url": "https://example.com/licence.txt",
