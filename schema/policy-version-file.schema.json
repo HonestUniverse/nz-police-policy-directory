@@ -15,6 +15,11 @@
 				"text/plain"
 			]
 		},
+		"size": {
+			"description": "The size of the file, in bytes",
+			"type": "integer",
+			"exclusiveMinimum": 0
+		},
 		"provenance": {
 			"description": "The details of the file's origin. If this is absent, the provenance specified for the Policy Version will be used instead",
 			"$ref": "provenance.schema.json"
@@ -38,11 +43,19 @@
 		"accessibility": {
 			"description": "A list of the accessibility features that this file has or is lacking",
 			"$ref": "accessibility.schema.json"
+		},
+		"notices": {
+			"description": "Any notices attached to this policy version file",
+			"type": "array",
+			"items": {
+				"$ref": "notice.schema.json"
+			}
 		}
 	},
 	"required": [
 		"path",
 		"type",
+		"size",
 		"licence",
 		"original",
 		"accessibility"

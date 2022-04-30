@@ -1,0 +1,25 @@
+<%
+	const formatterMb = new Intl.NumberFormat('en-nz', {
+		style: 'unit',
+		unit: 'megabyte',
+		unitDisplay: 'short',
+		maximumFractionDigits: 1
+	});
+
+	const formatterKb = new Intl.NumberFormat('en-nz', {
+		style: 'unit',
+		unit: 'kilobyte',
+		unitDisplay: 'short',
+		maximumFractionDigits: 0
+	});
+
+	const bytesPerMegabyte = 1024 * 1024;
+
+	// If the size is >= 1 MB, then display as MB. Otherwise, display as KB
+	if (size >= bytesPerMegabyte) {
+		%><%= formatterMb.format(size / bytesPerMegabyte) %><%
+	} else {
+		%><%= formatterKb.format(size / 1024) %><%
+	} %><%#
+	Weird opening and closing tags and no newline at end of file to avoid adding extra whitespace
+%>
