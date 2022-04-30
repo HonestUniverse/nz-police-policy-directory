@@ -1,6 +1,6 @@
 {
 	"title": "Provenance",
-	"description": "The details of a file's origin",
+	"description": "The details of a piece of information's origin",
 	"type": "object",
 	"properties": {
 		"source": {
@@ -11,14 +11,18 @@
 			"description": "The method by which the information was published or released",
 			"type": "string",
 			"enum": [
-				"Released under OIA",
-				"Published proactively",
+				"Released under the OIA",
+				"Proactively released",
 				"Leaked"
 			]
 		},
-		"requester": {
-			"description": "If the information was released under the OIA, the person who requested it",
-			"type": "string"
+		"oiaRequest": {
+			"description": "Details of the OIA request which resulted in this information's release",
+			"$ref": "oia-request.schema.json"
+		},
+		"withholdings": {
+			"description": "Details of any information that has been withheld from a proactively released document",
+			"$ref": "oia-withholdings.schema.json"
 		},
 		"alterations": {
 			"description": "Any alterations made to the file since it was retrieved",
@@ -54,12 +58,60 @@
 		"source",
 		"method"
 	],
-	"anyOf": [
+	"allOf": [
 		{
-			"required": [
-				"published",
-				"released",
-				"retrieved"
+			"anyOf": [
+				{
+					"required": [
+						"published",
+						"released",
+						"retrieved"
+					]
+				}
+			]
+		},
+		{
+			"$comment": "The \"oiaRequest\" property must be present if and only if the method of release was \"Released under the OIA\"",
+			"oneOf": [
+				{
+					"properties": {
+						"method": {
+							"const": "Released under the OIA"
+						}
+					},
+					"required": [
+						"oiaRequest"
+					]
+				},
+				{
+					"not": {
+						"required": [
+							"oiaRequest"
+						]
+					}
+				}
+			]
+		},
+		{
+			"$comment": "The \"withholdings\" property must be present if and only if the method of release was \"Proactively released\"",
+			"oneOf": [
+				{
+					"properties": {
+						"method": {
+							"const": "Proactively released"
+						}
+					},
+					"required": [
+						"withholdings"
+					]
+				},
+				{
+					"not": {
+						"required": [
+							"withholdings"
+						]
+					}
+				}
 			]
 		}
 	],
