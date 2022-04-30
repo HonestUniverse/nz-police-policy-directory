@@ -100,7 +100,7 @@
 					"accessibility": {
 						"text-based": true,
 						"semantics": {
-							"value": "partial",
+							"value": "Partial",
 							"note": "Some pages are missing semantics"
 						}
 					}

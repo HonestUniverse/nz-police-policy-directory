@@ -1,0 +1,78 @@
+{
+	"title": "string",
+	"type": "string enum",
+	"versions": [
+		{
+			"name": "string",
+			"duration": {
+				"start": "date",
+				"end": "date",
+				"ended": false,
+				"on": ["date"]
+			},
+			"provenance": {
+				"source": "string enum",
+				"method": "string enum",
+				"oiaRequest": {
+					"requester": "string",
+					"id": "string",
+					"responseUrl": "url",
+					"withholdings": "Unknown"
+				},
+				"withholdings": "Unknown",
+				"published": "date",
+				"released": "date",
+				"retrieved": "date",
+				"url": "url",
+				"fileUrl": "url"
+			},
+			"files": [
+				{
+					"path": "string",
+					"type": "string enum",
+					"size": 0,
+					"provenance": "if necessary to override version provenance",
+					"licence": {
+						"name": "string - whole object can instead be 'None'",
+						"url": "url",
+						"notices": [
+							{
+								"type": "info | warning | error",
+								"title": "string",
+								"message": "string"
+							}
+						]
+					},
+					"original": false,
+					"modifications": ["string"],
+					"accessibility": {
+						"text-based": "Unknown",
+						"semantics": "Unknown",
+						"alt text": "Unknown"
+					},
+					"notices": [
+						{
+							"type": "info | warning | error",
+							"title": "string",
+							"message": "string"
+						}
+					]
+				}
+			],
+			"notices": [
+				{
+					"type": "info | warning | error",
+					"title": "string",
+					"message": "string"
+				}
+			]
+		}
+	],
+	"notices": [
+		{
+			"type": "info | warning | error",
+			"title": "[string]",
+			"message": "string"
+		}
+	]
+}
