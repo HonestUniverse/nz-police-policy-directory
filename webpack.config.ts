@@ -99,6 +99,8 @@ async function checkPolicy(entry: Dirent, directory: Record<string, unknown>) {
 		throw new TypeError(`Cannot build site due to invalid metadata in ${entry.name}`);
 	}
 
+	// TODO: Read the size of each file and ensure it is present and correct in the metadata
+
 	directory[entry.name] = data;
 }
 
