@@ -27,10 +27,6 @@
 			"description": "Details of any information that has been withheld from a proactively released document",
 			"$ref": "oia-withholdings.schema.json"
 		},
-		"alterations": {
-			"description": "Any alterations made to the file since it was retrieved",
-			"type": "string"
-		},
 		"published": {
 			"description": "The date on which the file was published",
 			"$ref": "date-partial.schema.json"

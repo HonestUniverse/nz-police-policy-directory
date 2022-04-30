@@ -38,12 +38,8 @@
 					"original": true,
 					"accessibility": {
 						"text-based": true,
-						"semantics": {
-							"value": "unknown"
-						},
-						"alt text": {
-							"value": "unknown"
-						}
+						"semantics": "Unknown",
+						"alt text": "Unknown"
 					}
 				}
 			]

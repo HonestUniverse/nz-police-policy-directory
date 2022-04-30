@@ -6,6 +6,10 @@
 			"type": "boolean"
 		},
 		{
+			"type": "string",
+			"enum": ["Partial", "Unknown"]
+		},
+		{
 			"type": "object",
 			"properties": {
 				"value": {
@@ -13,7 +17,7 @@
 						{ "type": "boolean" },
 						{
 							"type": "string",
-							"enum": ["partial", "unknown"]
+							"enum": ["Partial", "Unknown"]
 						}
 					]
 				},
