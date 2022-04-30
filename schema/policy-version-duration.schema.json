@@ -5,13 +5,11 @@
 	"properties": {
 		"start": {
 			"description": "The first day on which this version of the policy was in effect",
-			"type": "string",
-			"format": "date"
+			"$ref": "date-partial.schema.json"
 		},
 		"end": {
 			"description": "The last day on which this version of the policy was in effect",
-			"type": "string",
-			"format": "date"
+			"$ref": "date-partial.schema.json"
 		},
 		"ended": {
 			"description": "Whether or not this version of the policy is still in effect. This can be used as an alternative to `end` when a specific end date is not known",
@@ -23,8 +21,7 @@
 			"type": "array",
 			"minItems": 1,
 			"items": {
-				"type": "string",
-				"format": "date"
+				"$ref": "date-partial.schema.json"
 			}
 		}
 	},

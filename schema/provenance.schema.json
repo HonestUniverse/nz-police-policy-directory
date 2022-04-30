@@ -5,7 +5,10 @@
 	"properties": {
 		"source": {
 			"description": "The person or organisation who provided the information",
-			"type": "string"
+			"type": "string",
+			"enum": [
+				"NZ Police"
+			]
 		},
 		"method": {
 			"description": "The method by which the information was published or released",
@@ -30,18 +33,15 @@
 		},
 		"published": {
 			"description": "The date on which the file was published",
-			"type": "string",
-			"format": "date"
+			"$ref": "date-partial.schema.json"
 		},
 		"released": {
 			"description": "The date on which the file was released",
-			"type": "string",
-			"format": "date"
+			"$ref": "date-partial.schema.json"
 		},
 		"retrieved": {
 			"description": "If the file was retrieved or released after its initial publication, the date on which it was retrieved",
-			"type": "string",
-			"format": "date"
+			"$ref": "date-partial.schema.json"
 		},
 		"url": {
 			"description": "The URL of the page where the file was retrieved from",
@@ -61,13 +61,9 @@
 	"allOf": [
 		{
 			"anyOf": [
-				{
-					"required": [
-						"published",
-						"released",
-						"retrieved"
-					]
-				}
+				{ "required": ["published"] },
+				{ "required": ["released"] },
+				{ "required": ["retrieved"] }
 			]
 		},
 		{
@@ -75,18 +71,19 @@
 			"oneOf": [
 				{
 					"properties": {
-						"method": {
-							"const": "Released under the OIA"
-						}
+						"method": { "const": "Released under the OIA" }
 					},
-					"required": [
-						"oiaRequest"
-					]
+					"required": ["oiaRequest"]
 				},
 				{
 					"not": {
-						"required": [
-							"oiaRequest"
+						"anyOf": [
+							{
+								"properties": {
+									"method": { "const": "Released under the OIA" }
+								}
+							},
+							{ "required": ["oiaRequest"] }
 						]
 					}
 				}
@@ -97,18 +94,19 @@
 			"oneOf": [
 				{
 					"properties": {
-						"method": {
-							"const": "Proactively released"
-						}
+						"method": { "const": "Proactively released" }
 					},
-					"required": [
-						"withholdings"
-					]
+					"required": ["withholdings"]
 				},
 				{
 					"not": {
-						"required": [
-							"withholdings"
+						"anyOf": [
+							{
+								"properties": {
+									"method": { "const": "Proactively released" }
+								}
+							},
+							{ "required": ["withholdings"] }
 						]
 					}
 				}

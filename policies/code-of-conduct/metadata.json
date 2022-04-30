@@ -1,0 +1,51 @@
+{
+	"title": "Code of Conduct",
+	"type": "Code of Conduct",
+	"notices": [
+		{
+			"type": "info",
+			"title": "Legal requirement",
+			"message": "The Police Commissioner is required under <a href=\"https://www.legislation.govt.nz/act/public/2008/0072/latest/whole.html#DLM1102202\" target=\"_blank\">section 20(1) of the Policing Act 2008</a> to prescribe a code of conduct for Police employees."
+		}
+	],
+	"versions": [
+		{
+			"name": "Andrew Coster 2022",
+			"duration": {
+				"start": {
+					"year": 2022,
+					"month": 2
+				}
+			},
+			"provenance": {
+				"source": "NZ Police",
+				"method": "Proactively released",
+				"withholdings": "None",
+				"published": {
+					"year": 2022,
+					"month": 2
+				},
+				"retrieved": "2022-04-30",
+				"url": "https://www.police.govt.nz/about-us/publication/new-zealand-police-code-conduct",
+				"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/ourcode.pdf"
+			},
+			"files": [
+				{
+					"path": "ourcode.pdf",
+					"type": "application/pdf",
+					"licence": "None",
+					"original": true,
+					"accessibility": {
+						"text-based": true,
+						"semantics": {
+							"value": "unknown"
+						},
+						"alt text": {
+							"value": "unknown"
+						}
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,12 +1,7 @@
-<%
-	const formatDate = (date) => new Intl.DateTimeFormat().format(date);
-	const formatDateString = (dateString) => formatDate(new Date(dateString));
-%>
-
 <li>
 	<h2>
 		<% if (version.name) { %>
-			Version <%= version.name %>
+			<%- version.name %>
 		<% } else { %>
 			Unnamed version
 		<% } %>
@@ -25,8 +20,8 @@
 	<%
 		const { duration } = version;
 
-		const startDate = duration.start ? formatDateString(duration.start) : 'unknown';
-		const endDate = duration.end ? formatDateString(duration.end) : 'unknown';
+		const startDate = duration.start ? include('date-partial', { date: duration.start }) : 'unknown';
+		const endDate = duration.end ? include('date-partial', { date: duration.end }) : 'unknown';
 		const dateSpan = `${startDate} &ndash; ${endDate}`;
 	%>
 	<p><%- dateSpan %></p>
@@ -51,13 +46,13 @@
 					%>
 					Active on
 						<% if (showFirstDate) { %>
-							<%= formatDate(firstDate) %>
+							<%- include('date-partial', { date: firstDate }) %>
 						<% } %>
 						<% if (showFirstDate && showLastDate) { %>
 							and
 						<% } %>
 						<% if (showLastDate) { %>
-							<%= formatDate(lastDate) %>
+							<%- include('date-partial', { date: lastDate }) %>
 						<% } %>
 				<% } %>
 

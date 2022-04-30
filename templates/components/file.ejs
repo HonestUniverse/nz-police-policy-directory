@@ -1,4 +1,4 @@
-<a href="<%= file.path %>"><%= file.path %></a>
+<a href="<%= file.path %>" target="_blank"><%= file.path %></a>
 
 <%
 	const provenance = file.provenance || version.provenance;
@@ -7,7 +7,7 @@
 <%- include('provenance', { provenance }) %>
 
 <div>
-	<% if (file.licence === "none") { %>
+	<% if (file.licence === "None") { %>
 		<p>Licence: <%= file.licence %></p>
 	<% } else { %>
 		<p>Licence:
@@ -56,7 +56,10 @@
 				<% if (typeof feature === 'boolean') { %>
 					<%= feature %>
 				<% } else { %>
-					<%= feature.value %> (<%= feature.note %>)
+					<%= feature.value %>
+					<% if (feature.note) { %>
+						(<%= feature.note %>)
+					<% } %>
 				<% } %>
 			</dd>
 		</div>

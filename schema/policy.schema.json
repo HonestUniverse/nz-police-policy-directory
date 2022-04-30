@@ -13,6 +13,7 @@
 			"enum": [
 				"General Instructions",
 				"Commissioner's Circular",
+				"Code of Conduct",
 
 				"Police Instructions",
 				"Police Manual",
@@ -37,7 +38,8 @@
 	},
 	"required": [
 		"title",
-		"type"
+		"type",
+		"versions"
 	],
 	"additionalProperties": false
 }
