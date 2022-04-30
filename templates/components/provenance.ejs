@@ -1,23 +1,24 @@
-<%# TODO: Can we make helper format functions globally accessible? It would be good to be able to standardise them across all views %>
 <%
-	const formatDate = (date) => new Intl.DateTimeFormat().format(date);
-	const formatDateString = (dateString) => formatDate(new Date(dateString));
-
 	const withholdings = provenance.withholdings || provenance.oiaRequest?.withholdings;
 %>
 
 <% if (provenance.published) { %>
-	<p>Published: <%= formatDateString(provenance.published) %></p>
+	<p>Published: <%- include('date-partial', { date: provenance.published }) %></p>
 <% } else if (provenance.released) { %>
-	<p>Released: <%= formatDateString(provenance.released) %></p>
+	<p>Released: <%- include('date-partial', { date: provenance.released }) %></p>
 <% } else if (provenance.retrieved) { %>
-	<p>Retrieved: <%= formatDateString(provenance.retrieved) %></p>
+	<p>Retrieved: <%- include('date-partial', { date: provenance.retrieved }) %></p>
 <% } %>
 
 <% if (provenance.method) { %>
 	<p>Source:
 		<% if (provenance.url) { %>
-			<a href="<%= provenance.url %>"><%= provenance.method %></a>
+			<a
+				href="<%= provenance.url %>"
+				<% if (/^https?:/.test(provenance.url)) { %>
+					target="_blank"
+				<% } %>
+			><%= provenance.method %></a>
 		<% } else { %>
 			<%= provenance.method %>
 		<% } %>
