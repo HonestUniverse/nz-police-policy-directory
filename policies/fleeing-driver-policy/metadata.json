@@ -11,8 +11,11 @@
 			},
 			"provenance": {
 				"source": "NZ Police",
-				"method": "Released under OIA",
-				"requester": "Mark Hanna",
+				"method": "Released under the OIA",
+				"oiaRequest": {
+					"requester": "Mark Hanna",
+					"withholdings": "Unknown"
+				},
 				"published": "2017-10-12",
 				"released": "2018-03-19",
 				"retrieved": "2018-03-19",
@@ -26,8 +29,14 @@
 					"licence": "none",
 					"provenance": {
 						"source": "NZ Police",
-						"method": "Released under OIA",
-						"requester": "Mark Hanna - this is a file-specific override",
+						"method": "Released under the OIA",
+						"oiaRequest": {
+							"requester": "Mark Hanna - this is a file-specific override",
+							"withholdings": {
+								"6(a)": true,
+								"9(2)(a)": "pp1-6"
+							}
+						},
 						"published": "2027-10-12",
 						"released": "2028-03-19",
 						"retrieved": "2028-03-19",
@@ -56,8 +65,11 @@
 			},
 			"provenance": {
 				"source": "NZ Police",
-				"method": "Released under OIA",
-				"requester": "Mark Hanna",
+				"method": "Released under the OIA",
+				"oiaRequest": {
+					"requester": "Mark Hanna",
+					"withholdings": "Unknown"
+				},
 				"published": "2016-06-30",
 				"released": "2018-03-19",
 				"retrieved": "2018-03-19",

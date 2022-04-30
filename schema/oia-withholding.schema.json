@@ -1,0 +1,12 @@
+{
+	"title": "OIA Withholding",
+	"description": "Details of how a specific withholding ground has been used in the response to an OIA requeust",
+	"oneOf": [
+		{
+			"type": "boolean"
+		},
+		{
+			"type": "string"
+		}
+	]
+}

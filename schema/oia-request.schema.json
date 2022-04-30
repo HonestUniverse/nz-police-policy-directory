@@ -1,0 +1,28 @@
+{
+	"title": "OIA Request",
+	"description": "Details of an OIA request, as it pertains to a piece of information's provenance and withheld information",
+	"type": "object",
+	"properties": {
+		"requester": {
+			"description": "If the information was released under the OIA, the person who requested it",
+			"type": "string"
+		},
+		"id": {
+			"description": "The releasing agency's internal reference ID for this request",
+			"type": "string"
+		},
+		"responseUrl": {
+			"description": "The URL of the response to this OIA request",
+			"type": "string",
+			"format": "uri"
+		},
+		"withholdings": {
+			"description": "Details of any withheld information",
+			"$ref": "oia-withholdings.schema.json"
+		}
+	},
+	"required": [
+		"withholdings"
+	],
+	"additionalProperties": false
+}
