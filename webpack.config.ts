@@ -132,7 +132,7 @@ const result = (async () => {
 				template: TemplateCustomizer({
 					templatePath: './templates/policy.ejs',
 					templateEjsLoaderOption: {
-						data: policy,
+						data: { policy },
 					},
 				}),
 				chunks: ['main', 'style'],

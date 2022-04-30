@@ -14,6 +14,7 @@ const schemaNames = [
 	'policy-version',
 	'policy-version-file',
 	'policy-version-duration',
+	'date-partial',
 	'provenance',
 	'accessibility',
 	'accessibility-feature',
