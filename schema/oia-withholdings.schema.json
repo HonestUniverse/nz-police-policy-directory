@@ -1,0 +1,142 @@
+{
+	"title": "OIA Withholdings",
+	"description": "Details of what grounds have been used to withhold information in a response to an OIA request",
+	"oneOf": [
+		{
+			"type": "object",
+			"properties": {
+				"6(a)": {
+					"description": "the making available of that information would be likely to prejudice the security or defence of New Zealand or the international relations of the Government of New Zealand",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(b)(i)": {
+					"description": "the making available of that information would be likely to prejudice the entrusting of information to the Government of New Zealand on a basis of confidence by the Government of any other country or any agency of such a Government",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(b)(ii)": {
+					"description": "the making available of that information would be likely to prejudice the entrusting of information to the Government of New Zealand on a basis of confidence by any international organisation",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(c)": {
+					"description": "the making available of that information would be likely to prejudice the maintenance of the law, including the prevention, investigation, and detection of offences, and the right to a fair trial",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(d)": {
+					"description": "the making available of that information would be likely to endanger the safety of any person",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(e)(i)": {
+					"description": "the making available of that information would be likely to damage seriously the economy of New Zealand by disclosing prematurely decisions to change or continue government economic or financial policies relating to exchange rates or the control of overseas exchange transactions",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(e)(ii)": {
+					"description": "the making available of that information would be likely to damage seriously the economy of New Zealand by disclosing prematurely decisions to change or continue government economic or financial policies relating to the regulation of banking or credit",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(e)(iii)": {
+					"description": "the making available of that information would be likely to damage seriously the economy of New Zealand by disclosing prematurely decisions to change or continue government economic or financial policies relating to taxation",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(e)(iv)": {
+					"description": "the making available of that information would be likely to damage seriously the economy of New Zealand by disclosing prematurely decisions to change or continue government economic or financial policies relating to the stability, control, and adjustment of prices of goods and services, rents, and other costs, and rates of wages, salaries, and other incomes",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(e)(v)": {
+					"description": "the making available of that information would be likely to damage seriously the economy of New Zealand by disclosing prematurely decisions to change or continue government economic or financial policies relating to the borrowing of money by the Government of New Zealand",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"6(e)(vi)": {
+					"description": "the making available of that information would be likely to damage seriously the economy of New Zealand by disclosing prematurely decisions to change or continue government economic or financial policies relating to the entering into of overseas trade agreements",
+					"$ref": "oia-withholding.schema.json"
+				},
+
+				"9(2)(a)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to protect the privacy of natural persons, including that of deceased natural persons",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(b)(i)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to protect information where the making available of the information would disclose a trade secret",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(b)(ii)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to protect information where the making available of the information would be likely unreasonably to prejudice the commercial position of the person who supplied or who is the subject of the information",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(ba)(i)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to protect information which is subject to an obligation of confidence or which any person has been or could be compelled to provide under the authority of any enactment, where the making available of the information would be likely to prejudice the supply of similar information, or information from the same source, and it is in the public interest that such information should continue to be supplied",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(ba)(ii)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to protect information which is subject to an obligation of confidence or which any person has been or could be compelled to provide under the authority of any enactment, where the making available of the information would be likely otherwise to damage the public interest",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(c)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to avoid prejudice to measures protecting the health or safety of members of the public",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(d)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to avoid prejudice to the substantial economic interests of New Zealand",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(e)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to avoid prejudice to measures that prevent or mitigatet material loss to members of the public",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(f)(i)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to maintain the constitutional conventions for the time being which protect the confidentiality of communications by or with the Sovereign or her representative",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(f)(ii)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to maintain the constitutional conventions for the time being which protect collective and individual ministerial responsibility",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(f)(iii)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to maintain the constitutional conventions for the time being which protect the political neutrality of officials",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(f)(iv)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to maintain the constitutional conventions for the time being which protect the confidentiality of advicee tendered by Ministers of the Crown and officials",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(g)(i)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to maintain the effective conduct of public affairs through the free and frank expression of opinions by or between or to Ministers of the Crown or members of an organisation or officers and employees of any public service agency or organisation in the course of their duty",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(g)(ii)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to maintain the effective conduct of public affairs through the protection of such Ministers, members of organisattions, officers, and employers from improper pressure or harassment",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(h)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to maintain legal professional privilege",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(i)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to enable a Minister of the Crown or any public service agency or organisation holding the information to carry out, without prejudice or disadvantage, commercial activities",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(j)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to enable a Minister of the Crrown or any public service agency or organisation holding the information to carry on, without prejudice or disadvantage, negotiations (including commercial and industrial negotiations)",
+					"$ref": "oia-withholding.schema.json"
+				},
+				"9(2)(k)": {
+					"description": "[subject to a public interest test,] the withholding of the information is necessary to prevent the disclosure or use of official informationo for improper gain or improper advantage",
+					"$ref": "oia-withholding.schema.json"
+				},
+
+				"Out of scope": {
+					"description": "Technically this is not a withholding ground under the OIA, however officials will sometimes withhold information as out of scope in order to allow the rest of a document to be released under the OIA without first having to consider whether or not information not directly covered by the request should be released or withheld.",
+					"$ref": "oia-withholding.schema.json"
+				}
+			},
+			"required": [],
+			"additionalProperties": false
+		},
+		{
+			"type": "string",
+			"enum": [
+				"None",
+				"Unknown"
+			]
+		}
+	]
+}
