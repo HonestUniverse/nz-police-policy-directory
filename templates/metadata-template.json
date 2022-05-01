@@ -21,6 +21,7 @@
 				},
 				"withholdings": "Unknown",
 				"published": "date",
+				"extracted": "date",
 				"released": "date",
 				"retrieved": "date",
 				"url": "url",
