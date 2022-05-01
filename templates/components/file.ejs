@@ -64,7 +64,7 @@
 			<dt><%= featureName %></dt>
 			<dd>
 				<% const feature = file.accessibility[featureName]; %>
-				<% if (typeof feature === 'boolean') { %>
+				<% if (typeof feature === 'boolean' || typeof feature === 'string') { %>
 					<%= feature %>
 				<% } else { %>
 					<%= feature.value %>
