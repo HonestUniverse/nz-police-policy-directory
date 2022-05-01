@@ -4,6 +4,8 @@
 
 <% if (provenance.published) { %>
 	<p>Published: <%- include('../helpers/date-partial', { date: provenance.published }) %></p>
+<% } else if (provenance.extracted) { %>
+	<p>Extracted: <%- include('../helpers/date-partial', { date: provenance.extracted }) %></p>
 <% } else if (provenance.released) { %>
 	<p>Released: <%- include('../helpers/date-partial', { date: provenance.released }) %></p>
 <% } else if (provenance.retrieved) { %>
