@@ -1,0 +1,43 @@
+{
+	"title": "Police investigations of complaints and notifiable incidents",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "January 2022",
+			"duration": {
+				"on": [
+					{
+						"year": 2022,
+						"month": 1
+					}
+				]
+			},
+			"provenance": {
+				"source": "NZ Police",
+				"method": "Proactively released",
+				"withholdings": "Unknown",
+				"extracted": "2022-01-17",
+				"retrieved": "2022-05-01",
+				"url": "https://www.police.govt.nz/about-us/about-new-zealand-police/police-professional-conduct",
+				"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/policy-police-investigations-complaints-notifiable-incidents.pdf"
+			},
+			"files": [
+				{
+					"path": "policy-police-investigations-complaints-notifiable-incidents.pdf",
+					"type": "application/pdf",
+					"size": 948156,
+					"licence": "None",
+					"original": true,
+					"accessibility": {
+						"text-based": {
+							"value": "Partial",
+							"note": "All pages except page 22 are text-based"
+						},
+						"semantics": "Unknown",
+						"alt text": "Unknown"
+					}
+				}
+			]
+		}
+	]
+}
