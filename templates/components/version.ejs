@@ -30,7 +30,27 @@
 	<% if (!(duration.start && duration.end)) { %>
 		<%
 			// Sort `on` dates chronologically
-			const onDates = duration.on?.map((dateString) => new Date(dateString)).sort((a, b) => a - b);
+			function partialToFullDate(dateObj) {
+				if (dateObj instanceof Date) {
+					return dateObj;
+				}
+
+				const year = dateObj.year;
+				const month = (dateObj.month || dateObj.quarter * 3 - 2 || 1) - 1;
+				const date = dateObj.date || 1;
+
+				return new Date(year, month, date);
+			}
+
+			const onDates = duration.on
+				?.map((dateObj) => typeof dateObj === 'string' ? new Date(dateObj) : dateObj)
+				.sort((a, b) => {
+					// Dates in `on` may be partial. For sorting assume they are the earliest date in the region of uncertainty
+					const dateA = partialToFullDate(a);
+					const dateB = partialToFullDate(b);
+
+					return dateA - dateB;
+				});
 		%>
 
 		<%# If we have `on` dates, know the policy is ended, or the policy may be current %>
