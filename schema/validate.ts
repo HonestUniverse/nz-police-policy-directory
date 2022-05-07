@@ -1,6 +1,8 @@
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 
+import type { Policy } from './Policy.js';
+
 const ajv = new Ajv();
 
 // `ajv` doesn't understand complex formats by default,
@@ -39,6 +41,6 @@ for (const [i, schema] of schemas.entries()) {
 	ajv.addSchema(schema, name);
 }
 
-const validatePolicy = ajv.compile(schemas[0]);
+const validatePolicy = ajv.compile<Policy>(schemas[0]);
 
 export { validatePolicy };
