@@ -15,10 +15,12 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
-import { readdir, writeFile } from 'fs/promises';
+import { readdir, readFile } from 'fs/promises';
 import type { Dirent } from 'fs';
 
 import { validatePolicy } from './schema/validate.js';
+import type { PolicyVersionFile } from './schema/PolicyVersionFile.js';
+import type { Policy } from './schema/Policy.js';
 
 const entryPath = './assets';
 const distPath = path.resolve(__dirname, '../dist');
@@ -80,8 +82,32 @@ switch (process.env.MODE) {
 		break;
 }
 
+function getFileSizeValidator(dirName: string) {
+	return async function validateFileSize(file: PolicyVersionFile) {
+		const filePath = `${dirName}/${file.path}`;
+		const handle = await readFile(filePath);
+
+		if (file.size !== handle.byteLength) {
+			console.warn(`WARNING: Incorrect file size for ${filePath}. Was ${file.size}, should be ${handle.byteLength}`);
+			file.size = handle.byteLength;
+		}
+	}
+}
+
+async function validateFileSizes(dirName, policy: Policy) {
+	const validateFileSize = getFileSizeValidator(dirName);
+
+	const filePromises: Promise<void>[] = [];
+	for (const version of policy.versions) {
+		filePromises.push(...version.files.map(validateFileSize));
+	}
+
+	return Promise.all(filePromises);
+}
+
 async function checkPolicy(entry: Dirent, directory: Record<string, unknown>) {
-	const dir = await readdir(`./policies/${entry.name}`);
+	const dirName = `./policies/${entry.name}`;
+	const dir = await readdir(dirName);
 
 	if (dir.indexOf('metadata.json') === -1) return;
 
@@ -99,7 +125,7 @@ async function checkPolicy(entry: Dirent, directory: Record<string, unknown>) {
 		throw new TypeError(`Cannot build site due to invalid metadata in ${entry.name}`);
 	}
 
-	// TODO: Read the size of each file and ensure it is present and correct in the metadata
+	await validateFileSizes(dirName, data);
 
 	directory[entry.name] = data;
 }
