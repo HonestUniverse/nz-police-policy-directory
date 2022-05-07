@@ -99,6 +99,7 @@ const result = (async () => {
 	policies.forEach((key) => {
 		const policy = directory[key];
 
+		// TODO: Also generate a page for each version of the policy
 		config.plugins!.push(
 			new CopyPlugin({
 				patterns: [{ from: `./policies/${key}`, to: `./${key}` }],
