@@ -32,21 +32,10 @@
 		}
 	},
 	"required": [
-		"provenance",
+		"name",
 		"duration",
+		"provenance",
 		"files"
-	],
-	"anyOf": [
-		{
-			"required": [
-				"name"
-			]
-		},
-		{
-			"required": [
-				"duration"
-			]
-		}
 	],
 	"additionalProperties": false
 }
