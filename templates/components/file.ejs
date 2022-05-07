@@ -1,3 +1,7 @@
+<%
+	const fileName = file.path.replace(/^.*\//, '');
+%>
+
 <% if (file.notices) { %>
 	<% for (const notice of file.notices) { %>
 		<%- include('notice', { notice }) %>
@@ -5,7 +9,7 @@
 <% } %>
 
 <p>
-	<a href="<%= file.path %>" target="_blank"><%= file.path %></a>
+	<a href="<%= file.path %>" target="_blank"><%= fileName %></a>
 	<% if (file.size) { %>
 		(<%= include('../helpers/file-size', { size: file.size }) %>)
 	<% } %>
