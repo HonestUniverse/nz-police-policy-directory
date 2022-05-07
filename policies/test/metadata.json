@@ -24,7 +24,7 @@
 			},
 			"files": [
 				{
-					"path": "2017-10-12 Fleeing driver policy.pdf",
+					"path": "version-3-0/2017-10-12 Fleeing driver policy.pdf",
 					"type": "application/pdf",
 					"size": 351424,
 					"licence": "None",
@@ -59,7 +59,7 @@
 			]
 		},
 		{
-			"name": "Version 3.0",
+			"name": "Version 4.0",
 			"duration": {
 				"start": "2016-06-30",
 				"end": "2017-10-12"
@@ -79,7 +79,7 @@
 			},
 			"files": [
 				{
-					"path": "2016-06-30 Fleeing driver policy.pdf",
+					"path": "version-4-0/2016-06-30 Fleeing driver policy.pdf",
 					"type": "application/pdf",
 					"size": 380978,
 					"licence": {
