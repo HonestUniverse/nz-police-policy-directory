@@ -3,7 +3,7 @@
 	"type": "Police Instructions",
 	"versions": [
 		{
-			"name": "3.0",
+			"name": "Version 3.0",
 			"duration": {
 				"start": "2017-10-12",
 				"on": ["2018-03-19"],
@@ -59,7 +59,7 @@
 			]
 		},
 		{
-			"name": "3.0",
+			"name": "Version 3.0",
 			"duration": {
 				"start": "2016-06-30",
 				"end": "2017-10-12"
