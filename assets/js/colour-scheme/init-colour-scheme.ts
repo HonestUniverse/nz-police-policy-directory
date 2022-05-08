@@ -18,7 +18,7 @@ export function applyColourScheme(scheme: ColourScheme) {
 /**
  * Read a preferred colour scheme from `localStorage`, if one has been remembered.
  */
-export function recallColourScheme(): ColourScheme | null {
+function recallColourScheme(): ColourScheme | null {
 	if (localStorageSupport) {
 		const scheme = localStorage.getItem(colourSchemeKey);
 
