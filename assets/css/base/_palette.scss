@@ -1,0 +1,50 @@
+@import "../theme/palette";
+
+@mixin palette-light {
+	--white: #{$white};
+	--black: #{$black};
+
+	--grey--light: #{$grey--light};
+
+	--blue--pale: #{$blue--pale};
+	--blue--vivid: #{$blue--vivid};
+
+	--yellow--pale: #{$yellow--pale};
+
+	--red--pale: #{$red--pale};
+
+	--link: #{$blue--vivid};
+}
+
+@mixin palette-dark {
+	--white: #{$black};
+	--black: #{$white};
+
+	--grey--light: #{$grey--dark};
+
+	--blue--pale: #{$blue--dim};
+	--blue--vivid: #{$blue--vivid-bright};
+
+	--yellow--pale: #{$yellow--dim};
+
+	--red--pale: #{$red--dim};
+
+	--link: #{$blue--vivid-bright};
+}
+
+:root {
+	@include palette-light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include palette-dark;
+	}
+}
+
+.light {
+	@include palette-light;
+}
+.dark {
+	@include palette-dark;
+}

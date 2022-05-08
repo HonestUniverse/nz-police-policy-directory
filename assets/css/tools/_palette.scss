@@ -1,0 +1,38 @@
+@import "../theme/palette";
+@import "use-var";
+
+@mixin link {
+	@include use-var(color, --link);
+
+	text-decoration: underline;
+}
+
+// These "contrast" mixins can be used to apply pairs of background and text colours that have sufficient contrast.
+
+@mixin contrast-primary {
+	@include use-var(background-color, --grey--light, $grey--light);
+	@include use-var(color, --black, $black);
+
+	--link: var(--blue--vivid, #{$blue--vivid});
+}
+
+@mixin contrast-blue {
+	@include use-var(background-color, --blue--pale, $blue--pale);
+	@include use-var(color, --black, $black);
+
+	--link: var(--blue--vivid, #{$blue--vivid});
+}
+
+@mixin contrast-yellow {
+	@include use-var(background-color, --yellow--pale, $yellow--pale);
+	@include use-var(color, --black, $black);
+
+	--link: var(--blue--vivid, #{$blue--vivid});
+}
+
+@mixin contrast-red {
+	@include use-var(background-color, --red--pale, $red--pale);
+	@include use-var(color, --black, $black);
+
+	--link: var(--blue--vivid, #{$blue--vivid});
+}
