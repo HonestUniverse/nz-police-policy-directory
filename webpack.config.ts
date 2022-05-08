@@ -26,6 +26,7 @@ const config: webpack.Configuration = {
 	mode: process.env.MODE === 'development' ? 'development' : 'production',
 	entry: {
 		main: `${entryPath}/js/main.ts`,
+		priority: `${entryPath}/js/priority.ts`,
 		//style: `${entryPath}/css/style.scss`,
 	},
 	output: {
@@ -112,7 +113,8 @@ const result = (async () => {
 						data: { policy },
 					},
 				}),
-				chunks: ['main', 'style'],
+				// TODO: Loading `priority` here makes it deferred. Instead, we should load it directly in `head.ejs`
+				chunks: ['main', 'priority', 'style'],
 			})
 		);
 	});
