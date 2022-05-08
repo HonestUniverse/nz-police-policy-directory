@@ -1,0 +1,37 @@
+@import "../tools/fonts";
+
+.provenance {}
+
+.provenance__date {
+	display: block;
+	margin-bottom: 1em;
+
+	@include font-base-18;
+}
+
+.provenance__source {
+	@include font-base-18;
+}
+
+.provenance__source__link {}
+
+.provenance__withholdings {
+	@include font-base-18;
+}
+
+.provenance__withholdings__list {}
+
+.provenance__withholding {}
+
+.provenance__withholding__type {
+	@include font-base-18b;
+}
+
+.provenance__withholding__value {
+	margin: 0;
+	@include font-base-18;
+}
+
+.provenance__requester {
+	@include font-base-16;
+}

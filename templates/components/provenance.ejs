@@ -1,57 +1,60 @@
-<%
-	const withholdings = provenance.withholdings || provenance.oiaRequest?.withholdings;
-%>
+<div class="provenance">
+	<%
+		const withholdings = provenance.withholdings || provenance.oiaRequest?.withholdings;
+	%>
 
-<% if (provenance.published) { %>
-	<p>Published: <%- include('../helpers/date-partial', { date: provenance.published }) %></p>
-<% } else if (provenance.extracted) { %>
-	<p>Extracted: <%- include('../helpers/date-partial', { date: provenance.extracted }) %></p>
-<% } else if (provenance.released) { %>
-	<p>Released: <%- include('../helpers/date-partial', { date: provenance.released }) %></p>
-<% } else if (provenance.retrieved) { %>
-	<p>Retrieved: <%- include('../helpers/date-partial', { date: provenance.retrieved }) %></p>
-<% } %>
+	<% if (provenance.published) { %>
+		<span class="provenance__date">Published: <%- include('../helpers/date-partial', { date: provenance.published }); %></span>
+	<% } else if (provenance.extracted) { %>
+		<span class="provenance__date">Extracted: <%- include('../helpers/date-partial', { date: provenance.extracted }); %></span>
+	<% } else if (provenance.released) { %>
+		<span class="provenance__date">Released: <%- include('../helpers/date-partial', { date: provenance.released }); %></span>
+	<% } else if (provenance.retrieved) { %>
+		<span class="provenance__date">Retrieved: <%- include('../helpers/date-partial', { date: provenance.retrieved }); %></span>
+	<% } %>
 
-<% if (provenance.method) { %>
-	<p>Source:
-		<% if (provenance.url) { %>
-			<a
-				href="<%= provenance.url %>"
-				<% if (/^https?:/.test(provenance.url)) { %>
-					target="_blank"
-				<% } %>
-			><%= provenance.method %></a>
-		<% } else { %>
-			<%= provenance.method %>
-		<% } %>
+	<% if (provenance.method) { %>
+		<div class="provenance__source">Source:
+			<% if (provenance.url) { %>
+				<a
+					href="<%= provenance.url %>"
+					<% if (/^https?:/.test(provenance.url)) { %>
+						target="_blank"
+					<% } %>
+					class="provenance__source__link"
+				><%= provenance.method %></a>
+			<% } else { %>
+				<%= provenance.method %>
+			<% } %>
 
-		<% if (provenance.source) { %>
-			by <%= provenance.source %>
-		<% } %>
+			<% if (provenance.source) { %>
+				by <%= provenance.source %>
+			<% } %>
 
-		<% if (withholdings) { %>
-			<div>
-				<% if (typeof withholdings === 'string') { %>
-					Withheld information: <%= withholdings %>
-				<% } else { %>
-					<span>Some information was withheld under:</span>
+			<% if (withholdings) { %>
+				<div class="provenance__withholdings">
+					<% if (typeof withholdings === 'string') { %>
+						Withheld information: <%= withholdings %>
+					<% } else { %>
+						<span>Some information was withheld under:</span>
 
-					<%# TODO: Links or tooltips to more information for each specific withholding ground %>
-					<dl>
-						<% Object.entries(withholdings).forEach(([key, val]) => { %>
-							<div>
-								<dt><%= key %></dt>
-								<dd><%= val %></dd>
-							</div>
-						<% }) %>
-					</dl>
-				<% } %>
+						<%# TODO: Links or tooltips to more information for each specific withholding ground %>
+						<dl class="provenance__withholdings__list">
+							<% Object.entries(withholdings).forEach(([key, val]) => { %>
+								<div class="provenance__withholding">
+									<dt class="provenance__withholding__type"><%= key %></dt>
+									<dd class="provenance__withholding__value"><%= val %></dd>
+								</div>
+							<% }) %>
+						</dl>
+					<% } %>
+				</div>
+			<% } %>
 			</div>
-		<% } %>
-	</p>
-<% } else if (provenance.source) { %>
-	<p>Sourced: <%= provenance.source %></p>
-<% } %>
-<% if (provenance.requester) { %>
-	<p>Requester: <%= provenance.requester %></p>
-<% } %>
+	<% } else if (provenance.source) { %>
+		<div class="provenance__source">Sourced: <%= provenance.source %></div>
+	<% } %>
+	<% if (provenance.requester) { %>
+		<span class="provenance__requester">Requester: <%= provenance.requester %></span>
+	<% } %>
+</div>
