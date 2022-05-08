@@ -113,6 +113,11 @@
 			"title": "Test notice",
 			"type": "info",
 			"message": "This is a test notice"
+		},
+		{
+			"title": "Test notice",
+			"type": "error",
+			"message": "This is a test error notice"
 		}
 	]
 }

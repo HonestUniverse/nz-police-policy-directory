@@ -1,5 +1,6 @@
 @import "../tools/reset";
 @import "../tools/fonts";
+@import "../tools/palette";
 
 .menu {}
 
@@ -16,4 +17,5 @@
 
 .menu__list-link {
 	@include font-base-16;
+	@include link;
 }

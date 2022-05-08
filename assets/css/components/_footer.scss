@@ -1,5 +1,6 @@
 @import "../tools/layout";
 @import "../tools/fonts";
+@import "../tools/palette";
 
 .footer {
 	padding-bottom: 1em;
@@ -9,4 +10,10 @@
 
 .footer__layout {
 	@include layout-wrapper;
+}
+
+.footer__by {
+	a {
+		@include link;
+	}
 }
