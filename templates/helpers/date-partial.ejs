@@ -1,5 +1,7 @@
 <%
-	const formatter = new Intl.DateTimeFormat('en-nz');
+	const formatter = new Intl.DateTimeFormat('en-nz', {
+		dateStyle: 'long',
+	});
 
 	const formatDate = (date) => formatter.format(date);
 	const formatDateString = (dateString) => formatDate(new Date(dateString));
