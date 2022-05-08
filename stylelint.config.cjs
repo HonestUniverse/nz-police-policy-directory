@@ -117,7 +117,13 @@ module.exports = {
 		'declaration-block-trailing-semicolon': 'always',
 
 		'block-closing-brace-empty-line-before': 'never',
-		'block-closing-brace-newline-after': 'always',
+		'block-closing-brace-newline-after': [
+			'always',
+			{
+				ignoreAtRules: ['if', 'else'],
+			},
+		],
+		'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
 		'block-closing-brace-space-before': 'always-single-line',
 
 		'block-opening-brace-newline-after': 'always-multi-line',
