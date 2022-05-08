@@ -78,7 +78,7 @@ class AlterPlugin {
 			hooks.afterEmit.tapAsync('AlterPlugin', (data, callback) => {
 				const source = compilation.assets[data.outputName].source() as string;
 
-				const bodyTag = source.match(/<body[^>]+>/)?.[0] as string;
+				const bodyTag = source.match(/<body.*?>/)?.[0] as string;
 				const bodyStart = source.indexOf(bodyTag) + bodyTag.length;
 				const body = source.match(/<body.+<\/body>/)?.[0] as string;
 
@@ -94,9 +94,13 @@ class AlterPlugin {
 				}, body);
 
 				const newHtml = [...source.replace(body, bodyLess)];
-				newHtml.splice(bodyStart, 0, scripts.join(""));
+				newHtml.splice(bodyStart, 0, scripts.join(''));
 
-				compilation.assets[data.outputName] = new webpack.sources.RawSource(newHtml.join(""), false);
+				compilation.assets[data.outputName] = new webpack.sources.RawSource(
+					newHtml.join(''),
+					false
+				);
+
 				callback(false, data);
 			});
 		});
