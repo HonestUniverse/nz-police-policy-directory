@@ -1,0 +1,24 @@
+@import "../tools/layout";
+@import "../tools/reset";
+@import "../tools/fonts";
+
+.policy {}
+
+.policy__layout {
+	@include layout-wrapper;
+}
+
+.policy__title {
+	@include font-heading-40b;
+}
+
+.policy__type {
+	display: block;
+	@include font-base-16;
+}
+
+.policy__version-list {
+	@include list-reset;
+}
+
+.policy__version-item {}

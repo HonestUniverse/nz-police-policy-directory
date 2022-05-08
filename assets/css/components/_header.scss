@@ -1,0 +1,14 @@
+@import "../tools/layout";
+@import "../tools/fonts";
+
+.header {
+	padding-top: 1em;
+}
+
+.header__layout {
+	@include layout-wrapper;
+}
+
+.header__site-name {
+	@include font-heading-20b;
+}

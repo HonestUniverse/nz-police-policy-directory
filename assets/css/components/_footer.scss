@@ -1,0 +1,12 @@
+@import "../tools/layout";
+@import "../tools/fonts";
+
+.footer {
+	padding-bottom: 1em;
+
+	@include font-base-16;
+}
+
+.footer__layout {
+	@include layout-wrapper;
+}

@@ -1,0 +1,19 @@
+@import "../tools/reset";
+@import "../tools/fonts";
+
+.menu {}
+
+.menu__list {
+	@include list-reset;
+	display: flex;
+
+	margin-left: -1em;
+}
+
+.menu__list-item {
+	padding-left: 1em;
+}
+
+.menu__list-link {
+	@include font-base-16;
+}

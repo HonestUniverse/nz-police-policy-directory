@@ -1,0 +1,18 @@
+@use "sass:math";
+
+/**
+ * Convert a value in `px` to an equivalent value in `rem`,
+ * assuming a default base font size of `16px`
+ */
+@function rem($value) {
+	$value-units: $value * 0 + 1;
+	$value-unitless: math.div($value, $value-units);
+
+	// 16px is the default base font size
+	$base-font-size-unitless: 16;
+	$value-unitless-scaled: math.div($value-unitless, $base-font-size-unitless);
+
+	$value-scaled-rem: #{$value-unitless-scaled}rem;
+
+	@return $value-scaled-rem;
+}

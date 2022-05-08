@@ -4,20 +4,14 @@
 		prev[1].push(directory[key]);
 		return prev;
 	}, [[], []]);
-%> 
+%>
 
-<!DOCTYPE html>
-<html>
-	<%- include('components/head', { title: "Directory" }); %>
-	<body>
-		<%- include('components/header') %>
-		<main>
-			<h2>Directory</h2>
+<%- include('layout/head', { title: 'Directory' }); %>
 
-			<ul>
-				<% policies.forEach((policy, idx) => { %> <%- include('components/policy-summary', { policy, key: keys[idx] }) %> <% }) %>
-			</ul>
-		</main>
-		<%- include('components/footer') %>
-	</body>
-</html>
+<h1>Directory</h1>
+
+<ul>
+	<% policies.forEach((policy, idx) => { %> <%- include('components/policy-summary', { policy, key: keys[idx] }); %> <% }) %>
+</ul>
+
+<%- include('layout/foot'); %>

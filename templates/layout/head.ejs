@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title><%= title %></title>
+		<% if (locals.description) { %>
+		<meta name="description" content="<%= description %>" />
+		<meta property="twitter:description" content="<%= description %>" />
+		<meta property="og:description" content="<%= description %>" />
+		<% } %>
+		<meta name="keywords" content="tags" />
+
+		<meta property="twitter:card" content="summary" />
+		<meta property="twitter:title" content="<%= title %>" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="<%= title %>" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="header__layout">
+				<span class="header__site-name">NZ Police Policy Directory</span>
+
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__list-item"><a class="menu__list-link" href="/">Home</a></li>
+						<li class="menu__list-item"><a class="menu__list-link" href="/Filter">Filter</a></li>
+						<li class="menu__list-item"><a class="menu__list-link" href="/About">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>

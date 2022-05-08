@@ -1,0 +1,23 @@
+@import "../tools/contrast";
+@import "../tools/fonts";
+
+.notice {
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+
+	padding: 1em;
+	border-radius: 1em;
+}
+
+.notice--info { @include contrast-blue; }
+.notice--warning { @include contrast-yellow; }
+.notice--error { @include contrast-red; }
+
+.notice__title {
+	@include font-heading-20b;
+}
+
+.notice__message {
+	@include font-base-18;
+}
