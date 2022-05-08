@@ -29,6 +29,6 @@
 
 @import "tools/palette";
 
-html, body {
+body {
 	@include contrast-primary;
 }

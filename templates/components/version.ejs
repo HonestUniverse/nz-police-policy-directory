@@ -1,93 +1,98 @@
-<article class="version">
-	<h2 class="version__name">
-		<% if (version.name) { %>
-			<%- version.name %>
-		<% } else { %>
-			Unnamed version
+<%
+	const name = (version.name || 'Unnamed version') + (isLatest ? ' (Latest)' : '');
+%>
+
+<% if (isFirst) { %>
+	<article class="version">
+		<h2 class="version__name"><%= name %></h2>
+<% } else { %>
+	<details class="version version--disclosure">
+		<summary class="version__name"><%= name %></summary>
+<% } %>
+
+	<div class="version__contents">
+		<% if (version.notices) { %>
+			<% for (const notice of version.notices) { %>
+				<%- include('notice', { notice }); %>
+			<% } %>
 		<% } %>
 
-		<% if (isFirst) { %>
-			(Latest)
-		<% } %>
-	</h2>
-
-	<% if (version.notices) { %>
-		<% for (const notice of version.notices) { %>
-			<%- include('notice', { notice }); %>
-		<% } %>
-	<% } %>
-
-	<%
-		const { duration } = version;
-
-		const startDate = duration.start ? include('../helpers/date-partial', { date: duration.start }) : 'unknown';
-		const endDate = duration.end ? include('../helpers/date-partial', { date: duration.end }) : 'unknown';
-		const dateSpan = `${startDate} &ndash; ${endDate}`;
-	%>
-	<span class="version__date-span"><%- dateSpan %></span>
-
-	<%# If we don't have start and end dates, fill in as many of the blanks as we can %>
-	<% if (!(duration.start && duration.end)) { %>
 		<%
-			// Sort `on` dates chronologically
-			function partialToFullDate(dateObj) {
-				if (dateObj instanceof Date) {
-					return dateObj;
+			const { duration } = version;
+
+			const startDate = duration.start ? include('../helpers/date-partial', { date: duration.start }) : 'unknown';
+			const endDate = duration.end ? include('../helpers/date-partial', { date: duration.end }) : 'unknown';
+			const dateSpan = `${startDate} &ndash; ${endDate}`;
+		%>
+		<span class="version__date-span"><%- dateSpan %></span>
+
+		<%# If we don't have start and end dates, fill in as many of the blanks as we can %>
+		<% if (!(duration.start && duration.end)) { %>
+			<%
+				// Sort `on` dates chronologically
+				function partialToFullDate(dateObj) {
+					if (dateObj instanceof Date) {
+						return dateObj;
+					}
+
+					const year = dateObj.year;
+					const month = (dateObj.month || dateObj.quarter * 3 - 2 || 1) - 1;
+					const date = dateObj.date || 1;
+
+					return new Date(year, month, date);
 				}
 
-				const year = dateObj.year;
-				const month = (dateObj.month || dateObj.quarter * 3 - 2 || 1) - 1;
-				const date = dateObj.date || 1;
+				const onDates = duration.on
+					?.map((dateObj) => typeof dateObj === 'string' ? new Date(dateObj) : dateObj)
+					.sort((a, b) => {
+						// Dates in `on` may be partial. For sorting assume they are the earliest date in the region of uncertainty
+						const dateA = partialToFullDate(a);
+						const dateB = partialToFullDate(b);
 
-				return new Date(year, month, date);
-			}
+						return dateA - dateB;
+					});
+			%>
 
-			const onDates = duration.on
-				?.map((dateObj) => typeof dateObj === 'string' ? new Date(dateObj) : dateObj)
-				.sort((a, b) => {
-					// Dates in `on` may be partial. For sorting assume they are the earliest date in the region of uncertainty
-					const dateA = partialToFullDate(a);
-					const dateB = partialToFullDate(b);
+			<%# If we have `on` dates, know the policy is ended, or the policy may be current %>
+			<% if (onDates || duration.ended || !duration.end) { %>
+				<span class="version__dates-active">
+					<% if (onDates) { %>
+						<%
+							const firstDate = onDates[0];
+							const lastDate = onDates[onDates.length-1];
 
-					return dateA - dateB;
-				});
-		%>
+							const showFirstDate = !duration.start;
+							const showLastDate = !duration.end && (firstDate !== lastDate || !showFirstDate);
+						%>
 
-		<%# If we have `on` dates, know the policy is ended, or the policy may be current %>
-		<% if (onDates || duration.ended || !duration.end) { %>
-			<span class="version__dates-active">
-				<% if (onDates) { %>
-					<%
-						const firstDate = onDates[0];
-						const lastDate = onDates[onDates.length-1];
+						Active on
+							<% if (showFirstDate) { %>
+								<%- include('../helpers/date-partial', { date: firstDate }); %>
+							<% } %>
+							<% if (showFirstDate && showLastDate) { %>
+								and
+							<% } %>
+							<% if (showLastDate) { %>
+								<%- include('../helpers/date-partial', { date: lastDate }); %>
+							<% } %>
+					<% } %>
 
-						const showFirstDate = !duration.start;
-						const showLastDate = !duration.end && (firstDate !== lastDate || !showFirstDate);
-					%>
-
-					Active on
-						<% if (showFirstDate) { %>
-							<%- include('../helpers/date-partial', { date: firstDate }); %>
-						<% } %>
-						<% if (showFirstDate && showLastDate) { %>
-							and
-						<% } %>
-						<% if (showLastDate) { %>
-							<%- include('../helpers/date-partial', { date: lastDate }); %>
-						<% } %>
-				<% } %>
-
-				<% if (duration.ended) { %>
-					(no longer active)
-				<% } else if (!duration.end) { %>
-					(no known end date, may still be active)
-				<% } %>
+					<% if (duration.ended) { %>
+						(no longer active)
+					<% } else if (!duration.end) { %>
+						(no known end date, may still be active)
+					<% } %>
 				</span>
+			<% } %>
 		<% } %>
-	<% } %>
 
-	<%# TODO: Render more than just the first file %>
-	<% version.files.forEach((file) => { %>
-		<%- include('file', { file, version }); %>
-	<% }) %>
-</article>
+		<%# TODO: Render more than just the first file %>
+		<% version.files.forEach((file) => { %>
+			<%- include('file', { file, version }); %>
+		<% }) %>
+	</div>
+<% if (isFirst) { %>
+	</article>
+<% } else { %>
+	</details>
+<% } %>

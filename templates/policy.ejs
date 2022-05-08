@@ -26,7 +26,11 @@
 			%>
 			<% versions.forEach((version, i, arr) => { %>
 				<li class="policy__version-item">
-					<%- include('components/version', { version, isFirst: hasMultipleVersions && i === 0 }) %>
+					<%- include('components/version', {
+						version,
+						isLatest: hasMultipleVersions && i === 0,
+						isFirst: i === 0,
+					}) %>
 				</li>
 			<% }); %>
 		</ol>
