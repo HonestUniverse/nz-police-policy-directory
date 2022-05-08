@@ -30,7 +30,9 @@
 
 .file__modifications {}
 
-.file__modifications__item {}
+.file__modifications__item {
+	@include font-base-18;
+}
 
 .file__accessibility {}
 
