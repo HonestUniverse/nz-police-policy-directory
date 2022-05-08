@@ -1,0 +1,31 @@
+@import "../tools/fonts";
+
+.policy-summary {
+	padding: 1em 0;
+
+	> :first-child {
+		margin-top: 0;
+	}
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.policy-summary__title {
+	display: block;
+	margin-bottom: 0.5em;
+
+	@include font-heading-20b;
+}
+
+.policy-summary__link {
+	@include link;
+}
+
+.policy-summary__type,
+.policy-summary__date {
+	display: block;
+	margin-bottom: 0.5em;
+
+	@include font-base-18;
+}
