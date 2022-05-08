@@ -1,3 +1,29 @@
+// File structure:
+//	base
+//		Base files generate CSS that has the lowest priority,
+//		such as reset CSS, @font-face declarations, and custom properties on the `:root`.
+//	theme
+//		Theme files contain only SCSS variables, so they will not generate any CSS on their own.
+//		These files should be imported where they need to be used.
+//		Some variables may only be used within mixins and functions exposed through Tools.
+//	tools
+//		Tool files contain only mixins and functions, so they will not generate any CSS on their own.
+//		These files should be imported where they need to be used.
+//	components
+//		Component files each detail a single component.
+//		They should import any variables, mixins, or functions they may need so they can stand on their own.
+
+@import "base/reset";
+
+@import "components/header";
+@import "components/menu";
+@import "components/footer";
+@import "components/policy";
+@import "components/version";
+@import "components/file";
+@import "components/provenance";
+@import "components/notice";
+
 html, body {
-	background: lightgray;
+	background: $grey--light;
 }

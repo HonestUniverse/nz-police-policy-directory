@@ -1,0 +1,42 @@
+@import "../tools/fonts";
+
+.file {}
+
+.file__handle {}
+
+.file__handle__link {
+	@include font-base-18;
+}
+
+.file__handle__size {
+	@include font-base-16;
+}
+
+.file__licence {}
+
+.file__licence__handle {
+	@include font-base-18;
+}
+
+.file__licence__handle__link {}
+
+.file__original {
+	@include font-base-18;
+}
+
+.file__modifications {}
+
+.file__modifications__item {}
+
+.file__accessibility {}
+
+.file__accessibility__feature {}
+
+.file__accessibility__feature__name {
+	@include font-base-18b;
+}
+
+.file__accessibility__feature__value {
+	margin: 0;
+	@include font-base-18;
+}

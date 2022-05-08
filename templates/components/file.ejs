@@ -1,82 +1,85 @@
-<%
-	const fileName = file.path.replace(/^.*\//, '');
-%>
+<div class="file">
+	<%
+		const fileName = file.path.replace(/^.*\//, '');
+	%>
 
-<% if (file.notices) { %>
-	<% for (const notice of file.notices) { %>
-		<%- include('notice', { notice }) %>
-	<% } %>
-<% } %>
-
-<p>
-	<a href="<%= file.path %>" target="_blank"><%= fileName %></a>
-	<% if (file.size) { %>
-		(<%= include('../helpers/file-size', { size: file.size }) %>)
-	<% } %>
-</p>
-
-<%
-	const provenance = file.provenance || version.provenance;
-%>
-
-<%- include('provenance', { provenance }) %>
-
-<div>
-	<% if (file.licence === "None") { %>
-		<p>Licence: <%= file.licence %></p>
-	<% } else { %>
-		<p>Licence:
-			<% if (file.licence.url) { %>
-				<a
-					href="<%= file.licence.url %>"
-					<% if (/^https?:/.test(file.licence.url)) { %>
-						target="_blank"
-					<% } %>
-				><%= file.licence.name %></a>
-			<% } else { %>
-				<%= file.licence.name %>
-			<% } %>
-		</p>
-
-		<% if (file.licence.notices) { %>
-			<% for (const notice of file.licence.notices) { %>
-				<%- include('notice', { notice }) %>
-			<% } %>
+	<% if (file.notices) { %>
+		<% for (const notice of file.notices) { %>
+			<%- include('notice', { notice }); %>
 		<% } %>
 	<% } %>
-</div>
 
-<% if (file.original) { %>
-	<p>Original file</p>
-<% } else { %>
-	<p>Not original file</p>
-<% } %>
-
-<% if (file.modifications) { %>
-	<ul>
-		<% for (const modification of file.modifications) { %>
-			<li>
-				<%= modification %>
-			</li>
+	<div class="file__handle">
+		<a href="<%= file.path %>" target="_blank" class="file__handle__link"><%= fileName %></a>
+		<% if (file.size) { %>
+			<span class="file__handle__size">(<%- include('../helpers/file-size', { size: file.size }); %>)</span>
 		<% } %>
-	</ul>
-<% } %>
+	</div>
 
-<dl>
-	<% for (const featureName of Object.keys(file.accessibility)) { %>
-		<div>
-			<dt><%= featureName %></dt>
-			<dd>
-				<% const feature = file.accessibility[featureName]; %>
-				<% if (typeof feature === 'boolean' || typeof feature === 'string') { %>
-					<%= feature %>
+	<%
+		const provenance = file.provenance || version.provenance;
+	%>
+
+	<%- include('provenance', { provenance }); %>
+
+	<div class="file__licence">
+		<% if (file.licence === "None") { %>
+			<p class="file__licence__handle">Licence: <%= file.licence %></p>
+		<% } else { %>
+			<p class="file__licence__handle">Licence:
+				<% if (file.licence.url) { %>
+					<a
+						href="<%= file.licence.url %>"
+						<% if (/^https?:/.test(file.licence.url)) { %>
+							target="_blank"
+						<% } %>
+						class="file__licence__handle__link"
+					><%= file.licence.name %></a>
 				<% } else { %>
-					<%= feature.value %>
-					<% if (feature.note) { %>
-						(<%= feature.note %>)
-					<% } %>
+					<%= file.licence.name %>
 				<% } %>
-			</dd>
-		</div>
+			</p>
+
+			<% if (file.licence.notices) { %>
+				<% for (const notice of file.licence.notices) { %>
+					<%- include('notice', { notice }); %>
+				<% } %>
+			<% } %>
+		<% } %>
+	</div>
+
+	<% if (file.original) { %>
+		<p class="file__original">Original file</p>
+	<% } else { %>
+		<p>Not original file</p>
 	<% } %>
-</dl>
+
+	<% if (file.modifications) { %>
+		<ul class="file__modifications">
+			<% for (const modification of file.modifications) { %>
+				<li class="file__modifications__item">
+					<%= modification %>
+				</li>
+			<% } %>
+		</ul>
+	<% } %>
+
+	<dl class="file__accessibility">
+		<% for (const featureName of Object.keys(file.accessibility)) { %>
+			<div class="file__accessibility__feature">
+				<dt class="file__accessibility__feature__name"><%= featureName %></dt>
+				<dd class="file__accessibility__feature__value">
+					<% const feature = file.accessibility[featureName]; %>
+					<% if (typeof feature === 'boolean' || typeof feature === 'string') { %>
+						<%= feature %>
+					<% } else { %>
+						<%= feature.value %>
+						<% if (feature.note) { %>
+							(<%= feature.note %>)
+						<% } %>
+					<% } %>
+				</dd>
+			</div>
+		<% } %>
+	</dl>
+</div>
