@@ -18,6 +18,7 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 import { readdir } from 'fs/promises';
 
 import { checkPolicyDir } from './schema/validate.js';
+import AlterPlugin from './alter-plugin.js';
 
 const entryPath = './assets';
 const distPath = path.resolve(__dirname, '../dist');
@@ -114,7 +115,7 @@ const result = (async () => {
 					},
 				}),
 				// TODO: Loading `priority` here makes it deferred. Instead, we should load it directly in `head.ejs`
-				chunks: ['main', 'priority', 'style'],
+				chunks: ['main', 'priority'],
 			})
 		);
 	});
@@ -126,10 +127,14 @@ const result = (async () => {
 				templatePath: './templates/directory.ejs',
 				templateEjsLoaderOption: {
 					data: {
-						directory
+						directory,
 					},
-				}
-			})
+				},
+			}),
+			chunks: ['main', 'priority'],
+		}),
+		new AlterPlugin({
+			defer: ['main'],
 		})
 	);
 
