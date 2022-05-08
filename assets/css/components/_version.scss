@@ -1,0 +1,21 @@
+@import "../tools/fonts";
+
+.version {}
+
+.version__name {
+	@include font-heading-32b;
+}
+
+.version__date-span {
+	display: block;
+	margin-bottom: 1em;
+
+	@include font-base-16;
+}
+
+.version__dates-active {
+	display: block;
+	margin-bottom: 1em;
+
+	@include font-base-16;
+}
