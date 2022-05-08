@@ -56,7 +56,7 @@ function getFileSizeValidator(dirName: string) {
 	}
 }
 
-async function validateFileSizes(dirName: string, policy: Policy) {
+function validateFileSizes(dirName: string, policy: Policy) {
 	const validateFileSize = getFileSizeValidator(dirName);
 
 	const filePromises: Promise<void>[] = [];

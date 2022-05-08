@@ -2,14 +2,14 @@
 // code to be minimal, so it can run as the page loads with minimal blocking.
 
 import { ColourScheme } from './ColourScheme.js';
-import { applyColourScheme, recallColourScheme } from './init-colour-scheme.js';
+import { applyColourScheme } from './init-colour-scheme.js';
 import { rememberColourScheme } from './remember-colour-scheme.js';
 
 enum Selectors {
 	TOGGLE = '.js-colour-scheme__toggle',
 }
 
-export function init() {
+function init() {
 	initEvents();
 }
 
