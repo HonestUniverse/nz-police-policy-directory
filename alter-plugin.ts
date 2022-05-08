@@ -80,7 +80,7 @@ class AlterPlugin {
 
 				const bodyTag = source.match(/<body.*?>/)?.[0] as string;
 				const bodyStart = source.indexOf(bodyTag) + bodyTag.length;
-				const body = source.match(/<body.+<\/body>/)?.[0] as string;
+				const body = source.match(/<body.+<\/body>/s)?.[0] as string;
 
 				const scripts = body.match(/(<script[^>]+src.+?<\/script>)/g);
 
