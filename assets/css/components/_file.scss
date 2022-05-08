@@ -1,3 +1,4 @@
+@import "../tools/palette";
 @import "../tools/fonts";
 
 .file {}
@@ -6,6 +7,7 @@
 
 .file__handle__link {
 	@include font-base-18;
+	@include link;
 }
 
 .file__handle__size {
@@ -18,7 +20,9 @@
 	@include font-base-18;
 }
 
-.file__licence__handle__link {}
+.file__licence__handle__link {
+	@include link;
+}
 
 .file__original {
 	@include font-base-18;

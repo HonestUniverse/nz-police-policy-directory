@@ -1,0 +1,11 @@
+/**
+ * Use a CSS custom property for a property, with an optional fallback
+ */
+@mixin use-var($prop, $customProp, $fallback: false) {
+	@if ($fallback) {
+		#{$prop}: $fallback;
+		#{$prop}: var($customProp, #{$fallback});
+	} @else {
+		#{$prop}: var($customProp);
+	}
+}

@@ -14,6 +14,7 @@
 //		They should import any variables, mixins, or functions they may need so they can stand on their own.
 
 @import "base/reset";
+@import "base/palette";
 
 @import "components/header";
 @import "components/menu";
@@ -24,6 +25,8 @@
 @import "components/provenance";
 @import "components/notice";
 
+@import "tools/palette";
+
 html, body {
-	background: $grey--light;
+	@include contrast-primary;
 }
