@@ -1,3 +1,4 @@
+@import "../tools/reset";
 @import "../tools/layout";
 @import "../tools/fonts";
 
@@ -7,8 +8,52 @@
 
 .header__layout {
 	@include layout-wrapper;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@supports (display: grid) {
+		display: grid;
+		grid-template-areas:
+			"site-name site-name"
+			"nav tools";
+	}
 }
 
 .header__site-name {
+	display: block;
+	width: 100%;
+
+	grid-area: site-name;
+
 	@include font-heading-20b;
+}
+
+.header__nav {
+	grid-area: nav;
+}
+
+.header__tools {
+	grid-area: tools;
+
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header__colour-scheme {
+	@include button-reset;
+
+	// TODO: Style this as something other than a black/white box
+	width: 44px;
+	height: 44px;
+	background: var(--black);
+
+	display: none;
+	@supports (color: var(--test)) {
+		display: block;
+
+		body.no-js & {
+			display: none;
+		}
+	}
 }
