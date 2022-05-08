@@ -1,4 +1,4 @@
-@import "../tools/contrast";
+@import "../tools/palette";
 @import "../tools/fonts";
 
 .notice {
@@ -15,9 +15,16 @@
 .notice--error { @include contrast-red; }
 
 .notice__title {
+	display: block;
+	margin-bottom: 0.5em;
+
 	@include font-heading-20b;
 }
 
 .notice__message {
 	@include font-base-18;
+
+	a {
+		@include link;
+	}
 }

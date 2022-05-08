@@ -13,7 +13,9 @@
 	@include font-base-18;
 }
 
-.provenance__source__link {}
+.provenance__source__link {
+	@include link;
+}
 
 .provenance__withholdings {
 	@include font-base-18;
