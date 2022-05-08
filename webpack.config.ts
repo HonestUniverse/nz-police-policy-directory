@@ -114,7 +114,6 @@ const result = (async () => {
 						data: { policy },
 					},
 				}),
-				// TODO: Loading `priority` here makes it deferred. Instead, we should load it directly in `head.ejs`
 				chunks: ['main', 'priority'],
 			})
 		);
