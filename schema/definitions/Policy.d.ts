@@ -12,7 +12,7 @@ declare enum PolicyType {
 }
 
 export type Policy = {
-	schemaVersion: '1.0.0',
+	schemaVersion: '2.0.0',
 	title: string,
 	type: PolicyType,
 	versions: PolicyVersion[],

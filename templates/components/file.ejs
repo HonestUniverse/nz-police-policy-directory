@@ -25,27 +25,23 @@
 	<% } %>
 
 	<div class="file__licence">
-		<% if (file.licence === "None") { %>
-			<p class="file__licence__handle">Licence: <%= file.licence %></p>
-		<% } else { %>
-			<p class="file__licence__handle">Licence:
-				<% if (file.licence.url) { %>
-					<a
-						href="<%= file.licence.url %>"
-						<% if (/^https?:/.test(file.licence.url)) { %>
-							target="_blank"
-						<% } %>
-						class="file__licence__handle__link"
-					><%= file.licence.name %></a>
-				<% } else { %>
-					<%= file.licence.name %>
-				<% } %>
-			</p>
+		<p class="file__licence__handle">Licence:
+			<% if (file.licence.url) { %>
+				<a
+					href="<%= file.licence.url %>"
+					<% if (/^https?:/.test(file.licence.url)) { %>
+						target="_blank"
+					<% } %>
+					class="file__licence__handle__link"
+				><%= file.licence.name %></a>
+			<% } else { %>
+				<%= file.licence.name %>
+			<% } %>
+		</p>
 
-			<% if (file.licence.notices) { %>
-				<% for (const notice of file.licence.notices) { %>
-					<%- include('notice', { notice }); %>
-				<% } %>
+		<% if (file.licence.notices) { %>
+			<% for (const notice of file.licence.notices) { %>
+				<%- include('notice', { notice }); %>
 			<% } %>
 		<% } %>
 	</div>
