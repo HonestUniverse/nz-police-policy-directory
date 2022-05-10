@@ -1,0 +1,81 @@
+{
+	"title": "Tactical Options Framework",
+	"type": "Unclassified",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": [
+					"2017-01-04",
+					"2019-06-28",
+					"2021-05-31"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Jeremy Roundill",
+						"id": "16/8540/4",
+						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+						"withholdings": "None"
+					},
+					"released": "2017-01-04",
+					"retrieved": "2022-05-10",
+					"url": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+					"fileUrl": "https://fyi.org.nz/request/5014/response/16479/attach/5/Tactical%20Options%20Framework.pdf"
+				},
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-19-6782",
+						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
+						"withholdings": "None"
+					},
+					"released": "2019-06-28",
+					"retrieved": "2022-05-10",
+					"url": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
+					"fileUrl": "https://fyi.org.nz/request/9725/response/35815/attach/4/Tactical%20Options%20Framework.pdf"
+				},
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-19-6782",
+						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-58555",
+						"withholdings": "None"
+					},
+					"released": "2021-05-31",
+					"retrieved": "2022-05-10",
+					"url": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-58555",
+					"fileUrl": "https://fyi.org.nz/request/9725/response/58555/attach/13/Tactical%20Options%20Framework.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Tactical Options Framework.pdf",
+					"type": "application/pdf",
+					"size": 150797,
+					"licence": "None",
+					"original": true,
+					"accessibility": {
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						}
+					}
+				}
+			]
+		}
+	],
+	"schemaVersion": "1.0.0"
+}
