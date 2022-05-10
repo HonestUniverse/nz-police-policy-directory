@@ -30,7 +30,9 @@
 					"path": "version-16-0/Arms Manual.pdf",
 					"type": "application/pdf",
 					"size": 176059,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -47,5 +49,5 @@
 			]
 		}
 	],
-	"schemaVersion": "1.0.0"
+	"schemaVersion": "2.0.0"
 }

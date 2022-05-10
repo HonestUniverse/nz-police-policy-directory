@@ -32,7 +32,9 @@
 					"path": "version-3/HORNER David IR 01 20 22828 Attachment 4 Statement of policy and practice.pdf",
 					"type": "application/pdf",
 					"size": 210457,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -49,5 +51,5 @@
 			]
 		}
 	],
-	"schemaVersion": "1.0.0"
+	"schemaVersion": "2.0.0"
 }

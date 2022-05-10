@@ -30,7 +30,9 @@
 					"path": "version-3-0/Roundill 16 8540 6 Professional Distance Policy.pdf",
 					"type": "application/pdf",
 					"size": 63914,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -47,5 +49,5 @@
 			]
 		}
 	],
-	"schemaVersion": "1.0.0"
+	"schemaVersion": "2.0.0"
 }

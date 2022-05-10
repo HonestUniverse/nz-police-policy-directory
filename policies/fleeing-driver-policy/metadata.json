@@ -32,7 +32,9 @@
 					"path": "version-11/HORNER David IR 01 20 22828 Attachment 1 Fleeing Driver Policy.pdf",
 					"type": "application/pdf",
 					"size": 162448,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -83,7 +85,9 @@
 					"path": "version-11/HOLMES Thomas IR 01 20 11722 Fleeing driver policy.pdf",
 					"type": "application/pdf",
 					"size": 162127,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -128,7 +132,9 @@
 					"path": "2017-10-12/Fleeing driver policy In force from 12 October 2017 and current.pdf",
 					"type": "application/pdf",
 					"size": 351424,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -170,7 +176,9 @@
 					"path": "2016-06-30/Fleeing driver policy In force from 30 June 2016.pdf",
 					"type": "application/pdf",
 					"size": 380978,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -212,7 +220,9 @@
 					"path": "2016-06-15/Fleeing driver policy In force from 15 June 2016.pdf",
 					"type": "application/pdf",
 					"size": 381526,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -254,7 +264,9 @@
 					"path": "2015-07-21/Fleeing driver policy In force from 21 July 2015.pdf",
 					"type": "application/pdf",
 					"size": 262287,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -296,7 +308,9 @@
 					"path": "2014-09-03/Fleeing driver policy In force from 3 September 2014.pdf",
 					"type": "application/pdf",
 					"size": 262944,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -338,7 +352,9 @@
 					"path": "2014-07-17/Fleeing driver policy In force from 17 July 2014.pdf",
 					"type": "application/pdf",
 					"size": 262037,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -380,7 +396,9 @@
 					"path": "2014-03-31/Fleeing driver policy In force from 31 March 2014.pdf",
 					"type": "application/pdf",
 					"size": 261995,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -422,7 +440,9 @@
 					"path": "2012-07-02/Fleeing driver policy In force from 2 July 2012.pdf",
 					"type": "application/pdf",
 					"size": 253821,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -464,7 +484,9 @@
 					"path": "2012-05-31/Fleeing driver policy In force from 31 May 2012.pdf",
 					"type": "application/pdf",
 					"size": 252589,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -506,7 +528,9 @@
 					"path": "2012-03-28/Fleeing driver policy In force from 28 March 2012.pdf",
 					"type": "application/pdf",
 					"size": 248268,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -548,7 +572,9 @@
 					"path": "2010-10-18/Fleeing driver policy In force from 18 October 2010 and in force on 1 January 2012.pdf",
 					"type": "application/pdf",
 					"size": 248611,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -565,5 +591,5 @@
 			]
 		}
 	],
-	"schemaVersion": "1.0.0"
+	"schemaVersion": "2.0.0"
 }

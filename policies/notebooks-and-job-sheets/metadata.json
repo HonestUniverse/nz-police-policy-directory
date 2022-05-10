@@ -32,7 +32,9 @@
 					"path": "version-4/HORNER David IR 01 20 30532 Notebooks and Job Sheets.pdf",
 					"type": "application/pdf",
 					"size": 110957,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -49,5 +51,5 @@
 			]
 		}
 	],
-	"schemaVersion": "1.0.0"
+	"schemaVersion": "2.0.0"
 }
