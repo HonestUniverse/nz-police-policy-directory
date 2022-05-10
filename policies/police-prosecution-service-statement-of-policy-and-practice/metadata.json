@@ -6,23 +6,27 @@
 			"name": "Version 3",
 			"duration": {
 				"start": "2018-04-16",
-				"on": ["2020-09-03"]
+				"on": [
+					"2020-09-03"
+				]
 			},
-			"provenance": {
-				"source": "NZ Police",
-				"method": "Released under the OIA",
-				"oiaRequest": {
-					"requester": "David Horner",
-					"id": "IR-01-20-30532",
-					"responseUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-51202",
-					"withholdings": "None"
-				},
-				"extracted": "2020-08-14",
-				"released": "2020-09-03",
-				"retrieved": "2022-05-09",
-				"url": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-51202",
-				"fileUrl": "https://fyi.org.nz/request/13497/response/51202/attach/6/HORNER%20David%20IR%2001%2020%2022828%20Attachment%204%20Statement%20of%20policy%20and%20practice.pdf"
-			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "David Horner",
+						"id": "IR-01-20-30532",
+						"responseUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-51202",
+						"withholdings": "None"
+					},
+					"extracted": "2020-08-14",
+					"released": "2020-09-03",
+					"retrieved": "2022-05-09",
+					"url": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-51202",
+					"fileUrl": "https://fyi.org.nz/request/13497/response/51202/attach/6/HORNER%20David%20IR%2001%2020%2022828%20Attachment%204%20Statement%20of%20policy%20and%20practice.pdf"
+				}
+			],
 			"files": [
 				{
 					"path": "version-3/HORNER David IR 01 20 22828 Attachment 4 Statement of policy and practice.pdf",
@@ -31,12 +35,19 @@
 					"licence": "None",
 					"original": true,
 					"accessibility": {
-						"text-based": true,
-						"semantics": "Unknown",
-						"alt text": "Unknown"
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						}
 					}
 				}
 			]
 		}
-	]
+	],
+	"schemaVersion": "1.0.0"
 }

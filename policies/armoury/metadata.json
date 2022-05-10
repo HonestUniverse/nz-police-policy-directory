@@ -5,25 +5,29 @@
 		{
 			"name": "Version 12.0",
 			"duration": {
-				"on": ["2017-01-04"]
+				"on": [
+					"2017-01-04"
+				]
 			},
-			"provenance": {
-				"source": "NZ Police",
-				"method": "Released under the OIA",
-				"oiaRequest": {
-					"requester": "Jeremy Roundill",
-					"id": "16-8540-4",
-					"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
-					"withholdings": {
-						"6(d)": "Implied",
-						"9(2)(a)": "Implied"
-					}
-				},
-				"released": "2017-01-04",
-				"retrieved": "2022-05-01",
-				"url": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
-				"fileUrl": "https://fyi.org.nz/request/5014/response/16479/attach/8/Armoury.Redacted.pdf"
-			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Jeremy Roundill",
+						"id": "16-8540-4",
+						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+						"withholdings": {
+							"6(d)": "Implied",
+							"9(2)(a)": "Implied"
+						}
+					},
+					"released": "2017-01-04",
+					"retrieved": "2022-05-01",
+					"url": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+					"fileUrl": "https://fyi.org.nz/request/5014/response/16479/attach/8/Armoury.Redacted.pdf"
+				}
+			],
 			"files": [
 				{
 					"path": "version-12-0/Armoury.Redacted.pdf",
@@ -32,9 +36,15 @@
 					"licence": "None",
 					"original": true,
 					"accessibility": {
-						"text-based": false,
-						"semantics": false,
-						"alt text": false
+						"text-based": {
+							"value": false
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						}
 					},
 					"notices": [
 						{
@@ -45,5 +55,6 @@
 				}
 			]
 		}
-	]
+	],
+	"schemaVersion": "1.0.0"
 }

@@ -5,24 +5,28 @@
 		{
 			"name": "Suppression of names and information before the court - January 2017",
 			"duration": {
-				"on": ["2017-01-04"]
+				"on": [
+					"2017-01-04"
+				]
 			},
-			"provenance": {
-				"source": "NZ Police",
-				"method": "Released under the OIA",
-				"oiaRequest": {
-					"requester": "Jeremy Roundill",
-					"id": "16-8540-4",
-					"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
-					"withholdings": {
-						"Out of scope": "Only the section on \"Suppression of names and information before the court\" was requested, so other sections were not released."
-					}
-				},
-				"released": "2017-01-04",
-				"retrieved": "2022-05-08",
-				"url": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
-				"fileUrl": "https://fyi.org.nz/request/5014/response/16479/attach/13/Criminal%20Procedure%20Name%20Suppression.pdf"
-			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Jeremy Roundill",
+						"id": "16-8540-4",
+						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+						"withholdings": {
+							"Out of scope": "Only the section on \"Suppression of names and information before the court\" was requested, so other sections were not released."
+						}
+					},
+					"released": "2017-01-04",
+					"retrieved": "2022-05-08",
+					"url": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+					"fileUrl": "https://fyi.org.nz/request/5014/response/16479/attach/13/Criminal%20Procedure%20Name%20Suppression.pdf"
+				}
+			],
 			"files": [
 				{
 					"path": "suppression-of-names-and-information-before-the-court-january-2017/Criminal Procedure Name Suppression.pdf",
@@ -35,8 +39,12 @@
 							"value": "Partial",
 							"note": "All pages are text-based except for an image of text on page 5"
 						},
-						"semantics": "Unknown",
-						"alt text": "Unknown"
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						}
 					}
 				}
 			],
@@ -47,5 +55,6 @@
 				}
 			]
 		}
-	]
+	],
+	"schemaVersion": "1.0.0"
 }
