@@ -6,23 +6,27 @@
 			"name": "Version 22",
 			"duration": {
 				"start": "2020-12-02",
-				"on": ["2021-05-24"]
+				"on": [
+					"2021-05-24"
+				]
 			},
-			"provenance": {
-				"source": "NZ Police",
-				"method": "Released under the OIA",
-				"oiaRequest": {
-					"requester": "Alice Haden",
-					"id": "IR-01-21-12593",
-					"responseUrl": "https://fyi.org.nz/request/15198-police-manual-family-violence-policy-and-procedure-behaviour-offences-perjury-precharge-warnings#incoming-58350",
-					"withholdings": "None"
-				},
-				"extracted": "2021-05-03",
-				"released": "2021-05-24",
-				"retrieved": "2022-05-01",
-				"url": "https://fyi.org.nz/request/15198-police-manual-family-violence-policy-and-procedure-behaviour-offences-perjury-precharge-warnings#incoming-58350",
-				"fileUrl": "https://fyi.org.nz/request/15198/response/58350/attach/4/Family%20harm%20policy%20and%20procedures.pdf"
-			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Alice Haden",
+						"id": "IR-01-21-12593",
+						"responseUrl": "https://fyi.org.nz/request/15198-police-manual-family-violence-policy-and-procedure-behaviour-offences-perjury-precharge-warnings#incoming-58350",
+						"withholdings": "None"
+					},
+					"extracted": "2021-05-03",
+					"released": "2021-05-24",
+					"retrieved": "2022-05-01",
+					"url": "https://fyi.org.nz/request/15198-police-manual-family-violence-policy-and-procedure-behaviour-offences-perjury-precharge-warnings#incoming-58350",
+					"fileUrl": "https://fyi.org.nz/request/15198/response/58350/attach/4/Family%20harm%20policy%20and%20procedures.pdf"
+				}
+			],
 			"files": [
 				{
 					"path": "version-22/Family harm policy and procedures.pdf",
@@ -35,11 +39,16 @@
 							"value": "Partial",
 							"note": "All pages are text-based except for an image of text on page 17"
 						},
-						"semantics": "Unknown",
-						"alt text": "Unknown"
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						}
 					}
 				}
 			]
 		}
-	]
+	],
+	"schemaVersion": "1.0.0"
 }
