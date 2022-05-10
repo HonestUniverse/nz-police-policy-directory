@@ -6,7 +6,7 @@ import { Notice } from './Notice.js';
 export type Version = {
 	name: string,
 	duration: PolicyVersionDuration,
-	provenance: Provenance,
+	provenance: Provenance[],
 	files: PolicyVersionFile[],
 	notices?: Notice[],
 };

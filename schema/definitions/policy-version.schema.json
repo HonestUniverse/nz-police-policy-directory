@@ -13,7 +13,11 @@
 		},
 		"provenance": {
 			"description": "The details of origin of the information related this version of the policy",
-			"$ref": "provenance.schema.json"
+			"type": "array",
+			"items": {
+				"$ref": "provenance.schema.json"
+			},
+			"minItems": 1
 		},
 		"files": {
 			"description": "A list of files containing the contents of this version of the policy",
