@@ -4,8 +4,8 @@ import addFormats from 'ajv-formats';
 import { readdir, readFile } from 'fs/promises';
 import type { Dirent } from 'fs';
 
-import type { Policy } from './Policy.js';
-import type { PolicyVersionFile } from './PolicyVersionFile.js';
+import type { Policy } from './definitions/Policy.js';
+import type { PolicyVersionFile } from './definitions/PolicyVersionFile.js';
 
 export const validatePolicy = await (async () => {
 	const ajv = new Ajv();
@@ -18,12 +18,12 @@ export const validatePolicy = await (async () => {
 	// so read the directory to automatically find them all, then
 	// load and add them all before creating the `ValidateFunction`
 
-	const schemaDir = await readdir('./schema');
+	const schemaDir = await readdir('./schema/definitions');
 	const schemaFileNamePattern = /\.schema\.json$/;
 	const schemaFileNames = schemaDir.filter((fileName) => schemaFileNamePattern.test(fileName));
 
 	const schemaPromises = schemaFileNames.map(async (name) => {
-		return (await import(`./${name}`, {
+		return (await import(`./definitions/${name}`, {
 			assert: { type: 'json' },
 		})).default;
 	});
@@ -91,6 +91,5 @@ export async function checkPolicyDir(entry: Dirent, directory: Record<string, un
 	}
 
 	await validateFileSizes(dirName, policy);
-
 	directory[entry.name] = policy;
 }
