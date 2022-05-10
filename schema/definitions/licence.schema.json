@@ -1,36 +1,28 @@
 {
 	"title": "Licence",
 	"description": "The licence under which content is made available",
-	"oneOf": [
-		{
-			"type": "string",
-			"const": "None"
+	"type": "object",
+	"properties": {
+		"name": {
+			"description": "The name of the licence",
+			"type": "string"
 		},
-		{
-			"type": "object",
-			"properties": {
-				"name": {
-					"description": "The name of the licence",
-					"type": "string"
-				},
-				"url": {
-					"description": "A URL where a file containing the licence can be found",
-					"type": "string",
-					"format": "uri-reference"
-				},
-				"notices": {
-					"description": "Any notices attached to the licence",
-					"type": "array",
-					"items": {
-						"$ref": "notice.schema.json"
-					},
-					"minItems": 1
-				}
+		"url": {
+			"description": "A URL where a file containing the licence can be found",
+			"type": "string",
+			"format": "uri-reference"
+		},
+		"notices": {
+			"description": "Any notices attached to the licence",
+			"type": "array",
+			"items": {
+				"$ref": "notice.schema.json"
 			},
-			"required": [
-				"name"
-			],
-			"additionalProperties": false
+			"minItems": 1
 		}
-	]
+	},
+	"required": [
+		"name"
+	],
+	"additionalProperties": false
 }

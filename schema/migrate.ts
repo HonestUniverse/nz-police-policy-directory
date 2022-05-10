@@ -124,7 +124,7 @@ const migrations: Record<string, Migration> = {
 	 * `AccessibilityFeature` is now always an object, never a boolean or a string
 	 */
 	['1.0.0']: function (policy: Policy): void {
-		// @ts-ignore This schema version may not be the most recent
+		// @ts-expect-error This schema version may not be the most recent
 		policy.schemaVersion = '1.0.0';
 
 		for (const version of policy.versions) {
@@ -144,6 +144,23 @@ const migrations: Record<string, Migration> = {
 					if (typeof feature === 'boolean' || typeof feature === 'string') {
 						file.accessibility[name] = { value: feature } as AccessibilityFeature;
 					}
+				}
+			}
+		}
+	},
+	/**
+	 * Changes in v2.0.0
+	 *
+	 * A file's `licence` property can no longer be a string, it has to be an object
+	 */
+	['2.0.0']: function (policy: Policy): void {
+		// @ts-ignore This schema version may not be the most recent
+		policy.schemaVersion = '2.0.0';
+
+		for (const version of policy.versions) {
+			for (const file of version.files) {
+				if (typeof file.licence === 'string') {
+					file.licence = { name: file.licence };
 				}
 			}
 		}
