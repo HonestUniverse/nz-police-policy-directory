@@ -31,7 +31,9 @@
 					"path": "version-4-0/2017-10-12 Fleeing driver policy.pdf",
 					"type": "application/pdf",
 					"size": 351424,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"provenance": [
 						{
 							"source": "NZ Police",
@@ -132,5 +134,5 @@
 			"message": "This is a test error notice"
 		}
 	],
-	"schemaVersion": "1.0.0"
+	"schemaVersion": "2.0.0"
 }

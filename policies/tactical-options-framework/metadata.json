@@ -60,7 +60,9 @@
 					"path": "unnamed-version-1/Tactical Options Framework.pdf",
 					"type": "application/pdf",
 					"size": 150797,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -77,5 +79,5 @@
 			]
 		}
 	],
-	"schemaVersion": "1.0.0"
+	"schemaVersion": "2.0.0"
 }
