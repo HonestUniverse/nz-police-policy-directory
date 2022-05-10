@@ -20,7 +20,9 @@
 		const provenance = file.provenance || version.provenance;
 	%>
 
-	<%- include('provenance', { provenance }); %>
+	<% for (const prov of provenance) { %>
+		<%- include('provenance', { provenance: prov }); %>
+	<% } %>
 
 	<div class="file__licence">
 		<% if (file.licence === "None") { %>

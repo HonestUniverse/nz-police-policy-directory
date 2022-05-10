@@ -102,6 +102,43 @@ function migrate(before: unknown): Policy {
  * Any time a new version requires a migration, it should be added
  * in order to this object, which `migrate` loops through.
  */
-const migrations: Record<string, Migration> = {}
+const migrations: Record<string, Migration> = {
+	/**
+	 * Changes in v1.0.0
+	 *
+	 * Added `schemaVersion` root property.
+	 *
+	 * `provenance` is now an array, in order to account for versions or files that
+	 * may have been released several times, which can provide information
+	 * on the date range for which that version or file was active.
+	 *
+	 * `AccessibilityFeature` is now always an object, never a boolean or a string
+	 */
+	['1.0.0']: function (policy: Policy): void {
+		// @ts-ignore This schema version may not be the most recent
+		policy.schemaVersion = '1.0.0';
+
+		for (const version of policy.versions) {
+			// Update version provenance to be an array
+			if (Array.isArray(version.provenance) === false) {
+				version.provenance = [version.provenance] as unknown as typeof version.provenance;
+			}
+
+			for (const file of version.files) {
+				// Update file provenance to be an array
+				if (file.provenance && Array.isArray(file.provenance) === false) {
+					file.provenance = [file.provenance] as unknown as typeof file.provenance;
+				}
+
+				// Update file accessibility features to be an object
+				for (const [name, feature] of Object.entries(file.accessibility)) {
+					if (typeof feature === 'boolean' || typeof feature === 'string') {
+						file.accessibility[name] = { value: feature } as AccessibilityFeature;
+					}
+				}
+			}
+		}
+	},
+}
 
 migrateAll();

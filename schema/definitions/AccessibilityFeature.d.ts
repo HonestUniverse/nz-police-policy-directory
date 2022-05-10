@@ -3,9 +3,7 @@ declare enum AccessibilityFeatureString {
 	UNKNOWN = 'Unknown',
 }
 
-declare type AccessibilityFeatureValue = boolean | AccessibilityFeatureString;
-
-export type AccessibilityFeature = AccessibilityFeatureValue | {
-	value: AccessibilityFeatureValue,
+export type AccessibilityFeature = {
+	value: boolean | AccessibilityFeatureString,
 	note?: string,
 }

@@ -12,7 +12,7 @@ export type PolicyVersionFile = {
 	path: string,
 	type: PolicyVersionFileType,
 	size: number,
-	provenance?: Provenance,
+	provenance?: Provenance[],
 	licence: Licence,
 	original: boolean,
 	modifications?: string[],

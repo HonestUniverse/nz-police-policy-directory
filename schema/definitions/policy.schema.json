@@ -3,6 +3,12 @@
 	"description": "A policy document",
 	"type": "object",
 	"properties": {
+		"schemaVersion": {
+			"$comment": "The schemaVersion string should follow Semantic Versioning rules: https://semver.org/",
+			"description": "The current version of the schema",
+			"type": "string",
+			"const": "1.0.0"
+		},
 		"title": {
 			"description": "The title of the document",
 			"type": "string"
@@ -15,7 +21,9 @@
 				"Commissioner's Circular",
 				"Code of Conduct",
 				"Police Manual chapter",
-				"Equipment Operator's Manual"
+				"Equipment Operator's Manual",
+
+				"Unclassified"
 			]
 		},
 		"versions": {
