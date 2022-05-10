@@ -32,7 +32,9 @@
 					"path": "version-1/Formal warnings.pdf",
 					"type": "application/pdf",
 					"size": 77772,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -49,5 +51,5 @@
 			]
 		}
 	],
-	"schemaVersion": "1.0.0"
+	"schemaVersion": "2.0.0"
 }

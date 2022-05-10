@@ -33,7 +33,9 @@
 					"path": "version-1/HORNER David IR 01 20 30532 Speed Detection Operators Manual.pdf",
 					"type": "application/pdf",
 					"size": 1098482,
-					"licence": "None",
+					"licence": {
+						"name": "None"
+					},
 					"original": true,
 					"accessibility": {
 						"text-based": {
@@ -51,5 +53,5 @@
 			]
 		}
 	],
-	"schemaVersion": "1.0.0"
+	"schemaVersion": "2.0.0"
 }
