@@ -25,6 +25,7 @@ async function migrateAll() {
 	});
 
 	const promises: Promise<void>[] = [];
+	let policiesMigrated = 0;
 
 	// Loop through all metadata files
 	for (const entry of dir) {
@@ -57,6 +58,8 @@ async function migrateAll() {
 		// If invalid, attempt to migrate
 		const migratedPolicy = migrate(policy);
 		const migratedValid = validatePolicy(migratedPolicy);
+		policiesMigrated += 1;
+		console.log(`INFO: Migrated ${entry.name} to ${migratedPolicy.schemaVersion}`);
 
 		// After migration, check validity again
 		if (!migratedValid) {
@@ -71,6 +74,12 @@ async function migrateAll() {
 	}
 
 	await Promise.all(promises);
+
+	if (policiesMigrated > 0) {
+		console.log(`INFO: Migrated ${policiesMigrated} policies`);
+	} else {
+		console.log('INFO: No policies needed to be migrated');
+	}
 }
 
 /**
