@@ -1,6 +1,6 @@
 import { Notice } from './Notice.js';
 
-export type Licence = 'None' | {
+export type Licence = {
 	name: string,
 	url?: string,
 	notices?: Notice[],
