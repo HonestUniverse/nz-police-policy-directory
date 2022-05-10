@@ -8,22 +8,26 @@
 				"start": {
 					"year": 2015
 				},
-				"on": ["2020-11-16"]
+				"on": [
+					"2020-11-16"
+				]
 			},
-			"provenance": {
-				"source": "NZ Police",
-				"method": "Released under the OIA",
-				"oiaRequest": {
-					"requester": "David Horner",
-					"id": "IR-01-20-30532",
-					"responseUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-52829",
-					"withholdings": "None"
-				},
-				"released": "2020-11-06",
-				"retrieved": "2022-05-09",
-				"url": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-52829",
-				"fileUrl": "https://fyi.org.nz/request/13497/response/52829/attach/3/HORNER%20David%20IR%2001%2020%2030532%20Speed%20Detection%20Operators%20Manual.pdf"
-			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "David Horner",
+						"id": "IR-01-20-30532",
+						"responseUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-52829",
+						"withholdings": "None"
+					},
+					"released": "2020-11-06",
+					"retrieved": "2022-05-09",
+					"url": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-52829",
+					"fileUrl": "https://fyi.org.nz/request/13497/response/52829/attach/3/HORNER%20David%20IR%2001%2020%2030532%20Speed%20Detection%20Operators%20Manual.pdf"
+				}
+			],
 			"files": [
 				{
 					"path": "version-1/HORNER David IR 01 20 30532 Speed Detection Operators Manual.pdf",
@@ -36,11 +40,16 @@
 							"value": "Partial",
 							"note": "Some images contain text"
 						},
-						"semantics": "Unknown",
-						"alt text": "Unknown"
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						}
 					}
 				}
 			]
 		}
-	]
+	],
+	"schemaVersion": "1.0.0"
 }
