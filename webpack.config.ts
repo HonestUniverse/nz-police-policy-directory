@@ -103,6 +103,7 @@ const result = (async () => {
 
 		// TODO: Also generate a page for each version of the policy
 		config.plugins!.push(
+			// TODO: Don't copy metadata.backup.json
 			new CopyPlugin({
 				patterns: [{ from: `./policies/${key}`, to: `./${key}` }],
 			}),
