@@ -94,7 +94,6 @@ function migrate(before: unknown): Policy {
 	const after = JSON.parse(JSON.stringify(before)) as Policy;
 
 	if (typeof after.schemaVersion === 'undefined') {
-		// @ts-expect-error Explicitly set schemaVersion to a pre-1.0.0 value so if can be migrated to 1.0.0
 		after.schemaVersion = '0.1.0';
 	}
 
@@ -124,7 +123,6 @@ const migrations: Record<string, Migration> = {
 	 * `AccessibilityFeature` is now always an object, never a boolean or a string
 	 */
 	['1.0.0']: function (policy: Policy): void {
-		// @ts-expect-error This schema version may not be the most recent
 		policy.schemaVersion = '1.0.0';
 
 		for (const version of policy.versions) {
@@ -154,7 +152,6 @@ const migrations: Record<string, Migration> = {
 	 * A file's `licence` property can no longer be a string, it has to be an object
 	 */
 	['2.0.0']: function (policy: Policy): void {
-		// @ts-ignore This schema version may not be the most recent
 		policy.schemaVersion = '2.0.0';
 
 		for (const version of policy.versions) {
@@ -166,5 +163,7 @@ const migrations: Record<string, Migration> = {
 		}
 	},
 }
+
+let foo: `${number}.${number}.${number}` = '1.2.3.3';
 
 migrateAll();
