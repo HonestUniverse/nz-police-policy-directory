@@ -1,0 +1,65 @@
+{
+	"schemaVersion": "2.0.0",
+	"title": "Police firearms",
+	"type": "Unclassified",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2019-06-28", "2021-05-31"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-19-6782",
+						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
+						"withholdings": "None"
+					},
+					"released": "2019-06-28",
+					"retrieved": "2022-05-11",
+					"url": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
+					"fileUrl": "https://fyi.org.nz/request/9725/response/35815/attach/3/Police%20firearms.pdf"
+				},
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-19-6782",
+						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
+						"withholdings": "None"
+					},
+					"released": "2021-05-31",
+					"retrieved": "2022-05-11",
+					"url": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
+					"fileUrl": "https://fyi.org.nz/request/9725/response/35815/attach/3/Police%20firearms.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Police firearms.pdf",
+					"type": "application/pdf",
+					"size": 40148,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						}
+					}
+				}
+			]
+		}
+	]
+}
