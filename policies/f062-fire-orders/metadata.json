@@ -1,0 +1,47 @@
+{
+	"schemaVersion": "2.0.1",
+	"title": "F062 - Fire Orders",
+	"type": "General Instructions",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2007-09-27", "2020-12-01"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": "2007-09-27",
+					"retrieved": "2020-12-01",
+					"url": "https://web.archive.org/web/20201201143813/https://www.police.govt.nz/news/release/3376"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/f062-fire-orders.txt",
+					"type": "text/plain",
+					"size": 5981,
+					"licence": {
+						"name": "None"
+					},
+					"original": false,
+					"modifications": ["The plain text contents of these General Instructions on the Police website were copied into a text file."],
+					"accessibility": {
+						"text-based": {
+							"value": true
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "error",
+					"title": "No longer published",
+					"message": "These General Instructions used to appear on the Police website, but were taken down between 1 December 2020 and 10 April 2021. It is unclear whether or not this version is still active."
+				}
+			]
+		}
+	]
+}
