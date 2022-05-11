@@ -1,4 +1,5 @@
 {
+	"schemaVersion": "2.0.0",
 	"title": "string",
 	"type": "string enum",
 	"versions": [
@@ -10,23 +11,25 @@
 				"ended": false,
 				"on": ["date"]
 			},
-			"provenance": {
-				"source": "string enum",
-				"method": "string enum",
-				"oiaRequest": {
-					"requester": "string",
-					"id": "string",
-					"responseUrl": "url",
-					"withholdings": "Unknown"
-				},
-				"withholdings": "Unknown",
-				"published": "date",
-				"extracted": "date",
-				"released": "date",
-				"retrieved": "date",
-				"url": "url",
-				"fileUrl": "url"
-			},
+			"provenance": [
+				{
+					"source": "string enum",
+					"method": "string enum",
+					"oiaRequest": {
+						"requester": "string",
+						"id": "string",
+						"responseUrl": "url",
+						"withholdings": "Unknown"
+					},
+					"withholdings": "Unknown",
+					"published": "date",
+					"extracted": "date",
+					"released": "date",
+					"retrieved": "date",
+					"url": "url",
+					"fileUrl": "url"
+				}
+			],
 			"files": [
 				{
 					"path": "string",
@@ -34,7 +37,7 @@
 					"size": 0,
 					"provenance": "if necessary to override version provenance",
 					"licence": {
-						"name": "string - whole object can instead be 'None'",
+						"name": "string - use 'None' if no licence",
 						"url": "url",
 						"notices": [
 							{
@@ -47,9 +50,18 @@
 					"original": false,
 					"modifications": ["string"],
 					"accessibility": {
-						"text-based": "Unknown",
-						"semantics": "Unknown",
-						"alt text": "Unknown"
+						"text-based": {
+							"value": "Unknown",
+							"note": "string"
+						},
+						"semantics": {
+							"value": "Unknown",
+							"note": "string"
+						},
+						"alt text": {
+							"value": "Unknown",
+							"note": "string"
+						}
 					},
 					"notices": [
 						{
