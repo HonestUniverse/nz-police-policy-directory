@@ -67,8 +67,8 @@ function validateFileSizes(dirName: string, policy: Policy) {
 	return Promise.all(filePromises);
 }
 
-export async function checkPolicyDir(entry: Dirent, directory: Record<string, unknown>) {
-	const dirName = `./policies/${entry.name}`;
+export async function checkPolicyDir(policiesDir: string, entry: Dirent, directory: Record<string, unknown>) {
+	const dirName = `${policiesDir}/${entry.name}`;
 	const dir = await readdir(dirName);
 
 	if (dir.includes('metadata.json') === false) {
@@ -77,7 +77,7 @@ export async function checkPolicyDir(entry: Dirent, directory: Record<string, un
 	}
 
 	const policy: unknown = (
-		await import(`../policies/${entry.name}/metadata.json`, {
+		await import(`file://${dirName}/metadata.json`, {
 			assert: {
 				type: 'json',
 			},
