@@ -51,5 +51,8 @@
 	"bugs": {
 		"url": "https://github.com/Cipscis/nz-police-policy-directory/issues"
 	},
-	"homepage": "https://github.com/Cipscis/nz-police-policy-directory#readme"
+	"homepage": "https://github.com/Cipscis/nz-police-policy-directory#readme",
+	"engines": {
+		"node": ">= 16.14.2"
+	}
 }
