@@ -140,7 +140,7 @@ const result = (async () => {
 					})
 				);
 
-				// TODO: Update file.path to ensure the build HTML points to the correct place
+				// Update file.path to ensure the build HTML points to the correct place
 				file.path = `${fileDstPath}/${fileName}`;
 			}
 		}
