@@ -136,6 +136,7 @@ const result = (async () => {
 		new AlterPlugin({
 			defer: ['main'],
 			body: ['priority'],
+			preload: ['priority'],
 		})
 	);
 
