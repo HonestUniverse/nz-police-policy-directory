@@ -6,18 +6,26 @@ class AlterPlugin {
 	private async: string[];
 	private defer: string[];
 	private body: string[];
+	private preload: string[];
 
-	constructor(options?: { async?: string[]; defer?: string[]; body?: string[] }) {
-		const { async, defer, body } = {
+	constructor(options?: {
+		async?: string[];
+		defer?: string[];
+		body?: string[];
+		preload?: string[];
+	}) {
+		const { async, defer, body, preload } = {
 			async: [],
 			defer: [],
 			body: [],
+			preload: [],
 			...options,
 		};
 
 		this.async = async;
 		this.defer = defer;
 		this.body = body;
+		this.preload = preload;
 	}
 
 	apply(compiler: Compiler) {
@@ -60,13 +68,36 @@ class AlterPlugin {
 				const headTags: HtmlWebpackPlugin.HtmlTagObject[] = [];
 				const bodyTags: HtmlWebpackPlugin.HtmlTagObject[] = [];
 
-				[...data.headTags, ...data.bodyTags].forEach((tag) => {
-					if (tag.tagName !== 'script') return headTags.push(tag);
+				const loop = (
+					tag: HtmlWebpackPlugin.HtmlTagObject,
+					tagLoc: HtmlWebpackPlugin.HtmlTagObject[]
+				) => {
+					const name = getChunkName(
+						(tag.attributes.src ?? tag.attributes.href) as string,
+						data.publicPath
+					);
 
-					const name = getChunkName(tag.attributes.src as string, data.publicPath);
+					if (this.preload.includes(name))
+						headTags.unshift({
+							tagName: 'link',
+							attributes: {
+								rel: 'preload',
+								href: tag.attributes.src ?? tag.attributes.href,
+							},
+							voidTag: true,
+							meta: {
+								plugin: 'AlterPlugin',
+							},
+						});
+
+					if (tag.tagName !== 'script') return tagLoc.push(tag);
+
 					if (this.body.includes(name)) return bodyTags.push(tag);
 					headTags.push(tag);
-				});
+				};
+
+				data.headTags.forEach((val) => loop(val, headTags));
+				data.bodyTags.forEach((val) => loop(val, bodyTags));
 
 				callback(false, {
 					...data,
