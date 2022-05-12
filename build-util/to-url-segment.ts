@@ -3,6 +3,8 @@
  * For example, 'Kōkako Café's new coffee (strong)' becomes 'kookako-cafes-new-coffee-strong'
  */
 export function toUrlSegment(str: string): string {
+	let leadingDots = str.replace(/(^\.*).*/, '$1');
+
 	let urlSegment = str.toLowerCase();
 
 	// Replace macron characters with double vowel version
@@ -41,13 +43,16 @@ export function toUrlSegment(str: string): string {
 	urlSegment = urlSegment.replace(/'/g, '');
 
 	// Replace non-alphanumeric characters with '-' characters
-	urlSegment = urlSegment.replace(/[^a-z0-9]+/g, '-');
+	urlSegment = urlSegment.replace(/[^a-z0-9\/]+/g, '-');
 
 	// Collapse multiple '-' characters
 	urlSegment = urlSegment.replace(/-{2,}/g, '-');
 
 	// Ensure it doesn't start or end with a '-'
 	urlSegment = urlSegment.replace(/^-|-$/g, '');
+
+	// Add any leading dots back
+	urlSegment = leadingDots + urlSegment;
 
 	return urlSegment;
 }
