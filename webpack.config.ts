@@ -20,7 +20,8 @@ import { readdir } from 'fs/promises';
 import { checkPolicyDir } from './schema/validate.js';
 import AlterPlugin from './alter-plugin.js';
 
-const entryPath = './assets';
+const srcPath = path.resolve(__dirname, '../src');
+const entryPath = `${srcPath}/assets`;
 const distPath = path.resolve(__dirname, '../dist');
 
 const config: webpack.Configuration = {
@@ -82,7 +83,8 @@ switch (process.env.MODE) {
 }
 
 const result = (async () => {
-	const dir = await readdir('./policies', {
+	const policiesDir = `${srcPath}/policies`;
+	const dir = await readdir(policiesDir, {
 		withFileTypes: true,
 	});
 
@@ -92,7 +94,7 @@ const result = (async () => {
 	for (const entry of dir) {
 		if (!entry.isDirectory()) continue;
 
-		promises.push(checkPolicyDir(entry, directory));
+		promises.push(checkPolicyDir(policiesDir, entry, directory));
 	}
 
 	await Promise.all(promises);
@@ -105,12 +107,12 @@ const result = (async () => {
 		config.plugins!.push(
 			// TODO: Don't copy metadata.backup.json
 			new CopyPlugin({
-				patterns: [{ from: `./policies/${key}`, to: `./${key}` }],
+				patterns: [{ from: `${srcPath}/policies/${key}`, to: `./${key}` }],
 			}),
 			new HtmlWebpackPlugin({
 				filename: `${key}/index.html`,
 				template: TemplateCustomizer({
-					templatePath: './templates/policy.ejs',
+					templatePath: `${srcPath}/templates/policy.ejs`,
 					templateEjsLoaderOption: {
 						data: { policy },
 					},
@@ -124,7 +126,7 @@ const result = (async () => {
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: TemplateCustomizer({
-				templatePath: './templates/directory.ejs',
+				templatePath: `${srcPath}/templates/directory.ejs`,
 				templateEjsLoaderOption: {
 					data: {
 						directory,

@@ -21,9 +21,9 @@
 
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["assets/js/*"]
+			"@/*": ["src/assets/js/*"]
 		},
 		"outDir": "dist/assets/js"
 	},
-	"include": ["assets/js/**/*"]
+	"include": ["src/assets/js/**/*"]
 }
