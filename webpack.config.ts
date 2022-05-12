@@ -92,49 +92,63 @@ const result = (async () => {
 	});
 
 	const promises: Promise<void>[] = [];
-	const directory: Record<string, Policy> = {};
+	const srcDirectory: Record<string, Policy> = {};
+	const dstDirectory: Record<string, Policy> = {};
 
 	for (const entry of dir) {
 		if (!entry.isDirectory()) continue;
 
-		promises.push(checkPolicyDir(policiesDir, entry, directory));
+		promises.push(checkPolicyDir(policiesDir, entry, srcDirectory));
 	}
 
 	await Promise.all(promises);
 
-	const policies = Object.keys(directory);
+	const policies = Object.keys(srcDirectory);
 	policies.forEach((key) => {
-		const policy = directory[key];
+		const policy = srcDirectory[key];
 
-		// TODO: Also generate a page for each version of the policy
+		const policySrcPath = `${srcPath}/policies/${key}`;
+		const policyDstPath = `./${toUrlSegment(key)}`;
+
+		dstDirectory[toUrlSegment(key)] = policy;
 
 		// Copy policy metadata
 		config.plugins!.push(
-			// TODO: Don't copy metadata.backup.json
 			// TODO: Copy bulk files to each policy that uses them
 			new CopyPlugin({
-				patterns: [{ from: `${srcPath}/policies/${key}/metadata.json`, to: `./${key}/metadata.json` }],
+				patterns: [{ from: `${policySrcPath}/metadata.json`, to: `${policyDstPath}/metadata.json` }],
 			})
 		);
 
-		// TODO: Loop through versions and files, and copy each file to its destination
+		// Loop through versions and files, and copy each file to its destination
 		for (const version of policy.versions) {
 			const versionName = version.name;
 			const versionUrl = toUrlSegment(versionName);
+
+			// TODO: Also generate a page for each version of the policy
+
 			for (const file of version.files) {
-				const fileSrcPath = file.path;
+				const fileSrcPathAndName = `${policySrcPath}/${file.path}`;
 				const fileName = file.path.replace(/.*\//, '');
 
-				const fileDstPath = 'TODO';
+				const fileDstPath = toUrlSegment(versionUrl);
+				const fileDstPathAndName = `${policyDstPath}/${fileDstPath}/${fileName}`;
+
+				config.plugins!.push(
+					new CopyPlugin({
+						patterns: [{ from: fileSrcPathAndName, to: fileDstPathAndName }],
+					})
+				);
 
 				// TODO: Update file.path to ensure the build HTML points to the correct place
+				file.path = `${fileDstPath}/${fileName}`;
 			}
 		}
 
 		// Construct policy HTML
 		config.plugins!.push(
 			new HtmlWebpackPlugin({
-				filename: `${key}/index.html`,
+				filename: `${policyDstPath}/index.html`,
 				template: TemplateCustomizer({
 					templatePath: `${srcPath}/templates/policy.ejs`,
 					templateEjsLoaderOption: {
@@ -153,7 +167,7 @@ const result = (async () => {
 				templatePath: `${srcPath}/templates/directory.ejs`,
 				templateEjsLoaderOption: {
 					data: {
-						directory,
+						directory: dstDirectory,
 					},
 				},
 			}),
