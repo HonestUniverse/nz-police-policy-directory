@@ -1,0 +1,11 @@
+{
+	"spec_dir": "spec",
+	"spec_files": [
+		"**/*[sS]pec.js",
+		"**/*[sS]pec.mjs",
+		"**/*[sS]pec.ts"
+	],
+	"jsLoader": "import",
+	"stopSpecOnExpectationFailure": false,
+	"random": true
+}
