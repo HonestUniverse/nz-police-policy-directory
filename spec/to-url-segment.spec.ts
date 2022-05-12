@@ -12,6 +12,15 @@ describe('toUrlSegment', () => {
 		['unnamed-version-1', 'unnamed-version-1'],
 		['version-18-0', 'version-18-0'],
 		['123ee123', '123ee123'],
+		['123ee123', '123ee123'],
+	]));
+
+	it(`ignores one or more '.' characters at the beginning`, testExpectations([
+		['../build-utils/', '../build-utils/'],
+	]));
+
+	it(`ignores '/' characters`, testExpectations([
+		['../build-utils/', '../build-utils/'],
 	]));
 
 	it(`converts strings to lowercase`, testExpectations([
