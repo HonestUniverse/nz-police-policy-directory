@@ -19,6 +19,8 @@ import { readdir } from 'fs/promises';
 
 import { checkPolicyDir } from './schema/validate.js';
 import type { Policy } from './schema/definitions/Policy.js';
+
+import { toUrlSegment } from './build-util/to-url-segment.js';
 import AlterPlugin from './build-util/alter-plugin.js';
 
 const srcPath = path.resolve(__dirname, '../src');
@@ -105,11 +107,32 @@ const result = (async () => {
 		const policy = directory[key];
 
 		// TODO: Also generate a page for each version of the policy
+
+		// Copy policy metadata
 		config.plugins!.push(
 			// TODO: Don't copy metadata.backup.json
+			// TODO: Copy bulk files to each policy that uses them
 			new CopyPlugin({
-				patterns: [{ from: `${srcPath}/policies/${key}`, to: `./${key}` }],
-			}),
+				patterns: [{ from: `${srcPath}/policies/${key}/metadata.json`, to: `./${key}/metadata.json` }],
+			})
+		);
+
+		// TODO: Loop through versions and files, and copy each file to its destination
+		for (const version of policy.versions) {
+			const versionName = version.name;
+			const versionUrl = toUrlSegment(versionName);
+			for (const file of version.files) {
+				const fileSrcPath = file.path;
+				const fileName = file.path.replace(/.*\//, '');
+
+				const fileDstPath = 'TODO';
+
+				// TODO: Update file.path to ensure the build HTML points to the correct place
+			}
+		}
+
+		// Construct policy HTML
+		config.plugins!.push(
 			new HtmlWebpackPlugin({
 				filename: `${key}/index.html`,
 				template: TemplateCustomizer({
