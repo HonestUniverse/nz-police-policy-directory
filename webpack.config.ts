@@ -114,7 +114,6 @@ const result = (async () => {
 
 		// Copy policy metadata
 		config.plugins!.push(
-			// TODO: Copy bulk files to each policy that uses them
 			new CopyPlugin({
 				patterns: [{ from: `${policySrcPath}/metadata.json`, to: `${policyDstPath}/metadata.json` }],
 			})
