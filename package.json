@@ -4,6 +4,7 @@
 	"description": "Directory of NZ Police Policies and Manuals",
 	"type": "module",
 	"devDependencies": {
+		"@types/jasmine": "^4.0.3",
 		"@types/node": "^17.0.25",
 		"@typescript-eslint/eslint-plugin": "^5.20.0",
 		"@typescript-eslint/parser": "^5.20.0",
@@ -17,6 +18,7 @@
 		"html-loader": "^3.1.0",
 		"html-webpack-exclude-assets-plugin": "^0.0.7",
 		"html-webpack-plugin": "^5.5.0",
+		"jasmine": "^4.1.0",
 		"mini-css-extract-plugin": "^2.6.0",
 		"resolve-typescript-plugin": "^1.2.0",
 		"sass": "^1.50.1",
@@ -37,7 +39,8 @@
 		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node schema/migrate.ts",
 		"lintJs": "eslint assets/js/**",
 		"lintCss": "stylelint assets/css/**",
-		"lint": "npm run lintJs && npm run lintCss"
+		"lint": "npm run lintJs && npm run lintCss",
+		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" jasmine"
 	},
 	"repository": {
 		"type": "git",

@@ -37,11 +37,17 @@ export function toUrlSegment(str: string): string {
 	}
 	urlSegment = normalisedSegment;
 
-	// Replace non-letters with '-' characters
-	urlSegment = urlSegment.replace(/[^a-z]+/g, '-');
+	// Remove apostrophes so they aren't replaced with '-'
+	urlSegment = urlSegment.replace(/'/g, '');
+
+	// Replace non-alphanumeric characters with '-' characters
+	urlSegment = urlSegment.replace(/[^a-z0-9]+/g, '-');
 
 	// Collapse multiple '-' characters
 	urlSegment = urlSegment.replace(/-{2,}/g, '-');
+
+	// Ensure it doesn't start or end with a '-'
+	urlSegment = urlSegment.replace(/^-|-$/g, '');
 
 	return urlSegment;
 }
