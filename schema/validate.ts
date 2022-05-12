@@ -67,7 +67,7 @@ function validateFileSizes(dirName: string, policy: Policy) {
 	return Promise.all(filePromises);
 }
 
-export async function checkPolicyDir(policiesDir: string, entry: Dirent, directory: Record<string, unknown>) {
+export async function checkPolicyDir(policiesDir: string, entry: Dirent, directory: Record<string, Policy>) {
 	const dirName = `${policiesDir}/${entry.name}`;
 	const dir = await readdir(dirName);
 
