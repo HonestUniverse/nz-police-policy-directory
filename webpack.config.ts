@@ -18,7 +18,8 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 import { readdir } from 'fs/promises';
 
 import { checkPolicyDir } from './schema/validate.js';
-import AlterPlugin from './alter-plugin.js';
+import type { Policy } from './schema/definitions/Policy.js';
+import AlterPlugin from './build-util/alter-plugin.js';
 
 const srcPath = path.resolve(__dirname, '../src');
 const entryPath = `${srcPath}/assets`;
@@ -89,7 +90,7 @@ const result = (async () => {
 	});
 
 	const promises: Promise<void>[] = [];
-	const directory: Record<string, unknown> = {};
+	const directory: Record<string, Policy> = {};
 
 	for (const entry of dir) {
 		if (!entry.isDirectory()) continue;
