@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "2.0.1",
+	"schemaVersion": "2.1.0",
 	"title": "string",
 	"type": "string enum",
 	"versions": [
@@ -34,6 +34,7 @@
 				{
 					"path": "string",
 					"type": "string enum",
+					"startingPage": 0,
 					"size": 0,
 					"provenance": "if necessary to override version provenance",
 					"licence": {

@@ -10,7 +10,7 @@
 	<% } %>
 
 	<div class="file__handle">
-		<a href="<%= file.path %>" target="_blank" class="file__handle__link"><%= fileName %></a>
+		<a href="<%= file.path %><%= file.startingPage ? `#page=${file.startingPage}` : '' %>" target="_blank" class="file__handle__link"><%= fileName %></a>
 		<% if (file.size) { %>
 			<span class="file__handle__size">(<%- include('../helpers/file-size', { size: file.size }); %>)</span>
 		<% } %>

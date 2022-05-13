@@ -11,6 +11,7 @@ declare enum PolicyVersionFileType {
 export type PolicyVersionFile = {
 	path: string,
 	type: PolicyVersionFileType,
+	startingPage?: number,
 	size: number,
 	provenance?: Provenance[],
 	licence: Licence,

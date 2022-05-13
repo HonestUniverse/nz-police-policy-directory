@@ -15,6 +15,11 @@
 				"text/plain"
 			]
 		},
+		"startingPage": {
+			"description": "If the file is a PDF, the page it should be opened to by default",
+			"type": "integer",
+			"exclusiveMinimum": 0
+		},
 		"size": {
 			"description": "The size of the file, in bytes",
 			"type": "integer",
@@ -65,12 +70,32 @@
 		"accessibility"
 	],
 	"not": {
-		"allOf": [
+		"anyOf": [
 			{
-				"required": ["modifications"]
+				"allOf": [
+					{
+						"required": ["modifications"]
+					},
+					{
+						"properties": { "original": { "const": true } }
+					}
+				]
 			},
 			{
-				"properties": { "original": { "const": true } }
+				"allOf": [
+					{
+						"properties": {
+							"type": {
+								"not": {
+									"const": "application/pdf"
+								}
+							}
+						}
+					},
+					{
+						"required": ["startingPage"]
+					}
+				]
 			}
 		]
 	},
