@@ -6,7 +6,10 @@
 		{
 			"name": "Unnamed Version 1",
 			"duration": {
-				"on": ["2019-09-25", "2019-10-14"]
+				"on": [
+					"2019-09-25",
+					"2019-10-14"
+				]
 			},
 			"provenance": [
 				{
@@ -40,7 +43,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
-							"note": "Pages 1, 4, 8-10, 12-14, and 22 are text-based. All other pages are images of text."
+							"notes": [
+								"Pages 1, 4, 8-10, 12-14, and 22 are text-based. All other pages are images of text."
+							]
 						},
 						"semantics": {
 							"value": "Unknown"
