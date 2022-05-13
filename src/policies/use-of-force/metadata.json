@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "2.1.0",
+	"title": "Use of force",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Version 11.0",
+			"duration": {
+				"on": ["2017-06-30"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "L. L. Drew",
+						"id": "17-6011",
+						"responseUrl": "https://fyi.org.nz/request/5993-police-manual-use-of-force#incoming-20241",
+						"withholdings": "None"
+					},
+					"released": "2017-06-30",
+					"retrieved": "2022-05-13",
+					"url": "https://fyi.org.nz/request/5993-police-manual-use-of-force#incoming-20241",
+					"fileUrl": "https://fyi.org.nz/request/5993/response/20241/attach/4/drew%20laaura%2017%206011%20signed%20reply%20and%20material%20for%20release.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "version-11-0/drew laaura 17 6011 signed reply and material for release.pdf",
+					"type": "application/pdf",
+					"startingPage": 5,
+					"size": 18761843,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"text-based": {
+							"value": false,
+							"note": "This entire document is images of text."
+						},
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						}
+					}
+				}
+			]
+		}
+	]
+}
