@@ -1,12 +1,15 @@
 {
-	"schemaVersion": "2.0.0",
+	"schemaVersion": "3.0.0",
 	"title": "Police firearms",
 	"type": "Unclassified",
 	"versions": [
 		{
 			"name": "Unnamed Version 1",
 			"duration": {
-				"on": ["2019-06-28", "2021-05-31"]
+				"on": [
+					"2019-06-28",
+					"2021-05-31"
+				]
 			},
 			"provenance": [
 				{
