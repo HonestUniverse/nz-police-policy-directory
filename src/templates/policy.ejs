@@ -11,7 +11,7 @@
 
 <article class="policy">
 	<div class="policy__layout">
-		<h1 class="policy__title"><%= title %></h1>
+		<h1 class="policy__title"><%= title %><%= policy.obsolete ? ' (obsolete)' : '' %></h1>
 		<span class="policy__type"><%= type %></span>
 
 		<% if (notices) { %>

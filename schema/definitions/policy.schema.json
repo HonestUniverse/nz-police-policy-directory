@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 3.0.0-rc1",
+	"$comment": "Current version: 3.0.0-alpha",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
@@ -30,6 +30,10 @@
 
 				"Unclassified"
 			]
+		},
+		"obsolete": {
+			"description": "If the policy is no longer active",
+			"const": true
 		},
 		"versions": {
 			"description": "A list of current and historical versions of this policy",

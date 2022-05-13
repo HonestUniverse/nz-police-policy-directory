@@ -170,10 +170,6 @@ const migrations: Record<string, Migration> = {
 	 * Changes in v3.0.0
 	 *
 	 * `AccessibilityFeature`s now have a `notes` field instead of a `note` field.
-	 *
-	 * Proactively released versions require a `url` and an `archiveUrl`. If they have a `fileUrl`, they also require an `archiveFileUrl`. This requires manual content updates.
-	 *
-	 * `PolicyVersionFile`s now have an optional `incomplete` flag. This requires manual content updates.
 	 */
 	['3.0.0']: function (policy: Policy): void {
 		// TODO: This is commented out while the major version isn't ready yet

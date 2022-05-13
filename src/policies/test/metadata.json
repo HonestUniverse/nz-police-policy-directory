@@ -1,6 +1,7 @@
 {
 	"title": "Test Policy",
 	"type": "General Instructions",
+	"obsolete": true,
 	"versions": [
 		{
 			"name": "Version 4.0.0",

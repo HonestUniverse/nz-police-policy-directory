@@ -2,6 +2,7 @@
 	"schemaVersion": "3.0.0",
 	"title": "string",
 	"type": "string enum",
+	"obsolete": true,
 	"versions": [
 		{
 			"name": "string",
