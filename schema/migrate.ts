@@ -195,6 +195,4 @@ const migrations: Record<string, Migration> = {
 	},
 }
 
-let foo: `${number}.${number}.${number}` = '1.2.3.3';
-
 migrateAll();
