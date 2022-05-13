@@ -7,7 +7,9 @@
 			"name": "Version 16",
 			"duration": {
 				"start": "2019-03-06",
-				"on": ["2020-09-03"]
+				"on": [
+					"2020-09-03"
+				]
 			},
 			"provenance": [
 				{
@@ -38,7 +40,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
-							"note": "All pages are text-based except for an image of text on page 4"
+							"notes": [
+								"All pages are text-based except for an image of text on page 4"
+							]
 						},
 						"semantics": {
 							"value": "Unknown"

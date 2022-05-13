@@ -39,7 +39,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
-							"note": "All pages are text-based except for an image of text on page 17"
+							"notes": [
+								"All pages are text-based except for an image of text on page 17"
+							]
 						},
 						"semantics": {
 							"value": "Unknown"

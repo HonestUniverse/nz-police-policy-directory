@@ -6,7 +6,9 @@
 		{
 			"name": "Version 11.0",
 			"duration": {
-				"on": ["2017-06-30"]
+				"on": [
+					"2017-06-30"
+				]
 			},
 			"provenance": [
 				{
@@ -37,7 +39,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": false,
-							"note": "This entire document is images of text."
+							"notes": [
+								"This entire document is images of text."
+							]
 						},
 						"semantics": {
 							"value": false

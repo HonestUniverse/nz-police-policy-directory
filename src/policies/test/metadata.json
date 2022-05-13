@@ -117,7 +117,9 @@
 						},
 						"semantics": {
 							"value": "Partial",
-							"note": "Some pages are missing semantics"
+							"notes": [
+								"Some pages are missing semantics"
+							]
 						}
 					}
 				}
