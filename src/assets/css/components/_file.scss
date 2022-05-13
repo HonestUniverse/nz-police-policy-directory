@@ -24,7 +24,8 @@
 	@include link;
 }
 
-.file__original {
+.file__original,
+.file__incomplete {
 	@include font-base-18;
 }
 
