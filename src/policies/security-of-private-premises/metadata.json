@@ -1,12 +1,14 @@
 {
-	"schemaVersion": "2.0.1",
+	"schemaVersion": "3.0.0",
 	"title": "Security of private premises",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"name": "Version 5.0",
 			"duration": {
-				"on": ["2017-01-04"]
+				"on": [
+					"2017-01-04"
+				]
 			},
 			"provenance": [
 				{

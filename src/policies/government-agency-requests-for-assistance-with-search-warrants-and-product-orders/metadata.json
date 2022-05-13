@@ -1,12 +1,15 @@
 {
-	"schemaVersion": "2.1.0",
+	"schemaVersion": "3.0.0",
 	"title": "Government agency requests for assistance with search warrants and production orders",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"name": "Unnamed Version 1",
 			"duration": {
-				"on": ["2021-06-14", "2021-06-28"]
+				"on": [
+					"2021-06-14",
+					"2021-06-28"
+				]
 			},
 			"provenance": [
 				{

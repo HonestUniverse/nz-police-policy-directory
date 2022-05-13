@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "2.0.1",
+	"schemaVersion": "3.0.0",
 	"title": "Speed enforcement",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -7,7 +7,9 @@
 			"name": "Version 19",
 			"duration": {
 				"start": "2017-09-26",
-				"on": ["2020-09-03"]
+				"on": [
+					"2020-09-03"
+				]
 			},
 			"provenance": [
 				{
