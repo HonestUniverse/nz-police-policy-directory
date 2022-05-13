@@ -52,6 +52,10 @@
 		<p class="file__original">Not original file</p>
 	<% } %>
 
+	<% if (file.incomplete) { %>
+		<p class="file__incomplete">Incomplete file</p>
+	<% } %>
+
 	<% if (file.modifications) { %>
 		<ul class="file__modifications">
 			<% for (const modification of file.modifications) { %>
@@ -72,9 +76,11 @@
 						<%= feature %>
 					<% } else { %>
 						<%= feature.value %>
-						<% if (feature.note) { %>
-							(<%= feature.note %>)
-						<% } %>
+						<% if (feature.notes) {
+							for (const note of feature.notes) { %>
+								(<%= note %>)
+							<% }
+						} %>
 					<% } %>
 				</dd>
 			</div>

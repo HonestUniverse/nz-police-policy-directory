@@ -41,6 +41,10 @@
 			"description": "Whether or not this file is the original file, i.e. unmodified",
 			"type": "boolean"
 		},
+		"incomplete": {
+			"description": "Whether or not this file contains the entire policy version",
+			"type": "boolean"
+		},
 		"modifications": {
 			"description": "Any modifications that have been made to the file since it was retrieved",
 			"type": "array",

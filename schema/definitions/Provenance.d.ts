@@ -22,5 +22,7 @@ export type Provenance = {
 	released?: DatePartial,
 	retrieved?: DatePartial,
 	url?: string,
+	archiveUrl?: string,
 	fileUrl?: string,
+	archiveFileUrl?: string,
 };

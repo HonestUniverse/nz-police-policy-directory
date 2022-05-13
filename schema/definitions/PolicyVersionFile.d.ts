@@ -16,6 +16,7 @@ export type PolicyVersionFile = {
 	provenance?: Provenance[],
 	licence: Licence,
 	original: boolean,
+	incomplete?: boolean,
 	modifications?: string[],
 	accessibility: Accessibility,
 	notices?: Notice[],

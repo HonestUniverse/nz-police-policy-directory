@@ -41,7 +41,11 @@
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
-							"note": "There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space. There is an image of text on page 5. Pages 14 and 15 are images of text."
+							"notes": [
+								"There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space.",
+								"There is an image of text on page 5.",
+								"Pages 14 and 15 are images of text."
+							]
 						},
 						"semantics": {
 							"value": "Unknown"

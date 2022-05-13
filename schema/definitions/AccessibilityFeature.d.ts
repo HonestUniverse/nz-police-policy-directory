@@ -5,5 +5,5 @@ declare enum AccessibilityFeatureString {
 
 export type AccessibilityFeature = {
 	value: boolean | AccessibilityFeatureString,
-	note?: string,
+	notes?: string[],
 }

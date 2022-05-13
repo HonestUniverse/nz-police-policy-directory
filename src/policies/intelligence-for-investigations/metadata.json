@@ -39,7 +39,11 @@
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
-							"note": "There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space. Page 19 is an image of text. There is an image of text on page 10."
+							"notes": [
+								"There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space.",
+								"Page 19 is an image of text.",
+								"There is an image of text on page 10."
+							]
 						},
 						"semantics": {
 							"value": "Unknown"

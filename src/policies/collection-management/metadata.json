@@ -39,7 +39,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
-							"note": "There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space."
+							"notes": [
+								"There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space."
+							]
 						},
 						"semantics": {
 							"value": "Unknown"

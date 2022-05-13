@@ -28,28 +28,38 @@
 			"$ref": "oia-withholdings.schema.json"
 		},
 		"published": {
-			"description": "The date on which the file was published",
+			"description": "The date on which the information was published",
 			"$ref": "date-partial.schema.json"
 		},
 		"extracted": {
-			"description": "The date on which the file was extracted, for example the date on which it was printed",
+			"description": "The date on which the information was extracted, for example the date on which it was printed",
 			"$ref": "date-partial.schema.json"
 		},
 		"released": {
-			"description": "The date on which the file was released",
+			"description": "The date on which the information was released",
 			"$ref": "date-partial.schema.json"
 		},
 		"retrieved": {
-			"description": "If the file was retrieved or released after its initial publication, the date on which it was retrieved",
+			"description": "If the information was retrieved or released after its initial publication, the date on which it was retrieved",
 			"$ref": "date-partial.schema.json"
 		},
 		"url": {
-			"description": "The URL of the page where the file was retrieved from",
+			"description": "The URL of the page where the information was retrieved from",
+			"type": "string",
+			"format": "uri"
+		},
+		"archiveUrl": {
+			"description": "An archived permalink to the primary url",
 			"type": "string",
 			"format": "uri"
 		},
 		"fileUrl": {
-			"description": "The URL of the file where it was originally retrieved from",
+			"description": "The URL of the file containing the information where it was originally retrieved from",
+			"type": "string",
+			"format": "uri"
+		},
+		"archiveFileUrl": {
+			"description": "An archived permalink to the file url",
 			"type": "string",
 			"format": "uri"
 		}
@@ -110,6 +120,27 @@
 							{ "required": ["withholdings"] }
 						]
 					}
+				}
+			]
+		},
+		{
+			"$comment": "If proactively released, it needs an `url` and an `archiveUrl`. If there's a `fileUrl`, there should also be an `archiveFileUrl`",
+			"anyOf": [
+				{ "properties": { "method": { "not": { "const": "Proactively released" } } } },
+				{
+					"$comment": "If it was proactively released",
+					"allOf": [
+						{ "required": ["url", "archiveUrl"] },
+						{
+							"anyOf": [
+								{ "not": { "required": ["fileUrl"] } },
+								{
+									"$comment": "If there is a fileUrl",
+									"required": ["archiveFileUrl"]
+								}
+							]
+						}
+					]
 				}
 			]
 		}

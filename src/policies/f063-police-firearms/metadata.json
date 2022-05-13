@@ -6,7 +6,10 @@
 		{
 			"name": "Unnamed Version 1",
 			"duration": {
-				"on": ["2007-09-27", "2020-12-01"]
+				"on": [
+					"2007-09-27",
+					"2020-12-01"
+				]
 			},
 			"provenance": [
 				{
@@ -15,7 +18,8 @@
 					"withholdings": "None",
 					"published": "2007-09-27",
 					"retrieved": "2020-12-01",
-					"url": "https://web.archive.org/web/20201201143813/https://www.police.govt.nz/news/release/3376"
+					"url": "https://www.police.govt.nz/news/release/3376",
+					"archiveUrl": "https://web.archive.org/web/20201201143813/www.police.govt.nz/news/release/3376"
 				}
 			],
 			"files": [
@@ -27,7 +31,9 @@
 						"name": "None"
 					},
 					"original": false,
-					"modifications": ["The plain text contents of these General Instructions on the Police website were copied into a text file."],
+					"modifications": [
+						"The plain text contents of these General Instructions on the Police website were copied into a text file."
+					],
 					"accessibility": {
 						"text-based": {
 							"value": true
