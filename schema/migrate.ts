@@ -20,7 +20,9 @@ interface Migration {
  * Loop through all policies, and attempt to migrate any with invalid metadata.
  */
 async function migrateAll() {
-	const dir = await readdir('./policies', {
+	const srcDir = './src/policies';
+
+	const dir = await readdir(srcDir, {
 		withFileTypes: true,
 	});
 
@@ -33,7 +35,7 @@ async function migrateAll() {
 			continue;
 		}
 
-		const dirName = `./policies/${entry.name}`;
+		const dirName = `${srcDir}/${entry.name}`;
 		const dir = await readdir(dirName);
 
 		if (dir.includes('metadata.json') === false) {
@@ -42,7 +44,7 @@ async function migrateAll() {
 		}
 
 		const policy: unknown = (
-			await import(`../policies/${entry.name}/metadata.json`, {
+			await import(`../${srcDir}/${entry.name}/metadata.json`, {
 				assert: {
 					type: 'json',
 				},
@@ -65,12 +67,14 @@ async function migrateAll() {
 		if (!migratedValid) {
 			console.error(validatePolicy.errors);
 			console.error(`ERROR: Migrated metadata for ${entry.name} is still invalid after migration`);
+			// @ts-expect-error We've lied to TypeScript that this is already a valid policy, but in this condition we've just found it's not
+			writeFile(`${srcDir}/${entry.name}/metadata.failed-migration-${migratedPolicy.schemaVersion}.json`, JSON.stringify(policy, null, '\t'));
+		} else {
+			// Back up previous contents just in case
+			writeFile(`${srcDir}/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));
+			// If valid, save new contents
+			writeFile(`${srcDir}/${entry.name}/metadata.json`, JSON.stringify(migratedPolicy, null, '\t'));
 		}
-
-		// Back up previous contents just in case
-		writeFile(`./policies/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));
-		// If valid, save new contents
-		writeFile(`./policies/${entry.name}/metadata.json`, JSON.stringify(migratedPolicy, null, '\t'));
 	}
 
 	await Promise.all(promises);
@@ -158,6 +162,33 @@ const migrations: Record<string, Migration> = {
 			for (const file of version.files) {
 				if (typeof file.licence === 'string') {
 					file.licence = { name: file.licence };
+				}
+			}
+		}
+	},
+	/**
+	 * Changes in v3.0.0
+	 *
+	 * `AccessibilityFeature`s now have a `notes` field instead of a `note` field.
+	 *
+	 * Proactively released versions require a `url` and an `archiveUrl`. If they have a `fileUrl`, they also require an `archiveFileUrl`. This requires manual content updates.
+	 *
+	 * `PolicyVersionFile`s now have an optional `incomplete` flag. This requires manual content updates.
+	 */
+	['3.0.0']: function (policy: Policy): void {
+		// TODO: This is commented out while the major version isn't ready yet
+		// policy.schemaVersion = '3.0.0';
+
+		for (const version of policy.versions) {
+			for (const file of version.files) {
+				for (const [name, feature] of Object.entries(file.accessibility)) {
+					// @ts-expect-error AccessibilityFeatures no longer have a `note` property
+					if (feature.note) {
+						// @ts-expect-error AccessibilityFeatures no longer have a `note` property
+						feature.notes = [feature.note];
+						// @ts-expect-error AccessibilityFeatures no longer have a `note` property
+						delete feature.note;
+					}
 				}
 			}
 		}

@@ -12,8 +12,11 @@
 				}
 			]
 		},
-		"note": {
-			"type": "string"
+		"notes": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
 		}
 	},
 	"required": [
