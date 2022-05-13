@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 3.0.0-alpha",
+	"$comment": "Current version: 3.0.0",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
@@ -10,8 +10,8 @@
 			"type": "string",
 			"pattern": "^\\d+\\.\\d+\\.\\d+$",
 			"not": {
-				"$comment": "Major version must be at least 2",
-				"pattern": "^[0-1]\\."
+				"$comment": "Major version must be at least 3",
+				"pattern": "^[0-2]\\."
 			}
 		},
 		"title": {
