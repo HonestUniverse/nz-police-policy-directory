@@ -7,7 +7,9 @@
 			"name": "Version 21",
 			"duration": {
 				"start": "2019-07-15",
-				"on": ["2020-09-03"]
+				"on": [
+					"2020-09-03"
+				]
 			},
 			"provenance": [
 				{
@@ -38,7 +40,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
-							"note": "All pages are text-based except for images of text on pages 15 and 17"
+							"notes": [
+								"All pages are text-based except for images of text on pages 15 and 17"
+							]
 						},
 						"semantics": {
 							"value": "Unknown"
