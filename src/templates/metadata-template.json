@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "2.1.0",
+	"schemaVersion": "3.0.0",
 	"title": "string",
 	"type": "string enum",
 	"versions": [
@@ -27,7 +27,9 @@
 					"released": "date",
 					"retrieved": "date",
 					"url": "url",
-					"fileUrl": "url"
+					"archiveUrl": "url",
+					"fileUrl": "url",
+					"archiveFileUrl": "url"
 				}
 			],
 			"files": [
@@ -49,19 +51,20 @@
 						]
 					},
 					"original": false,
+					"incomplete": true,
 					"modifications": ["string"],
 					"accessibility": {
 						"text-based": {
 							"value": "Unknown",
-							"note": "string"
+							"notes": ["string"]
 						},
 						"semantics": {
 							"value": "Unknown",
-							"note": "string"
+							"notes": ["string"]
 						},
 						"alt text": {
 							"value": "Unknown",
-							"note": "string"
+							"notes": ["string"]
 						}
 					},
 					"notices": [
