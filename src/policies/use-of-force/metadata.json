@@ -40,10 +40,10 @@
 							"note": "This entire document is images of text."
 						},
 						"semantics": {
-							"value": "Unknown"
+							"value": false
 						},
 						"alt text": {
-							"value": "Unknown"
+							"value": false
 						}
 					}
 				}
