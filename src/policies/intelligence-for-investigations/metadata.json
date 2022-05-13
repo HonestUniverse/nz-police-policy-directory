@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "2.0.1",
+	"schemaVersion": "2.1.0",
 	"title": "Intelligence for investigations",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -30,6 +30,7 @@
 				{
 					"path": "../../bulk-files/2021-05-21/Sebastian FYI 01 21 8810 Final response Redacted.pdf",
 					"type": "application/pdf",
+					"startingPage": 58,
 					"size": 1954365,
 					"licence": {
 						"name": "None"

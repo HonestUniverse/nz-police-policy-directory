@@ -30,6 +30,7 @@
 				{
 					"path": "version-4-0/2017-10-12 Fleeing driver policy.pdf",
 					"type": "application/pdf",
+					"startingPage": 3,
 					"size": 351424,
 					"licence": {
 						"name": "None"
@@ -134,5 +135,5 @@
 			"message": "This is a test error notice"
 		}
 	],
-	"schemaVersion": "2.0.0"
+	"schemaVersion": "2.1.0"
 }
