@@ -1,0 +1,61 @@
+{
+	"schemaVersion": "2.0.1",
+	"title": "Decision-making and planning",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Version 3",
+			"duration": {
+				"start": "2017-09-26",
+				"on": ["2021-05-21"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Sebastian",
+						"id": "IR-01-21-8810",
+						"responseUrl": "https://fyi.org.nz/request/14795-police-manual-chapters-related-to-intelligence-collection#incoming-58331",
+						"withholdings": "None"
+					},
+					"extracted": "2021-04-01",
+					"released": "2021-05-21",
+					"retrieved": "2022-05-13",
+					"url": "https://fyi.org.nz/request/14795-police-manual-chapters-related-to-intelligence-collection#incoming-58331",
+					"fileUrl": "https://fyi.org.nz/request/14795/response/58331/attach/3/Sebastian%20FYI%2001%2021%208810%20Final%20response%20Redacted.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2021-05-21/Sebastian FYI 01 21 8810 Final response Redacted.pdf",
+					"type": "application/pdf",
+					"size": 1954365,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"text-based": {
+							"value": "Partial",
+							"note": "There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space. There is an image of text on page 3."
+						},
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"title": "Bulk file",
+							"message": "This file contains multiple documents. \"Decision-making and planning\" covers pages 92-95 of the file."
+						}
+					]
+				}
+			]
+		}
+	]
+}
