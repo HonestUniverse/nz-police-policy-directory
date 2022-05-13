@@ -40,7 +40,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
-							"note": "Some images contain text"
+							"notes": [
+								"Some images contain text"
+							]
 						},
 						"semantics": {
 							"value": "Unknown"
