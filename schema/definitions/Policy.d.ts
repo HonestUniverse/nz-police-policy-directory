@@ -15,6 +15,7 @@ export type Policy = {
 	schemaVersion: `${number}.${number}.${number}`,
 	title: string,
 	type: PolicyType,
+	obsolete?: true,
 	versions: PolicyVersion[],
 	notices?: Notice[],
 };
