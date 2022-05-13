@@ -172,8 +172,7 @@ const migrations: Record<string, Migration> = {
 	 * `AccessibilityFeature`s now have a `notes` field instead of a `note` field.
 	 */
 	['3.0.0']: function (policy: Policy): void {
-		// TODO: This is commented out while the major version isn't ready yet
-		// policy.schemaVersion = '3.0.0';
+		policy.schemaVersion = '3.0.0';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
