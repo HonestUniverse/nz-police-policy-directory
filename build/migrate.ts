@@ -7,7 +7,7 @@ import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
 
 import { validatePolicy } from './validate-policy.js';
 
-import * as paths from './build-paths.js';
+import * as paths from './util/paths.js';
 
 /**
  * a `Migration` accepts an argument that should look like a `Policy`,

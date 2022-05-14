@@ -3,7 +3,7 @@ import type { DirectoryBuildStep } from './BuildStep.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
-import * as paths from './build-paths.js';
+import * as paths from './util/paths.js';
 
 export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	/**

@@ -11,7 +11,7 @@ import AlterPlugin from './build/util/alter-plugin.js';
 
 import { createBuildPlugins } from './build/build.js';
 
-import * as paths from './build/build-paths.js';
+import * as paths from './build/util/paths.js';
 
 async function getConfig(env: Record<string, unknown>) {
 	const config: webpack.Configuration = {

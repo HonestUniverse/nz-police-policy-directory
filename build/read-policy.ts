@@ -3,7 +3,7 @@ import { readdir } from 'fs/promises';
 import type { Policy } from '../schema/Policy.js';
 import { validatePolicy, validateFileSizes } from './validate-policy.js';
 
-import * as paths from './build-paths.js';
+import * as paths from './util/paths.js';
 
 /**
  * Reads and validates the metadata file for a `Policy`, and returns that data.

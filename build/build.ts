@@ -4,7 +4,7 @@ import type { Policy } from '../schema/Policy.js';
 
 import { readAllPolicies } from './read-policy.js';
 
-import * as paths from './build-paths.js';
+import * as paths from './util/paths.js';
 
 import type { BuildStep } from './BuildStep.js';
 
