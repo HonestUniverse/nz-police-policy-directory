@@ -1,4 +1,5 @@
 export enum ColourScheme {
+	DEFAULT = 'default',
 	DARK = 'dark',
 	LIGHT = 'light',
 }
