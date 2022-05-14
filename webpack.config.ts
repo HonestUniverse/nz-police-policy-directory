@@ -61,6 +61,7 @@ async function getConfig(env: Record<string, unknown>) {
 				defer: ['main', 'enhancements'],
 				body: ['priority'],
 				preload: ['priority'],
+				module: ['enhancements'],
 			}),
 		],
 	};
