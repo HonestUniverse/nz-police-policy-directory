@@ -28,10 +28,7 @@
 		<p class="file__licence__handle">Licence:
 			<% if (file.licence.url) { %>
 				<a
-					href="<%= file.licence.url %>"
-					<% if (/^https?:/.test(file.licence.url)) { %>
-						target="_blank"
-					<% } %>
+					<%- include('../helpers/href-with-target', { href: file.licence.url }) %>
 					class="file__licence__handle__link"
 				><%= file.licence.name %></a>
 			<% } else { %>
