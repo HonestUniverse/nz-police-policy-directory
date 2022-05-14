@@ -7,18 +7,21 @@ class AlterPlugin {
 	private defer: string[];
 	private body: string[];
 	private preload: string[];
+	private module: string[];
 
 	constructor(options?: {
 		async?: string[];
 		defer?: string[];
 		body?: string[];
 		preload?: string[];
+		module?: string[];
 	}) {
-		const { async, defer, body, preload } = {
+		const { async, defer, body, preload, module } = {
 			async: [],
 			defer: [],
 			body: [],
 			preload: [],
+			module: [],
 			...options,
 		};
 
@@ -26,6 +29,7 @@ class AlterPlugin {
 		this.defer = defer;
 		this.body = body;
 		this.preload = preload;
+		this.module = module;
 	}
 
 	apply(compiler: Compiler) {
@@ -58,6 +62,10 @@ class AlterPlugin {
 
 					if (this.defer.includes(name)) {
 						tag.attributes.defer = true;
+					}
+
+					if (this.module.includes(name)) {
+						tag.attributes.type = 'module';
 					}
 				});
 
