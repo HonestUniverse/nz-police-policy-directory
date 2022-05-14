@@ -6,7 +6,7 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 
 import { toUrlSegment } from './util/to-url-segment.js';
 
-import * as paths from './build-paths.js';
+import * as paths from './util/paths.js';
 
 /**
  * Build steps for a particular policy.
