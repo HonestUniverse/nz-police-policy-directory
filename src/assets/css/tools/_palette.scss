@@ -16,6 +16,13 @@
 	--link: var(--blue--vivid, #{$blue--vivid});
 }
 
+@mixin contrast-secondary {
+	@include use-var(background-color, --grey--mid, $grey--mid-light);
+	@include use-var(color, --black, $black);
+
+	--link: var(--blue--vivid, #{$blue--vivid});
+}
+
 @mixin contrast-blue {
 	@include use-var(background-color, --blue--pale, $blue--pale);
 	@include use-var(color, --black, $black);
