@@ -1,3 +1,9 @@
+@import "../tools/palette";
+@import "../tools/fonts";
+
+@import "../tools/transition";
+@import "../tools/active";
+
 .colour-scheme {
 	display: none;
 
@@ -8,22 +14,28 @@
 			display: none;
 		}
 	}
+
+	position: relative;
 }
 
 .colour-scheme__face {
 	@include button-reset;
 
-	&::after {
-		content: "Default";
-		body.light & {
-			content: "Light";
-		}
-		body.dark & {
-			content: "Dark";
-		}
+	padding: 0.5em;
+	border: 1px solid currentColor;
 
-		display: inline-block;
-		margin-left: 1ch;
+	@include contrast-primary;
+	@include active {
+		@include contrast-secondary;
+	}
+	@include transition(background-color);
+
+	@include font-base-16;
+
+	border-radius: 0.5em;
+	&[aria-expanded="true"] {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
 	}
 }
 
@@ -31,14 +43,39 @@
 	@include list-reset;
 
 	display: none;
-
 	&[aria-expanded="true"] {
 		display: block;
 	}
+
+	position: absolute;
+	width: 100%;
+
+	@include contrast-primary;
+	border: 1px solid currentColor;
+	border-top: 0;
+	border-radius: 0 0 0.5em 0.5em;
+	overflow: hidden;
 }
 
 .colour-scheme__menu__option {
+	cursor: pointer;
+	padding: 0.2em 0.5em;
+
+	@include contrast-primary;
+	@include active {
+		@include contrast-secondary;
+	}
+	@include transition(background-color);
+
+	@include font-base-16;
+
+	padding-right: calc(0.5em + 2ch);
+	position: relative;
 	&[aria-checked="true"] {
-		font-weight: bold;
+		&::after {
+			content: "✔";
+			position: absolute;
+			right: 0.5em;
+		}
 	}
 }

@@ -5,6 +5,7 @@
 	--black: #{$black};
 
 	--grey--light: #{$grey--light};
+	--grey--mid: #{$grey--mid-light};
 
 	--blue--pale: #{$blue--pale};
 	--blue--vivid: #{$blue--vivid};
@@ -21,6 +22,7 @@
 	--black: #{$white};
 
 	--grey--light: #{$grey--dark};
+	--grey--mid: #{$grey--mid-dark};
 
 	--blue--pale: #{$blue--dim};
 	--blue--vivid: #{$blue--vivid-bright};
@@ -47,4 +49,10 @@
 }
 .dark {
 	@include palette-dark;
+}
+.colour-scheme--default {
+	@include palette-light;
+	@media (prefers-color-scheme: dark) {
+		@include palette-dark;
+	}
 }
