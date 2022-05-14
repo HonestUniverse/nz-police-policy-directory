@@ -2,26 +2,6 @@
 
 .version {}
 
-.version--disclosure {
-	.version__name {
-		cursor: pointer;
-	}
-
-	&:not([open]) {
-		margin-bottom: 1em;
-	}
-}
-
-.version__name {
-	@include font-heading-32b;
-}
-
-.version__link {
-	@include link;
-}
-
-.version__contents {}
-
 .version__date-span {
 	display: block;
 	margin-bottom: 1em;

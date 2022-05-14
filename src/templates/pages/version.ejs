@@ -1,0 +1,20 @@
+<%
+	const {
+		title,
+		type,
+		notices,
+		versions,
+	} = policy;
+%>
+
+<%- include('../layout/head', { title }); %>
+
+<article class="policy">
+	<div class="policy__layout">
+		<h1 class="policy__title"><%= version.name %></h1>
+
+		<%- include('../components/version', { version }); %>
+	</div>
+</article>
+
+<%- include('../layout/foot'); %>

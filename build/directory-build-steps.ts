@@ -14,7 +14,7 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 			new HtmlWebpackPlugin({
 				filename: `${dst}/index.html`,
 				template: TemplateCustomizer({
-					templatePath: `${paths.src}/templates/directory.ejs`,
+					templatePath: `${paths.templates}/pages/directory.ejs`,
 					templateEjsLoaderOption: {
 						data: {
 							directory,
