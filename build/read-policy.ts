@@ -9,7 +9,6 @@ import * as paths from './build-paths.js';
  * Reads and validates the metadata file for a `Policy`, and returns that data.
  */
 async function readPolicyFile(dirName: string): Promise<Policy> {
-	// TODO: Throwing errors now stops the build. It should be able to continue
 	const policyFolderName = dirName.match(/\/[^\/]+\/?$/)?.[0];
 
 	const dir = await readdir(dirName);
@@ -53,7 +52,9 @@ export async function readAllPolicies(): Promise<Record<string, Policy>> {
 		if (!entry.isDirectory()) continue;
 
 		const policyPromise = readPolicyFile(`${paths.policies}/${entry.name}`);
-		policyPromise.then((policy) => policies[entry.name] = policy);
+		policyPromise
+			.then((policy) => policies[entry.name] = policy)
+			.catch((reason) => console.error(reason));
 
 		promises.push(policyPromise);
 	}
