@@ -22,3 +22,25 @@
 }
 
 .policy__version-item {}
+
+.policy__version {}
+
+.policy__version--disclosure {
+	.policy__version__name {
+		cursor: pointer;
+	}
+
+	&:not([open]) {
+		margin-bottom: 1em;
+	}
+}
+
+.policy__version__name {
+	@include font-heading-32b;
+}
+
+.policy__version__link {
+	@include link;
+}
+
+
