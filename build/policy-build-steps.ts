@@ -64,7 +64,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 		return [new HtmlWebpackPlugin({
 			filename: `${dst}/index.html`,
 			template: TemplateCustomizer({
-				templatePath: `${paths.templates}/policy.ejs`,
+				templatePath: `${paths.templates}/pages/policy.ejs`,
 				templateEjsLoaderOption: {
 					data: {
 						policy,
@@ -90,7 +90,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 			plugins.push(new HtmlWebpackPlugin({
 				filename: `${versionDst}/index.html`,
 				template: TemplateCustomizer({
-					templatePath: `${paths.templates}/version.ejs`,
+					templatePath: `${paths.templates}/pages/version.ejs`,
 					templateEjsLoaderOption: {
 						data: {
 							policy,
