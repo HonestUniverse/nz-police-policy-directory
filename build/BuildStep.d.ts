@@ -1,5 +1,5 @@
 import type { Configuration } from 'webpack';
-import type { Policy } from '../schema/definitions/Policy.js';
+import type { Policy } from '../schema/Policy.js';
 
 declare type WebpackPlugins = NonNullable<Configuration["plugins"]>;
 
