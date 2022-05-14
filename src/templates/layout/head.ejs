@@ -35,7 +35,46 @@
 				</div>
 
 				<div class="header__tools">
-					<button type="button" class="header__colour-scheme js-colour-scheme__toggle" title="Toggle dark mode"></button>
+					<div class="colour-scheme js-colour-scheme">
+						<button
+							type="button"
+							class="colour-scheme__face js-colour-scheme__face"
+							id="colour-scheme__face"
+
+							aria-haspopup="menu"
+							aria-controls="colour-scheme__menu"
+						>Colour scheme</button>
+
+						<div
+							class="colour-scheme__menu js-colour-scheme__menu"
+							id="colour-scheme__menu"
+
+							role="menu"
+							aria-describedby="colour-scheme__face"
+						>
+							<li
+								class="colour-scheme__menu__option js-colour-scheme__menu__option"
+								tabindex="0"
+
+								role="menuitemradio"
+								data-value="default"
+							>Default</li>
+							<li
+								class="colour-scheme__menu__option js-colour-scheme__menu__option"
+								tabindex="0"
+
+								role="menuitemradio"
+								data-value="light"
+							>Light</li>
+							<li
+								class="colour-scheme__menu__option js-colour-scheme__menu__option"
+								tabindex="0"
+
+								role="menuitemradio"
+								data-value="dark"
+							>Dark</li>
+						</div>
+					</details>
 				</div>
 			</div>
 		</header>

@@ -72,7 +72,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 					},
 				},
 			}),
-			chunks: ['main', 'priority'],
+			chunks: ['priority', 'main', 'enhancements'],
 		})];
 	},
 
@@ -98,7 +98,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['main', 'priority'],
+				chunks: ['priority', 'main', 'enhancements'],
 			}));
 		}
 
