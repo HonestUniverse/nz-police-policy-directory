@@ -13,67 +13,71 @@ import { createBuildPlugins } from './build/build.js';
 
 import * as paths from './build/build-paths.js';
 
-const config: webpack.Configuration = {
-	mode: process.env.MODE === 'development' ? 'development' : 'production',
-	entry: {
-		main: `${paths.assetsFull}/js/main.ts`,
-		priority: `${paths.assetsFull}/js/priority.ts`,
-	},
-	output: {
-		path: paths.distFull,
-		filename: 'assets/js/[name].js',
-	},
-	resolve: {
-		fullySpecified: true,
-		plugins: [new ResolveTypeScriptPlugin()],
-	},
-	module: {
-		rules: [
-			{
-				test: /\.ts$/,
-				loader: 'ts-loader',
-			},
-			{
-				test: /\.scss$/,
-				use: [
-					{
-						loader: MiniCssExtractPlugin.loader,
-						options: {
-							esModule: false,
+async function getConfig(env: Record<string, unknown>) {
+	const config: webpack.Configuration = {
+		mode: process.env.MODE === 'development' ? 'development' : 'production',
+		entry: {
+			main: `${paths.assetsFull}/js/main.ts`,
+			priority: `${paths.assetsFull}/js/priority.ts`,
+		},
+		output: {
+			path: paths.distFull,
+			filename: 'assets/js/[name].js',
+		},
+		resolve: {
+			fullySpecified: true,
+			plugins: [new ResolveTypeScriptPlugin()],
+		},
+		module: {
+			rules: [
+				{
+					test: /\.ts$/,
+					loader: 'ts-loader',
+				},
+				{
+					test: /\.scss$/,
+					use: [
+						{
+							loader: MiniCssExtractPlugin.loader,
+							options: {
+								esModule: false,
+							},
 						},
-					},
-					'css-loader',
-					'sass-loader',
-				],
-			},
+						'css-loader',
+						'sass-loader',
+					],
+				},
+			],
+		},
+		plugins: [
+			new MiniCssExtractPlugin({
+				filename: 'assets/css/[name].css',
+				chunkFilename: '[id].css',
+				ignoreOrder: false,
+			}),
+			...await createBuildPlugins(env.test ? paths.testPolicies : paths.policies),
+			new AlterPlugin({
+				defer: ['main'],
+				body: ['priority'],
+				preload: ['priority'],
+			}),
 		],
-	},
-	plugins: [
-		new MiniCssExtractPlugin({
-			filename: 'assets/css/[name].css',
-			chunkFilename: '[id].css',
-			ignoreOrder: false,
-		}),
-		...await createBuildPlugins(),
-		new AlterPlugin({
-			defer: ['main'],
-			body: ['priority'],
-			preload: ['priority'],
-		}),
-	],
+	};
+
+	switch (process.env.MODE) {
+		case 'development':
+			config.optimization = {
+				minimize: false,
+			};
+			config.devtool = 'eval-source-map';
+			break;
+		case 'production':
+		default:
+			config.devtool = 'source-map';
+			break;
+	}
+
+	return config;
 };
 
-switch (process.env.MODE) {
-	case 'development':
-		config.optimization = {
-			minimize: false,
-		};
-		config.devtool = 'eval-source-map';
-		break;
-	case 'production':
-	default:
-		config.devtool = 'source-map';
-		break;
-}
-
-export default config;
+export default getConfig;
