@@ -16,11 +16,13 @@
 	}
 
 	position: relative;
+	min-width: 11ch;
 }
 
 .colour-scheme__face {
 	@include button-reset;
 
+	width: 100%;
 	padding: 0.5em;
 	border: 1px solid currentColor;
 
@@ -75,6 +77,7 @@
 		&::after {
 			content: "✔";
 			position: absolute;
+			top: 0;
 			right: 0.5em;
 		}
 	}
