@@ -1,13 +1,21 @@
-import Ajv from 'ajv';
+import Ajv, { ValidateFunction } from 'ajv';
 import addFormats from 'ajv-formats';
 
 import { readdir, readFile } from 'fs/promises';
-import type { Dirent } from 'fs';
 
-import type { Policy } from './definitions/Policy.js';
-import type { PolicyVersionFile } from './definitions/PolicyVersionFile.js';
+import type { Policy } from '../schema/definitions/Policy.js';
+import type { PolicyVersionFile } from '../schema/definitions/PolicyVersionFile.js';
 
-export const validatePolicy = await (async () => {
+/** Used for file-relative dynamic imports with root-relative paths */
+const root = '../';
+
+/**
+ * A custom type assertion for the `Policy` type.
+ *
+ * If the return value is false, this function's `errors` property
+ * contains details of exactly why the type assertion failed.
+ */
+export const validatePolicy: ValidateFunction<Policy> = await (async () => {
 	const ajv = new Ajv();
 
 	// `ajv` doesn't understand complex formats by default,
@@ -18,12 +26,14 @@ export const validatePolicy = await (async () => {
 	// so read the directory to automatically find them all, then
 	// load and add them all before creating the `ValidateFunction`
 
-	const schemaDir = await readdir('./schema/definitions');
+	const schemaPath = './schema/definitions';
+
+	const schemaDir = await readdir(schemaPath);
 	const schemaFileNamePattern = /\.schema\.json$/;
 	const schemaFileNames = schemaDir.filter((fileName) => schemaFileNamePattern.test(fileName));
 
 	const schemaPromises = schemaFileNames.map(async (name) => {
-		return (await import(`./definitions/${name}`, {
+		return (await import(`${root}/${schemaPath}/${name}`, {
 			assert: { type: 'json' },
 		})).default;
 	});
@@ -44,52 +54,43 @@ export const validatePolicy = await (async () => {
 	return ajv.compile<Policy>(policySchema);
 })();
 
+/**
+ * Create a `validateFileSize` function for a given directory.
+ */
 function getFileSizeValidator(dirName: string) {
-	return async function validateFileSize(file: PolicyVersionFile) {
+	/**
+	 * Validates that the recorded `size` of a `PolicyVersionFile`
+	 * matches its actual file size.
+	 *
+	 * On failure, it prints a warning to the console and corrects
+	 * the recorded size, but it will not write that correction to disk.
+	 */
+	return async function validateFileSize(file: PolicyVersionFile): Promise<boolean> {
 		const filePath = `${dirName}/${file.path}`;
 		const handle = await readFile(filePath);
 
-		if (file.size !== handle.byteLength) {
+		const valid = file.size === handle.byteLength;
+
+		if (!valid) {
 			console.warn(`WARNING: Incorrect file size for ${filePath}. Was ${file.size}, should be ${handle.byteLength}`);
 			file.size = handle.byteLength;
 		}
+
+		return valid;
 	}
 }
 
-function validateFileSizes(dirName: string, policy: Policy) {
+/**
+ * Loops through all files for a given `Policy` and validates that
+ * their recorded sizes equal their actual sizes.
+ */
+export function validateFileSizes(dirName: string, policy: Policy): Promise<boolean[]> {
 	const validateFileSize = getFileSizeValidator(dirName);
 
-	const filePromises: Promise<void>[] = [];
+	const filePromises: Promise<boolean>[] = [];
 	for (const version of policy.versions) {
 		filePromises.push(...version.files.map(validateFileSize));
 	}
 
 	return Promise.all(filePromises);
-}
-
-export async function checkPolicyDir(policiesDir: string, entry: Dirent, directory: Record<string, Policy>) {
-	const dirName = `${policiesDir}/${entry.name}`;
-	const dir = await readdir(dirName);
-
-	if (dir.includes('metadata.json') === false) {
-		console.warn(`WARNING: No metadata.json file found for ${entry.name}`);
-		return;
-	}
-
-	const policy: unknown = (
-		await import(`file://${dirName}/metadata.json`, {
-			assert: {
-				type: 'json',
-			},
-		})
-	).default;
-
-	const valid = validatePolicy(policy);
-	if (!valid) {
-		console.error(validatePolicy.errors);
-		throw new TypeError(`ERROR: Cannot build site due to invalid metadata in ${entry.name}`);
-	}
-
-	await validateFileSizes(dirName, policy);
-	directory[entry.name] = policy;
 }
