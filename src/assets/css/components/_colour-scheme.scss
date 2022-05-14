@@ -35,9 +35,30 @@
 	@include font-base-16;
 
 	border-radius: 0.5em;
+	&::before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 1ch;
+
+		width: 0;
+		height: 0;
+
+		font-size: 0.7em;
+		border-left: 1em solid currentColor;
+		border-top: 0.5em solid transparent;
+		border-bottom: 0.5em solid transparent;
+
+		transform-origin: 50% 50%;
+		@include transition(transform);
+	}
 	&[aria-expanded="true"] {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
+
+		&::before {
+			transform: rotate(90deg);
+		}
 	}
 }
 
@@ -56,7 +77,6 @@
 	border: 1px solid currentColor;
 	border-top: 0;
 	border-radius: 0 0 0.5em 0.5em;
-	overflow: hidden;
 }
 
 .colour-scheme__menu__option {
@@ -80,5 +100,9 @@
 			top: 0;
 			right: 0.5em;
 		}
+	}
+
+	&:last-child {
+		border-radius: 0 0 0.5em 0.5em;
 	}
 }
