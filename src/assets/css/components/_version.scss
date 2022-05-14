@@ -16,6 +16,10 @@
 	@include font-heading-32b;
 }
 
+.version__link {
+	@include link;
+}
+
 .version__contents {}
 
 .version__date-span {

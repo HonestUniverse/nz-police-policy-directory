@@ -56,17 +56,52 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	 * Generate the HTML for a Policy page
 	 */
 	createPolicyPage(src, dst, policy) {
+		const versionPaths = policy.versions.reduce((map, version, i, versions) => {
+			map[version.name] = toUrlSegment(version.name);
+			return map;
+		}, {});
+
 		return [new HtmlWebpackPlugin({
 			filename: `${dst}/index.html`,
 			template: TemplateCustomizer({
 				templatePath: `${paths.templates}/policy.ejs`,
 				templateEjsLoaderOption: {
-					data: { policy },
+					data: {
+						policy,
+						versionPaths,
+					},
 				},
 			}),
 			chunks: ['main', 'priority'],
 		})];
 	},
 
-	// TODO: Also generate a page for each version of the policy
+	/**
+	 * Generate a page for each version of the policy
+	 */
+	generateVersionPages(src, dst, policy) {
+		const plugins: ReturnType<PolicyBuildStep> = [];
+
+		for (const version of policy.versions) {
+			const versionName = version.name;
+			const versionPathName = toUrlSegment(versionName);
+			const versionDst = `${dst}/${versionPathName}`;
+
+			plugins.push(new HtmlWebpackPlugin({
+				filename: `${versionDst}/index.html`,
+				template: TemplateCustomizer({
+					templatePath: `${paths.templates}/version.ejs`,
+					templateEjsLoaderOption: {
+						data: {
+							policy,
+							version,
+						},
+					},
+				}),
+				chunks: ['main', 'priority'],
+			}));
+		}
+
+		return plugins;
+	},
 };

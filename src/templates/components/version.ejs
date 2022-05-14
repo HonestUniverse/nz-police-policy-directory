@@ -1,13 +1,26 @@
 <%
 	const name = (version.name || 'Unnamed version') + (isLatest ? ' (Latest)' : '');
+	const href = versionPaths[version.name];
 %>
 
 <% if (isFirst) { %>
 	<article class="version">
-		<h2 class="version__name"><%= name %></h2>
+		<h2 class="version__name">
+			<% if (href) { %>
+				<a href="<%= href %>" class="version__link"><%= name %></a>
+			<% } else { %>
+				<%= name %>
+			<% } %>
+		</h2>
 <% } else { %>
 	<details class="version version--disclosure">
-		<summary class="version__name"><%= name %></summary>
+		<summary class="version__name">
+			<% if (href) { %>
+				<a href="<%= href %>" class="version__link"><%= name %></a>
+			<% } else { %>
+				<%= name %>
+			<% } %>
+		</summary>
 <% } %>
 
 	<div class="version__contents">

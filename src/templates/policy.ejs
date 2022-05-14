@@ -28,6 +28,7 @@
 				<li class="policy__version-item">
 					<%- include('components/version', {
 						version,
+						versionPaths,
 						isLatest: hasMultipleVersions && i === 0,
 						isFirst: i === 0,
 					}) %>
