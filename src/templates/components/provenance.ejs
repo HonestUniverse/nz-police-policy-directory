@@ -35,15 +35,7 @@
 					<% } else { %>
 						<span>Some information was withheld under:</span>
 
-						<%# TODO: Links or tooltips to more information for each specific withholding ground %>
-						<dl class="provenance__withholdings__list">
-							<% Object.entries(withholdings).forEach(([key, val]) => { %>
-								<div class="provenance__withholding">
-									<dt class="provenance__withholding__type"><%= key %></dt>
-									<dd class="provenance__withholding__value"><%= val %></dd>
-								</div>
-							<% }) %>
-						</dl>
+						<%- include('../components/withholdings', { withholdings }) %>
 					<% } %>
 				</div>
 			<% } %>
