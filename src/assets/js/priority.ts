@@ -4,7 +4,6 @@
 
 import { initColourScheme } from './colour-scheme/init-colour-scheme.js';
 
-const $body = document.querySelector('body');
-if ($body) { $body.classList.remove('no-js'); }
+document.body.classList.remove('no-js');
 
 initColourScheme();

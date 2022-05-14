@@ -18,6 +18,7 @@ async function getConfig(env: Record<string, unknown>) {
 		mode: process.env.MODE === 'development' ? 'development' : 'production',
 		entry: {
 			main: `${paths.assetsFull}/js/main.ts`,
+			enhancements: `${paths.assetsFull}/js/enhancements.ts`,
 			priority: `${paths.assetsFull}/js/priority.ts`,
 		},
 		output: {
@@ -57,7 +58,7 @@ async function getConfig(env: Record<string, unknown>) {
 			}),
 			...await createBuildPlugins(env.test ? paths.testPolicies : paths.policies),
 			new AlterPlugin({
-				defer: ['main'],
+				defer: ['main', 'enhancements'],
 				body: ['priority'],
 				preload: ['priority'],
 			}),

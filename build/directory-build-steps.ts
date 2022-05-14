@@ -21,7 +21,7 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['main', 'priority'],
+				chunks: ['priority', 'main', 'enhancements'],
 			}),
 		];
 	}
