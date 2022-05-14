@@ -6,8 +6,7 @@ import { readdir, readFile } from 'fs/promises';
 import type { Policy } from '../schema/definitions/Policy.js';
 import type { PolicyVersionFile } from '../schema/definitions/PolicyVersionFile.js';
 
-/** Used for file-relative dynamic imports with root-relative paths */
-const root = '../';
+import { root, schema as schemaPath } from './build-paths.js';
 
 /**
  * A custom type assertion for the `Policy` type.
@@ -25,8 +24,6 @@ export const validatePolicy: ValidateFunction<Policy> = await (async () => {
 	// `ajv` needs to know about every schema,
 	// so read the directory to automatically find them all, then
 	// load and add them all before creating the `ValidateFunction`
-
-	const schemaPath = './schema/definitions';
 
 	const schemaDir = await readdir(schemaPath);
 	const schemaFileNamePattern = /\.schema\.json$/;
