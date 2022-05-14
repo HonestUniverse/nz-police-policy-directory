@@ -1,0 +1,44 @@
+.colour-scheme {
+	display: none;
+
+	@supports (color: var(--test)) {
+		display: block;
+
+		body.no-js & {
+			display: none;
+		}
+	}
+}
+
+.colour-scheme__face {
+	@include button-reset;
+
+	&::after {
+		content: "Default";
+		body.light & {
+			content: "Light";
+		}
+		body.dark & {
+			content: "Dark";
+		}
+
+		display: inline-block;
+		margin-left: 1ch;
+	}
+}
+
+.colour-scheme__menu {
+	@include list-reset;
+
+	display: none;
+
+	&[aria-expanded="true"] {
+		display: block;
+	}
+}
+
+.colour-scheme__menu__option {
+	&[aria-checked="true"] {
+		font-weight: bold;
+	}
+}

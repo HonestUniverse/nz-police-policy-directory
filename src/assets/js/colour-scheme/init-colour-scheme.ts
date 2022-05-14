@@ -7,10 +7,10 @@ import { colourSchemeKey } from './key.js';
  * Update the `<body>` element to specify a preferred colour scheme.
  */
 export function applyColourScheme(scheme: ColourScheme) {
-	const $body = document.querySelector('body');
+	const $body = document.body;
 
-	if ($body) {
-		$body.classList.remove(...Object.values(ColourScheme));
+	$body.classList.remove(...Object.values(ColourScheme));
+	if (scheme !== ColourScheme.DEFAULT) {
 		$body.classList.add(scheme);
 	}
 }
@@ -18,17 +18,17 @@ export function applyColourScheme(scheme: ColourScheme) {
 /**
  * Read a preferred colour scheme from `localStorage`, if one has been remembered.
  */
-function recallColourScheme(): ColourScheme | null {
+function recallColourScheme(): ColourScheme {
 	if (localStorageSupport) {
 		const scheme = localStorage.getItem(colourSchemeKey);
 
 		if (isColourScheme(scheme)) {
 			return scheme;
 		} else {
-			return null;
+			return ColourScheme.DEFAULT;
 		}
 	} else {
-		return null;
+		return ColourScheme.DEFAULT;
 	}
 }
 
@@ -37,8 +37,5 @@ function recallColourScheme(): ColourScheme | null {
  */
 export function initColourScheme() {
 	const scheme = recallColourScheme();
-
-	if (scheme) {
-		applyColourScheme(scheme);
-	}
+	applyColourScheme(scheme);
 }
