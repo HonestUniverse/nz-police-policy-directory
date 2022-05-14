@@ -17,10 +17,7 @@
 		<div class="provenance__source">Source:
 			<% if (provenance.url) { %>
 				<a
-					href="<%= provenance.url %>"
-					<% if (/^https?:/.test(provenance.url)) { %>
-						target="_blank"
-					<% } %>
+					<%- include('../helpers/href-with-target', { href: provenance.url }); %>
 					class="provenance__source__link"
 				><%= provenance.method %></a>
 			<% } else { %>
