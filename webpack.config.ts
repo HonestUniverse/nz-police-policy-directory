@@ -3,29 +3,24 @@ import * as webpack from 'webpack';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __dirname = fileURLToPath(import.meta.url);
-
 import resolveTypeScriptPluginModule from 'resolve-typescript-plugin';
 const ResolveTypeScriptPlugin = resolveTypeScriptPluginModule;
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import AlterPlugin from './build/util/alter-plugin.js';
 
 import { createBuildPlugins } from './build/build.js';
 
-const srcPath = path.resolve(__dirname, '../src');
-const entryPath = `${srcPath}/assets`;
-const distPath = path.resolve(__dirname, '../dist');
+import * as paths from './build/build-paths.js';
 
 const config: webpack.Configuration = {
 	mode: process.env.MODE === 'development' ? 'development' : 'production',
 	entry: {
-		main: `${entryPath}/js/main.ts`,
-		priority: `${entryPath}/js/priority.ts`,
+		main: `${paths.assetsFull}/js/main.ts`,
+		priority: `${paths.assetsFull}/js/priority.ts`,
 	},
 	output: {
-		path: distPath,
+		path: paths.distFull,
 		filename: 'assets/js/[name].js',
 	},
 	resolve: {
@@ -59,7 +54,12 @@ const config: webpack.Configuration = {
 			chunkFilename: '[id].css',
 			ignoreOrder: false,
 		}),
-		...await createBuildPlugins('./src'),
+		...await createBuildPlugins(),
+		new AlterPlugin({
+			defer: ['main'],
+			body: ['priority'],
+			preload: ['priority'],
+		}),
 	],
 };
 
