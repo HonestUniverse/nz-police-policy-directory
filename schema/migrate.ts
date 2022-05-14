@@ -5,7 +5,7 @@ import { readdir, writeFile } from 'fs/promises';
 import type { Policy } from './definitions/Policy.js';
 import type { AccessibilityFeature } from './definitions/AccessibilityFeature.js';
 
-import { validatePolicy } from './validate.js';
+import { validatePolicy } from '../build/validate.js';
 
 /**
  * a `Migration` accepts an argument that should look like a `Policy`,
