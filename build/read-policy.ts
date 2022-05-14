@@ -40,8 +40,8 @@ async function readPolicyFile(dirName: string): Promise<Policy> {
  * Read all policy files, and return an object mapping each
  * policy's paths to its data.
  */
-export async function readAllPolicies(): Promise<Record<string, Policy>> {
-	const dir = await readdir(paths.policies, {
+export async function readAllPolicies(path = paths.policies): Promise<Record<string, Policy>> {
+	const dir = await readdir(path, {
 		withFileTypes: true,
 	});
 
@@ -51,7 +51,7 @@ export async function readAllPolicies(): Promise<Record<string, Policy>> {
 	for (const entry of dir) {
 		if (!entry.isDirectory()) continue;
 
-		const policyPromise = readPolicyFile(`${paths.policies}/${entry.name}`);
+		const policyPromise = readPolicyFile(`${path}/${entry.name}`);
 		policyPromise
 			.then((policy) => policies[entry.name] = policy)
 			.catch((reason) => console.error(reason));

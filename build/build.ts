@@ -28,17 +28,17 @@ function gatherBuildStepPlugins<T = unknown>(steps: Record<string, BuildStep<T>>
 /**
  * Create all necessary Webpack plugins for policy and directory build steps
  */
-export async function createBuildPlugins() {
+export async function createBuildPlugins(policiesPath = paths.policies) {
 	const plugins: ReturnType<BuildStep> = [];
 
-	const policiesByName = await readAllPolicies();
+	const policiesByName = await readAllPolicies(policiesPath);
 	const policiesByNameSafe: Record<string, Policy> = {};
 
 	for (const [policyName, policy] of Object.entries(policiesByName)) {
 		const policyNameSafe = toUrlSegment(policyName);
 		policiesByNameSafe[policyNameSafe] = policy;
 
-		const policySrcPath = `${paths.policies}/${policyName}`;
+		const policySrcPath = `${policiesPath}/${policyName}`;
 		const policyDstPath = `./${policyNameSafe}`;
 
 		plugins.push(...gatherBuildStepPlugins(policyBuildSteps, policySrcPath, policyDstPath, policy));

@@ -11,6 +11,7 @@ export const root = '../';
 
 export const src = './src';
 export const policies = `${src}/policies`;
+export const testPolicies = `${src}/test-policies`;
 export const templates = `${src}/templates`;
 export const schema = `./schema`;
 
