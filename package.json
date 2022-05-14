@@ -36,7 +36,7 @@
 	"scripts": {
 		"build": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode production",
 		"watch": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode development --watch",
-		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node schema/migrate.ts",
+		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/migrate.ts",
 		"lintJs": "eslint assets/js/**",
 		"lintCss": "stylelint assets/css/**",
 		"lint": "npm run lintJs && npm run lintCss",

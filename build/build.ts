@@ -1,6 +1,6 @@
 import { toUrlSegment } from './util/to-url-segment.js';
 
-import type { Policy } from '../schema/definitions/Policy.js';
+import type { Policy } from '../schema/Policy.js';
 
 import { readAllPolicies } from './read-policy.js';
 

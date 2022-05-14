@@ -2,10 +2,12 @@ import semver from 'semver';
 
 import { readdir, writeFile } from 'fs/promises';
 
-import type { Policy } from './definitions/Policy.js';
-import type { AccessibilityFeature } from './definitions/AccessibilityFeature.js';
+import type { Policy } from '../schema/Policy.js';
+import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
 
-import { validatePolicy } from '../build/validate.js';
+import { validatePolicy } from './validate-policy.js';
+
+import * as paths from './build-paths.js';
 
 /**
  * a `Migration` accepts an argument that should look like a `Policy`,
@@ -20,9 +22,7 @@ interface Migration {
  * Loop through all policies, and attempt to migrate any with invalid metadata.
  */
 async function migrateAll() {
-	const srcDir = './src/policies';
-
-	const dir = await readdir(srcDir, {
+	const dir = await readdir(paths.policies, {
 		withFileTypes: true,
 	});
 
@@ -35,7 +35,7 @@ async function migrateAll() {
 			continue;
 		}
 
-		const dirName = `${srcDir}/${entry.name}`;
+		const dirName = `${paths.policies}/${entry.name}`;
 		const dir = await readdir(dirName);
 
 		if (dir.includes('metadata.json') === false) {
@@ -44,7 +44,7 @@ async function migrateAll() {
 		}
 
 		const policy: unknown = (
-			await import(`../${srcDir}/${entry.name}/metadata.json`, {
+			await import(`../${paths.policies}/${entry.name}/metadata.json`, {
 				assert: {
 					type: 'json',
 				},
@@ -68,12 +68,12 @@ async function migrateAll() {
 			console.error(validatePolicy.errors);
 			console.error(`ERROR: Migrated metadata for ${entry.name} is still invalid after migration`);
 			// @ts-expect-error We've lied to TypeScript that this is already a valid policy, but in this condition we've just found it's not
-			writeFile(`${srcDir}/${entry.name}/metadata.failed-migration-${migratedPolicy.schemaVersion}.json`, JSON.stringify(policy, null, '\t'));
+			writeFile(`${paths.policies}/${entry.name}/metadata.failed-migration-${migratedPolicy.schemaVersion}.json`, JSON.stringify(policy, null, '\t'));
 		} else {
 			// Back up previous contents just in case
-			writeFile(`${srcDir}/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));
+			writeFile(`${paths.policies}/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));
 			// If valid, save new contents
-			writeFile(`${srcDir}/${entry.name}/metadata.json`, JSON.stringify(migratedPolicy, null, '\t'));
+			writeFile(`${paths.policies}/${entry.name}/metadata.json`, JSON.stringify(migratedPolicy, null, '\t'));
 		}
 	}
 

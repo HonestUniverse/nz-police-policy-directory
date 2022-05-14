@@ -12,7 +12,7 @@ export const root = '../';
 export const src = './src';
 export const policies = `${src}/policies`;
 export const templates = `${src}/templates`;
-export const schema = `./schema/definitions`;
+export const schema = `./schema`;
 
 const buildFull = path.resolve(fileURLToPath(import.meta.url), '../');
 export const srcFull = path.resolve(buildFull, '../src');
