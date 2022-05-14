@@ -3,8 +3,8 @@ import addFormats from 'ajv-formats';
 
 import { readdir, readFile } from 'fs/promises';
 
-import type { Policy } from '../schema/definitions/Policy.js';
-import type { PolicyVersionFile } from '../schema/definitions/PolicyVersionFile.js';
+import type { Policy } from '../schema/Policy.js';
+import type { PolicyVersionFile } from '../schema/PolicyVersionFile.js';
 
 import { root, schema as schemaPath } from './build-paths.js';
 
