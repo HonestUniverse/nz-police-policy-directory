@@ -22,9 +22,9 @@
 	/**
 	 * Sometimes we don't know a date, but still need to render it.
 	 */
-	function getDateString(date) {
+	function getDateString(date, options) {
 		if (date) {
-			return include('../helpers/date-partial', { date });
+			return include('../helpers/date-partial', { date, options });
 		} else {
 			return 'Unknown date';
 		}
@@ -46,13 +46,13 @@
 		});
 
 		items.push({
-			date: onDates[0],
+			date: getDateString(onDates[0], { month: 'short' }),
 			status: 'Active',
 			small: true,
 		});
 		if (onDates.length > 1) {
 			items.push({
-				date: onDates.at(-1),
+				date: getDateString(onDates.at(-1), { month: 'short' }),
 				status: 'Active',
 				small: true,
 			});
