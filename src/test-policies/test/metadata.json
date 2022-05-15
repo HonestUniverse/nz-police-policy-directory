@@ -45,7 +45,35 @@
 								"requester": "Mark Hanna - this is a file-specific override",
 								"withholdings": {
 									"6(a)": true,
-									"9(2)(a)": "pp1-6"
+									"6(b)(i)": true,
+									"6(b)(ii)": true,
+									"6(c)": true,
+									"6(d)": true,
+									"6(e)(i)": true,
+									"6(e)(ii)": true,
+									"6(e)(iii)": true,
+									"6(e)(iv)": true,
+									"6(e)(v)": true,
+									"6(e)(vi)": true,
+
+									"9(2)(a)": "pp1-6",
+									"9(2)(b)(i)": true,
+									"9(2)(b)(ii)": true,
+									"9(2)(ba)(i)": true,
+									"9(2)(ba)(ii)": true,
+									"9(2)(c)": true,
+									"9(2)(d)": true,
+									"9(2)(e)": true,
+									"9(2)(f)(i)": true,
+									"9(2)(f)(ii)": true,
+									"9(2)(f)(iii)": true,
+									"9(2)(f)(iv)": true,
+									"9(2)(g)(i)": true,
+									"9(2)(g)(ii)": true,
+									"9(2)(h)": true,
+									"9(2)(i)": true,
+									"9(2)(j)": true,
+									"9(2)(k)": true
 								}
 							},
 							"published": "2027-10-12",
@@ -84,6 +112,61 @@
 					"oiaRequest": {
 						"requester": "Mark Hanna",
 						"withholdings": "Unknown"
+					},
+					"published": "2016-06-30",
+					"released": "2018-03-19",
+					"retrieved": "2018-03-19",
+					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics",
+					"fileUrl": "https://fyi.org.nz/request/7257/response/24263/attach/17/Fleeing%20driver%20policy%20In%20force%20from%2030%20June%202016.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "version-3-0/2016-06-30 Fleeing driver policy.pdf",
+					"type": "application/pdf",
+					"size": 380978,
+					"licence": {
+						"name": "Test",
+						"url": "https://example.com/licence.txt",
+						"notices": [
+							{
+								"title": "Test notice on licence",
+								"type": "error",
+								"message": "This is a test notice on a licence"
+							}
+						]
+					},
+					"original": false,
+					"modifications": [
+						"The name of the file was changed"
+					],
+					"accessibility": {
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": "Partial",
+							"notes": [
+								"Some pages are missing semantics"
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Version 2.0.0",
+			"duration": {
+				"start": "2016-06-30",
+				"end": "2017-10-12"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"withholdings": "None"
 					},
 					"published": "2016-06-30",
 					"released": "2018-03-19",
