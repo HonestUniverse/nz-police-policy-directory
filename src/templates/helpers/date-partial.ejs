@@ -1,7 +1,14 @@
 <%
-	const formatter = new Intl.DateTimeFormat('en-nz', {
+	const options = locals.options ? {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+		...locals.options,
+	} : {
 		dateStyle: 'long',
-	});
+	};
+
+	const formatter = new Intl.DateTimeFormat('en-nz', options);
 
 	const formatDate = (date) => formatter.format(date);
 	const formatDateString = (dateString) => formatDate(new Date(dateString));
