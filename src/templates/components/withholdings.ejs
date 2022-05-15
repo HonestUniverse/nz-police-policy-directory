@@ -36,17 +36,46 @@
 	};
 %>
 
-<dl class="provenance__withholdings__list">
-	<% Object.entries(withholdings).forEach(([key, val]) => { %>
-		<div class="provenance__withholding">
-			<dt class="provenance__withholding__type">
-				<% if (oiaLinks[key]) { %>
-					<a <%- include('../helpers/href-with-target', { href: oiaLinks[key] }); %> class="provenance__withholding__link"><%= key %></a>
-				<% } else { %>
-					<%= key %>
-				<% } %>
-			</dt>
-			<dd class="provenance__withholding__value"><%= val %></dd>
+<% if (withholdings) { %>
+	<% if (withholdings === 'None') { %>
+		<!-- No information was withheld -->
+		<div class="provenance__withholdings provenance__withholdings--pass">
+			<div class="provenance__withholdings__summary">
+				<span class="provenance__withholdings__summary-icon" aria-hidden="true"></span>
+				<span class="provenance__withholdings__summary-text">No information was withheld</span>
+			</div>
 		</div>
-	<% }) %>
-</dl>
+	<% } else if (withholdings === 'Unknown') { %>
+		<!-- It hasn't been vetted yet -->
+		<div class="provenance__withholdings provenance__withholdings--unknown">
+			<div class="provenance__withholdings__summary">
+				<span class="provenance__withholdings__summary-icon" aria-hidden="true"></span>
+				<span class="provenance__withholdings__summary-text">Some information may be withheld</span>
+			</div>
+		</div>
+	<% } else { %>
+		<!-- Some information was withheld -->
+		<details class="provenance__withholdings provenance__withholdings--fail">
+			<summary class="provenance__withholdings__summary">
+				<span class="provenance__withholdings__summary-icon" aria-hidden="true"></span>
+				<span class="provenance__withholdings__summary-text">Some information was withheld</span>
+			</summary>
+			<div class="provenance__withholdings__details">
+				<dl class="provenance__withholdings__list">
+					<% Object.entries(withholdings).forEach(([key, val]) => { %>
+						<div class="provenance__withholding">
+							<dt class="provenance__withholding__type">
+								<% if (oiaLinks[key]) { %>
+									<a <%- include('../helpers/href-with-target', { href: oiaLinks[key] }); %> class="provenance__withholding__link"><%= key %></a>
+								<% } else { %>
+									<%= key %>
+								<% } %>
+							</dt>
+							<dd class="provenance__withholding__value"><%= val %></dd>
+						</div>
+					<% }) %>
+				</dl>
+			</div>
+		</details>
+	<% } %>
+<% } %>
