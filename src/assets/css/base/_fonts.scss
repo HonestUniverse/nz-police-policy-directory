@@ -1,20 +1,7 @@
-@import "../theme/fonts.scss";
+@import "../theme/fonts";
 
-/*
-Font icons chosen from IcoMoon free icons:
-https://icomoon.io/#icons-icomoon
-
-Icons used under CC BY 4.0
-https://creativecommons.org/licenses/by/4.0/
-*/
-@font-face {
-	font-family: "font-icons";
-	src: url("../fonts/font-icons/fonts/font-icons.eot?ks82df");
-	src: url("../fonts/font-icons/fonts/font-icons.eot?ks82df#iefix") format("embedded-opentype"),
-		url("../fonts/font-icons/fonts/font-icons.ttf?ks82df") format("truetype"),
-		url("../fonts/font-icons/fonts/font-icons.woff?ks82df") format("woff"),
-		url("../fonts/font-icons/fonts/font-icons.svg?ks82df#font-icons") format("svg");
-	font-weight: normal;
-	font-style: normal;
-	font-display: block;
-}
+// TODO: These fonts should be preloaded with a <link rel="preload" /> tag
+// This is currently complicated by Webpack moving and renaming these fonts
+@import "fonts-montserrat";
+@import "fonts-roboto";
+@import "fonts-icons";
