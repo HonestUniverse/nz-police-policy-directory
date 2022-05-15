@@ -1,8 +1,12 @@
 @import "../tools/reset";
 @import "../tools/layout";
 @import "../tools/fonts";
+@import "../tools/headings";
+@import "../tools/use-var";
 
-.directory {}
+.directory {
+	@include use-var(background-color, --grey--light);
+}
 
 .directory__layout {
 	@include layout-wrapper;
@@ -10,10 +14,17 @@
 
 .directory__title {
 	@include font-heading-40b;
+	@include fullbleed-heading;
 }
 
 .directory__list {
 	@include list-reset;
 }
 
-.directory__item {}
+.directory__item {
+	padding: 0.5em 1em;
+
+	&:nth-child(2n) {
+		background-color: rgba(127, 127, 127, 0.05);
+	}
+}

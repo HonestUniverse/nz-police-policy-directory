@@ -1,8 +1,12 @@
 @import "../tools/layout";
 @import "../tools/reset";
 @import "../tools/fonts";
+@import "../tools/headings";
+@import "../tools/use-var";
 
-.policy {}
+.policy {
+	@include use-var(background-color, --grey--light);
+}
 
 .policy__layout {
 	@include layout-wrapper;
@@ -10,6 +14,7 @@
 
 .policy__title {
 	@include font-heading-40b;
+	@include fullbleed-heading;
 }
 
 .policy__type {
