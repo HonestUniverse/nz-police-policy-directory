@@ -13,7 +13,21 @@ https://creativecommons.org/licenses/by/4.0/
 		url("../fonts/font-icons/font-icons.ttf") format("truetype"),
 		url("../fonts/font-icons/font-icons.woff") format("woff"),
 		url("../fonts/font-icons/font-icons.svg#font-icons") format("svg");
-	font-weight: normal;
+	font-weight: $regular;
+	font-style: normal;
+	font-display: block;
+}
+
+// Also define bold variant so browsers won't try to fake it
+@font-face {
+	font-family: "font-icons";
+	src: url("../fonts/font-icons/font-icons.eot");
+	src:
+		url("../fonts/font-icons/font-icons.eot#iefix") format("embedded-opentype"),
+		url("../fonts/font-icons/font-icons.ttf") format("truetype"),
+		url("../fonts/font-icons/font-icons.woff") format("woff"),
+		url("../fonts/font-icons/font-icons.svg#font-icons") format("svg");
+	font-weight: $bold;
 	font-style: normal;
 	font-display: block;
 }
