@@ -1,4 +1,9 @@
-<%
+<%##
+	{
+		date: Date | DatePartial,
+		options?: Partial<Intl.DateTimeFormatOptions>,
+	}
+%><%
 	const options = locals.options ? {
 		year: 'numeric',
 		month: 'long',
