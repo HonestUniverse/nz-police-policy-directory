@@ -1,9 +1,13 @@
 @import "../tools/reset";
 @import "../tools/layout";
 @import "../tools/fonts";
+@import "../tools/use-var";
 
 .header {
+	@include use-var(background-color, --grey);
+	@include use-var(color, --red--dim);
 	padding-top: 1em;
+	border-top: 0.5em solid $yellow;
 }
 
 .header__layout {
@@ -15,7 +19,7 @@
 	@supports (display: grid) {
 		display: grid;
 		grid-template-areas:
-			"site-name site-name"
+			"site-name tools"
 			"nav tools";
 	}
 }

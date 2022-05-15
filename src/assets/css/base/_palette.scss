@@ -4,6 +4,7 @@
 	--white: #{$white};
 	--black: #{$black};
 
+	--grey: #{$grey--light};
 	--grey--light: #{$grey--light};
 	--grey--mid: #{$grey--mid-light};
 
@@ -13,6 +14,7 @@
 	--yellow--pale: #{$yellow--pale};
 
 	--red--pale: #{$red--pale};
+	--red--dim: #{$red--dim};
 
 	--link: #{$blue--vivid};
 }
@@ -21,6 +23,7 @@
 	--white: #{$black};
 	--black: #{$white};
 
+	--grey: #{$grey};
 	--grey--light: #{$grey--dark};
 	--grey--mid: #{$grey--mid-dark};
 
@@ -30,6 +33,7 @@
 	--yellow--pale: #{$yellow--dim};
 
 	--red--pale: #{$red--dim};
+	--red--dim: #{$red--pale};
 
 	--link: #{$blue--vivid-bright};
 }

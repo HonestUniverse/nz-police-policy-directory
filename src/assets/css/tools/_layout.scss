@@ -1,10 +1,18 @@
 @import "../theme/layout";
+@import "use-var";
 
 @mixin layout-wrapper($width: $layout-max-width) {
+	@include use-var(background-color, --grey);
 	max-width: $width;
 	margin-left: auto;
 	margin-right: auto;
 
 	padding-left: 1rem;
 	padding-right: 1rem;
+	padding-bottom: 1rem;
+}
+
+@mixin inverse-layout-wrapper() {
+	margin-left: -1rem;
+	margin-right: -1rem;
 }

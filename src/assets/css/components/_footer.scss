@@ -3,18 +3,23 @@
 @import "../tools/palette";
 
 .footer {
-	margin-top: 2em;
+	padding-top: 2em;
 	padding-bottom: 1em;
+
+	background: $black;
+	color: white;
 
 	@include font-base-16;
 }
 
 .footer__layout {
 	@include layout-wrapper;
+	background: none;
 }
 
 .footer__by {
 	a {
 		@include link;
+		color: $blue--pale;
 	}
 }
