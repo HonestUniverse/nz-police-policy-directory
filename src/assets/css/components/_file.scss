@@ -34,16 +34,3 @@
 .file__modifications__item {
 	@include font-base-18;
 }
-
-.file__accessibility {}
-
-.file__accessibility__feature {}
-
-.file__accessibility__feature__name {
-	@include font-base-18b;
-}
-
-.file__accessibility__feature__value {
-	margin: 0;
-	@include font-base-18;
-}
