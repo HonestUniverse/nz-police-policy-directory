@@ -41,6 +41,12 @@
 	font-weight: $bold;
 }
 
+@mixin font-base-20 {
+	font-family: $font-base;
+	font-size: rem(20px);
+	font-weight: $regular;
+}
+
 @mixin font-base-18 {
 	font-family: $font-base;
 	font-size: rem(18px);
