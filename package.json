@@ -42,8 +42,8 @@
 
 		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/migrate.ts",
 
-		"lintJs": "eslint assets/js/**",
-		"lintCss": "stylelint assets/css/**",
+		"lintJs": "eslint src/assets/js/**",
+		"lintCss": "stylelint src/assets/css/**",
 		"lint": "npm run lintJs && npm run lintCss",
 
 		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" jasmine"
