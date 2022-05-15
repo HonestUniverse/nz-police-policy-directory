@@ -44,7 +44,12 @@ async function getConfig(env: Record<string, unknown>) {
 								esModule: false,
 							},
 						},
-						'css-loader',
+						{
+							loader: 'css-loader',
+							options: {
+								url: false,
+							},
+						},
 						'sass-loader',
 					],
 				},
