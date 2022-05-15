@@ -1,7 +1,5 @@
 @import "../theme/fonts";
 
-// TODO: These fonts should be preloaded with a <link rel="preload" /> tag
-// This is currently complicated by Webpack moving and renaming these fonts
 @import "fonts-montserrat";
 @import "fonts-roboto";
 @import "fonts-icons";
