@@ -1,0 +1,72 @@
+<%
+	/**
+	 * For sorting, treat partial dates as their earliest possible date.
+	 */
+	function partialToFullDate(dateObj) {
+		if (dateObj instanceof Date) {
+			return dateObj;
+		} else if (typeof dateObj === 'string') {
+			return new Date(dateObj);
+		}
+
+		// We'll always have year
+		const year = dateObj.year;
+		// Use month if available, otherwise first month of the quarter if available, otherwise January
+		const month = (dateObj.month || dateObj.quarter * 3 - 2 || 1) - 1;
+		// Use date if available, otherwise first day of the month
+		const date = dateObj.date || 1;
+
+		return new Date(year, month, date);
+	}
+
+	/**
+	 * Sometimes we don't know a date, but still need to render it.
+	 */
+	function getDateString(date) {
+		if (date) {
+			return include('../helpers/date-partial', { date });
+		} else {
+			return 'Unknown date';
+		}
+	}
+
+	const items = [{
+		date: getDateString(duration.start),
+		status: 'Started',
+	}];
+
+	if (!(duration.start && duration.end) && duration.on) {
+		// Sort `on` dates chronologically
+		const onDates = duration.on.sort((a, b) => {
+			// Dates in `on` may be partial. For sorting assume they are the earliest date in the region of uncertainty
+			const dateA = partialToFullDate(a);
+			const dateB = partialToFullDate(b);
+
+			return dateA - dateB;
+		});
+
+		items.push({
+			date: onDates[0],
+			status: 'Active',
+			small: true,
+		});
+		if (onDates.length > 1) {
+			items.push({
+				date: onDates.at(-1),
+				status: 'Active',
+				small: true,
+			});
+		}
+	}
+
+	items.push({
+		date: getDateString(duration.end),
+		status: (duration.end || duration.ended) ? 'Ended' : 'May still be active',
+	});
+%>
+
+<ol class="duration">
+	<% for (const item of items) { %>
+		<%- include('subcomponents/duration-item', item); %>
+	<% } %>
+</ol>
