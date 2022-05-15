@@ -2,7 +2,7 @@
 @import "../tools/fonts";
 
 .notice {
-	display: block;
+	display: flex;
 	margin-top: 1em;
 	margin-bottom: 1em;
 
@@ -10,9 +10,34 @@
 	border-radius: 1em;
 }
 
-.notice--info { @include contrast-blue; }
-.notice--warning { @include contrast-yellow; }
-.notice--error { @include contrast-red; }
+.notice--info {
+	.notice__icon::before {
+		content: $icon-info;
+	}
+	@include contrast-blue;
+}
+.notice--warning {
+	.notice__icon::before {
+		content: $icon-warning;
+	}
+	@include contrast-yellow;
+}
+.notice--error {
+	.notice__icon::before {
+		content: $icon-error;
+	}
+	@include contrast-red;
+}
+
+.notice__icon {
+	@include font-heading-20b;
+	padding-right: 1ch;
+	&::before {
+		font-family: $font-icons;
+	}
+}
+
+.notice__body {}
 
 .notice__title {
 	display: block;
