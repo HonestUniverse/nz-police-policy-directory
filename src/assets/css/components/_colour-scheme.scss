@@ -33,6 +33,10 @@
 	@include transition(background-color);
 
 	border-radius: 0.5em;
+	&[aria-expanded="true"] {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 }
 
 .colour-scheme__face-icon {
