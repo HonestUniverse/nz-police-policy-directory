@@ -86,7 +86,14 @@
 					"original": true,
 					"accessibility": {
 						"text-based": {
+							"value": "Partial",
+							"notes": ["There is an image of text"]
+						},
+						"semantics": {
 							"value": true
+						},
+						"alt text": {
+							"value": false
 						}
 					}
 				}

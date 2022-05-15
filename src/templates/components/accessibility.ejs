@@ -1,0 +1,81 @@
+<%##
+	{
+		accessibility: Accessibility
+	}
+%>
+
+<%
+	const score = (() => {
+		const numFeatures = Object.keys(accessibility).length;
+
+		const score = {
+			pass: 0,
+			partial: 0,
+			unknown: 0,
+			fail: 0,
+			total: numFeatures,
+		};
+
+		for (const [name, feature] of Object.entries(accessibility)) {
+			if (feature.value === true) {
+				score.pass += 1;
+			} else if (feature.value === false) {
+				score.fail += 1;
+			} else if (feature.value === 'Partial') {
+				score.partial += 1;
+			} else {
+				score.unknown += 1;
+			}
+		}
+
+		return score;
+	})();
+
+	const [rating, ratingClass] = (() => {
+		const notFail = score.pass + score.partial;
+
+		if (score.pass === score.total) {
+			return ['Pass', 'pass'];
+		} else if (score.unknown === score.total) {
+			return ['Unknown', 'unknown'];
+		} else if ((notFail + score.unknown) === score.total) {
+			return ['Partial pass', 'pass-partial'];
+		} else if (notFail > (score.total / 2)) {
+			return ['Partial pass', 'pass-partial'];
+		} else if (notFail > 0) {
+			return ['Partial fail', 'fail-partial'];
+		} else {
+			return ['Fail', 'fail'];
+		}
+	})();
+%>
+
+<details class="accessibility">
+	<summary class="accessibility__summary accessibility__summary--<%= ratingClass %>">
+		<span class="accessibility__summary__icon" aria-hidden="true"></span>
+		<span class="accessibility__summary__text">Accessibility: <%= rating %></span>
+	</summary>
+
+	<div class="accessibility__details">
+		<dl class="accessibility__feature-list">
+			<% for (const featureName of Object.keys(accessibility)) { %>
+				<div class="accessibility__feature-item">
+					<dt class="accessibility__feature-name"><%= featureName %></dt>
+					<dd class="accessibility__feature-value">
+						<% const feature = accessibility[featureName]; %>
+						<% if (typeof feature === 'boolean' || typeof feature === 'string') { %>
+							<%= feature %>
+						<% } else { %>
+							<%= feature.value %>
+							<% if (feature.notes) {
+								for (const note of feature.notes) { %>
+									(<%= note %>)
+								<% }
+							} %>
+						<% } %>
+					</dd>
+				</div>
+			<% } %>
+		</dl>
+	</div>
+</details>
