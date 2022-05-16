@@ -91,6 +91,7 @@ class AlterPlugin {
 							attributes: {
 								rel: 'preload',
 								href: tag.attributes.src ?? tag.attributes.href,
+								as: 'script',
 							},
 							voidTag: true,
 							meta: {

@@ -75,7 +75,12 @@ module.exports = {
 		// These code style rules are frozen in `Stylelint`
 		///////////////////////////////////////////////////
 
-		'value-keyword-case': 'lower',
+		'value-keyword-case': [
+			'lower',
+			{
+				camelCaseSvgKeywords: true,
+			},
+		],
 
 		'function-name-case': 'lower',
 

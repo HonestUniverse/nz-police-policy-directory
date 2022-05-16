@@ -1,0 +1,77 @@
+@import "../theme/fonts";
+
+/*
+Roboto sourced from Google Fonts:
+https://fonts.google.com/specimen/Roboto
+
+Used under Apache License, Version 2.0:
+https://fonts.google.com/specimen/Roboto#license
+http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+/* latin-ext */
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: $regular;
+	font-display: auto;
+	src: url(../fonts/roboto/roboto-regular-latin-ext.woff2) format("woff2");
+	unicode-range: $unicode-range-latin-ext;
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: $regular;
+	font-display: auto;
+	src: url(../fonts/roboto/roboto-italic-latin-ext.woff2) format("woff2");
+	unicode-range: $unicode-range-latin-ext;
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: $bold;
+	font-display: auto;
+	src: url(../fonts/roboto/roboto-bold-latin-ext.woff2) format("woff2");
+	unicode-range: $unicode-range-latin-ext;
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: $bold;
+	font-display: auto;
+	src: url(../fonts/roboto/roboto-bolditalic-latin-ext.woff2) format("woff2");
+	unicode-range: $unicode-range-latin-ext;
+}
+/* latin */
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: $regular;
+	font-display: auto;
+	src: url(../fonts/roboto/roboto-regular-latin.woff2) format("woff2");
+	unicode-range: $unicode-range-latin;
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: $regular;
+	font-display: auto;
+	src: url(../fonts/roboto/roboto-italic-latin.woff2) format("woff2");
+	unicode-range: $unicode-range-latin;
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: $bold;
+	font-display: auto;
+	src: url(../fonts/roboto/roboto-bold-latin.woff2) format("woff2");
+	unicode-range: $unicode-range-latin;
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: $bold;
+	font-display: auto;
+	src: url(../fonts/roboto/roboto-bolditalic-latin.woff2) format("woff2");
+	unicode-range: $unicode-range-latin;
+}

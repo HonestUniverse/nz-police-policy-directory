@@ -1,20 +1,22 @@
 <div class="provenance">
 	<%
 		const withholdings = provenance.withholdings || provenance.oiaRequest?.withholdings;
+
+		const [dateType, date] = (() => {
+			if (provenance.published) {
+				return ['Published', provenance.published];
+			} else if (provenance.extracted) {
+				return ['Extracted', provenance.extracted];
+			} else if (provenance.released) {
+				return ['Released', provenance.released];
+			} else if (provenance.retrieved) {
+				return ['Retrieved', provenance.retrieved];
+			}
+		})();
 	%>
 
-	<% if (provenance.published) { %>
-		<span class="provenance__date">Published: <%- include('../helpers/date-partial', { date: provenance.published }); %></span>
-	<% } else if (provenance.extracted) { %>
-		<span class="provenance__date">Extracted: <%- include('../helpers/date-partial', { date: provenance.extracted }); %></span>
-	<% } else if (provenance.released) { %>
-		<span class="provenance__date">Released: <%- include('../helpers/date-partial', { date: provenance.released }); %></span>
-	<% } else if (provenance.retrieved) { %>
-		<span class="provenance__date">Retrieved: <%- include('../helpers/date-partial', { date: provenance.retrieved }); %></span>
-	<% } %>
-
 	<% if (provenance.method) { %>
-		<div class="provenance__source">Source:
+		<div class="provenance__source">
 			<% if (provenance.url) { %>
 				<a
 					<%- include('../helpers/href-with-target', { href: provenance.url }); %>
@@ -23,27 +25,27 @@
 			<% } else { %>
 				<%= provenance.method %>
 			<% } %>
-
 			<% if (provenance.source) { %>
 				by <%= provenance.source %>
 			<% } %>
 
-			<% if (withholdings) { %>
-				<div class="provenance__withholdings">
-					<% if (typeof withholdings === 'string') { %>
-						Withheld information: <%= withholdings %>
-					<% } else { %>
-						<span>Some information was withheld under:</span>
-
-						<%- include('../components/withholdings', { withholdings }) %>
-					<% } %>
-				</div>
+			<% if (date) { %>
+				<%- include('subcomponents/provenance-date', { date, dateType }); %>
 			<% } %>
-			</div>
-	<% } else if (provenance.source) { %>
-		<div class="provenance__source">Sourced: <%= provenance.source %></div>
-	<% } %>
-	<% if (provenance.requester) { %>
-		<span class="provenance__requester">Requester: <%= provenance.requester %></span>
+			<% if (withholdings) { %>
+				<%- include('../components/withholdings', { withholdings }) %>
+			<% } %>
+		</div>
+	<% } else {
+		if (provenance.source) { %>
+			<div class="provenance__source">Sourced from <%= provenance.source %></div>
+		<% } %>
+
+		<% if (date) { %>
+			<%- include('subcomponents/provenance-date', { date, dateType }); %>
+		<% } %>
+		<% if (withholdings) { %>
+			<%- include('../components/withholdings', { withholdings }) %>
+		<% } %>
 	<% } %>
 </div>

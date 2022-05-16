@@ -1,0 +1,33 @@
+/*
+Font icons chosen from IcoMoon free icons:
+https://icomoon.io/#icons-icomoon
+
+Icons used under CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/
+*/
+@font-face {
+	font-family: "font-icons";
+	src: url("../fonts/font-icons/font-icons.eot");
+	src:
+		url("../fonts/font-icons/font-icons.eot#iefix") format("embedded-opentype"),
+		url("../fonts/font-icons/font-icons.ttf") format("truetype"),
+		url("../fonts/font-icons/font-icons.woff") format("woff"),
+		url("../fonts/font-icons/font-icons.svg#font-icons") format("svg");
+	font-weight: $regular;
+	font-style: normal;
+	font-display: block;
+}
+
+// Also define bold variant so browsers won't try to fake it
+@font-face {
+	font-family: "font-icons";
+	src: url("../fonts/font-icons/font-icons.eot");
+	src:
+		url("../fonts/font-icons/font-icons.eot#iefix") format("embedded-opentype"),
+		url("../fonts/font-icons/font-icons.ttf") format("truetype"),
+		url("../fonts/font-icons/font-icons.woff") format("woff"),
+		url("../fonts/font-icons/font-icons.svg#font-icons") format("svg");
+	font-weight: $bold;
+	font-style: normal;
+	font-display: block;
+}

@@ -1,0 +1,92 @@
+@use "sass:math";
+
+@import "../tools/breakpoints";
+
+$duration-bp: "s";
+
+.duration {
+	@include list-reset;
+	display: flex;
+	align-items: stretch;
+
+	@include bp-to($duration-bp) {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	margin: 1em 0;
+}
+
+$duration-sep-length: 2ch;
+$duration-sep-thickness: 2px;
+$duration-sep-gap: 1ch;
+
+$duration-sep-margin: calc(#{$duration-sep-length} + #{$duration-sep-gap * 2});
+$duration-sep-offset: calc(100% + #{$duration-sep-gap});
+
+.duration__item {
+	display: flex;
+	flex-direction: column;
+
+	text-align: center;
+
+	position: relative;
+	@include font-base-20;
+
+	&::after {
+		content: "";
+		position: absolute;
+
+		// TODO: Accent colour
+		@include use-var(background-color, --accent, currentColor);
+	}
+
+	&:last-child {
+		&::after {
+			display: none;
+		}
+	}
+
+	@include bp-to($duration-bp) {
+		margin-bottom: $duration-sep-margin;
+		&::after {
+			top: $duration-sep-offset;
+			left: calc(50% - #{math.div($duration-sep-thickness, 2)});
+
+			height: $duration-sep-length;
+			width: $duration-sep-thickness;
+		}
+	}
+	@include bp-from($duration-bp) {
+		margin-right: $duration-sep-margin;
+		&::after {
+			top: calc(0.5em - #{math.div($duration-sep-thickness, 2)});
+			left: $duration-sep-offset;
+
+			width: $duration-sep-length;
+			height: $duration-sep-thickness;
+		}
+	}
+}
+
+.duration__item-date {
+	display: block;
+	flex-grow: 1;
+	@include font-base-20;
+	white-space: nowrap;
+}
+
+.duration__item-status {
+	display: block;
+	margin-top: 0.2em;
+	@include font-base-16;
+}
+
+.duration__item--small {
+	.duration__item-date {
+		@include font-base-16;
+		@include bp-from($duration-bp) {
+			line-height: #{math.div(20, 16)};
+		}
+	}
+}
