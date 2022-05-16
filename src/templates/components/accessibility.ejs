@@ -50,7 +50,12 @@
 	})();
 %>
 
-<div class="accessibility">
+<details class="accessibility">
+	<summary class="accessibility__summary accessibility__summary--<%= ratingClass %>">
+		<span class="accessibility__summary__icon" aria-hidden="true"></span>
+		<span class="accessibility__summary__text">Accessibility: <%= rating %></span>
+	</summary>
+
 	<div class="accessibility__details">
 		<dl class="accessibility__feature-list">
 			<% for (const featureName of Object.keys(accessibility)) { %>
@@ -73,4 +78,4 @@
 			<% } %>
 		</dl>
 	</div>
-</div>
+</details>
