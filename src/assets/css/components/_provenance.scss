@@ -1,15 +1,20 @@
 @import "../tools/fonts";
+@import "../tools/palette";
 
-.provenance {}
+.provenance {
+	display: block;
+	margin: 1em 0;
+}
 
 .provenance__date {
 	display: block;
-	margin-bottom: 1em;
 
 	@include font-base-18;
 }
 
 .provenance__source {
+	display: block;
+
 	@include font-base-18;
 }
 
@@ -18,26 +23,55 @@
 }
 
 .provenance__withholdings {
+	display: block;
+
 	@include font-base-18;
+}
+
+.provenance__withholdings__summary {
+	@include font-base-18;
+}
+summary.provenance__withholdings__summary {
+	@supports (selector(details)) {
+		cursor: pointer;
+	}
+}
+
+.provenance__withholdings__summary-icon {
+	display: inline-block;
+	vertical-align: middle;
+
+	font-family: $font-icons;
+	font-size: 0.8em;
+
+	.provenance__withholdings--pass &::before {
+		content: $icon-tick;
+	}
+	.provenance__withholdings--unknown &::before {
+		content: $icon-warning;
+	}
+	.provenance__withholdings--fail &::before {
+		content: $icon-error;
+	}
+}
+
+.provenance__withholdings__summary-text {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .provenance__withholdings__list {}
 
-.provenance__withholding {}
-
-.provenance__withholding__type {
-	@include font-base-18b;
+.provenance__withholding {
+	display: flex;
 }
+
+.provenance__withholding__type {}
 
 .provenance__withholding__link {
 	@include link;
 }
 
 .provenance__withholding__value {
-	margin: 0;
-	@include font-base-18;
-}
-
-.provenance__requester {
-	@include font-base-16;
+	margin-left: 1em;
 }

@@ -15,6 +15,7 @@
 
 @import "base/reset";
 @import "base/palette";
+@import "base/fonts";
 
 @import "components/header";
 @import "components/menu";
@@ -23,7 +24,9 @@
 
 @import "components/policy";
 @import "components/version";
+@import "components/duration";
 @import "components/file";
+@import "components/accessibility";
 @import "components/provenance";
 @import "components/notice";
 @import "components/directory";

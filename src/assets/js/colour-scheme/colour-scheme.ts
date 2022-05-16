@@ -119,18 +119,20 @@ function setMenuState($menu: HTMLElement, state: MenuState) {
 
 	switch (state) {
 		case MenuState.OPENED:
-			lastFocus = document.activeElement;
+			{
+				lastFocus = document.activeElement;
 
-			$menu.setAttribute('aria-expanded', 'true');
-			$faces.forEach(($face) => $face.setAttribute('aria-expanded', 'true'));
+				$menu.setAttribute('aria-expanded', 'true');
+				$faces.forEach(($face) => $face.setAttribute('aria-expanded', 'true'));
 
-			// When opening the menu, focus should be placed on the first item
-			const $firstOption = $menu.querySelector<HTMLElement>(Selectors.MENU_OPTION);
-			if ($firstOption) {
-				$firstOption.focus();
+				// When opening the menu, focus should be placed on the first item
+				const $firstOption = $menu.querySelector<HTMLElement>(Selectors.MENU_OPTION);
+				if ($firstOption) {
+					$firstOption.focus();
+				}
+
+				bindMenuOpenEvents($menu);
 			}
-
-			bindMenuOpenEvents($menu);
 			break;
 		case MenuState.CLOSED:
 			$menu.removeAttribute('aria-expanded');
@@ -357,7 +359,7 @@ function getColourScheme(): ColourScheme {
 /**
  * Use `localStorage`, if supported, to remember a preferred colour scheme.
  */
- function rememberColourScheme(scheme: ColourScheme) {
+function rememberColourScheme(scheme: ColourScheme) {
 	if (localStorageSupport) {
 		if (scheme === ColourScheme.DEFAULT) {
 			localStorage.removeItem(colourSchemeKey);
