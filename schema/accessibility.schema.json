@@ -3,6 +3,17 @@
 	"description": "A list of the accessibility features that a document has or is lacking",
 	"type": "object",
 	"properties": {
+		"rating": {
+			"description": "An at-a-glance rating for the document's accessibility",
+			"type": "string",
+			"enum": [
+				"Pass",
+				"Partial",
+				"Fail",
+				"Undetermined"
+			]
+		},
+
 		"text-based": {
 			"description": "The document's text is selectable and searchable",
 			"$ref": "accessibility-feature.schema.json"
