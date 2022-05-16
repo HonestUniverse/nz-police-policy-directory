@@ -14,6 +14,10 @@
 		"alt text": {
 			"description": "Media within the document has alternate text",
 			"$ref": "accessibility-feature.schema.json"
+		},
+		"unwatermarked": {
+			"description": "The document is not watermarked",
+			"$ref": "accessibility-feature.schema.json"
 		}
 	},
 	"required": [],
