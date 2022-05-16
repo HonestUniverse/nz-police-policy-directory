@@ -1,4 +1,4 @@
-declare enum AccessibilityFeatureString {
+export enum AccessibilityFeatureString {
 	PARTIAL = 'Partial',
 	UNKNOWN = 'Unknown',
 }
