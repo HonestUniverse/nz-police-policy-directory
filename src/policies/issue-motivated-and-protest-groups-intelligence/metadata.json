@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.1",
+	"schemaVersion": "3.0.2",
 	"title": "Issue motivated and protests groups' intelligence",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -56,7 +56,8 @@
 						},
 						"unwatermarked": {
 							"value": "Unknown"
-						}
+						},
+						"rating": "Undetermined"
 					},
 					"notices": [
 						{

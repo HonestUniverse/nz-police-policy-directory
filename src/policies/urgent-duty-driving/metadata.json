@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.1",
+	"schemaVersion": "3.0.2",
 	"title": "Urgent Duty Driving",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -50,7 +50,8 @@
 						},
 						"unwatermarked": {
 							"value": "Unknown"
-						}
+						},
+						"rating": "Undetermined"
 					}
 				}
 			]
