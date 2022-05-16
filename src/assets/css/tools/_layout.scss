@@ -1,10 +1,17 @@
 @import "../theme/layout";
 
-@mixin layout-wrapper($width: $layout-max-width) {
+@mixin layout-wrapper-flush($width: $layout-max-width) {
 	max-width: $width;
 	margin-left: auto;
 	margin-right: auto;
+}
 
+@mixin layout-wrapper-gutter() {
 	padding-left: 1rem;
 	padding-right: 1rem;
+}
+
+@mixin layout-wrapper($width: $layout-max-width) {
+	@include layout-wrapper-flush;
+	@include layout-wrapper-gutter;
 }

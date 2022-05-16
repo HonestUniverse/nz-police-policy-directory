@@ -1,0 +1,10 @@
+<%##
+	{
+		date: string,
+		status: string,
+		small?: boolean,
+	}
+%><li class="duration__item<%= locals.small ? ' duration__item--small' : '' %>">
+	<span class="duration__item-date"><%= date %></span>
+	<span class="duration__item-status"><%= status %></span>
+</li>

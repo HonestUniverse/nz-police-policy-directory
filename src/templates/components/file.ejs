@@ -16,6 +16,8 @@
 		<% } %>
 	</div>
 
+	<%- include('accessibility', { accessibility: file.accessibility }); %>
+
 	<%
 		const provenance = file.provenance || version.provenance;
 	%>
@@ -62,25 +64,4 @@
 			<% } %>
 		</ul>
 	<% } %>
-
-	<dl class="file__accessibility">
-		<% for (const featureName of Object.keys(file.accessibility)) { %>
-			<div class="file__accessibility__feature">
-				<dt class="file__accessibility__feature__name"><%= featureName %></dt>
-				<dd class="file__accessibility__feature__value">
-					<% const feature = file.accessibility[featureName]; %>
-					<% if (typeof feature === 'boolean' || typeof feature === 'string') { %>
-						<%= feature %>
-					<% } else { %>
-						<%= feature.value %>
-						<% if (feature.notes) {
-							for (const note of feature.notes) { %>
-								(<%= note %>)
-							<% }
-						} %>
-					<% } %>
-				</dd>
-			</div>
-		<% } %>
-	</dl>
 </div>

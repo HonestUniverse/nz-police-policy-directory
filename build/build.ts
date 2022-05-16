@@ -8,6 +8,7 @@ import * as paths from './util/paths.js';
 
 import type { BuildStep } from './BuildStep.js';
 
+import { assetBuildSteps } from './asset-build-steps.js';
 import { policyBuildSteps } from './policy-build-steps.js';
 import { directoryBuildSteps } from './directory-build-steps.js';
 
@@ -33,6 +34,8 @@ export async function createBuildPlugins(policiesPath = paths.policies) {
 
 	const policiesByName = await readAllPolicies(policiesPath);
 	const policiesByNameSafe: Record<string, Policy> = {};
+
+	plugins.push(...gatherBuildStepPlugins(assetBuildSteps, paths.assets, paths.distAssetsFull, null));
 
 	for (const [policyName, policy] of Object.entries(policiesByName)) {
 		const policyNameSafe = toUrlSegment(policyName);

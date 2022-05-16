@@ -1,0 +1,6 @@
+<%##
+	{
+		date: Date | DatePartial,
+		dateType: string,
+	}
+%><span class="provenance__date"><%= dateType %>: <%- include('../../helpers/date-partial', { date }); %></span>

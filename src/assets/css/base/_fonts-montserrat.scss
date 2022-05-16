@@ -1,0 +1,77 @@
+@import "../theme/fonts";
+
+/*
+Montserrat sourced from Google Fonts:
+https://fonts.google.com/specimen/Montserrat
+
+Used under the Open Font Licence:
+https://fonts.google.com/specimen/Montserrat#license
+https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+*/
+
+/* latin-ext */
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: $regular;
+	font-display: auto;
+	src: url(../fonts/montserrat/montserrat-regular-latin-ext.woff2) format("woff2");
+	unicode-range: $unicode-range-latin-ext;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: $regular;
+	font-display: auto;
+	src: url(../fonts/montserrat/montserrat-italic-latin-ext.woff2) format("woff2");
+	unicode-range: $unicode-range-latin-ext;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: $bold;
+	font-display: auto;
+	src: url(../fonts/montserrat/montserrat-bold-latin-ext.woff2) format("woff2");
+	unicode-range: $unicode-range-latin-ext;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: $bold;
+	font-display: auto;
+	src: url(../fonts/montserrat/montserrat-bolditalic-latin-ext.woff2) format("woff2");
+	unicode-range: $unicode-range-latin-ext;
+}
+/* latin */
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: $regular;
+	font-display: auto;
+	src: url(../fonts/montserrat/montserrat-regular-latin.woff2) format("woff2");
+	unicode-range: $unicode-range-latin;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: $regular;
+	font-display: auto;
+	src: url(../fonts/montserrat/montserrat-italic-latin.woff2) format("woff2");
+	unicode-range: $unicode-range-latin;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: $bold;
+	font-display: auto;
+	src: url(../fonts/montserrat/montserrat-bold-latin.woff2) format("woff2");
+	unicode-range: $unicode-range-latin;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: $bold;
+	font-display: auto;
+	src: url(../fonts/montserrat/montserrat-bolditalic-latin.woff2) format("woff2");
+	unicode-range: $unicode-range-latin;
+}

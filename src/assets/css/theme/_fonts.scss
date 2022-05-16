@@ -1,6 +1,19 @@
-$font-base: arial, sans-serif;
-$font-heading: arial, sans-serif;
+@use "sass:string";
+
+$unicode-range-latin-ext: string.unquote("U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF");
+$unicode-range-latin: string.unquote("U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD");
+
+$font-base: "Roboto", arial, sans-serif;
+$font-heading: "Montserrat", arial, sans-serif;
+$font-icons: "font-icons", #{$font-base};
 
 $regular: 400;
 $semibold: 600;
 $bold: 700;
+
+$icon-brightness: "\1f506";
+$icon-warning: "\26a0";
+$icon-error: "\1f6d1";
+$icon-info: "\1f6c8";
+$icon-cross: "\274c";
+$icon-tick: "\2714";
