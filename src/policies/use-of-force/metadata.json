@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.0",
+	"schemaVersion": "3.0.1",
 	"title": "Use of force",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -48,6 +48,9 @@
 						},
 						"alt text": {
 							"value": false
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}

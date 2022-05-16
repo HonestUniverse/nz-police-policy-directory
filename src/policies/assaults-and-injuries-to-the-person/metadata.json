@@ -43,11 +43,14 @@
 						},
 						"alt text": {
 							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.0.0"
+	"schemaVersion": "3.0.1"
 }
