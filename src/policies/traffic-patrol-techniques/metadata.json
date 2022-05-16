@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.1",
+	"schemaVersion": "3.0.2",
 	"title": "Traffic patrol techniques",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -52,7 +52,8 @@
 						},
 						"unwatermarked": {
 							"value": "Unknown"
-						}
+						},
+						"rating": "Undetermined"
 					}
 				}
 			]

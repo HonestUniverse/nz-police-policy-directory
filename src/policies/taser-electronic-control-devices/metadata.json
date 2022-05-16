@@ -6,7 +6,10 @@
 			"name": "Version 10",
 			"duration": {
 				"start": "2017-10-26",
-				"on": ["2018-07-19", "2018-08-07"]
+				"on": [
+					"2018-07-19",
+					"2018-08-07"
+				]
 			},
 			"provenance": [
 				{
@@ -37,7 +40,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": false,
-							"notes": ["All pages are images of text."]
+							"notes": [
+								"All pages are images of text."
+							]
 						},
 						"semantics": {
 							"value": false
@@ -47,7 +52,8 @@
 						},
 						"unwatermarked": {
 							"value": true
-						}
+						},
+						"rating": "Undetermined"
 					}
 				},
 				{
@@ -77,7 +83,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": false,
-							"notes": ["All pages are images of text."]
+							"notes": [
+								"All pages are images of text."
+							]
 						},
 						"semantics": {
 							"value": false
@@ -87,7 +95,8 @@
 						},
 						"unwatermarked": {
 							"value": true
-						}
+						},
+						"rating": "Undetermined"
 					},
 					"notices": [
 						{
@@ -144,11 +153,12 @@
 						},
 						"unwatermarked": {
 							"value": false
-						}
+						},
+						"rating": "Undetermined"
 					}
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.0.1"
+	"schemaVersion": "3.0.2"
 }

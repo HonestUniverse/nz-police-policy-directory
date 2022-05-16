@@ -1,12 +1,14 @@
 {
-	"schemaVersion": "3.0.1",
+	"schemaVersion": "3.0.2",
 	"title": "Disciplinary Process",
 	"type": "Unclassified",
 	"versions": [
 		{
 			"name": "Unnamed Version 1",
 			"duration": {
-				"on": ["2018-08-07"]
+				"on": [
+					"2018-08-07"
+				]
 			},
 			"provenance": [
 				{
@@ -36,7 +38,9 @@
 					"accessibility": {
 						"text-based": {
 							"value": false,
-							"notes": ["All pages are images of text."]
+							"notes": [
+								"All pages are images of text."
+							]
 						},
 						"semantics": {
 							"value": false
@@ -46,7 +50,8 @@
 						},
 						"unwatermarked": {
 							"value": true
-						}
+						},
+						"rating": "Undetermined"
 					}
 				}
 			]
