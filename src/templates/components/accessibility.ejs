@@ -24,7 +24,10 @@
 
 	<div class="accessibility__details">
 		<dl class="accessibility__feature-list">
-			<% for (const featureName of Object.keys(accessibility)) { %>
+			<% for (const featureName of Object.keys(accessibility)) {
+				if (featureName === 'rating') {
+					continue;
+				} %>
 				<div class="accessibility__feature-item">
 					<dt class="accessibility__feature-name"><%= include('../helpers/dictionary', { key: featureName, case: 'sentence' }); %></dt>
 					<dd class="accessibility__feature-value">
