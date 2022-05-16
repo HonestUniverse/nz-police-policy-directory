@@ -4,8 +4,117 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2019-07-22", "2019-08-09", "2019-08-23", "2019-08-26"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-19-19055",
+						"responseUrl": "https://fyi.org.nz/request/10536-use-of-force-and-police-dogs-chapter-of-the-police-manual#incoming-38453",
+						"withholdings": "None"
+					},
+					"extracted": "2019-07-22",
+					"released": "2019-08-09",
+					"retrieved": "2022-05-16",
+					"url": "https://fyi.org.nz/request/10536-use-of-force-and-police-dogs-chapter-of-the-police-manual#incoming-38453",
+					"fileUrl": "https://fyi.org.nz/request/10536/response/38453/attach/2/IR%2001%2019%2019055%20Excerpt%20of%20Police%20Use%20of%20Force%20Policy.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Use of Force Overview Reporting.pdf",
+					"type": "application/pdf",
+					"size": 578731,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Mark Hanna",
+								"id": "IR-01-19-19055",
+								"responseUrl": "https://fyi.org.nz/request/10536-use-of-force-and-police-dogs-chapter-of-the-police-manual#incoming-39362",
+								"withholdings": "None"
+							},
+							"extracted": "2019-08-23",
+							"released": "2019-08-26",
+							"retrieved": "2022-05-16",
+							"url": "https://fyi.org.nz/request/10536-use-of-force-and-police-dogs-chapter-of-the-police-manual#incoming-39362",
+							"fileUrl": "https://fyi.org.nz/request/10536/response/39362/attach/3/Use%20of%20Force%20Overview%20Reporting.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": true,
+					"accessibility": {
+						"text-based": {
+							"value": "Partial",
+							"notes": [
+								"There are images of text on pages 4, 21, and 23."
+							]
+						},
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					},
+					"notices": [
+						{
+							"type": "warning",
+							"title": "Incomplete File",
+							"message": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
+						}
+					]
+				},
+				{
+					"path": "unnamed-version-1/IR 01 19 19055 Excerpt of Police Use of Force Policy.pdf",
+					"type": "application/pdf",
+					"size": 501698,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": true,
+					"accessibility": {
+						"text-based": {
+							"value": false,
+							"notes": ["All pages are images of text."]
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					},
+					"notices": [
+						{
+							"type": "warning",
+							"title": "Incomplete File",
+							"message": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Version 11.0",
 			"duration": {
+				"ended": true,
 				"on": [
 					"2017-06-30"
 				]
