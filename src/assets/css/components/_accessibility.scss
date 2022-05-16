@@ -16,16 +16,13 @@
 	.accessibility__summary--pass &::before {
 		content: $icon-tick;
 	}
-	.accessibility__summary--pass-partial &::before {
+	.accessibility__summary--partial &::before {
 		content: $icon-warning;
-	}
-	.accessibility__summary--fail-partial &::before {
-		content: $icon-error;
 	}
 	.accessibility__summary--fail &::before {
 		content: $icon-cross;
 	}
-	.accessibility__summary--unknown &::before {
+	.accessibility__summary--undetermined &::before {
 		content: $icon-warning;
 	}
 }
