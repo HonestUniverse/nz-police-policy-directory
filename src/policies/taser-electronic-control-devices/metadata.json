@@ -3,6 +3,103 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
+			"name": "Version 10",
+			"duration": {
+				"start": "2017-10-26",
+				"on": ["2018-07-19", "2018-08-07"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-18-5493",
+						"responseUrl": "https://fyi.org.nz/request/8308-taser-policy-compliance#incoming-27162",
+						"withholdings": "None"
+					},
+					"extracted": "2018-07-19",
+					"released": "2018-08-07",
+					"retrieved": "2022-05-16",
+					"url": "https://fyi.org.nz/request/8308-taser-policy-compliance#incoming-27162",
+					"fileUrl": "https://fyi.org.nz/request/8308/response/27162/attach/10/Hanna%20Mark%2011.7.2018%20Taser%20manual.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "version-10/Hanna Mark 11.7.2018 Taser manual.pdf",
+					"type": "application/pdf",
+					"size": 8851281,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"text-based": {
+							"value": false,
+							"notes": ["All pages are images of text."]
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "version-10/Hanna Mark 11.7.2018 signed.pdf",
+					"type": "application/pdf",
+					"size": 505738,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Mark Hanna",
+								"id": "IR-01-18-5493",
+								"responseUrl": "https://fyi.org.nz/request/8308-taser-policy-compliance#incoming-27162",
+								"withholdings": "None"
+							},
+							"released": "2018-08-07",
+							"retrieved": "2022-05-16",
+							"url": "https://fyi.org.nz/request/8308-taser-policy-compliance#incoming-27162",
+							"fileUrl": "https://fyi.org.nz/request/8308/response/27162/attach/8/Hanna%20Mark%2011.7.2018%20signed.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"text-based": {
+							"value": false,
+							"notes": ["All pages are images of text."]
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"title": "OIA response letter",
+							"message": "This response letter contains some information about this version of the policy, such as its version number and start date."
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Version 9.0",
 			"duration": {
 				"on": [
