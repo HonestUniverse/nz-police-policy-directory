@@ -45,17 +45,22 @@
 			return dateA - dateB;
 		});
 
-		items.push({
-			date: getDateString(onDates[0], { month: 'short' }),
-			status: 'Active',
-			small: true,
-		});
-		if (onDates.length > 1) {
+		if (!duration.start) {
 			items.push({
-				date: getDateString(onDates.at(-1), { month: 'short' }),
+				date: getDateString(onDates[0], { month: 'short' }),
 				status: 'Active',
 				small: true,
 			});
+		}
+
+		if (!duration.end) {
+			if (duration.start || onDates.length > 1) {
+				items.push({
+					date: getDateString(onDates.at(-1), { month: 'short' }),
+					status: 'Active',
+					small: true,
+				});
+			}
 		}
 	}
 
