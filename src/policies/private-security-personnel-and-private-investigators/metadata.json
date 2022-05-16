@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.0",
+	"schemaVersion": "3.0.1",
 	"title": "Private Security Personnel and Private Investigators",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -46,6 +46,9 @@
 							"value": "Unknown"
 						},
 						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
 							"value": "Unknown"
 						}
 					},

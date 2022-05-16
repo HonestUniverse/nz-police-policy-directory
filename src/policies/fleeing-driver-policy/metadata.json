@@ -45,6 +45,9 @@
 						},
 						"alt text": {
 							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}
@@ -98,6 +101,9 @@
 						},
 						"alt text": {
 							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}
@@ -145,6 +151,9 @@
 						},
 						"alt text": {
 							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}
@@ -188,6 +197,9 @@
 							"value": "Unknown"
 						},
 						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
 							"value": "Unknown"
 						}
 					}
@@ -233,6 +245,9 @@
 						},
 						"alt text": {
 							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}
@@ -276,6 +291,9 @@
 							"value": "Unknown"
 						},
 						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
 							"value": "Unknown"
 						}
 					}
@@ -321,6 +339,9 @@
 						},
 						"alt text": {
 							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}
@@ -364,6 +385,9 @@
 							"value": "Unknown"
 						},
 						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
 							"value": "Unknown"
 						}
 					}
@@ -409,6 +433,9 @@
 						},
 						"alt text": {
 							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}
@@ -452,6 +479,9 @@
 							"value": "Unknown"
 						},
 						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
 							"value": "Unknown"
 						}
 					}
@@ -497,6 +527,9 @@
 						},
 						"alt text": {
 							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}
@@ -540,6 +573,9 @@
 							"value": "Unknown"
 						},
 						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
 							"value": "Unknown"
 						}
 					}
@@ -585,11 +621,14 @@
 						},
 						"alt text": {
 							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": "Unknown"
 						}
 					}
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.0.0"
+	"schemaVersion": "3.0.1"
 }
