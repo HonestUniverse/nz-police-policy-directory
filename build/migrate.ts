@@ -3,7 +3,9 @@ import semver from 'semver';
 import { readdir, writeFile } from 'fs/promises';
 
 import type { Policy } from '../schema/Policy.js';
+import { PolicyVersionFileType } from '../schema/PolicyVersionFile.js';
 import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
+import { AccessibilityFeatureString } from '../schema/AccessibilityFeature.js';
 
 import { validatePolicy } from './validate-policy.js';
 
@@ -50,12 +52,6 @@ async function migrateAll() {
 				},
 			})
 		).default;
-
-		// Validate metadata
-		const valid = validatePolicy(policy);
-		if (valid) {
-			continue;
-		}
 
 		// If invalid, attempt to migrate
 		const migratedPolicy = migrate(policy);
@@ -150,6 +146,7 @@ const migrations: Record<string, Migration> = {
 			}
 		}
 	},
+
 	/**
 	 * Changes in v2.0.0
 	 *
@@ -166,6 +163,7 @@ const migrations: Record<string, Migration> = {
 			}
 		}
 	},
+
 	/**
 	 * Changes in v3.0.0
 	 *
@@ -183,6 +181,25 @@ const migrations: Record<string, Migration> = {
 						feature.notes = [feature.note];
 						// @ts-expect-error AccessibilityFeatures no longer have a `note` property
 						delete feature.note;
+					}
+				}
+			}
+		}
+	},
+
+	/**
+	 * Changes in v3.0.1
+	 *
+	 * Added a new "unwatermarked" `AccessibilityFeature` for rich static media.
+	 */
+	['3.0.1']: function (policy: Policy): void {
+		policy.schemaVersion = '3.0.1';
+
+		for (const version of policy.versions) {
+			for (const file of version.files) {
+				if (file.type === PolicyVersionFileType.PDF) {
+					file.accessibility.unwatermarked = {
+						value: AccessibilityFeatureString.UNKNOWN,
 					}
 				}
 			}

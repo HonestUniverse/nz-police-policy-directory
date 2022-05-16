@@ -11,6 +11,7 @@
 			"description": "The MIME type of the file",
 			"type": "string",
 			"enum": [
+				"application/msword",
 				"application/pdf",
 				"text/plain"
 			]
