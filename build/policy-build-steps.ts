@@ -5,7 +5,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
 import { toUrlSegment } from './util/to-url-segment.js';
-
+import { makeRootRelative } from './util/make-root-relative.js';
 import * as paths from './util/paths.js';
 
 /**
@@ -45,7 +45,8 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 				);
 
 				// Update file.path to ensure the build HTML points to the correct place
-				file.path = `${fileDstPath}/${fileName}`;
+				const fileDstPathRootRelative = makeRootRelative(fileDstPathAndName);
+				file.path = fileDstPathRootRelative;
 			}
 		}
 
