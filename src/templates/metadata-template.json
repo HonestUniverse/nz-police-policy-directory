@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.1",
+	"schemaVersion": "3.0.2",
 	"title": "string",
 	"type": "string enum",
 	"obsolete": true,
@@ -55,6 +55,7 @@
 					"incomplete": true,
 					"modifications": ["string"],
 					"accessibility": {
+						"rating": "Undetermined",
 						"text-based": {
 							"value": "Unknown",
 							"notes": ["string"]
