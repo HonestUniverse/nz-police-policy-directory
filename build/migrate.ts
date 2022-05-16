@@ -4,6 +4,7 @@ import { readdir, writeFile } from 'fs/promises';
 
 import type { Policy } from '../schema/Policy.js';
 import { PolicyVersionFileType } from '../schema/PolicyVersionFile.js';
+import { AccessibilityRating } from '../schema/Accessibility.js';
 import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
 import { AccessibilityFeatureString } from '../schema/AccessibilityFeature.js';
 
@@ -140,6 +141,7 @@ const migrations: Record<string, Migration> = {
 				// Update file accessibility features to be an object
 				for (const [name, feature] of Object.entries(file.accessibility)) {
 					if (typeof feature === 'boolean' || typeof feature === 'string') {
+						// @ts-expect-error This errors because of Accessibility['rating'], which didn't exist prior to v3.0.2
 						file.accessibility[name] = { value: feature } as AccessibilityFeature;
 					}
 				}
@@ -202,6 +204,21 @@ const migrations: Record<string, Migration> = {
 						value: AccessibilityFeatureString.UNKNOWN,
 					}
 				}
+			}
+		}
+	},
+
+	/**
+	 * Changes in v3.0.2
+	 *
+	 * Added a new optional `rating` property to `Accessibility`.
+	 */
+	['3.0.2']: function (policy: Policy): void {
+		policy.schemaVersion = '3.0.2';
+
+		for (const version of policy.versions) {
+			for (const file of version.files) {
+				file.accessibility.rating = AccessibilityRating.UNDETERMINED;
 			}
 		}
 	},
