@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.1",
+	"schemaVersion": "3.0.2",
 	"title": "Welfare services",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -47,7 +47,8 @@
 						},
 						"unwatermarked": {
 							"value": "Unknown"
-						}
+						},
+						"rating": "Undetermined"
 					}
 				}
 			]

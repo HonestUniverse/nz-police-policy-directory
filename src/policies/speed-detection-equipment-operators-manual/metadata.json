@@ -52,11 +52,12 @@
 						},
 						"unwatermarked": {
 							"value": "Unknown"
-						}
+						},
+						"rating": "Undetermined"
 					}
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.0.1"
+	"schemaVersion": "3.0.2"
 }

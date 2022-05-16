@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.1",
+	"schemaVersion": "3.0.2",
 	"title": "The Intelligence cycle",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -57,7 +57,8 @@
 						},
 						"unwatermarked": {
 							"value": "Unknown"
-						}
+						},
+						"rating": "Undetermined"
 					},
 					"notices": [
 						{
