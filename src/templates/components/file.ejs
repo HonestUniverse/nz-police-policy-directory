@@ -18,16 +18,8 @@
 
 	<%- include('accessibility', { accessibility: file.accessibility }); %>
 
-	<%
-		const provenance = file.provenance || version.provenance;
-	%>
-
-	<% for (const prov of provenance) { %>
-		<%- include('provenance', { provenance: prov }); %>
-	<% } %>
-
 	<div class="file__licence">
-		<p class="file__licence__handle">Licence:
+		<div class="file__licence__handle">Licence:
 			<% if (file.licence.url) { %>
 				<a
 					<%- include('../helpers/href-with-target', { href: file.licence.url }) %>
@@ -36,7 +28,7 @@
 			<% } else { %>
 				<%= file.licence.name %>
 			<% } %>
-		</p>
+		</div>
 
 		<% if (file.licence.notices) { %>
 			<% for (const notice of file.licence.notices) { %>
@@ -45,14 +37,14 @@
 		<% } %>
 	</div>
 
-	<% if (file.original) { %>
-		<p class="file__original">Original file</p>
-	<% } else { %>
-		<p class="file__original">Not original file</p>
+	<% if (file.incomplete) { %>
+		<div class="file__incomplete">Incomplete file</div>
 	<% } %>
 
-	<% if (file.incomplete) { %>
-		<p class="file__incomplete">Incomplete file</p>
+	<% if (file.original) { %>
+		<div class="file__original">Original file</div>
+	<% } else { %>
+		<div class="file__original">Not original file</div>
 	<% } %>
 
 	<% if (file.modifications) { %>
@@ -63,5 +55,13 @@
 				</li>
 			<% } %>
 		</ul>
+	<% } %>
+
+	<%
+		const provenance = file.provenance || version.provenance;
+	%>
+
+	<% for (const prov of provenance) { %>
+		<%- include('provenance', { provenance: prov }); %>
 	<% } %>
 </div>
