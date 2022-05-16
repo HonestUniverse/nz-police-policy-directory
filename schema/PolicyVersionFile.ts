@@ -1,11 +1,12 @@
-import { Provenance } from './Provenance.js';
-import { Licence } from './Licence.js';
-import { Accessibility } from './Accessibility.js';
-import { Notice } from './Notice.js';
+import type { Provenance } from './Provenance.js';
+import type { Licence } from './Licence.js';
+import type { Accessibility } from './Accessibility.js';
+import type { Notice } from './Notice.js';
 
-declare enum PolicyVersionFileType {
+export enum PolicyVersionFileType {
+	DOC = 'application/msword',
 	PDF = 'application/pdf',
-	TEXT = 'text/plain',
+	TXT = 'text/plain',
 }
 
 export type PolicyVersionFile = {
