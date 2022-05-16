@@ -5,7 +5,7 @@
  * Split a string into a list of strings.
  * https://stackoverflow.com/questions/32376461/how-to-split-a-string-into-two-lists-of-numbers-in-sass#answer-42295154
  */
- @function string-split($string, $separator: ", ") {
+@function string-split($string, $separator: ", ") {
 	$separator-length: string.length($separator);
 
 	// Start with an empty list
@@ -38,11 +38,11 @@
  * list that can be used as the value of a `transition` property.
  */
 @function props-to-transitions($props, $duration, $easing, $delay) {
-	$transitions: unquote(list.nth($props, 1)) $duration $easing $delay;
+	$transitions: string.unquote(list.nth($props, 1)) $duration $easing $delay;
 
 	@if (list.length($props) >= 2) {
 		@for $i from 2 through list.length($props) {
-			$transitions: $transitions, unquote(list.nth($props, $i)) $duration $easing $delay;
+			$transitions: $transitions, string.unquote(list.nth($props, $i)) $duration $easing $delay;
 		}
 	}
 

@@ -1,7 +1,11 @@
 <div class="notice notice--<%= notice.type %>">
-	<% if (notice.title) { %>
-		<span class="notice__title"><%= notice.title %></span>
-	<% } %>
+	<span class="notice__icon" aria-hidden="true"></span>
 
-	<div class="notice__message"><%- notice.message %></div>
+	<div class="notice__body">
+		<% if (notice.title) { %>
+			<span class="notice__title"><%= notice.title %></span>
+		<% } %>
+
+		<div class="notice__message"><%- notice.message %></div>
+	</div>
 </div>

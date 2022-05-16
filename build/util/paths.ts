@@ -13,9 +13,12 @@ export const src = './src';
 export const policies = `${src}/policies`;
 export const testPolicies = `${src}/test-policies`;
 export const templates = `${src}/templates`;
+export const assets = `${src}/assets`;
+
 export const schema = `./schema`;
 
 const buildFull = path.resolve(fileURLToPath(import.meta.url), '../../');
 export const srcFull = path.resolve(buildFull, '../src');
 export const assetsFull = `${srcFull}/assets`;
 export const distFull = path.resolve(buildFull, '../dist');
+export const distAssetsFull = path.resolve(buildFull, '../dist/assets');

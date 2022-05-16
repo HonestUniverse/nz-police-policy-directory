@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'font-icons';
+  src:  url('fonts/font-icons.eot?ks82df');
+  src:  url('fonts/font-icons.eot?ks82df#iefix') format('embedded-opentype'),
+    url('fonts/font-icons.ttf?ks82df') format('truetype'),
+    url('fonts/font-icons.woff?ks82df') format('woff'),
+    url('fonts/font-icons.svg?ks82df#font-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'font-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-brightness:before {
+  content: "\1f506";
+}
+.icon-warning:before {
+  content: "\26a0";
+}
+.icon-error:before {
+  content: "\1f6d1";
+}
+.icon-info:before {
+  content: "\1f6c8";
+}
+.icon-cross:before {
+  content: "\274c";
+}
+.icon-tick:before {
+  content: "\2714";
+}
