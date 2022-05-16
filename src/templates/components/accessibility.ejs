@@ -5,55 +5,21 @@
 %>
 
 <%
-	const score = (() => {
-		const numFeatures = Object.keys(accessibility).length;
+	const iconClasses = {
+		'Pass': 'pass',
+		'Partial': 'partial',
+		'Fail': 'fail',
+		'Undetermined': 'undetermined',
+	};
 
-		const score = {
-			pass: 0,
-			partial: 0,
-			unknown: 0,
-			fail: 0,
-			total: numFeatures,
-		};
-
-		for (const [name, feature] of Object.entries(accessibility)) {
-			if (feature.value === true) {
-				score.pass += 1;
-			} else if (feature.value === false) {
-				score.fail += 1;
-			} else if (feature.value === 'Partial') {
-				score.partial += 1;
-			} else {
-				score.unknown += 1;
-			}
-		}
-
-		return score;
-	})();
-
-	const [rating, ratingClass] = (() => {
-		const notFail = score.pass + score.partial;
-
-		if (score.pass === score.total) {
-			return ['Pass', 'pass'];
-		} else if (score.unknown === score.total) {
-			return ['Unknown', 'unknown'];
-		} else if ((notFail + score.unknown) === score.total) {
-			return ['Partial pass', 'pass-partial'];
-		} else if (notFail > (score.total / 2)) {
-			return ['Partial pass', 'pass-partial'];
-		} else if (notFail > 0) {
-			return ['Partial fail', 'fail-partial'];
-		} else {
-			return ['Fail', 'fail'];
-		}
-	})();
+	const { rating } = accessibility;
+	const ratingClass = iconClasses[rating] ? ` accessibility__summary--${iconClasses[rating]}` : '';
 %>
 
 <details class="accessibility">
-	<summary class="accessibility__summary accessibility__summary--<%= ratingClass %>">
+	<summary class="accessibility__summary<%= ratingClass %>">
 		<span class="accessibility__summary__icon" aria-hidden="true"></span>
-		<span class="accessibility__summary__text">Accessibility: <%= rating %></span>
+		<span class="accessibility__summary__text">Accessibility<%= rating ? `: ${rating}` : '' %></span>
 	</summary>
 
 	<div class="accessibility__details">
