@@ -1,0 +1,55 @@
+{
+	"schemaVersion": "3.0.1",
+	"title": "Disciplinary Process",
+	"type": "Unclassified",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2018-08-07"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-18-5493",
+						"responseUrl": "https://fyi.org.nz/request/8308-taser-policy-compliance#incoming-27162",
+						"withholdings": "None"
+					},
+					"released": "2018-08-07",
+					"retrieved": "2022-05-16",
+					"url": "https://fyi.org.nz/request/8308-taser-policy-compliance#incoming-27162",
+					"fileUrl": "https://fyi.org.nz/request/8308/response/27162/attach/9/Hanna%20Mark%2011.7.2018%20NZ%20Disciplinary%20Process%20Guidelines.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Hanna Mark 11.7.2018 NZ Disciplinary Process Guidelines.pdf",
+					"type": "application/pdf",
+					"size": 5686097,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"text-based": {
+							"value": false,
+							"notes": ["All pages are images of text."]
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
