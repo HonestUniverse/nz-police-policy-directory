@@ -1,12 +1,14 @@
 {
-	"schemaVersion": "3.0.1",
+	"schemaVersion": "3.0.2",
 	"title": "Police filming and audio recording of operations and events",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"name": "Unnamed Version 1",
 			"duration": {
-				"on": ["2012-10-18"]
+				"on": [
+					"2012-10-18"
+				]
 			},
 			"provenance": [
 				{
@@ -41,7 +43,8 @@
 						},
 						"unwatermarked": {
 							"value": false
-						}
+						},
+						"rating": "Undetermined"
 					}
 				}
 			]
