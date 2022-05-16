@@ -60,7 +60,7 @@
 		<dl class="accessibility__feature-list">
 			<% for (const featureName of Object.keys(accessibility)) { %>
 				<div class="accessibility__feature-item">
-					<dt class="accessibility__feature-name"><%= featureName %></dt>
+					<dt class="accessibility__feature-name"><%= include('../helpers/dictionary', { key: featureName, case: 'sentence' }); %></dt>
 					<dd class="accessibility__feature-value">
 						<% const feature = accessibility[featureName]; %>
 						<% if (typeof feature === 'boolean' || typeof feature === 'string') { %>
