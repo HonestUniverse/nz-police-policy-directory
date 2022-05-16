@@ -1,0 +1,40 @@
+<%##
+	{
+		key: string,
+		case?: 'lower' | 'upper' | 'sentence',
+	}
+%><%
+	/**
+	 * A map of code strings to UI strings.
+	 */
+	const dictionary = new Map([
+		// ['from', 'to'],
+	].map(([codeString, uiString]) => [codeString.toLowerCase(), uiString]));
+
+	/**
+	 * If a case was passed, apply it to a string.
+	 */
+	function applyCase(str) {
+		switch (locals.case) {
+			case 'lower':
+				return str.toLowerCase();
+				break;
+			case 'upper':
+				return str.toUpperCase();
+				break;
+			case 'sentence':
+				const lower = str.toLowerCase();
+				const upperFirstChar = lower.charAt(0).toUpperCase();
+
+				const sentence = `${upperFirstChar}${lower.substring(1)}`;
+				return sentence;
+				break;
+			default:
+				return str;
+				break;
+		}
+	}
+
+	const val = dictionary[key.toLowerCase()] ?? key;
+	const valCase = applyCase(val);
+%><%= valCase; %>
