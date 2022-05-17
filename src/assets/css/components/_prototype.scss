@@ -1,0 +1,26 @@
+@import "../tools/palette";
+@import "../tools/fonts";
+
+// TODO: This component should be removed before the production build
+.prototype-notice {
+	@include layout-wrapper-flush;
+
+	padding: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+
+	@include contrast-red;
+
+	position: sticky;
+	z-index: 1;
+	top: 0;
+}
+
+.prototype-notice__title {
+	margin: 0 0 0.5em;
+	@include font-heading-28b;
+}
+
+.prototype-notice__message {
+	@include font-base-20;
+}
