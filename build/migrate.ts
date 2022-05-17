@@ -2,11 +2,18 @@ import semver from 'semver';
 
 import { readdir, writeFile } from 'fs/promises';
 
+import { PolicyType } from '../schema/Policy.js';
 import type { Policy } from '../schema/Policy.js';
+
 import { PolicyVersionFileType } from '../schema/PolicyVersionFile.js';
+
 import { AccessibilityRating } from '../schema/Accessibility.js';
+import type { Accessibility } from '../schema/Accessibility.js';
+
 import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
 import { AccessibilityFeatureString } from '../schema/AccessibilityFeature.js';
+
+import { OIAWithholdingsSummary } from '../schema/OIAWithholdings.js';
 
 import { validatePolicy } from './validate-policy.js';
 
@@ -200,8 +207,10 @@ const migrations: Record<string, Migration> = {
 		for (const version of policy.versions) {
 			for (const file of version.files) {
 				if (file.type === PolicyVersionFileType.PDF) {
+					// @ts-expect-error: AccessibilityFeatures have been moved to Accessibility['features']
 					file.accessibility.unwatermarked = {
-						value: AccessibilityFeatureString.UNKNOWN,
+						value: 'Unknown',
+						// value: AccessibilityFeatureString.UNKNOWN,
 					}
 				}
 			}
@@ -219,6 +228,55 @@ const migrations: Record<string, Migration> = {
 		for (const version of policy.versions) {
 			for (const file of version.files) {
 				file.accessibility.rating = AccessibilityRating.UNDETERMINED;
+			}
+		}
+	},
+
+	/**
+	 * Changes in v4.0.0
+	 *
+	 * Updated PolicyType enum "Unclassified" to "Undetermined"
+	 *
+	 * Moved AccessibilityFeatures into Accessibility['features']
+	 * Updated AccessibilityFeature enum "Unknown" to "Undetermined"
+	 *
+	 * Updated OIAWithholdings enum "Unknown" to "Undetermined"
+	 *
+	 * Made Accessibility['Rating'] required
+	 */
+	['4.0.0']: function (policy: Policy): void {
+		policy.schemaVersion = '4.0.0';
+
+		// @ts-expect-error 'Unclassified' is no longer a valid PolicyType
+		if (policy.type === 'Unclassified') {
+			policy.type = PolicyType.UNDETERMINED;
+		}
+
+		for (const version of policy.versions) {
+			for (const provenance of version.provenance) {
+				if (provenance.withholdings === 'Unknown') {
+					provenance.withholdings = OIAWithholdingsSummary.UNDETERMINED;
+				}
+
+				if (provenance.oiaRequest?.withholdings === 'Unknown') {
+					provenance.oiaRequest.withholdings = OIAWithholdingsSummary.UNDETERMINED;
+				}
+			}
+
+			for (const file of version.files) {
+				if (!file.accessibility.rating) {
+					file.accessibility.rating = AccessibilityRating.UNDETERMINED;
+				}
+
+				file.accessibility.features = {};
+				for (const [featureName, feature] of Object.entries(file.accessibility)) {
+					if (featureName === 'rating') {
+						continue;
+					}
+
+					file.accessibility.features[featureName] = feature;
+					delete file.accessibility[featureName];
+				}
 			}
 		}
 	},
