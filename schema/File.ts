@@ -2,6 +2,7 @@ import type { Provenance } from './Provenance.js';
 import type { Licence } from './Licence.js';
 import type { Accessibility } from './Accessibility.js';
 import type { Notice } from './Notice.js';
+import type { AlternateFile } from './AlternateFile.js';
 
 export enum FileType {
 	DOC = 'application/msword',
@@ -29,4 +30,6 @@ export type File = {
 	modifications?: string[],
 	accessibility: Accessibility,
 	notices?: Notice[],
+
+	alternateFiles?: AlternateFile[],
 };
