@@ -80,6 +80,43 @@
 							"title": "string",
 							"message": "string"
 						}
+					],
+					"alternateFiles": [
+						{
+							"path": "string",
+							"type": "string enum",
+							"documentType": "Policy",
+							"startingPage": 0,
+							"size": 0,
+							"incomplete": true,
+							"modifications": ["string"],
+							"accessibility": {
+								"rating": "Undetermined",
+								"text-based": {
+									"value": "Unknown",
+									"notes": ["string"]
+								},
+								"semantics": {
+									"value": "Unknown",
+									"notes": ["string"]
+								},
+								"alt text": {
+									"value": "Unknown",
+									"notes": ["string"]
+								},
+								"unwatermarked": {
+									"value": "Unknown",
+									"notes": ["string"]
+								}
+							},
+							"notices": [
+								{
+									"type": "info | warning | error",
+									"title": "string",
+									"message": "string"
+								}
+							]
+						}
 					]
 				}
 			],
