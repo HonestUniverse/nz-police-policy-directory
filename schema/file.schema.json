@@ -2,6 +2,7 @@
 	"title": "File",
 	"description": "A file containing the content of a specific version of a policy",
 	"type": "object",
+	"$comment": "These properties must be kept in sync with alternate-file.schema.json",
 	"properties": {
 		"path": {
 			"description": "The path to the file",
@@ -74,6 +75,13 @@
 			"type": "array",
 			"items": {
 				"$ref": "notice.schema.json"
+			}
+		},
+		"alternateFiles": {
+			"description": "A list of modified files presenting the same information in a different format (e.g. OCRed PDF)",
+			"type": "array",
+			"items": {
+				"$ref": "alternate-file.schema.json"
 			}
 		}
 	},
