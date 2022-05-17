@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 3.0.2",
+	"$comment": "Current version: 4.0.0-alpha",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
@@ -10,8 +10,8 @@
 			"type": "string",
 			"pattern": "^\\d+\\.\\d+\\.\\d+$",
 			"not": {
-				"$comment": "Major version must be at least 3",
-				"pattern": "^[0-2]\\."
+				"$comment": "Major version must be at least 4",
+				"pattern": "^[0-3]\\."
 			}
 		},
 		"title": {
@@ -28,7 +28,7 @@
 				"Police Manual chapter",
 				"Equipment Operator's Manual",
 
-				"Unclassified"
+				"Undetermined"
 			]
 		},
 		"obsolete": {
