@@ -9,7 +9,7 @@ export enum FileType {
 	TXT = 'text/plain',
 }
 
-export enum DocumentType {
+export enum FileDocumentType {
 	POLICY = 'Policy',
 	OIA_RESPONSE_LETTER = 'OIA response letter',
 	CHANGE_NOTE = 'Change note',
@@ -19,7 +19,7 @@ export enum DocumentType {
 export type File = {
 	path: string,
 	type: FileType,
-	documentType?: DocumentType,
+	documentType?: FileDocumentType,
 	startingPage?: number,
 	size: number,
 	provenance?: Provenance[],
