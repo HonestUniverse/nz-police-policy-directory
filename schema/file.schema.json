@@ -16,6 +16,17 @@
 				"text/plain"
 			]
 		},
+		"documentType": {
+			"$comment": "If a file contains multiple documents, this refers to the document starting on `startingPage`",
+			"description": "The type of document contained in the file",
+			"type": "string",
+			"enum": [
+				"Policy",
+				"OIA response letter",
+				"Change note",
+				"Explanatory note"
+			]
+		},
 		"startingPage": {
 			"description": "If the file is a PDF, the page it should be opened to by default",
 			"type": "integer",
