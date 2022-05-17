@@ -7,7 +7,23 @@
 
 	<%- include('duration', { duration: version.duration }); %>
 
-	<% version.files.forEach((file) => { %>
+	<%
+		const policyFiles = version.files.filter((file) => !file.documentType || file.documentType === 'Policy');
+		const secondaryFiles = version.files.filter((file) => file.documentType !== 'Policy');
+	%>
+
+	<% policyFiles.forEach((file) => { %>
 		<%- include('file', { file, version }); %>
 	<% }) %>
+
+	<% if (secondaryFiles.length) { %>
+		<details class="todo">
+			<summary>Secondary files</summary>
+			<div>
+				<% secondaryFiles.forEach((file) => { %>
+					<%- include('file', { file, version }); %>
+				<% }) %>
+				</div>
+		</details>
+	<% } %>
 </div>
