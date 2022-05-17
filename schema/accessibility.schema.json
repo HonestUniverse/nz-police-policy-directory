@@ -1,6 +1,6 @@
 {
 	"title": "Accessibility",
-	"description": "A list of the accessibility features that a document has or is lacking",
+	"description": "A summary of a document's accessibility",
 	"type": "object",
 	"properties": {
 		"rating": {
@@ -14,23 +14,32 @@
 			]
 		},
 
-		"text-based": {
-			"description": "The document's text is selectable and searchable",
-			"$ref": "accessibility-feature.schema.json"
-		},
-		"semantics": {
-			"description": "Different types of content within the document have semantic roles, e.g. heading",
-			"$ref": "accessibility-feature.schema.json"
-		},
-		"alt text": {
-			"description": "Media within the document has alternate text",
-			"$ref": "accessibility-feature.schema.json"
-		},
-		"unwatermarked": {
-			"description": "The document is not watermarked",
-			"$ref": "accessibility-feature.schema.json"
+		"features": {
+			"description": "A list of the accessibility features that a document has or is lacking",
+			"type": "object",
+			"properties": {
+				"text-based": {
+					"description": "The document's text is selectable and searchable",
+					"$ref": "accessibility-feature.schema.json"
+				},
+				"semantics": {
+					"description": "Different types of content within the document have semantic roles, e.g. heading",
+					"$ref": "accessibility-feature.schema.json"
+				},
+				"alt text": {
+					"description": "Media within the document has alternate text",
+					"$ref": "accessibility-feature.schema.json"
+				},
+				"unwatermarked": {
+					"description": "The document is not watermarked",
+					"$ref": "accessibility-feature.schema.json"
+				}
+			},
+			"additionalProperties": false
 		}
 	},
-	"required": [],
+	"required": [
+		"rating"
+	],
 	"additionalProperties": false
 }

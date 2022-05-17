@@ -8,10 +8,12 @@ export enum AccessibilityRating {
 }
 
 export type Accessibility = {
-	rating?: AccessibilityRating,
+	rating: AccessibilityRating,
 
-	'text-based': AccessibilityFeature,
-	semantics: AccessibilityFeature,
-	'alt text': AccessibilityFeature,
-	unwatermarked: AccessibilityFeature,
+	features: {
+		'text-based'?: AccessibilityFeature,
+		semantics?: AccessibilityFeature,
+		'alt text'?: AccessibilityFeature,
+		unwatermarked?: AccessibilityFeature,
+	},
 };
