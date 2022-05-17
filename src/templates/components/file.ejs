@@ -1,3 +1,10 @@
+<%##
+	locals: {
+		file: File,
+		version: PolicyVersion,
+	}
+%>
+
 <div class="file">
 	<%
 		const fileName = file.path.replace(/^.*\//, '');
@@ -17,6 +24,14 @@
 	</div>
 
 	<%- include('accessibility', { accessibility: file.accessibility }); %>
+
+	<% if (file.alternateFiles) { %>
+		<div class="file__alternate-files">
+			<% for (const alternateFile of file.alternateFiles) { %>
+				<%- include('./alternate-file', { file: alternateFile }); %>
+			<% } %>
+		</div>
+	<% } %>
 
 	<div class="file__licence">
 		<div class="file__licence__handle">Licence:
