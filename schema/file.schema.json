@@ -1,5 +1,5 @@
 {
-	"title": "Policy Version File",
+	"title": "File",
 	"description": "A file containing the content of a specific version of a policy",
 	"type": "object",
 	"properties": {

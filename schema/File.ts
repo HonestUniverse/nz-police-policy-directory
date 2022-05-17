@@ -3,15 +3,15 @@ import type { Licence } from './Licence.js';
 import type { Accessibility } from './Accessibility.js';
 import type { Notice } from './Notice.js';
 
-export enum PolicyVersionFileType {
+export enum FileType {
 	DOC = 'application/msword',
 	PDF = 'application/pdf',
 	TXT = 'text/plain',
 }
 
-export type PolicyVersionFile = {
+export type File = {
 	path: string,
-	type: PolicyVersionFileType,
+	type: FileType,
 	startingPage?: number,
 	size: number,
 	provenance?: Provenance[],
