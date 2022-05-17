@@ -1,0 +1,136 @@
+{
+	"schemaVersion": "3.1.0",
+	"title": "Investigation of critical incidents",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"start": "2021-11-08",
+				"on": ["2022-02-15"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Guyon Espiner",
+						"id": "IR-01-21-37659",
+						"withholdings": "None"
+					},
+					"extracted": "2022-01-19",
+					"released": "2022-02-15",
+					"retrieved": "2022-05-17"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Espiner Guyon IR-01-21-37659 - Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 7,
+					"size": 3650990,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "unnamed-version-1/Espiner Guyon IR-01-21-37659 - Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 3650990,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": "Unknown"
+						},
+						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "unnamed-version-1/Espiner Guyon IR-01-21-37659 - Response.pdf",
+					"name": "Update bulletin",
+					"type": "application/pdf",
+					"documentType": "Change note",
+					"startingPage": 3,
+					"size": 3650990,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"text-based": {
+							"value": false
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "unnamed-version-1/Espiner Guyon IR-01-21-37659 - Response.pdf",
+					"name": "Police Manual Approval/Cancellation Form",
+					"type": "application/pdf",
+					"documentType": "Change note",
+					"startingPage": 4,
+					"size": 3650990,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"text-based": {
+							"value": false
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
