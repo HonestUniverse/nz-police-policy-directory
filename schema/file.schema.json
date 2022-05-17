@@ -8,6 +8,10 @@
 			"description": "The path to the file",
 			"type": "string"
 		},
+		"name": {
+			"description": "A name to display when referring to the file",
+			"type": "string"
+		},
 		"type": {
 			"description": "The MIME type of the file",
 			"type": "string",

@@ -19,6 +19,7 @@ export enum FileDocumentType {
 
 export type File = {
 	path: string,
+	name?: string,
 	type: FileType,
 	documentType?: FileDocumentType,
 	startingPage?: number,
