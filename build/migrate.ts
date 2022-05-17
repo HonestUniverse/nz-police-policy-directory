@@ -3,7 +3,7 @@ import semver from 'semver';
 import { readdir, writeFile } from 'fs/promises';
 
 import type { Policy } from '../schema/Policy.js';
-import { PolicyVersionFileType } from '../schema/PolicyVersionFile.js';
+import { FileType } from '../schema/File.js';
 import { AccessibilityRating } from '../schema/Accessibility.js';
 import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
 import { AccessibilityFeatureString } from '../schema/AccessibilityFeature.js';
@@ -199,7 +199,7 @@ const migrations: Record<string, Migration> = {
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
-				if (file.type === PolicyVersionFileType.PDF) {
+				if (file.type === FileType.PDF) {
 					file.accessibility.unwatermarked = {
 						value: AccessibilityFeatureString.UNKNOWN,
 					}
