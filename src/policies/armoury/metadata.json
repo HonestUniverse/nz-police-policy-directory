@@ -48,9 +48,9 @@
 							"value": false
 						},
 						"unwatermarked": {
-							"value": "Unknown"
+							"value": true
 						},
-						"rating": "Undetermined"
+						"rating": "Fail"
 					},
 					"notices": [
 						{
