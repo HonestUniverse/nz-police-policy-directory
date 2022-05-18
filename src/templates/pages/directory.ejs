@@ -1,3 +1,9 @@
+<%##
+	locals: {
+		policies: Record<string, Policy>,
+	},
+%>
+
 <%
 	const [keys, policies] = Object.keys(directory).sort().reduce((prev, key) => {
 		prev[0].push(key);
@@ -6,11 +12,11 @@
 	}, [[], []]);
 %>
 
-<%- include('../layout/head', { title: 'Directory' }); %>
+<%- include('../layout/head', { title: 'Policy Directory' }); %>
 
 <article class="directory">
 	<div class="directory__layout">
-		<h1 class="directory__title">Directory</h1>
+		<h1 class="directory__title">Policy Directory</h1>
 
 		<ul class="directory__list">
 			<% policies.forEach((policy, idx) => { %>

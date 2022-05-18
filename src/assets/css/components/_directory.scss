@@ -1,6 +1,7 @@
 @import "../tools/reset";
 @import "../tools/layout";
 @import "../tools/fonts";
+@import "../tools/palette";
 
 .directory {}
 
@@ -10,6 +11,11 @@
 
 .directory__title {
 	@include font-heading-40b;
+}
+
+.directory__section-link {
+	@include font-heading-32b;
+	@include link;
 }
 
 .directory__list {
