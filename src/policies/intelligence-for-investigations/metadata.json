@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Intelligence for investigations",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -64,7 +64,8 @@
 							"title": "Bulk file",
 							"message": "This file contains multiple documents. \"Intelligence for investigations\" covers pages 58-78 of the file."
 						}
-					]
+					],
+					"documentType": "Policy"
 				}
 			]
 		}

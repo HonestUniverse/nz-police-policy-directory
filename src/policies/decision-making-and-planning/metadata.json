@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Decision-making and planning",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -63,7 +63,8 @@
 							"title": "Bulk file",
 							"message": "This file contains multiple documents. \"Decision-making and planning\" covers pages 92-95 of the file."
 						}
-					]
+					],
+					"documentType": "Policy"
 				}
 			]
 		}
