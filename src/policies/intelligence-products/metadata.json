@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Intelligence products",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -65,7 +65,8 @@
 							"title": "Bulk file",
 							"message": "This file contains multiple documents. \"Intelligence products\" covers pages 47-57 of the file."
 						}
-					]
+					],
+					"documentType": "Policy"
 				}
 			]
 		}

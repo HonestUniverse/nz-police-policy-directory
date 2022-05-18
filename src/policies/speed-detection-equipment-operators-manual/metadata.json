@@ -54,10 +54,11 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.0.2"
+	"schemaVersion": "3.1.0"
 }

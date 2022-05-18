@@ -50,7 +50,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			],
 			"notices": [
@@ -107,7 +108,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -158,7 +160,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -206,7 +209,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -254,7 +258,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -302,7 +307,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -350,7 +356,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -398,7 +405,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -446,7 +454,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -494,7 +503,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -542,7 +552,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -590,7 +601,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -638,10 +650,11 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.0.2"
+	"schemaVersion": "3.1.0"
 }
