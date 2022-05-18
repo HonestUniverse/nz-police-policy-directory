@@ -57,10 +57,10 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	 * Generate the HTML for a Policy page
 	 */
 	createPolicyPage(src, dst, policy) {
-		const versionPaths = policy.versions.reduce((map, version, i, versions) => {
-			map[version.name] = toUrlSegment(version.name);
-			return map;
-		}, {});
+		const versionPaths: Record<string, string> = {};
+		for (const version of policy.versions) {
+			versionPaths[version.name] = toUrlSegment(version.name);
+		}
 
 		return [new HtmlWebpackPlugin({
 			filename: `${dst}/index.html`,
