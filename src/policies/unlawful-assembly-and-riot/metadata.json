@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Unlawful assembly and riot",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -64,7 +64,8 @@
 							"title": "Unclear redactions",
 							"message": "The OIA response letter specified that information in this file has been withheld under sections 6(a) and 6(c) of the OIA. However, where information has been withheld in the document the specific reason for it being withheld was not specified."
 						}
-					]
+					],
+					"documentType": "Policy"
 				}
 			]
 		}
