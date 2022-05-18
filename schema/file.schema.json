@@ -1,10 +1,15 @@
 {
-	"title": "Policy Version File",
+	"title": "File",
 	"description": "A file containing the content of a specific version of a policy",
 	"type": "object",
+	"$comment": "These properties must be kept in sync with alternate-file.schema.json",
 	"properties": {
 		"path": {
 			"description": "The path to the file",
+			"type": "string"
+		},
+		"name": {
+			"description": "A name to display when referring to the file",
 			"type": "string"
 		},
 		"type": {
@@ -14,6 +19,17 @@
 				"application/msword",
 				"application/pdf",
 				"text/plain"
+			]
+		},
+		"documentType": {
+			"$comment": "If a file contains multiple documents, this refers to the document starting on `startingPage`",
+			"description": "The type of document contained in the file",
+			"type": "string",
+			"enum": [
+				"Policy",
+				"OIA response letter",
+				"Change note",
+				"Explanatory note"
 			]
 		},
 		"startingPage": {
@@ -63,6 +79,13 @@
 			"type": "array",
 			"items": {
 				"$ref": "notice.schema.json"
+			}
+		},
+		"alternateFiles": {
+			"description": "A list of modified files presenting the same information in a different format (e.g. OCRed PDF)",
+			"type": "array",
+			"items": {
+				"$ref": "alternate-file.schema.json"
 			}
 		}
 	},
