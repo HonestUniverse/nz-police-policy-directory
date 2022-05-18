@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "F063 - Police Firearms",
 	"type": "General Instructions",
 	"versions": [
@@ -39,7 +39,8 @@
 							"value": true
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			],
 			"notices": [

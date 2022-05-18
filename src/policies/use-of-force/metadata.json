@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Use of force",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -53,7 +53,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		}

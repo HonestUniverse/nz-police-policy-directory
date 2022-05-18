@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Evaluating the effectiveness of intelligence",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -62,7 +62,8 @@
 							"title": "Bulk file",
 							"message": "This file contains multiple documents. \"Evaluating the effectiveness of intelligence\" covers pages 84-91 of the file."
 						}
-					]
+					],
+					"documentType": "Policy"
 				}
 			]
 		}
