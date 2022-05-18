@@ -21,14 +21,6 @@
 
 	<%- include('accessibility', { accessibility: file.accessibility }); %>
 
-	<% if (file.alternateFiles) { %>
-		<div class="file__alternate-files">
-			<% for (const alternateFile of file.alternateFiles) { %>
-				<%- include('./alternate-file', { file: alternateFile }); %>
-			<% } %>
-		</div>
-	<% } %>
-
 	<div class="file__licence">
 		<div class="file__licence__handle">Licence:
 			<% if (file.licence.url) { %>
@@ -74,5 +66,15 @@
 
 	<% for (const prov of provenance) { %>
 		<%- include('provenance', { provenance: prov }); %>
+	<% } %>
+
+	<% if (file.alternateFiles) { %>
+		<div class="file__alternate-files">
+			<h2 class="file__alternate-files__title">Alternate files</h2>
+
+			<% for (const alternateFile of file.alternateFiles) { %>
+				<%- include('./alternate-file', { file: alternateFile }); %>
+			<% } %>
+		</div>
 	<% } %>
 </div>
