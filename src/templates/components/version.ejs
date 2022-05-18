@@ -1,3 +1,9 @@
+<%#
+	locals: {
+		version: PolicyVersion,
+	}
+%>
+
 <div class="version">
 	<% if (version.notices) { %>
 		<% for (const notice of version.notices) { %>
@@ -7,7 +13,30 @@
 
 	<%- include('duration', { duration: version.duration }); %>
 
-	<% version.files.forEach((file) => { %>
+	<%
+		const primaryFiles = [];
+		const secondaryFiles = [];
+		for (const file of version.files) {
+			if (!file.documentType || file.documentType === 'Policy') {
+				primaryFiles.push(file);
+			} else {
+				secondaryFiles.push(file);
+			}
+		}
+	%>
+
+	<% primaryFiles.forEach((file) => { %>
 		<%- include('file', { file, version }); %>
 	<% }) %>
+
+	<% if (secondaryFiles.length) { %>
+		<details class="version__alternate-files">
+			<summary class="version__alternate-files__summary">Secondary files</summary>
+			<div class="version__alternate-files__contents">
+				<% secondaryFiles.forEach((file) => { %>
+					<%- include('file', { file, version }); %>
+				<% }) %>
+				</div>
+		</details>
+	<% } %>
 </div>

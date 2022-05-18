@@ -1,0 +1,18 @@
+<%##
+	locals: {
+		file: File | AlternateFile,
+	}
+%><%
+	const [fileName, displayFileType] = (() => {
+		if (file.name) {
+			return [file.name, true];
+		} else if (file.documentType && file.documentType !== 'Policy') {
+			return [file.documentType, true];
+		} else {
+			return [file.path.replace(/^.*\//, ''), false];
+		}
+	})();
+%><%= fileName; %><%
+if (displayFileType) {
+	%><%- ` (${include('dictionary', { key: file.type })})`; %><%
+} %>
