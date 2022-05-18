@@ -17,7 +17,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	 */
 	copyMetadata(src, dst) {
 		return [new CopyPlugin({
-			patterns: [{ from: `${src}/metadata.json`, to: `${dst}/metadata.json` }],
+			patterns: [{ from: `${src}/metadata.json`, to: `${dst}.json` }],
 		})];
 	},
 
