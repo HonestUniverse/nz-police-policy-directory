@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Use of force",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -81,7 +81,8 @@
 							"title": "Incomplete File",
 							"message": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
 						}
-					]
+					],
+					"documentType": "Policy"
 				},
 				{
 					"path": "unnamed-version-1/IR 01 19 19055 Excerpt of Police Use of Force Policy.pdf",
@@ -116,7 +117,8 @@
 							"title": "Incomplete File",
 							"message": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
 						}
-					]
+					],
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -171,7 +173,8 @@
 							"value": "Unknown"
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		}

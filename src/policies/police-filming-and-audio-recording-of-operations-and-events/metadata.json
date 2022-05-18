@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Police filming and audio recording of operations and events",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -45,7 +45,8 @@
 							"value": false
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		}
