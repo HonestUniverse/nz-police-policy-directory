@@ -1,8 +1,11 @@
-<div class="file">
-	<%
-		const fileName = file.path.replace(/^.*\//, '');
-	%>
+<%##
+	locals: {
+		file: File,
+		version: PolicyVersion,
+	}
+%>
 
+<div class="file">
 	<% if (file.notices) { %>
 		<% for (const notice of file.notices) { %>
 			<%- include('notice', { notice }); %>
@@ -10,13 +13,21 @@
 	<% } %>
 
 	<div class="file__handle">
-		<a href="<%= file.path %><%= file.startingPage ? `#page=${file.startingPage}` : '' %>" target="_blank" class="file__handle__link"><%= fileName %></a>
+		<a href="<%= file.path %><%= file.startingPage ? `#page=${file.startingPage}` : '' %>" target="_blank" class="file__handle__link"><%- include('../helpers/file-accessible-name', { file }); %></a>
 		<% if (file.size) { %>
 			<span class="file__handle__size">(<%- include('../helpers/file-size', { size: file.size }); %>)</span>
 		<% } %>
 	</div>
 
 	<%- include('accessibility', { accessibility: file.accessibility }); %>
+
+	<% if (file.alternateFiles) { %>
+		<div class="file__alternate-files">
+			<% for (const alternateFile of file.alternateFiles) { %>
+				<%- include('./alternate-file', { file: alternateFile }); %>
+			<% } %>
+		</div>
+	<% } %>
 
 	<div class="file__licence">
 		<div class="file__licence__handle">Licence:

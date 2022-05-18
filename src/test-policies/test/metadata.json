@@ -95,7 +95,29 @@
 						"alt text": {
 							"value": false
 						}
-					}
+					},
+					"alternateFiles": [
+						{
+							"path": "version-4-0/2017-10-12 Fleeing driver policy.pdf",
+							"type": "application/pdf",
+							"documentType": "Policy",
+							"startingPage": 3,
+							"size": 351424,
+							"modifications": ["This file hasn't really been modified, but let's pretend it has been"],
+							"accessibility": {
+								"text-based": {
+									"value": "Partial",
+									"notes": ["There is an image of text"]
+								},
+								"semantics": {
+									"value": true
+								},
+								"alt text": {
+									"value": false
+								}
+							}
+						}
+					]
 				}
 			],
 			"notices": [
