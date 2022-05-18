@@ -24,7 +24,7 @@
 			"type": "array",
 			"minItems": 1,
 			"items": {
-				"$ref": "policy-version-file.schema.json"
+				"$ref": "file.schema.json"
 			}
 		},
 		"notices": {
