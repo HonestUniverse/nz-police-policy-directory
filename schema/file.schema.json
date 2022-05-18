@@ -92,6 +92,7 @@
 	"required": [
 		"path",
 		"type",
+		"documentType",
 		"size",
 		"licence",
 		"original",

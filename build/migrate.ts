@@ -9,6 +9,10 @@ import {
 	FileType,
 	FileDocumentType,
 } from '../schema/File.js';
+import type { File as PolicyFile } from '../schema/File.js';
+
+import type { AlternateFile } from '../schema/AlternateFile.js';
+
 import { AccessibilityRating } from '../schema/Accessibility.js';
 import type { Accessibility } from '../schema/Accessibility.js';
 
@@ -254,6 +258,8 @@ const migrations: Record<string, Migration> = {
 	 *
 	 * Updated PolicyType enum "Unclassified" to "Undetermined"
 	 *
+	 * Made File['documentType'] and AlternateFile['documentType'] required
+	 *
 	 * Moved AccessibilityFeatures into Accessibility['features']
 	 * Updated AccessibilityFeature enum "Unknown" to "Undetermined"
 	 *
@@ -263,6 +269,33 @@ const migrations: Record<string, Migration> = {
 	 */
 	['4.0.0']: function (policy: Policy): void {
 		policy.schemaVersion = '4.0.0';
+
+		function migrateFile(file: PolicyFile | AlternateFile) {
+			if (!file.documentType) {
+				file.documentType = FileDocumentType.POLICY;
+			}
+
+			if (!file.accessibility.rating) {
+				file.accessibility.rating = AccessibilityRating.UNDETERMINED;
+			}
+
+			const a11yFeatures: Partial<Accessibility['features']> = {};
+			for (const [featureName, feature] of Object.entries(file.accessibility)) {
+				if (featureName === 'rating') {
+					continue;
+				}
+
+				// @ts-expect-error AccessibilityFeatures now exist on Accessibility['features']
+				if (feature.value === 'Unknown') {
+					// @ts-expect-error AccessibilityFeatures now exist on Accessibility['features']
+					feature.value = AccessibilityFeatureString.UNDETERMINED;
+				}
+
+				a11yFeatures[featureName] = feature;
+				delete file.accessibility[featureName];
+			}
+			file.accessibility.features = a11yFeatures as Accessibility['features'];
+		}
 
 		// @ts-expect-error 'Unclassified' is no longer a valid PolicyType
 		if (policy.type === 'Unclassified') {
@@ -281,26 +314,13 @@ const migrations: Record<string, Migration> = {
 			}
 
 			for (const file of version.files) {
-				if (!file.accessibility.rating) {
-					file.accessibility.rating = AccessibilityRating.UNDETERMINED;
-				}
+				migrateFile(file);
 
-				const a11yFeatures: Partial<Accessibility['features']> = {};
-				for (const [featureName, feature] of Object.entries(file.accessibility)) {
-					if (featureName === 'rating') {
-						continue;
+				if (file.alternateFiles) {
+					for (const altFile of file.alternateFiles) {
+						migrateFile(altFile);
 					}
-
-					// @ts-expect-error AccessibilityFeatures now exist on Accessibility['features']
-					if (feature.value === 'Unknown') {
-						// @ts-expect-error AccessibilityFeatures now exist on Accessibility['features']
-						feature.value = AccessibilityFeatureString.UNDETERMINED;
-					}
-
-					a11yFeatures[featureName] = feature;
-					delete file.accessibility[featureName];
 				}
-				file.accessibility.features = a11yFeatures as Accessibility['features'];
 			}
 		}
 	},
