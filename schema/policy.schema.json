@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 3.0.2",
+	"$comment": "Current version: 3.1.0",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
