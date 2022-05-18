@@ -21,7 +21,7 @@ export type File = {
 	path: string,
 	name?: string,
 	type: FileType,
-	documentType?: FileDocumentType,
+	documentType: FileDocumentType,
 	startingPage?: number,
 	size: number,
 	provenance?: Provenance[],
