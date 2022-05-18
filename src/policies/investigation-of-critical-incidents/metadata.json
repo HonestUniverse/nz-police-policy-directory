@@ -7,7 +7,9 @@
 			"name": "Unnamed Version 1",
 			"duration": {
 				"start": "2021-11-08",
-				"on": ["2022-02-15"]
+				"on": [
+					"2022-02-15"
+				]
 			},
 			"provenance": [
 				{

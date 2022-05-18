@@ -74,7 +74,7 @@ async function migrateAll() {
 			console.error(validatePolicy.errors);
 			console.error(`ERROR: Migrated metadata for ${entry.name} is still invalid after migration`);
 			// @ts-expect-error We've lied to TypeScript that this is already a valid policy, but in this condition we've just found it's not
-			writeFile(`${paths.policies}/${entry.name}/metadata.failed-migration-${migratedPolicy.schemaVersion}.json`, JSON.stringify(policy, null, '\t'));
+			writeFile(`${paths.policies}/${entry.name}/metadata.failed-migration-${migratedPolicy.schemaVersion}.json`, JSON.stringify(migratedPolicy, null, '\t'));
 		} else {
 			// Back up previous contents just in case
 			writeFile(`${paths.policies}/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));

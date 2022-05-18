@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Government agency requests for assistance with search warrants and production orders",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -58,7 +58,8 @@
 							"title": "Bulk file",
 							"message": "This file contains multiple documents. \"Government agency requests for assistance with search warrants and production orders\" covers pages 1-27 of the file."
 						}
-					]
+					],
+					"documentType": "Policy"
 				}
 			]
 		}

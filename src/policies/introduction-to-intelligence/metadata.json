@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Introduction to Intelligence",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -63,7 +63,8 @@
 							"title": "Bulk file",
 							"message": "This file contains multiple documents. \"Introduction to Intelligence\" covers pages 36-46 of the file."
 						}
-					]
+					],
+					"documentType": "Policy"
 				}
 			]
 		}
