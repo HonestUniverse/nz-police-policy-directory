@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "Use of force and Police dogs",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -51,7 +51,8 @@
 							"value": false
 						},
 						"rating": "Undetermined"
-					}
+					},
+					"documentType": "Policy"
 				}
 			]
 		}
