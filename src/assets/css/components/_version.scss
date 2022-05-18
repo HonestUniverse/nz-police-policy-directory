@@ -1,3 +1,19 @@
 @import "../tools/fonts";
 
 .version {}
+
+.version__alternate-files {
+	margin-top: 2rem;
+}
+
+.version__alternate-files__summary {
+	@supports (selector(details)) {
+		cursor: pointer;
+	}
+
+	@include font-heading-22b;
+}
+
+.version__alternate-files__contents {
+	padding-top: 1rem;
+}

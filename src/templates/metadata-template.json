@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "3.0.2",
+	"schemaVersion": "3.1.0",
 	"title": "string",
 	"type": "string enum",
 	"obsolete": true,
@@ -37,6 +37,7 @@
 				{
 					"path": "string",
 					"type": "string enum",
+					"documentType": "Policy",
 					"startingPage": 0,
 					"size": 0,
 					"provenance": "if necessary to override version provenance",
@@ -78,6 +79,43 @@
 							"type": "info | warning | error",
 							"title": "string",
 							"message": "string"
+						}
+					],
+					"alternateFiles": [
+						{
+							"path": "string",
+							"type": "string enum",
+							"documentType": "Policy",
+							"startingPage": 0,
+							"size": 0,
+							"incomplete": true,
+							"modifications": ["string"],
+							"accessibility": {
+								"rating": "Undetermined",
+								"text-based": {
+									"value": "Unknown",
+									"notes": ["string"]
+								},
+								"semantics": {
+									"value": "Unknown",
+									"notes": ["string"]
+								},
+								"alt text": {
+									"value": "Unknown",
+									"notes": ["string"]
+								},
+								"unwatermarked": {
+									"value": "Unknown",
+									"notes": ["string"]
+								}
+							},
+							"notices": [
+								{
+									"type": "info | warning | error",
+									"title": "string",
+									"message": "string"
+								}
+							]
 						}
 					]
 				}

@@ -17,11 +17,17 @@
 	@include font-base-16;
 }
 
-.policy__version-list {
+.policy__other-versions {}
+
+.policy__other-versions__heading {
+	@include font-heading-40b;
+}
+
+.policy__other-versions__list {
 	@include list-reset;
 }
 
-.policy__version-item {}
+.policy__other-versions__item {}
 
 .policy__version {}
 

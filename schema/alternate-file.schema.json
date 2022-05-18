@@ -1,0 +1,69 @@
+{
+	"title": "Alternate File",
+	"description": "A modified file, intended to serve as an alternative to an original file.",
+	"type": "object",
+	"$comment": "These properties must be kept in sync with file.schema.json",
+	"properties": {
+		"path": {
+			"description": "The path to the file",
+			"type": "string"
+		},
+		"name": {
+			"description": "A name to display when referring to the file",
+			"type": "string"
+		},
+		"type": {
+			"description": "The MIME type of the file",
+			"type": "string",
+			"enum": [
+				"application/msword",
+				"application/pdf",
+				"text/plain"
+			]
+		},
+		"documentType": {
+			"$comment": "If a file contains multiple documents, this refers to the document starting on `startingPage`",
+			"description": "The type of document contained in the file",
+			"type": "string",
+			"enum": [
+				"Policy",
+				"OIA response letter",
+				"Change note",
+				"Explanatory note"
+			]
+		},
+		"startingPage": {
+			"description": "If the file is a PDF, the page it should be opened to by default",
+			"type": "integer",
+			"exclusiveMinimum": 0
+		},
+		"size": {
+			"description": "The size of the file, in bytes",
+			"type": "integer",
+			"exclusiveMinimum": 0
+		},
+		"modifications": {
+			"description": "Any modifications that have been made to the file since it was retrieved",
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"minItems": 1
+		},
+		"accessibility": {
+			"description": "A list of the accessibility features that this file has or is lacking",
+			"$ref": "accessibility.schema.json"
+		},
+		"notices": {
+			"description": "Any notices attached to this policy version file",
+			"type": "array",
+			"items": {
+				"$ref": "notice.schema.json"
+			}
+		}
+	},
+	"required": [
+		"modifications"
+	],
+	"additionalProperties": false
+}

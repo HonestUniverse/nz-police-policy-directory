@@ -4,7 +4,7 @@ import addFormats from 'ajv-formats';
 import { readdir, readFile } from 'fs/promises';
 
 import type { Policy } from '../schema/Policy.js';
-import type { PolicyVersionFile } from '../schema/PolicyVersionFile.js';
+import type { File } from '../schema/File.js';
 
 import { root, schema as schemaPath } from './util/paths.js';
 
@@ -62,7 +62,7 @@ function getFileSizeValidator(dirName: string) {
 	 * On failure, it prints a warning to the console and corrects
 	 * the recorded size, but it will not write that correction to disk.
 	 */
-	return async function validateFileSize(file: PolicyVersionFile): Promise<boolean> {
+	return async function validateFileSize(file: File): Promise<boolean> {
 		const filePath = `${dirName}/${file.path}`;
 		const handle = await readFile(filePath);
 

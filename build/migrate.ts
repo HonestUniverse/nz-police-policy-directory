@@ -3,7 +3,10 @@ import semver from 'semver';
 import { readdir, writeFile } from 'fs/promises';
 
 import type { Policy } from '../schema/Policy.js';
-import { PolicyVersionFileType } from '../schema/PolicyVersionFile.js';
+import {
+	FileType,
+	FileDocumentType,
+} from '../schema/File.js';
 import { AccessibilityRating } from '../schema/Accessibility.js';
 import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
 import { AccessibilityFeatureString } from '../schema/AccessibilityFeature.js';
@@ -199,7 +202,7 @@ const migrations: Record<string, Migration> = {
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
-				if (file.type === PolicyVersionFileType.PDF) {
+				if (file.type === FileType.PDF) {
 					file.accessibility.unwatermarked = {
 						value: AccessibilityFeatureString.UNKNOWN,
 					}
@@ -219,6 +222,21 @@ const migrations: Record<string, Migration> = {
 		for (const version of policy.versions) {
 			for (const file of version.files) {
 				file.accessibility.rating = AccessibilityRating.UNDETERMINED;
+			}
+		}
+	},
+
+	/**
+	 * Changes in v3.1.0
+	 *
+	 * Added a new optional `documentType` property to `File`.
+	 */
+	['3.1.0']: function (policy: Policy): void {
+		policy.schemaVersion = '3.1.0';
+
+		for (const version of policy.versions) {
+			for (const file of version.files) {
+				file.documentType = FileDocumentType.POLICY;
 			}
 		}
 	},

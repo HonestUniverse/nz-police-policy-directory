@@ -9,6 +9,9 @@
 	 */
 	const dictionary = new Map([
 		// ['from', 'to'],
+		['application/pdf', 'PDF'],
+		['application/msword', 'Word Document'],
+		['text/plain', 'Plain Text'],
 	].map(([codeString, uiString]) => [codeString.toLowerCase(), uiString]));
 
 	/**
@@ -35,6 +38,6 @@
 		}
 	}
 
-	const val = dictionary[key.toLowerCase()] ?? key;
+	const val = dictionary.get(key.toLowerCase()) ?? key;
 	const valCase = applyCase(val);
 %><%= valCase; %>
