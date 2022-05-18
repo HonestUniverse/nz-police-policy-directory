@@ -12,8 +12,8 @@ import {
 import { AccessibilityRating } from '../schema/Accessibility.js';
 import type { Accessibility } from '../schema/Accessibility.js';
 
-import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
 import { AccessibilityFeatureString } from '../schema/AccessibilityFeature.js';
+import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
 
 import { OIAWithholdingsSummary } from '../schema/OIAWithholdings.js';
 
@@ -285,15 +285,22 @@ const migrations: Record<string, Migration> = {
 					file.accessibility.rating = AccessibilityRating.UNDETERMINED;
 				}
 
-				file.accessibility.features = {};
+				const a11yFeatures: Partial<Accessibility['features']> = {};
 				for (const [featureName, feature] of Object.entries(file.accessibility)) {
 					if (featureName === 'rating') {
 						continue;
 					}
 
-					file.accessibility.features[featureName] = feature;
+					// @ts-expect-error AccessibilityFeatures now exist on Accessibility['features']
+					if (feature.value === 'Unknown') {
+						// @ts-expect-error AccessibilityFeatures now exist on Accessibility['features']
+						feature.value = AccessibilityFeatureString.UNDETERMINED;
+					}
+
+					a11yFeatures[featureName] = feature;
 					delete file.accessibility[featureName];
 				}
+				file.accessibility.features = a11yFeatures as Accessibility['features'];
 			}
 		}
 	},
