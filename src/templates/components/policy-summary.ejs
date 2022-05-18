@@ -1,3 +1,10 @@
+<%##
+	locals: {
+		policy: Policy,
+		key: string,
+	}
+%>
+
 <section class="policy-summary">
 	<h2 class="policy-summary__title">
 		<a href="/<%= key %>" class="policy-summary__link"><%= policy.title %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
