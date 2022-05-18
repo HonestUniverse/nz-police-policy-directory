@@ -239,6 +239,12 @@ const migrations: Record<string, Migration> = {
 		for (const version of policy.versions) {
 			for (const file of version.files) {
 				file.accessibility.rating = AccessibilityRating.UNDETERMINED;
+
+				if (file.alternateFiles) {
+					for (const altFile of file.alternateFiles) {
+						altFile.accessibility.rating = AccessibilityRating.UNDETERMINED;
+					}
+				}
 			}
 		}
 	},
