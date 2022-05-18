@@ -25,10 +25,26 @@ interface Migration {
 }
 
 /**
- * Loop through all policies, and attempt to migrate any with invalid metadata.
+ * Migrate all policies and all test policies
  */
 async function migrateAll() {
-	const dir = await readdir(paths.policies, {
+	let policiesMigrated = 0;
+
+	policiesMigrated += await migrateDir(paths.testPolicies);
+	policiesMigrated += await migrateDir(paths.policies);
+
+	if (policiesMigrated > 0) {
+		console.log(`INFO: Migrated ${policiesMigrated} policies`);
+	} else {
+		console.log('INFO: No policies needed to be migrated');
+	}
+}
+
+/**
+ * Loop through all policies, and attempt to migrate any with invalid metadata.
+ */
+async function migrateDir(path): Promise<number> {
+	const dir = await readdir(path, {
 		withFileTypes: true,
 	});
 
@@ -41,7 +57,7 @@ async function migrateAll() {
 			continue;
 		}
 
-		const dirName = `${paths.policies}/${entry.name}`;
+		const dirName = `${path}/${entry.name}`;
 		const dir = await readdir(dirName);
 
 		if (dir.includes('metadata.json') === false) {
@@ -50,15 +66,20 @@ async function migrateAll() {
 		}
 
 		const policy: unknown = (
-			await import(`../${paths.policies}/${entry.name}/metadata.json`, {
+			await import(`../${path}/${entry.name}/metadata.json`, {
 				assert: {
 					type: 'json',
 				},
 			})
 		).default;
 
-		// If invalid, attempt to migrate
 		const migratedPolicy = migrate(policy);
+
+		if (JSON.stringify(migratedPolicy) === JSON.stringify(policy)) {
+			// If no changes were made, don't consider the policy to have been migrated
+			continue;
+		}
+
 		const migratedValid = validatePolicy(migratedPolicy);
 		policiesMigrated += 1;
 		console.log(`INFO: Migrated ${entry.name} to ${migratedPolicy.schemaVersion}`);
@@ -68,22 +89,18 @@ async function migrateAll() {
 			console.error(validatePolicy.errors);
 			console.error(`ERROR: Migrated metadata for ${entry.name} is still invalid after migration`);
 			// @ts-expect-error We've lied to TypeScript that this is already a valid policy, but in this condition we've just found it's not
-			writeFile(`${paths.policies}/${entry.name}/metadata.failed-migration-${migratedPolicy.schemaVersion}.json`, JSON.stringify(migratedPolicy, null, '\t'));
+			writeFile(`${path}/${entry.name}/metadata.failed-migration-${migratedPolicy.schemaVersion}.json`, JSON.stringify(migratedPolicy, null, '\t'));
 		} else {
 			// Back up previous contents just in case
-			writeFile(`${paths.policies}/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));
+			writeFile(`${path}/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));
 			// If valid, save new contents
-			writeFile(`${paths.policies}/${entry.name}/metadata.json`, JSON.stringify(migratedPolicy, null, '\t'));
+			writeFile(`${path}/${entry.name}/metadata.json`, JSON.stringify(migratedPolicy, null, '\t'));
 		}
 	}
 
 	await Promise.all(promises);
 
-	if (policiesMigrated > 0) {
-		console.log(`INFO: Migrated ${policiesMigrated} policies`);
-	} else {
-		console.log('INFO: No policies needed to be migrated');
-	}
+	return policiesMigrated;
 }
 
 /**
