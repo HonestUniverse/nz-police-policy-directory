@@ -1,3 +1,9 @@
+<%##
+	locals: {
+		provenance: Provenance,
+	}
+%>
+
 <div class="provenance">
 	<%
 		const withholdings = provenance.withholdings || provenance.oiaRequest?.withholdings;
