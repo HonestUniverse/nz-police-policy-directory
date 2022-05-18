@@ -42,12 +42,12 @@ export async function createBuildPlugins(policiesPath = paths.policies) {
 		policiesByNameSafe[policyNameSafe] = policy;
 
 		const policySrcPath = `${policiesPath}/${policyName}`;
-		const policyDstPath = `./${policyNameSafe}`;
+		const policyDstPath = `${paths.policiesDst}/${policyNameSafe}`;
 
 		plugins.push(...gatherBuildStepPlugins(policyBuildSteps, policySrcPath, policyDstPath, policy));
 	}
 
-	plugins.push(...gatherBuildStepPlugins(directoryBuildSteps, paths.src, './', policiesByNameSafe));
+	plugins.push(...gatherBuildStepPlugins(directoryBuildSteps, paths.src, paths.policiesDst, policiesByNameSafe));
 
 	return plugins;
 }
