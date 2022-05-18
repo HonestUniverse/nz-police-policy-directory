@@ -16,6 +16,11 @@
 
 .file__alternate-files {}
 
+.file__alternate-files__title {
+	@include font-heading-22b;
+	margin: 0;
+}
+
 .file__licence {}
 
 .file__licence__handle {

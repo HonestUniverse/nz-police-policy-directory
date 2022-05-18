@@ -1,5 +1,6 @@
 import type { PolicyBuildStep } from './BuildStep.js';
 
+
 import CopyPlugin from 'copy-webpack-plugin';
 import GenerateJsonPlugin from 'generate-json-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -8,6 +9,9 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 import { toUrlSegment } from './util/to-url-segment.js';
 import { makeRootRelative } from './util/make-root-relative.js';
 import * as paths from './util/paths.js';
+
+import type { File as PolicyFile } from '../schema/File.js';
+import type { AlternateFile } from '../schema/AlternateFile.js';
 
 /**
  * Build steps for a particular policy.
@@ -28,26 +32,36 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	copyFiles(src, dst, policy) {
 		const plugins: CopyPlugin[] = [];
 
+		function copyFile(file: PolicyFile | AlternateFile, versionUrl: string) {
+			const fileSrcPathAndName = `${src}/${file.path}`;
+			const fileName = file.path.replace(/.*\//, '');
+
+			const fileDstPath = toUrlSegment(versionUrl);
+			const fileDstPathAndName = `${dst}/${fileDstPath}/${fileName}`;
+
+			plugins.push(
+				new CopyPlugin({
+					patterns: [{ from: fileSrcPathAndName, to: fileDstPathAndName }],
+				})
+			);
+
+			// Update file.path to ensure the build HTML points to the correct place
+			const fileDstPathRootRelative = makeRootRelative(fileDstPathAndName);
+			file.path = fileDstPathRootRelative;
+		}
+
 		for (const version of policy.versions) {
 			const versionName = version.name;
 			const versionUrl = toUrlSegment(versionName);
 
 			for (const file of version.files) {
-				const fileSrcPathAndName = `${src}/${file.path}`;
-				const fileName = file.path.replace(/.*\//, '');
+				copyFile(file, versionUrl);
 
-				const fileDstPath = toUrlSegment(versionUrl);
-				const fileDstPathAndName = `${dst}/${fileDstPath}/${fileName}`;
-
-				plugins.push(
-					new CopyPlugin({
-						patterns: [{ from: fileSrcPathAndName, to: fileDstPathAndName }],
-					})
-				);
-
-				// Update file.path to ensure the build HTML points to the correct place
-				const fileDstPathRootRelative = makeRootRelative(fileDstPathAndName);
-				file.path = fileDstPathRootRelative;
+				if (file.alternateFiles) {
+					for (const altFile of file.alternateFiles) {
+						copyFile(altFile, versionUrl);
+					}
+				}
 			}
 		}
 
