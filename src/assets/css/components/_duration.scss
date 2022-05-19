@@ -37,7 +37,6 @@ $duration-sep-offset: calc(100% + #{$duration-sep-gap});
 		content: "";
 		position: absolute;
 
-		// TODO: Accent colour
 		@include use-var(background-color, --accent, currentColor);
 	}
 
