@@ -55,7 +55,6 @@
 									"6(e)(iv)": true,
 									"6(e)(v)": true,
 									"6(e)(vi)": true,
-
 									"9(2)(a)": "pp1-6",
 									"9(2)(b)(i)": true,
 									"9(2)(b)(ii)": true,
@@ -87,14 +86,20 @@
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
-							"notes": ["There is an image of text"]
+							"notes": [
+								"There is an image of text"
+							]
 						},
 						"semantics": {
 							"value": true
 						},
 						"alt text": {
 							"value": false
-						}
+						},
+						"unwatermarked": {
+							"value": "Unknown"
+						},
+						"rating": "Undetermined"
 					},
 					"alternateFiles": [
 						{
@@ -103,21 +108,27 @@
 							"documentType": "Policy",
 							"startingPage": 3,
 							"size": 351424,
-							"modifications": ["This file hasn't really been modified, but let's pretend it has been"],
+							"modifications": [
+								"This file hasn't really been modified, but let's pretend it has been"
+							],
 							"accessibility": {
 								"text-based": {
 									"value": "Partial",
-									"notes": ["There is an image of text"]
+									"notes": [
+										"There is an image of text"
+									]
 								},
 								"semantics": {
 									"value": true
 								},
 								"alt text": {
 									"value": false
-								}
+								},
+								"rating": "Undetermined"
 							}
 						}
-					]
+					],
+					"documentType": "Policy"
 				}
 			],
 			"notices": [
@@ -178,8 +189,13 @@
 							"notes": [
 								"Some pages are missing semantics"
 							]
-						}
-					}
+						},
+						"unwatermarked": {
+							"value": "Unknown"
+						},
+						"rating": "Undetermined"
+					},
+					"documentType": "Policy"
 				}
 			]
 		},
@@ -233,8 +249,13 @@
 							"notes": [
 								"Some pages are missing semantics"
 							]
-						}
-					}
+						},
+						"unwatermarked": {
+							"value": "Unknown"
+						},
+						"rating": "Undetermined"
+					},
+					"documentType": "Policy"
 				}
 			]
 		}
@@ -251,5 +272,5 @@
 			"message": "This is a test error notice"
 		}
 	],
-	"schemaVersion": "3.0.0"
+	"schemaVersion": "3.1.0"
 }

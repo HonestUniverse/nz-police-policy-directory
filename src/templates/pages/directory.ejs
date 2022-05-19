@@ -1,3 +1,9 @@
+<%##
+	locals: {
+		directory: Record<string, Policy>,
+	}
+%>
+
 <%
 	const [keys, policies] = Object.keys(directory).sort().reduce((prev, key) => {
 		prev[0].push(key);
