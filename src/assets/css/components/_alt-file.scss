@@ -1,1 +1,22 @@
 .alt-file {}
+
+.alt-file__handle {}
+
+.alt-file__handle__link {
+	@include font-base-20;
+	@include link;
+}
+
+.alt-file__handle__size {
+	@include font-base-16;
+}
+
+.alt-file__metadata {
+	margin-top: 1rem;
+}
+
+.alt-file__modifications {}
+
+.alt-file__modifications__item {
+	@include font-base-18;
+}
