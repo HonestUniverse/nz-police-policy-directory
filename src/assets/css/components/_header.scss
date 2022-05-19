@@ -1,9 +1,17 @@
 @import "../tools/reset";
 @import "../tools/layout";
 @import "../tools/fonts";
+@import "../tools/palette";
+@import "../tools/use-var";
 
 .header {
 	padding-top: 1em;
+	padding-bottom: 1rem;
+
+	@include contrast-primary;
+
+	border-bottom: 2px solid;
+	@include use-var(border-bottom-color, --accent, currentColor);
 }
 
 .header__layout {
@@ -15,7 +23,7 @@
 	@supports (display: grid) {
 		display: grid;
 		grid-template-areas:
-			"site-name site-name"
+			"site-name tools"
 			"nav tools";
 	}
 }
