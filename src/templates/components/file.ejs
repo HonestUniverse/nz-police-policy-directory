@@ -21,11 +21,17 @@
 			</div>
 	<% } %>
 
-	<div class="file__metadata">
+	<div class="file__accessibility">
 		<%- include('accessibility', { accessibility: file.accessibility }); %>
+	</div>
 
-		<div class="file__licence">
-			<div class="file__licence__handle">Licence:
+	<div class="file__metadata">
+
+		<div class="file__licence" data-licence-name="<%= file.licence.name %>">
+			<div class="file__licence__handle">
+				<span class="file__licence__handle__icon" aria-hidden="true"></span>
+
+				Licence:
 				<% if (file.licence.url) { %>
 					<a
 						<%- include('../helpers/href-with-target', { href: file.licence.url }) %>
@@ -37,20 +43,31 @@
 			</div>
 
 			<% if (file.licence.notices) { %>
-				<% for (const notice of file.licence.notices) { %>
-					<%- include('notice', { notice }); %>
-				<% } %>
+				<div class="file__licence__notices">
+					<% for (const notice of file.licence.notices) { %>
+						<%- include('notice', { notice }); %>
+					<% } %>
+				</div>
 			<% } %>
 		</div>
 
 		<% if (file.incomplete) { %>
-			<div class="file__incomplete">Incomplete file</div>
+			<div class="file__incomplete">
+				<span class="file__incomplete__icon" aria-hidden="true"></span>
+				<span class="file__incomplete__text">Incomplete file</span>
+			</div>
 		<% } %>
 
 		<% if (file.original) { %>
-			<div class="file__original">Original file</div>
+			<div class="file__original file__original--original">
+				<span class="file__original__icon" aria-hidden="true"></span>
+				<span class="file__original__text">Original file</span>
+			</div>
 		<% } else { %>
-			<div class="file__original">Not original file</div>
+			<div class="file__original file__original--not-original">
+				<span class="file__original__icon" aria-hidden="true"></span>
+				<span class="file__original__text">Not original file</span>
+			</div>
 		<% } %>
 
 		<% if (file.modifications) { %>
@@ -76,7 +93,7 @@
 
 	<% if (file.alternateFiles) { %>
 		<div class="file__alternate-files">
-			<h2 class="file__alternate-files__title">Alternate files</h2>
+			<h3 class="file__alternate-files__title">Alternate files</h3>
 
 			<% for (const alternateFile of file.alternateFiles) { %>
 				<%- include('./alternate-file', { file: alternateFile }); %>

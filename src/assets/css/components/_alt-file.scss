@@ -1,22 +1,10 @@
-.alt-file {}
+@import "../tools/use-var";
 
-.alt-file__handle {}
-
-.alt-file__handle__link {
-	@include font-base-20;
-	@include link;
-}
-
-.alt-file__handle__size {
-	@include font-base-16;
-}
-
-.alt-file__metadata {
-	margin-top: 1rem;
-}
-
-.alt-file__modifications {}
-
-.alt-file__modifications__item {
-	@include font-base-18;
+.alt-file {
+	+ .alt-file {
+		margin-top: 1rem;
+		border-top: 1px solid;
+		@include use-var(border-top-color, --accent, currentColor);
+		padding-top: 1rem;
+	}
 }

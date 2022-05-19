@@ -18,6 +18,7 @@
 			grid-template-areas:
 				"handle"
 				"notices"
+				"accessibility"
 				"metadata"
 				"provenance"
 				"alternate-files";
@@ -26,6 +27,7 @@
 			grid-template-areas:
 				"handle handle"
 				"notices notices"
+				"accessibility provenance"
 				"metadata provenance"
 				"alternate-files alternate-files";
 		}
@@ -41,7 +43,7 @@
 }
 
 .file__handle__link {
-	@include font-base-20;
+	@include font-base-24b;
 	@include link;
 }
 
@@ -52,6 +54,11 @@
 .file__notices {
 	margin-top: 1rem;
 	grid-area: notices;
+}
+
+.file__accessibility {
+	margin-top: 1rem;
+	grid-area: accessibility;
 }
 
 .file__metadata {
@@ -65,20 +72,68 @@
 	@include font-base-18;
 }
 
+.file__licence__handle__icon {
+	font-family: $font-icons;
+	&::before {
+		content: $icon-info;
+	}
+
+	.file__licence[data-licence-name="None"] &::before {
+		content: $icon-warning;
+	}
+
+	// Creative Commons
+	.file__licence[data-licence-name^="CC"] &::before {
+		content: $icon-tick;
+	}
+}
+
 .file__licence__handle__link {
 	@include link;
 }
 
-.file__original,
-.file__incomplete {
+.file__licence__notices {
+	margin: 0.5em 0;
+}
+
+.file__original {
+	margin-top: 0.3em;
 	@include font-base-18;
 }
 
-.file__modifications {}
+.file__original__icon {
+	font-family: $font-icons;
+
+	.file__original--original &::before {
+		content: $icon-tick;
+	}
+	.file__original--not-original &::before {
+		content: $icon-info;
+	}
+}
+.file__original__text {}
+
+.file__modifications {
+	margin-top: 0.3em;
+}
 
 .file__modifications__item {
 	@include font-base-18;
 }
+
+.file__incomplete {
+	margin-top: 0.3em;
+	@include font-base-18;
+}
+
+.file__incomplete__icon {
+	font-family: $font-icons;
+	&::before {
+		content: $icon-warning;
+	}
+}
+
+.file__incomplete__text {}
 
 .file__provenance {
 	margin-top: 1rem;
@@ -87,6 +142,9 @@
 
 .file__alternate-files {
 	margin-top: 1rem;
+	border-top: 2px solid;
+	@include use-var(border-top-color, --accent, currentColor);
+	padding-top: 1rem;
 	grid-area: alternate-files;
 }
 

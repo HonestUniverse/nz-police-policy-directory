@@ -39,6 +39,9 @@
 	&:not([open]) {
 		margin-bottom: 1em;
 	}
+	&[open] {
+		margin-bottom: 2rem;
+	}
 }
 
 .policy__version__name {

@@ -83,6 +83,7 @@
 						}
 					],
 					"original": true,
+					"incomplete": true,
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
@@ -104,6 +105,32 @@
 					"alternateFiles": [
 						{
 							"path": "version-4-0/2017-10-12 Fleeing driver policy.pdf",
+							"type": "application/pdf",
+							"documentType": "Policy",
+							"startingPage": 3,
+							"size": 351424,
+							"modifications": [
+								"This file hasn't really been modified, but let's pretend it has been"
+							],
+							"accessibility": {
+								"text-based": {
+									"value": "Partial",
+									"notes": [
+										"There is an image of text"
+									]
+								},
+								"semantics": {
+									"value": true
+								},
+								"alt text": {
+									"value": false
+								},
+								"rating": "Undetermined"
+							}
+						},
+						{
+							"path": "version-4-0/2017-10-12 Fleeing driver policy.pdf",
+							"name": "Modified version",
 							"type": "application/pdf",
 							"documentType": "Policy",
 							"startingPage": 3,
@@ -171,7 +198,7 @@
 						},
 						"rating": "Undetermined"
 					},
-					"documentType": "Policy"
+					"documentType": "OIA response letter"
 				}
 			],
 			"notices": [
@@ -209,7 +236,7 @@
 					"type": "application/pdf",
 					"size": 380978,
 					"licence": {
-						"name": "Test",
+						"name": "Test Licence",
 						"url": "https://example.com/licence.txt",
 						"notices": [
 							{
