@@ -61,7 +61,7 @@
 					],
 					"documentType": "Policy",
 					"alternateFiles": [{
-						"path": "version-12-0/Armoury.Redacted.OCRed.pdf",
+						"path": "version-12-0/Armoury.Redacted.OCR.pdf",
 						"type": "application/pdf",
 						"size": 283147,
 						"accessibility": {
@@ -79,7 +79,10 @@
 							},
 							"rating": "Pass"
 						},
-						"modifications": ["OCR has been performed on the text, with manual typo fixes.", "Automatic semantic tagging was used."]
+						"modifications": [
+							"OCR has been performed on the text, with manual typo fixes.",
+							"Automatic semantic tagging was used."
+						]
 					}]
 				},
 				{
