@@ -15,7 +15,7 @@ export const testPolicies = `${src}/test-policies`;
 export const templates = `${src}/templates`;
 export const assets = `${src}/assets`;
 
-export const policiesDst = `./`;
+export const policiesDst = `./policies`;
 
 export const schema = `./schema`;
 
