@@ -3,8 +3,6 @@
 
 // TODO: This component should be removed before the production build
 .prototype-notice {
-	@include layout-wrapper-flush;
-
 	padding: 1rem;
 	text-align: center;
 
@@ -13,6 +11,10 @@
 	position: sticky;
 	z-index: 1;
 	top: 0;
+}
+
+.prototype-notice__layout {
+	@include layout-wrapper;
 }
 
 .prototype-notice__title {
