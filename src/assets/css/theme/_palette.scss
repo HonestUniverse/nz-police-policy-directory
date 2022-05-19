@@ -22,7 +22,8 @@ $black: #000000;
 
 $grey--offwhite: #eeeeee;
 $grey--light: #d0d0d0;
-$grey--dark: #222;
+$grey--dark: #333333;
+$grey--darker: #111111;
 
 $school-bus-yellow: #ffda22;
 
@@ -51,6 +52,10 @@ $col-primary--light: $black;
 // AAA 13.62
 $bg-primary--active--light: $grey--light;
 $col-primary--active--light: $black;
+
+// AAA 21
+$bg-secondary--light: $white;
+$col-secondary--light: $black;
 
 // AA  6.85
 $bg-brand--light: $cadet-blue;
@@ -85,13 +90,17 @@ $accent-base--dark: $teal;
 
 // Contrast pairs
 /////////////////
-// AAA 21
-$bg-primary--dark: $black;
+// AAA 18.88
+$bg-primary--dark: $grey--darker;
 $col-primary--dark: $white;
 
-// AAA 15.91
+// AAA 12.63
 $bg-primary--active--dark: $grey--dark;
 $col-primary--active--dark: $white;
+
+// AAA 21
+$bg-secondary--dark: $black;
+$col-secondary--dark: $white;
 
 // AA  5.01
 $bg-brand--dark: $teal;

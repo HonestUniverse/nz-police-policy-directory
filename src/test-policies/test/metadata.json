@@ -128,6 +128,49 @@
 							}
 						}
 					],
+					"documentType": "Policy",
+					"notices": [
+						{
+							"title": "File notice",
+							"type": "info",
+							"message": "This is a test notice"
+						}
+					]
+				},
+				{
+					"path": "version-3-0/2016-06-30 Fleeing driver policy.pdf",
+					"type": "application/pdf",
+					"size": 380978,
+					"licence": {
+						"name": "Test",
+						"url": "https://example.com/licence.txt",
+						"notices": [
+							{
+								"title": "Test notice on licence",
+								"type": "error",
+								"message": "This is a test notice on a licence"
+							}
+						]
+					},
+					"original": false,
+					"modifications": [
+						"The name of the file was changed"
+					],
+					"accessibility": {
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": "Partial",
+							"notes": [
+								"Some pages are missing semantics"
+							]
+						},
+						"unwatermarked": {
+							"value": "Unknown"
+						},
+						"rating": "Undetermined"
+					},
 					"documentType": "Policy"
 				}
 			],
@@ -227,14 +270,7 @@
 					"size": 380978,
 					"licence": {
 						"name": "Test",
-						"url": "https://example.com/licence.txt",
-						"notices": [
-							{
-								"title": "Test notice on licence",
-								"type": "error",
-								"message": "This is a test notice on a licence"
-							}
-						]
+						"url": "https://example.com/licence.txt"
 					},
 					"original": false,
 					"modifications": [
@@ -261,11 +297,6 @@
 		}
 	],
 	"notices": [
-		{
-			"title": "Test notice",
-			"type": "info",
-			"message": "This is a test notice"
-		},
 		{
 			"title": "Test notice",
 			"type": "error",
