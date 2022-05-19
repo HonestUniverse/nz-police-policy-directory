@@ -49,7 +49,9 @@ export async function readAllPolicies(path = paths.policies): Promise<Record<str
 	const policies: Record<string, Policy> = {};
 
 	for (const entry of dir) {
-		if (!entry.isDirectory()) continue;
+		if (!entry.isDirectory()) {
+			continue;
+		}
 
 		const policyPromise = readPolicyFile(`${path}/${entry.name}`);
 		policyPromise
@@ -61,5 +63,21 @@ export async function readAllPolicies(path = paths.policies): Promise<Record<str
 
 	await Promise.allSettled(promises);
 
-	return policies;
+	// Policies are added to `policies` as they are read, so JSON generated
+	// from this file may appear out of order. Re-iterate through the directory
+	// to build a new object in the correct order, so generated JSON is more
+	// intuitive.
+
+	const orderedPolicies: Record<string, Policy> = {};
+	for (const entry of dir) {
+		if (!entry.isDirectory()) {
+			continue;
+		}
+
+		if (policies[entry.name]) {
+			orderedPolicies[entry.name] = policies[entry.name];
+		}
+	}
+
+	return orderedPolicies;
 }

@@ -4,16 +4,21 @@
 .provenance {
 	display: block;
 	margin: 1em 0;
-}
 
-.provenance__date {
-	display: block;
-
-	@include font-base-18;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .provenance__source {
 	display: block;
+	margin-top: 0.3em;
+	&:first-child {
+		margin-top: 0;
+	}
 
 	@include font-base-18;
 }
@@ -22,8 +27,22 @@
 	@include link;
 }
 
+.provenance__date {
+	display: block;
+	margin-top: 0.3em;
+	&:first-child {
+		margin-top: 0;
+	}
+
+	@include font-base-18;
+}
+
 .provenance__withholdings {
 	display: block;
+	margin-top: 0.3em;
+	&:first-child {
+		margin-top: 0;
+	}
 
 	@include font-base-18;
 }
@@ -42,7 +61,6 @@ summary.provenance__withholdings__summary {
 	vertical-align: middle;
 
 	font-family: $font-icons;
-	font-size: 0.8em;
 
 	.provenance__withholdings--pass &::before {
 		content: $icon-tick;
