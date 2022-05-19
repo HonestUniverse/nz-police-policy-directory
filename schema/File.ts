@@ -15,6 +15,7 @@ export enum FileDocumentType {
 	OIA_RESPONSE_LETTER = 'OIA response letter',
 	CHANGE_NOTE = 'Change note',
 	EXPLANATORY_NOTE = 'Explanatory note',
+	SUPPLEMENTARY_DOCUMENT = 'Supplementary document',
 }
 
 export type File = {
