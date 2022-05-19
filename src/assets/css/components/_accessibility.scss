@@ -27,7 +27,11 @@
 	}
 }
 
-.accessibility__summary__text {}
+.accessibility__summary__label {
+	@include font-base-18b;
+}
+
+.accessibility__summary__rating {}
 
 .accessibility__details {}
 

@@ -1,10 +1,17 @@
 @import "../tools/layout";
 @import "../tools/fonts";
 @import "../tools/palette";
+@import "../tools/use-var";
 
 .footer {
-	margin-top: 2em;
+	margin-top: 5em;
+
+	border-top: 2px solid;
+	@include use-var(border-top-color, --accent, currentColor);
+	padding-top: 1em;
 	padding-bottom: 1em;
+
+	@include contrast-dark;
 
 	@include font-base-16;
 }
