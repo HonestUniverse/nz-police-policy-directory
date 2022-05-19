@@ -7,10 +7,15 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 import * as paths from './util/paths.js';
 
 export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
+	/**
+	 * Generate the JSON file for the directory
+	 */
 	createDirectoryMetadata(src, dst, directory) {
+		const data = Object.values(directory);
+
 		return [new GenerateJsonPlugin(
 			`${dst}.json`,
-			directory,
+			data,
 			null,
 			'\t'
 		)];
