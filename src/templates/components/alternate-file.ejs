@@ -18,14 +18,23 @@
 		<% } %>
 	</div>
 
-	<%- include('accessibility', { accessibility: file.accessibility }); %>
-	<% if (file.modifications) { %>
-		<ul class="file__modifications">
-			<% for (const modification of file.modifications) { %>
-				<li class="file__modifications__item">
-					<%= modification %>
-				</li>
-			<% } %>
-		</ul>
-	<% } %>
+	<div class="file__accessibility">
+		<%- include('accessibility', { accessibility: file.accessibility }); %>
+	</div>
+
+	<div class="file__metadata">
+		<div class="file__original file__original--not-original">
+			<span class="file__original__icon" aria-hidden="true"></span>
+			<span class="file__original__text">Not original file</span>
+		</div>
+		<% if (file.modifications) { %>
+			<ul class="file__modifications">
+				<% for (const modification of file.modifications) { %>
+					<li class="file__modifications__item">
+						<%= modification %>
+					</li>
+				<% } %>
+			</ul>
+		<% } %>
+	</div>
 </div>

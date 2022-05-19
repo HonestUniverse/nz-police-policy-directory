@@ -10,11 +10,14 @@
 
 .policy__title {
 	@include font-heading-40b;
+	margin: 0 0 0.5rem;
 }
 
 .policy__type {
 	display: block;
-	@include font-base-16;
+	margin-bottom: 2rem;
+
+	@include font-base-18;
 }
 
 .policy__other-versions {}
@@ -38,6 +41,9 @@
 
 	&:not([open]) {
 		margin-bottom: 1em;
+	}
+	&[open] {
+		margin-bottom: 2rem;
 	}
 }
 

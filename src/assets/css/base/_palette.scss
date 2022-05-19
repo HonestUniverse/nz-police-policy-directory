@@ -1,37 +1,71 @@
 @import "../theme/palette";
 
 @mixin palette-light {
-	--white: #{$white};
-	--black: #{$black};
+	--bg-primary: #{$bg-primary--light};
+	--col-primary: #{$col-primary--light};
 
-	--grey--light: #{$grey--light};
-	--grey--mid: #{$grey--mid-light};
+	--bg-primary--active: #{$bg-primary--active--light};
+	--col-primary--active: #{$col-primary--active--light};
 
-	--blue--pale: #{$blue--pale};
-	--blue--vivid: #{$blue--vivid};
+	--bg-secondary: #{$bg-secondary--light};
+	--col-secondary: #{$col-secondary--light};
 
-	--yellow--pale: #{$yellow--pale};
+	--bg-brand: #{$bg-brand--light};
+	--col-brand: #{$col-brand--light};
 
-	--red--pale: #{$red--pale};
+	--bg-dark: #{$bg-dark--light};
+	--col-dark: #{$col-dark--light};
+	--accent-dark: #{$accent-dark--light};
+	--link-dark: #{$link-dark--light};
 
-	--link: #{$blue--vivid};
+	--bg-blue: #{$bg-blue--light};
+	--col-blue: #{$col-blue--light};
+
+	--bg-yellow: #{$bg-yellow--light};
+	--col-yellow: #{$col-yellow--light};
+
+	--bg-red: #{$bg-red--light};
+	--col-red: #{$col-red--light};
+
+	--link-base: #{$link-base--light};
+	--link: var(--link-base);
+
+	--accent-base: #{$accent-base--light};
+	--accent: var(--accent-base);
 }
 
 @mixin palette-dark {
-	--white: #{$black};
-	--black: #{$white};
+	--bg-primary: #{$bg-primary--dark};
+	--col-primary: #{$col-primary--dark};
 
-	--grey--light: #{$grey--dark};
-	--grey--mid: #{$grey--mid-dark};
+	--bg-primary--active: #{$bg-primary--active--dark};
+	--col-primary--active: #{$col-primary--active--dark};
 
-	--blue--pale: #{$blue--dim};
-	--blue--vivid: #{$blue--vivid-bright};
+	--bg-secondary: #{$bg-secondary--dark};
+	--col-secondary: #{$col-secondary--dark};
 
-	--yellow--pale: #{$yellow--dim};
+	--bg-brand: #{$bg-brand--dark};
+	--col-brand: #{$col-brand--dark};
 
-	--red--pale: #{$red--dim};
+	--bg-dark: #{$bg-dark--dark};
+	--col-dark: #{$col-dark--dark};
+	--accent-dark: #{$accent-dark--dark};
+	--link-dark: #{$link-dark--dark};
 
-	--link: #{$blue--vivid-bright};
+	--bg-blue: #{$bg-blue--dark};
+	--col-blue: #{$col-blue--dark};
+
+	--bg-yellow: #{$bg-yellow--dark};
+	--col-yellow: #{$col-yellow--dark};
+
+	--bg-red: #{$bg-red--dark};
+	--col-red: #{$col-red--dark};
+
+	--link-base: #{$link-base--dark};
+	--link: var(--link-base);
+
+	--accent-base: #{$accent-base--dark};
+	--accent: var(--accent-base);
 }
 
 :root {

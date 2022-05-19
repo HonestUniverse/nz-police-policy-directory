@@ -1,18 +1,125 @@
-$white: #fff;
-$black: #000;
+////////////////////////////////////
+// Debug/temporary colour palette //
+////////////////////////////////////
 
-$grey--light: #d3d3d3;
-$grey--dark: #1c1c1c;
-$grey--mid-light: #bbb;
-$grey--mid-dark: #444;
+$blue--pale: #c8dbfd !default;
+$blue--dim: #25254e !default;
+$blue--vivid: #0000ff !default;
+$blue--vivid-bright: #8888ff !default;
 
-$blue--pale: #c8dbfd;
-$blue--dim: #25254e;
-$blue--vivid: #0000ff;
-$blue--vivid-bright: #8888ff;
+$yellow--pale: #ffffe0 !default;
+$yellow--dim: #474429 !default;
 
-$yellow--pale: #ffffe0;
-$yellow--dim: #474429;
+$red--pale: #ffd9df !default;
+$red--dim: #411919 !default;
 
-$red--pale: #ffd9df;
-$red--dim: #411919;
+////////////////////
+// Colour palette //
+////////////////////
+
+$white: #ffffff;
+$black: #000000;
+
+$grey--offwhite: #eeeeee;
+$grey--light: #d0d0d0;
+$grey--dark: #333333;
+$grey--darker: #111111;
+
+$school-bus-yellow: #ffda22;
+
+$middle-blue: #78cdd7;
+$cadet-blue: #44a1a0;
+
+$midnight-green-eagle-green: #0d5c63;
+$teal: #247b7b;
+
+
+////////////////
+// Light mode //
+////////////////
+
+// Supplementary colours
+////////////////////////
+$link-base--light: $blue--vivid;
+$accent-base--light: $cadet-blue;
+
+// Contrast pairs
+/////////////////
+// AAA 18.1
+$bg-primary--light: $grey--offwhite;
+$col-primary--light: $black;
+
+// AAA 13.62
+$bg-primary--active--light: $grey--light;
+$col-primary--active--light: $black;
+
+// AAA 21
+$bg-secondary--light: $white;
+$col-secondary--light: $black;
+
+// AA  6.85
+$bg-brand--light: $cadet-blue;
+$col-brand--light: $black;
+
+// AAA 21
+$bg-dark--light: $black;
+$col-dark--light: $white;
+$accent-dark--light: $cadet-blue;
+$link-dark--light: $blue--vivid-bright;
+
+// AAA 15.01
+$bg-blue--light: $blue--pale;
+$col-blue--light: $black;
+
+// AAA 20.63
+$bg-yellow--light: $yellow--pale;
+$col-yellow--light: $black;
+
+// AAA 16.24
+$bg-red--light: $red--pale;
+$col-red--light: $black;
+
+///////////////
+// Dark mode //
+///////////////
+
+// Supplementary colours
+////////////////////////
+$link-base--dark: $blue--vivid-bright;
+$accent-base--dark: $teal;
+
+// Contrast pairs
+/////////////////
+// AAA 18.88
+$bg-primary--dark: $grey--darker;
+$col-primary--dark: $white;
+
+// AAA 12.63
+$bg-primary--active--dark: $grey--dark;
+$col-primary--active--dark: $white;
+
+// AAA 21
+$bg-secondary--dark: $black;
+$col-secondary--dark: $white;
+
+// AA  5.01
+$bg-brand--dark: $teal;
+$col-brand--dark: $white;
+
+// AAA 21
+$bg-dark--dark: $black;
+$col-dark--dark: $white;
+$accent-dark--dark: $teal;
+$link-dark--dark: $blue--vivid-bright;
+
+// AAA 14.45
+$bg-blue--dark: $blue--dim;
+$col-blue--dark: $white;
+
+// AAA 9.87
+$bg-yellow--dark: $yellow--dim;
+$col-yellow--dark: $white;
+
+// AAA 15.24
+$bg-red--dark: $red--dim;
+$col-red--dark: $white;

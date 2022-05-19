@@ -28,7 +28,7 @@
 
 	@include contrast-primary;
 	@include active {
-		@include contrast-secondary;
+		@include contrast-primary--active;
 	}
 	@include transition(background-color);
 
@@ -79,7 +79,7 @@
 
 	@include contrast-primary;
 	@include active {
-		@include contrast-secondary;
+		@include contrast-primary--active;
 	}
 	@include transition(background-color);
 

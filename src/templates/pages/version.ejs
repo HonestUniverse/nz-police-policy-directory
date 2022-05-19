@@ -13,9 +13,14 @@
 
 <article class="policy">
 	<div class="policy__layout">
-		<h1 class="policy__title"><%= policy.title %> <%= version.name %></h1>
+		<h1 class="policy__title"><%= policy.title %></h2>
+		<span class="policy__type"><%= policy.type %></span>
 
-		<%- include('../components/version', { version }); %>
+		<article class="policy__version">
+			<h2 class="policy__version__name"><%= version.name %></h2>
+
+			<%- include('../components/version', { version }); %>
+		</article>
 	</div>
 </article>
 
