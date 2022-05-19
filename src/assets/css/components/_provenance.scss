@@ -13,14 +13,12 @@
 	}
 }
 
-.provenance__date {
-	display: block;
-
-	@include font-base-18;
-}
-
 .provenance__source {
 	display: block;
+	margin-top: 0.3em;
+	&:first-child {
+		margin-top: 0;
+	}
 
 	@include font-base-18;
 }
@@ -29,8 +27,22 @@
 	@include link;
 }
 
+.provenance__date {
+	display: block;
+	margin-top: 0.3em;
+	&:first-child {
+		margin-top: 0;
+	}
+
+	@include font-base-18;
+}
+
 .provenance__withholdings {
 	display: block;
+	margin-top: 0.3em;
+	&:first-child {
+		margin-top: 0;
+	}
 
 	@include font-base-18;
 }
