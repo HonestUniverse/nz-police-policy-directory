@@ -13,21 +13,13 @@
 	<% } %>
 
 	<div class="file__handle">
-		<a href="<%= file.path %><%= file.startingPage ? `#page=${file.startingPage}` : '' %>" target="_blank" class="file__handle__link"><%- include('../helpers/file-accessible-name', { file }); %></a>
+		<a href="<%= file.path %><%= file.startingPage > 1 ? `#page=${file.startingPage}` : '' %>" target="_blank" class="file__handle__link"><%- include('../helpers/file-accessible-name', { file }); %></a>
 		<% if (file.size) { %>
 			<span class="file__handle__size">(<%- include('../helpers/file-size', { size: file.size }); %>)</span>
 		<% } %>
 	</div>
 
 	<%- include('accessibility', { accessibility: file.accessibility }); %>
-
-	<% if (file.alternateFiles) { %>
-		<div class="file__alternate-files">
-			<% for (const alternateFile of file.alternateFiles) { %>
-				<%- include('./alternate-file', { file: alternateFile }); %>
-			<% } %>
-		</div>
-	<% } %>
 
 	<div class="file__licence">
 		<div class="file__licence__handle">Licence:
@@ -74,5 +66,15 @@
 
 	<% for (const prov of provenance) { %>
 		<%- include('provenance', { provenance: prov }); %>
+	<% } %>
+
+	<% if (file.alternateFiles) { %>
+		<div class="file__alternate-files">
+			<h2 class="file__alternate-files__title">Alternate files</h2>
+
+			<% for (const alternateFile of file.alternateFiles) { %>
+				<%- include('./alternate-file', { file: alternateFile }); %>
+			<% } %>
+		</div>
 	<% } %>
 </div>
