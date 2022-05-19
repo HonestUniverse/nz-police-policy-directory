@@ -7,6 +7,9 @@
 	--bg-primary--active: #{$bg-primary--active--light};
 	--col-primary--active: #{$col-primary--active--light};
 
+	--bg-secondary: #{$bg-secondary--light};
+	--col-secondary: #{$col-secondary--light};
+
 	--bg-brand: #{$bg-brand--light};
 	--col-brand: #{$col-brand--light};
 
@@ -37,6 +40,9 @@
 
 	--bg-primary--active: #{$bg-primary--active--dark};
 	--col-primary--active: #{$col-primary--active--dark};
+
+	--bg-secondary: #{$bg-secondary--dark};
+	--col-secondary: #{$col-secondary--dark};
 
 	--bg-brand: #{$bg-brand--dark};
 	--col-brand: #{$col-brand--dark};
