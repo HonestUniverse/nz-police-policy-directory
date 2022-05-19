@@ -27,6 +27,15 @@
 	--link: var(--link-base, #{$link-base--light});
 }
 
+// A secondary background-colour pair to contrast with a primary contrast area
+@mixin contrast-secondary {
+	@include use-var(background-color, --bg-secondary, $bg-secondary--light);
+	@include use-var(color, --col-secondary, $col-secondary--light);
+
+	--accent: var(--accent-base, #{$accent-base--light});
+	--link: var(--link-base, #{$link-base--light});
+}
+
 // Using a branded background colour
 @mixin contrast-brand {
 	@include use-var(background-color, --bg-brand, $bg-brand--light);

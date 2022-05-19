@@ -11,21 +11,24 @@
 		<% } %>
 	<% } %>
 
-	<div class="file__handle">
-		<a href="<%= file.path %><%= file.startingPage > 1 ? `#page=${file.startingPage}` : '' %>" target="_blank" class="file__handle__link"><%- include('../helpers/file-accessible-name', { file }); %></a>
+	<div class="alt-file__handle">
+		<a href="<%= file.path %><%= file.startingPage > 1 ? `#page=${file.startingPage}` : '' %>" target="_blank" class="alt-file__handle__link"><%- include('../helpers/file-accessible-name', { file }); %></a>
 		<% if (file.size) { %>
-			<span class="file__handle__size">(<%- include('../helpers/file-size', { size: file.size }); %>)</span>
+			<span class="alt-file__handle__size">(<%- include('../helpers/file-size', { size: file.size }); %>)</span>
 		<% } %>
 	</div>
 
-	<%- include('accessibility', { accessibility: file.accessibility }); %>
-	<% if (file.modifications) { %>
-		<ul class="file__modifications">
-			<% for (const modification of file.modifications) { %>
-				<li class="file__modifications__item">
-					<%= modification %>
-				</li>
-			<% } %>
-		</ul>
-	<% } %>
+	<div class="alt-file__metadata">
+		<%- include('accessibility', { accessibility: file.accessibility }); %>
+
+		<% if (file.modifications) { %>
+			<ul class="alt-file__modifications">
+				<% for (const modification of file.modifications) { %>
+					<li class="alt-file__modifications__item">
+						<%= modification %>
+					</li>
+				<% } %>
+			</ul>
+		<% } %>
+	</div>
 </div>
