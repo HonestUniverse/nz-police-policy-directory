@@ -36,6 +36,7 @@
 			"files": [
 				{
 					"path": "string",
+					"name": "string",
 					"type": "string enum",
 					"documentType": "Policy",
 					"startingPage": 0,
