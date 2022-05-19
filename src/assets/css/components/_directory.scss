@@ -2,6 +2,7 @@
 @import "../tools/layout";
 @import "../tools/fonts";
 @import "../tools/palette";
+@import "../tools/use-var";
 
 .directory {}
 
@@ -22,4 +23,9 @@
 	@include list-reset;
 }
 
-.directory__item {}
+.directory__item {
+	position: relative;
+
+	border-bottom: 2px solid;
+	@include use-var(border-bottom-color, --accent, currentColor);
+}
