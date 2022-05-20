@@ -44,18 +44,19 @@
 					"original": true,
 					"accessibility": {
 						"text-based": {
-							"value": true
+							"value": true,
+							"notes": ["Some content does not follow a logical reading order."]
 						},
 						"semantics": {
-							"value": "Unknown"
+							"value": false
 						},
 						"alt text": {
-							"value": "Unknown"
+							"value": false
 						},
 						"unwatermarked": {
-							"value": "Unknown"
+							"value": true
 						},
-						"rating": "Undetermined"
+						"rating": "Poor"
 					},
 					"documentType": "Policy"
 				}
