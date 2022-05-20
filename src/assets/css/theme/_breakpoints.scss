@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $breakpoints: (
 	"xs": 420px,
 	"s": 768px,
@@ -5,3 +7,45 @@ $breakpoints: (
 	"l": 1440px,
 	"xl": 1680px,
 );
+
+///////////////////////
+// Breakpoint Mixins //
+///////////////////////
+
+/// Use a media query for width >= the specified size
+/// @param {string | length} $from - A size label or size to use for the media query
+@mixin bp-from($from) {
+	$fromVal: map.get($breakpoints, $from);
+	@if (not $fromVal) {
+		$fromVal: $from;
+	}
+
+	@media (min-width: $fromVal) {
+		@content;
+	}
+}
+
+/// Use a media query for widths <= the specified size
+/// @param {string | length} $to - A size label or size to use for the media query
+@mixin bp-to($to) {
+	$toVal: map.get($breakpoints, $to);
+	@if (not $toVal) {
+		$toVal: $to;
+	}
+
+	@media (max-width: $toVal) {
+		@content;
+	}
+}
+
+/// Use a media query for widths between the specified sizes
+/// @param {string | length} $from - A size label or size to use for the lower bound of the media query
+/// @param {string | length} $to - A size label or size to use for the upper bound of the media query
+@mixin bp-between($from, $to) {
+	@include bp-from($from) {
+		@include bp-to($to) {
+			@content;
+		}
+	}
+}
+

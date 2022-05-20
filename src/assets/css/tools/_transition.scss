@@ -1,10 +1,11 @@
 @use "sass:string";
 @use "sass:list";
 
-/**
- * Split a string into a list of strings.
- * https://stackoverflow.com/questions/32376461/how-to-split-a-string-into-two-lists-of-numbers-in-sass#answer-42295154
- */
+/// Split a string into a list of strings.
+/// @link https://stackoverflow.com/questions/32376461/how-to-split-a-string-into-two-lists-of-numbers-in-sass#answer-42295154
+/// @param {string} $string - A string to split
+/// @param {string} $separator [", "] - The separator to split on
+/// @return {string} A list containing parts of the input string
 @function string-split($string, $separator: ", ") {
 	$separator-length: string.length($separator);
 
@@ -33,22 +34,29 @@
 	@return $list;
 }
 
-/**
- * Converts a list of property name strings to a comma-separated
- * list that can be used as the value of a `transition` property.
- */
-@function props-to-transitions($props, $duration, $easing, $delay) {
-	$transitions: string.unquote(list.nth($props, 1)) $duration $easing $delay;
+/// Converts a list of property name strings to a comma-separated list that can be used as the value of a `transition` property.
+/// @param {string} $properties - One or more properties to transition, separated by ", "
+/// @param {time} $duration - The transition duration
+/// @param {string} $easing - The transition easing
+/// @param {time} $delay - The transition delay
+/// @return {string} A string that can be applied to the `transition` property
+@function props-to-transitions($properties, $duration, $easing, $delay) {
+	$transitions: string.unquote(list.nth($properties, 1)) $duration $easing $delay;
 
-	@if (list.length($props) >= 2) {
-		@for $i from 2 through list.length($props) {
-			$transitions: $transitions, string.unquote(list.nth($props, $i)) $duration $easing $delay;
+	@if (list.length($properties) >= 2) {
+		@for $i from 2 through list.length($properties) {
+			$transitions: $transitions, string.unquote(list.nth($properties, $i)) $duration $easing $delay;
 		}
 	}
 
 	@return $transitions;
 }
 
+/// Apply a standardised transitions
+/// @param {string} $properties [all] - The properties to transition. If multiple, separate them by ", "
+/// @param {time} $duration [0.3s] - The transition duration
+/// @param {string} $easing [ease-in-out] - The transition easing
+/// @param {time} $delay [0s] - The transition delay
 @mixin transition($properties: all, $duration: 0.3s, $easing: ease-in-out, $delay: 0s) {
 	$props: string-split($properties);
 	$transitions: props-to-transitions($props, $duration, $easing, $delay);
