@@ -1,5 +1,3 @@
-@import "../theme/layout";
-
 @mixin layout-wrapper-flush($width: $layout-max-width) {
 	max-width: $width;
 	margin-left: auto;

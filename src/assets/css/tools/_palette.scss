@@ -1,6 +1,3 @@
-@import "../theme/palette";
-@import "use-var";
-
 @mixin link {
 	@include use-var(color, --link);
 
