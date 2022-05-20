@@ -43,4 +43,27 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 			}),
 		];
 	},
+
+	/**
+	 * Generate a page reporting which content needs attention
+	 */
+	createContentReportPage(src, dst, directory) {
+		return [
+			new HtmlWebpackPlugin({
+				filename: `${dst}/content-report.html`,
+				template: TemplateCustomizer({
+					htmlLoaderOption: {
+						sources: false,
+					},
+					templatePath: `${paths.templates}/pages/content-report.ejs`,
+					templateEjsLoaderOption: {
+						data: {
+							directory,
+						},
+					},
+				}),
+				chunks: ['priority', 'main', 'enhancements'],
+			}),
+		];
+	},
 };
