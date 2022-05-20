@@ -24,7 +24,7 @@ enum MenuState {
 	CLOSED,
 }
 
-/**
+/*
  * This component follows the "menu" behaviour described in the
  * WAI-ARIA Authoring Practices 1.2 documentation:
  * https://www.w3.org/TR/wai-aria-practices-1.2/#menu
