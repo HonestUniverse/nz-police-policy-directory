@@ -5,11 +5,11 @@
 %>
 
 <%
-	const [keys, policies] = Object.keys(directory).sort().reduce((prev, key) => {
-		prev[0].push(key);
-		prev[1].push(directory[key]);
-		return prev;
-	}, [[], []]);
+	const keys = Object.keys(directory).sort();
+	const policies = [];
+	for (const key of keys) {
+		policies.push(directory[key]);
+	}
 %>
 
 <%- include('../layout/head', { title: 'Policy Directory' }); %>
