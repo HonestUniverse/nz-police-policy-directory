@@ -1,7 +1,5 @@
 @use "sass:map";
 
-@import "../theme/breakpoints";
-
 @mixin bp-from($from) {
 	$fromVal: map.get($breakpoints, $from);
 	@if (not $fromVal) {
