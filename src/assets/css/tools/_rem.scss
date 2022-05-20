@@ -1,9 +1,7 @@
 @use "sass:math";
 
-/**
- * Convert a value in `px` to an equivalent value in `rem`,
- * assuming a default base font size of `16px`
- */
+/// Convert a value in `px` to an equivalent value in `rem`, assuming a default base font size of `16px`
+/// @param {length} $value - A `px` value to convert to `rem`
 @function rem($value) {
 	$value-units: $value * 0 + 1;
 	$value-unitless: math.div($value, $value-units);

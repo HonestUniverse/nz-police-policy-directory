@@ -1,6 +1,4 @@
-/**
- * For applying "active" states based on a consistent set of pseudoclasses
- */
+/// For applying "active" states based on a consistent set of pseudoclasses
 @mixin active {
 	&:hover,
 	&:focus-visible {
