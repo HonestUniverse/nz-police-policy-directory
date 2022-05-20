@@ -53,7 +53,29 @@
 						},
 						"rating": "Undetermined"
 					},
-					"documentType": "Policy"
+					"documentType": "Policy",
+					"alternateFiles": [{
+						"name": "Text-Based/Searchable",
+						"path": "unnamed-version-1/Hanna Mark 11.7.2018 NZ Disciplinary Process Guidelines.OCR.pdf",
+						"type": "application/pdf",
+						"size": 1822160,
+						"accessibility": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": true
+							},
+							"unwatermarked": {
+								"value": true
+							},
+							"rating": "Poor"
+						},
+						"modifications": ["OCR has been performed on the text, with manual typo fixes."]
+					}]
 				}
 			]
 		}
