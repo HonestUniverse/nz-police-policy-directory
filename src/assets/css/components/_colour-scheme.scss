@@ -24,6 +24,11 @@
 	@include active {
 		@include contrast-primary--active;
 	}
+	&:focus-visible {
+		// Bring it in front of the menu to ensure its outline can display on top
+		position: relative;
+		z-index: 1;
+	}
 	@include transition(background-color);
 
 	border-radius: 0.5em;
@@ -74,6 +79,8 @@
 	@include contrast-primary;
 	@include active {
 		@include contrast-primary--active;
+	}
+	&:focus-visible {
 		// Bring it on top of its positioned subsequent sibling so its focus outline can show in full
 		z-index: 1;
 	}
