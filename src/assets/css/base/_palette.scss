@@ -1,5 +1,3 @@
-@import "../theme/palette";
-
 @mixin palette-light {
 	--bg-primary: #{$bg-primary--light};
 	--col-primary: #{$col-primary--light};
