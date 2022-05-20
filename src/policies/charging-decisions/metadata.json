@@ -39,15 +39,12 @@
 							"value": true
 						},
 						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
+							"value": false
 						},
 						"unwatermarked": {
-							"value": "Unknown"
+							"value": true
 						},
-						"rating": "Undetermined"
+						"rating": "Poor"
 					},
 					"documentType": "Policy"
 				}
