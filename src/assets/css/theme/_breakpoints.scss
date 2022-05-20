@@ -1,5 +1,6 @@
 @use "sass:map";
 
+/// A map of breakpoint labels to sizes, for use with `bp-` mixins
 $breakpoints: (
 	"xs": 420px,
 	"s": 768px,
