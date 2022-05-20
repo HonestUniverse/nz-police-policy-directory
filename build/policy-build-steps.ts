@@ -1,6 +1,5 @@
 import type { PolicyBuildStep } from './BuildStep.js';
 
-
 import CopyPlugin from 'copy-webpack-plugin';
 import GenerateJsonPlugin from 'generate-json-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -10,8 +9,12 @@ import { toUrlSegment } from './util/to-url-segment.js';
 import { makeRootRelative } from './util/make-root-relative.js';
 import * as paths from './util/paths.js';
 
+import { FileDocumentType } from '../schema/File.js';
+
 import type { File as PolicyFile } from '../schema/File.js';
 import type { AlternateFile } from '../schema/AlternateFile.js';
+import type { Policy } from '../schema/Policy.js';
+import type { Version } from '../schema/PolicyVersion.js';
 
 /**
  * Build steps for a particular policy.
@@ -102,19 +105,17 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 		const plugins: GenerateJsonPlugin[] = [];
 
 		for (const version of policy.versions) {
-			const versionName = version.name;
-			const versionPathName = toUrlSegment(versionName);
-			const versionDst = `${dst}/${versionPathName}`;
+			plugins.push(createVersionMetadata(dst, policy, version));
+		}
 
-			const singleVersionPolicy = JSON.parse(JSON.stringify(policy));
-			singleVersionPolicy.versions = singleVersionPolicy.versions.filter((version) => version.name === versionName);
+		const latest = policy.versions.find((version) => {
+			return version.files.some((file) => {
+				return file.documentType === FileDocumentType.POLICY && !file.incomplete;
+			});
+		});
 
-			plugins.push(new GenerateJsonPlugin(
-				`${versionDst}.json`,
-				singleVersionPolicy,
-				null,
-				'\t'
-			));
+		if (latest) {
+			plugins.push(createVersionMetadata(dst, policy, latest, true));
 		}
 
 		return plugins;
@@ -127,28 +128,72 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 		const plugins: ReturnType<PolicyBuildStep> = [];
 
 		for (const version of policy.versions) {
-			const versionName = version.name;
-			const versionPathName = toUrlSegment(versionName);
-			const versionDst = `${dst}/${versionPathName}`;
+			plugins.push(createVersionPlugin(dst, policy, version));
+		}
 
-			plugins.push(new HtmlWebpackPlugin({
-				filename: `${versionDst}/index.html`,
-				template: TemplateCustomizer({
-					htmlLoaderOption: {
-						sources: false,
-					},
-					templatePath: `${paths.templates}/pages/version.ejs`,
-					templateEjsLoaderOption: {
-						data: {
-							policy,
-							version,
-						},
-					},
-				}),
-				chunks: ['priority', 'main', 'enhancements'],
-			}));
+		const latest = policy.versions.find((version) => {
+			return version.files.some((file) => {
+				return file.documentType === FileDocumentType.POLICY && !file.incomplete;
+			});
+		});
+
+		if (latest) {
+			plugins.push(createVersionPlugin(dst, policy, latest, true));
 		}
 
 		return plugins;
 	},
 };
+
+function createVersionMetadata(
+	dst: string,
+	policy: Policy,
+	version: Version,
+	latest: boolean = false
+) {
+	const versionName = version.name;
+	const versionPathName = toUrlSegment(versionName);
+	const versionDst = `${dst}/${versionPathName}`;
+
+	const singleVersionPolicy = JSON.parse(JSON.stringify(policy));
+	singleVersionPolicy.versions = singleVersionPolicy.versions.filter(
+		(version) => version.name === versionName
+	);
+
+	return new GenerateJsonPlugin(
+		`${latest ? `${dst}/latest` : versionDst}.json`,
+		singleVersionPolicy,
+		null,
+		'\t'
+	);
+}
+
+function createVersionPlugin(
+	dst: string,
+	policy: Policy,
+	version: Version,
+	latest: boolean = false
+): HtmlWebpackPlugin {
+	const versionName = version.name;
+	const versionPathName = toUrlSegment(versionName);
+	const versionDst = `${dst}/${versionPathName}`;
+
+	return new HtmlWebpackPlugin({
+		filename: latest ? `${dst}/latest/index.html` : `${versionDst}/index.html`,
+		template: TemplateCustomizer({
+			htmlLoaderOption: {
+				sources: false,
+			},
+			templatePath: `${paths.templates}/pages/version.ejs`,
+			templateEjsLoaderOption: {
+				data: {
+					policy,
+					version,
+					latest,
+					versionDst,
+				},
+			},
+		}),
+		chunks: ['priority', 'main', 'enhancements'],
+	});
+}
