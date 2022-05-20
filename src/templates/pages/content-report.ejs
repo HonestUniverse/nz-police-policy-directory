@@ -14,16 +14,21 @@
 	function needsOCR(policy) {
 		for (const version of policy.versions) {
 			for (const file of version.files) {
+				let fileNeedsOCR = false;
 				if (file.accessibility['text-based']?.value === false) {
-					return true;
+					fileNeedsOCR = true;
 				}
 
-				if (file.alternateFiles) {
+				if (fileNeedsOCR && file.alternateFiles) {
 					for (const altFile of file.alternateFiles) {
-						if (altFile.accessibility['text-based']?.value === false) {
-							return true;
+						if (altFile.accessibility['text-based']?.value === true) {
+							fileNeedsOCR = false;
 						}
 					}
+				}
+
+				if (fileNeedsOCR) {
+					return true;
 				}
 			}
 		}
