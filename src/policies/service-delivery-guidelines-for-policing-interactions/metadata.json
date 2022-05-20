@@ -37,7 +37,7 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Partial",
+						"rating": "Okay",
 						"text-based": {
 							"value": true
 						},
@@ -63,7 +63,7 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Fail",
+						"rating": "Bad",
 						"text-based": {
 							"value": false
 						},
@@ -90,7 +90,7 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Fail",
+						"rating": "Bad",
 						"text-based": {
 							"value": false
 						},
@@ -117,7 +117,7 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Fail",
+						"rating": "Bad",
 						"text-based": {
 							"value": false
 						},

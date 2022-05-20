@@ -7,9 +7,10 @@
 			"description": "An at-a-glance rating for the document's accessibility",
 			"type": "string",
 			"enum": [
-				"Pass",
-				"Partial",
-				"Fail",
+				"Good",
+				"Okay",
+				"Poor",
+				"Bad",
 				"Undetermined"
 			]
 		},
