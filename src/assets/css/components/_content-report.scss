@@ -1,0 +1,13 @@
+.content-report {}
+
+.content-report__section {}
+
+.content-report__section__summary {
+	@supports (selector(details)) {
+		cursor: pointer;
+	}
+
+	@include font-heading-24b;
+}
+
+.content-report__section__contents {}
