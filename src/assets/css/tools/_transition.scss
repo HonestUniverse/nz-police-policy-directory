@@ -66,4 +66,7 @@
 	@media (prefers-reduced-motion: reduce) {
 		transition: none;
 	}
+	.no-transitions & {
+		transition: none;
+	}
 }
