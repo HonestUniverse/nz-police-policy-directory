@@ -119,7 +119,7 @@ function storageEvent(this: Window, e: StorageEvent) {
 	if (e.key === colourSchemeKey) {
 		const { newValue } = e;
 		if (isColourScheme(newValue)) {
-			syncState(newValue);
+			syncState(newValue, false);
 		}
 	}
 }
