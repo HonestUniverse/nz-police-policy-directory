@@ -59,13 +59,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Issue motivated and protests groups' intelligence\" covers pages 28-35 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]

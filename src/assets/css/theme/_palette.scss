@@ -205,6 +205,11 @@ $col-red--dark: $white;
 	text-decoration: underline;
 }
 
+/// Standard link colour styling
+@mixin link-colour {
+	@include use-var(color, --link);
+}
+
 // These "contrast" mixins can be used to apply pairs of background and text colours that have sufficient contrast.
 
 /// The main background/colour pair

@@ -46,6 +46,7 @@
 
 .file__handle__size {
 	@include font-base-16;
+	white-space: nowrap;
 }
 
 .file__notices {

@@ -53,13 +53,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Private Investigators and Security Consultants requests to Police for assistance\" covers pages 28-41 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]

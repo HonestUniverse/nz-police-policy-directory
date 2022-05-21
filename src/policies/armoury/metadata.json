@@ -60,30 +60,56 @@
 						}
 					],
 					"documentType": "Policy",
-					"alternateFiles": [{
-						"path": "version-12-0/Armoury.Redacted.OCR.pdf",
-						"type": "application/pdf",
-						"size": 283147,
-						"accessibility": {
-							"text-based": {
-								"value": true
+					"alternateFiles": [
+						{
+							"path": "version-12-0/Armoury.Redacted.OCR.pdf",
+							"type": "application/pdf",
+							"size": 283147,
+							"accessibility": {
+								"text-based": {
+									"value": true
+								},
+								"semantics": {
+									"value": "Partial"
+								},
+								"alt text": {
+									"value": true
+								},
+								"unwatermarked": {
+									"value": true
+								},
+								"rating": "Okay"
 							},
-							"semantics": {
-								"value": "Partial"
-							},
-							"alt text": {
-								"value": true
-							},
-							"unwatermarked": {
-								"value": true
-							},
-							"rating": "Okay"
+							"modifications": [
+								"OCR has been performed on the text, with manual typo fixes.",
+								"Automatic semantic tagging was used."
+							]
 						},
-						"modifications": [
-							"OCR has been performed on the text, with manual typo fixes.",
-							"Automatic semantic tagging was used."
-						]
-					}]
+						{
+							"path": "version-12-0/Armoury.Redacted.html",
+							"type": "text/html",
+							"size": 14699,
+							"accessibility": {
+								"text-based": {
+									"value": true
+								},
+								"semantics": {
+									"value": true
+								},
+								"alt text": {
+									"value": true
+								},
+								"unwatermarked": {
+									"value": true
+								},
+								"rating": "Good"
+							},
+							"modifications": [
+								"OCR has been performed on the text, with manual typo fixes.",
+								"The text was copied into an HTML file, with semantics added and typos fixed manually."
+							]
+						}
+					]
 				},
 				{
 					"path": "version-12-0/Roundill Jeremy 16 8540 4 reply.pdf",
