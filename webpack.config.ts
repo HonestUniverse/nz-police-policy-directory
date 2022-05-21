@@ -18,9 +18,12 @@ async function getConfig(env: Record<string, unknown>) {
 		mode: process.env.MODE === 'development' ? 'development' : 'production',
 		entry: {
 			main: `${paths.assetsFull}/js/main.ts`,
-			styles: `${paths.assetsFull}/js/styles.ts`,
 			enhancements: `${paths.assetsFull}/js/enhancements.ts`,
 			priority: `${paths.assetsFull}/js/priority.ts`,
+
+			style: `${paths.assetsFull}/js/style.ts`,
+			'style-directory': `${paths.assetsFull}/js/style-directory.ts`,
+			'style-document': `${paths.assetsFull}/js/style-document.ts`,
 		},
 		output: {
 			path: paths.distFull,
@@ -69,7 +72,11 @@ async function getConfig(env: Record<string, unknown>) {
 				body: ['priority'],
 				preload: ['priority'],
 				module: ['enhancements'],
-				remove: ['styles'],
+				remove: [
+					'style',
+					'style-directory',
+					'style-document',
+				],
 			}),
 		],
 	};
