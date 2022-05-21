@@ -6,6 +6,7 @@ import type { AlternateFile } from './AlternateFile.js';
 
 export enum FileType {
 	DOC = 'application/msword',
+	HTML = 'text/html',
 	PDF = 'application/pdf',
 	TXT = 'text/plain',
 }
