@@ -1,21 +1,5 @@
 .policy {}
 
-.policy__layout {
-	@include layout-wrapper;
-}
-
-.policy__title {
-	@include font-heading-40b;
-	margin: 0 0 0.5rem;
-}
-
-.policy__type {
-	display: block;
-	margin-bottom: 2rem;
-
-	@include font-base-18;
-}
-
 .policy__other-versions {}
 
 .policy__other-versions__heading {
