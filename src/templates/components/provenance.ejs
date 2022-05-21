@@ -1,3 +1,9 @@
+<%##
+	locals: {
+		provenance: Provenance,
+	}
+%>
+
 <div class="provenance">
 	<%
 		const withholdings = provenance.withholdings || provenance.oiaRequest?.withholdings;
@@ -28,24 +34,34 @@
 			<% if (provenance.source) { %>
 				by <%= provenance.source %>
 			<% } %>
-
-			<% if (date) { %>
-				<%- include('subcomponents/provenance-date', { date, dateType }); %>
-			<% } %>
-			<% if (withholdings) { %>
-				<%- include('../components/withholdings', { withholdings }) %>
-			<% } %>
 		</div>
+
+		<% if (date) { %>
+			<div class="provenance__date">
+				<%- include('subcomponents/provenance-date', { date, dateType }); %>
+			</div>
+		<% } %>
+
+		<% if (withholdings) { %>
+			<div class="provenance__withholdings">
+				<%- include('../components/withholdings', { withholdings }) %>
+			</div>
+		<% } %>
 	<% } else {
 		if (provenance.source) { %>
 			<div class="provenance__source">Sourced from <%= provenance.source %></div>
 		<% } %>
 
 		<% if (date) { %>
-			<%- include('subcomponents/provenance-date', { date, dateType }); %>
+			<div class="provenance__date">
+				<%- include('subcomponents/provenance-date', { date, dateType }); %>
+				</div>
 		<% } %>
+
 		<% if (withholdings) { %>
-			<%- include('../components/withholdings', { withholdings }) %>
+			<div class="provenance__withholdings">
+				<%- include('../components/withholdings', { withholdings }) %>
+			</div>
 		<% } %>
 	<% } %>
 </div>

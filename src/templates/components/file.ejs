@@ -2,16 +2,37 @@
 	locals: {
 		file: File,
 		version: PolicyVersion,
+		policy: Policy,
+	}
+%>
+
+<%
+	const notices = file.notices?.concat() || [];
+
+	if (file.startingPage > 1) {
+		const message = `${(() => {
+			if (!file.documentType || file.documentType === 'Policy') {
+				if (file.name) {
+					// Named policy documents should use their name
+					return `"${file.name}"`;
+				} else {
+					// Unnamed policy documents use the policy name
+					return `"${policy.title}"`;
+				}
+			} else {
+				// Secondary documents use a generic term
+				return `This document`;
+			}
+		})()} starts on page ${file.startingPage}.`;
+
+		notices.push({
+			type: 'info',
+			message,
+		});
 	}
 %>
 
 <div class="file">
-	<% if (file.notices) { %>
-		<% for (const notice of file.notices) { %>
-			<%- include('notice', { notice }); %>
-		<% } %>
-	<% } %>
-
 	<div class="file__handle">
 		<a href="<%= file.path %><%= file.startingPage > 1 ? `#page=${file.startingPage}` : '' %>" target="_blank" class="file__handle__link"><%- include('../helpers/file-accessible-name', { file }); %></a>
 		<% if (file.size) { %>
@@ -19,60 +40,90 @@
 		<% } %>
 	</div>
 
-	<%- include('accessibility', { accessibility: file.accessibility }); %>
+	<% if (notices) { %>
+		<div class="file__notices">
+			<% for (const notice of notices) { %>
+				<%- include('notice', { notice }); %>
+			<% } %>
+		</div>
+	<% } %>
+
+	<div class="file__accessibility">
+		<%- include('accessibility', { accessibility: file.accessibility }); %>
+	</div>
+
+	<div class="file__metadata">
+		<div class="file__licence" data-licence-name="<%= file.licence.name %>">
+			<div class="file__licence__handle">
+				<span class="file__licence__handle__icon" aria-hidden="true"></span>
+
+				Licence:
+				<% if (file.licence.url) { %>
+					<a
+						<%- include('../helpers/href-with-target', { href: file.licence.url }) %>
+						class="file__licence__handle__link"
+					><%= file.licence.name %></a>
+				<% } else { %>
+					<%= file.licence.name %>
+				<% } %>
+			</div>
+
+			<% if (file.licence.notices) { %>
+				<div class="file__licence__notices">
+					<% for (const notice of file.licence.notices) { %>
+						<%- include('notice', { notice }); %>
+					<% } %>
+				</div>
+			<% } %>
+		</div>
+
+		<% if (file.incomplete) { %>
+			<div class="file__incomplete">
+				<span class="file__incomplete__icon" aria-hidden="true"></span>
+				<span class="file__incomplete__text">Incomplete file</span>
+			</div>
+		<% } %>
+
+		<% if (file.original) { %>
+			<div class="file__original file__original--original">
+				<span class="file__original__icon" aria-hidden="true"></span>
+				<span class="file__original__text">Original file</span>
+			</div>
+		<% } else { %>
+			<div class="file__original file__original--not-original">
+				<span class="file__original__icon" aria-hidden="true"></span>
+				<span class="file__original__text">Not original file</span>
+			</div>
+		<% } %>
+
+		<% if (file.modifications) { %>
+			<ul class="file__modifications">
+				<% for (const modification of file.modifications) { %>
+					<li class="file__modifications__item">
+						<%= modification %>
+					</li>
+				<% } %>
+			</ul>
+		<% } %>
+	</div>
+
+	<div class="file__provenance">
+		<%
+			const provenance = file.provenance || version.provenance;
+		%>
+
+		<% for (const prov of provenance) { %>
+			<%- include('provenance', { provenance: prov }); %>
+		<% } %>
+		</div>
 
 	<% if (file.alternateFiles) { %>
 		<div class="file__alternate-files">
+			<h3 class="file__alternate-files__title">Alternate files</h3>
+
 			<% for (const alternateFile of file.alternateFiles) { %>
 				<%- include('./alternate-file', { file: alternateFile }); %>
 			<% } %>
 		</div>
-	<% } %>
-
-	<div class="file__licence">
-		<div class="file__licence__handle">Licence:
-			<% if (file.licence.url) { %>
-				<a
-					<%- include('../helpers/href-with-target', { href: file.licence.url }) %>
-					class="file__licence__handle__link"
-				><%= file.licence.name %></a>
-			<% } else { %>
-				<%= file.licence.name %>
-			<% } %>
-		</div>
-
-		<% if (file.licence.notices) { %>
-			<% for (const notice of file.licence.notices) { %>
-				<%- include('notice', { notice }); %>
-			<% } %>
-		<% } %>
-	</div>
-
-	<% if (file.incomplete) { %>
-		<div class="file__incomplete">Incomplete file</div>
-	<% } %>
-
-	<% if (file.original) { %>
-		<div class="file__original">Original file</div>
-	<% } else { %>
-		<div class="file__original">Not original file</div>
-	<% } %>
-
-	<% if (file.modifications) { %>
-		<ul class="file__modifications">
-			<% for (const modification of file.modifications) { %>
-				<li class="file__modifications__item">
-					<%= modification %>
-				</li>
-			<% } %>
-		</ul>
-	<% } %>
-
-	<%
-		const provenance = file.provenance || version.provenance;
-	%>
-
-	<% for (const prov of provenance) { %>
-		<%- include('provenance', { provenance: prov }); %>
 	<% } %>
 </div>

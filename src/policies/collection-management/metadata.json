@@ -56,13 +56,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Collection management\" covers pages 96-98 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]

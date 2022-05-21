@@ -1,5 +1,3 @@
-@import "../tools/fonts";
-
 .accessibility {}
 
 .accessibility__summary {
@@ -13,13 +11,16 @@
 .accessibility__summary__icon {
 	font-family: $font-icons;
 
-	.accessibility__summary--pass &::before {
+	.accessibility__summary--good &::before {
 		content: $icon-tick;
 	}
-	.accessibility__summary--partial &::before {
+	.accessibility__summary--okay &::before {
+		content: $icon-info;
+	}
+	.accessibility__summary--poor &::before {
 		content: $icon-warning;
 	}
-	.accessibility__summary--fail &::before {
+	.accessibility__summary--bad &::before {
 		content: $icon-cross;
 	}
 	.accessibility__summary--undetermined &::before {
@@ -27,7 +28,11 @@
 	}
 }
 
-.accessibility__summary__text {}
+.accessibility__summary__label {
+	@include font-base-18b;
+}
+
+.accessibility__summary__rating {}
 
 .accessibility__details {}
 

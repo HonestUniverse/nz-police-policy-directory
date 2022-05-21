@@ -1,0 +1,13 @@
+<%##
+	locals: {
+		paths: {
+			policies: string,
+		},
+	}
+%>
+
+<%- include('../layout/head', { title: 'Directory' }); %>
+
+<a href="<%= paths.policies %>" class="directory__section-link">Policies</a>
+
+<%- include('../layout/foot'); %>

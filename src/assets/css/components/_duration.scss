@@ -1,20 +1,19 @@
 @use "sass:math";
 
-@import "../tools/breakpoints";
-
 $duration-bp: "s";
 
 .duration {
 	@include list-reset;
 	display: flex;
 	align-items: stretch;
+	justify-content: center;
 
 	@include bp-to($duration-bp) {
 		flex-direction: column;
 		align-items: center;
 	}
 
-	margin: 1em 0;
+	margin: 2em 0;
 }
 
 $duration-sep-length: 2ch;
@@ -37,7 +36,6 @@ $duration-sep-offset: calc(100% + #{$duration-sep-gap});
 		content: "";
 		position: absolute;
 
-		// TODO: Accent colour
 		@include use-var(background-color, --accent, currentColor);
 	}
 
@@ -49,6 +47,9 @@ $duration-sep-offset: calc(100% + #{$duration-sep-gap});
 
 	@include bp-to($duration-bp) {
 		margin-bottom: $duration-sep-margin;
+		&:last-child {
+			margin-bottom: 0;
+		}
 		&::after {
 			top: $duration-sep-offset;
 			left: calc(50% - #{math.div($duration-sep-thickness, 2)});
@@ -59,6 +60,9 @@ $duration-sep-offset: calc(100% + #{$duration-sep-gap});
 	}
 	@include bp-from($duration-bp) {
 		margin-right: $duration-sep-margin;
+		&:last-child {
+			margin-right: 0;
+		}
 		&::after {
 			top: calc(0.5em - #{math.div($duration-sep-thickness, 2)});
 			left: $duration-sep-offset;

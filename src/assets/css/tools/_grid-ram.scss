@@ -1,0 +1,5 @@
+/// For applying the "RAM" pattern of columns for CSS grid
+/// @param {length} $min-width - The minimum width of each column
+@mixin grid-ram($min-width) {
+	grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+}
