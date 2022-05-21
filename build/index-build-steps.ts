@@ -27,7 +27,31 @@ export const indexBuildSteps: Record<string, BuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements'],
+				chunks: ['priority', 'main', 'enhancements', 'styles'],
+			}),
+		];
+	},
+
+	/**
+	 * Generate the HTML for the 404 page
+	 */
+	create404Page(src, dst, directory) {
+		return [
+			new HtmlWebpackPlugin({
+				filename: `${dst}/404.html`,
+				template: TemplateCustomizer({
+					htmlLoaderOption: {
+						sources: false,
+					},
+					templatePath: `${paths.templates}/pages/error.ejs`,
+					templateEjsLoaderOption: {
+						data: {
+							error: 404,
+							errorString: "Page Not Found.",
+						},
+					},
+				}),
+				chunks: ['priority', 'main', 'enhancements', 'styles'],
 			}),
 		];
 	},

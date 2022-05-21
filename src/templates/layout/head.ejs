@@ -1,6 +1,15 @@
 <%##
 	locals: {
 		title: string,
+		h1?: string,
+		subtitle?: string,
+		backLink?: boolean,
+	}
+%>
+
+<%
+	if (!locals.h1) {
+		locals.h1 = locals.title;
 	}
 %>
 
@@ -102,4 +111,21 @@
 			</div>
 		</header>
 
-		<main>
+		<main class="page">
+			<div class="page__layout">
+				<header class="page__head">
+					<div class="page__head__layout">
+						<% if (locals.backLink) { %>
+							<a href="../" class="page__head__back-link" title="Back to parent page">
+								<span class="page__head__back-link__icon" aria-hidden="true"></span>
+							</a>
+						<% } %>
+						<h1 class="page__title"><%= h1 %></h1>
+
+						<% if (locals.subtitle) { %>
+							<span class="page__subtitle"><%= subtitle %></span>
+						<% } %>
+					</div>
+				</header>
+
+				<div class="page__body">
