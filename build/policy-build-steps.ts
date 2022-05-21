@@ -74,13 +74,13 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 		const plugins: HtmlWebpackPlugin[] = [];
 
 		for (const version of policy.versions) {
-			for (const file of version.files) {
-				if (file.alternateFiles) {
-					for (const altFile of file.alternateFiles) {
-						if (altFile.type === 'text/html') {
-							const fileDst = getFileDst(dst, altFile, version);
+			for (const parentFile of version.files) {
+				if (parentFile.alternateFiles) {
+					for (const file of parentFile.alternateFiles) {
+						if (file.type === 'text/html') {
+							const fileDst = getFileDst(dst, file, version);
 
-							const documentBuffer = await readFile(`${src}/${altFile.path}`);
+							const documentBuffer = await readFile(`${src}/${file.path}`);
 							const document = documentBuffer.toString();
 
 							plugins.push(new HtmlWebpackPlugin({
@@ -93,6 +93,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 									templateEjsLoaderOption: {
 										data: {
 											document,
+											parentFile,
 											version,
 											policy,
 										},
@@ -102,7 +103,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 							}));
 
 							// Update file.path to ensure the build HTML points to the correct place
-							makeFilePathRootRelative(dst, altFile, version);
+							makeFilePathRootRelative(dst, file, version);
 						}
 					}
 				}
