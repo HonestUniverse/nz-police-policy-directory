@@ -17,6 +17,7 @@
 			"type": "string",
 			"enum": [
 				"application/msword",
+				"text/html",
 				"application/pdf",
 				"text/plain"
 			]
@@ -63,6 +64,10 @@
 		}
 	},
 	"required": [
+		"path",
+		"type",
+		"size",
+		"accessibility",
 		"modifications"
 	],
 	"additionalProperties": false

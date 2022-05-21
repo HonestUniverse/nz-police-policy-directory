@@ -1,5 +1,5 @@
 <%##
-	{
+	locals: {
 		href: string,
 	}
 %>href="<%= href %>"<% if (/^https?:/.test(href)) { %> target="_blank"<% } %>

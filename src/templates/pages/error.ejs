@@ -1,0 +1,16 @@
+<%#
+	locals: {
+		error: number,
+		errorString: string,
+	}
+%>
+
+<%- include('../layout/head', {
+	title: error,
+}); %>
+
+<div class="content">
+	<p><%- errorString %></p>
+</div>
+
+<%- include('../layout/foot'); %>

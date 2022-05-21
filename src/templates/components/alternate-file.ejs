@@ -4,4 +4,37 @@
 	}
 %>
 
-<h1>TODO</h1>
+<div class="alt-file">
+	<% if (file.notices) { %>
+		<% for (const notice of file.notices) { %>
+			<%- include('notice', { notice }); %>
+		<% } %>
+	<% } %>
+
+	<div class="file__handle">
+		<a href="<%= file.path %><%= file.startingPage > 1 ? `#page=${file.startingPage}` : '' %>"<%= file.type === 'text/html' ? '' : ' target="_blank"' %> class="file__handle__link"><%- include('../helpers/file-accessible-name', { file }); %></a>
+		<% if (file.size && file.type !== 'text/html') { %>
+			<span class="file__handle__size">(<%- include('../helpers/file-size', { size: file.size }); %>)</span>
+		<% } %>
+	</div>
+
+	<div class="file__accessibility">
+		<%- include('accessibility', { accessibility: file.accessibility }); %>
+	</div>
+
+	<div class="file__metadata">
+		<div class="file__original file__original--not-original">
+			<span class="file__original__icon" aria-hidden="true"></span>
+			<span class="file__original__text">Not original file</span>
+		</div>
+		<% if (file.modifications) { %>
+			<ul class="file__modifications">
+				<% for (const modification of file.modifications) { %>
+					<li class="file__modifications__item">
+						<%= modification %>
+					</li>
+				<% } %>
+			</ul>
+		<% } %>
+	</div>
+</div>

@@ -1,0 +1,60 @@
+.page {}
+
+.page__layout {
+	@include layout-wrapper;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+.page__head {
+	margin-bottom: 2rem;
+}
+
+.page__head__layout {
+	display: flex;
+	flex-wrap: wrap;
+
+	@supports (display: grid) {
+		display: grid;
+		grid-template-columns: min-content 1fr;
+		grid-template-areas:
+			"back h1"
+			"back subtitle";
+	}
+}
+
+.page__head__back-link {
+	grid-area: back;
+
+	margin-right: 1ch;
+
+	@include font-heading-40b;
+	@include link-colour;
+}
+
+.page__head__back-link__icon {
+	&::before {
+		font-family: $font-icons;
+		content: $icon-arrow-left;
+	}
+}
+
+.page__title {
+	grid-area: h1;
+
+	margin: 0 0 0.5rem;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	@include font-heading-40b;
+}
+
+.page__subtitle {
+	width: 100%;
+	grid-area: subtitle;
+
+	display: block;
+	@include font-base-18;
+}
+
+.page__body {}

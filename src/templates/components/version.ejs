@@ -1,6 +1,7 @@
 <%#
 	locals: {
 		version: PolicyVersion,
+		policy: Policy,
 	}
 %>
 
@@ -26,17 +27,17 @@
 	%>
 
 	<% primaryFiles.forEach((file) => { %>
-		<%- include('file', { file, version }); %>
+		<%- include('file', { file, version, policy }); %>
 	<% }) %>
 
 	<% if (secondaryFiles.length) { %>
-		<details class="version__alternate-files">
-			<summary class="version__alternate-files__summary">Secondary files</summary>
+		<div class="version__alternate-files">
+			<h3 class="version__alternate-files__title">Secondary files</h3>
 			<div class="version__alternate-files__contents">
 				<% secondaryFiles.forEach((file) => { %>
-					<%- include('file', { file, version }); %>
+					<%- include('file', { file, version, policy }); %>
 				<% }) %>
-				</div>
-		</details>
+			</div>
+		</div>
 	<% } %>
 </div>

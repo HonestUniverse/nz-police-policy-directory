@@ -1,6 +1,7 @@
-/**
- * Use a CSS custom property for a property, with an optional fallback
- */
+/// Use a CSS custom property for a property, with an optional fallback
+/// @param {string} $prop - The name of the property to use a custom property for
+/// @param {string} $customProp - The custom property to use
+/// @param {any} $fallback [false] - An optional value to use as a fallback
 @mixin use-var($prop, $customProp, $fallback: false) {
 	@if ($fallback) {
 		#{$prop}: $fallback;

@@ -1,14 +1,15 @@
 <%##
-	{
+	locals: {
 		accessibility: Accessibility
 	}
 %>
 
 <%
 	const iconClasses = {
-		'Pass': 'pass',
-		'Partial': 'partial',
-		'Fail': 'fail',
+		'Good': 'good',
+		'Okay': 'okay',
+		'Poor': 'poor',
+		'Bad': 'bad',
 		'Undetermined': 'undetermined',
 	};
 
@@ -19,7 +20,10 @@
 <details class="accessibility">
 	<summary class="accessibility__summary<%= ratingClass %>">
 		<span class="accessibility__summary__icon" aria-hidden="true"></span>
-		<span class="accessibility__summary__text">Accessibility<%= rating ? `: ${rating}` : '' %></span>
+		<span class="accessibility__summary__label">Accessibility<%= rating ? ':' : ''%></span>
+		<% if (rating) { %>
+			<span class="accessibility__summary__rating"><%= rating %></span>
+		<% } %>
 	</summary>
 
 	<div class="accessibility__details">

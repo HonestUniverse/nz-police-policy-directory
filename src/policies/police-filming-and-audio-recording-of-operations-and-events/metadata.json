@@ -1,0 +1,54 @@
+{
+	"schemaVersion": "3.1.0",
+	"title": "Police filming and audio recording of operations and events",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": [
+					"2012-10-18"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Alex Harris",
+						"responseUrl": "https://fyi.org.nz/request/police_manual_on_police_filming#incoming-3221",
+						"withholdings": "None"
+					},
+					"released": "2012-10-18",
+					"retrieved": "2022-05-16",
+					"url": "https://fyi.org.nz/request/police_manual_on_police_filming#incoming-3221",
+					"fileUrl": "https://fyi.org.nz/request/601/response/3221/attach/3/Police%20filming%20and%20audio%20recording%20of%20operations%20and%20events.doc"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Police filming and audio recording of operations and events.doc",
+					"type": "application/msword",
+					"size": 67584,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": "Unknown"
+						},
+						"unwatermarked": {
+							"value": false
+						},
+						"rating": "Undetermined"
+					},
+					"documentType": "Policy"
+				}
+			]
+		}
+	]
+}

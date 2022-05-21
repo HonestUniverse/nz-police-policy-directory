@@ -1,17 +1,34 @@
 import { ColourScheme, isColourScheme } from './ColourScheme.js';
 import { localStorageSupport } from '../utils/localStorageSupport.js';
 
+import { waitFrame } from '../utils/waitFrame.js';
+
 import { colourSchemeKey } from './key.js';
+import { UtilCssClasses } from '../utils/UtilCssClasses.js';
 
 /**
  * Update the `<body>` element to specify a preferred colour scheme.
  */
-export function applyColourScheme(scheme: ColourScheme) {
+export async function applyColourScheme(scheme: ColourScheme, preventTransitions = true) {
 	const $body = document.body;
 
-	$body.classList.remove(...Object.values(ColourScheme));
-	if (scheme !== ColourScheme.DEFAULT) {
-		$body.classList.add(scheme);
+	function apply() {
+		$body.classList.remove(...Object.values(ColourScheme));
+		if (scheme !== ColourScheme.DEFAULT) {
+			$body.classList.add(scheme);
+		}
+	}
+
+	if (preventTransitions) {
+		$body.classList.add(UtilCssClasses.NO_TRANSITIONS);
+		apply();
+
+		// Preventing transitions requires a delay so transitions can be disabled while the colour scheme is applied
+		await waitFrame();
+
+		$body.classList.remove(UtilCssClasses.NO_TRANSITIONS);
+	} else {
+		apply();
 	}
 }
 
@@ -37,5 +54,5 @@ function recallColourScheme(): ColourScheme {
  */
 export function initColourScheme() {
 	const scheme = recallColourScheme();
-	applyColourScheme(scheme);
+	applyColourScheme(scheme, false);
 }

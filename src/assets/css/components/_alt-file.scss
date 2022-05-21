@@ -1,0 +1,8 @@
+.alt-file {
+	+ .alt-file {
+		margin-top: 1rem;
+		border-top: 1px solid;
+		@include use-var(border-top-color, --accent, currentColor);
+		padding-top: 1rem;
+	}
+}

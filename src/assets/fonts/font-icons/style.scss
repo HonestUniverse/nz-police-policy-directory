@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ks82df');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ks82df#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ks82df') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ks82df') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ks82df##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?g5ncex');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?g5ncex#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?g5ncex') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?g5ncex') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?g5ncex##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-up {
+  &:before {
+    content: $icon-arrow-up; 
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right; 
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down; 
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left; 
+  }
+}
 .icon-brightness {
   &:before {
     content: $icon-brightness; 

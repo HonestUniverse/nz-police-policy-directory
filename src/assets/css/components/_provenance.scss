@@ -1,31 +1,39 @@
-@import "../tools/fonts";
-@import "../tools/palette";
-
 .provenance {
 	display: block;
-	margin: 1em 0;
+	margin: 1rem 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
-.provenance__date {
+%provenance__meta {
 	display: block;
+	margin-top: 0.3em;
+	&:first-child {
+		margin-top: 0;
+	}
 
 	@include font-base-18;
 }
 
 .provenance__source {
-	display: block;
-
-	@include font-base-18;
+	@extend %provenance__meta;
 }
 
 .provenance__source__link {
 	@include link;
 }
 
-.provenance__withholdings {
-	display: block;
+.provenance__date {
+	@extend %provenance__meta;
+}
 
-	@include font-base-18;
+.provenance__withholdings {
+	@extend %provenance__meta;
 }
 
 .provenance__withholdings__summary {
@@ -42,7 +50,6 @@ summary.provenance__withholdings__summary {
 	vertical-align: middle;
 
 	font-family: $font-icons;
-	font-size: 0.8em;
 
 	.provenance__withholdings--pass &::before {
 		content: $icon-tick;
@@ -73,5 +80,5 @@ summary.provenance__withholdings__summary {
 }
 
 .provenance__withholding__value {
-	margin-left: 1em;
+	margin-left: 1rem;
 }

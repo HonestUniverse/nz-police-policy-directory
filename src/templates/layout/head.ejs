@@ -1,3 +1,18 @@
+<%##
+	locals: {
+		title: string,
+		h1?: string,
+		subtitle?: string,
+		backLink?: boolean,
+	}
+%>
+
+<%
+	if (!locals.h1) {
+		locals.h1 = locals.title;
+	}
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -20,15 +35,18 @@
 
 		<link rel="preload" href="/assets/fonts/montserrat/montserrat-bold-latin.woff2" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="/assets/fonts/roboto/roboto-regular-latin.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/assets/fonts/roboto/roboto-bold-latin.woff2" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="/assets/fonts/font-icons/font-icons.ttf" as="font" type="font/ttf" crossorigin />
 	</head>
 
 	<body class="no-js">
 		<section class="prototype-notice">
-			<h1 class="prototype-notice__title">Under active development</h1>
+			<div class="prototype-notice__layout">
+				<h1 class="prototype-notice__title">Under active development</h1>
 
-			<div class="prototype-notice__message">
-				<p>The site may break, links may stop working.</p>
+				<div class="prototype-notice__message">
+					<p>The site may break, links may stop working.</p>
+				</div>
 			</div>
 		</section>
 
@@ -68,21 +86,21 @@
 							aria-describedby="colour-scheme__face"
 						>
 							<li
-								class="colour-scheme__menu__option colour-scheme--default js-colour-scheme__menu__option"
+								class="colour-scheme__menu__option js-colour-scheme__menu__option"
 								tabindex="0"
 
 								role="menuitemradio"
 								data-value="default"
 							>Default</li>
 							<li
-								class="colour-scheme__menu__option light js-colour-scheme__menu__option"
+								class="colour-scheme__menu__option js-colour-scheme__menu__option"
 								tabindex="0"
 
 								role="menuitemradio"
 								data-value="light"
 							>Light</li>
 							<li
-								class="colour-scheme__menu__option dark js-colour-scheme__menu__option"
+								class="colour-scheme__menu__option js-colour-scheme__menu__option"
 								tabindex="0"
 
 								role="menuitemradio"
@@ -94,4 +112,21 @@
 			</div>
 		</header>
 
-		<main>
+		<main class="page">
+			<div class="page__layout">
+				<header class="page__head">
+					<div class="page__head__layout">
+						<% if (locals.backLink) { %>
+							<a href="../" class="page__head__back-link" title="Back to parent page">
+								<span class="page__head__back-link__icon" aria-hidden="true"></span>
+							</a>
+						<% } %>
+						<h1 class="page__title"><%= h1 %></h1>
+
+						<% if (locals.subtitle) { %>
+							<span class="page__subtitle"><%= subtitle %></span>
+						<% } %>
+					</div>
+				</header>
+
+				<div class="page__body">

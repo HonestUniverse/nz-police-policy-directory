@@ -15,6 +15,8 @@ export const testPolicies = `${src}/test-policies`;
 export const templates = `${src}/templates`;
 export const assets = `${src}/assets`;
 
+export const policiesDst = `./policies`;
+
 export const schema = `./schema`;
 
 const buildFull = path.resolve(fileURLToPath(import.meta.url), '../../');

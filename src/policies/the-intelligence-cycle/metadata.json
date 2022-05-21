@@ -60,13 +60,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"The Intelligence cycle\" covers pages 4-27 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]

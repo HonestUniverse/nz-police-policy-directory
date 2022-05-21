@@ -1,19 +1,17 @@
-@import "../tools/reset";
-@import "../tools/layout";
-@import "../tools/fonts";
-
 .directory {}
 
-.directory__layout {
-	@include layout-wrapper;
-}
-
-.directory__title {
-	@include font-heading-40b;
+.directory__section-link {
+	@include font-heading-32b;
+	@include link;
 }
 
 .directory__list {
 	@include list-reset;
 }
 
-.directory__item {}
+.directory__item {
+	position: relative;
+
+	border-bottom: 2px solid;
+	@include use-var(border-bottom-color, --accent, currentColor);
+}

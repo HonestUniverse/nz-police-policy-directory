@@ -1,0 +1,33 @@
+// File structure:
+//	theme
+//		Theme files contain SCSS variables and mixins, so they will not generate any CSS on their own.
+//		These mixins are part of the theme.
+//	tools
+//		Tool files contain only mixins and functions, so they will not generate any CSS on their own.
+//		These mixins and functions are general purpose, and shouldn't need to change from theme to theme.
+//	base
+//		Base files generate CSS that has the lowest priority, such as reset CSS, @font-face declarations, and custom properties on the `:root`.
+//	extendables
+//		Extendable files contain SCSS placeholder selectors, which may be extended by components.
+//	components
+//		Component files each contain the SCSS for a single component.
+
+// Doesn't generate CSS
+@import "theme/breakpoints";
+@import "theme/fonts";
+@import "theme/layout";
+@import "theme/palette";
+
+@import "tools/active";
+@import "tools/grid-ram";
+@import "tools/rem";
+@import "tools/reset";
+@import "tools/transition";
+@import "tools/use-var";
+
+// Generates CSS
+@import "base/reset";
+@import "base/palette";
+@import "base/fonts";
+
+@import "extendables/content";

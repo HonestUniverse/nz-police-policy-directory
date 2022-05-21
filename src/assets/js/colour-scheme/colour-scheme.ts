@@ -24,7 +24,7 @@ enum MenuState {
 	CLOSED,
 }
 
-/**
+/*
  * This component follows the "menu" behaviour described in the
  * WAI-ARIA Authoring Practices 1.2 documentation:
  * https://www.w3.org/TR/wai-aria-practices-1.2/#menu
@@ -57,6 +57,10 @@ function initEvents() {
 		$option.addEventListener('click', selectOptionEvent);
 		$option.addEventListener('keydown', optionKeyboardEvent);
 	});
+
+	if (localStorageSupport) {
+		window.addEventListener('storage', storageEvent);
+	}
 }
 
 /**
@@ -108,6 +112,15 @@ function optionKeyboardEvent(this: HTMLElement, e: KeyboardEvent) {
 			e.preventDefault();
 			selectOption(this);
 			break;
+	}
+}
+
+function storageEvent(this: Window, e: StorageEvent) {
+	if (e.key === colourSchemeKey) {
+		const { newValue } = e;
+		if (isColourScheme(newValue)) {
+			syncState(newValue, false);
+		}
 	}
 }
 
@@ -318,14 +331,16 @@ function moveMenuItemFocus($menu: HTMLElement, incr: number) {
  *
  * If no scheme is specified, the currently active scheme is applied.
  */
-function syncState(scheme?: ColourScheme) {
+function syncState(scheme?: ColourScheme, remember = true) {
 	const currentColourScheme = getColourScheme();
 
 	if (!scheme) {
 		scheme = currentColourScheme;
 	} else if (scheme !== currentColourScheme) {
 		applyColourScheme(scheme);
-		rememberColourScheme(scheme);
+		if (remember) {
+			rememberColourScheme(scheme);
+		}
 	}
 
 	const $options = document.querySelectorAll(Selectors.MENU_OPTION);
@@ -361,11 +376,7 @@ function getColourScheme(): ColourScheme {
  */
 function rememberColourScheme(scheme: ColourScheme) {
 	if (localStorageSupport) {
-		if (scheme === ColourScheme.DEFAULT) {
-			localStorage.removeItem(colourSchemeKey);
-		} else {
-			localStorage.setItem(colourSchemeKey, scheme);
-		}
+		localStorage.setItem(colourSchemeKey, scheme);
 	}
 }
 
