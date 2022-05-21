@@ -27,7 +27,7 @@ export const indexBuildSteps: Record<string, BuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements'],
+				chunks: ['priority', 'main', 'enhancements', 'styles'],
 			}),
 		];
 	},
@@ -51,7 +51,7 @@ export const indexBuildSteps: Record<string, BuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements'],
+				chunks: ['priority', 'main', 'enhancements', 'styles'],
 			}),
 		];
 	},

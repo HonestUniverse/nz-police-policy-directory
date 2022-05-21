@@ -18,6 +18,7 @@ async function getConfig(env: Record<string, unknown>) {
 		mode: process.env.MODE === 'development' ? 'development' : 'production',
 		entry: {
 			main: `${paths.assetsFull}/js/main.ts`,
+			styles: `${paths.assetsFull}/js/styles.ts`,
 			enhancements: `${paths.assetsFull}/js/enhancements.ts`,
 			priority: `${paths.assetsFull}/js/priority.ts`,
 		},

@@ -42,6 +42,14 @@
 		margin: 0 0 1rem;
 	}
 
+	ol,
+	ul {
+		margin: 0 0 1rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	blockquote {
 		margin: 0 0 1rem;
 		padding: 0 2rem;
@@ -62,5 +70,19 @@
 			bottom: 0;
 			right: 0;
 		}
+	}
+
+	table {
+		border-collapse: collapse;
+		margin: 0 0 1rem;
+	}
+	thead {
+		@include contrast-secondary;
+	}
+	th, td {
+		border: 1px solid currentColor;
+		vertical-align: top;
+		text-align: left;
+		padding: 0.5rem;
 	}
 }
