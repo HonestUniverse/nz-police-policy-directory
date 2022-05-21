@@ -56,13 +56,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Intelligence categories\" covers pages 79-83 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]
