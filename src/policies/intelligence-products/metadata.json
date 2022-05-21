@@ -59,13 +59,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Intelligence products\" covers pages 47-57 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]

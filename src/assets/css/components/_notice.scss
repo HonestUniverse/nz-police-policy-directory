@@ -4,6 +4,10 @@
 	padding: 1em;
 	border-radius: 0.5rem;
 	box-shadow: inset 0 0 0 1px currentColor;
+
+	+ .notice {
+		margin-top: 1rem;
+	}
 }
 
 .notice--info {

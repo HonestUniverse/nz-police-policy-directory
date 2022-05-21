@@ -58,13 +58,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Intelligence for investigations\" covers pages 58-78 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]

@@ -2,6 +2,33 @@
 	locals: {
 		file: File,
 		version: PolicyVersion,
+		policy: Policy,
+	}
+%>
+
+<%
+	const notices = file.notices?.concat() || [];
+
+	if (file.startingPage > 1) {
+		const message = `${(() => {
+			if (!file.documentType || file.documentType === 'Policy') {
+				if (file.name) {
+					// Named policy documents should use their name
+					return `"${file.name}"`;
+				} else {
+					// Unnamed policy documents use the policy name
+					return `"${policy.title}"`;
+				}
+			} else {
+				// Secondary documents use a generic term
+				return `This document`;
+			}
+		})()} starts on page ${file.startingPage}.`;
+
+		notices.push({
+			type: 'info',
+			message,
+		});
 	}
 %>
 
@@ -13,12 +40,12 @@
 		<% } %>
 	</div>
 
-	<% if (file.notices) { %>
+	<% if (notices) { %>
 		<div class="file__notices">
-			<% for (const notice of file.notices) { %>
+			<% for (const notice of notices) { %>
 				<%- include('notice', { notice }); %>
 			<% } %>
-			</div>
+		</div>
 	<% } %>
 
 	<div class="file__accessibility">

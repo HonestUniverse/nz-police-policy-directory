@@ -57,13 +57,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Decision-making and planning\" covers pages 92-95 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]

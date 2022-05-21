@@ -53,13 +53,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Private Security Personnel and Private Investigators\" covers pages 42-47 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]
