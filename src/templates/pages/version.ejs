@@ -2,6 +2,8 @@
 	locals: {
 		version: PolicyVersion,
 		policy: Policy,
+		latest?: boolean,
+		versionDst?: string,
 	}
 %>
 
@@ -9,14 +11,26 @@
 	const title = `${policy.title} ${version.name}`;
 %>
 
-<%- include('../layout/head', { title }); %>
+<%- include('../layout/head', {
+	title,
+	h1: policy.title,
+	subtitle: policy.type,
+	backLink: true,
+}); %>
 
-<article class="policy">
-	<div class="policy__layout">
-		<h1 class="policy__title"><%= policy.title %> <%= version.name %></h1>
+<% if (latest) { %>
+	<%- include('../components/notice', {
+		notice: {
+			type: "info",
+			message: `\<p>This page displays the latest complete version for this policy. \<a href="/${versionDst}">A permanent link to this version can be found here.\</a>\</p>`
+		}
+	}) %>
+<% } %>
 
-		<%- include('../components/version', { version }); %>
-	</div>
+<article class="policy__version">
+	<h2 class="policy__version__name"><%= version.name %></h2>
+
+	<%- include('../components/version', { version, policy }); %>
 </article>
 
 <%- include('../layout/foot'); %>

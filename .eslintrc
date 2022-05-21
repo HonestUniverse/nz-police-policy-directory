@@ -48,6 +48,9 @@
 		// Using `any[]` for rest arguments can sometimes be necessary
 		"@typescript-eslint/no-explicit-any": ["warn", { "ignoreRestArgs": true }],
 
+		// There are plenty of times where it's safe to use a Promise without error handling
+		"@typescript-eslint/no-floating-promises": "off",
+
 		////////////////////////
 		// Debugging warnings //
 		////////////////////////

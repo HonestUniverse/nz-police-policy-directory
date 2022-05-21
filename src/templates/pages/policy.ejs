@@ -14,68 +14,66 @@
 	} = policy;
 %>
 
-<%- include('../layout/head', { title }); %>
+<%- include('../layout/head', {
+	title,
+	h1: `${title}${policy.obsolete ? ' (obsolete)' : ''}`,
+	subtitle: type,
+	backLink: true,
+}); %>
 
-<article class="policy">
-	<div class="policy__layout">
-		<h1 class="policy__title"><%= title %><%= policy.obsolete ? ' (obsolete)' : '' %></h1>
-		<span class="policy__type"><%= type %></span>
+<% if (notices) { %>
+	<% for (const notice of notices) { %>
+		<%- include('../components/notice', { notice }); %>
+	<% } %>
+<% } %>
 
-		<% if (notices) { %>
-			<% for (const notice of notices) { %>
-				<%- include('../components/notice', { notice }); %>
+<% if (policy.versions.length > 0) { %>
+	<article class="policy__version">
+		<h2 class="policy__version__name">
+			<%
+				const version = policy.versions[0];
+				const { name } = version;
+				const href = versionPaths[name];
+			%>
+			<% if (href) { %>
+				<a href="<%= href %>" class="policy__version__link"><%= name %> (Latest)</a>
+			<% } else { %>
+				<%= name %> (Latest)
 			<% } %>
-		<% } %>
+		</h2>
 
-		<% if (policy.versions.length > 0) { %>
-			<article class="policy__version">
-				<h2 class="policy__version__name">
+		<%- include('../components/version', { version, policy }) %>
+	</article>
+<% } %>
+
+<% if (policy.versions.length > 1) { %>
+	<div class="policy__other-versions">
+		<h2 class="policy__other-versions__heading">Other versions</h2>
+
+		<ol class="policy__other-versions__list">
+			<%
+				const hasMultipleVersions = versions.length > 1;
+			%>
+			<% versions.slice(1).forEach((version, i, arr) => { %>
+				<li class="policy__other-versions__item">
 					<%
-						const version = policy.versions[0];
 						const { name } = version;
 						const href = versionPaths[name];
 					%>
-					<% if (href) { %>
-						<a href="<%= href %>" class="policy__version__link"><%= name %> (Latest)</a>
-					<% } else { %>
-						<%= name %> (Latest)
-					<% } %>
-				</h2>
-
-				<%- include('../components/version', { version }) %>
-			</article>
-		<% } %>
-
-		<% if (policy.versions.length > 1) { %>
-			<div class="policy__other-versions">
-				<h2 class="policy__other-versions__heading">Other versions</h2>
-
-				<ol class="policy__other-versions__list">
-					<%
-						const hasMultipleVersions = versions.length > 1;
-					%>
-					<% versions.slice(1).forEach((version, i, arr) => { %>
-						<li class="policy__other-versions__item">
-							<%
-								const { name } = version;
-								const href = versionPaths[name];
-							%>
-							<details class="policy__version policy__version--disclosure">
-								<summary class="policy__version__name">
-									<% if (href) { %>
-										<a href="<%= href %>" class="policy__version__link"><%= name %></a>
-									<% } else { %>
-										<%= name %>
-									<% } %>
-								</summary>
-								<%- include('../components/version', { version }) %>
-							</details>
-						</li>
-					<% }); %>
-				</ol>
-			</div>
-		<% } %>
+					<details class="policy__version policy__version--disclosure">
+						<summary class="policy__version__name">
+							<% if (href) { %>
+								<a href="<%= href %>" class="policy__version__link"><%= name %></a>
+							<% } else { %>
+								<%= name %>
+							<% } %>
+						</summary>
+						<%- include('../components/version', { version, policy }) %>
+					</details>
+				</li>
+			<% }); %>
+		</ol>
 	</div>
-</article>
+<% } %>
 
 <%- include('../layout/foot'); %>

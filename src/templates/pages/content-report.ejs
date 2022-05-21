@@ -1,0 +1,96 @@
+<%##
+	locals: {
+		directory: Record<string, Policy>,
+	}
+%>
+
+<%
+	const keys = Object.keys(directory).sort();
+	const policies = [];
+	for (const key of keys) {
+		policies.push(directory[key]);
+	}
+
+	function needsOCR(policy) {
+		for (const version of policy.versions) {
+			for (const file of version.files) {
+				let fileNeedsOCR = false;
+				if (file.accessibility['text-based']?.value === false) {
+					fileNeedsOCR = true;
+				}
+
+				if (fileNeedsOCR && file.alternateFiles) {
+					for (const altFile of file.alternateFiles) {
+						if (altFile.accessibility['text-based']?.value === true) {
+							fileNeedsOCR = false;
+						}
+					}
+				}
+
+				if (fileNeedsOCR) {
+					return true;
+				}
+			}
+		}
+
+		return false;
+	}
+
+	function needsA11yRating(policy) {
+		for (const version of policy.versions) {
+			for (const file of version.files) {
+				if (file.accessibility.rating === 'Undetermined') {
+					return true;
+				}
+
+				if (file.alternateFiles) {
+					for (const altFile of file.alternateFiles) {
+						if (altFile.accessibility.rating === 'Undetermined') {
+							return true;
+						}
+					}
+				}
+			}
+		}
+
+		return false;
+		}
+%>
+
+<%- include('../layout/head', { title: 'Content Report' }); %>
+
+<details class="content-report__section">
+	<summary class="content-report__section__summary">Needs OCR</summary>
+
+	<div class="content-report__section__content">
+		<ul class="directory__list">
+			<% policies.forEach((policy, idx) => { %>
+				<% if (needsOCR(policy)) { %>
+
+				<li class="directory__item">
+					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+				</li>
+				<% } %>
+			<% }) %>
+		</ul>
+	</div>
+</details>
+
+<details class="content-report__section">
+	<summary class="content-report__section__summary">Needs Accessibility Rating</summary>
+
+	<div class="content-report__section__content">
+		<ul class="directory__list">
+			<% policies.forEach((policy, idx) => { %>
+				<% if (needsA11yRating(policy)) { %>
+
+				<li class="directory__item">
+					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+				</li>
+				<% } %>
+			<% }) %>
+		</ul>
+	</div>
+</details>
+
+<%- include('../layout/foot'); %>

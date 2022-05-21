@@ -11,16 +11,17 @@ import type { BuildStep } from './BuildStep.js';
 import { assetBuildSteps } from './asset-build-steps.js';
 import { policyBuildSteps } from './policy-build-steps.js';
 import { directoryBuildSteps } from './directory-build-steps.js';
+import { indexBuildSteps } from './index-build-steps.js';
 
 /**
  * Loop through a set of build steps and gather its plugins.
  */
-function gatherBuildStepPlugins<T = unknown>(steps: Record<string, BuildStep<T>>, src: string, dst: string, data: T) {
+async function gatherBuildStepPlugins<T = unknown>(steps: Record<string, BuildStep<T>>, src: string, dst: string, data: T) {
 	const plugins: ReturnType<BuildStep<T>> = [];
 
 	for (const buildStep of Object.values(steps)) {
 		const buildStepPlugins = buildStep(src, dst, data);
-		plugins.push(...buildStepPlugins);
+		plugins.push(...await buildStepPlugins);
 	}
 
 	return plugins;
@@ -35,19 +36,20 @@ export async function createBuildPlugins(policiesPath = paths.policies) {
 	const policiesByName = await readAllPolicies(policiesPath);
 	const policiesByNameSafe: Record<string, Policy> = {};
 
-	plugins.push(...gatherBuildStepPlugins(assetBuildSteps, paths.assets, paths.distAssetsFull, null));
+	plugins.push(...await gatherBuildStepPlugins(assetBuildSteps, paths.assets, paths.distAssetsFull, null));
+	plugins.push(...await gatherBuildStepPlugins(indexBuildSteps, paths.assets, paths.distFull, null));
 
 	for (const [policyName, policy] of Object.entries(policiesByName)) {
 		const policyNameSafe = toUrlSegment(policyName);
 		policiesByNameSafe[policyNameSafe] = policy;
 
 		const policySrcPath = `${policiesPath}/${policyName}`;
-		const policyDstPath = `./${policyNameSafe}`;
+		const policyDstPath = `${paths.policiesDst}/${policyNameSafe}`;
 
-		plugins.push(...gatherBuildStepPlugins(policyBuildSteps, policySrcPath, policyDstPath, policy));
+		plugins.push(...await gatherBuildStepPlugins(policyBuildSteps, policySrcPath, policyDstPath, policy));
 	}
 
-	plugins.push(...gatherBuildStepPlugins(directoryBuildSteps, paths.src, './', policiesByNameSafe));
+	plugins.push(...await gatherBuildStepPlugins(directoryBuildSteps, paths.src, paths.policiesDst, policiesByNameSafe));
 
 	return plugins;
 }

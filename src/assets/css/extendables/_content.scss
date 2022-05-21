@@ -1,0 +1,93 @@
+/// Tag name based styles for body text areas
+%content {
+	@include font-base-18;
+	> :first-child {
+		margin-top: 0;
+	}
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	h1 {
+		@include font-heading-40b;
+		margin: 2rem 0 1rem;
+	}
+
+	h2 {
+		@include font-heading-32b;
+		margin: 2rem 0 1rem;
+	}
+
+	h3 {
+		@include font-heading-28b;
+		margin: 2rem 0 1rem;
+	}
+
+	h4 {
+		@include font-heading-24b;
+		margin: 2rem 0 1rem;
+	}
+
+	h5 {
+		@include font-heading-22b;
+		margin: 2rem 0 1rem;
+	}
+
+	h5 {
+		@include font-heading-20b;
+		margin: 2rem 0 1rem;
+	}
+
+	p {
+		margin: 0 0 1rem;
+	}
+
+	a {
+		@include link;
+	}
+
+	ol,
+	ul {
+		margin: 0 0 1rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	blockquote {
+		margin: 0 0 1rem;
+		padding: 0 2rem;
+
+		position: relative;
+		&::before,
+		&::after {
+			position: absolute;
+			font-size: 3em;
+		}
+		&::before {
+			content: "“";
+			top: 0;
+			left: 0;
+		}
+		&::after {
+			content: "”";
+			bottom: 0;
+			right: 0;
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+		margin: 0 0 1rem;
+	}
+	thead {
+		@include contrast-secondary;
+		@include font-base-18b;
+	}
+	th, td {
+		border: 1px solid currentColor;
+		vertical-align: top;
+		text-align: left;
+		padding: 0.5rem;
+	}
+}

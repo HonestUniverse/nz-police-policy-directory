@@ -1,3 +1,9 @@
+<%##
+	locals: {
+		withholdings: OIAWithholdings,
+	}
+%>
+
 <%
 	const s6 = 'https://www.legislation.govt.nz/act/public/1982/0156/latest/DLM65366.html';
 	const s9 = 'https://www.legislation.govt.nz/act/public/1982/0156/latest/DLM65371.html';
@@ -38,7 +44,7 @@
 
 <% if (withholdings) { %>
 	<% if (withholdings === 'None') { %>
-		<!-- No information was withheld -->
+		<%# No information was withheld %>
 		<div class="provenance__withholdings provenance__withholdings--pass">
 			<div class="provenance__withholdings__summary">
 				<span class="provenance__withholdings__summary-icon" aria-hidden="true"></span>
@@ -46,7 +52,7 @@
 			</div>
 		</div>
 	<% } else if (withholdings === 'Unknown') { %>
-		<!-- It hasn't been vetted yet -->
+		<%# It hasn't been vetted yet %>
 		<div class="provenance__withholdings provenance__withholdings--unknown">
 			<div class="provenance__withholdings__summary">
 				<span class="provenance__withholdings__summary-icon" aria-hidden="true"></span>
@@ -54,7 +60,7 @@
 			</div>
 		</div>
 	<% } else { %>
-		<!-- Some information was withheld -->
+		<%# Some information was withheld %>
 		<details class="provenance__withholdings provenance__withholdings--fail">
 			<summary class="provenance__withholdings__summary">
 				<span class="provenance__withholdings__summary-icon" aria-hidden="true"></span>

@@ -6,6 +6,7 @@
 			"name": "Version 12.0",
 			"duration": {
 				"on": [
+					"2016-12-15",
 					"2017-01-04"
 				]
 			},
@@ -48,9 +49,9 @@
 							"value": false
 						},
 						"unwatermarked": {
-							"value": "Unknown"
+							"value": true
 						},
-						"rating": "Undetermined"
+						"rating": "Bad"
 					},
 					"notices": [
 						{
@@ -58,10 +59,101 @@
 							"message": "<p>Information withheld in this file has been been whited out, making it difficult to see where information has been withheld, and a specific section of the OIA was not specified regarding the reason why the information was withheld.</p>\n<p>The OIA request's response letter noted that:</p>\n<blockquote>The <i>Armoury Manual</i> has had details on page [<i>sic</i>] under the headings 'Contacting the Armoury' and 'Work Hours' redacted, so as not to identify individual Police members associated to it, the address, or telephone number of the Armoury. This has been done in the interests of safety of staff and the need to keep details of the Armoury's location, contact details, and working hours of staff out of public accessibility.</blockquote>"
 						}
 					],
-					"documentType": "Policy"
+					"documentType": "Policy",
+					"alternateFiles": [
+						{
+							"path": "version-12-0/Armoury.Redacted.OCR.pdf",
+							"type": "application/pdf",
+							"size": 283147,
+							"accessibility": {
+								"text-based": {
+									"value": true
+								},
+								"semantics": {
+									"value": "Partial"
+								},
+								"alt text": {
+									"value": true
+								},
+								"unwatermarked": {
+									"value": true
+								},
+								"rating": "Okay"
+							},
+							"modifications": [
+								"OCR has been performed on the text, with manual typo fixes.",
+								"Automatic semantic tagging was used."
+							]
+						},
+						{
+							"path": "version-12-0/Armoury.Redacted.html",
+							"type": "text/html",
+							"size": 14699,
+							"accessibility": {
+								"text-based": {
+									"value": true
+								},
+								"semantics": {
+									"value": true
+								},
+								"alt text": {
+									"value": true
+								},
+								"unwatermarked": {
+									"value": true
+								},
+								"rating": "Good"
+							},
+							"modifications": [
+								"OCR has been performed on the text, with manual typo fixes.",
+								"The text was copied into an HTML file, with semantics added and typos fixed manually."
+							]
+						}
+					]
+				},
+				{
+					"path": "version-12-0/Roundill Jeremy 16 8540 4 reply.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"size": 414043,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Jeremy Roundill",
+								"id": "16-8540-4",
+								"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+								"withholdings": "None"
+							},
+							"released": "2017-01-04",
+							"retrieved": "2022-05-19",
+							"url": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+							"fileUrl": "https://fyi.org.nz/request/5014/response/16479/attach/3/Roundill%20Jeremy%2016%208540%204%20reply.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"text-based": {
+							"value": false
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.1.0"
+	"schemaVersion": "3.1.3"
 }
