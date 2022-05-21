@@ -24,6 +24,7 @@ async function getConfig(env: Record<string, unknown>) {
 		output: {
 			path: paths.distFull,
 			filename: 'assets/js/[name].js',
+			publicPath: '/',
 		},
 		resolve: {
 			fullySpecified: true,
