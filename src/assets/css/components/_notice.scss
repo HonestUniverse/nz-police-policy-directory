@@ -37,9 +37,7 @@
 	}
 }
 
-.notice__body {
-	@extend %content;
-}
+.notice__body {}
 
 .notice__title {
 	display: block;
@@ -51,7 +49,5 @@
 .notice__message {
 	@include font-base-18;
 
-	a {
-		@include link;
-	}
+	@extend %content;
 }
