@@ -1,6 +1,14 @@
 <%##
 	locals: {
 		title: string,
+		h1?: string,
+		subtitle?: string,
+	}
+%>
+
+<%
+	if (!locals.h1) {
+		locals.h1 = locals.title;
 	}
 %>
 
@@ -102,4 +110,13 @@
 			</div>
 		</header>
 
-		<main>
+		<main class="page">
+			<div class="page__layout">
+				<header class="page__header">
+					<h1 class="page__title"><%= h1 %></h1>
+					<% if (locals.subtitle) { %>
+						<span class="page__subtitle"><%= subtitle %></span>
+					<% } %>
+				</header>
+
+				<div class="page__body">
