@@ -6,6 +6,7 @@ import type { AlternateFile } from './AlternateFile.js';
 
 export enum FileType {
 	DOC = 'application/msword',
+	HTML = 'text/html',
 	PDF = 'application/pdf',
 	TXT = 'text/plain',
 }
@@ -15,6 +16,7 @@ export enum FileDocumentType {
 	OIA_RESPONSE_LETTER = 'OIA response letter',
 	CHANGE_NOTE = 'Change note',
 	EXPLANATORY_NOTE = 'Explanatory note',
+	SUPPLEMENTARY_DOCUMENT = 'Supplementary document',
 }
 
 export type File = {

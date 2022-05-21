@@ -1,3 +1,4 @@
+/// Applies reset styles for a `<ul>` element
 @mixin list-reset {
 	list-style: none;
 	padding: 0;
@@ -5,6 +6,7 @@
 	// margin: 0;
 }
 
+/// Applies reset styles for a `<button>` element
 @mixin button-reset {
 	background: transparent;
 	border: none;

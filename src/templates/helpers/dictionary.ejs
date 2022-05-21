@@ -1,5 +1,5 @@
 <%##
-	{
+	locals: {
 		key: string,
 		case?: 'lower' | 'upper' | 'sentence',
 	}
@@ -9,8 +9,9 @@
 	 */
 	const dictionary = new Map([
 		// ['from', 'to'],
-		['application/pdf', 'PDF'],
 		['application/msword', 'Word Document'],
+		['text/html', 'HTML'],
+		['application/pdf', 'PDF'],
 		['text/plain', 'Plain Text'],
 	].map(([codeString, uiString]) => [codeString.toLowerCase(), uiString]));
 
