@@ -69,6 +69,7 @@ async function getConfig(env: Record<string, unknown>) {
 				body: ['priority'],
 				preload: ['priority'],
 				module: ['enhancements'],
+				remove: ['styles'],
 			}),
 		],
 	};
