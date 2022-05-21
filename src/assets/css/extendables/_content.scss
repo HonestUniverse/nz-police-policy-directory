@@ -42,6 +42,10 @@
 		margin: 0 0 1rem;
 	}
 
+	a {
+		@include link;
+	}
+
 	ol,
 	ul {
 		margin: 0 0 1rem;
@@ -78,6 +82,7 @@
 	}
 	thead {
 		@include contrast-secondary;
+		@include font-base-18b;
 	}
 	th, td {
 		border: 1px solid currentColor;

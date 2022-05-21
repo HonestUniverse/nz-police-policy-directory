@@ -1,9 +1,14 @@
 <%##
 	locals: {
 		document: string,
+		parentFile: PolicyFile,
 		policy: Policy,
 		version: Version,
 	}
+%>
+
+<%
+	const parentFileName = parentFile.name || parentFile.path.replace(/^.*\//, '');
 %>
 
 <%- include('../layout/head', {
@@ -11,6 +16,21 @@
 	h1: policy.title,
 	subtitle: version.name,
 	backLink: true,
+}); %>
+
+<%- include('../components/notice', {
+	notice: {
+		type: 'info',
+		title: 'Modified file',
+		message: `
+			<p>This is not the original file for this document. It has been updated manually to improve accessibility.</p>
+
+			<p>This document's layout may not be the same as in the original file, but it should have appropriate semantics and a logical reading order.</p>
+
+			<p>The original file is available here:</p>
+
+			<p><a href="${parentFile.path}" target="_blank">${parentFileName}</a></p>`,
+	},
 }); %>
 
 <article class="document">

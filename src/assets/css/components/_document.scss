@@ -19,7 +19,8 @@
 }
 
 .document__withheld {
-	// TODO
+	@include contrast-dark;
+	padding: 1rem;
 }
 
 .document__link {
