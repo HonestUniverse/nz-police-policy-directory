@@ -36,6 +36,7 @@
 						"name": "None"
 					},
 					"original": true,
+					"incomplete": true,
 					"accessibility": {
 						"text-based": {
 							"value": "Partial",
@@ -54,13 +55,13 @@
 						},
 						"rating": "Undetermined"
 					},
-					"documentType": "Policy"
-				}
-			],
-			"notices": [
-				{
-					"type": "warning",
-					"message": "Only one section of this Police Manual chapter was requested. A list of other sections in this chapter is included at the top of the file."
+					"documentType": "Policy",
+					"notices": [
+						{
+							"type": "warning",
+							"message": "Only one section of this Police Manual chapter was requested. A list of other sections in this chapter is included at the top of the file."
+						}
+					]
 				}
 			]
 		}

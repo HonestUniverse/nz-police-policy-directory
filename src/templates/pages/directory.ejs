@@ -12,20 +12,19 @@
 	}
 %>
 
-<%- include('../layout/head', { title: 'Policy Directory' }); %>
+<%- include('../layout/head', {
+	title: 'Policy Directory',
+	backLink: true,
+}); %>
 
 <article class="directory">
-	<div class="directory__layout">
-		<h1 class="directory__title">Policy Directory</h1>
-
-		<ul class="directory__list">
-			<% policies.forEach((policy, idx) => { %>
-				<li class="directory__item">
-					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-				</li>
-			<% }) %>
-		</ul>
-	</div>
+	<ul class="directory__list">
+		<% policies.forEach((policy, idx) => { %>
+			<li class="directory__item">
+				<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+			</li>
+		<% }) %>
+	</ul>
 </article>
 
 <%- include('../layout/foot'); %>
