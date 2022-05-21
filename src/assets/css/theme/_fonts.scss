@@ -35,66 +35,81 @@ $icon-tick: "\2714";
 
 @mixin font-heading-40b {
 	font-family: $font-heading;
-	font-size: rem(40px);
 	font-weight: $bold;
+	@include bp-to("s") {
+		font-size: rem(32px);
+	}
+	@include bp-from("s") {
+		font-size: rem(40px);
+	}
 }
 
 @mixin font-heading-32b {
 	font-family: $font-heading;
-	font-size: rem(32px);
 	font-weight: $bold;
+	@include bp-to("s") {
+		font-size: rem(28px);
+	}
+	@include bp-from("s") {
+		font-size: rem(32px);
+	}
 }
 
 @mixin font-heading-28b {
 	font-family: $font-heading;
-	font-size: rem(28px);
 	font-weight: $bold;
+	@include bp-to("s") {
+		font-size: rem(26px);
+	}
+	@include bp-from("s") {
+		font-size: rem(28px);
+	}
 }
 
 @mixin font-heading-24b {
 	font-family: $font-heading;
-	font-size: rem(24px);
 	font-weight: $bold;
+	font-size: rem(24px);
 }
 
 @mixin font-heading-22b {
 	font-family: $font-heading;
-	font-size: rem(22px);
 	font-weight: $bold;
+	font-size: rem(22px);
 }
 
 @mixin font-heading-20b {
 	font-family: $font-heading;
-	font-size: rem(20px);
 	font-weight: $bold;
+	font-size: rem(20px);
 }
 
 @mixin font-base-24b {
 	font-family: $font-base;
-	font-size: rem(24px);
 	font-weight: $bold;
+	font-size: rem(24px);
 }
 
 @mixin font-base-20 {
 	font-family: $font-base;
-	font-size: rem(20px);
 	font-weight: $regular;
+	font-size: rem(20px);
 }
 
 @mixin font-base-18 {
 	font-family: $font-base;
-	font-size: rem(18px);
 	font-weight: $regular;
+	font-size: rem(18px);
 }
 
 @mixin font-base-18b {
 	font-family: $font-base;
-	font-size: rem(18px);
 	font-weight: $bold;
+	font-size: rem(18px);
 }
 
 @mixin font-base-16 {
 	font-family: $font-base;
-	font-size: rem(16px);
 	font-weight: $regular;
+	font-size: rem(16px);
 }
