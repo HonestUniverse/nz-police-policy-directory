@@ -56,13 +56,6 @@
 						},
 						"rating": "Undetermined"
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Evaluating the effectiveness of intelligence\" covers pages 84-91 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			]
