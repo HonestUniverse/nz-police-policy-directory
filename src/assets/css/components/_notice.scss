@@ -33,7 +33,9 @@
 	}
 }
 
-.notice__body {}
+.notice__body {
+	@extend %content;
+}
 
 .notice__title {
 	display: block;
