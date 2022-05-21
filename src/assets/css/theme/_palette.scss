@@ -139,8 +139,8 @@ $col-primary--active--dark: $white;
 $bg-secondary--dark: $grey--dark;
 $col-secondary--dark: $white;
 
-// AA  5.01
-$bg-brand--dark: $teal;
+// AAA 7.7
+$bg-brand--dark: $midnight-green-eagle-green;
 $col-brand--dark: $white;
 $link-brand--dark: $white;
 
@@ -240,7 +240,7 @@ $col-red--dark: $white;
 	@include use-var(color, --col-secondary, $col-secondary--light);
 
 	--accent: var(--accent-base, #{$accent-base--light});
-	--link: var(--link-brand--light, #{$link-base--light});
+	--link: var(--link-base, #{$link-base--light});
 }
 
 /// Using a branded background colour
@@ -248,7 +248,7 @@ $col-red--dark: $white;
 	@include use-var(background-color, --bg-brand, $bg-brand--light);
 	@include use-var(color, --col-brand, $col-brand--light);
 
-	--accent: currentColor;
+	--accent: var(--accent-base, #{$accent-base--light});
 	--link: var(--link-brand, #{$link-brand--light});
 }
 
