@@ -59,44 +59,38 @@
 
 <%- include('../layout/head', { title: 'Content Report' }); %>
 
-<article class="directory">
-	<div class="directory__layout">
-		<h1 class="directory__title">Content Report</h1>
+<details class="content-report__section">
+	<summary class="content-report__section__summary">Needs OCR</summary>
 
-		<details class="content-report__section">
-			<summary class="content-report__section__summary">Needs OCR</summary>
+	<div class="content-report__section__content">
+		<ul class="directory__list">
+			<% policies.forEach((policy, idx) => { %>
+				<% if (needsOCR(policy)) { %>
 
-			<div class="content-report__section__content">
-				<ul class="directory__list">
-					<% policies.forEach((policy, idx) => { %>
-						<% if (needsOCR(policy)) { %>
-
-						<li class="directory__item">
-							<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-						</li>
-						<% } %>
-					<% }) %>
-				</ul>
-			</div>
-		</details>
-
-		<details class="content-report__section">
-			<summary class="content-report__section__summary">Needs Accessibility Rating</summary>
-
-			<div class="content-report__section__content">
-				<ul class="directory__list">
-					<% policies.forEach((policy, idx) => { %>
-						<% if (needsA11yRating(policy)) { %>
-
-						<li class="directory__item">
-							<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-						</li>
-						<% } %>
-					<% }) %>
-				</ul>
-			</div>
-		</details>
+				<li class="directory__item">
+					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+				</li>
+				<% } %>
+			<% }) %>
+		</ul>
 	</div>
-</article>
+</details>
+
+<details class="content-report__section">
+	<summary class="content-report__section__summary">Needs Accessibility Rating</summary>
+
+	<div class="content-report__section__content">
+		<ul class="directory__list">
+			<% policies.forEach((policy, idx) => { %>
+				<% if (needsA11yRating(policy)) { %>
+
+				<li class="directory__item">
+					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+				</li>
+				<% } %>
+			<% }) %>
+		</ul>
+	</div>
+</details>
 
 <%- include('../layout/foot'); %>

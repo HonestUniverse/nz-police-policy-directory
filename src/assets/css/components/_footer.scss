@@ -1,6 +1,4 @@
 .footer {
-	margin-top: 5em;
-
 	border-top: 2px solid;
 	@include use-var(border-top-color, --accent, currentColor);
 	padding-top: 1em;

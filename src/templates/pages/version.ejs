@@ -11,28 +11,25 @@
 	const title = `${policy.title} ${version.name}`;
 %>
 
-<%- include('../layout/head', { title }); %>
+<%- include('../layout/head', {
+	title,
+	h1: policy.title,
+	subtitle: policy.type,
+}); %>
 
-<article class="policy">
-	<div class="policy__layout">
-		<h1 class="policy__title"><%= policy.title %></h2>
-		<span class="policy__type"><%= policy.type %></span>
+<% if (latest) { %>
+	<%- include('../components/notice', {
+		notice: {
+			type: "info",
+			message: `\<p>This page displays the latest complete version for this policy. \<a href="/${versionDst}">A permanent link to this version can be found here.\</a>\</p>`
+		}
+	}) %>
+<% } %>
 
-		<% if (latest) { %>
-			<%- include('../components/notice', {
-				notice: {
-					type: "info",
-					message: `\<p>This page displays the latest complete version for this policy. \<a href="/${versionDst}">A permanent link to this version can be found here.\</a>\</p>`
-				}
-			}) %>
-		<% } %>
+<article class="policy__version">
+	<h2 class="policy__version__name"><%= version.name %></h2>
 
-		<article class="policy__version">
-			<h2 class="policy__version__name"><%= version.name %></h2>
-
-			<%- include('../components/version', { version }); %>
-		</article>
-	</div>
+	<%- include('../components/version', { version }); %>
 </article>
 
 <%- include('../layout/foot'); %>
