@@ -1,0 +1,26 @@
+.page {}
+
+.page__head {
+	margin-bottom: 1rem;
+}
+
+.page__layout {
+	@include layout-wrapper;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+.page__title {
+	margin: 0 0 0.5rem;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	@include font-heading-40b;
+}
+
+.page__subtitle {
+	display: block;
+	@include font-base-18;
+}
+
+.page__body {}
