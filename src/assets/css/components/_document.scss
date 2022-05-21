@@ -1,0 +1,27 @@
+.document {
+	counter-reset: page;
+}
+
+.document__page {
+	counter-increment: page;
+	&::before {
+		display: block;
+		content: "Page " counter(page);
+		margin-bottom: 2rem;
+	}
+
+	@extend %content;
+
+	margin-top: 2rem;
+	border-top: 2px solid;
+	@include use-var(border-top-color, --accent, currentColor);
+	padding-top: 1rem;
+}
+
+.document__withheld {
+	// TODO
+}
+
+.document__link {
+	text-decoration: underline;
+}
