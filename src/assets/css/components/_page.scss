@@ -3,6 +3,8 @@
 .page__head {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	border-bottom: 2px solid;
+	@include use-var(border-bottom-color, --accent, currentColor);
 	margin-bottom: 1rem;
 
 	@include contrast-brand;
@@ -58,7 +60,6 @@
 }
 
 .page__head__back-link__icon {
-	@include link-colour;
 	&::before {
 		font-family: $font-icons;
 		content: $icon-arrow-left;
