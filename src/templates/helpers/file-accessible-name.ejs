@@ -9,6 +9,7 @@
 		} else if (file.documentType && file.documentType !== 'Policy') {
 			return [file.documentType, true];
 		} else {
+			// Remove everything up to and including the last slash
 			return [file.path.replace(/^.*\//, ''), false];
 		}
 	})();
