@@ -15,6 +15,7 @@ import type { File as PolicyFile } from '../schema/File.js';
 import type { AlternateFile } from '../schema/AlternateFile.js';
 import type { Policy } from '../schema/Policy.js';
 import type { Version } from '../schema/PolicyVersion.js';
+import { readFile } from 'fs/promises';
 
 /**
  * Build steps for a particular policy.
@@ -35,34 +36,74 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	copyFiles(src, dst, policy) {
 		const plugins: CopyPlugin[] = [];
 
-		function copyFile(file: PolicyFile | AlternateFile, versionUrl: string) {
+		function copyFile(file: PolicyFile | AlternateFile, version: Version) {
 			const fileSrcPathAndName = `${src}/${file.path}`;
-			const fileName = file.path.replace(/.*\//, '');
-
-			const fileDstPath = toUrlSegment(versionUrl);
-			const fileDstPathAndName = `${dst}/${fileDstPath}/${fileName}`;
+			const fileDst = getFileDst(dst, file, version);
 
 			plugins.push(
 				new CopyPlugin({
-					patterns: [{ from: fileSrcPathAndName, to: fileDstPathAndName }],
+					patterns: [{ from: fileSrcPathAndName, to: fileDst }],
 				})
 			);
 
 			// Update file.path to ensure the build HTML points to the correct place
-			const fileDstPathRootRelative = makeRootRelative(fileDstPathAndName);
-			file.path = fileDstPathRootRelative;
+			makeFilePathRootRelative(dst, file, version);
 		}
 
 		for (const version of policy.versions) {
-			const versionName = version.name;
-			const versionUrl = toUrlSegment(versionName);
-
 			for (const file of version.files) {
-				copyFile(file, versionUrl);
+				copyFile(file, version);
 
 				if (file.alternateFiles) {
 					for (const altFile of file.alternateFiles) {
-						copyFile(altFile, versionUrl);
+						if (altFile.type !== 'text/html') {
+							copyFile(altFile, version);
+						}
+					}
+				}
+			}
+		}
+
+		return plugins;
+	},
+
+	/**
+	 * Build any HTML-based alternate files
+	 */
+	async createHtmlAlternateFiles(src, dst, policy) {
+		const plugins: HtmlWebpackPlugin[] = [];
+
+		for (const version of policy.versions) {
+			for (const file of version.files) {
+				if (file.alternateFiles) {
+					for (const altFile of file.alternateFiles) {
+						if (altFile.type === 'text/html') {
+							const fileDst = getFileDst(dst, altFile, version);
+
+							const documentBuffer = await readFile(`${src}/${altFile.path}`);
+							const document = documentBuffer.toString();
+
+							plugins.push(new HtmlWebpackPlugin({
+								filename: `${fileDst}`,
+								template: TemplateCustomizer({
+									htmlLoaderOption: {
+										sources: false,
+									},
+									templatePath: `${paths.templates}/pages/document.ejs`,
+									templateEjsLoaderOption: {
+										data: {
+											document,
+											version,
+											policy,
+										},
+									},
+								}),
+								chunks: ['priority', 'main', 'enhancements', 'styles'],
+							}));
+
+							// Update file.path to ensure the build HTML points to the correct place
+							makeFilePathRootRelative(dst, altFile, version);
+						}
 					}
 				}
 			}
@@ -94,7 +135,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 					},
 				},
 			}),
-			chunks: ['priority', 'main', 'enhancements'],
+			chunks: ['priority', 'main', 'enhancements', 'styles'],
 		})];
 	},
 
@@ -145,11 +186,42 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	},
 };
 
+/**
+ * Create a root-relative path for a file, and save it over its `path` property
+ */
+function makeFilePathRootRelative(
+	dst: string,
+	file: PolicyFile | AlternateFile,
+	version: Version,
+) {
+	const fileDst = getFileDst(dst, file, version);
+	const fileDstRootRelative = makeRootRelative(fileDst);
+	file.path = fileDstRootRelative;
+}
+
+/**
+ * Construct the dst path for a file, based on its version
+ */
+function getFileDst(
+	dst: string,
+	file: PolicyFile | AlternateFile,
+	version: Version,
+) {
+	const versionName = version.name;
+	const versionUrl = toUrlSegment(versionName);
+
+	const fileName = file.path.replace(/.*\//, '');
+	const fileDstPath = toUrlSegment(versionUrl);
+	const fileDstPathAndName = `${dst}/${fileDstPath}/${fileName}`;
+
+	return fileDstPathAndName;
+}
+
 function createVersionMetadata(
 	dst: string,
 	policy: Policy,
 	version: Version,
-	latest: boolean = false
+	latest: boolean = false,
 ) {
 	const versionName = version.name;
 	const versionPathName = toUrlSegment(versionName);
@@ -172,7 +244,7 @@ function createVersionPlugin(
 	dst: string,
 	policy: Policy,
 	version: Version,
-	latest: boolean = false
+	latest: boolean = false,
 ): HtmlWebpackPlugin {
 	const versionName = version.name;
 	const versionPathName = toUrlSegment(versionName);
@@ -194,6 +266,6 @@ function createVersionPlugin(
 				},
 			},
 		}),
-		chunks: ['priority', 'main', 'enhancements'],
+		chunks: ['priority', 'main', 'enhancements', 'styles'],
 	});
 }

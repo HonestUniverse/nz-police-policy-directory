@@ -1,0 +1,20 @@
+<%##
+	locals: {
+		document: string,
+		policy: Policy,
+		version: Version,
+	}
+%>
+
+<%- include('../layout/head', {
+	title: `${policy.title} ${version.name}`,
+	h1: policy.title,
+	subtitle: version.name,
+	backLink: true,
+}); %>
+
+<article class="document">
+	<%- document %>
+</article>
+
+<%- include('../layout/foot'); %>
