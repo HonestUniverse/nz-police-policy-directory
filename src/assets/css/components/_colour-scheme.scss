@@ -56,7 +56,8 @@
 	width: 100%;
 
 	@include contrast-primary;
-	border: 1px solid currentColor;
+	border: 1px solid;
+	@include use-var(border-color, --accent, currentColor);
 	border-top: 0;
 }
 

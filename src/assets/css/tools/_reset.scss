@@ -14,3 +14,9 @@
 	padding: 0;
 	cursor: pointer;
 }
+
+/// Applies reset rules for a text-like `<input>` element
+@mixin input-reset {
+	border: none;
+	border-radius: 0;
+}
