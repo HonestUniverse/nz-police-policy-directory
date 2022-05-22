@@ -1,5 +1,5 @@
 import { stripAccents } from '../../../../build/util/to-url-segment.js';
-import { debounce } from '../utils/debounce.js'
+import { debounce } from '../utils/debounce.js';
 
 enum Selectors {
 	FORM = '.js-search',
