@@ -1,0 +1,57 @@
+{
+	"schemaVersion": "3.1.4",
+	"title": "Motor vehicle offences",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Version 9.0",
+			"duration": {
+				"on": ["2014-09-08"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "M Kelly",
+						"id": "14/5411",
+						"responseUrl": "https://fyi.org.nz/request/1901-practice-policy-and-procedure-in-regards-to-speed-enforcement-and-the-use-of-speed-measuring-devices-by-the-new-zealand-police#incoming-6695",
+						"withholdings": "None"
+					},
+					"released": "2014-09-08",
+					"retrieved": "2022-05-22",
+					"url": "https://fyi.org.nz/request/1901-practice-policy-and-procedure-in-regards-to-speed-enforcement-and-the-use-of-speed-measuring-devices-by-the-new-zealand-police#incoming-6695",
+					"fileUrl": "https://fyi.org.nz/request/1901/response/6695/attach/3/Kelly%20M%2014%205411%20speed%20measuring%20devices%20SC%20enforcement%20policy.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "version-9-0/Kelly M 14 5411 speed measuring devices MV offences policy.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 243642,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
