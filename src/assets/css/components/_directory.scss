@@ -5,6 +5,33 @@
 	@include link;
 }
 
+.directory__search {
+	display: flex;
+	align-items: stretch;
+}
+
+.directory__search__input {
+	flex-grow: 1;
+	padding: 0 0.5em;
+}
+
+.directory__search__submit {
+	@include button-reset;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: rem(44px);
+	width: rem(44px);
+}
+
+.directory__search__submit__icon {
+	&::before {
+		font-family: $font-icons;
+		content: $icon-arrow-right;
+	}
+}
+
 .directory__list {
 	@include list-reset;
 }

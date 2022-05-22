@@ -18,9 +18,16 @@
 }); %>
 
 <article class="directory">
-	<ul class="directory__list">
+	<form class="directory__search js-search" action="." method="GET" aria-controls="policy-list">
+		<input class="directory__search__input" name="q" type="search" placeholder="Search" />
+		<button class="directory__search__submit" type="submit" title="Search">
+			<span class="directory__search__submit__icon" aria-hidden="true"></span>
+		</button>
+	</form>
+
+	<ul class="directory__list" id="policy-list">
 		<% policies.forEach((policy, idx) => { %>
-			<li class="directory__item">
+			<li class="directory__item js-search__item-wrapper">
 				<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
 			</li>
 		<% }) %>
