@@ -11,13 +11,18 @@
 }
 
 .directory__search__input {
+	@include input-reset;
+	@include font-base-18;
+	@include contrast-secondary;
+
 	flex-grow: 1;
 	padding: 0 0.5em;
-
-	@include font-base-18;
+	border: 1px solid;
+	@include use-var(border-color, --accent, currentColor);
 }
 
 .directory__search__submit {
+	margin-left: -1px;
 	@include button($icon: true, $theme: "primary");
 }
 
