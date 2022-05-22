@@ -8,6 +8,7 @@ class AlterPlugin {
 	private body: string[];
 	private preload: string[];
 	private module: string[];
+	private remove: string[];
 
 	constructor(options?: {
 		async?: string[];
@@ -15,13 +16,15 @@ class AlterPlugin {
 		body?: string[];
 		preload?: string[];
 		module?: string[];
+		remove?: string[];
 	}) {
-		const { async, defer, body, preload, module } = {
+		const { async, defer, body, preload, module, remove } = {
 			async: [],
 			defer: [],
 			body: [],
 			preload: [],
 			module: [],
+			remove: [],
 			...options,
 		};
 
@@ -30,6 +33,7 @@ class AlterPlugin {
 		this.body = body;
 		this.preload = preload;
 		this.module = module;
+		this.remove = remove;
 	}
 
 	apply(compiler: Compiler) {
@@ -50,7 +54,9 @@ class AlterPlugin {
 			const hooks = HtmlWebpackPlugin.getHooks(compilation);
 
 			hooks.alterAssetTags.tapAsync('AlterPlugin', (data, callback) => {
-				data.assetTags.scripts.forEach((tag) => {
+				for (let i = 0; i < data.assetTags.scripts.length; i++) {
+					const tag = data.assetTags.scripts[i];
+
 					const name = getChunkName(tag.attributes.src as string, data.publicPath);
 
 					delete tag.attributes.defer;
@@ -67,7 +73,12 @@ class AlterPlugin {
 					if (this.module.includes(name)) {
 						tag.attributes.type = 'module';
 					}
-				});
+
+					if (this.remove.includes(name)) {
+						data.assetTags.scripts.splice(i, 1);
+						i -= 1;
+					}
+				}
 
 				callback(false, data);
 			});

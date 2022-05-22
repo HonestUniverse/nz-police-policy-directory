@@ -9,27 +9,23 @@ import { UtilCssClasses } from '../utils/UtilCssClasses.js';
 /**
  * Update the `<body>` element to specify a preferred colour scheme.
  */
-export async function applyColourScheme(scheme: ColourScheme, preventTransitions = true) {
+export async function applyColourScheme(scheme: ColourScheme) {
 	const $body = document.body;
 
-	function apply() {
-		$body.classList.remove(...Object.values(ColourScheme));
-		if (scheme !== ColourScheme.DEFAULT) {
-			$body.classList.add(scheme);
-		}
+	// First, prevent transitions
+	$body.classList.add(UtilCssClasses.NO_TRANSITIONS);
+
+	// Then, update colour scheme
+	$body.classList.remove(...Object.values(ColourScheme));
+	if (scheme !== ColourScheme.DEFAULT) {
+		$body.classList.add(scheme);
 	}
 
-	if (preventTransitions) {
-		$body.classList.add(UtilCssClasses.NO_TRANSITIONS);
-		apply();
+	// Preventing transitions requires a delay so transitions can be disabled while the colour scheme is applied
+	await waitFrame();
 
-		// Preventing transitions requires a delay so transitions can be disabled while the colour scheme is applied
-		await waitFrame();
-
-		$body.classList.remove(UtilCssClasses.NO_TRANSITIONS);
-	} else {
-		apply();
-	}
+	// Finally, re-enable transitions
+	$body.classList.remove(UtilCssClasses.NO_TRANSITIONS);
 }
 
 /**
@@ -54,5 +50,5 @@ function recallColourScheme(): ColourScheme {
  */
 export function initColourScheme() {
 	const scheme = recallColourScheme();
-	applyColourScheme(scheme, false);
+	applyColourScheme(scheme);
 }
