@@ -1,7 +1,9 @@
 import { stripAccents } from '../../../../build/util/to-url-segment.js';
+import { debounce } from '../utils/debounce.js'
 
 enum Selectors {
 	FORM = '.js-search',
+	INPUT = '.js-search__input',
 	ITEM = '.js-search__item',
 	WRAPPER = '.js-search__item-wrapper',
 }
@@ -9,6 +11,9 @@ enum Selectors {
 enum DataAttribute {
 	NAME = 'data-search-name',
 }
+
+/** The delay between the user stopping typing and the auto-search happening */
+const inputDelay = 200;
 
 function init() {
 	initEvents();
@@ -19,10 +24,16 @@ function init() {
  */
 function initEvents() {
 	const $forms = document.querySelectorAll(Selectors.FORM);
-
 	$forms.forEach(($form) => {
 		if ($form instanceof HTMLFormElement) {
-			$form.addEventListener('submit', performSearchEvent);
+			$form.addEventListener('submit', handleSearchSubmitEvent);
+		}
+	});
+
+	const $inputs = document.querySelectorAll(Selectors.INPUT);
+	$inputs.forEach(($input) => {
+		if ($input instanceof HTMLInputElement) {
+			$input.addEventListener('input', debounce(handleSearchInputEvent, inputDelay));
 		}
 	});
 }
@@ -30,9 +41,29 @@ function initEvents() {
 /**
  * Handle the search form's submit event by performing a search
  */
-function performSearchEvent(this: HTMLFormElement, e: SubmitEvent) {
+function handleSearchSubmitEvent(this: HTMLFormElement, e: SubmitEvent) {
+	e.preventDefault();
 	const $form = this;
 
+	performSearch($form);
+}
+
+/**
+ * Handle the search input's input event by performing a search
+ */
+function handleSearchInputEvent(this: HTMLInputElement, e: Event) {
+	const $input = this;
+	const $form = $input.form;
+
+	if ($form) {
+		performSearch($form);
+	}
+}
+
+/**
+ * Perform a search with a given form
+ */
+function performSearch($form: HTMLFormElement) {
 	const targetId = $form.getAttribute('aria-controls');
 	if (!targetId) {
 		return;
@@ -43,19 +74,20 @@ function performSearchEvent(this: HTMLFormElement, e: SubmitEvent) {
 		return;
 	}
 
-	e.preventDefault();
 	const data = new FormData($form);
 	const query = data.get('q');
-
-	if (typeof query === 'string') {
-		performSearch($target, query);
+	if (typeof query !== 'string') {
+		return;
 	}
+
+	applySearch($target, query);
 }
 
 /**
- * Apply a search query to a target area
+ * Apply a search query to a target area containing searchable items
  */
-function performSearch($target: HTMLElement, query: string) {
+function applySearch($target: HTMLElement, query: string) {
+
 	const $items = Array.from($target.querySelectorAll<HTMLElement>(Selectors.ITEM));
 	const searchFn = applySearchToItem(query);
 
