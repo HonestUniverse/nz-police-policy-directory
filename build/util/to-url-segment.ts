@@ -16,28 +16,8 @@ export function toUrlSegment(str: string): string {
 	urlSegment = urlSegment.replace(/ō/g, 'oo');
 	urlSegment = urlSegment.replace(/ū/g, 'uu');
 
-	// Strip accents etc.
-	let normalisedSegment = urlSegment.normalize('NFD');
-	for (let i = 0; i < normalisedSegment.length; i++) {
-		const char = normalisedSegment[i];
-
-		// If it's the same, don't change anything
-		if (char === urlSegment[i]) {
-			continue;
-		}
-
-		// If it's a letter, leave it alone
-		if (/[a-z]/.test(char)) {
-			continue;
-		}
-
-		// Otherwise, remove it
-		let normalisedChars = normalisedSegment.split('');
-		normalisedChars.splice(i, 1);
-		i -= 1;
-		normalisedSegment = normalisedChars.join('');
-	}
-	urlSegment = normalisedSegment;
+	// Strip accents
+	urlSegment = stripAccents(urlSegment);
 
 	// Remove apostrophes so they aren't replaced with '-'
 	urlSegment = urlSegment.replace(/'/g, '');
@@ -55,4 +35,34 @@ export function toUrlSegment(str: string): string {
 	urlSegment = leadingDots + urlSegment;
 
 	return urlSegment;
+}
+
+/**
+ * Converted accented characters such as āéôëŏüçñãáč to their non-accented base characters
+ */
+export function stripAccents(str: string): string {
+	let normalisedStr = str.normalize('NFD');
+
+	// Step through character by character and compare the original and normalised strings
+	for (let i = 0; i < normalisedStr.length; i++) {
+		const char = normalisedStr[i];
+
+		// If they're the same, don't change anything
+		if (char === str[i]) {
+			continue;
+		}
+
+		// If the character is a letter, leave it alone
+		if (/[a-z]/.test(char)) {
+			continue;
+		}
+
+		// Otherwise, remove it and re-sync the strings for the next iteration
+		let normalisedChars = normalisedStr.split('');
+		normalisedChars.splice(i, 1);
+		i -= 1;
+		normalisedStr = normalisedChars.join('');
+	}
+
+	return normalisedStr;
 }
