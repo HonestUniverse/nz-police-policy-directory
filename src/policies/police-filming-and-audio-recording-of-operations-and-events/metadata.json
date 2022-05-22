@@ -1,11 +1,62 @@
 {
-	"schemaVersion": "3.1.0",
+	"schemaVersion": "3.1.4",
 	"title": "Police filming and audio recording of operations and events",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
+			"name": "Unnamed Version 2",
+			"duration": {
+				"on": ["2019-05-01"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Hugh Davenport",
+						"id": "IR-01-19-6618",
+						"responseUrl": "https://fyi.org.nz/request/9719-information-about-any-cameras-attached-to-police-staff#incoming-34068",
+						"withholdings": "None"
+					},
+					"released": "2019-05-01",
+					"retrieved": "2022-05-22",
+					"url": "https://fyi.org.nz/request/9719-information-about-any-cameras-attached-to-police-staff#incoming-34068",
+					"fileUrl": "https://fyi.org.nz/request/9719/response/34068/attach/3/Release%20doc%201.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-2/Release doc 1.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 918141,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"text-based": {
+							"value": false
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": false
+						}
+					}
+				}
+			]
+		},
+		{
 			"name": "Unnamed Version 1",
 			"duration": {
+				"ended": true,
 				"on": [
 					"2012-10-18"
 				]
