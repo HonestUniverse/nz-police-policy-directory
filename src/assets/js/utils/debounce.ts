@@ -4,6 +4,7 @@
  * @param {Function} fn - The function to debounce
  * @param {number} delay - The duration to wait before executing the function (ms)
  */
+// eslint-disable-next-line
 export function debounce<F extends (...args: any) => any>(fn: F, delay: number) {
 	let timeout: ReturnType<typeof setTimeout> | null = null;
 
@@ -15,5 +16,5 @@ export function debounce<F extends (...args: any) => any>(fn: F, delay: number) 
 		timeout = setTimeout(() => {
 			fn.apply(this, args);
 		}, delay);
-	}
+	};
 }
