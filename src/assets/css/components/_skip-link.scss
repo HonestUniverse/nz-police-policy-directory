@@ -1,0 +1,14 @@
+.skip-link {
+	&:not(:focus) {
+		@include visually-hidden;
+	}
+
+	@include font-base-24b;
+	@include contrast-brand;
+
+	@include layout-wrapper;
+	display: block;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
