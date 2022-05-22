@@ -13,6 +13,8 @@
 .directory__search__input {
 	flex-grow: 1;
 	padding: 0 0.5em;
+
+	@include font-base-18;
 }
 
 .directory__search__submit {
