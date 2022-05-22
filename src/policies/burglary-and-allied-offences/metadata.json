@@ -1,0 +1,57 @@
+{
+	"schemaVersion": "3.1.4",
+	"title": "Burglary and allied offences",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2018-10-26"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Joseph",
+						"id": "IR-01-18-11600",
+						"responseUrl": "https://fyi.org.nz/request/8675-police-chapters#incoming-29058",
+						"withholdings": "None"
+					},
+					"released": "2018-10-26",
+					"retrieved": "2022-05-22",
+					"url": "https://fyi.org.nz/request/8675-police-chapters#incoming-29058",
+					"fileUrl": "https://fyi.org.nz/request/8675/response/29058/attach/2/Joseph%20None%20ir%2001%2018%2011600%20Police%20Manual%20Chapter%20Burglary%20and%20Allied%20Offences.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Joseph None ir 01 18 11600 Police Manual Chapter Burglary and Allied Offences.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 328381,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"text-based": {
+							"value": false
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
