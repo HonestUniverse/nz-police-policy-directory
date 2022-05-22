@@ -1,35 +1,62 @@
 .page {}
 
-.page__layout {
-	@include layout-wrapper;
-	padding-top: 5rem;
-	padding-bottom: 5rem;
-}
-
 .page__head {
-	margin-bottom: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 2px solid;
+	@include use-var(border-bottom-color, --accent, currentColor);
+	margin-bottom: 1rem;
+
+	@include contrast-brand;
 }
 
 .page__head__layout {
+	@include layout-wrapper;
+
 	display: flex;
 	flex-wrap: wrap;
 
 	@supports (display: grid) {
 		display: grid;
-		grid-template-columns: min-content 1fr;
-		grid-template-areas:
-			"back h1"
-			"back subtitle";
+		@include bp-to("m") {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"back"
+				"h1"
+				"subtitle";
+		}
+		@include bp-from("m") {
+			grid-template-columns: min-content 1fr;
+			grid-template-areas:
+				"back h1"
+				"back subtitle";
+		}
 	}
 }
 
 .page__head__back-link {
 	grid-area: back;
 
-	margin-right: 1ch;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 44px;
+	width: 44px;
+	border: 1px solid;
+	overflow: hidden;
+	@include use-var(border-color, --accent, currentColor);
+	border-radius: 0.2em;
 
-	@include font-heading-40b;
-	@include link-colour;
+	margin-right: 1rem;
+
+	font-size: 30px;
+	line-height: 44px;
+
+	@include contrast-primary;
+	@include active {
+		@include contrast-primary--active;
+	}
+	@include transition("color, background-color");
 }
 
 .page__head__back-link__icon {
@@ -41,6 +68,9 @@
 
 .page__title {
 	grid-area: h1;
+	@include bp-to("m") {
+		width: 100%;
+	}
 
 	margin: 0 0 0.5rem;
 	&:last-child {
@@ -58,3 +88,8 @@
 }
 
 .page__body {}
+
+.page__body__layout {
+	@include layout-wrapper;
+	padding-bottom: 5rem;
+}

@@ -26,12 +26,12 @@ $breakpoints: (
 	}
 }
 
-/// Use a media query for widths <= the specified size
+/// Use a media query for widths < the specified size. Expects value in `px`
 /// @param {string | length} $to - A size label or size to use for the media query
 @mixin bp-to($to) {
-	$toVal: map.get($breakpoints, $to);
+	$toVal: map.get($breakpoints, $to) - 1px;
 	@if (not $toVal) {
-		$toVal: $to;
+		$toVal: $to - 1px;
 	}
 
 	@media (max-width: $toVal) {
@@ -39,7 +39,7 @@ $breakpoints: (
 	}
 }
 
-/// Use a media query for widths between the specified sizes
+/// Use a media query for widths between the specified sizes. Expects upper bount value in `px`
 /// @param {string | length} $from - A size label or size to use for the lower bound of the media query
 /// @param {string | length} $to - A size label or size to use for the upper bound of the media query
 @mixin bp-between($from, $to) {
