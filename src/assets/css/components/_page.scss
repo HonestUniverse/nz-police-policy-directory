@@ -37,29 +37,13 @@
 .page__head__back-link {
 	grid-area: back;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: rem(44px);
-	width: rem(44px);
-	border: 1px solid;
-	overflow: hidden;
-	@include use-var(border-color, --accent, currentColor);
-	border-radius: 0.2em;
+	@include button($icon: true, $theme: "primary");
 
 	margin-right: 1rem;
-
-	font-size: rem(30px);
-	line-height: rem(44px);
-
-	@include contrast-primary;
-	@include active {
-		@include contrast-primary--active;
-	}
-	@include transition("color, background-color");
 }
 
 .page__head__back-link__icon {
+	@include button__icon($icon-arrow-left);
 	&::before {
 		font-family: $font-icons;
 		content: $icon-arrow-left;
