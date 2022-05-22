@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?g5ncex');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?g5ncex#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?g5ncex') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?g5ncex') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?g5ncex##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?btenyn');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?btenyn#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?btenyn') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?btenyn') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?btenyn##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
 .icon-arrow-up {
   &:before {
     content: $icon-arrow-up; 

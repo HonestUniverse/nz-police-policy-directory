@@ -16,20 +16,11 @@
 }
 
 .directory__search__submit {
-	@include button-reset;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: rem(44px);
-	width: rem(44px);
+	@include button($icon: true, $theme: "primary");
 }
 
 .directory__search__submit__icon {
-	&::before {
-		font-family: $font-icons;
-		content: $icon-arrow-right;
-	}
+	@include button__icon($icon-search);
 }
 
 .directory__list {
