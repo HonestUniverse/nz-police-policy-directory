@@ -1,0 +1,55 @@
+{
+	"schemaVersion": "3.1.4",
+	"title": "Elections and political matters-a guide for Police employees",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2021-12-15", "2022-05-24"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2021,
+						"month": 12
+					},
+					"extracted": "2021-12-15",
+					"retrieved": "2022-05-24",
+					"url": "https://www.police.govt.nz/about-us/publication/elections-and-political-matters-policy",
+					"archiveUrl": "https://web.archive.org/web/20211216052333/www.police.govt.nz/about-us/publication/elections-and-political-matters-policy",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/elections-and-political-matters-policy.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20211216052338/https://www.police.govt.nz/sites/default/files/publications/elections-and-political-matters-policy.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/elections-and-political-matters-policy.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 117769,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
