@@ -1,0 +1,82 @@
+{
+	"schemaVersion": "3.1.4",
+	"title": "Victims (Police service to victims)",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2021-08-09", "2021-09-01"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Amanda Murtagh",
+						"id": "IR-01-21-24277",
+						"responseUrl": "https://fyi.org.nz/request/16304-instructions-to-victim-support-by-police#incoming-62326",
+						"withholdings": "None"
+					},
+					"extracted": "2021-08-09",
+					"released": "2021-09-01",
+					"retrieved": "2022-05-24",
+					"url": "https://fyi.org.nz/request/16304-instructions-to-victim-support-by-police#incoming-62326",
+					"fileUrl": "https://fyi.org.nz/request/16304/response/62326/attach/3/Murtagh%20Amanda%20IR%2001%2021%2024277%20Final%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Murtagh Amanda IR 01 21 24277 Final Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 1128990,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"text-based": {
+							"value": "Partial",
+							"notes": ["There are images of text on pages 19 and 42."]
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "unnamed-version-1/Murtagh Amanda IR 01 21 24277 Final Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 1128990,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
