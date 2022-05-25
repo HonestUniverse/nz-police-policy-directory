@@ -17,7 +17,7 @@
 						"id": "IR-01-22-3361",
 						"responseUrl": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
 						"withholdings": {
-							"6(c)": "Some information has been withheld on pages 15&endash;20, 34, 37."
+							"6(c)": "Some information has been withheld on pages 15&ndash;20, 34, 37."
 						}
 					},
 					"extracted": "2022-02-09",
@@ -43,7 +43,7 @@
 						"text-based": {
 							"value": "Partial",
 							"notes": [
-								"Pages 39&endash;42 are images of text"
+								"Pages 39&ndash;42 are images of text"
 							]
 						},
 						"semantics": {
