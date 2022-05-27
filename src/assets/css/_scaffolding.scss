@@ -5,6 +5,8 @@
 //	tools
 //		Tool files contain only mixins and functions, so they will not generate any CSS on their own.
 //		These mixins and functions are general purpose, and shouldn't need to change from theme to theme.
+//	patterns
+//		Pattern files contain mixins that are used to generate variations of similar components, like buttons.
 //	base
 //		Base files generate CSS that has the lowest priority, such as reset CSS, @font-face declarations, and custom properties on the `:root`.
 //	extendables
@@ -24,6 +26,9 @@
 @import "tools/reset";
 @import "tools/transition";
 @import "tools/use-var";
+@import "tools/visually-hidden";
+
+@import "patterns/button";
 
 // Generates CSS
 @import "base/reset";

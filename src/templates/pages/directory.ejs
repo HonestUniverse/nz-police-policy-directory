@@ -5,7 +5,7 @@
 %>
 
 <%
-	const keys = Object.keys(directory).sort();
+	const keys = Object.keys(directory).sort((a, b) => a.localeCompare(b));
 	const policies = [];
 	for (const key of keys) {
 		policies.push(directory[key]);
@@ -18,9 +18,13 @@
 }); %>
 
 <article class="directory">
-	<ul class="directory__list">
+	<form class="directory__search js-search" action="." method="GET" aria-controls="policy-list">
+		<input class="directory__search__input js-search__input" name="q" type="search" placeholder="Search" />
+	</form>
+
+	<ul class="directory__list" id="policy-list">
 		<% policies.forEach((policy, idx) => { %>
-			<li class="directory__item">
+			<li class="directory__item js-search__item-wrapper">
 				<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
 			</li>
 		<% }) %>

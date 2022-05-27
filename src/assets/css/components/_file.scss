@@ -9,7 +9,6 @@
 	@supports (display: grid) {
 		display: grid;
 		grid-column-gap: 2rem;
-		grid-template-columns: repeat(2, 1fr);
 
 		@include bp-to("s") {
 			grid-template-areas:
@@ -21,6 +20,7 @@
 				"alternate-files";
 		}
 		@include bp-from("s") {
+			grid-template-columns: repeat(2, 1fr);
 			grid-template-areas:
 				"handle handle"
 				"notices notices"

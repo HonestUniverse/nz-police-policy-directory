@@ -42,7 +42,7 @@
 							<%= feature.value %>
 							<% if (feature.notes) {
 								for (const note of feature.notes) { %>
-									(<%= note %>)
+									(<%- note %>)
 								<% }
 							} %>
 						<% } %>

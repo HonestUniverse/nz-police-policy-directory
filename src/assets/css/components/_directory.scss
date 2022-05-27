@@ -5,6 +5,21 @@
 	@include link;
 }
 
+.directory__search {}
+
+.directory__search__input {
+	@include input-reset;
+	@include font-base-18;
+	@include contrast-secondary;
+
+	width: 100%;
+	min-height: 44px;
+
+	padding: 0 0.5em;
+	border: 1px solid;
+	@include use-var(border-color, --accent, currentColor);
+}
+
 .directory__list {
 	@include list-reset;
 }

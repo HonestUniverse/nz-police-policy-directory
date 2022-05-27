@@ -99,7 +99,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 										},
 									},
 								}),
-								chunks: ['priority', 'main', 'enhancements', 'styles'],
+								chunks: ['priority', 'main', 'enhancements', 'style-document'],
 							}));
 
 							// Update file.path to ensure the build HTML points to the correct place
@@ -136,7 +136,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 					},
 				},
 			}),
-			chunks: ['priority', 'main', 'enhancements', 'styles'],
+			chunks: ['priority', 'main', 'enhancements', 'style'],
 		})];
 	},
 
@@ -267,6 +267,6 @@ function createVersionPlugin(
 				},
 			},
 		}),
-		chunks: ['priority', 'main', 'enhancements', 'styles'],
+		chunks: ['priority', 'main', 'enhancements', 'style'],
 	});
 }
