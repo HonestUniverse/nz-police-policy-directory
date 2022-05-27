@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 3.1.4",
+	"$comment": "Current version: 3.2.0",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
@@ -17,6 +17,13 @@
 		"title": {
 			"description": "The title of the document",
 			"type": "string"
+		},
+		"previousTitles": {
+			"description": "Previous titles this document has gone by",
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
 		},
 		"type": {
 			"description": "The type of the document",
