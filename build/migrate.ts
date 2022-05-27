@@ -289,6 +289,9 @@ const migrations: Record<string, Migration> = {
 	 * Updated OIAWithholdings enum "Unknown" to "Undetermined"
 	 *
 	 * Made Accessibility['Rating'] required
+	 *
+	 * Renamed Policy['title'] to 'name'
+	 * Renamed Policy['previousTitles'] to 'previousNames'
 	 */
 	['4.0.0']: function (policy: Policy): void {
 		policy.schemaVersion = '4.0.0';
@@ -319,6 +322,16 @@ const migrations: Record<string, Migration> = {
 			}
 			file.accessibility.features = a11yFeatures as Accessibility['features'];
 		}
+
+		// @ts-expect-error 'title' is no longer an allowed property
+		policy.name = policy.title;
+		// @ts-expect-error 'title' is no longer an allowed property
+		delete policy.title;
+
+		// @ts-expect-error 'previousTitles' is no longer an allowed property
+		policy.previousNames = policy.previousTitles;
+		// @ts-expect-error 'previousTitles' is no longer an allowed property
+		delete policy.previousTitles;
 
 		// @ts-expect-error 'Unclassified' is no longer a valid PolicyType
 		if (policy.type === 'Unclassified') {

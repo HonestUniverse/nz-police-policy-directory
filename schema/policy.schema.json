@@ -14,12 +14,12 @@
 				"pattern": "^[0-3]\\."
 			}
 		},
-		"title": {
-			"description": "The title of the document",
+		"name": {
+			"description": "The name of the document",
 			"type": "string"
 		},
-		"previousTitles": {
-			"description": "Previous titles this document has gone by",
+		"previousNames": {
+			"description": "Previous names this document has gone by",
 			"type": "array",
 			"items": {
 				"type": "string"

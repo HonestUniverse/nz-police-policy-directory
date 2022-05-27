@@ -1,7 +1,7 @@
 {
-	"schemaVersion": "3.2.0",
-	"title": "string",
-	"previousTitles": [
+	"schemaVersion": "4.0.0",
+	"name": "string",
+	"previousNames": [
 		"string"
 	],
 	"type": "string enum",
@@ -23,9 +23,9 @@
 						"requester": "string",
 						"id": "string",
 						"responseUrl": "url",
-						"withholdings": "Unknown"
+						"withholdings": "Undetermined"
 					},
-					"withholdings": "Unknown",
+					"withholdings": "Undetermined",
 					"published": "date",
 					"extracted": "date",
 					"released": "date",
@@ -61,21 +61,23 @@
 					"modifications": ["string"],
 					"accessibility": {
 						"rating": "Undetermined",
-						"text-based": {
-							"value": "Unknown",
-							"notes": ["string"]
-						},
-						"semantics": {
-							"value": "Unknown",
-							"notes": ["string"]
-						},
-						"alt text": {
-							"value": "Unknown",
-							"notes": ["string"]
-						},
-						"unwatermarked": {
-							"value": "Unknown",
-							"notes": ["string"]
+						"features": {
+							"text-based": {
+								"value": "Undetermined",
+								"notes": ["string"]
+							},
+							"semantics": {
+								"value": "Undetermined",
+								"notes": ["string"]
+							},
+							"alt text": {
+								"value": "Undetermined",
+								"notes": ["string"]
+							},
+							"unwatermarked": {
+								"value": "Undetermined",
+								"notes": ["string"]
+							}
 						}
 					},
 					"notices": [
@@ -96,21 +98,23 @@
 							"modifications": ["string"],
 							"accessibility": {
 								"rating": "Undetermined",
-								"text-based": {
-									"value": "Unknown",
-									"notes": ["string"]
-								},
-								"semantics": {
-									"value": "Unknown",
-									"notes": ["string"]
-								},
-								"alt text": {
-									"value": "Unknown",
-									"notes": ["string"]
-								},
-								"unwatermarked": {
-									"value": "Unknown",
-									"notes": ["string"]
+								"features": {
+									"text-based": {
+										"value": "Undetermined",
+										"notes": ["string"]
+									},
+									"semantics": {
+										"value": "Undetermined",
+										"notes": ["string"]
+									},
+									"alt text": {
+										"value": "Undetermined",
+										"notes": ["string"]
+									},
+									"unwatermarked": {
+										"value": "Undetermined",
+										"notes": ["string"]
+									}
 								}
 							},
 							"notices": [
