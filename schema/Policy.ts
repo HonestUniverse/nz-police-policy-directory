@@ -14,6 +14,7 @@ export enum PolicyType {
 export type Policy = {
 	schemaVersion: `${number}.${number}.${number}`,
 	title: string,
+	previousTitles?: string[],
 	type: PolicyType,
 	obsolete?: true,
 	versions: PolicyVersion[],

@@ -40,6 +40,8 @@
 	</head>
 
 	<body class="no-js">
+		<a href="#main" class="skip-link">Skip to main content</a>
+
 		<section class="prototype-notice">
 			<div class="prototype-notice__layout">
 				<h1 class="prototype-notice__title">Under active development</h1>
@@ -112,21 +114,21 @@
 			</div>
 		</header>
 
-		<main class="page">
-			<div class="page__layout">
-				<header class="page__head">
-					<div class="page__head__layout">
-						<% if (locals.backLink) { %>
-							<a href="../" class="page__head__back-link" title="Back to parent page">
-								<span class="page__head__back-link__icon" aria-hidden="true"></span>
-							</a>
-						<% } %>
-						<h1 class="page__title"><%= h1 %></h1>
+		<main class="page" id="main">
+			<header class="page__head">
+				<div class="page__head__layout">
+					<% if (locals.backLink) { %>
+						<a href="../" class="page__head__back-link" title="Back to parent page">
+							<span class="page__head__back-link__icon" aria-hidden="true"></span>
+						</a>
+					<% } %>
+					<h1 class="page__title"><%= h1 %></h1>
 
-						<% if (locals.subtitle) { %>
-							<span class="page__subtitle"><%= subtitle %></span>
-						<% } %>
-					</div>
-				</header>
+					<% if (locals.subtitle) { %>
+						<span class="page__subtitle"><%= subtitle %></span>
+					<% } %>
+				</div>
+			</header>
 
-				<div class="page__body">
+			<div class="page__body">
+				<div class="page__body__layout">
