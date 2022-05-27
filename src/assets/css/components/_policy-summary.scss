@@ -20,10 +20,31 @@
 	@include link;
 }
 
-.policy-summary__type,
-.policy-summary__date {
+%policy-summary__metadata {
 	display: block;
 	margin-bottom: 0.5em;
 
 	@include font-base-18;
 }
+
+.policy-summary__type,
+.policy-summary__date {
+	@extend %policy-summary__metadata;
+}
+
+.policy-summary__previous-names {
+	display: none;
+	.policy-summary.show-previous-names & {
+		@extend %policy-summary__metadata;
+	}
+}
+
+.policy-summary__previous-names__title {
+	@include font-base-18b;
+}
+
+.policy-summary__previous-names__list {
+	@include list-reset;
+}
+
+.policy-summary__previous-names__item {}

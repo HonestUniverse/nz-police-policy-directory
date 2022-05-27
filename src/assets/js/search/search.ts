@@ -1,7 +1,7 @@
 import { stripAccents } from '../../../../build/util/to-url-segment.js';
 import { debounce } from '../utils/debounce.js';
 
-enum Selectors {
+enum Selector {
 	FORM = '.js-search',
 	INPUT = '.js-search__input',
 	ITEM = '.js-search__item',
@@ -10,6 +10,18 @@ enum Selectors {
 
 enum DataAttribute {
 	NAME = 'data-search-name',
+	PREVIOUS_NAMES = 'data-search-previous-names',
+}
+
+enum CssClass {
+	SHOW_PREVIOUS_NAMES = 'show-previous-names',
+}
+
+enum MatchResult {
+	NO_MATCH,
+	EMPTY_QUERY,
+	CURRENT_NAME,
+	PREVIOUS_NAME,
 }
 
 /** The delay between the user stopping typing and the auto-search happening */
@@ -23,14 +35,14 @@ function init() {
  * Bind all necessary event listeners
  */
 function initEvents() {
-	const $forms = document.querySelectorAll(Selectors.FORM);
+	const $forms = document.querySelectorAll(Selector.FORM);
 	$forms.forEach(($form) => {
 		if ($form instanceof HTMLFormElement) {
 			$form.addEventListener('submit', handleSearchSubmitEvent);
 		}
 	});
 
-	const $inputs = document.querySelectorAll(Selectors.INPUT);
+	const $inputs = document.querySelectorAll(Selector.INPUT);
 	$inputs.forEach(($input) => {
 		if ($input instanceof HTMLInputElement) {
 			$input.addEventListener('input', debounce(handleSearchInputEvent, inputDelay));
@@ -88,19 +100,27 @@ function performSearch($form: HTMLFormElement) {
  */
 function applySearch($target: HTMLElement, query: string) {
 
-	const $items = Array.from($target.querySelectorAll<HTMLElement>(Selectors.ITEM));
-	const searchFn = applySearchToItem(query);
+	const $items = Array.from($target.querySelectorAll<HTMLElement>(Selector.ITEM));
 
-	// Filter items by query
-	const $itemsToShow = $items.filter(searchFn);
-
-	// Then update the `hidden` state of each item
 	for (const $item of $items) {
-		const $wrapper = $item.closest<HTMLElement>(Selectors.WRAPPER) || $item;
-		const shouldShow = $itemsToShow.includes($item);
+		const itemResult = applySearchToItem(query, $item);
+		const shouldShow = itemResult !== MatchResult.NO_MATCH
+
+		const $wrapper = $item.closest<HTMLElement>(Selector.WRAPPER) || $item;
 
 		if (shouldShow === $wrapper.hidden) {
 			$wrapper.hidden = !shouldShow;
+		}
+
+		const previousNameMatch = itemResult === MatchResult.PREVIOUS_NAME;
+		const hasPreviousNamesClass = $item.classList.contains(CssClass.SHOW_PREVIOUS_NAMES);
+
+		if (previousNameMatch !== hasPreviousNamesClass) {
+			if (hasPreviousNamesClass) {
+				$item.classList.remove(CssClass.SHOW_PREVIOUS_NAMES);
+			} else {
+				$item.classList.add(CssClass.SHOW_PREVIOUS_NAMES);
+			}
 		}
 	}
 }
@@ -108,21 +128,40 @@ function applySearch($target: HTMLElement, query: string) {
 /**
  * Hide or show an item based on a search query
  */
-function applySearchToItem(query: string) {
-	return ($item: HTMLElement): boolean => {
-		if (query === '') {
-			return true;
-		}
+function applySearchToItem(query: string, $item: HTMLElement): MatchResult {
+	if (query === '') {
+		return MatchResult.EMPTY_QUERY;
+	}
 
-		const name = $item.getAttribute(DataAttribute.NAME);
+	const names = getItemNames($item);
 
+	for (const [i, name] of names.entries()) {
 		if (typeof name === 'string') {
 			const match = matchQueryToName(query, name);
-			return match;
+			if (match) {
+				if (i === 0) {
+					return MatchResult.CURRENT_NAME;
+				} else {
+					return MatchResult.PREVIOUS_NAME;
+				}
+			}
 		}
+	}
 
-		return false;
-	};
+	return MatchResult.NO_MATCH;
+}
+
+/**
+ * Search items have a current name and an optional list of previous names
+ */
+function getItemNames($item: HTMLElement) {
+	const nameAttr = $item.getAttribute(DataAttribute.NAME);
+	const previousNamesAttr = $item.getAttribute(DataAttribute.PREVIOUS_NAMES);
+	const previousNames = previousNamesAttr ? JSON.parse(previousNamesAttr.replace(/&quot;/g, '"')) : [];
+
+	const names = [nameAttr, ...(previousNames)];
+
+	return names;
 }
 
 /**
