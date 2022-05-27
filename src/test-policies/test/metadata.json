@@ -1,5 +1,8 @@
 {
 	"title": "Test Policy",
+	"previousTitles": [
+		"Previous Test Policy"
+	],
 	"type": "General Instructions",
 	"obsolete": true,
 	"versions": [
