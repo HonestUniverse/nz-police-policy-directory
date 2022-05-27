@@ -1,11 +1,7 @@
-@import "scaffolding";
+@import "style-base";
 
-@import "components/header";
-@import "components/menu";
-@import "components/footer";
-@import "components/colour-scheme";
+@import "components/content";
 
-@import "components/page";
 @import "components/policy";
 @import "components/version";
 @import "components/duration";
@@ -13,10 +9,8 @@
 @import "components/alt-file";
 @import "components/accessibility";
 @import "components/provenance";
-@import "components/notice";
 @import "components/directory";
 @import "components/policy-summary";
-@import "components/content";
 @import "components/document";
 
 @import "components/content-report";

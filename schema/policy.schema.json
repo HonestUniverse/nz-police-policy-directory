@@ -18,6 +18,13 @@
 			"description": "The title of the document",
 			"type": "string"
 		},
+		"previousTitles": {
+			"description": "Previous titles this document has gone by",
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
 		"type": {
 			"description": "The type of the document",
 			"type": "string",
