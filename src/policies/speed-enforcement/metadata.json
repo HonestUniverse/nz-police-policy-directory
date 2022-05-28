@@ -1,12 +1,64 @@
 {
-	"schemaVersion": "3.1.0",
+	"schemaVersion": "3.2.0",
 	"title": "Speed enforcement",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2021-12-08", "2021-12-21"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Oscar",
+						"id": "IR 01-21-34705",
+						"responseUrl": "https://fyi.org.nz/request/17685-policy-guidelines-for-speed-van-positioning-locations#incoming-68414",
+						"withholdings": "None"
+					},
+					"extracted": "2021-12-08",
+					"released": "2021-12-21",
+					"retrieved": "2022-05-08",
+					"url": "https://fyi.org.nz/request/17685-policy-guidelines-for-speed-van-positioning-locations#incoming-68414",
+					"fileUrl": "https://fyi.org.nz/request/17685/response/68414/attach/4/Oscar%20IR%2001%2021%2034705%20Speed%20enforcement%20documents.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Oscar IR 01 21 34705 Speed enforcement documents.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1205274,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
 			"name": "Version 19",
 			"duration": {
 				"start": "2017-09-26",
+				"ended": true,
 				"on": [
 					"2020-09-03"
 				]
