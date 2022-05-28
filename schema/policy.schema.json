@@ -59,7 +59,7 @@
 		}
 	},
 	"required": [
-		"title",
+		"name",
 		"type",
 		"versions"
 	],
