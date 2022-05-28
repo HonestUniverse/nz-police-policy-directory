@@ -290,6 +290,8 @@ const migrations: Record<string, Migration> = {
 	 *
 	 * Made Accessibility['Rating'] required
 	 *
+	 * Updated AccessibilityRating enum to remove `Okay` and add `None`
+	 *
 	 * Renamed Policy['title'] to 'name'
 	 * Renamed Policy['previousTitles'] to 'previousNames'
 	 */
@@ -301,12 +303,11 @@ const migrations: Record<string, Migration> = {
 				file.documentType = FileDocumentType.POLICY;
 			}
 
-			if (!file.accessibility.rating) {
-				file.accessibility.rating = AccessibilityRating.UNDETERMINED;
-			}
+			const { accessibility } = file;
+			accessibility.rating = AccessibilityRating.UNDETERMINED;
 
 			const a11yFeatures: Partial<Accessibility['features']> = {};
-			for (const [featureName, feature] of Object.entries(file.accessibility)) {
+			for (const [featureName, feature] of Object.entries(accessibility)) {
 				if (featureName === 'rating') {
 					continue;
 				}
@@ -318,9 +319,32 @@ const migrations: Record<string, Migration> = {
 				}
 
 				a11yFeatures[featureName] = feature;
-				delete file.accessibility[featureName];
+				delete accessibility[featureName];
 			}
-			file.accessibility.features = a11yFeatures as Accessibility['features'];
+			accessibility.features = a11yFeatures as Accessibility['features'];
+
+			// If possible, set accessibility rating based on features
+			const { features } = accessibility;
+
+			// Only try to set a rating if all features have been determined
+			if (Object.values(features).every((feature) => feature.value !== AccessibilityFeatureString.UNDETERMINED)) {
+				if (features['text-based']?.value === false) {
+					// Non-text based means "None"
+					accessibility.rating = AccessibilityRating.NONE;
+				} else if (features['text-based']?.value === AccessibilityFeatureString.PARTIAL) {
+					// Only partially text-based means "Bad"
+					accessibility.rating = AccessibilityRating.BAD;
+				} else if (features['text-based']?.value === true) {
+					// If the document is text-based...
+					if (Object.values(features).every((feature) => feature.value === true)) {
+						// Every accessibility feature must be good for a "Good" rating
+						accessibility.rating = AccessibilityRating.GOOD;
+					} else {
+						// Otherwise, the rating is "Poor"
+						accessibility.rating = AccessibilityRating.POOR;
+					}
+				}
+			}
 		}
 
 		// @ts-expect-error 'title' is no longer an allowed property
