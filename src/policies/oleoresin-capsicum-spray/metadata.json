@@ -6,7 +6,7 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 2",
+			"name": "1 March 2022",
 			"duration": {
 				"start": "2022-03-01"
 			},
@@ -60,6 +60,83 @@
 					"documentType": "OIA response letter",
 					"startingPage": 1,
 					"size": 1436159,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Unnamed Version 2",
+			"duration": {
+				"end": "2022-03-01",
+				"on": ["2022-02-09", "2022-02-24"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Joshua Rogers",
+						"id": "IR-01-22-3361",
+						"responseUrl": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
+						"withholdings": {
+							"6(c)": "Some information has been withheld on page 13"
+						}
+					},
+					"extracted": "2022-02-09",
+					"released": "2022-02-24",
+					"retrieved": "2022-05-29",
+					"url": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
+					"fileUrl": "https://fyi.org.nz/request/18483/response/70736/attach/4/Rogers%20Joshua%20IR%2001%2022%203361%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-02-24/Rogers Joshua IR 01 22 3361 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 50,
+					"size": 6128607,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-02-24/Rogers Joshua IR 01 22 3361 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 6128607,
 					"licence": {
 						"name": "None"
 					},
