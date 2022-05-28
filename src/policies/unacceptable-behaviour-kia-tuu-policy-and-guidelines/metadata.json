@@ -1,0 +1,86 @@
+{
+	"schemaVersion": "3.2.0",
+	"title": "Unacceptable behaviour — Kia Tū policy and guidelines",
+	"previousTitles": [
+		"Speak Up"
+	],
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2022-04-22", "2022-05-11"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "John Bates",
+						"id": "IR-01-22-8010",
+						"responseUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
+						"withholdings": {
+							"9(2)(a)": "Some information has been withheld on page 20."
+						}
+					},
+					"extracted": "2022-04-22",
+					"released": "2022-05-11",
+					"retrieved": "2022-05-28",
+					"url": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
+					"fileUrl": "https://fyi.org.nz/request/18931/response/73037/attach/4/Bates%20John%20IR%2001%2022%208010%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-05-11/Bates John IR 01 22 8010 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 42,
+					"size": 7540484,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": "Partial",
+							"notes": [
+								"Page 1 is an image of text."
+							]
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-05-11/Bates John IR 01 22 8010 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7540484,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
