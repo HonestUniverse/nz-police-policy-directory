@@ -1,7 +1,63 @@
 {
-	"title": "TASER (Electronic Control Devices)",
+	"title": "TASER (Conducted Electrical Weapons)",
+	"previousTitles": [
+		"TASER (Electronic Control Devices)"
+	],
 	"type": "Police Manual chapter",
 	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2022-02-09", "2022-02-24"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Joshua Rogers",
+						"id": "IR-01-22-3361",
+						"responseUrl": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
+						"withholdings": {
+							"6(c)": "Some information has been withheld on pages 16 and 29–32."
+						}
+					},
+					"extracted": "2022-02-09",
+					"released": "2022-02-24",
+					"retrieved": "2022-05-29",
+					"url": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
+					"fileUrl": "https://fyi.org.nz/request/18483/response/70736/attach/4/Rogers%20Joshua%20IR%2001%2022%203361%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-02-24/Rogers Joshua IR 01 22 3361 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 104,
+					"size": 6128607,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		},
 		{
 			"name": "Version 10",
 			"duration": {
