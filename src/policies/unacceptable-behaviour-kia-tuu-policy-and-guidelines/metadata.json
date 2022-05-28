@@ -1,5 +1,9 @@
 {
-	"title": "Police investigations of complaints and notifiable incidents",
+	"schemaVersion": "3.2.0",
+	"title": "Unacceptable behaviour — Kia Tū policy and guidelines",
+	"previousTitles": [
+		"Speak Up"
+	],
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -15,7 +19,9 @@
 						"requester": "John Bates",
 						"id": "IR-01-22-8010",
 						"responseUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
-						"withholdings": "None"
+						"withholdings": {
+							"9(2)(a)": "Some information has been withheld on page 20."
+						}
 					},
 					"extracted": "2022-04-22",
 					"released": "2022-05-11",
@@ -29,7 +35,7 @@
 					"path": "../../bulk-files/2022-05-11/Bates John IR 01 22 8010 Response.pdf",
 					"type": "application/pdf",
 					"documentType": "Policy",
-					"startingPage": 4,
+					"startingPage": 42,
 					"size": 7540484,
 					"licence": {
 						"name": "None"
@@ -40,7 +46,7 @@
 						"text-based": {
 							"value": "Partial",
 							"notes": [
-								"Pages 3 and 22&ndash;24 are images of text."
+								"Page 1 is an image of text."
 							]
 						},
 						"semantics": {
@@ -75,62 +81,6 @@
 					}
 				}
 			]
-		},
-		{
-			"name": "January 2022",
-			"duration": {
-				"ended": true,
-				"on": [
-					{
-						"year": 2022,
-						"month": 1
-					}
-				]
-			},
-			"provenance": [
-				{
-					"source": "NZ Police",
-					"method": "Proactively released",
-					"withholdings": "None",
-					"extracted": "2022-01-17",
-					"retrieved": "2022-05-01",
-					"url": "https://www.police.govt.nz/about-us/about-new-zealand-police/police-professional-conduct",
-					"archiveUrl": "https://web.archive.org/web/20220301190034/www.police.govt.nz/about-us/about-new-zealand-police/police-professional-conduct",
-					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/policy-police-investigations-complaints-notifiable-incidents.pdf",
-					"archiveFileUrl": "https://web.archive.org/web/20220308000300/www.police.govt.nz/sites/default/files/publications/policy-police-investigations-complaints-notifiable-incidents.pdf"
-				}
-			],
-			"files": [
-				{
-					"path": "january-2022/policy-police-investigations-complaints-notifiable-incidents.pdf",
-					"type": "application/pdf",
-					"size": 948156,
-					"licence": {
-						"name": "None"
-					},
-					"original": true,
-					"accessibility": {
-						"text-based": {
-							"value": "Partial",
-							"notes": [
-								"All pages except page 22 are text-based"
-							]
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
-					},
-					"documentType": "Policy"
-				}
-			]
 		}
-	],
-	"schemaVersion": "3.2.0"
+	]
 }

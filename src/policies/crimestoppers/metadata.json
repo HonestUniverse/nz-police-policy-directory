@@ -1,0 +1,157 @@
+{
+	"title": "Crimestoppers",
+	"type": "Memorandum of Understanding",
+	"versions": [
+		{
+			"name": "2021",
+			"duration": {
+				"start": "2021-06-09",
+				"on": [
+					"2022-05-11"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "John Bates",
+						"id": "IR-01-22-8010",
+						"responseUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
+						"withholdings": {
+							"9(2)(a)": "Some information was withheld on pages 7 and 8."
+						}
+					},
+					"extracted": "2022-04-04",
+					"released": "2022-05-11",
+					"retrieved": "2022-05-28",
+					"url": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
+					"fileUrl": "https://fyi.org.nz/request/18931/response/73037/attach/4/Bates%20John%20IR%2001%2022%208010%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-05-11/Bates John IR 01 22 8010 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 90,
+					"size": 7540484,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"text-based": {
+							"value": false
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": false
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-05-11/Bates John IR 01 22 8010 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7540484,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "2014",
+			"duration": {
+				"start": "2014-07-16",
+				"ended": true
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "John Bates",
+						"id": "IR-01-22-8010",
+						"responseUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
+						"withholdings": {
+							"9(2)(a)": "Some information was withheld on pages 18 and 19."
+						}
+					},
+					"extracted": "2022-04-04",
+					"released": "2022-05-11",
+					"retrieved": "2022-05-28",
+					"url": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
+					"fileUrl": "https://fyi.org.nz/request/18931/response/73037/attach/4/Bates%20John%20IR%2001%2022%208010%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-05-11/Bates John IR 01 22 8010 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 71,
+					"size": 7540484,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": false
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-05-11/Bates John IR 01 22 8010 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7540484,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	],
+	"schemaVersion": "3.2.1"
+}
