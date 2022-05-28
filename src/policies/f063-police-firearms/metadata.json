@@ -38,6 +38,9 @@
 						"text-based": {
 							"value": true
 						},
+						"semantics": {
+							"value": false
+						},
 						"rating": "Undetermined"
 					},
 					"documentType": "Policy"
