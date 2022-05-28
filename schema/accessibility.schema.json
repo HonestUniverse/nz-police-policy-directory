@@ -8,9 +8,9 @@
 			"type": "string",
 			"enum": [
 				"Good",
-				"Okay",
 				"Poor",
 				"Bad",
+				"None",
 				"Undetermined"
 			]
 		},
