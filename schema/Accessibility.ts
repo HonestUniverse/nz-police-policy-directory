@@ -2,9 +2,9 @@ import { AccessibilityFeature } from './AccessibilityFeature.js';
 
 export enum AccessibilityRating {
 	GOOD = 'Good',
-	OKAY = 'Okay',
 	POOR = 'Poor',
 	BAD = 'Bad',
+	NONE = 'None',
 	UNDETERMINED = 'Undetermined',
 }
 
