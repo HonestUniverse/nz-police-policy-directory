@@ -5,16 +5,23 @@
 %>
 
 <%
-	const iconClasses = {
-		'Good': 'good',
-		'Poor': 'poor',
-		'Bad': 'bad',
-		'None': 'none',
-		'Undetermined': 'undetermined',
-	};
+	const ratingIconClasses = new Map([
+		['Good', 'good'],
+		['Poor', 'poor'],
+		['Bad', 'bad'],
+		['None', 'none'],
+		['Undetermined', 'undetermined'],
+	]);
 
 	const { rating } = accessibility;
-	const ratingClass = iconClasses[rating] ? ` accessibility__summary--${iconClasses[rating]}` : '';
+	const ratingClass = ratingIconClasses.has(rating) ? ` accessibility__summary--${ratingIconClasses.get(rating)}` : '';
+
+	const featureIconClasses = new Map([
+		[true, 'true'],
+		[false, 'false'],
+		['Partial', 'partial'],
+		['Unknown', 'undetermined'],
+	]);
 %>
 
 <details class="accessibility">
@@ -24,27 +31,36 @@
 		<% if (rating) { %>
 			<span class="accessibility__summary__rating"><%= rating %></span>
 		<% } %>
+		<span class="accessibility__summary__expand-icon" aria-hidden="true"></span>
 	</summary>
 
 	<div class="accessibility__details">
-		<dl class="accessibility__feature-list">
+		<ul class="accessibility__feature-list">
 			<% for (const [featureName, feature] of Object.entries(accessibility.features)) { %>
-				<div class="accessibility__feature-item">
-					<dt class="accessibility__feature-name"><%= include('../helpers/dictionary', { key: featureName, case: 'sentence' }); %></dt>
-					<dd class="accessibility__feature-value">
-						<% if (typeof feature === 'boolean' || typeof feature === 'string') { %>
-							<%= feature %>
+
+				<li class="accessibility__feature-item<%= featureIconClasses.has(feature.value) ? ` accessibility__feature-item--${featureIconClasses.get(feature.value)}` : ''; %>">
+					<span class="accessibility__feature-name">
+						<% if (featureIconClasses.has(feature.value)) { %>
+							<span class="accessibility__feature-icon" aria-hidden="true"></span>
+						<% } %>
+
+						<%= include('../helpers/dictionary', { key: featureName, case: 'sentence' }); %>
+					</span>
+					<span class="accessibility__feature-value">
+						<% if (typeof feature.value === 'boolean') { %>
+							<%= feature.value ? 'Yes' : 'No' %>
 						<% } else { %>
 							<%= feature.value %>
-							<% if (feature.notes) {
-								for (const note of feature.notes) { %>
-									(<%- note %>)
-								<% }
-							} %>
 						<% } %>
-					</dd>
-				</div>
+					</span>
+
+					<% if (feature.notes) {
+						for (const note of feature.notes) { %>
+							<span class="accessibility__feature-note"><%- note %></span>
+						<% }
+					} %>
+				</li>
 			<% } %>
-		</dl>
+		</ul>
 	</div>
 </details>
