@@ -31,37 +31,40 @@
 		<% if (rating) { %>
 			<span class="accessibility__summary__rating"><%= rating %></span>
 		<% } %>
+		<span class="accessibility__summary__expand-icon" aria-hidden="true"></span>
 	</summary>
 
 	<div class="accessibility__details">
-		<dl class="accessibility__feature-list">
+		<ul class="accessibility__feature-list">
 			<% for (const featureName of Object.keys(accessibility)) {
 				if (featureName === 'rating') {
 					continue;
 				} %>
 				<% const feature = accessibility[featureName]; %>
 
-				<div class="accessibility__feature-item<%= featureIconClasses.has(feature.value) ? ` accessibility__feature-item--${featureIconClasses.get(feature.value)}` : ''; %>">
-					<dt class="accessibility__feature-name"><%= include('../helpers/dictionary', { key: featureName, case: 'sentence' }); %></dt>
-					<dd class="accessibility__feature-value">
+				<li class="accessibility__feature-item<%= featureIconClasses.has(feature.value) ? ` accessibility__feature-item--${featureIconClasses.get(feature.value)}` : ''; %>">
+					<span class="accessibility__feature-name">
 						<% if (featureIconClasses.has(feature.value)) { %>
 							<span class="accessibility__feature-icon" aria-hidden="true"></span>
 						<% } %>
 
+						<%= include('../helpers/dictionary', { key: featureName, case: 'sentence' }); %>
+					</span>
+					<span class="accessibility__feature-value">
 						<% if (typeof feature.value === 'boolean') { %>
 							<%= feature.value ? 'Yes' : 'No' %>
 						<% } else { %>
 							<%= feature.value %>
 						<% } %>
+					</span>
 
-						<% if (feature.notes) {
-							for (const note of feature.notes) { %>
-								<span class="accessibility__feature-note"><%- note %></span>
-							<% }
-						} %>
-					</dd>
-				</div>
+					<% if (feature.notes) {
+						for (const note of feature.notes) { %>
+							<span class="accessibility__feature-note"><%- note %></span>
+						<% }
+					} %>
+				</li>
 			<% } %>
-		</dl>
+		</ul>
 	</div>
 </details>
