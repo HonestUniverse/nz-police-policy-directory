@@ -5,6 +5,21 @@
 
 	@supports (selector(details)) {
 		cursor: pointer;
+		// ::marker removed by overriding `display: list-item;`
+		display: block;
+		// Marker replaced by .accessibility__summary__expand-icon
+	}
+}
+
+.accessibility__summary__expand-icon {
+	@supports (selector(details)) {
+		&::after {
+			font-family: $font-icons;
+			content: $icon-arrow-right;
+		}
+		.accessibility[open] &::after {
+			content: $icon-arrow-down;
+		}
 	}
 }
 
@@ -37,7 +52,8 @@
 .accessibility__details {}
 
 .accessibility__feature-list {
-	margin: 0.5rem 0 0;
+	@include list-reset;
+	margin: 0.5rem 0 0 1rem;
 }
 
 .accessibility__feature-item {
@@ -64,8 +80,9 @@
 	display: flex;
 	@supports(display: grid) {
 		display: grid;
-		grid-template-columns: 18ch 1fr;
-		grid-gap: 1rem;
+		grid-template-columns: 20ch 1fr;
+		grid-column-gap: 1rem;
+		grid-row-gap: 0.5rem;
 	}
 }
 
@@ -83,8 +100,6 @@
 
 .accessibility__feature-value {
 	@extend %accessibility__feature-item-column;
-
-	margin: 0;
 	@include font-base-18;
 }
 
@@ -106,6 +121,6 @@
 }
 
 .accessibility__feature-note {
-	display: block;
+	grid-column: 1 / span 2;
 	@include font-base-16;
 }
