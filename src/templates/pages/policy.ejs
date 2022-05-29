@@ -32,13 +32,13 @@
 		<h2 class="policy__version__name">
 			<%
 				const version = policy.versions[0];
-				const { name } = version;
-				const href = versionPaths[name];
+				const { id } = version;
+				const href = versionPaths[id];
 			%>
 			<% if (href) { %>
-				<a href="<%= href %>" class="policy__version__link"><%= name %> (Latest)</a>
+				<a href="<%= href %>" class="policy__version__link"><%= include('../helpers/version-name', { version }); %> (Latest)</a>
 			<% } else { %>
-				<%= name %> (Latest)
+				<%= include('../helpers/version-name', { version }); %> (Latest)
 			<% } %>
 		</h2>
 
@@ -57,15 +57,15 @@
 			<% versions.slice(1).forEach((version, i, arr) => { %>
 				<li class="policy__other-versions__item">
 					<%
-						const { name } = version;
-						const href = versionPaths[name];
+						const { id } = version;
+						const href = versionPaths[id];
 					%>
 					<details class="policy__version policy__version--disclosure">
 						<summary class="policy__version__name">
 							<% if (href) { %>
-								<a href="<%= href %>" class="policy__version__link"><%= name %></a>
+								<a href="<%= href %>" class="policy__version__link"><%= include('../helpers/version-name', { version }); %></a>
 							<% } else { %>
-								<%= name %>
+								<%= include('../helpers/version-name', { version }); %>
 							<% } %>
 						</summary>
 						<%- include('../components/version', { version, policy }) %>

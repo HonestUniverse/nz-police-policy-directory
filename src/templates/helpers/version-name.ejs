@@ -1,0 +1,9 @@
+<%##
+	locals: {
+		version: Version,
+	}
+%><%
+	const versionName = version.name ?? 'Unnamed Version';
+%><%= versionName %><%#
+	Weird opening and closing tags and no newline at end of file to avoid adding extra whitespace
+%>

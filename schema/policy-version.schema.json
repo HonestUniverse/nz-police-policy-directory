@@ -7,6 +7,10 @@
 			"description": "The name of this version of the policy",
 			"type": "string"
 		},
+		"id": {
+			"description": "A generated ID string used to construct a unique URL for versions without a name",
+			"type": "string"
+		},
 		"duration": {
 			"description": "When this version of the policy was in effect",
 			"$ref": "policy-version-duration.schema.json"
@@ -36,7 +40,7 @@
 		}
 	},
 	"required": [
-		"name",
+		"id",
 		"duration",
 		"provenance",
 		"files"

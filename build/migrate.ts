@@ -22,6 +22,7 @@ import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
 import { OIAWithholdingsSummary } from '../schema/OIAWithholdings.js';
 
 import { validatePolicy } from './validate-policy.js';
+import { generateIdsPolicy } from './generate-ids.js';
 
 import * as paths from './util/paths.js';
 
@@ -294,6 +295,8 @@ const migrations: Record<string, Migration> = {
 	 *
 	 * Renamed Policy['title'] to 'name'
 	 * Renamed Policy['previousTitles'] to 'previousNames'
+	 *
+	 * Made PolicyVersion['name'] optional, and added required field PolicyVersion['id']
 	 */
 	['4.0.0']: function (policy: Policy): void {
 		policy.schemaVersion = '4.0.0';
@@ -362,7 +365,13 @@ const migrations: Record<string, Migration> = {
 			policy.type = PolicyType.UNDETERMINED;
 		}
 
-		for (const version of policy.versions) {
+		const policyWithIds = generateIdsPolicy(policy).policy;
+		for (const [i, version] of Object.entries(policy.versions)) {
+			version.id = policyWithIds.versions[i].id;
+			if (version.name && /\bunnamed version\b/i.test(version.name)) {
+				delete version.name;
+			}
+
 			for (const provenance of version.provenance) {
 				if (provenance.withholdings === 'Unknown') {
 					provenance.withholdings = OIAWithholdingsSummary.UNDETERMINED;
@@ -383,6 +392,7 @@ const migrations: Record<string, Migration> = {
 				}
 			}
 		}
+
 	},
 }
 
