@@ -36,15 +36,76 @@
 
 .accessibility__details {}
 
-.accessibility__feature-list {}
+.accessibility__feature-list {
+	margin: 0.5rem 0 0;
+}
 
-.accessibility__feature-item {}
+.accessibility__feature-item {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+
+		top: 100%;
+		left: 0;
+		right: 0;
+		height: 1px;
+
+		@include use-var(background-color, --accent, currentColor);
+		opacity: 0.5;
+	}
+	&:last-child {
+		&::after {
+			display: none;
+		}
+	}
+	padding: 0.4rem 0;
+
+	display: flex;
+	@supports(display: grid) {
+		display: grid;
+		grid-template-columns: 18ch 1fr;
+		grid-gap: 1rem;
+	}
+}
+
+%accessibility__feature-item-column {
+	width: 50%;
+	@supports(display: grid) {
+		width: 100%;
+	}
+}
 
 .accessibility__feature-name {
+	@extend %accessibility__feature-item-column;
 	@include font-base-18b;
 }
 
 .accessibility__feature-value {
+	@extend %accessibility__feature-item-column;
+
 	margin: 0;
 	@include font-base-18;
+}
+
+.accessibility__feature-icon {
+	font-family: $font-icons;
+
+	.accessibility__feature-item--true &::before {
+		content: $icon-tick;
+	}
+	.accessibility__feature-item--partial &::before {
+		content: $icon-warning;
+	}
+	.accessibility__feature-item--false &::before {
+		content: $icon-cross;
+	}
+	.accessibility__feature-item--undetermined &::before {
+		content: $icon-warning;
+	}
+}
+
+.accessibility__feature-note {
+	display: block;
+	@include font-base-16;
 }

@@ -5,16 +5,23 @@
 %>
 
 <%
-	const iconClasses = {
-		'Good': 'good',
-		'Okay': 'okay',
-		'Poor': 'poor',
-		'Bad': 'bad',
-		'Undetermined': 'undetermined',
-	};
+	const ratingIconClasses = new Map([
+		['Good', 'good'],
+		['Okay', 'okay'],
+		['Poor', 'poor'],
+		['Bad', 'bad'],
+		['Undetermined', 'undetermined'],
+	]);
 
 	const { rating } = accessibility;
-	const ratingClass = iconClasses[rating] ? ` accessibility__summary--${iconClasses[rating]}` : '';
+	const ratingClass = ratingIconClasses.has(rating) ? ` accessibility__summary--${ratingIconClasses.get(rating)}` : '';
+
+	const featureIconClasses = new Map([
+		[true, 'true'],
+		[false, 'false'],
+		['Partial', 'partial'],
+		['Unknown', 'undetermined'],
+	]);
 %>
 
 <details class="accessibility">
@@ -32,20 +39,26 @@
 				if (featureName === 'rating') {
 					continue;
 				} %>
-				<div class="accessibility__feature-item">
+				<% const feature = accessibility[featureName]; %>
+
+				<div class="accessibility__feature-item<%= featureIconClasses.has(feature.value) ? ` accessibility__feature-item--${featureIconClasses.get(feature.value)}` : ''; %>">
 					<dt class="accessibility__feature-name"><%= include('../helpers/dictionary', { key: featureName, case: 'sentence' }); %></dt>
 					<dd class="accessibility__feature-value">
-						<% const feature = accessibility[featureName]; %>
-						<% if (typeof feature === 'boolean' || typeof feature === 'string') { %>
-							<%= feature %>
+						<% if (featureIconClasses.has(feature.value)) { %>
+							<span class="accessibility__feature-icon" aria-hidden="true"></span>
+						<% } %>
+
+						<% if (typeof feature.value === 'boolean') { %>
+							<%= feature.value ? 'Yes' : 'No' %>
 						<% } else { %>
 							<%= feature.value %>
-							<% if (feature.notes) {
-								for (const note of feature.notes) { %>
-									(<%- note %>)
-								<% }
-							} %>
 						<% } %>
+
+						<% if (feature.notes) {
+							for (const note of feature.notes) { %>
+								<span class="accessibility__feature-note"><%- note %></span>
+							<% }
+						} %>
 					</dd>
 				</div>
 			<% } %>
