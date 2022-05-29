@@ -1,0 +1,85 @@
+{
+	"schemaVersion": "3.2.0",
+	"title": "Offence notices",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2022-01-21"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Cody C",
+						"id": "IR-01-22-142",
+						"responseUrl": "https://fyi.org.nz/request/18080-stationary-vehicle-enforcement-policy#incoming-69253",
+						"withholdings": "None"
+					},
+					"released": "2022-01-21",
+					"retrieved": "2022-05-29",
+					"url": "https://fyi.org.nz/request/18080-stationary-vehicle-enforcement-policy#incoming-69253",
+					"fileUrl": "https://fyi.org.nz/request/18080/response/69253/attach/8/C%20Cody%20IR%2001%2022%20142%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/C Cody IR 01 22 142 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 417136,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"message": "Only pages 15 and 16 of 21 are included."
+						}
+					]
+				},
+				{
+					"path": "unnamed-version-1/C Cody IR 01 22 142 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 417136,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
