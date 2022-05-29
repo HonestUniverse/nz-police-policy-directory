@@ -76,13 +76,12 @@ async function generateIdsDir(path): Promise<number> {
 
 		console.log(`INFO: Generated ${generateIdsPolicyResult.idsGenerated} IDs for versions of  ${entry.name}`);
 
-		// After migration, check validity again
+		// After version id generation, check validity again
 		const resultValid = validatePolicy(policyWithIds);
 		if (!resultValid) {
 			console.error(validatePolicy.errors);
 			console.error(`ERROR: Metadata for ${entry.name} is invalid after ID generation`);
-			// @ts-expect-error We've lied to TypeScript that this is already a valid policy, but in this condition we've just found it's not
-			writeFile(`${path}/${entry.name}/metadata.failed-migration-${policyWithIds.schemaVersion}.json`, JSON.stringify(policyWithIds, null, '\t'));
+			writeFile(`${path}/${entry.name}/metadata.failed-id-generation.json`, JSON.stringify(policyWithIds, null, '\t'));
 		} else {
 			// Back up previous contents just in case
 			writeFile(`${path}/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));
