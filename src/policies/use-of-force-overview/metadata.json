@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 2",
 			"duration": {
 				"on": [
 					"2022-05-05",
@@ -59,10 +58,10 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-petgf"
 		},
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"ended": true,
 				"on": [
@@ -183,7 +182,8 @@
 					],
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-whxkb"
 		},
 		{
 			"name": "Version 11.0",
@@ -241,7 +241,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-sgwpq"
 		}
 	],
 	"name": "Use of Force Overview",

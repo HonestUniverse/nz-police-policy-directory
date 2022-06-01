@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 2",
 			"duration": {
 				"on": [
 					"2019-05-01"
@@ -54,10 +53,10 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-upoit"
 		},
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"ended": true,
 				"on": [
@@ -104,7 +103,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-zejjy"
 		}
 	],
 	"name": "Police filming and audio recording of operations and events"

@@ -54,9 +54,10 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-wcxef"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "Formal warnings"
 }
