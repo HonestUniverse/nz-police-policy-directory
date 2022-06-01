@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2022-04-21",
@@ -59,7 +58,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-yesqp"
 		}
 	],
 	"name": "Social media policy"
