@@ -1,6 +1,5 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "Introduction to Intelligence",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -39,27 +38,30 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": "Partial",
-							"notes": [
-								"There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space.",
-								"There is an image of text on page 8."
-							]
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space.",
+									"There is an image of text on page 8."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
-	]
+	],
+	"name": "Introduction to Intelligence"
 }

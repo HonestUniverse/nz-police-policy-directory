@@ -1,5 +1,4 @@
 {
-	"title": "Police investigations of complaints and notifiable incidents",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -35,27 +34,30 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": "Partial",
-							"notes": [
-								"All pages except page 22 are text-based"
-							]
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"All pages except page 22 are text-based"
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.1.0"
+	"schemaVersion": "0.4.0",
+	"name": "Police investigations of complaints and notifiable incidents"
 }

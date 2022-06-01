@@ -1,7 +1,6 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "Disciplinary Process",
-	"type": "Unclassified",
+	"schemaVersion": "0.4.0",
+	"type": "Undetermined",
 	"versions": [
 		{
 			"name": "Unnamed Version 1",
@@ -36,26 +35,29 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": false,
-							"notes": [
-								"All pages are images of text."
-							]
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
-						},
-						"rating": "Undetermined"
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false,
+								"notes": [
+									"All pages are images of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
-	]
+	],
+	"name": "Disciplinary Process"
 }
