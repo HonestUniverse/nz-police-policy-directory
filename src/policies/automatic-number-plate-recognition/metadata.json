@@ -1,0 +1,126 @@
+{
+	"schemaVersion": "3.2.0",
+	"title": "Automatic Number Plate Recognition",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2021-05-28", "2022-09-30"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Matt Brown",
+						"id": "IR-01-21-23305",
+						"responseUrl": "https://fyi.org.nz/request/16225-anpr-camera-counts-and-privacy#incoming-63960",
+						"withholdings": "None"
+					},
+					"extracted": "2022-05-28",
+					"released": "2022-09-30",
+					"retrieved": "2022-06-01",
+					"url": "https://fyi.org.nz/request/16225-anpr-camera-counts-and-privacy#incoming-63960",
+					"fileUrl": "https://fyi.org.nz/request/16225/response/63960/attach/3/Brown%20Matt%20IR%2001%2021%2023305%20final%20response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Brown Matt IR 01 21 23305 final response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 3,
+					"size": 1467157,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"text-based": {
+							"value": false
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "unnamed-version-1/Brown Matt IR 01 21 23305 final response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 1467157,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "unnamed-version-1/Brown Matt IR 01 21 23305 final response.pdf",
+					"name": "Automatic Number Plate Recognition — Privacy Impact Assessment",
+					"type": "application/pdf",
+					"documentType": "Supplementary document",
+					"startingPage": 22,
+					"size": 1467157,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Matt Brown",
+								"id": "IR-01-21-23305",
+								"responseUrl": "https://fyi.org.nz/request/16225-anpr-camera-counts-and-privacy#incoming-63960",
+								"withholdings": {
+									"9(2)(g)(i)": "Pages 1–5, and any pages after page 8, were withheld. Some information was withheld on page 6."
+								}
+							},
+							"released": "2022-09-30",
+							"retrieved": "2022-06-01",
+							"url": "https://fyi.org.nz/request/16225-anpr-camera-counts-and-privacy#incoming-63960",
+							"fileUrl": "https://fyi.org.nz/request/16225/response/63960/attach/3/Brown%20Matt%20IR%2001%2021%2023305%20final%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"text-based": {
+							"value": false
+						},
+						"semantics": {
+							"value": false
+						},
+						"alt text": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
