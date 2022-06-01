@@ -1,6 +1,5 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "Prosecuting family violence",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -38,23 +37,26 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
-	]
+	],
+	"name": "Prosecuting family violence"
 }
