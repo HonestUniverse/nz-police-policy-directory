@@ -119,7 +119,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	createPolicyPage(src, dst, policy) {
 		const versionPaths: Record<string, string> = {};
 		for (const version of policy.versions) {
-			versionPaths[version.name] = toUrlSegment(version.name);
+			versionPaths[version.id] = createVersionDstPath('.', version);
 		}
 
 		return [new HtmlWebpackPlugin({
@@ -208,8 +208,8 @@ function getFileDst(
 	file: PolicyFile | AlternateFile,
 	version: Version,
 ) {
-	const versionName = version.name;
-	const versionUrl = toUrlSegment(versionName);
+	const versionUrlKey = version.name || version.id;
+	const versionUrl = toUrlSegment(versionUrlKey);
 
 	const fileName = file.path.replace(/.*\//, '');
 	const fileDstPath = toUrlSegment(versionUrl);
@@ -218,19 +218,31 @@ function getFileDst(
 	return fileDstPathAndName;
 }
 
+/**
+ * Construct the destination path for a version based off its name or ID
+ */
+function createVersionDstPath(dst: string, version: Version): string {
+	const versionUrlKey = version.name || version.id;
+	const versionPathName = toUrlSegment(versionUrlKey);
+	const versionDst = `${dst}/${versionPathName}`;
+
+	return versionDst;
+}
+
 function createVersionMetadata(
 	dst: string,
 	policy: Policy,
 	version: Version,
 	latest: boolean = false,
 ) {
-	const versionName = version.name;
-	const versionPathName = toUrlSegment(versionName);
-	const versionDst = `${dst}/${versionPathName}`;
+	// Construct destination path
+	const versionDst = createVersionDstPath(dst, version);
 
+	// Construct a version of this policy with only the current version
+	const versionId = version.id;
 	const singleVersionPolicy = JSON.parse(JSON.stringify(policy));
 	singleVersionPolicy.versions = singleVersionPolicy.versions.filter(
-		(version) => version.name === versionName
+		(version) => version.id === versionId
 	);
 
 	return new GenerateJsonPlugin(
@@ -247,9 +259,7 @@ function createVersionPlugin(
 	version: Version,
 	latest: boolean = false,
 ): HtmlWebpackPlugin {
-	const versionName = version.name;
-	const versionPathName = toUrlSegment(versionName);
-	const versionDst = `${dst}/${versionPathName}`;
+	const versionDst = createVersionDstPath(dst, version);
 
 	return new HtmlWebpackPlugin({
 		filename: latest ? `${dst}/latest/index.html` : `${versionDst}/index.html`,
