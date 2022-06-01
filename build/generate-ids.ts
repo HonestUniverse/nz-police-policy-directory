@@ -56,37 +56,38 @@ async function generateIdsDir(path): Promise<number> {
 			})
 		).default;
 
-		const policyValid = validatePolicy(policy);
-		if (!policyValid) {
-			console.error(validatePolicy.errors);
-			console.error(`ERROR: Skipping ID generation for ${entry.name} due to invalid metadata`);
-			continue;
-		}
+		// Because a Policy containing a Version without an "id" attribute is not valid, we can't rely on `validatePolicy`
 
-		const generateIdsPolicyResult = generateIdsPolicy(policy);
-		if (generateIdsPolicyResult.idsGenerated === 0) {
-			// No IDs were generated, so we don't need to write the results
-			continue;
-		}
+		try {
+			const generateIdsPolicyResult = generateIdsPolicy(policy as Policy);
 
-		const policyWithIds = generateIdsPolicyResult.policy;
+			if (generateIdsPolicyResult.idsGenerated === 0) {
+				// No IDs were generated, so we don't need to write the results
+				continue;
+			}
 
-		idsGenerated += generateIdsPolicyResult.idsGenerated;
-		policiesWithIdsGenerated += 1;
+			const policyWithIds = generateIdsPolicyResult.policy;
 
-		console.log(`INFO: Generated ${generateIdsPolicyResult.idsGenerated} IDs for versions of  ${entry.name}`);
+			idsGenerated += generateIdsPolicyResult.idsGenerated;
+			policiesWithIdsGenerated += 1;
 
-		// After version id generation, check validity again
-		const resultValid = validatePolicy(policyWithIds);
-		if (!resultValid) {
-			console.error(validatePolicy.errors);
-			console.error(`ERROR: Metadata for ${entry.name} is invalid after ID generation`);
-			writeFile(`${path}/${entry.name}/metadata.failed-id-generation.json`, JSON.stringify(policyWithIds, null, '\t'));
-		} else {
-			// Back up previous contents just in case
-			writeFile(`${path}/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));
-			// If valid, save new contents
-			writeFile(`${path}/${entry.name}/metadata.json`, JSON.stringify(policyWithIds, null, '\t'));
+			console.log(`INFO: Generated ${generateIdsPolicyResult.idsGenerated} IDs for versions of  ${entry.name}`);
+
+			// After version id generation, check validity again
+			const resultValid = validatePolicy(policyWithIds);
+			if (!resultValid) {
+				console.error(validatePolicy.errors);
+				console.error(`ERROR: Metadata for ${entry.name} is invalid after ID generation`);
+				writeFile(`${path}/${entry.name}/metadata.failed-id-generation.json`, JSON.stringify(policyWithIds, null, '\t'));
+			} else {
+				// Back up previous contents just in case
+				writeFile(`${path}/${entry.name}/metadata.backup.json`, JSON.stringify(policy, null, '\t'));
+				// If valid, save new contents
+				writeFile(`${path}/${entry.name}/metadata.json`, JSON.stringify(policyWithIds, null, '\t'));
+			}
+		} catch (e) {
+			console.error(`ERROR: ID generation for ${entry.name} failed, perhaps due to invalid metadata`);
+			console.error(e);
 		}
 	}
 
