@@ -1,12 +1,13 @@
 {
-	"schemaVersion": "3.2.0",
-	"title": "Offence notices",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"name": "Unnamed Version 1",
 			"duration": {
-				"on": ["2022-01-21"]
+				"on": [
+					"2022-01-21"
+				]
 			},
 			"provenance": [
 				{
@@ -38,14 +39,16 @@
 					"incomplete": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					},
 					"notices": [
@@ -68,18 +71,21 @@
 					"incomplete": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
 			]
 		}
-	]
+	],
+	"name": "Offence notices"
 }

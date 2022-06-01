@@ -1,12 +1,13 @@
 {
-	"schemaVersion": "3.1.4",
-	"title": "Police filming and audio recording of operations and events",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"name": "Unnamed Version 2",
 			"duration": {
-				"on": ["2019-05-01"]
+				"on": [
+					"2019-05-01"
+				]
 			},
 			"provenance": [
 				{
@@ -36,18 +37,20 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Bad",
-						"text-based": {
-							"value": false
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": false
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": false
+							}
 						}
 					}
 				}
@@ -86,20 +89,23 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": false
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": false
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
-	]
+	],
+	"name": "Police filming and audio recording of operations and events"
 }

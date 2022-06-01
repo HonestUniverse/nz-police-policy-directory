@@ -1,6 +1,5 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "Investigation of critical incidents",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -38,17 +37,19 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Undetermined",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				},
@@ -64,17 +65,19 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Undetermined",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				},
@@ -91,17 +94,19 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Undetermined",
-						"text-based": {
-							"value": false
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				},
@@ -118,21 +123,24 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Undetermined",
-						"text-based": {
-							"value": false
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
 			]
 		}
-	]
+	],
+	"name": "Investigation of critical incidents"
 }

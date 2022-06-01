@@ -1,6 +1,5 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "Traffic compliance scheme",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -38,22 +37,24 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": "Partial",
-							"notes": [
-								"All pages are text-based except for an image of text on page 4"
-							]
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"All pages are text-based except for an image of text on page 4"
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
@@ -63,7 +64,9 @@
 			"name": "Version 10.0",
 			"duration": {
 				"ended": true,
-				"on": ["2014-09-08"]
+				"on": [
+					"2014-09-08"
+				]
 			},
 			"provenance": [
 				{
@@ -94,18 +97,21 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
 			]
 		}
-	]
+	],
+	"name": "Traffic compliance scheme"
 }

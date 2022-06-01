@@ -1,5 +1,4 @@
 {
-	"title": "Code of Conduct",
 	"type": "Code of Conduct",
 	"notices": [
 		{
@@ -43,25 +42,30 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": true,
-							"notes": ["Some content does not follow a logical reading order."]
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
-						},
-						"rating": "Poor"
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true,
+								"notes": [
+									"Some content does not follow a logical reading order."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.1.0"
+	"schemaVersion": "0.4.0",
+	"name": "Code of Conduct"
 }
