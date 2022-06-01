@@ -1,4 +1,9 @@
-import { OIAWithholding } from './OIAWithholding.js';
+import type { OIAWithholding } from './OIAWithholding.js';
+
+export enum OIAWithholdingsSummary {
+	NONE = 'None',
+	UNDETERMINED = 'Undetermined',
+}
 
 export type OIAWithholdings = {
 	'6(a)'?: OIAWithholding,
@@ -31,4 +36,4 @@ export type OIAWithholdings = {
 	'9(2)(j)'?: OIAWithholding,
 	'9(2)(k)'?: OIAWithholding,
 	'Out of scope'?: OIAWithholding,
-} | 'None' | 'Unknown';
+} | OIAWithholdingsSummary;

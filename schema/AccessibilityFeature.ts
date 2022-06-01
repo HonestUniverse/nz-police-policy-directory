@@ -1,6 +1,6 @@
 export enum AccessibilityFeatureString {
 	PARTIAL = 'Partial',
-	UNKNOWN = 'Unknown',
+	UNDETERMINED = 'Undetermined',
 }
 
 export type AccessibilityFeature = {

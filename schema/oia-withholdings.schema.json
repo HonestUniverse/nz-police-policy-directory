@@ -135,7 +135,7 @@
 			"type": "string",
 			"enum": [
 				"None",
-				"Unknown"
+				"Undetermined"
 			]
 		}
 	]
