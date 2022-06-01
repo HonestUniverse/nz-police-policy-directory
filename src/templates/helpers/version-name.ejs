@@ -1,0 +1,42 @@
+<%##
+	locals: {
+		version: Version,
+	}
+%><%
+const options = { month: 'short' };
+const { duration } = version;
+if (version.name) {
+	%><%= version.name %><%
+} else if (duration.start) {
+	if (duration.end) {
+		%><%=
+			include('../helpers/date-partial', { date: duration.start, options });
+		%>–<%=
+			include('../helpers/date-partial', { date: duration.end, options });
+		%><%
+	} else {
+		%>Started <%=
+			include('../helpers/date-partial', { date: duration.start, options });
+		%><%
+	}
+} else if (duration.end) {
+	%><%=
+		include('../helpers/date-partial', { date: duration.end, options });
+	%><%
+} else if (duration.on) {
+	if (duration.on.length > 1) {
+		%><%=
+			include('../helpers/date-partial', { date: duration.on[0], options });
+		%> and <%=
+			include('../helpers/date-partial', { date: duration.on.at(-1), options });
+		%><%
+	} else {
+		%><%=
+			include('../helpers/date-partial', { date: duration.on[0], options });
+		%><%
+	}
+} else {
+	%>Unnamed Version<%
+} %><%#
+	Weird opening and closing tags and no newline at end of file to avoid adding extra whitespace
+%>
