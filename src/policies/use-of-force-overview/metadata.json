@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2019-07-22",
@@ -123,7 +122,8 @@
 					],
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-bywxp"
 		},
 		{
 			"name": "Version 11.0",
@@ -181,7 +181,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-wchhv"
 		}
 	],
 	"name": "Use of Force Overview",

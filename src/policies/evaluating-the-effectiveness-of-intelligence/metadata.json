@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -59,7 +59,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-wospo"
 		}
 	],
 	"name": "Evaluating the effectiveness of intelligence"
