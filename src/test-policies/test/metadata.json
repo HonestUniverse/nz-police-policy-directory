@@ -1,8 +1,4 @@
 {
-	"title": "Test Policy",
-	"previousTitles": [
-		"Previous Test Policy"
-	],
 	"type": "General Instructions",
 	"obsolete": true,
 	"versions": [
@@ -22,7 +18,7 @@
 					"method": "Released under the OIA",
 					"oiaRequest": {
 						"requester": "Mark Hanna",
-						"withholdings": "Unknown"
+						"withholdings": "Undetermined"
 					},
 					"published": "2017-10-12",
 					"released": "2018-03-19",
@@ -88,22 +84,24 @@
 					"original": true,
 					"incomplete": true,
 					"accessibility": {
-						"text-based": {
-							"value": "Partial",
-							"notes": [
-								"There is an image of text"
-							]
-						},
-						"semantics": {
-							"value": true
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There is an image of text"
+								]
+							},
+							"semantics": {
+								"value": true
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"alternateFiles": [
 						{
@@ -116,19 +114,21 @@
 								"This file hasn't really been modified, but let's pretend it has been"
 							],
 							"accessibility": {
-								"text-based": {
-									"value": "Partial",
-									"notes": [
-										"There is an image of text"
-									]
-								},
-								"semantics": {
-									"value": true
-								},
-								"alt text": {
-									"value": false
-								},
-								"rating": "Undetermined"
+								"rating": "Bad",
+								"features": {
+									"text-based": {
+										"value": "Partial",
+										"notes": [
+											"There is an image of text"
+										]
+									},
+									"semantics": {
+										"value": true
+									},
+									"alt text": {
+										"value": false
+									}
+								}
 							}
 						},
 						{
@@ -142,19 +142,21 @@
 								"This file hasn't really been modified, but let's pretend it has been"
 							],
 							"accessibility": {
-								"text-based": {
-									"value": "Partial",
-									"notes": [
-										"There is an image of text"
-									]
-								},
-								"semantics": {
-									"value": true
-								},
-								"alt text": {
-									"value": false
-								},
-								"rating": "Undetermined"
+								"rating": "Bad",
+								"features": {
+									"text-based": {
+										"value": "Partial",
+										"notes": [
+											"There is an image of text"
+										]
+									},
+									"semantics": {
+										"value": true
+									},
+									"alt text": {
+										"value": false
+									}
+								}
 							}
 						}
 					],
@@ -187,19 +189,21 @@
 						"The name of the file was changed"
 					],
 					"accessibility": {
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": "Partial",
-							"notes": [
-								"Some pages are missing semantics"
-							]
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Partial",
+								"notes": [
+									"Some pages are missing semantics"
+								]
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"documentType": "OIA response letter"
 				}
@@ -224,7 +228,7 @@
 					"method": "Released under the OIA",
 					"oiaRequest": {
 						"requester": "Mark Hanna",
-						"withholdings": "Unknown"
+						"withholdings": "Undetermined"
 					},
 					"published": "2016-06-30",
 					"released": "2018-03-19",
@@ -254,19 +258,21 @@
 						"The name of the file was changed"
 					],
 					"accessibility": {
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": "Partial",
-							"notes": [
-								"Some pages are missing semantics"
-							]
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Partial",
+								"notes": [
+									"Some pages are missing semantics"
+								]
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
@@ -307,19 +313,21 @@
 						"The name of the file was changed"
 					],
 					"accessibility": {
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": "Partial",
-							"notes": [
-								"Some pages are missing semantics"
-							]
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Partial",
+								"notes": [
+									"Some pages are missing semantics"
+								]
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
@@ -333,5 +341,9 @@
 			"message": "This is a test error notice"
 		}
 	],
-	"schemaVersion": "3.1.0"
+	"schemaVersion": "0.4.0",
+	"name": "Test Policy",
+	"previousNames": [
+		"Previous Test Policy"
+	]
 }

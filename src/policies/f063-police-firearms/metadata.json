@@ -1,6 +1,5 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "F063 - Police Firearms",
+	"schemaVersion": "0.4.0",
 	"type": "General Instructions",
 	"versions": [
 		{
@@ -35,13 +34,15 @@
 						"The plain text contents of these General Instructions on the Police website were copied into a text file."
 					],
 					"accessibility": {
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"rating": "Undetermined"
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
@@ -54,5 +55,6 @@
 				}
 			]
 		}
-	]
+	],
+	"name": "F063 - Police Firearms"
 }
