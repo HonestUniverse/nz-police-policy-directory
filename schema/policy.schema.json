@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 4.0.0-alpha",
+	"$comment": "Current version: 0.4.0",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
@@ -8,11 +8,7 @@
 			"$comment": "The schemaVersion string should follow Semantic Versioning rules: https://semver.org/",
 			"description": "The current version of the schema",
 			"type": "string",
-			"pattern": "^\\d+\\.\\d+\\.\\d+$",
-			"not": {
-				"$comment": "Major version must be at least 4",
-				"pattern": "^[0-3]\\."
-			}
+			"pattern": "^\\d+\\.\\d+\\.\\d+$"
 		},
 		"name": {
 			"description": "The name of the document",
