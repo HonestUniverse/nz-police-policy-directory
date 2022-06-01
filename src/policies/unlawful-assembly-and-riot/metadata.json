@@ -1,6 +1,5 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "Unlawful assembly and riot",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -41,22 +40,24 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": "Partial",
-							"notes": [
-								"Pages 1, 4, 8-10, 12-14, and 22 are text-based. All other pages are images of text."
-							]
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 1, 4, 8-10, 12-14, and 22 are text-based. All other pages are images of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"notices": [
 						{
@@ -69,5 +70,6 @@
 				}
 			]
 		}
-	]
+	],
+	"name": "Unlawful assembly and riot"
 }

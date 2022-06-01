@@ -1,8 +1,4 @@
 {
-	"title": "Oleoresin Capsicum Spray",
-	"previousTitles": [
-		"Oleoresin Capsicum (OC) Spray"
-	],
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -40,17 +36,19 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				},
@@ -66,14 +64,16 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
@@ -83,7 +83,10 @@
 			"name": "Unnamed Version 2",
 			"duration": {
 				"end": "2022-03-01",
-				"on": ["2022-02-09", "2022-02-24"]
+				"on": [
+					"2022-02-09",
+					"2022-02-24"
+				]
 			},
 			"provenance": [
 				{
@@ -117,17 +120,19 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				},
@@ -143,14 +148,16 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
@@ -191,17 +198,19 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					},
 					"notices": [
@@ -223,14 +232,16 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
@@ -270,24 +281,30 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.2.0"
+	"schemaVersion": "0.4.0",
+	"name": "Oleoresin Capsicum Spray",
+	"previousNames": [
+		"Oleoresin Capsicum (OC) Spray"
+	]
 }

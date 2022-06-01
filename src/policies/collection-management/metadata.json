@@ -1,6 +1,5 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "Collection management",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -39,23 +38,26 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": "Partial",
-							"notes": [
-								"There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space."
-							]
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
-						},
-						"rating": "Poor"
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are text errors throughout this document that has caused many lowercase \"i\" and \"L\" characters to have been replaced with empty space."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
-	]
+	],
+	"name": "Collection management"
 }

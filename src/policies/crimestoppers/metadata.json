@@ -1,5 +1,4 @@
 {
-	"title": "Crimestoppers",
 	"type": "Memorandum of Understanding",
 	"versions": [
 		{
@@ -41,15 +40,17 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Bad",
-						"text-based": {
-							"value": false
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": false
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": false
+							}
 						}
 					}
 				},
@@ -65,14 +66,16 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
@@ -116,14 +119,16 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": false
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": false
+							}
 						}
 					}
 				},
@@ -139,19 +144,22 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.2.1"
+	"schemaVersion": "0.4.0",
+	"name": "Crimestoppers"
 }

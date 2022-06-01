@@ -1,6 +1,5 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "Professional Police Driver Programme (PPDP)",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -38,26 +37,29 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": "Partial",
-							"notes": [
-								"All pages are text-based except for images of text on pages 15 and 17"
-							]
-						},
-						"semantics": {
-							"value": "Unknown"
-						},
-						"alt text": {
-							"value": "Unknown"
-						},
-						"unwatermarked": {
-							"value": "Unknown"
-						},
-						"rating": "Undetermined"
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"All pages are text-based except for images of text on pages 15 and 17"
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
-	]
+	],
+	"name": "Professional Police Driver Programme (PPDP)"
 }

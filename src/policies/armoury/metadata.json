@@ -1,5 +1,4 @@
 {
-	"title": "Armoury",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -39,19 +38,21 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": false
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
-						},
-						"rating": "Bad"
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
 					},
 					"notices": [
 						{
@@ -66,48 +67,54 @@
 							"type": "application/pdf",
 							"size": 283147,
 							"accessibility": {
-								"text-based": {
-									"value": true
-								},
-								"semantics": {
-									"value": "Partial"
-								},
-								"alt text": {
-									"value": true
-								},
-								"unwatermarked": {
-									"value": true
-								},
-								"rating": "Okay"
+								"rating": "Poor",
+								"features": {
+									"text-based": {
+										"value": true
+									},
+									"semantics": {
+										"value": "Partial"
+									},
+									"alt text": {
+										"value": true
+									},
+									"unwatermarked": {
+										"value": true
+									}
+								}
 							},
 							"modifications": [
 								"OCR has been performed on the text, with manual typo fixes.",
 								"Automatic semantic tagging was used."
-							]
+							],
+							"documentType": "Policy"
 						},
 						{
 							"path": "version-12-0/Armoury.Redacted.html",
 							"type": "text/html",
 							"size": 14699,
 							"accessibility": {
-								"text-based": {
-									"value": true
-								},
-								"semantics": {
-									"value": true
-								},
-								"alt text": {
-									"value": true
-								},
-								"unwatermarked": {
-									"value": true
-								},
-								"rating": "Good"
+								"rating": "Good",
+								"features": {
+									"text-based": {
+										"value": true
+									},
+									"semantics": {
+										"value": true
+									},
+									"alt text": {
+										"value": true
+									},
+									"unwatermarked": {
+										"value": true
+									}
+								}
 							},
 							"modifications": [
 								"OCR has been performed on the text, with manual typo fixes.",
 								"The text was copied into an HTML file, with semantics added and typos fixed manually."
-							]
+							],
+							"documentType": "Policy"
 						}
 					]
 				},
@@ -137,23 +144,26 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Bad",
-						"text-based": {
-							"value": false
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.1.3"
+	"schemaVersion": "0.4.0",
+	"name": "Armoury"
 }

@@ -1,12 +1,13 @@
 {
-	"schemaVersion": "3.1.4",
-	"title": "Police Police driving (V001)",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"name": "Version 10.0",
 			"duration": {
-				"on": ["2014-09-08"]
+				"on": [
+					"2014-09-08"
+				]
 			},
 			"provenance": [
 				{
@@ -37,18 +38,21 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
 			]
 		}
-	]
+	],
+	"name": "Police Police driving (V001)"
 }

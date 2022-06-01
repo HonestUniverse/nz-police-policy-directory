@@ -1,12 +1,13 @@
 {
-	"schemaVersion": "3.1.4",
-	"title": "Motor vehicle offences",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"name": "Version 9.0",
 			"duration": {
-				"on": ["2014-09-08"]
+				"on": [
+					"2014-09-08"
+				]
 			},
 			"provenance": [
 				{
@@ -37,21 +38,24 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
 			]
 		}
-	]
+	],
+	"name": "Motor vehicle offences"
 }

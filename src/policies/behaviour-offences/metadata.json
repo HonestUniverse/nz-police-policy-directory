@@ -1,5 +1,4 @@
 {
-	"title": "Behaviour offences",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -37,21 +36,24 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
-						},
-						"rating": "Poor"
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
 					},
 					"documentType": "Policy"
 				}
 			]
 		}
 	],
-	"schemaVersion": "3.1.0"
+	"schemaVersion": "0.4.0",
+	"name": "Behaviour offences"
 }
