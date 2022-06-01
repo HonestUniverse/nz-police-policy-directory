@@ -73,7 +73,9 @@ summary.provenance__withholdings__summary {
 	display: flex;
 }
 
-.provenance__withholding__type {}
+.provenance__withholding__type {
+	white-space: nowrap;
+}
 
 .provenance__withholding__link {
 	@include link;
