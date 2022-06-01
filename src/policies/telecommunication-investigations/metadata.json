@@ -1,0 +1,80 @@
+{
+	"schemaVersion": "3.2.0",
+	"title": "Telecommunication investigations",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Unnamed Version 1",
+			"duration": {
+				"on": ["2022-02-01", "2022-05-30"]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Carol Rene",
+						"id": "IR-01-22-12220",
+						"responseUrl": "https://fyi.org.nz/request/19246-nz-police-telecommunication-investigations-manual#incoming-73648",
+						"withholdings": {
+							"6(c)": "Large amounts of information have been withheld on all pages."
+						}
+					},
+					"extracted": "2022-02-01",
+					"released": "2022-05-30",
+					"retrieved": "2022-06-01",
+					"url": "https://fyi.org.nz/request/19246-nz-police-telecommunication-investigations-manual#incoming-73648",
+					"fileUrl": "https://fyi.org.nz/request/19246/response/73648/attach/8/Rene%20Carol%20IR%2001%2022%2012220%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Rene Carol IR 01 22 12220 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 293187,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				},
+				{
+					"path": "unnamed-version-1/Rene Carol IR 01 22 12220 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 293187,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"text-based": {
+							"value": true
+						},
+						"semantics": {
+							"value": false
+						},
+						"unwatermarked": {
+							"value": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
