@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -58,7 +58,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-kpsnq"
 		}
 	],
 	"name": "Professional Police Driver Programme (PPDP)"

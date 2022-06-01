@@ -2,7 +2,6 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2022-02-09",
@@ -82,7 +81,8 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-vswzc"
 		},
 		{
 			"name": "Version 10",
@@ -194,7 +194,8 @@
 					],
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-xfckx"
 		},
 		{
 			"name": "Version 9.0",
@@ -248,10 +249,11 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-dcstd"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "TASER (Conducted Electrical Weapons)",
 	"previousNames": [
 		"TASER (Electronic Control Devices)"

@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 2",
 			"duration": {
 				"on": [
 					"2022-02-09",
@@ -83,10 +82,10 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-btukv"
 		},
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"ended": true,
 				"on": [
@@ -153,7 +152,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-sbntv"
 		}
 	],
 	"name": "Police firearms"

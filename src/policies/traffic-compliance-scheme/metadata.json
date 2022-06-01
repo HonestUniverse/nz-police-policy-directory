@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -58,7 +58,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-bzfiz"
 		},
 		{
 			"name": "Version 10.0",
@@ -110,7 +111,8 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-ixxwq"
 		}
 	],
 	"name": "Traffic compliance scheme"

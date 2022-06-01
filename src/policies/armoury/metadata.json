@@ -161,9 +161,10 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-hiwvn"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "Armoury"
 }

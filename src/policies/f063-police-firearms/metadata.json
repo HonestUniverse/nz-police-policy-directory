@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "General Instructions",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2007-09-27",
@@ -53,7 +52,8 @@
 					"title": "No longer published",
 					"message": "These General Instructions used to appear on the Police website, but were taken down between 1 December 2020 and 10 April 2021. It is unclear whether or not this version is still active."
 				}
-			]
+			],
+			"id": "u-vfosf"
 		}
 	],
 	"name": "F063 - Police Firearms"

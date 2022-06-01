@@ -2,7 +2,6 @@
 	"type": "Undetermined",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2017-01-04",
@@ -82,9 +81,10 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-xkxxw"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "Tactical Options Framework"
 }

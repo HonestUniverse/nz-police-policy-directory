@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Undetermined",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2019-06-28",
@@ -68,7 +67,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-ugcna"
 		}
 	],
 	"name": "TENR - Operational threat aessessment"

@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Undetermined",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2018-08-07"
@@ -85,7 +84,8 @@
 						}
 					]
 				}
-			]
+			],
+			"id": "u-wviua"
 		}
 	],
 	"name": "Disciplinary Process"

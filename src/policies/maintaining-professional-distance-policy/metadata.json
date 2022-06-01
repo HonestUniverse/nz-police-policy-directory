@@ -52,9 +52,10 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-nxpfz"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "Maintaining professional distance policy"
 }

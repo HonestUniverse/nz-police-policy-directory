@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2019-09-25",
@@ -68,7 +67,8 @@
 					],
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-jsuqg"
 		}
 	],
 	"name": "Unlawful assembly and riot"

@@ -63,9 +63,10 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-wbdfy"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "Code of Conduct"
 }

@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2021-12-08",
@@ -56,7 +55,8 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-bwjsy"
 		},
 		{
 			"name": "Version 19",
@@ -112,7 +112,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-sdcbz"
 		},
 		{
 			"name": "Version 16.0",
@@ -164,7 +165,8 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-wvcjj"
 		}
 	],
 	"name": "Speed enforcement"

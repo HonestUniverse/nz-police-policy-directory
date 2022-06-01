@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -62,7 +62,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-sjhdt"
 		}
 	],
 	"name": "Issue motivated and protests groups' intelligence"

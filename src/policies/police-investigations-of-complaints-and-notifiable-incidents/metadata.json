@@ -2,7 +2,6 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2022-04-22",
@@ -80,7 +79,8 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-znzik"
 		},
 		{
 			"name": "January 2022",
@@ -137,9 +137,10 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-kxuxc"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "Police investigations of complaints and notifiable incidents"
 }

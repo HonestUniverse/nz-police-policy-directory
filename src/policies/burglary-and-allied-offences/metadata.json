@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2018-10-26"
@@ -54,7 +53,8 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-whocf"
 		}
 	],
 	"name": "Burglary and allied offences"

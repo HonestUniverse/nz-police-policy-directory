@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -58,7 +58,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-qokkj"
 		},
 		{
 			"name": "Version 10.0",
@@ -113,7 +114,8 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-notcf"
 		}
 	],
 	"name": "Traffic patrol techniques"
