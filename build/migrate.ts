@@ -295,8 +295,6 @@ const migrations: Record<string, Migration> = {
 	 *
 	 * Renamed Policy['title'] to 'name'
 	 * Renamed Policy['previousTitles'] to 'previousNames'
-	 *
-	 * Made PolicyVersion['name'] optional, and added required field PolicyVersion['id']
 	 */
 	['0.4.0']: function (policy: Policy): void {
 		policy.schemaVersion = '0.4.0';
@@ -365,13 +363,7 @@ const migrations: Record<string, Migration> = {
 			policy.type = PolicyType.UNDETERMINED;
 		}
 
-		const policyWithIds = generateIdsPolicy(policy).policy;
 		for (const [i, version] of Object.entries(policy.versions)) {
-			version.id = policyWithIds.versions[i].id;
-			if (version.name && /\bunnamed version\b/i.test(version.name)) {
-				delete version.name;
-			}
-
 			for (const provenance of version.provenance) {
 				if (provenance.withholdings === 'Unknown') {
 					provenance.withholdings = OIAWithholdingsSummary.UNDETERMINED;
@@ -392,7 +384,23 @@ const migrations: Record<string, Migration> = {
 				}
 			}
 		}
+	},
 
+	/**
+	 * Changes in v0.4.1
+	 *
+	 * Made PolicyVersion['name'] optional, and added required field PolicyVersion['id']
+	 */
+	['0.4.1']: function (policy: Policy): void {
+		policy.schemaVersion = '0.4.1';
+
+		const policyWithIds = generateIdsPolicy(policy).policy;
+		for (const [i, version] of Object.entries(policy.versions)) {
+			version.id = policyWithIds.versions[i].id;
+			if (version.name && /\bunnamed version\b/i.test(version.name)) {
+				delete version.name;
+			}
+		}
 	},
 }
 
