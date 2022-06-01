@@ -1,12 +1,14 @@
 {
-	"schemaVersion": "3.1.4",
-	"title": "Elections and political matters-a guide for Police employees",
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"name": "Unnamed Version 1",
 			"duration": {
-				"on": ["2021-12-15", "2022-05-24"]
+				"on": [
+					"2021-12-15",
+					"2022-05-24"
+				]
 			},
 			"provenance": [
 				{
@@ -38,18 +40,21 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
 			]
 		}
-	]
+	],
+	"name": "Elections and political matters-a guide for Police employees"
 }

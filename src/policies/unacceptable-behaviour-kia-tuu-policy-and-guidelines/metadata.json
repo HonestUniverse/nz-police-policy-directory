@@ -1,15 +1,14 @@
 {
-	"schemaVersion": "3.2.0",
-	"title": "Unacceptable behaviour — Kia Tū policy and guidelines",
-	"previousTitles": [
-		"Speak Up"
-	],
+	"schemaVersion": "0.4.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"name": "Unnamed Version 1",
 			"duration": {
-				"on": ["2022-04-22", "2022-05-11"]
+				"on": [
+					"2022-04-22",
+					"2022-05-11"
+				]
 			},
 			"provenance": [
 				{
@@ -42,18 +41,20 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Poor",
-						"text-based": {
-							"value": "Partial",
-							"notes": [
-								"Page 1 is an image of text."
-							]
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Page 1 is an image of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				},
@@ -69,18 +70,24 @@
 					"original": true,
 					"accessibility": {
 						"rating": "Poor",
-						"text-based": {
-							"value": true
-						},
-						"semantics": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
 						}
 					}
 				}
 			]
 		}
+	],
+	"name": "Unacceptable behaviour — Kia Tū policy and guidelines",
+	"previousNames": [
+		"Speak Up"
 	]
 }

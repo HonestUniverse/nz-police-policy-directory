@@ -1,7 +1,6 @@
 {
-	"schemaVersion": "3.1.0",
-	"title": "Disciplinary Process",
-	"type": "Unclassified",
+	"schemaVersion": "0.4.0",
+	"type": "Undetermined",
 	"versions": [
 		{
 			"name": "Unnamed Version 1",
@@ -36,48 +35,58 @@
 					},
 					"original": true,
 					"accessibility": {
-						"text-based": {
-							"value": false,
-							"notes": [
-								"All pages are images of text."
-							]
-						},
-						"semantics": {
-							"value": false
-						},
-						"alt text": {
-							"value": false
-						},
-						"unwatermarked": {
-							"value": true
-						},
-						"rating": "Undetermined"
-					},
-					"documentType": "Policy",
-					"alternateFiles": [{
-						"name": "Text-Based/Searchable",
-						"path": "unnamed-version-1/Hanna Mark 11.7.2018 NZ Disciplinary Process Guidelines.OCR.pdf",
-						"type": "application/pdf",
-						"size": 1822160,
-						"accessibility": {
+						"rating": "None",
+						"features": {
 							"text-based": {
-								"value": true
+								"value": false,
+								"notes": [
+									"All pages are images of text."
+								]
 							},
 							"semantics": {
 								"value": false
 							},
 							"alt text": {
-								"value": true
+								"value": false
 							},
 							"unwatermarked": {
 								"value": true
+							}
+						}
+					},
+					"documentType": "Policy",
+					"alternateFiles": [
+						{
+							"name": "Text-Based/Searchable",
+							"path": "unnamed-version-1/Hanna Mark 11.7.2018 NZ Disciplinary Process Guidelines.OCR.pdf",
+							"type": "application/pdf",
+							"size": 1822160,
+							"accessibility": {
+								"rating": "Poor",
+								"features": {
+									"text-based": {
+										"value": true
+									},
+									"semantics": {
+										"value": false
+									},
+									"alt text": {
+										"value": true
+									},
+									"unwatermarked": {
+										"value": true
+									}
+								}
 							},
-							"rating": "Poor"
-						},
-						"modifications": ["OCR has been performed on the text, with manual typo fixes."]
-					}]
+							"modifications": [
+								"OCR has been performed on the text, with manual typo fixes."
+							],
+							"documentType": "Policy"
+						}
+					]
 				}
 			]
 		}
-	]
+	],
+	"name": "Disciplinary Process"
 }
