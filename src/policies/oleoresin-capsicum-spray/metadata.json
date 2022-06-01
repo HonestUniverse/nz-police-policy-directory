@@ -77,10 +77,10 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-sotbe"
 		},
 		{
-			"name": "Unnamed Version 2",
 			"duration": {
 				"end": "2022-03-01",
 				"on": [
@@ -161,10 +161,10 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-uaavi"
 		},
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"end": "2022-03-01"
 			},
@@ -245,7 +245,8 @@
 						}
 					}
 				}
-			]
+			],
+			"id": "u-sgguj"
 		},
 		{
 			"name": "Version 6.0",
@@ -299,10 +300,11 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-bvuox"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "Oleoresin Capsicum Spray",
 	"previousNames": [
 		"Oleoresin Capsicum (OC) Spray"
