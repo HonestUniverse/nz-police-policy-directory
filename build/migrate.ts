@@ -2,14 +2,24 @@ import semver from 'semver';
 
 import { readdir, writeFile } from 'fs/promises';
 
+import { PolicyType } from '../schema/Policy.js';
 import type { Policy } from '../schema/Policy.js';
+
 import {
 	FileType,
 	FileDocumentType,
 } from '../schema/File.js';
+import type { File as PolicyFile } from '../schema/File.js';
+
+import type { AlternateFile } from '../schema/AlternateFile.js';
+
 import { AccessibilityRating } from '../schema/Accessibility.js';
-import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
+import type { Accessibility } from '../schema/Accessibility.js';
+
 import { AccessibilityFeatureString } from '../schema/AccessibilityFeature.js';
+import type { AccessibilityFeature } from '../schema/AccessibilityFeature.js';
+
+import { OIAWithholdingsSummary } from '../schema/OIAWithholdings.js';
 
 import { validatePolicy } from './validate-policy.js';
 
@@ -115,7 +125,7 @@ function migrate(before: unknown): Policy {
 	const after = JSON.parse(JSON.stringify(before)) as Policy;
 
 	if (typeof after.schemaVersion === 'undefined') {
-		after.schemaVersion = '0.1.0';
+		after.schemaVersion = '0.0.0';
 	}
 
 	for (const [version, migration] of Object.entries(migrations)) {
@@ -133,7 +143,7 @@ function migrate(before: unknown): Policy {
  */
 const migrations: Record<string, Migration> = {
 	/**
-	 * Changes in v1.0.0
+	 * Changes in v0.1.0
 	 *
 	 * Added `schemaVersion` root property.
 	 *
@@ -143,8 +153,8 @@ const migrations: Record<string, Migration> = {
 	 *
 	 * `AccessibilityFeature` is now always an object, never a boolean or a string
 	 */
-	['1.0.0']: function (policy: Policy): void {
-		policy.schemaVersion = '1.0.0';
+	['0.1.0']: function (policy: Policy): void {
+		policy.schemaVersion = '0.1.0';
 
 		for (const version of policy.versions) {
 			// Update version provenance to be an array
@@ -161,7 +171,7 @@ const migrations: Record<string, Migration> = {
 				// Update file accessibility features to be an object
 				for (const [name, feature] of Object.entries(file.accessibility)) {
 					if (typeof feature === 'boolean' || typeof feature === 'string') {
-						// @ts-expect-error This errors because of Accessibility['rating'], which didn't exist prior to v3.0.2
+						// @ts-expect-error This errors because of Accessibility['rating'], which didn't exist prior to v0.3.2
 						file.accessibility[name] = { value: feature } as AccessibilityFeature;
 					}
 				}
@@ -170,12 +180,12 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v2.0.0
+	 * Changes in v0.2.0
 	 *
 	 * A file's `licence` property can no longer be a string, it has to be an object
 	 */
-	['2.0.0']: function (policy: Policy): void {
-		policy.schemaVersion = '2.0.0';
+	['0.2.0']: function (policy: Policy): void {
+		policy.schemaVersion = '0.2.0';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -187,12 +197,12 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v3.0.0
+	 * Changes in v0.3.0
 	 *
 	 * `AccessibilityFeature`s now have a `notes` field instead of a `note` field.
 	 */
-	['3.0.0']: function (policy: Policy): void {
-		policy.schemaVersion = '3.0.0';
+	['0.3.0']: function (policy: Policy): void {
+		policy.schemaVersion = '0.3.0';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -210,18 +220,20 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v3.0.1
+	 * Changes in v0.3.1
 	 *
 	 * Added a new "unwatermarked" `AccessibilityFeature` for rich static media.
 	 */
-	['3.0.1']: function (policy: Policy): void {
-		policy.schemaVersion = '3.0.1';
+	['0.3.1']: function (policy: Policy): void {
+		policy.schemaVersion = '0.3.1';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
 				if (file.type === FileType.PDF) {
+					// @ts-expect-error: AccessibilityFeatures have been moved to Accessibility['features']
 					file.accessibility.unwatermarked = {
-						value: AccessibilityFeatureString.UNKNOWN,
+						value: 'Unknown',
+						// value: AccessibilityFeatureString.UNKNOWN,
 					}
 				}
 			}
@@ -229,12 +241,12 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v3.0.2
+	 * Changes in v0.3.2
 	 *
 	 * Added a new optional `rating` property to `Accessibility`.
 	 */
-	['3.0.2']: function (policy: Policy): void {
-		policy.schemaVersion = '3.0.2';
+	['0.3.2']: function (policy: Policy): void {
+		policy.schemaVersion = '0.3.2';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -250,16 +262,125 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v3.1.0
+	 * Changes in v0.3.3
 	 *
 	 * Added a new optional `documentType` property to `File`.
 	 */
-	['3.1.0']: function (policy: Policy): void {
-		policy.schemaVersion = '3.1.0';
+	['0.3.3']: function (policy: Policy): void {
+		policy.schemaVersion = '0.3.3';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
 				file.documentType = FileDocumentType.POLICY;
+			}
+		}
+	},
+
+	/**
+	 * Changes in v0.4.0
+	 *
+	 * Updated PolicyType enum "Unclassified" to "Undetermined"
+	 *
+	 * Made File['documentType'] and AlternateFile['documentType'] required
+	 *
+	 * Moved AccessibilityFeatures into Accessibility['features']
+	 * Updated AccessibilityFeature enum "Unknown" to "Undetermined"
+	 *
+	 * Updated OIAWithholdings enum "Unknown" to "Undetermined"
+	 *
+	 * Made Accessibility['Rating'] required
+	 *
+	 * Updated AccessibilityRating enum to remove `Okay` and add `None`
+	 *
+	 * Renamed Policy['title'] to 'name'
+	 * Renamed Policy['previousTitles'] to 'previousNames'
+	 */
+	['0.4.0']: function (policy: Policy): void {
+		policy.schemaVersion = '0.4.0';
+
+		function migrateFile(file: PolicyFile | AlternateFile) {
+			if (!file.documentType) {
+				file.documentType = FileDocumentType.POLICY;
+			}
+
+			const { accessibility } = file;
+			accessibility.rating = AccessibilityRating.UNDETERMINED;
+
+			const a11yFeatures: Partial<Accessibility['features']> = {};
+			for (const [featureName, feature] of Object.entries(accessibility)) {
+				if (featureName === 'rating') {
+					continue;
+				}
+
+				// @ts-expect-error AccessibilityFeatures now exist on Accessibility['features']
+				if (feature.value === 'Unknown') {
+					// @ts-expect-error AccessibilityFeatures now exist on Accessibility['features']
+					feature.value = AccessibilityFeatureString.UNDETERMINED;
+				}
+
+				a11yFeatures[featureName] = feature;
+				delete accessibility[featureName];
+			}
+			accessibility.features = a11yFeatures as Accessibility['features'];
+
+			// If possible, set accessibility rating based on features
+			const { features } = accessibility;
+
+			// Only try to set a rating if all features have been determined
+			if (Object.values(features).every((feature) => feature.value !== AccessibilityFeatureString.UNDETERMINED)) {
+				if (features['text-based']?.value === false) {
+					// Non-text based means "None"
+					accessibility.rating = AccessibilityRating.NONE;
+				} else if (features['text-based']?.value === AccessibilityFeatureString.PARTIAL) {
+					// Only partially text-based means "Bad"
+					accessibility.rating = AccessibilityRating.BAD;
+				} else if (features['text-based']?.value === true) {
+					// If the document is text-based...
+					if (Object.values(features).every((feature) => feature.value === true)) {
+						// Every accessibility feature must be good for a "Good" rating
+						accessibility.rating = AccessibilityRating.GOOD;
+					} else {
+						// Otherwise, the rating is "Poor"
+						accessibility.rating = AccessibilityRating.POOR;
+					}
+				}
+			}
+		}
+
+		// @ts-expect-error 'title' is no longer an allowed property
+		policy.name = policy.title;
+		// @ts-expect-error 'title' is no longer an allowed property
+		delete policy.title;
+
+		// @ts-expect-error 'previousTitles' is no longer an allowed property
+		policy.previousNames = policy.previousTitles;
+		// @ts-expect-error 'previousTitles' is no longer an allowed property
+		delete policy.previousTitles;
+
+		// @ts-expect-error 'Unclassified' is no longer a valid PolicyType
+		if (policy.type === 'Unclassified') {
+			policy.type = PolicyType.UNDETERMINED;
+		}
+
+		for (const version of policy.versions) {
+			for (const provenance of version.provenance) {
+				if (provenance.withholdings === 'Unknown') {
+					provenance.withholdings = OIAWithholdingsSummary.UNDETERMINED;
+				}
+
+				if (provenance.oiaRequest?.withholdings === 'Unknown') {
+					provenance.oiaRequest.withholdings = OIAWithholdingsSummary.UNDETERMINED;
+				}
+			}
+
+			for (const file of version.files) {
+				migrateFile(file);
+
+				if (file.alternateFiles) {
+					for (const altFile of file.alternateFiles) {
+						migrateFile(altFile);
+					}
+				}
 			}
 		}
 	},
