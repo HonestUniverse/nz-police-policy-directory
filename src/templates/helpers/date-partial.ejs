@@ -47,5 +47,7 @@
 		%>Q<%= date.quarter %> <%= date.year %><%
 	} else if (date.month) {
 		%><%= monthNames[date.month-1] %> <%= date.year %><%
+	} else {
+		%><%= date.year %><%
 	}
 %>

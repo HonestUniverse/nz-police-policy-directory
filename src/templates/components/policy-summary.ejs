@@ -7,21 +7,21 @@
 
 <section
 	class="policy-summary js-search__item"
-	data-search-name="<%= policy.title %>"
-	<% if (policy.previousTitles) {
-		const previousTitlesList = policy.previousTitles ? JSON.stringify(policy.previousTitles).replace(/"/g, '&quot;') : null; %>
-		data-search-previous-names="<%= previousTitlesList %>"
+	data-search-name="<%= policy.name %>"
+	<% if (policy.previousNames) {
+		const previousNamesList = policy.previousNames ? JSON.stringify(policy.previousNames).replace(/"/g, '&quot;') : null; %>
+		data-search-previous-names="<%= previousNamesList %>"
 	<% } %>
 >
 	<h2 class="policy-summary__title">
-		<a href="<%= key %>" class="policy-summary__link"><%= policy.title %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
+		<a href="<%= key %>" class="policy-summary__link"><%= policy.name %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
 	</h2>
 
-	<% if (policy.previousTitles) { %>
+	<% if (policy.previousNames) { %>
 		<div class="policy-summary__previous-names">
 			<span class="policy-summary__previous-names__title">Previously called</span>
 			<ul class="policy-summary__previous-names__list">
-				<% for (const name of policy.previousTitles) { %>
+				<% for (const name of policy.previousNames) { %>
 					<li class="policy-summary__previous-names__item"><%= name %></li>
 				<% } %>
 			</ul>

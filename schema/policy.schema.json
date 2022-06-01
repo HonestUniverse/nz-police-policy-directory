@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 3.2.1",
+	"$comment": "Current version: 0.4.0",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
@@ -8,18 +8,14 @@
 			"$comment": "The schemaVersion string should follow Semantic Versioning rules: https://semver.org/",
 			"description": "The current version of the schema",
 			"type": "string",
-			"pattern": "^\\d+\\.\\d+\\.\\d+$",
-			"not": {
-				"$comment": "Major version must be at least 3",
-				"pattern": "^[0-2]\\."
-			}
+			"pattern": "^\\d+\\.\\d+\\.\\d+$"
 		},
-		"title": {
-			"description": "The title of the document",
+		"name": {
+			"description": "The name of the document",
 			"type": "string"
 		},
-		"previousTitles": {
-			"description": "Previous titles this document has gone by",
+		"previousNames": {
+			"description": "Previous names this document has gone by",
 			"type": "array",
 			"items": {
 				"type": "string"
@@ -36,7 +32,7 @@
 				"Equipment Operator's Manual",
 				"Memorandum of Understanding",
 
-				"Unclassified"
+				"Undetermined"
 			]
 		},
 		"obsolete": {
@@ -60,7 +56,7 @@
 		}
 	},
 	"required": [
-		"title",
+		"name",
 		"type",
 		"versions"
 	],

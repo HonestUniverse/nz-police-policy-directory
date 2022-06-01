@@ -1,6 +1,6 @@
 {
 	"title": "Accessibility Feature",
-	"description": "A flag regarding a specific accessibility feature, which may be present, partially present, absent, or have an unknown status and may have a note.",
+	"description": "A flag regarding a specific accessibility feature, which may be present, partially present, absent, or have an undetermined status and may have a note.",
 	"type": "object",
 	"properties": {
 		"value": {
@@ -8,7 +8,7 @@
 				{ "type": "boolean" },
 				{
 					"type": "string",
-					"enum": ["Partial", "Unknown"]
+					"enum": ["Partial", "Undetermined"]
 				}
 			]
 		},

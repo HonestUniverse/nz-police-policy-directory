@@ -5,6 +5,21 @@
 
 	@supports (selector(details)) {
 		cursor: pointer;
+		// ::marker removed by overriding `display: list-item;`
+		display: block;
+		// Marker replaced by .accessibility__summary__expand-icon
+	}
+}
+
+.accessibility__summary__expand-icon {
+	@supports (selector(details)) {
+		&::after {
+			font-family: $font-icons;
+			content: $icon-arrow-right;
+		}
+		.accessibility[open] &::after {
+			content: $icon-arrow-down;
+		}
 	}
 }
 
@@ -14,13 +29,13 @@
 	.accessibility__summary--good &::before {
 		content: $icon-tick;
 	}
-	.accessibility__summary--okay &::before {
-		content: $icon-info;
-	}
 	.accessibility__summary--poor &::before {
 		content: $icon-warning;
 	}
 	.accessibility__summary--bad &::before {
+		content: $icon-cross;
+	}
+	.accessibility__summary--none &::before {
 		content: $icon-cross;
 	}
 	.accessibility__summary--undetermined &::before {
@@ -36,15 +51,76 @@
 
 .accessibility__details {}
 
-.accessibility__feature-list {}
+.accessibility__feature-list {
+	@include list-reset;
+	margin: 0.5rem 0 0 1rem;
+}
 
-.accessibility__feature-item {}
+.accessibility__feature-item {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+
+		top: 100%;
+		left: 0;
+		right: 0;
+		height: 1px;
+
+		@include use-var(background-color, --accent, currentColor);
+		opacity: 0.5;
+	}
+	&:last-child {
+		&::after {
+			display: none;
+		}
+	}
+	padding: 0.4rem 0;
+
+	display: flex;
+	@supports(display: grid) {
+		display: grid;
+		grid-template-columns: 20ch 1fr;
+		grid-column-gap: 1rem;
+		grid-row-gap: 0.5rem;
+	}
+}
+
+%accessibility__feature-item-column {
+	width: 50%;
+	@supports(display: grid) {
+		width: 100%;
+	}
+}
 
 .accessibility__feature-name {
+	@extend %accessibility__feature-item-column;
 	@include font-base-18b;
 }
 
 .accessibility__feature-value {
-	margin: 0;
+	@extend %accessibility__feature-item-column;
 	@include font-base-18;
+}
+
+.accessibility__feature-icon {
+	font-family: $font-icons;
+
+	.accessibility__feature-item--true &::before {
+		content: $icon-tick;
+	}
+	.accessibility__feature-item--partial &::before {
+		content: $icon-warning;
+	}
+	.accessibility__feature-item--false &::before {
+		content: $icon-cross;
+	}
+	.accessibility__feature-item--undetermined &::before {
+		content: $icon-warning;
+	}
+}
+
+.accessibility__feature-note {
+	grid-column: 1 / span 2;
+	@include font-base-16;
 }

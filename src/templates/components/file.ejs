@@ -17,7 +17,7 @@
 					return `"${file.name}"`;
 				} else {
 					// Unnamed policy documents use the policy name
-					return `"${policy.title}"`;
+					return `"${policy.name}"`;
 				}
 			} else {
 				// Secondary documents use a generic term
@@ -40,7 +40,7 @@
 		<% } %>
 	</div>
 
-	<% if (notices) { %>
+	<% if (notices.length > 1) { %>
 		<div class="file__notices">
 			<% for (const notice of notices) { %>
 				<%- include('notice', { notice }); %>
