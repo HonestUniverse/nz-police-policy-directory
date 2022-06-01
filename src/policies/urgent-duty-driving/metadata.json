@@ -8,7 +8,9 @@
 				"start": "2019-11-28",
 				"on": [
 					"2020-06-29",
-					"2020-09-03"
+					"2020-09-03",
+					"2021-02-16",
+					"2021-02-19"
 				]
 			},
 			"provenance": [
@@ -30,7 +32,92 @@
 			],
 			"files": [
 				{
+					"path": "../../bulk-files/2021-02-19/Marsh Hayden IR 01 21 1295 final response.pdf",
+					"name": "Released on 2021-02-19",
+					"type": "application/pdf",
+					"startingPage": 2,
+					"size": 580229,
+					"licence": {
+						"name": "None"
+					},
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Hayden Marsh",
+								"id": "IR-01-21-1295",
+								"responseUrl": "https://fyi.org.nz/request/14470-new-pursuit-policy#incoming-54584",
+								"withholdings": "None"
+							},
+							"extracted": "2021-02-10",
+							"released": "2021-02-19",
+							"retrieved": "2022-06-01",
+							"url": "https://fyi.org.nz/request/14470-new-pursuit-policy#incoming-54584",
+							"fileUrl": "https://fyi.org.nz/request/14470/response/54584/attach/2/Marsh%20Hayden%20IR%2001%2021%201295%20final%20response.pdf"
+						}
+					],
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"documentType": "Policy"
+				},
+				{
+					"path": "../../bulk-files/2021-02-19/Marsh Hayden IR 01 21 1295 final response.pdf",
+					"type": "application/pdf",
+					"startingPage": 1,
+					"size": 580229,
+					"licence": {
+						"name": "None"
+					},
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Hayden Marsh",
+								"id": "IR-01-21-1295",
+								"responseUrl": "https://fyi.org.nz/request/14470-new-pursuit-policy#incoming-54584",
+								"withholdings": "None"
+							},
+							"released": "2021-02-19",
+							"retrieved": "2022-06-01",
+							"url": "https://fyi.org.nz/request/14470-new-pursuit-policy#incoming-54584",
+							"fileUrl": "https://fyi.org.nz/request/14470/response/54584/attach/2/Marsh%20Hayden%20IR%2001%2021%201295%20final%20response.pdf"
+						}
+					],
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"documentType": "OIA response letter"
+				},
+				{
 					"path": "version-18/HORNER David IR 01 20 22828 Attachment 7 Urgent Duty Driving.pdf",
+					"name": "Released on 2020-09-03",
 					"type": "application/pdf",
 					"size": 97218,
 					"licence": {

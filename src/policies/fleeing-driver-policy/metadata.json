@@ -2,9 +2,70 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
+			"name": "Version 12",
+			"duration": {
+				"start": "2020-12-10",
+				"on": [
+					"2020-02-19"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Hayden Marsh",
+						"id": "IR-01-21-1295",
+						"responseUrl": "https://fyi.org.nz/request/14470-new-pursuit-policy#incoming-54584",
+						"withholdings": {
+							"6(c)": "Some information was withheld on pages 21–24."
+						}
+					},
+					"extracted": "2021-02-10",
+					"released": "2021-02-19",
+					"retrieved": "2022-06-01",
+					"url": "https://fyi.org.nz/request/14470-new-pursuit-policy#incoming-54584",
+					"fileUrl": "https://fyi.org.nz/request/14470/response/54584/attach/2/Marsh%20Hayden%20IR%2001%2021%201295%20final%20response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2021-02-19/Marsh Hayden IR 01 21 1295 final response.pdf",
+					"name": "Released on 2021-02-19",
+					"type": "application/pdf",
+					"startingPage": 11,
+					"size": 580229,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Lowercase letters \"i\" and \"l\" are missing in some areas. This is most prevalent in the table of contents and page headers."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"documentType": "Policy"
+				}
+			],
+			"id": "u-bueyv"
+		},
+		{
 			"name": "Version 11 (2)",
 			"duration": {
 				"start": "2020-07-24",
+				"ended": true,
 				"on": [
 					"2020-09-03"
 				]
