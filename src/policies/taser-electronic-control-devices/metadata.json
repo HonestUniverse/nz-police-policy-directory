@@ -111,7 +111,8 @@
 					],
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-thixw"
 		},
 		{
 			"name": "Version 9.0",
@@ -165,9 +166,10 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-cqxjd"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "TASER (Electronic Control Devices)"
 }
