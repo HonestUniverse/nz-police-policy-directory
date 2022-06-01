@@ -126,7 +126,7 @@ function migrate(before: unknown): Policy {
 	const after = JSON.parse(JSON.stringify(before)) as Policy;
 
 	if (typeof after.schemaVersion === 'undefined') {
-		after.schemaVersion = '0.1.0';
+		after.schemaVersion = '0.0.0';
 	}
 
 	for (const [version, migration] of Object.entries(migrations)) {
@@ -144,7 +144,7 @@ function migrate(before: unknown): Policy {
  */
 const migrations: Record<string, Migration> = {
 	/**
-	 * Changes in v1.0.0
+	 * Changes in v0.1.0
 	 *
 	 * Added `schemaVersion` root property.
 	 *
@@ -154,8 +154,8 @@ const migrations: Record<string, Migration> = {
 	 *
 	 * `AccessibilityFeature` is now always an object, never a boolean or a string
 	 */
-	['1.0.0']: function (policy: Policy): void {
-		policy.schemaVersion = '1.0.0';
+	['0.1.0']: function (policy: Policy): void {
+		policy.schemaVersion = '0.1.0';
 
 		for (const version of policy.versions) {
 			// Update version provenance to be an array
@@ -172,7 +172,7 @@ const migrations: Record<string, Migration> = {
 				// Update file accessibility features to be an object
 				for (const [name, feature] of Object.entries(file.accessibility)) {
 					if (typeof feature === 'boolean' || typeof feature === 'string') {
-						// @ts-expect-error This errors because of Accessibility['rating'], which didn't exist prior to v3.0.2
+						// @ts-expect-error This errors because of Accessibility['rating'], which didn't exist prior to v0.3.2
 						file.accessibility[name] = { value: feature } as AccessibilityFeature;
 					}
 				}
@@ -181,12 +181,12 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v2.0.0
+	 * Changes in v0.2.0
 	 *
 	 * A file's `licence` property can no longer be a string, it has to be an object
 	 */
-	['2.0.0']: function (policy: Policy): void {
-		policy.schemaVersion = '2.0.0';
+	['0.2.0']: function (policy: Policy): void {
+		policy.schemaVersion = '0.2.0';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -198,12 +198,12 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v3.0.0
+	 * Changes in v0.3.0
 	 *
 	 * `AccessibilityFeature`s now have a `notes` field instead of a `note` field.
 	 */
-	['3.0.0']: function (policy: Policy): void {
-		policy.schemaVersion = '3.0.0';
+	['0.3.0']: function (policy: Policy): void {
+		policy.schemaVersion = '0.3.0';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -221,12 +221,12 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v3.0.1
+	 * Changes in v0.3.1
 	 *
 	 * Added a new "unwatermarked" `AccessibilityFeature` for rich static media.
 	 */
-	['3.0.1']: function (policy: Policy): void {
-		policy.schemaVersion = '3.0.1';
+	['0.3.1']: function (policy: Policy): void {
+		policy.schemaVersion = '0.3.1';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -242,12 +242,12 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v3.0.2
+	 * Changes in v0.3.2
 	 *
 	 * Added a new optional `rating` property to `Accessibility`.
 	 */
-	['3.0.2']: function (policy: Policy): void {
-		policy.schemaVersion = '3.0.2';
+	['0.3.2']: function (policy: Policy): void {
+		policy.schemaVersion = '0.3.2';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -263,12 +263,12 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v3.1.0
+	 * Changes in v0.3.3
 	 *
 	 * Added a new optional `documentType` property to `File`.
 	 */
-	['3.1.0']: function (policy: Policy): void {
-		policy.schemaVersion = '3.1.0';
+	['0.3.3']: function (policy: Policy): void {
+		policy.schemaVersion = '0.3.3';
 
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -278,7 +278,7 @@ const migrations: Record<string, Migration> = {
 	},
 
 	/**
-	 * Changes in v4.0.0
+	 * Changes in v0.4.0
 	 *
 	 * Updated PolicyType enum "Unclassified" to "Undetermined"
 	 *
@@ -298,8 +298,8 @@ const migrations: Record<string, Migration> = {
 	 *
 	 * Made PolicyVersion['name'] optional, and added required field PolicyVersion['id']
 	 */
-	['4.0.0']: function (policy: Policy): void {
-		policy.schemaVersion = '4.0.0';
+	['0.4.0']: function (policy: Policy): void {
+		policy.schemaVersion = '0.4.0';
 
 		function migrateFile(file: PolicyFile | AlternateFile) {
 			if (!file.documentType) {
