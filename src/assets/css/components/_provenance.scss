@@ -54,7 +54,7 @@ summary.provenance__withholdings__summary {
 	.provenance__withholdings--pass &::before {
 		content: $icon-tick;
 	}
-	.provenance__withholdings--unknown &::before {
+	.provenance__withholdings--undetermined &::before {
 		content: $icon-warning;
 	}
 	.provenance__withholdings--fail &::before {
