@@ -8,12 +8,12 @@
 %>
 
 <%
-	const title = `${policy.title} ${version.name}`;
+	const title = `${policy.name} ${version.name}`;
 %>
 
 <%- include('../layout/head', {
 	title,
-	h1: policy.title,
+	h1: policy.name,
 	subtitle: policy.type,
 	backLink: true,
 }); %>

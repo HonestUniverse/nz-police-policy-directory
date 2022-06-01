@@ -20,13 +20,16 @@
 				"alternate-files";
 		}
 		@include bp-from("s") {
-			grid-template-columns: repeat(2, 1fr);
 			grid-template-areas:
 				"handle handle"
 				"notices notices"
 				"accessibility provenance"
 				"metadata provenance"
 				"alternate-files alternate-files";
+			// Equal columns
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			// Provenance can push row out, all others collapse to minimum height based on content
+			grid-template-rows: repeat(3, min-content) 1fr min-content;
 		}
 	}
 
