@@ -1,9 +1,8 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Unnamed Version 1",
 			"duration": {
 				"on": [
 					"2021-06-14",
@@ -56,7 +55,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-sepbk"
 		}
 	],
 	"name": "Private Investigators and Security Consultants requests to Police for assistance"

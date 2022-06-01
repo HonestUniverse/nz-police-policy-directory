@@ -214,7 +214,8 @@
 					"type": "warning",
 					"message": "This is a test notice on a version"
 				}
-			]
+			],
+			"id": "u-jdjqk"
 		},
 		{
 			"name": "Version 3.0",
@@ -276,7 +277,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-wvxtf"
 		},
 		{
 			"name": "Version 2.0.0",
@@ -331,7 +333,8 @@
 					},
 					"documentType": "Policy"
 				}
-			]
+			],
+			"id": "u-xyynh"
 		}
 	],
 	"notices": [
@@ -341,7 +344,7 @@
 			"message": "This is a test error notice"
 		}
 	],
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.4.1",
 	"name": "Test Policy",
 	"previousNames": [
 		"Previous Test Policy"
