@@ -16,6 +16,7 @@
 
 // Doesn't generate CSS
 @import "theme/breakpoints";
+@import "theme/focus-outline";
 @import "theme/fonts";
 @import "theme/layout";
 @import "theme/palette";
@@ -29,6 +30,7 @@
 @import "tools/visually-hidden";
 
 @import "patterns/button";
+@import "patterns/icon-indicator";
 
 // Generates CSS
 @import "base/reset";
@@ -36,3 +38,4 @@
 @import "base/fonts";
 
 @import "extendables/content";
+@import "extendables/file-metadata";

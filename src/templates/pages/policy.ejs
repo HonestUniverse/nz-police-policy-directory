@@ -29,20 +29,24 @@
 
 <% if (policy.versions.length > 0) { %>
 	<article class="policy__version">
-		<h2 class="policy__version__name">
-			<%
-				const version = policy.versions[0];
-				const { id } = version;
-				const href = versionPaths[id];
-			%>
-			<% if (href) { %>
-				<a href="<%= href %>" class="policy__version__link"><%= include('../helpers/version-name', { version }); %> (Latest)</a>
-			<% } else { %>
+		<div class="policy__version__head">
+			<h2 class="policy__version__name">
+				<%
+					const version = policy.versions[0];
+					const { id } = version;
+					const href = versionPaths[id];
+				%>
 				<%= include('../helpers/version-name', { version }); %> (Latest)
-			<% } %>
-		</h2>
+			</h2>
 
-		<%- include('../components/version', { version, policy }) %>
+			<% if (href) { %>
+				<a href="<%= href %>" class="policy__version__link">Permanent link to this version</a>
+			<% } %>
+		</div>
+
+		<div class="policy__version__body">
+			<%- include('../components/version', { version, policy }) %>
+		</div>
 	</article>
 <% } %>
 
@@ -62,13 +66,16 @@
 					%>
 					<details class="policy__version policy__version--disclosure">
 						<summary class="policy__version__name">
-							<% if (href) { %>
-								<a href="<%= href %>" class="policy__version__link"><%= include('../helpers/version-name', { version }); %></a>
-							<% } else { %>
-								<%= include('../helpers/version-name', { version }); %>
-							<% } %>
+							<%= include('../helpers/version-name', { version }); %>
 						</summary>
-						<%- include('../components/version', { version, policy }) %>
+
+						<div class="policy__version__details">
+							<% if (href) { %>
+								<a href="<%= href %>" class="policy__version__link">Permanent link to this version</a>
+							<% } %>
+
+							<%- include('../components/version', { version, policy }) %>
+						</div>
 					</details>
 				</li>
 			<% }); %>

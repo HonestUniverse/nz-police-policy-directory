@@ -104,7 +104,7 @@ function applySearch($target: HTMLElement, query: string) {
 
 	for (const $item of $items) {
 		const itemResult = applySearchToItem(query, $item);
-		const shouldShow = itemResult !== MatchResult.NO_MATCH
+		const shouldShow = itemResult !== MatchResult.NO_MATCH;
 
 		const $wrapper = $item.closest<HTMLElement>(Selector.WRAPPER) || $item;
 
@@ -157,7 +157,29 @@ function applySearchToItem(query: string, $item: HTMLElement): MatchResult {
 function getItemNames($item: HTMLElement) {
 	const nameAttr = $item.getAttribute(DataAttribute.NAME);
 	const previousNamesAttr = $item.getAttribute(DataAttribute.PREVIOUS_NAMES);
-	const previousNames = previousNamesAttr ? JSON.parse(previousNamesAttr.replace(/&quot;/g, '"')) : [];
+
+	const previousNames: string[] = (() => {
+		// Try to parse previous names from markup. If any part fails, return `[]`
+		if (previousNamesAttr) {
+			try {
+				const parsedNames: unknown = JSON.parse(previousNamesAttr.replace(/&quot;/g, '"'));
+				if (
+					Array.isArray(parsedNames) &&
+					parsedNames.every((el: unknown): el is string => typeof el === 'string')
+				) {
+					return parsedNames;
+				} else {
+					return [];
+				}
+			} catch (e) {
+				return [];
+			}
+		} else {
+			return [];
+		}
+	})();
+
+	// const previousNames: string[] = previousNamesAttr ? JSON.parse(previousNamesAttr.replace(/&quot;/g, '"')) : [];
 
 	const names = [nameAttr, ...(previousNames)];
 

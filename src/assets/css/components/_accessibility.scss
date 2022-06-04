@@ -1,126 +1,83 @@
 .accessibility {}
 
 .accessibility__summary {
-	@include font-base-18;
-
-	@supports (selector(details)) {
-		cursor: pointer;
-		// ::marker removed by overriding `display: list-item;`
-		display: block;
-		// Marker replaced by .accessibility__summary__expand-icon
-	}
-}
-
-.accessibility__summary__expand-icon {
-	@supports (selector(details)) {
-		&::after {
-			font-family: $font-icons;
-			content: $icon-arrow-right;
-		}
-		.accessibility[open] &::after {
-			content: $icon-arrow-down;
-		}
-	}
+	@extend %file-metadata--summary;
 }
 
 .accessibility__summary__icon {
-	font-family: $font-icons;
+	@extend %file-metadata__icon;
 
-	.accessibility__summary--good &::before {
-		content: $icon-tick;
+	font-family: $font-icons;
+	.accessibility__summary--good & {
+		@include icon-indicator($icon-tick);
 	}
-	.accessibility__summary--poor &::before {
-		content: $icon-warning;
+	.accessibility__summary--poor &,
+	.accessibility__summary--undetermined & {
+		@include icon-indicator($icon-warning);
 	}
-	.accessibility__summary--bad &::before {
-		content: $icon-cross;
-	}
-	.accessibility__summary--none &::before {
-		content: $icon-cross;
-	}
-	.accessibility__summary--undetermined &::before {
-		content: $icon-warning;
+	.accessibility__summary--bad &,
+	.accessibility__summary--none & {
+		@include icon-indicator($icon-cross);
 	}
 }
 
 .accessibility__summary__label {
+	@extend %file-metadata__part;
 	@include font-base-18b;
 }
 
-.accessibility__summary__rating {}
+.accessibility__summary__rating {
+	@extend %file-metadata__part;
+	@include font-base-18;
+}
+
+.accessibility__summary__expand-icon {
+	@extend %file-metadata__expand-icon;
+}
 
 .accessibility__details {}
 
 .accessibility__feature-list {
-	@include list-reset;
-	margin: 0.5rem 0 0 1rem;
+	@extend %file-metadata__details;
 }
 
 .accessibility__feature-item {
-	position: relative;
-	&::after {
-		content: "";
-		position: absolute;
-
-		top: 100%;
-		left: 0;
-		right: 0;
-		height: 1px;
-
-		@include use-var(background-color, --accent, currentColor);
-		opacity: 0.5;
-	}
-	&:last-child {
-		&::after {
-			display: none;
-		}
-	}
-	padding: 0.4rem 0;
-
-	display: flex;
-	@supports(display: grid) {
-		display: grid;
-		grid-template-columns: 20ch 1fr;
-		grid-column-gap: 1rem;
-		grid-row-gap: 0.5rem;
-	}
-}
-
-%accessibility__feature-item-column {
-	width: 50%;
-	@supports(display: grid) {
-		width: 100%;
-	}
+	@extend %file-metadata__details__item;
 }
 
 .accessibility__feature-name {
-	@extend %accessibility__feature-item-column;
+	@extend %file-metadata__detail__item__column;
+	@extend %file-metadata;
+}
+
+.accessibility__feature-icon {
+	@extend %file-metadata__icon;
+
+	font-family: $font-icons;
+
+	.accessibility__feature-item--true & {
+		@include icon-indicator($icon-tick);
+	}
+	.accessibility__feature-item--partial &,
+	.accessibility__feature-item--undetermined & {
+		@include icon-indicator($icon-warning);
+	}
+	.accessibility__feature-item--false & {
+		@include icon-indicator($icon-cross);
+	}
+}
+
+.accessibility__feature-name-text {
 	@include font-base-18b;
 }
 
 .accessibility__feature-value {
-	@extend %accessibility__feature-item-column;
+	@extend %file-metadata__detail__item__column;
 	@include font-base-18;
 }
 
-.accessibility__feature-icon {
-	font-family: $font-icons;
-
-	.accessibility__feature-item--true &::before {
-		content: $icon-tick;
-	}
-	.accessibility__feature-item--partial &::before {
-		content: $icon-warning;
-	}
-	.accessibility__feature-item--false &::before {
-		content: $icon-cross;
-	}
-	.accessibility__feature-item--undetermined &::before {
-		content: $icon-warning;
-	}
-}
-
 .accessibility__feature-note {
+	width: 100%;
 	grid-column: 1 / span 2;
 	@include font-base-16;
 }
