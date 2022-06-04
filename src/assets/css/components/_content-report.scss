@@ -4,7 +4,9 @@
 
 .content-report__section__summary {
 	@supports (selector(details)) {
-		cursor: pointer;
+		details > & {
+			cursor: pointer;
+		}
 	}
 
 	@include font-heading-24b;
