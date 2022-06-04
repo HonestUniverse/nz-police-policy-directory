@@ -57,15 +57,17 @@
 			<div class="file__licence__handle">
 				<span class="file__licence__handle__icon" aria-hidden="true"></span>
 
-				Licence:
-				<% if (file.licence.url) { %>
-					<a
-						<%- include('../helpers/href-with-target', { href: file.licence.url }) %>
-						class="file__licence__handle__link"
-					><%= file.licence.name %></a>
-				<% } else { %>
-					<%= file.licence.name %>
-				<% } %>
+				<span class="file__licence__handle__text">
+					Licence:
+					<% if (file.licence.url) { %>
+						<a
+							<%- include('../helpers/href-with-target', { href: file.licence.url }) %>
+							class="file__licence__handle__link"
+						><%= file.licence.name %></a>
+					<% } else { %>
+						<%= file.licence.name %>
+					<% } %>
+					</span>
 			</div>
 
 			<% if (file.licence.notices) { %>

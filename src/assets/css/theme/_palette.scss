@@ -2,16 +2,20 @@
 // Debug/temporary colour palette //
 ////////////////////////////////////
 
+$green--pale: #ccf0cc !default;
+$green--dim: #3d4e3d !default;
+
 $blue--pale: #c8dbfd !default;
 $blue--dim: #25254e !default;
-$blue--vivid: #0000ff !default;
-$blue--vivid-bright: #8888ff !default;
 
 $yellow--pale: #ffffe0 !default;
 $yellow--dim: #474429 !default;
 
 $red--pale: #ffd9df !default;
 $red--dim: #411919 !default;
+
+$blue--vivid: #0000ff !default;
+$blue--vivid-bright: #8888ff !default;
 
 ////////////////////
 // Colour palette //
@@ -68,6 +72,10 @@ $col-dark--light: $white;
 $accent-dark--light: $cadet-blue;
 $link-dark--light: $blue--vivid-bright;
 
+// AAA 16.9
+$bg-green--light: $green--pale;
+$col-green--light: $black;
+
 // AAA 15.01
 $bg-blue--light: $blue--pale;
 $col-blue--light: $black;
@@ -99,6 +107,9 @@ $col-red--light: $black;
 	--col-dark: #{$col-dark--light};
 	--accent-dark: #{$accent-dark--light};
 	--link-dark: #{$link-dark--light};
+
+	--bg-green: #{$bg-green--light};
+	--col-green: #{$col-green--light};
 
 	--bg-blue: #{$bg-blue--light};
 	--col-blue: #{$col-blue--light};
@@ -150,6 +161,10 @@ $col-dark--dark: $white;
 $accent-dark--dark: $teal;
 $link-dark--dark: $blue--vivid-bright;
 
+// AAA 8.92
+$bg-green--dark: $green--dim;
+$col-green--dark: $white;
+
 // AAA 14.45
 $bg-blue--dark: $blue--dim;
 $col-blue--dark: $white;
@@ -181,6 +196,9 @@ $col-red--dark: $white;
 	--col-dark: #{$col-dark--dark};
 	--accent-dark: #{$accent-dark--dark};
 	--link-dark: #{$link-dark--dark};
+
+	--bg-green: #{$bg-green--dark};
+	--col-green: #{$col-green--dark};
 
 	--bg-blue: #{$bg-blue--dark};
 	--col-blue: #{$col-blue--dark};
@@ -259,6 +277,14 @@ $col-red--dark: $white;
 
 	--accent: var(--accent-dark, #{$accent-dark--light});
 	--link: var(--link-dark, #{$link-dark--light});
+}
+
+@mixin contrast-green {
+	@include use-var(background-color, --bg-green, $bg-green--light);
+	@include use-var(color, --col-green, $col-green--light);
+
+	--accent: var(--accent-base, #{$accent-base--light});
+	--link: var(--link-base, #{$link-base--light});
 }
 
 @mixin contrast-blue {
