@@ -78,6 +78,8 @@ $file-metadata__icon-padding: 0.5em;
 
 		@include use-var(background-color, --accent, currentColor);
 		opacity: 0.5;
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
 	}
 	&:last-child {
 		&::after {
