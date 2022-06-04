@@ -7,6 +7,7 @@
 		body.no-js & {
 			display: none;
 		}
+		@include print-hide;
 	}
 
 	position: relative;
