@@ -84,7 +84,7 @@
 					"original": true,
 					"incomplete": {
 						"value": true,
-						"note": "This file isn't really incomplete, but let's pretend it is"
+						"note": "This file isn't really incomplete, but let's pretend it is."
 					},
 					"accessibility": {
 						"rating": "Undetermined",
