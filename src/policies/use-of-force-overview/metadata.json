@@ -53,7 +53,7 @@
 								"value": false
 							},
 							"unwatermarked": {
-								"value": false
+								"value": true
 							}
 						}
 					}
@@ -78,7 +78,7 @@
 								"value": false
 							},
 							"unwatermarked": {
-								"value": false
+								"value": true
 							}
 						}
 					}
@@ -144,7 +144,7 @@
 						"note": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
 					},
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "Bad",
 						"features": {
 							"text-based": {
 								"value": "Partial",
@@ -153,10 +153,10 @@
 								]
 							},
 							"semantics": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
 								"value": true

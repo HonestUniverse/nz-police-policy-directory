@@ -39,22 +39,22 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "Bad",
 						"features": {
 							"text-based": {
 								"value": "Partial",
 								"notes": [
-									"Pages 1, 4, 8-10, 12-14, and 22 are text-based. All other pages are images of text."
+									"Pages 2, 3, 5–7, 11, and 15–21 are images of text."
 								]
 							},
 							"semantics": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},

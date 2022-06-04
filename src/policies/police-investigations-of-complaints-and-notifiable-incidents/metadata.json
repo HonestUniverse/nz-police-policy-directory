@@ -116,22 +116,19 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "Bad",
 						"features": {
 							"text-based": {
 								"value": "Partial",
 								"notes": [
-									"All pages except page 22 are text-based"
+									"Page 22 is an image of text."
 								]
 							},
 							"semantics": {
-								"value": "Undetermined"
-							},
-							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
