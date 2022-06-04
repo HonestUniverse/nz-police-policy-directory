@@ -42,17 +42,17 @@
 							"text-based": {
 								"value": "Partial",
 								"notes": [
-									"All pages are text-based except for an image of text on page 4"
+									"There is an image of text on page 4."
 								]
 							},
 							"semantics": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},

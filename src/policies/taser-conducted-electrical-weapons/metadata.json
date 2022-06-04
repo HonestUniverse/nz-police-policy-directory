@@ -231,19 +231,19 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "Poor",
 						"features": {
 							"text-based": {
 								"value": true
 							},
 							"semantics": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
-								"value": false
+								"value": true
 							}
 						}
 					},
