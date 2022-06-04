@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.1",
+	"schemaVersion": "0.5.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -132,7 +132,10 @@
 						"name": "None"
 					},
 					"original": true,
-					"incomplete": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only the \"When can firearms be carried?\" section was released in this document."
+					},
 					"accessibility": {
 						"rating": "Undetermined",
 						"features": {
@@ -150,13 +153,7 @@
 							}
 						}
 					},
-					"documentType": "Policy",
-					"notices": [
-						{
-							"type": "warning",
-							"message": "Only the \"When can firearms be carried?\" section was released in this document."
-						}
-					]
+					"documentType": "Policy"
 				}
 			],
 			"id": "u-sbntv"
