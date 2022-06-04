@@ -5,19 +5,51 @@
 	@include link;
 }
 
-.directory__search {}
+.directory__search {
+	@include bp-from("s") {
+		display: flex;
+	}
+}
 
-.directory__search__input {
+%directory__search__input {
 	@include input-reset;
 	@include font-base-18;
 	@include contrast-secondary;
 
-	width: 100%;
 	min-height: 44px;
 
 	padding: 0 0.5em;
 	border: 1px solid;
 	@include use-var(border-color, --accent, currentColor);
+
+	@include bp-to("s") {
+		width: 100%;
+		&:not(:last-child) {
+			border-bottom: 0;
+		}
+	}
+	@include bp-from("s") {
+		&:not(:last-child) {
+			border-right: 0;
+		}
+	}
+}
+
+.directory__search__query {
+	@extend %directory__search__input;
+
+	flex-grow: 1;
+}
+
+.directory__search__type {
+	@extend %directory__search__input;
+}
+
+.directory__search-results {}
+
+.directory__no-search-results {
+	margin-top: 1rem;
+	@include font-base-20;
 }
 
 .directory__list {

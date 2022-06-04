@@ -22,6 +22,7 @@ async function getConfig(env: Record<string, unknown>) {
 			priority: `${paths.assetsFull}/js/priority.ts`,
 
 			style: `${paths.assetsFull}/js/style.ts`,
+			'style-content': `${paths.assetsFull}/js/style-content.ts`,
 			'style-directory': `${paths.assetsFull}/js/style-directory.ts`,
 			'style-document': `${paths.assetsFull}/js/style-document.ts`,
 		},

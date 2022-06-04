@@ -6,7 +6,7 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 import * as paths from './util/paths.js';
 import { makeRootRelative } from './util/make-root-relative.js';
 
-export const indexBuildSteps: Record<string, BuildStep> = {
+export const contentBuildSteps: Record<string, BuildStep> = {
 	/**
 	 * Generate the HTML for the index page
 	 */
@@ -51,7 +51,7 @@ export const indexBuildSteps: Record<string, BuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style'],
+				chunks: ['priority', 'main', 'enhancements', 'style-content'],
 			}),
 		];
 	},

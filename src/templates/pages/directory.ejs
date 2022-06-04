@@ -10,6 +10,8 @@
 	for (const key of keys) {
 		policies.push(directory[key]);
 	}
+
+	const policyTypes = Array.from(new Set(policies.map((policy) => policy.type))).sort((a, b) => a.localeCompare(b));
 %>
 
 <%- include('../layout/head', {
@@ -18,17 +20,29 @@
 }); %>
 
 <article class="directory">
-	<form class="directory__search js-search" action="." method="GET" aria-controls="policy-list">
-		<input class="directory__search__input js-search__input" name="q" type="search" placeholder="Search" />
+	<form class="directory__search js-search" action="." method="GET" aria-controls="policy-search-results">
+		<input class="directory__search__query js-search__input" name="name" type="search" placeholder="Search" />
+		<select class="directory__search__type js-search__input" name="type">
+			<option value="">All types</option>
+			<% for (const type of policyTypes) { %>
+				<option><%= type %></option>
+			<% } %>
+		</select>
 	</form>
 
-	<ul class="directory__list" id="policy-list">
-		<% policies.forEach((policy, idx) => { %>
-			<li class="directory__item js-search__item-wrapper">
-				<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-			</li>
-		<% }) %>
-	</ul>
+	<div class="directory__search-results" id="policy-search-results">
+		<ul class="directory__list">
+			<% policies.forEach((policy, idx) => { %>
+				<li class="directory__item js-search__item-wrapper">
+					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+				</li>
+			<% }) %>
+		</ul>
+
+		<div class="directory__no-search-results js-search__no-results" hidden>
+			There were no results for your search.
+		</div>
+	</div>
 </article>
 
 <%- include('../layout/foot'); %>

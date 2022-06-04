@@ -9,6 +9,8 @@
 @import "components/page";
 @import "components/notice";
 
+@import "components/prototype";
+
 body {
 	@include contrast-primary;
 }
