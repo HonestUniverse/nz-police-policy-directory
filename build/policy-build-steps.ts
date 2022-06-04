@@ -152,7 +152,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 
 		const latest = policy.versions.find((version) => {
 			return version.files.some((file) => {
-				return file.documentType === FileDocumentType.POLICY && !file.incomplete;
+				return file.documentType === FileDocumentType.POLICY && file.incomplete?.value !== true;
 			});
 		});
 
@@ -175,7 +175,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 
 		const latest = policy.versions.find((version) => {
 			return version.files.some((file) => {
-				return file.documentType === FileDocumentType.POLICY && !file.incomplete;
+				return file.documentType === FileDocumentType.POLICY && file.incomplete?.value !== true;
 			});
 		});
 
