@@ -1,9 +1,3 @@
 @import "style-base";
 
 @import "components/document";
-
-@import "components/prototype";
-
-body {
-	@include contrast-primary;
-}
