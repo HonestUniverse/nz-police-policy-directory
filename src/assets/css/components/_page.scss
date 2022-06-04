@@ -37,9 +37,11 @@
 .page__head__back-link {
 	grid-area: back;
 
-	@include button($icon: true, $theme: "primary");
+	@include button($icon: true, $theme: "secondary");
 
 	margin-right: 1rem;
+
+	@include print-hide;
 }
 
 .page__head__back-link__icon {

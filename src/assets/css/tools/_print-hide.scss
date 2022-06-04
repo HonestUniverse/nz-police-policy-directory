@@ -1,0 +1,5 @@
+@mixin print-hide {
+	@media print {
+		display: none;
+	}
+}
