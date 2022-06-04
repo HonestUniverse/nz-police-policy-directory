@@ -8,20 +8,16 @@
 	@extend %file-metadata__icon;
 
 	font-family: $font-icons;
-	.accessibility__summary--good &::before {
-		content: $icon-tick;
+	.accessibility__summary--good & {
+		@include icon-indicator($icon-tick);
 	}
-	.accessibility__summary--poor &::before {
-		content: $icon-warning;
+	.accessibility__summary--poor &,
+	.accessibility__summary--undetermined & {
+		@include icon-indicator($icon-warning);
 	}
-	.accessibility__summary--bad &::before {
-		content: $icon-cross;
-	}
-	.accessibility__summary--none &::before {
-		content: $icon-cross;
-	}
-	.accessibility__summary--undetermined &::before {
-		content: $icon-warning;
+	.accessibility__summary--bad &,
+	.accessibility__summary--none & {
+		@include icon-indicator($icon-cross);
 	}
 }
 
@@ -59,17 +55,15 @@
 
 	font-family: $font-icons;
 
-	.accessibility__feature-item--true &::before {
-		content: $icon-tick;
+	.accessibility__feature-item--true & {
+		@include icon-indicator($icon-tick);
 	}
-	.accessibility__feature-item--partial &::before {
-		content: $icon-warning;
+	.accessibility__feature-item--partial &,
+	.accessibility__feature-item--undetermined & {
+		@include icon-indicator($icon-warning);
 	}
-	.accessibility__feature-item--false &::before {
-		content: $icon-cross;
-	}
-	.accessibility__feature-item--undetermined &::before {
-		content: $icon-warning;
+	.accessibility__feature-item--false & {
+		@include icon-indicator($icon-cross);
 	}
 }
 
