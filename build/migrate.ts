@@ -402,6 +402,26 @@ const migrations: Record<string, Migration> = {
 			}
 		}
 	},
+
+	/**
+	 * Changes in v0.5.0
+	 *
+	 * Made PolicyFile['incomplete'] an object with a "note" field
+	 */
+	['0.5.0']: function (policy: Policy): void {
+		policy.schemaVersion = '0.5.0';
+
+		for (const version of policy.versions) {
+			for (const file of version.files) {
+				// Incomplete files require a manual migration to add their note
+				if ('incomplete' in file && typeof file.incomplete === 'boolean') {
+					file.incomplete = {
+						value: file.incomplete,
+					};
+				}
+			}
+		}
+	},
 }
 
 migrateAll();
