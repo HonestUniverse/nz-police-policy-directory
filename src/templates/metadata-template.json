@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.5.0",
 	"name": "string",
 	"previousNames": [
 		"string"
@@ -57,7 +57,10 @@
 						]
 					},
 					"original": false,
-					"incomplete": true,
+					"incomplete": {
+						"value": true,
+						"note": "string"
+					},
 					"modifications": ["string"],
 					"accessibility": {
 						"rating": "Undetermined",
@@ -94,7 +97,10 @@
 							"documentType": "Policy",
 							"startingPage": 0,
 							"size": 0,
-							"incomplete": true,
+							"incomplete": {
+								"value": true,
+								"note": "string"
+							},
 							"modifications": ["string"],
 							"accessibility": {
 								"rating": "Undetermined",
