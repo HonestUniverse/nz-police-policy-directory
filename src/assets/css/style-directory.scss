@@ -4,9 +4,3 @@
 
 @import "components/directory";
 @import "components/policy-summary";
-
-@import "components/prototype";
-
-body {
-	@include contrast-primary;
-}
