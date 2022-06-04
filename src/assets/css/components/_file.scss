@@ -89,17 +89,15 @@
 	@extend %file-metadata__icon;
 
 	font-family: $font-icons;
-	&::before {
-		content: $icon-info;
-	}
+	@include icon-indicator($icon-info);
 
-	.file__licence[data-licence-name="None"] &::before {
-		content: $icon-warning;
+	.file__licence[data-licence-name="None"] & {
+		@include icon-indicator($icon-warning);
 	}
 
 	// Creative Commons
-	.file__licence[data-licence-name^="CC"] &::before {
-		content: $icon-tick;
+	.file__licence[data-licence-name^="CC"] & {
+		@include icon-indicator($icon-tick);
 	}
 }
 
@@ -127,11 +125,11 @@
 
 	font-family: $font-icons;
 
-	.file__original--original &::before {
-		content: $icon-tick;
+	.file__original--original & {
+		@include icon-indicator($icon-tick);
 	}
-	.file__original--not-original &::before {
-		content: $icon-info;
+	.file__original--not-original & {
+		@include icon-indicator($icon-info);
 	}
 }
 .file__original__text {
@@ -157,9 +155,7 @@
 	@extend %file-metadata__icon;
 
 	font-family: $font-icons;
-	&::before {
-		content: $icon-warning;
-	}
+	@include icon-indicator($icon-warning);
 }
 
 .file__incomplete__text {
