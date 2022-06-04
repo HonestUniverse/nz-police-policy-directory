@@ -1,0 +1,17 @@
+@mixin icon-indicator($icon) {
+	&::before {
+		content: $icon;
+	}
+
+	@if ($icon == $icon-tick) {
+		@include contrast-green;
+	} @else if ($icon == $icon-info) {
+		@include contrast-blue;
+	} @else if ($icon == $icon-warning) {
+		@include contrast-yellow;
+	} @else if ($icon == $icon-error) {
+		@include contrast-red;
+	} @else if ($icon == $icon-cross) {
+		@include contrast-red;
+	}
+}
