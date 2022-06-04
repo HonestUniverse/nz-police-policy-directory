@@ -35,7 +35,10 @@
 						"name": "None"
 					},
 					"original": true,
-					"incomplete": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only one section of this Police Manual chapter was requested. A list of other sections in this chapter is included at the top of the file."
+					},
 					"accessibility": {
 						"rating": "Undetermined",
 						"features": {
@@ -56,18 +59,12 @@
 							}
 						}
 					},
-					"documentType": "Policy",
-					"notices": [
-						{
-							"type": "warning",
-							"message": "Only one section of this Police Manual chapter was requested. A list of other sections in this chapter is included at the top of the file."
-						}
-					]
+					"documentType": "Policy"
 				}
 			],
 			"id": "u-vxijv"
 		}
 	],
-	"schemaVersion": "0.4.1",
+	"schemaVersion": "0.5.0",
 	"name": "Criminal procedure - Administration stage"
 }
