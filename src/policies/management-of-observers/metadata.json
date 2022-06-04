@@ -1,0 +1,65 @@
+{
+	"schemaVersion": "0.5.0",
+	"name": "Management of observers",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"name": "Version 4",
+			"duration": {
+				"start": "2020-05-07",
+				"on": [
+					"2020-08-13",
+					"2020-09-03"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Jo",
+						"id": "IR-01-20-23041",
+						"responseUrl": "https://fyi.org.nz/request/13502-policy-or-procedure-regarding-observations-of-police#incoming-51195",
+						"withholdings": "None"
+					},
+					"extracted": "2020-08-13",
+					"released": "2020-09-03",
+					"retrieved": "2022-06-04",
+					"url": "https://fyi.org.nz/request/13502-policy-or-procedure-regarding-observations-of-police#incoming-51195",
+					"fileUrl": "https://fyi.org.nz/request/13502/response/51195/attach/2/Jo%20IR%2001%2020%2023041%20Attachment%20Management%20of%20Observers%20Chapter.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "version-4/Jo IR 01 20 23041 Attachment Management of Observers Chapter.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 659474,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": {
+						"value": false
+					},
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": false
+							}
+						}
+					}
+				}
+			],
+			"id": "u-bkdtn"
+		}
+	]
+}
