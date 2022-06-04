@@ -5,9 +5,8 @@
 }
 
 .accessibility__summary__icon {
-	@extend %file-metadata__icon;
+	@extend %file-metadata__part;
 
-	font-family: $font-icons;
 	.accessibility__summary--good & {
 		@include icon-indicator($icon-tick);
 	}
@@ -51,9 +50,7 @@
 }
 
 .accessibility__feature-icon {
-	@extend %file-metadata__icon;
-
-	font-family: $font-icons;
+	@extend %file-metadata__part;
 
 	.accessibility__feature-item--true & {
 		@include icon-indicator($icon-tick);

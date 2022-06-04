@@ -17,37 +17,26 @@
 	}
 }
 
-.notice--info {
-	.notice__icon {
+.notice__icon {
+	margin-right: 1rem;
+
+	.notice--info & {
 		@include icon-indicator($icon-info);
 	}
-}
-.notice--warning {
-	.notice__icon {
+
+	.notice--warning & {
 		@include icon-indicator($icon-warning);
 	}
-}
-.notice--error {
-	.notice__icon {
+
+	.notice--error & {
 		@include icon-indicator($icon-error);
 	}
 }
 
-.notice__icon {
-	font-size: 18px;
-	width: 2em;
-	height: 2em;
-	margin-right: 1rem;
-
-	padding: 0.5em;
-	border-radius: 100%;
-	box-shadow: inset 0 0 0 1px currentColor;
-	&::before {
-		font-family: $font-icons;
-	}
+.notice__body {
+	// Icon height: 2x font size. Body line height: 1.2x font size. (2-1.2)/2 * font size
+	padding-top: rem(0.4 * 18px);
 }
-
-.notice__body {}
 
 .notice__title {
 	display: block;

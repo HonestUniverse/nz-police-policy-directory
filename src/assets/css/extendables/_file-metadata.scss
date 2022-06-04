@@ -1,5 +1,5 @@
 $file-metadata__part-margin: 0.5rem;
-$file-metadata__icon-padding: 0.5em;
+$file-metadata__icon-size: rem(18px);
 
 %file-metadata__section {
 	margin-top: 0.5rem;
@@ -17,14 +17,6 @@ $file-metadata__icon-padding: 0.5em;
 	&:last-child {
 		margin-right: 0;
 	}
-}
-
-%file-metadata__icon {
-	@extend %file-metadata__part;
-
-	padding: $file-metadata__icon-padding;
-	border-radius: 100%;
-	box-shadow: inset 0 0 0 1px currentColor;
 }
 
 %file-metadata--summary {
@@ -62,7 +54,7 @@ $file-metadata__icon-padding: 0.5em;
 	@include list-reset;
 
 	font-size: rem(18px);
-	margin: 0.5rem 0 0 calc(#{1em + $file-metadata__icon-padding * 2} + #{$file-metadata__part-margin});
+	margin: 0.5rem 0 0 calc(1em + #{$file-metadata__icon-size} + #{$file-metadata__part-margin});
 }
 
 %file-metadata__details__item {
@@ -101,7 +93,12 @@ $file-metadata__icon-padding: 0.5em;
 
 %file-metadata__detail__item__column {
 	width: 50%;
+	margin-left: 1rem;
+	&:first-child {
+		margin-left: 0;
+	}
 	@supports (display: grid) {
 		width: 100%;
+		margin-left: 0;
 	}
 }
