@@ -112,9 +112,11 @@
 			<summary class="content-report__section__summary"><%= sectionName %> (<%= sectionPolicies.length %>)</summary>
 				<div class="content-report__section__content">
 					<ul class="directory__list">
-						<% sectionPolicies.forEach((policy, idx) => { %>
+						<% sectionPolicies.forEach((policy) => {
+							const policyIndex = Object.values(directory).indexOf(policy);
+							const policyHref = Object.keys(directory)[policyIndex]; %>
 							<li class="directory__item">
-								<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+								<%- include('../components/policy-summary', { policy, key: policyHref }); %>
 							</li>
 						<% }) %>
 					</ul>
