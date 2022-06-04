@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?btenyn');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?btenyn#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?btenyn') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?btenyn') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?btenyn##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?abhjaf');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?abhjaf#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?abhjaf') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?abhjaf') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?abhjaf##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-plus {
+  &:before {
+    content: $icon-plus; 
+  }
+}
+.icon-minus {
+  &:before {
+    content: $icon-minus; 
+  }
+}
 .icon-search {
   &:before {
     content: $icon-search; 

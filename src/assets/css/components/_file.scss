@@ -38,6 +38,9 @@
 	}
 }
 
+////////////
+// HANDLE //
+////////////
 .file__handle {
 	grid-area: handle;
 }
@@ -57,23 +60,34 @@
 	grid-area: notices;
 }
 
+///////////////////
+// ACCESSIBILITY //
+///////////////////
 .file__accessibility {
 	margin-top: 1rem;
 	grid-area: accessibility;
 }
 
+// See _accessibility.scss
+
+//////////////
+// METADATA //
+//////////////
 .file__metadata {
-	margin-top: 1rem;
+	@extend %file-metadata__section;
 	grid-area: metadata;
 }
 
 .file__licence {}
 
 .file__licence__handle {
+	@extend %file-metadata;
 	@include font-base-18;
 }
 
 .file__licence__handle__icon {
+	@extend %file-metadata__icon;
+
 	font-family: $font-icons;
 	&::before {
 		content: $icon-info;
@@ -89,6 +103,10 @@
 	}
 }
 
+.file__licence__handle__text {
+	@extend %file-metadata__part;
+}
+
 .file__licence__handle__link {
 	@include link;
 }
@@ -98,11 +116,15 @@
 }
 
 .file__original {
-	margin-top: 0.3em;
+	@extend %file-metadata;
+
+	@extend %file-metadata__section;
 	@include font-base-18;
 }
 
 .file__original__icon {
+	@extend %file-metadata__icon;
+
 	font-family: $font-icons;
 
 	.file__original--original &::before {
@@ -112,10 +134,12 @@
 		content: $icon-info;
 	}
 }
-.file__original__text {}
+.file__original__text {
+	@extend %file-metadata__part;
+}
 
 .file__modifications {
-	margin-top: 0.3em;
+	@extend %file-metadata__section;
 }
 
 .file__modifications__item {
@@ -123,24 +147,38 @@
 }
 
 .file__incomplete {
-	margin-top: 0.3em;
+	@extend %file-metadata;
+
+	@extend %file-metadata__section;
 	@include font-base-18;
 }
 
 .file__incomplete__icon {
+	@extend %file-metadata__icon;
+
 	font-family: $font-icons;
 	&::before {
 		content: $icon-warning;
 	}
 }
 
-.file__incomplete__text {}
+.file__incomplete__text {
+	@extend %file-metadata__part;
+}
 
+////////////////
+// PROVENANCE //
+////////////////
 .file__provenance {
 	margin-top: 1rem;
 	grid-area: provenance;
 }
 
+// See _provenance.scss
+
+/////////////////////
+// ALTERNATE FILES //
+/////////////////////
 .file__alternate-files {
 	margin-top: 1rem;
 	border-top: 2px solid;
