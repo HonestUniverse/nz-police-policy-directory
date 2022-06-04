@@ -40,23 +40,45 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "Poor",
 						"features": {
 							"text-based": {
 								"value": true
 							},
 							"semantics": {
-								"value": "Undetermined"
-							},
-							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
 					"documentType": "Policy"
+				},
+				{
+					"path": "unnamed-version-1/South Junior Michael IR 01 22 11011 Response.pdf",
+					"type": "application/pdf",
+					"startingPage": 1,
+					"size": 669589,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"documentType": "OIA response letter"
 				}
 			],
 			"id": "u-vcvzh"

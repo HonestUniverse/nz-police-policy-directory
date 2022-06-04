@@ -38,7 +38,7 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "Bad",
 						"features": {
 							"text-based": {
 								"value": "Partial",
@@ -48,17 +48,42 @@
 								]
 							},
 							"semantics": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
 					"documentType": "Policy"
+				},
+				{
+					"path": "../../bulk-files/2021-05-21/Sebastian FYI 01 21 8810 Final response Redacted.pdf",
+					"type": "application/pdf",
+					"startingPage": 1,
+					"size": 1954365,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"documentType": "OIA response letter"
 				}
 			],
 			"id": "u-ivgui"
