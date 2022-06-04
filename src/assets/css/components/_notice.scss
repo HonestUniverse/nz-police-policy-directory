@@ -5,6 +5,8 @@
 	border-radius: 0.5rem;
 	box-shadow: inset 0 0 0 1px currentColor;
 
+	page-break-inside: avoid;
+
 	+ .notice {
 		margin-top: 1rem;
 	}
