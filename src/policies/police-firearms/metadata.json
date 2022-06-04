@@ -137,19 +137,16 @@
 						"note": "Only the \"When can firearms be carried?\" section was released in this document."
 					},
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "Poor",
 						"features": {
 							"text-based": {
 								"value": true
 							},
 							"semantics": {
-								"value": "Undetermined"
-							},
-							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
