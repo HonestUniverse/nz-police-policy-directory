@@ -18,8 +18,8 @@
 						"id": "16-8540-4",
 						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
 						"withholdings": {
-							"6(d)": "Implied",
-							"9(2)(a)": "Implied"
+							"6(d)": "Some information was withheld on page 2.",
+							"9(2)(a)": "Some information was withheld on page 2."
 						}
 					},
 					"released": "2017-01-04",
@@ -57,7 +57,7 @@
 					"notices": [
 						{
 							"type": "warning",
-							"message": "<p>Information withheld in this file has been been whited out, making it difficult to see where information has been withheld, and a specific section of the OIA was not specified regarding the reason why the information was withheld.</p>\n<p>The OIA request's response letter noted that:</p>\n<blockquote>The <i>Armoury Manual</i> has had details on page [<i>sic</i>] under the headings 'Contacting the Armoury' and 'Work Hours' redacted, so as not to identify individual Police members associated to it, the address, or telephone number of the Armoury. This has been done in the interests of safety of staff and the need to keep details of the Armoury's location, contact details, and working hours of staff out of public accessibility.</blockquote>"
+							"message": "<p>Information withheld in this file has been been whited out, making it difficult to see where information has been withheld, and no specific section of the OIA was specified regarding the reason why the information was withheld.</p>\n<p>The OIA request's response letter noted that:</p>\n<blockquote>The <i>Armoury Manual</i> has had details on page [<i>sic</i>] under the headings 'Contacting the Armoury' and 'Work Hours' redacted, so as not to identify individual Police members associated to it, the address, or telephone number of the Armoury. This has been done in the interests of safety of staff and the need to keep details of the Armoury's location, contact details, and working hours of staff out of public accessibility.</blockquote>"
 						}
 					],
 					"documentType": "Policy",
