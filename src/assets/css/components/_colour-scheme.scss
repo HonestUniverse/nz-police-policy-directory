@@ -15,7 +15,7 @@
 }
 
 .colour-scheme__face {
-	@include button($theme: "primary");
+	@include button($theme: "secondary");
 
 	&:focus-visible {
 		// Bring it in front of the menu to ensure its outline can display on top
@@ -56,7 +56,7 @@
 	position: absolute;
 	width: 100%;
 
-	@include contrast-primary;
+	@include contrast-secondary;
 	border: 1px solid;
 	@include use-var(border-color, --accent, currentColor);
 	border-top: 0;
@@ -66,9 +66,9 @@
 	cursor: pointer;
 	padding: 0.2em 0.5em;
 
-	@include contrast-primary;
+	@include contrast-secondary;
 	@include active {
-		@include contrast-primary--active;
+		@include contrast-secondary--active;
 	}
 	&:focus-visible {
 		// Bring it on top of its positioned subsequent sibling so its focus outline can show in full
