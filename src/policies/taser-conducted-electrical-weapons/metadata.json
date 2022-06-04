@@ -253,7 +253,7 @@
 			"id": "u-dcstd"
 		}
 	],
-	"schemaVersion": "0.4.1",
+	"schemaVersion": "0.5.0",
 	"name": "TASER (Conducted Electrical Weapons)",
 	"previousNames": [
 		"TASER (Electronic Control Devices)"

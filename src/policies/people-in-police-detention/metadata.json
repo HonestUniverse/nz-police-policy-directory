@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.0",
+	"schemaVersion": "0.5.0",
 	"name": "People in Police Detention",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -36,7 +36,10 @@
 						"name": "None"
 					},
 					"original": true,
-					"incomplete": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only an excerpt from the \"Deaths in custody\" section was released in this document."
+					},
 					"accessibility": {
 						"rating": "Poor",
 						"features": {
@@ -50,13 +53,7 @@
 								"value": true
 							}
 						}
-					},
-					"notices": [
-						{
-							"type": "warning",
-							"message": "Only an excerpt from the \"Deaths in custody\" section was released in this document."
-						}
-					]
+					}
 				},
 				{
 					"path": "../../bulk-files/2020-11-25/Dennis Olivia IR 01 20 28454 final response.pdf",
