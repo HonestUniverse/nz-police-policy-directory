@@ -57,6 +57,31 @@
 							}
 						}
 					}
+				},
+				{
+					"path": "unnamed-version-2/Sarah FYI IR 01 22 5995 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 1562790,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": false
+							}
+						}
+					}
 				}
 			],
 			"id": "u-petgf"
@@ -212,13 +237,10 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "None",
 						"features": {
 							"text-based": {
-								"value": false,
-								"notes": [
-									"This entire document is images of text."
-								]
+								"value": false
 							},
 							"semantics": {
 								"value": false
@@ -227,11 +249,36 @@
 								"value": false
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
 					"documentType": "Policy"
+				},
+				{
+					"path": "version-11-0/drew laaura 17 6011 signed reply and material for release.pdf",
+					"type": "application/pdf",
+					"startingPage": 1,
+					"size": 18761843,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"documentType": "OIA response letter"
 				}
 			],
 			"id": "u-sgwpq"
