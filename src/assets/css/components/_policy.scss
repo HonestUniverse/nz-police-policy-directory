@@ -14,6 +14,12 @@
 
 .policy__version {}
 
+.policy__version__head {
+	margin-bottom: 2rem;
+}
+
+.policy__version__body {}
+
 .policy__version--disclosure {
 	.policy__version__name {
 		cursor: pointer;
@@ -28,11 +34,14 @@
 }
 
 .policy__version__name {
+	margin: 0 0 0.5rem;
+
 	@include font-heading-32b;
 }
 
 .policy__version__link {
+	@include font-base-16;
 	@include link;
 }
 
-
+.policy__version__details {}

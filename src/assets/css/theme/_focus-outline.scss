@@ -1,0 +1,8 @@
+@mixin focus-outline {
+	outline-style: solid;
+	outline-width: rem(2px);
+	outline-offset: rem(-2px);
+	@supports (outline-style: auto) {
+		outline-style: auto;
+	}
+}
