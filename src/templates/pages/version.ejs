@@ -28,9 +28,13 @@
 <% } %>
 
 <article class="policy__version">
-	<h2 class="policy__version__name"><%= include('../helpers/version-name', { version }); %></h2>
+	<div class="policy__version__head">
+		<h2 class="policy__version__name"><%= include('../helpers/version-name', { version }); %></h2>
+	</div>
 
-	<%- include('../components/version', { version, policy }); %>
+	<div class="policy__version__body">
+		<%- include('../components/version', { version, policy }); %>
+	</div>
 </article>
 
 <%- include('../layout/foot'); %>
