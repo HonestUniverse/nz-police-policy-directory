@@ -7,7 +7,7 @@
 %>
 
 <%
-	const notices = file.notices?.concat() || [];
+	const notices = file.notices?.concat() ?? [];
 
 	if (file.startingPage > 1) {
 		const message = `${(() => {
@@ -40,7 +40,7 @@
 		<% } %>
 	</div>
 
-	<% if (notices.length > 1) { %>
+	<% if (notices.length > 0) { %>
 		<div class="file__notices">
 			<% for (const notice of notices) { %>
 				<%- include('notice', { notice }); %>
