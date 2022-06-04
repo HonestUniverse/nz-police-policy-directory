@@ -15,13 +15,13 @@
 		for (const version of policy.versions) {
 			for (const file of version.files) {
 				let fileNeedsOCR = false;
-				if (file.accessibility['text-based']?.value === false) {
+				if (file.accessibility.features['text-based']?.value === false) {
 					fileNeedsOCR = true;
 				}
 
 				if (fileNeedsOCR && file.alternateFiles) {
 					for (const altFile of file.alternateFiles) {
-						if (altFile.accessibility['text-based']?.value === true) {
+						if (altFile.accessibility.features['text-based']?.value === true) {
 							fileNeedsOCR = false;
 						}
 					}
@@ -54,7 +54,7 @@
 		}
 
 		return false;
-		}
+	}
 %>
 
 <%- include('../layout/head', { title: 'Content Report' }); %>

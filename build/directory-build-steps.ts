@@ -62,7 +62,7 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-directory'],
+				chunks: ['priority', 'main', 'enhancements', 'style'],
 			}),
 		];
 	},
