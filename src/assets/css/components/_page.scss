@@ -40,6 +40,8 @@
 	@include button($icon: true, $theme: "primary");
 
 	margin-right: 1rem;
+
+	@include print-hide;
 }
 
 .page__head__back-link__icon {
