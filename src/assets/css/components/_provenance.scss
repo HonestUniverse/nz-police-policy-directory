@@ -45,9 +45,7 @@ summary.provenance__withholdings__summary {
 }
 
 .provenance__withholdings__summary-icon {
-	@extend %file-metadata__icon;
-
-	font-family: $font-icons;
+	@extend %file-metadata__part;
 
 	.provenance__withholdings--pass & {
 		@include icon-indicator($icon-tick);
@@ -74,9 +72,10 @@ summary.provenance__withholdings__summary {
 
 .provenance__withholding {
 	@extend %file-metadata__details__item;
+	align-items: flex-start;
 
 	@supports (display: grid) {
-		grid-template-columns: 10ch 1fr;
+		grid-template-columns: 9ch 1fr;
 	}
 }
 
@@ -91,5 +90,5 @@ summary.provenance__withholdings__summary {
 }
 
 .provenance__withholding__value {
-	margin-left: 1rem;
+	@extend %file-metadata__detail__item__column;
 }
