@@ -150,7 +150,13 @@
 							}
 						}
 					},
-					"documentType": "Policy"
+					"documentType": "Policy",
+					"notices": [
+						{
+							"type": "warning",
+							"message": "Only the \"When can firearms be carried?\" section was released in this document."
+						}
+					]
 				}
 			],
 			"id": "u-sbntv"

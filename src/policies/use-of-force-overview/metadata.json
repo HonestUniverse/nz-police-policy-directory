@@ -138,7 +138,6 @@
 					"notices": [
 						{
 							"type": "warning",
-							"title": "Incomplete File",
 							"message": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
 						}
 					],
@@ -176,7 +175,6 @@
 					"notices": [
 						{
 							"type": "warning",
-							"title": "Incomplete File",
 							"message": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
 						}
 					],
