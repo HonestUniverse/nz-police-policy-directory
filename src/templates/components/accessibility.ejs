@@ -44,7 +44,7 @@
 							<span class="accessibility__feature-icon" aria-hidden="true"></span>
 						<% } %>
 
-						<%= include('../helpers/dictionary', { key: featureName, case: 'sentence' }); %>
+						<span class="accessibility__feature-name-text"><%= include('../helpers/dictionary', { key: featureName, case: 'sentence' }); %></span>
 					</span>
 					<span class="accessibility__feature-value">
 						<% if (typeof feature.value === 'boolean') { %>

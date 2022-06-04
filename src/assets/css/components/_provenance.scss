@@ -12,7 +12,7 @@
 
 %provenance__meta {
 	display: block;
-	margin-top: 0.3em;
+	@extend %file-metadata__section;
 	&:first-child {
 		margin-top: 0;
 	}
@@ -37,17 +37,15 @@
 }
 
 .provenance__withholdings__summary {
+	@extend %file-metadata;
 	@include font-base-18;
 }
 summary.provenance__withholdings__summary {
-	@supports (selector(details)) {
-		cursor: pointer;
-	}
+	@extend %file-metadata--summary;
 }
 
 .provenance__withholdings__summary-icon {
-	display: inline-block;
-	vertical-align: middle;
+	@extend %file-metadata__icon;
 
 	font-family: $font-icons;
 
@@ -63,21 +61,32 @@ summary.provenance__withholdings__summary {
 }
 
 .provenance__withholdings__summary-text {
-	display: inline-block;
-	vertical-align: middle;
+	@extend %file-metadata__part;
 }
 
-.provenance__withholdings__list {}
+.provenance__withholdings__summary-expand-icon {
+	@extend %file-metadata__expand-icon;
+}
+
+.provenance__withholdings__list {
+	@extend %file-metadata__details;
+}
 
 .provenance__withholding {
-	display: flex;
+	@extend %file-metadata__details__item;
+
+	@supports(display: grid) {
+		grid-template-columns: 10ch 1fr;
+	}
 }
 
 .provenance__withholding__type {
+	@extend %file-metadata__detail__item__column;
 	white-space: nowrap;
 }
 
 .provenance__withholding__link {
+	@extend %file-metadata__detail__item__column;
 	@include link;
 }
 
