@@ -278,8 +278,8 @@ function tokenise(str: string): string[] {
 	normalisedStr = stripAccents(normalisedStr);
 	// Convert all whitespace to ' '
 	normalisedStr = normalisedStr.replace(/\s+/g, ' ');
-	// Remove all characters that aren't letters or spaces
-	normalisedStr = normalisedStr.replace(/[^a-z ]/g, '');
+	// Remove all characters that aren't letters, numbers, or spaces
+	normalisedStr = normalisedStr.replace(/[^a-z0-9 ]/g, '');
 
 	const tokens = normalisedStr.split(' ');
 	return tokens;
