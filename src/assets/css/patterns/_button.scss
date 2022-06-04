@@ -13,6 +13,16 @@
 		@include use-var(border-color, --accent, currentColor);
 
 		@include transition("color, background-color");
+	} @else if ($theme == "secondary") {
+		@include contrast-secondary;
+		@include active {
+			@include contrast-secondary--active;
+		}
+
+		border: 1px solid;
+		@include use-var(border-color, --accent, currentColor);
+
+		@include transition("color, background-color");
 	} @else {
 		@error "Unrecognised button theme option #{$theme}";
 	}

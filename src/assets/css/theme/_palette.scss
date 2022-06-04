@@ -3,16 +3,16 @@
 ////////////////////////////////////
 
 $green--pale: #ccf0cc !default;
-$green--dim: #3d4e3d !default;
+$green--dim: #285628 !default;
 
 $blue--pale: #c8dbfd !default;
-$blue--dim: #25254e !default;
+$blue--dim: #2e2e6a !default;
 
-$yellow--pale: #ffffe0 !default;
-$yellow--dim: #474429 !default;
+$yellow--pale: #ffffbd !default;
+$yellow--dim: #4c3e06 !default;
 
 $red--pale: #ffd9df !default;
-$red--dim: #411919 !default;
+$red--dim: #591717 !default;
 
 $blue--vivid: #0000ff !default;
 $blue--vivid-bright: #8888ff !default;
@@ -26,14 +26,16 @@ $black: #000000;
 
 $grey--offwhite: #eeeeee;
 $grey--light: #d0d0d0;
-$grey--dark: #333333;
+$grey--dark: #222222;
 $grey--darker: #111111;
 
-$school-bus-yellow: #ffda22;
+// $school-bus-yellow: #ffda22;
 
+// Used in light mode
 $middle-blue: #78cdd7;
 $cadet-blue: #44a1a0;
 
+// Used in dark mode
 $midnight-green-eagle-green: #0d5c63;
 $teal: #247b7b;
 
@@ -61,6 +63,10 @@ $col-primary--active--light: $black;
 $bg-secondary--light: $white;
 $col-secondary--light: $black;
 
+// AAA 18.1
+$bg-secondary--active--light: $grey--offwhite;
+$col-secondary--active--light: $black;
+
 // AAA 11.51
 $bg-brand--light: $middle-blue;
 $col-brand--light: $black;
@@ -80,7 +86,7 @@ $col-green--light: $black;
 $bg-blue--light: $blue--pale;
 $col-blue--light: $black;
 
-// AAA 20.63
+// AAA 20.29
 $bg-yellow--light: $yellow--pale;
 $col-yellow--light: $black;
 
@@ -98,6 +104,9 @@ $col-red--light: $black;
 
 	--bg-secondary: #{$bg-secondary--light};
 	--col-secondary: #{$col-secondary--light};
+
+	--bg-secondary--active: #{$bg-secondary--active--light};
+	--col-secondary--active: #{$col-secondary--active--light};
 
 	--bg-brand: #{$bg-brand--light};
 	--col-brand: #{$col-brand--light};
@@ -142,13 +151,17 @@ $accent-base--dark: $teal;
 $bg-primary--dark: $grey--darker;
 $col-primary--dark: $white;
 
-// AAA 12.63
+// AAA 15.91
 $bg-primary--active--dark: $grey--dark;
 $col-primary--active--dark: $white;
 
-// AAA 12.63
+// AAA 15.91
 $bg-secondary--dark: $grey--dark;
 $col-secondary--dark: $white;
+
+// AAA 18.88
+$bg-secondary--active--dark: $grey--darker;
+$col-secondary--active--dark: $white;
 
 // AAA 7.7
 $bg-brand--dark: $midnight-green-eagle-green;
@@ -161,19 +174,19 @@ $col-dark--dark: $white;
 $accent-dark--dark: $teal;
 $link-dark--dark: $blue--vivid-bright;
 
-// AAA 8.92
+// AAA 8.56
 $bg-green--dark: $green--dim;
 $col-green--dark: $white;
 
-// AAA 14.45
+// AAA 12.24
 $bg-blue--dark: $blue--dim;
 $col-blue--dark: $white;
 
-// AAA 9.87
+// AAA 10.51
 $bg-yellow--dark: $yellow--dim;
 $col-yellow--dark: $white;
 
-// AAA 15.24
+// AAA 13.46
 $bg-red--dark: $red--dim;
 $col-red--dark: $white;
 
@@ -187,6 +200,9 @@ $col-red--dark: $white;
 
 	--bg-secondary: #{$bg-secondary--dark};
 	--col-secondary: #{$col-secondary--dark};
+
+	--bg-secondary--active: #{$bg-secondary--active--dark};
+	--col-secondary--active: #{$col-secondary--active--dark};
 
 	--bg-brand: #{$bg-brand--dark};
 	--col-brand: #{$col-brand--dark};
@@ -256,6 +272,15 @@ $col-red--dark: $white;
 @mixin contrast-secondary {
 	@include use-var(background-color, --bg-secondary, $bg-secondary--light);
 	@include use-var(color, --col-secondary, $col-secondary--light);
+
+	--accent: var(--accent-base, #{$accent-base--light});
+	--link: var(--link-base, #{$link-base--light});
+}
+
+/// An "active" variant of the secondary background/colour pair
+@mixin contrast-secondary--active {
+	@include use-var(background-color, --bg-secondary--active, $bg-secondary--active--light);
+	@include use-var(color, --col-secondary--active, $col-secondary--active--light);
 
 	--accent: var(--accent-base, #{$accent-base--light});
 	--link: var(--link-base, #{$link-base--light});

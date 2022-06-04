@@ -2,21 +2,23 @@
 	@include palette-light;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
+@media not print {
+	@media (prefers-color-scheme: dark) {
+		:root {
+			@include palette-dark;
+		}
+	}
+
+	.light {
+		@include palette-light;
+	}
+	.dark {
 		@include palette-dark;
 	}
-}
-
-.light {
-	@include palette-light;
-}
-.dark {
-	@include palette-dark;
-}
-.colour-scheme--default {
-	@include palette-light;
-	@media (prefers-color-scheme: dark) {
-		@include palette-dark;
+	.colour-scheme--default {
+		@include palette-light;
+		@media (prefers-color-scheme: dark) {
+			@include palette-dark;
+		}
 	}
 }
