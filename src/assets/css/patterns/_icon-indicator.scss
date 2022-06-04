@@ -9,6 +9,11 @@
 		@include contrast-blue;
 	} @else if ($icon == $icon-warning) {
 		@include contrast-yellow;
+		&::before {
+			// Warning icon doesn't look centred, so bump it up a little
+			position: relative;
+			top: -0.1em;
+		}
 	} @else if ($icon == $icon-error) {
 		@include contrast-red;
 	} @else if ($icon == $icon-cross) {
