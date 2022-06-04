@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.1",
+	"schemaVersion": "0.5.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -114,7 +114,10 @@
 						"name": "None"
 					},
 					"original": true,
-					"incomplete": true,
+					"incomplete": {
+						"value": true,
+						"note": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
+					},
 					"accessibility": {
 						"rating": "Undetermined",
 						"features": {
@@ -135,12 +138,6 @@
 							}
 						}
 					},
-					"notices": [
-						{
-							"type": "warning",
-							"message": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
-						}
-					],
 					"documentType": "Policy"
 				},
 				{
@@ -151,7 +148,10 @@
 						"name": "None"
 					},
 					"original": true,
-					"incomplete": true,
+					"incomplete": {
+						"value": true,
+						"note": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
+					},
 					"accessibility": {
 						"rating": "None",
 						"features": {
@@ -172,12 +172,6 @@
 							}
 						}
 					},
-					"notices": [
-						{
-							"type": "warning",
-							"message": "This file only contains the \"Reporting use of force/tactical options use\" section of the \"Use of force\" policy."
-						}
-					],
 					"documentType": "Policy"
 				}
 			],

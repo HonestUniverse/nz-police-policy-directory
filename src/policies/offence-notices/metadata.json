@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "0.4.1",
+	"schemaVersion": "0.5.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -35,7 +35,10 @@
 						"name": "None"
 					},
 					"original": true,
-					"incomplete": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only pages 15 and 16 of 21 are included."
+					},
 					"accessibility": {
 						"rating": "Poor",
 						"features": {
@@ -49,13 +52,7 @@
 								"value": true
 							}
 						}
-					},
-					"notices": [
-						{
-							"type": "warning",
-							"message": "Only pages 15 and 16 of 21 are included."
-						}
-					]
+					}
 				},
 				{
 					"path": "unnamed-version-1/C Cody IR 01 22 142 Response.pdf",

@@ -82,7 +82,10 @@
 						}
 					],
 					"original": true,
-					"incomplete": true,
+					"incomplete": {
+						"value": true,
+						"note": "This file isn't really incomplete, but let's pretend it is"
+					},
 					"accessibility": {
 						"rating": "Undetermined",
 						"features": {
@@ -344,7 +347,7 @@
 			"message": "This is a test error notice"
 		}
 	],
-	"schemaVersion": "0.4.1",
+	"schemaVersion": "0.5.0",
 	"name": "Test Policy",
 	"previousNames": [
 		"Previous Test Policy"
