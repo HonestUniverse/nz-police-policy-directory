@@ -10,7 +10,11 @@
 	for (const key of keys) {
 		policies.push(directory[key]);
 	}
+%>
 
+<%- include('../layout/head', { title: 'Content Report' }); %>
+
+<%
 	function needsOCR(policy) {
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -35,7 +39,26 @@
 
 		return false;
 	}
+%>
 
+<details class="content-report__section">
+	<summary class="content-report__section__summary">Needs OCR</summary>
+
+	<div class="content-report__section__content">
+		<ul class="directory__list">
+			<% policies.forEach((policy, idx) => { %>
+				<% if (needsOCR(policy)) { %>
+
+				<li class="directory__item">
+					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+				</li>
+				<% } %>
+			<% }) %>
+		</ul>
+	</div>
+</details>
+
+<%
 	function needsA11yRating(policy) {
 		for (const version of policy.versions) {
 			for (const file of version.files) {
@@ -57,15 +80,13 @@
 	}
 %>
 
-<%- include('../layout/head', { title: 'Content Report' }); %>
-
 <details class="content-report__section">
-	<summary class="content-report__section__summary">Needs OCR</summary>
+	<summary class="content-report__section__summary">Needs Accessibility Rating</summary>
 
 	<div class="content-report__section__content">
 		<ul class="directory__list">
 			<% policies.forEach((policy, idx) => { %>
-				<% if (needsOCR(policy)) { %>
+				<% if (needsA11yRating(policy)) { %>
 
 				<li class="directory__item">
 					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
@@ -76,13 +97,69 @@
 	</div>
 </details>
 
+<%
+	function needsWithholdingsReview(policy) {
+		for (const version of policy.versions) {
+			for (const provenance of version.provenance) {
+				if (provenance.withholdings === 'Undetermined' || provenance.oiaRequest?.withholdings === 'Undetermined') {
+					return true;
+				}
+			}
+
+			for (const file of version.files) {
+				if (file.provenance) {
+					for (const provenance of file.provenance) {
+						if (provenance.withholdings === 'Undetermined' || provenance.oiaRequest?.withholdings === 'Undetermined') {
+							return true;
+						}
+					}
+				}
+			}
+		}
+
+		return false;
+	}
+%>
+
 <details class="content-report__section">
-	<summary class="content-report__section__summary">Needs Accessibility Rating</summary>
+	<summary class="content-report__section__summary">Needs Withholdings Review</summary>
 
 	<div class="content-report__section__content">
 		<ul class="directory__list">
 			<% policies.forEach((policy, idx) => { %>
-				<% if (needsA11yRating(policy)) { %>
+				<% if (needsWithholdingsReview(policy)) { %>
+
+				<li class="directory__item">
+					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+				</li>
+				<% } %>
+			<% }) %>
+		</ul>
+	</div>
+</details>
+
+<%
+	function mayHaveSecondaryFiles(policy) {
+		// Files with a startingPage that isn't 1, which are the only file, were likely released with an OIA response letter in the same file
+		for (const version of policy.versions) {
+			if (version.files.length === 1) {
+				if ('startingPage' in version.files[0] && version.files[0].startingPage !== 1) {
+					return true;
+				}
+			}
+		}
+
+		return false;
+	}
+%>
+
+<details class="content-report__section">
+	<summary class="content-report__section__summary">May have secondary files</summary>
+
+	<div class="content-report__section__content">
+		<ul class="directory__list">
+			<% policies.forEach((policy, idx) => { %>
+				<% if (mayHaveSecondaryFiles(policy)) { %>
 
 				<li class="directory__item">
 					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
