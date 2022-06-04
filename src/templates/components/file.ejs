@@ -30,6 +30,13 @@
 			message,
 		});
 	}
+
+	if (file.incomplete?.value === true) {
+		notices.push({
+			type: 'warning',
+			message: file.incomplete.note,
+		});
+	}
 %>
 
 <div class="file">
