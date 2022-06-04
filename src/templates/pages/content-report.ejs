@@ -10,191 +10,117 @@
 	for (const key of keys) {
 		policies.push(directory[key]);
 	}
+
+	const sections = {
+		'Needs OCR': (policy) => {
+			for (const version of policy.versions) {
+				for (const file of version.files) {
+					let fileNeedsOCR = false;
+					if (file.accessibility.features['text-based']?.value === false) {
+						fileNeedsOCR = true;
+					}
+
+					if (fileNeedsOCR && file.alternateFiles) {
+						for (const altFile of file.alternateFiles) {
+							if (altFile.accessibility.features['text-based']?.value === true) {
+								fileNeedsOCR = false;
+							}
+						}
+					}
+
+					if (fileNeedsOCR) {
+						return true;
+					}
+				}
+			}
+
+			return false;
+		},
+
+		'Needs accessibility rating': (policy) => {
+			for (const version of policy.versions) {
+				for (const file of version.files) {
+					if (file.accessibility.rating === 'Undetermined') {
+						return true;
+					}
+
+					if (file.alternateFiles) {
+						for (const altFile of file.alternateFiles) {
+							if (altFile.accessibility.rating === 'Undetermined') {
+								return true;
+							}
+						}
+					}
+				}
+			}
+
+			return false;
+		},
+
+		'Needs withholdings review': (policy) => {
+			for (const version of policy.versions) {
+				for (const provenance of version.provenance) {
+					if (provenance.withholdings === 'Undetermined' || provenance.oiaRequest?.withholdings === 'Undetermined') {
+						return true;
+					}
+				}
+
+				for (const file of version.files) {
+					if (file.provenance) {
+						for (const provenance of file.provenance) {
+							if (provenance.withholdings === 'Undetermined' || provenance.oiaRequest?.withholdings === 'Undetermined') {
+								return true;
+							}
+						}
+					}
+				}
+			}
+
+			return false;
+		},
+
+		'Has undetermined type': (policy) => {
+			if (policy.type === 'Undetermined') {
+				return true;
+			} else {
+				return false;
+			}
+		},
+
+		'May have secondary files': (policy) => {
+			// Files with a startingPage that isn't 1, which are the only file, were likely released with an OIA response letter in the same file
+			for (const version of policy.versions) {
+				if (version.files.length === 1) {
+					if ('startingPage' in version.files[0] && version.files[0].startingPage !== 1) {
+						return true;
+					}
+				}
+			}
+
+			return false;
+		},
+	};
 %>
 
 <%- include('../layout/head', { title: 'Content Report' }); %>
 
-<%
-	function needsOCR(policy) {
-		for (const version of policy.versions) {
-			for (const file of version.files) {
-				let fileNeedsOCR = false;
-				if (file.accessibility.features['text-based']?.value === false) {
-					fileNeedsOCR = true;
-				}
+<% for (const [sectionName, filterFn] of Object.entries(sections)) { %>
+	<details class="content-report__section">
+		<summary class="content-report__section__summary"><%= sectionName %></summary>
 
-				if (fileNeedsOCR && file.alternateFiles) {
-					for (const altFile of file.alternateFiles) {
-						if (altFile.accessibility.features['text-based']?.value === true) {
-							fileNeedsOCR = false;
-						}
-					}
-				}
+		<div class="content-report__section__content">
+			<ul class="directory__list">
+				<% policies.forEach((policy, idx) => { %>
+					<% if (filterFn(policy)) { %>
 
-				if (fileNeedsOCR) {
-					return true;
-				}
-			}
-		}
-
-		return false;
-	}
-%>
-
-<details class="content-report__section">
-	<summary class="content-report__section__summary">Needs OCR</summary>
-
-	<div class="content-report__section__content">
-		<ul class="directory__list">
-			<% policies.forEach((policy, idx) => { %>
-				<% if (needsOCR(policy)) { %>
-
-				<li class="directory__item">
-					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-				</li>
-				<% } %>
-			<% }) %>
-		</ul>
-	</div>
-</details>
-
-<%
-	function needsA11yRating(policy) {
-		for (const version of policy.versions) {
-			for (const file of version.files) {
-				if (file.accessibility.rating === 'Undetermined') {
-					return true;
-				}
-
-				if (file.alternateFiles) {
-					for (const altFile of file.alternateFiles) {
-						if (altFile.accessibility.rating === 'Undetermined') {
-							return true;
-						}
-					}
-				}
-			}
-		}
-
-		return false;
-	}
-%>
-
-<details class="content-report__section">
-	<summary class="content-report__section__summary">Needs Accessibility Rating</summary>
-
-	<div class="content-report__section__content">
-		<ul class="directory__list">
-			<% policies.forEach((policy, idx) => { %>
-				<% if (needsA11yRating(policy)) { %>
-
-				<li class="directory__item">
-					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-				</li>
-				<% } %>
-			<% }) %>
-		</ul>
-	</div>
-</details>
-
-<%
-	function needsWithholdingsReview(policy) {
-		for (const version of policy.versions) {
-			for (const provenance of version.provenance) {
-				if (provenance.withholdings === 'Undetermined' || provenance.oiaRequest?.withholdings === 'Undetermined') {
-					return true;
-				}
-			}
-
-			for (const file of version.files) {
-				if (file.provenance) {
-					for (const provenance of file.provenance) {
-						if (provenance.withholdings === 'Undetermined' || provenance.oiaRequest?.withholdings === 'Undetermined') {
-							return true;
-						}
-					}
-				}
-			}
-		}
-
-		return false;
-	}
-%>
-
-<details class="content-report__section">
-	<summary class="content-report__section__summary">Needs Withholdings Review</summary>
-
-	<div class="content-report__section__content">
-		<ul class="directory__list">
-			<% policies.forEach((policy, idx) => { %>
-				<% if (needsWithholdingsReview(policy)) { %>
-
-				<li class="directory__item">
-					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-				</li>
-				<% } %>
-			<% }) %>
-		</ul>
-	</div>
-</details>
-
-<%
-	function hasUndeterminedType(policy) {
-		if (policy.type === 'Undetermined') {
-			return true;
-		} else {
-			return false;
-		}
-	}
-%>
-
-<details class="content-report__section">
-	<summary class="content-report__section__summary">Has undetermined type</summary>
-
-	<div class="content-report__section__content">
-		<ul class="directory__list">
-			<% policies.forEach((policy, idx) => { %>
-				<% if (hasUndeterminedType(policy)) { %>
-
-				<li class="directory__item">
-					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-				</li>
-				<% } %>
-			<% }) %>
-		</ul>
-	</div>
-</details>
-
-<%
-	function mayHaveSecondaryFiles(policy) {
-		// Files with a startingPage that isn't 1, which are the only file, were likely released with an OIA response letter in the same file
-		for (const version of policy.versions) {
-			if (version.files.length === 1) {
-				if ('startingPage' in version.files[0] && version.files[0].startingPage !== 1) {
-					return true;
-				}
-			}
-		}
-
-		return false;
-	}
-%>
-
-<details class="content-report__section">
-	<summary class="content-report__section__summary">May have secondary files</summary>
-
-	<div class="content-report__section__content">
-		<ul class="directory__list">
-			<% policies.forEach((policy, idx) => { %>
-				<% if (mayHaveSecondaryFiles(policy)) { %>
-
-				<li class="directory__item">
-					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-				</li>
-				<% } %>
-			<% }) %>
-		</ul>
-	</div>
-</details>
+					<li class="directory__item">
+						<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+					</li>
+					<% } %>
+				<% }) %>
+			</ul>
+		</div>
+	</details>
+<% } %>
 
 <%- include('../layout/foot'); %>
