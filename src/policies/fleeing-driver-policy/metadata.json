@@ -97,19 +97,16 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "Poor",
 						"features": {
 							"text-based": {
 								"value": true
 							},
 							"semantics": {
-								"value": "Undetermined"
-							},
-							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -158,19 +155,16 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Undetermined",
+						"rating": "Poor",
 						"features": {
 							"text-based": {
 								"value": true
 							},
 							"semantics": {
-								"value": "Undetermined"
-							},
-							"alt text": {
-								"value": "Undetermined"
+								"value": false
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -221,11 +215,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -273,11 +264,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -325,11 +313,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -377,11 +362,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -429,11 +411,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -481,11 +460,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -533,11 +509,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -585,11 +558,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -637,11 +607,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -689,11 +656,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
@@ -741,11 +705,8 @@
 							"semantics": {
 								"value": "Undetermined"
 							},
-							"alt text": {
-								"value": "Undetermined"
-							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
