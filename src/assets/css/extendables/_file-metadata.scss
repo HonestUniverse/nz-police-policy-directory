@@ -52,7 +52,7 @@ $file-metadata__icon-padding: 0.5em;
 			font-family: $font-icons;
 			content: $icon-plus;
 		}
-		details[open] &::after {
+		details[open] > summary &::after {
 			content: $icon-minus;
 		}
 	}
