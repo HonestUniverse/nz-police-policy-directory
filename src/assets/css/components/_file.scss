@@ -87,9 +87,8 @@
 }
 
 .file__licence__handle__icon {
-	@extend %file-metadata__icon;
+	@extend %file-metadata__part;
 
-	font-family: $font-icons;
 	@include icon-indicator($icon-info);
 
 	.file__licence[data-licence-name="None"] & {
@@ -122,9 +121,7 @@
 }
 
 .file__original__icon {
-	@extend %file-metadata__icon;
-
-	font-family: $font-icons;
+	@extend %file-metadata__part;
 
 	.file__original--original & {
 		@include icon-indicator($icon-tick);
@@ -153,9 +150,8 @@
 }
 
 .file__incomplete__icon {
-	@extend %file-metadata__icon;
+	@extend %file-metadata__part;
 
-	font-family: $font-icons;
 	@include icon-indicator($icon-warning);
 }
 
