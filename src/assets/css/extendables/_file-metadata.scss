@@ -1,0 +1,98 @@
+%file-metadata__section {
+	margin-top: 0.5rem;
+}
+
+%file-metadata {
+	@include font-base-18;
+
+	display: flex;
+	align-items: center;
+}
+
+%file-metadata__part {
+	margin-right: 0.5rem;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+%file-metadata__icon {
+	@extend %file-metadata__part;
+}
+
+%file-metadata--summary {
+	@extend %file-metadata;
+	@supports (selector(details)) {
+		cursor: pointer;
+
+		// Overriding `display: list-item;` removes `::marker`
+		display: flex;
+		align-items: center;
+	}
+}
+
+%file-metadata__expand-icon {
+	@supports (selector(details)) {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 1.2em;
+		height: 1.2em;
+
+		&::after {
+			font-size: 0.7em;
+			font-family: $font-icons;
+			content: $icon-plus;
+		}
+		details[open] &::after {
+			content: $icon-minus;
+		}
+	}
+}
+
+%file-metadata__details {
+	@include list-reset;
+
+	font-size: rem(18px);
+	margin: 0.5rem 0 0 calc(1em + 0.5rem);
+}
+
+%file-metadata__details__item {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+
+		top: 100%;
+		left: 0;
+		right: 0;
+		height: 1px;
+
+		@include use-var(background-color, --accent, currentColor);
+		opacity: 0.5;
+	}
+	&:last-child {
+		&::after {
+			display: none;
+		}
+	}
+	padding: 0.4rem 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	@supports(display: grid) {
+		display: grid;
+		grid-template-columns: 20ch 1fr;
+		grid-column-gap: 1rem;
+		grid-row-gap: 0.5rem;
+	}
+}
+
+%file-metadata__detail__item__column {
+	width: 50%;
+	@supports(display: grid) {
+		width: 100%;
+	}
+}
