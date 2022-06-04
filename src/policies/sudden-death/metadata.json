@@ -50,7 +50,13 @@
 								"value": true
 							}
 						}
-					}
+					},
+					"notices": [
+						{
+							"type": "warning",
+							"message": "Only an excerpt from the \"Deaths of prisoners in Police custody\" section was released in this document."
+						}
+					]
 				},
 				{
 					"path": "../../bulk-files/2020-11-25/Dennis Olivia IR 01 20 28454 final response.pdf",

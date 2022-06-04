@@ -52,7 +52,7 @@
 					},
 					"notices": [
 						{
-							"type": "info",
+							"type": "warning",
 							"message": "Only pages 15 and 16 of 21 are included."
 						}
 					]
@@ -67,7 +67,6 @@
 						"name": "None"
 					},
 					"original": true,
-					"incomplete": true,
 					"accessibility": {
 						"rating": "Poor",
 						"features": {
