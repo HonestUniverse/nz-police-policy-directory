@@ -29,7 +29,12 @@ export type File = {
 	provenance?: Provenance[],
 	licence: Licence,
 	original: boolean,
-	incomplete?: boolean,
+	incomplete?: {
+		value: true,
+		note: string
+	} | {
+		value: false,
+	},
 	modifications?: string[],
 	accessibility: Accessibility,
 	notices?: Notice[],
