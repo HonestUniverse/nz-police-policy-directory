@@ -104,23 +104,25 @@
 
 <%- include('../layout/head', { title: 'Content Report' }); %>
 
-<% for (const [sectionName, filterFn] of Object.entries(sections)) { %>
-	<details class="content-report__section">
-		<summary class="content-report__section__summary"><%= sectionName %></summary>
+<% for (const [sectionName, filterFn] of Object.entries(sections)) {
+	const sectionPolicies = policies.filter(filterFn); %>
 
-		<div class="content-report__section__content">
-			<ul class="directory__list">
-				<% policies.forEach((policy, idx) => { %>
-					<% if (filterFn(policy)) { %>
-
-					<li class="directory__item">
-						<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
-					</li>
-					<% } %>
-				<% }) %>
-			</ul>
-		</div>
-	</details>
+	<% if (sectionPolicies.length > 0) { %>
+		<details class="content-report__section">
+			<summary class="content-report__section__summary"><%= sectionName %> (<%= sectionPolicies.length %>)</summary>
+				<div class="content-report__section__content">
+					<ul class="directory__list">
+						<% sectionPolicies.forEach((policy, idx) => { %>
+							<li class="directory__item">
+								<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+							</li>
+						<% }) %>
+					</ul>
+				</div>
+		</details>
+	<% } else { %>
+		<span class="content-report__section__summary"><%= sectionName %> (<%= sectionPolicies.length %>)</span>
+	<% } %>
 <% } %>
 
 <%- include('../layout/foot'); %>
