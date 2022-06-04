@@ -37,6 +37,8 @@ $duration-sep-offset: calc(100% + #{$duration-sep-gap});
 		position: absolute;
 
 		@include use-var(background-color, --accent, currentColor);
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
 	}
 
 	&:last-child {

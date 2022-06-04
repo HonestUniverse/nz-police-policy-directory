@@ -1,5 +1,6 @@
 .file {
 	@include contrast-secondary;
+	box-shadow: 0 0 5px 0px var(--accent);
 
 	padding: 1rem;
 	border: 1px solid;
