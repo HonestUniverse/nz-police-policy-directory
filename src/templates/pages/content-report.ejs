@@ -139,6 +139,33 @@
 </details>
 
 <%
+	function hasUndeterminedType(policy) {
+		if (policy.type === 'Undetermined') {
+			return true;
+		} else {
+			return false;
+		}
+	}
+%>
+
+<details class="content-report__section">
+	<summary class="content-report__section__summary">Has undetermined type</summary>
+
+	<div class="content-report__section__content">
+		<ul class="directory__list">
+			<% policies.forEach((policy, idx) => { %>
+				<% if (hasUndeterminedType(policy)) { %>
+
+				<li class="directory__item">
+					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+				</li>
+				<% } %>
+			<% }) %>
+		</ul>
+	</div>
+</details>
+
+<%
 	function mayHaveSecondaryFiles(policy) {
 		// Files with a startingPage that isn't 1, which are the only file, were likely released with an OIA response letter in the same file
 		for (const version of policy.versions) {
