@@ -86,7 +86,7 @@
 			<% } %>
 		</div>
 
-		<% if (file.incomplete) { %>
+		<% if (file.incomplete?.value === true) { %>
 			<div class="file__incomplete">
 				<span class="file__incomplete__icon" aria-hidden="true"></span>
 				<span class="file__incomplete__text">Incomplete file</span>
