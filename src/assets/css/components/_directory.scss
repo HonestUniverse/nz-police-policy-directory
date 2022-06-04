@@ -6,6 +6,8 @@
 }
 
 .directory__search {
+	isolation: isolate;
+
 	@include bp-from("s") {
 		display: flex;
 	}
@@ -21,6 +23,11 @@
 	padding: 0 0.5em;
 	border: 1px solid;
 	@include use-var(border-color, --accent, currentColor);
+
+	position: relative;
+	&:focus {
+		z-index: 1;
+	}
 
 	@include bp-to("s") {
 		width: 100%;
