@@ -62,7 +62,43 @@
 		},
 		"incomplete": {
 			"description": "Whether or not this file contains the entire policy version",
-			"type": "boolean"
+			"type": "object",
+			"properties": {
+				"value": {
+					"type": "boolean"
+				},
+				"note": {
+					"description": "A note about what contents are included or excluded in this file",
+					"type": "string"
+				}
+			},
+			"required": [
+				"value"
+			],
+			"oneOf": [
+				{
+					"properties": {
+						"value": {
+							"const": true
+						}
+					},
+					"required": [
+						"note"
+					]
+				},
+				{
+					"properties": {
+						"value": {
+							"const": false
+						}
+					},
+					"not": {
+						"required": [
+							"note"
+						]
+					}
+				}
+			]
 		},
 		"modifications": {
 			"description": "Any modifications that have been made to the file since it was retrieved",
