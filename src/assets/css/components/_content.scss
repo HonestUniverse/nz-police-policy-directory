@@ -1,3 +1,17 @@
 .content {
 	@extend %content;
+
+	dl {
+		&,
+		> div {
+			margin-bottom: 1em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		dt {
+			@include font-base-18b;
+		}
+	}
 }
