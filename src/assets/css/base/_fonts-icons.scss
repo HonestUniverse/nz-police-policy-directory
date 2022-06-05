@@ -7,12 +7,12 @@ https://creativecommons.org/licenses/by/4.0/
 */
 @font-face {
 	font-family: "font-icons";
-	src: url("../fonts/font-icons/font-icons.eot");
+	src: url("../fonts/font-icons/font-icons.eot?v=1");
 	src:
-		url("../fonts/font-icons/font-icons.eot#iefix") format("embedded-opentype"),
-		url("../fonts/font-icons/font-icons.ttf") format("truetype"),
-		url("../fonts/font-icons/font-icons.woff") format("woff"),
-		url("../fonts/font-icons/font-icons.svg#font-icons") format("svg");
+		url("../fonts/font-icons/font-icons.eot#iefix?v=1") format("embedded-opentype"),
+		url("../fonts/font-icons/font-icons.ttf?v=1") format("truetype"),
+		url("../fonts/font-icons/font-icons.woff?v=1") format("woff"),
+		url("../fonts/font-icons/font-icons.svg?v=1#font-icons") format("svg");
 	font-weight: $regular;
 	font-style: normal;
 	font-display: block;
@@ -21,12 +21,12 @@ https://creativecommons.org/licenses/by/4.0/
 // Also define bold variant so browsers won't try to fake it
 @font-face {
 	font-family: "font-icons";
-	src: url("../fonts/font-icons/font-icons.eot");
+	src: url("../fonts/font-icons/font-icons.eot&v=1");
 	src:
-		url("../fonts/font-icons/font-icons.eot#iefix") format("embedded-opentype"),
-		url("../fonts/font-icons/font-icons.ttf") format("truetype"),
-		url("../fonts/font-icons/font-icons.woff") format("woff"),
-		url("../fonts/font-icons/font-icons.svg#font-icons") format("svg");
+		url("../fonts/font-icons/font-icons.eot#iefix&v=1") format("embedded-opentype"),
+		url("../fonts/font-icons/font-icons.ttf&v=1") format("truetype"),
+		url("../fonts/font-icons/font-icons.woff&v=1") format("woff"),
+		url("../fonts/font-icons/font-icons.svg&v=1#font-icons") format("svg");
 	font-weight: $bold;
 	font-style: normal;
 	font-display: block;

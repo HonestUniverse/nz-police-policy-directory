@@ -13,7 +13,7 @@ https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 	font-style: normal;
 	font-weight: $regular;
 	font-display: auto;
-	src: url(../fonts/montserrat/montserrat-regular-latin-ext.woff2) format("woff2");
+	src: url(../fonts/montserrat/montserrat-regular-latin-ext.woff2?v=1) format("woff2");
 	unicode-range: $unicode-range-latin-ext;
 }
 @font-face {
@@ -21,7 +21,7 @@ https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 	font-style: italic;
 	font-weight: $regular;
 	font-display: auto;
-	src: url(../fonts/montserrat/montserrat-italic-latin-ext.woff2) format("woff2");
+	src: url(../fonts/montserrat/montserrat-italic-latin-ext.woff2?v=1) format("woff2");
 	unicode-range: $unicode-range-latin-ext;
 }
 @font-face {
@@ -29,7 +29,7 @@ https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 	font-style: normal;
 	font-weight: $bold;
 	font-display: auto;
-	src: url(../fonts/montserrat/montserrat-bold-latin-ext.woff2) format("woff2");
+	src: url(../fonts/montserrat/montserrat-bold-latin-ext.woff2?v=1) format("woff2");
 	unicode-range: $unicode-range-latin-ext;
 }
 @font-face {
@@ -37,7 +37,7 @@ https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 	font-style: italic;
 	font-weight: $bold;
 	font-display: auto;
-	src: url(../fonts/montserrat/montserrat-bolditalic-latin-ext.woff2) format("woff2");
+	src: url(../fonts/montserrat/montserrat-bolditalic-latin-ext.woff2?v=1) format("woff2");
 	unicode-range: $unicode-range-latin-ext;
 }
 /* latin */
@@ -46,7 +46,7 @@ https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 	font-style: normal;
 	font-weight: $regular;
 	font-display: auto;
-	src: url(../fonts/montserrat/montserrat-regular-latin.woff2) format("woff2");
+	src: url(../fonts/montserrat/montserrat-regular-latin.woff2?v=1) format("woff2");
 	unicode-range: $unicode-range-latin;
 }
 @font-face {
@@ -54,7 +54,7 @@ https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 	font-style: italic;
 	font-weight: $regular;
 	font-display: auto;
-	src: url(../fonts/montserrat/montserrat-italic-latin.woff2) format("woff2");
+	src: url(../fonts/montserrat/montserrat-italic-latin.woff2?v=1) format("woff2");
 	unicode-range: $unicode-range-latin;
 }
 @font-face {
@@ -62,7 +62,7 @@ https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 	font-style: normal;
 	font-weight: $bold;
 	font-display: auto;
-	src: url(../fonts/montserrat/montserrat-bold-latin.woff2) format("woff2");
+	src: url(../fonts/montserrat/montserrat-bold-latin.woff2?v=1) format("woff2");
 	unicode-range: $unicode-range-latin;
 }
 @font-face {
@@ -70,6 +70,6 @@ https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 	font-style: italic;
 	font-weight: $bold;
 	font-display: auto;
-	src: url(../fonts/montserrat/montserrat-bolditalic-latin.woff2) format("woff2");
+	src: url(../fonts/montserrat/montserrat-bolditalic-latin.woff2?v=1) format("woff2");
 	unicode-range: $unicode-range-latin;
 }
