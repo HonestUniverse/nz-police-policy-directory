@@ -1,11 +1,17 @@
 .provenance {
 	display: block;
-	margin: 1rem 0;
+	margin: 0.5rem 0;
+	padding-bottom: 0.5rem;
+
+	border-bottom: 1px solid;
+	@include use-var(border-bottom-color, --accent, currentColor);
 
 	&:first-child {
 		margin-top: 0;
 	}
 	&:last-child {
+		padding-bottom: 0;
+		border-bottom: 0;
 		margin-bottom: 0;
 	}
 }
