@@ -34,8 +34,8 @@
 }
 
 .notice__body {
-	// Icon height: 2x font size. Body line height: 1.2x font size. (2-1.2)/2 * font size
-	padding-top: rem(0.4 * 18px);
+	// Adjust alignment of top line to more closely match icon alignment
+	padding-top: 0.4em;
 }
 
 .notice__title {
