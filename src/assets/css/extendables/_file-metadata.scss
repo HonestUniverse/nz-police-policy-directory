@@ -93,12 +93,12 @@ $file-metadata__icon-size: rem(18px);
 
 %file-metadata__detail__item__column {
 	width: 50%;
-	margin-left: 1rem;
+	padding-left: 1rem;
 	&:first-child {
-		margin-left: 0;
+		padding-left: 0;
 	}
 	@supports (display: grid) {
 		width: 100%;
-		margin-left: 0;
+		padding-left: 0;
 	}
 }

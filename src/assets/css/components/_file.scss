@@ -135,10 +135,13 @@
 }
 
 .file__modifications {
-	@extend %file-metadata__section;
+	@extend %file-metadata__details;
 }
 
 .file__modifications__item {
+	@extend %file-metadata__details__item;
+	grid-template-columns: 1fr;
+
 	@include font-base-18;
 }
 
