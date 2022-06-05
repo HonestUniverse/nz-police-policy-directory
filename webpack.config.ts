@@ -13,16 +13,7 @@ import { createBuildPlugins } from './build/build.js';
 
 import * as paths from './build/util/paths.js';
 
-function generateCacheBustingString(): string {
-	const now = new Date();
-	const yearStart = new Date(now.getFullYear(), 0, 1, 0, 0, 0, 0);
-
-	const msSinceYearStart = Number(now) - Number(yearStart);
-	const minutesSinceYearStart = Math.floor(msSinceYearStart / 60000);
-
-	const cacheBustingString = minutesSinceYearStart.toString(16);
-	return cacheBustingString;
-}
+import { generateCacheBustingString } from './build/util/generateCacheBustingString.js';
 
 async function getConfig(env: Record<string, unknown>) {
 	const cacheBustingString = generateCacheBustingString();
@@ -76,8 +67,8 @@ async function getConfig(env: Record<string, unknown>) {
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
-				filename: 'assets/css/[name].css',
-				chunkFilename: '[id].css',
+				filename: `assets/css/[name]-${cacheBustingString}.css`,
+				chunkFilename: `[id]-${cacheBustingString}.css`,
 				ignoreOrder: false,
 			}),
 			...await createBuildPlugins(env.test ? paths.testPolicies : paths.policies),
