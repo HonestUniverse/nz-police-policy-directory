@@ -8,6 +8,8 @@
 	position: sticky;
 	z-index: 1;
 	top: 0;
+
+	@include print-hide;
 }
 
 .prototype-notice__layout {
