@@ -1,4 +1,7 @@
-@mixin icon-indicator($icon, $size: rem(18px)) {
+/// Create an indicator icon, with colour determined automatically based on the chosen icon.
+/// @param {*} $icon A character to use within the `$font-icons` family.
+/// @param {*} $size [rem(22px)] The size of the icon, ideally specified in rem. The indicator itself will be twice this size
+@mixin icon-indicator($icon, $size: rem(22px)) {
 	font-size: $size;
 
 	width: 2em;
