@@ -1,6 +1,9 @@
 .file {
 	@include contrast-secondary;
 	box-shadow: 0 0 5px 0px var(--accent);
+	@media print {
+		box-shadow: none;
+	}
 
 	padding: 1rem;
 	border: 1px solid;
@@ -33,6 +36,8 @@
 			grid-template-rows: repeat(3, min-content) 1fr min-content;
 		}
 	}
+
+	page-break-inside: avoid;
 
 	+ .file {
 		margin-top: 2rem;

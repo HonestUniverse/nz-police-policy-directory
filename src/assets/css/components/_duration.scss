@@ -14,6 +14,8 @@ $duration-bp: "s";
 	}
 
 	margin: 2em 0;
+
+	page-break-inside: avoid;
 }
 
 $duration-sep-length: 2ch;
