@@ -75,6 +75,7 @@ async function getConfig(env: Record<string, unknown>) {
 				module: ['enhancements'],
 				remove: [
 					'style',
+					'style-content',
 					'style-directory',
 					'style-document',
 				],
