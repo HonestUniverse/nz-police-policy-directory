@@ -15,11 +15,17 @@ import * as paths from './build/util/paths.js';
 
 import { generateCacheBustingString } from './build/util/generateCacheBustingString.js';
 
-async function getConfig(env: Record<string, unknown>) {
-	const cacheBustingString = generateCacheBustingString();
+enum Mode {
+	DEVELOPMENT = 'development',
+	PRODUCTION = 'production',
+}
+
+async function getConfig(env: Record<string, unknown>, argsv: Record<string, unknown>) {
+	const mode = argsv.mode === Mode.DEVELOPMENT ? Mode.DEVELOPMENT : Mode.PRODUCTION;
+	const cacheBustingString = mode === Mode.PRODUCTION ? `-${generateCacheBustingString()}` : '';
 
 	const config: webpack.Configuration = {
-		mode: process.env.MODE === 'development' ? 'development' : 'production',
+		mode,
 		entry: {
 			main: `${paths.assetsFull}/js/main.ts`,
 			enhancements: `${paths.assetsFull}/js/enhancements.ts`,
@@ -32,7 +38,7 @@ async function getConfig(env: Record<string, unknown>) {
 		},
 		output: {
 			path: paths.distFull,
-			filename: `assets/js/[name]-${cacheBustingString}.js`,
+			filename: `assets/js/[name]${cacheBustingString}.js`,
 			publicPath: '/',
 		},
 		resolve: {
@@ -67,8 +73,8 @@ async function getConfig(env: Record<string, unknown>) {
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
-				filename: `assets/css/[name]-${cacheBustingString}.css`,
-				chunkFilename: `[id]-${cacheBustingString}.css`,
+				filename: `assets/css/[name]${cacheBustingString}.css`,
+				chunkFilename: `[id]${cacheBustingString}.css`,
 				ignoreOrder: false,
 			}),
 			...await createBuildPlugins(env.test ? paths.testPolicies : paths.policies),
@@ -87,7 +93,7 @@ async function getConfig(env: Record<string, unknown>) {
 		],
 	};
 
-	switch (process.env.MODE) {
+	switch (mode) {
 		case 'development':
 			config.optimization = {
 				minimize: false,
