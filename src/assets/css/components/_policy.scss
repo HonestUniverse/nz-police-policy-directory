@@ -40,7 +40,11 @@
 
 .policy__version__name {
 	margin: 0 0 0.5rem;
+	@include font-heading-32b;
+}
 
+.policy__version__name-text {
+	display: inline;
 	@include font-heading-32b;
 }
 
