@@ -13,7 +13,20 @@ import { createBuildPlugins } from './build/build.js';
 
 import * as paths from './build/util/paths.js';
 
+function generateCacheBustingString(): string {
+	const now = new Date();
+	const yearStart = new Date(now.getFullYear(), 0, 1, 0, 0, 0, 0);
+
+	const msSinceYearStart = Number(now) - Number(yearStart);
+	const minutesSinceYearStart = Math.floor(msSinceYearStart / 60000);
+
+	const cacheBustingString = minutesSinceYearStart.toString(16);
+	return cacheBustingString;
+}
+
 async function getConfig(env: Record<string, unknown>) {
+	const cacheBustingString = generateCacheBustingString();
+
 	const config: webpack.Configuration = {
 		mode: process.env.MODE === 'development' ? 'development' : 'production',
 		entry: {
@@ -28,7 +41,7 @@ async function getConfig(env: Record<string, unknown>) {
 		},
 		output: {
 			path: paths.distFull,
-			filename: 'assets/js/[name].js',
+			filename: `assets/js/[name]-${cacheBustingString}.js`,
 			publicPath: '/',
 		},
 		resolve: {
