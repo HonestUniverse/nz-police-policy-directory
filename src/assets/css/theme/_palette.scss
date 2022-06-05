@@ -1,22 +1,3 @@
-////////////////////////////////////
-// Debug/temporary colour palette //
-////////////////////////////////////
-
-$green--pale: #ccf0cc !default;
-$green--dim: #285628 !default;
-
-$blue--pale: #c8dbfd !default;
-$blue--dim: #2e2e6a !default;
-
-$yellow--pale: #ffffbd !default;
-$yellow--dim: #7a550b !default;
-
-$red--pale: #ffd9df !default;
-$red--dim: #591717 !default;
-
-$blue--vivid: #0000ff !default;
-$blue--vivid-bright: #8888ff !default;
-
 ////////////////////
 // Colour palette //
 ////////////////////
@@ -29,13 +10,26 @@ $grey--light: #d0d0d0;
 $grey--dark: #222222;
 $grey--darker: #111111;
 
+$green--pale: #ccf0cc;
+$green--saturated: #178217;
+
+$blue--pale: #c8dbfd;
+$blue--saturated: #074dc5;
+
+$yellow--pale: #f2f2ca;
+$yellow--saturated: #e68a00;
+
+$red--pale: #ffd9df;
+$red--saturated: #cc334a;
+
+$blue--vivid: #0000ff;
+$blue--vivid-bright: #8888ff;
+
 // $school-bus-yellow: #ffda22;
 
-// Used in light mode
 $middle-blue: #78cdd7;
 $cadet-blue: #44a1a0;
 
-// Used in dark mode
 $midnight-green-eagle-green: #0d5c63;
 $teal: #247b7b;
 
@@ -81,21 +75,27 @@ $link-dark--light: $blue--vivid-bright;
 // AAA 16.9
 $bg-green--light: $green--pale;
 $col-green--light: $black;
+$accent-green--light: $green--saturated;
 
 // AAA 15.01
 $bg-blue--light: $blue--pale;
 $col-blue--light: $black;
+$accent-blue--light: $blue--saturated;
 
-// AAA 20.29
+// AAA 18.33
 $bg-yellow--light: $yellow--pale;
 $col-yellow--light: $black;
+$accent-yellow--light: $yellow--saturated;
 
 // AAA 16.24
 $bg-red--light: $red--pale;
 $col-red--light: $black;
+$accent-red--light: $red--saturated;
 
 /// The colours to use in the light colour scheme
 @mixin palette-light {
+	color-scheme: light;
+
 	--bg-primary: #{$bg-primary--light};
 	--col-primary: #{$col-primary--light};
 
@@ -119,15 +119,19 @@ $col-red--light: $black;
 
 	--bg-green: #{$bg-green--light};
 	--col-green: #{$col-green--light};
+	--accent-green: #{$accent-green--light};
 
 	--bg-blue: #{$bg-blue--light};
 	--col-blue: #{$col-blue--light};
+	--accent-blue: #{$accent-blue--light};
 
 	--bg-yellow: #{$bg-yellow--light};
 	--col-yellow: #{$col-yellow--light};
+	--accent-yellow: #{$accent-yellow--light};
 
 	--bg-red: #{$bg-red--light};
 	--col-red: #{$col-red--light};
+	--accent-red: #{$accent-red--light};
 
 	--link-base: #{$link-base--light};
 	--link: var(--link-base);
@@ -174,24 +178,30 @@ $col-dark--dark: $white;
 $accent-dark--dark: $teal;
 $link-dark--dark: $blue--vivid-bright;
 
-// AAA 8.56
-$bg-green--dark: $green--dim;
-$col-green--dark: $white;
+// AAA 16.9
+$bg-green--dark: $green--pale;
+$col-green--dark: $black;
+$accent-green--dark: $green--saturated;
 
-// AAA 12.24
-$bg-blue--dark: $blue--dim;
-$col-blue--dark: $white;
+// AAA 15.01
+$bg-blue--dark: $blue--pale;
+$col-blue--dark: $black;
+$accent-blue--dark: $blue--saturated;
 
-// AA  6.71
-$bg-yellow--dark: $yellow--dim;
-$col-yellow--dark: $white;
+// AAA 20.29
+$bg-yellow--dark: $yellow--pale;
+$col-yellow--dark: $black;
+$accent-yellow--dark: $yellow--saturated;
 
-// AAA 13.46
-$bg-red--dark: $red--dim;
-$col-red--dark: $white;
+// AAA 16.24
+$bg-red--dark: $red--pale;
+$col-red--dark: $black;
+$accent-red--dark: $red--saturated;
 
 /// The colours to use in the dark colour scheme
 @mixin palette-dark {
+	color-scheme: dark;
+
 	--bg-primary: #{$bg-primary--dark};
 	--col-primary: #{$col-primary--dark};
 
@@ -215,15 +225,19 @@ $col-red--dark: $white;
 
 	--bg-green: #{$bg-green--dark};
 	--col-green: #{$col-green--dark};
+	--accent-green: #{$accent-green--dark};
 
 	--bg-blue: #{$bg-blue--dark};
 	--col-blue: #{$col-blue--dark};
+	--accent-blue: #{$accent-blue--dark};
 
 	--bg-yellow: #{$bg-yellow--dark};
 	--col-yellow: #{$col-yellow--dark};
+	--accent-yellow: #{$accent-yellow--dark};
 
 	--bg-red: #{$bg-red--dark};
 	--col-red: #{$col-red--dark};
+	--accent-red: #{$accent-red--dark};
 
 	--link-base: #{$link-base--dark};
 	--link: var(--link-base);
@@ -308,7 +322,7 @@ $col-red--dark: $white;
 	@include use-var(background-color, --bg-green, $bg-green--light);
 	@include use-var(color, --col-green, $col-green--light);
 
-	--accent: var(--accent-base, #{$accent-base--light});
+	--accent: var(--accent-green, #{$accent-green--light});
 	--link: var(--link-base, #{$link-base--light});
 }
 
@@ -316,7 +330,7 @@ $col-red--dark: $white;
 	@include use-var(background-color, --bg-blue, $bg-blue--light);
 	@include use-var(color, --col-blue, $col-blue--light);
 
-	--accent: var(--accent-base, #{$accent-base--light});
+	--accent: var(--accent-blue, #{$accent-blue--light});
 	--link: var(--link-base, #{$link-base--light});
 }
 
@@ -324,7 +338,7 @@ $col-red--dark: $white;
 	@include use-var(background-color, --bg-yellow, $bg-yellow--light);
 	@include use-var(color, --col-yellow, $col-yellow--light);
 
-	--accent: var(--accent-base, #{$accent-base--light});
+	--accent: var(--accent-yellow, #{$accent-yellow--light});
 	--link: var(--link-base, #{$link-base--light});
 }
 
@@ -332,6 +346,6 @@ $col-red--dark: $white;
 	@include use-var(background-color, --bg-red, $bg-red--light);
 	@include use-var(color, --col-red, $col-red--light);
 
-	--accent: var(--accent-base, #{$accent-base--light});
+	--accent: var(--accent-red, #{$accent-red--light});
 	--link: var(--link-base, #{$link-base--light});
 }
