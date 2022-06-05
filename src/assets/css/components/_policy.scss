@@ -12,7 +12,12 @@
 
 .policy__other-versions__item {}
 
-.policy__version {}
+.policy__version {
+	margin-top: 1rem;
+	&:first-child {
+		margin-top: 0;
+	}
+}
 
 .policy__version__head {
 	margin-bottom: 2rem;
