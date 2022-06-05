@@ -14,6 +14,7 @@ $semibold: 600;
 $bold: 700;
 
 // Font icons
+// !IMPORTANT: When adding new icons, update ?v=${number} on font sources in `_fonts-icons.scss` and preload tags in `head.ejs`
 $icon-plus: "\2b";
 $icon-minus: "\2d";
 $icon-search: "\1f50d";
