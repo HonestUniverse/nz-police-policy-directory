@@ -107,10 +107,12 @@ export function generateIdsPolicy(before: Policy): {
 	const after = JSON.parse(JSON.stringify(before)) as Policy;
 	let idsGenerated = 0;
 
-	for (const version of after.versions) {
-		if (!version.id) {
-			version.id = generateUniqueId(after);
-			idsGenerated += 1;
+	if (after.versions) {
+		for (const version of after.versions) {
+			if (!version.id) {
+				version.id = generateUniqueId(after);
+				idsGenerated += 1;
+			}
 		}
 	}
 
