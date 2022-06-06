@@ -1,0 +1,72 @@
+{
+	"schemaVersion": "0.5.0",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"duration": {
+				"on": [
+					"2021-06-14",
+					"2021-06-28"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Sebastian",
+						"id": "IR-01-21-18135",
+						"responseUrl": "https://fyi.org.nz/request/14795-police-manual-chapters-related-to-intelligence-collection#incoming-59742",
+						"withholdings": "None"
+					},
+					"extracted": "2021-06-14",
+					"released": "2021-06-28",
+					"retrieved": "2022-05-13",
+					"url": "https://fyi.org.nz/request/14795-police-manual-chapters-related-to-intelligence-collection#incoming-59742",
+					"fileUrl": "https://fyi.org.nz/request/14795/response/59742/attach/4/Sebastian%20IR%2001%2021%2018135%20Supporting%20docs%20for%20release.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2021-06-28/Sebastian IR 01 21 18135 Supporting docs for release.pdf",
+					"type": "application/pdf",
+					"size": 896703,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": "Undetermined"
+							}
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"title": "Bulk file",
+							"message": "This file contains multiple documents. \"Government agency requests for assistance with search warrants and production orders\" covers pages 1-27 of the file."
+						}
+					],
+					"documentType": "Policy"
+				}
+			],
+			"id": "u-kwoyj"
+		}
+	],
+	"name": "Search Part 15 - Government agency requests for assistance with search warrants",
+	"previousNames": [
+		"Search Part 15 - Government agency requests for assistance with search warrants and production orders"
+	]
+}
