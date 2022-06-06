@@ -1,3 +1,15 @@
+.provenance__card {
+	@extend %card;
+
+	margin: 2rem 0;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 .provenance {
 	display: block;
 	margin: 0.5rem 0;
