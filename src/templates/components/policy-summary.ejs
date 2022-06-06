@@ -9,6 +9,7 @@
 	class="policy-summary<%= policy.versions.length === 0 ? ' policy-summary--stub' : '' %> js-search__item"
 	data-search-name="<%= policy.name %>"
 	data-search-type="<%= policy.type %>"
+	data-search-stub="<%= policy.versions.length === 0 %>"
 	<% if (policy.previousNames) {
 		const previousNamesList = policy.previousNames ? JSON.stringify(policy.previousNames).replace(/"/g, '&quot;') : null; %>
 		data-search-previous-names="<%= previousNamesList %>"
