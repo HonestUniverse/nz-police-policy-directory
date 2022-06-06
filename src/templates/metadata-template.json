@@ -6,27 +6,7 @@
 	],
 	"type": "string enum",
 	"obsolete": true,
-	"provenance": [
-		{
-			"source": "string enum",
-			"method": "string enum",
-			"oiaRequest": {
-				"requester": "string",
-				"id": "string",
-				"responseUrl": "url",
-				"withholdings": "Undetermined"
-			},
-			"withholdings": "Undetermined",
-			"published": "date",
-			"extracted": "date",
-			"released": "date",
-			"retrieved": "date",
-			"url": "url",
-			"archiveUrl": "url",
-			"fileUrl": "url",
-			"archiveFileUrl": "url"
-		}
-	],
+	"provenance": "If there's policy information not associated with a version",
 	"versions": [
 		{
 			"name": "string",
