@@ -13,6 +13,7 @@ enum DataAttribute {
 	NAME = 'data-search-name',
 	PREVIOUS_NAMES = 'data-search-previous-names',
 	TYPE = 'data-search-type',
+	STUB = 'data-search-stub',
 }
 
 enum CssClass {
@@ -30,6 +31,7 @@ enum MatchResult {
 interface SearchQuery {
 	name: string,
 	type: string,
+	includeStubs: boolean,
 }
 
 /** The delay between the user stopping typing and the auto-search happening */
@@ -71,7 +73,7 @@ function handleSearchSubmitEvent(this: HTMLFormElement, e: SubmitEvent) {
 }
 
 /**
- * Handle a search input's input event by performing a search
+ * Handle a search input's input or change event by performing a search
  */
 function handleSearchInputEvent(this: HTMLInputElement | HTMLSelectElement, e: Event) {
 	const $input = this;
@@ -99,13 +101,19 @@ function performSearch($form: HTMLFormElement) {
 	const data = new FormData($form);
 	const name = data.get('name');
 	const type = data.get('type');
-	if (typeof name !== 'string' || typeof type !== 'string') {
+	const includeStubs = data.get('include-stubs') === 'true';
+
+	if (
+		typeof name !== 'string' ||
+		typeof type !== 'string'
+	) {
 		return;
 	}
 
 	const searchQuery: SearchQuery = {
 		name,
 		type,
+		includeStubs,
 	};
 
 	const $results = applySearch($target, searchQuery);
@@ -159,6 +167,12 @@ function applySearch($target: HTMLElement, query: SearchQuery) {
  * Hide or show an item based on a search query
  */
 function applySearchToItem(query: SearchQuery, $item: HTMLElement): MatchResult {
+	const isStub = $item.getAttribute(DataAttribute.STUB) === 'true';
+
+	if (isStub && !query.includeStubs) {
+		return MatchResult.NO_MATCH;
+	}
+
 	const nameMatch = applySearchToItemName(query, $item);
 	const typeMatch = applySearchToItemType(query, $item);
 
