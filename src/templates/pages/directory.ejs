@@ -20,13 +20,24 @@
 
 <article class="directory">
 	<form class="directory__search js-search" action="." method="GET" aria-controls="policy-search-results" autocomplete="off">
-		<input class="directory__search__query js-search__input" name="name" type="search" placeholder="Search" />
-		<select class="directory__search__type js-search__input" name="type">
-			<option value="">All types</option>
-			<% for (const type of policyTypes) { %>
-				<option><%= type %></option>
-			<% } %>
-		</select>
+		<div class="directory__search__row">
+			<input class="directory__search__query js-search__input" name="name" type="search" placeholder="Search" />
+			<select class="directory__search__type js-search__input" name="type">
+				<option value="">All types</option>
+				<% for (const type of policyTypes) { %>
+					<option><%= type %></option>
+				<% } %>
+			</select>
+		</div>
+
+		<div class="directory__search__row">
+			<label class="directory__search__fake-checkbox">
+				<input type="checkbox" class="directory__search__fake-checkbox__input js-search__input" name="include-stubs" id="include-stubs" value="true" checked />
+				<span class="directory__search__fake-checkbox__display"></span>
+			</label>
+
+			<label class="directory__search__label" for="include-stubs">Include empty pages</label>
+		</div>
 	</form>
 
 	<div class="directory__search-results" id="policy-search-results">
