@@ -5,11 +5,10 @@
 %>
 
 <%
-	const keys = Object.keys(directory).sort((a, b) => a.localeCompare(b));
-	const policies = [];
-	for (const key of keys) {
-		policies.push(directory[key]);
-	}
+	// Sort keys and policies by policy name
+	const directoryEntries = Object.entries(directory).sort((a, b) => a[1].name.localeCompare(b[1].name));
+	const keys = directoryEntries.map(([key, policy]) => key);
+	const policies = directoryEntries.map(([key, policy]) => policy);
 
 	const policyTypes = Array.from(new Set(policies.map((policy) => policy.type))).sort((a, b) => a.localeCompare(b));
 %>
