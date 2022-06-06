@@ -11,10 +11,11 @@
 	}
 
 	isolation: isolate;
+}
 
-	@include bp-from("s") {
-		display: flex;
-	}
+.directory__search__row {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 %directory__search__input {
@@ -46,6 +47,14 @@
 	}
 }
 
+.directory__search__label {
+	@include font-base-18;
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+}
+
 .directory__search__query {
 	@extend %directory__search__input;
 
@@ -54,6 +63,45 @@
 
 .directory__search__type {
 	@extend %directory__search__input;
+}
+
+.directory__search__fake-checkbox {
+	cursor: pointer;
+
+	width: rem(44px);
+	height: rem(44px);
+	display: flex;
+	align-items: center;
+}
+.directory__search__fake-checkbox__input {
+	@include visually-hidden;
+}
+.directory__search__fake-checkbox__display {
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	width: 2em;
+	height: 2em;
+
+	box-shadow: inset 0 0 0 1px currentColor;
+	box-shadow: inset 0 0 0 1px var(--accent);
+
+	@include contrast-secondary;
+
+	&::before {
+		font-family: $font-icons;
+	}
+
+	.directory__search__fake-checkbox__input:focus-visible ~ & {
+		@include focus-outline;
+	}
+	.directory__search__fake-checkbox__input:checked ~ & {
+		&::before {
+			content: $icon-tick;
+		}
+	}
 }
 
 .directory__search-results {}
