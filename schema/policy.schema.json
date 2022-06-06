@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 0.5.0",
+	"$comment": "Current version: 0.5.1",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
@@ -44,8 +44,7 @@
 			"type": "array",
 			"items": {
 				"$ref": "policy-version.schema.json"
-			},
-			"minItems": 1
+			}
 		},
 		"notices": {
 			"description": "Any notices attached to this policy",
