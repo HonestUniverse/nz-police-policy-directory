@@ -15,12 +15,6 @@ export async function createStubs(names: Policy['name'][], type: Policy['type'],
 	const promises: Promise<unknown>[] = [];
 
 	for (let name of names) {
-		// TODO: Generate stubs for chapters with names containing '/' character
-		if (name.includes('/')) {
-			console.error(`ERROR: Name contains '/' characters: ${name}`);
-			continue;
-		}
-
 		if (/Pt\s*\d+/.test(name)) {
 			name = name.replace(/Pt\s*(\d+)/, 'Part $1');
 		}
