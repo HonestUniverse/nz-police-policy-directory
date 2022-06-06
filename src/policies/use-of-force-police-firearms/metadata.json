@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "0.5.0",
-	"type": "Police Manual chapter",
+	"type": "Undetermined",
 	"versions": [
 		{
 			"duration": {
@@ -22,7 +22,7 @@
 					"released": "2019-06-28",
 					"retrieved": "2022-05-11",
 					"url": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
-					"fileUrl": "https://fyi.org.nz/request/9725/response/35815/attach/5/TENR.pdf"
+					"fileUrl": "https://fyi.org.nz/request/9725/response/35815/attach/3/Police%20firearms.pdf"
 				},
 				{
 					"source": "NZ Police",
@@ -36,14 +36,14 @@
 					"released": "2021-05-31",
 					"retrieved": "2022-05-11",
 					"url": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-58555",
-					"fileUrl": "https://fyi.org.nz/request/9725/response/58555/attach/14/TENR.pdf"
+					"fileUrl": "https://fyi.org.nz/request/9725/response/58555/attach/12/Police%20firearms.pdf"
 				}
 			],
 			"files": [
 				{
-					"path": "unnamed-version-1/TENR.pdf",
+					"path": "unnamed-version-1/Police firearms.pdf",
 					"type": "application/pdf",
-					"size": 234481,
+					"size": 40148,
 					"licence": {
 						"name": "None"
 					},
@@ -68,8 +68,8 @@
 					"documentType": "Policy"
 				}
 			],
-			"id": "u-knqtd"
+			"id": "u-ggvbk"
 		}
 	],
-	"name": "TENR - Operational threat aessessment"
+	"name": "Use of Force - Police firearms"
 }
