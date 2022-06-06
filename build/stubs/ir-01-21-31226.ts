@@ -1,4 +1,6 @@
 import { PolicyType } from '../../schema/Policy.js';
+import { ProvenanceSource, ProvenanceMethod } from '../../schema/Provenance.js';
+import { OIAWithholdingsSummary } from '../../schema/OIAWithholdings.js';
 
 import { createStubs } from '../create-stubs.js';
 
@@ -592,4 +594,21 @@ const knownChapterNames = [
 	'Youth justice - Part 3 Criminal procedure in the Youth Court',
 ];
 
-createStubs(knownChapterNames, PolicyType.POLICE_MANUAL_CHAPTER, '0.5.1');
+createStubs(knownChapterNames, {
+	schemaVersion: '0.5.1',
+	type: PolicyType.POLICE_MANUAL_CHAPTER,
+	provenance: [{
+		source: ProvenanceSource.NZ_POLICE,
+			method: ProvenanceMethod.RELEASED_UNDER_THE_OIA,
+			oiaRequest: {
+				requester: 'Amy S Van Wey Lovatt',
+				id: 'IR-01-21-31226',
+				responseUrl: 'https://fyi.org.nz/request/16707-police-manual-for-investing-offences-under-the-crimes-act#incoming-67034',
+				withholdings: OIAWithholdingsSummary.NONE,
+			},
+			released: '2021-11-23',
+			retrieved: '2022-06-06',
+			url: 'https://fyi.org.nz/request/16707-police-manual-for-investing-offences-under-the-crimes-act#incoming-67034',
+			fileUrl: 'https://fyi.org.nz/request/16707/response/67034/attach/3/Van%20Wey%20Lovatt%20Amy%20IR%2001%2021%2031226%20final%20response.pdf',
+	}],
+});
