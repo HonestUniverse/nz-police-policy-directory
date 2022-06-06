@@ -48,38 +48,46 @@
 			<%- include('../components/version', { version, policy }) %>
 		</div>
 	</article>
-<% } %>
 
-<% if (policy.versions.length > 1) { %>
-	<div class="policy__other-versions">
-		<h2 class="policy__other-versions__heading">Other versions</h2>
+	<% if (policy.versions.length > 1) { %>
+		<div class="policy__other-versions">
+			<h2 class="policy__other-versions__heading">Other versions</h2>
 
-		<ol class="policy__other-versions__list">
-			<%
-				const hasMultipleVersions = versions.length > 1;
-			%>
-			<% versions.slice(1).forEach((version, i, arr) => { %>
-				<li class="policy__other-versions__item">
-					<%
-						const { id } = version;
-						const href = versionPaths[id];
-					%>
-					<details class="policy__version policy__version--disclosure">
-						<summary class="policy__version__name">
-							<h3 class="policy__version__name-text"><%= include('../helpers/version-name', { version }); %></h3>
-						</summary>
+			<ol class="policy__other-versions__list">
+				<%
+					const hasMultipleVersions = versions.length > 1;
+				%>
+				<% versions.slice(1).forEach((version, i, arr) => { %>
+					<li class="policy__other-versions__item">
+						<%
+							const { id } = version;
+							const href = versionPaths[id];
+						%>
+						<details class="policy__version policy__version--disclosure">
+							<summary class="policy__version__name">
+								<h3 class="policy__version__name-text"><%= include('../helpers/version-name', { version }); %></h3>
+							</summary>
 
-						<div class="policy__version__details">
-							<% if (href) { %>
-								<a href="<%= href %>" class="policy__version__link">Permanent link to this version</a>
-							<% } %>
+							<div class="policy__version__details">
+								<% if (href) { %>
+									<a href="<%= href %>" class="policy__version__link">Permanent link to this version</a>
+								<% } %>
 
-							<%- include('../components/version', { version, policy }) %>
-						</div>
-					</details>
-				</li>
-			<% }); %>
-		</ol>
+								<%- include('../components/version', { version, policy }) %>
+							</div>
+						</details>
+					</li>
+				<% }); %>
+			</ol>
+		</div>
+	<% } %>
+<% } else { %>
+	<div class="content todo">
+		<h2>We don't have this document</h2>
+
+		<p>Do you have a copy of this document? You can help us complete the directory by letting us know where it's publicly available, or by sending us a copy.</p>
+
+		<p>Otherwise, you can help us by requesting this document under the Official Information Act.</p>
 	</div>
 <% } %>
 
