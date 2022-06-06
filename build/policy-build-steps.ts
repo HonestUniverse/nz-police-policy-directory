@@ -212,7 +212,7 @@ function getFileDst(
 	const versionUrl = toUrlSegment(versionUrlKey);
 
 	const fileName = file.path.replace(/.*\//, '');
-	const fileDstPath = toUrlSegment(versionUrl);
+	const fileDstPath = versionUrl;
 	const fileDstPathAndName = `${dst}/${fileDstPath}/${fileName}`;
 
 	return fileDstPathAndName;

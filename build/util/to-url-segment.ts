@@ -3,7 +3,8 @@
  * For example, 'Kōkako Café's new coffee (strong)' becomes 'kookako-cafes-new-coffee-strong'
  */
 export function toUrlSegment(str: string): string {
-	let leadingDots = str.replace(/(^\.*).*/, '$1');
+	let prefix = str.replace(/(^\.*\/*).*/, '$1');
+	let suffix = str.replace(/^.*?(\/*$)/, '$1');
 
 	let urlSegment = str.toLowerCase();
 
@@ -22,8 +23,8 @@ export function toUrlSegment(str: string): string {
 	// Remove apostrophes so they aren't replaced with '-'
 	urlSegment = urlSegment.replace(/'/g, '');
 
-	// Replace non-alphanumeric characters with '-' characters
-	urlSegment = urlSegment.replace(/[^a-z0-9\/]+/g, '-');
+	// Replace all characters aside from letters and numbers with '-' characters
+	urlSegment = urlSegment.replace(/[^a-z0-9]+/g, '-');
 
 	// Collapse multiple '-' characters
 	urlSegment = urlSegment.replace(/-{2,}/g, '-');
@@ -32,7 +33,7 @@ export function toUrlSegment(str: string): string {
 	urlSegment = urlSegment.replace(/^-|-$/g, '');
 
 	// Add any leading dots back
-	urlSegment = leadingDots + urlSegment;
+	urlSegment = `${prefix}${urlSegment}${suffix}`;
 
 	return urlSegment;
 }

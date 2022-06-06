@@ -15,12 +15,16 @@ describe('toUrlSegment', () => {
 		['123ee123', '123ee123'],
 	]));
 
-	it(`ignores one or more '.' characters at the beginning`, testExpectations([
-		['../build-utils/', '../build-utils/'],
+	it(`ignores a leading slash after any number of dots`, testExpectations([
+		['../build-utils', '../build-utils'],
 	]));
 
-	it(`ignores '/' characters`, testExpectations([
-		['../build-utils/', '../build-utils/'],
+	it(`ignores a trailing slash`, testExpectations([
+		['build-utils/', 'build-utils/'],
+	]));
+
+	it(`replaces '/' characters with '-'`, testExpectations([
+		['build/utils', 'build-utils'],
 	]));
 
 	it(`converts strings to lowercase`, testExpectations([
