@@ -1,5 +1,6 @@
 import type { Version as PolicyVersion } from './PolicyVersion.js';
 import type { Notice } from './Notice.js';
+import type { Provenance } from './Provenance.js';
 
 export enum PolicyType {
 	GENERAL_INSTRUCTIONS = 'General Instructions',
@@ -17,6 +18,7 @@ export type Policy = {
 	previousNames?: string[],
 	type: PolicyType,
 	obsolete?: true,
+	provenance?: Provenance[],
 	versions: PolicyVersion[],
 	notices?: Notice[],
 };

@@ -1,11 +1,32 @@
 {
-	"schemaVersion": "0.5.1",
+	"schemaVersion": "0.5.2",
 	"name": "string",
 	"previousNames": [
 		"string"
 	],
 	"type": "string enum",
 	"obsolete": true,
+	"provenance": [
+		{
+			"source": "string enum",
+			"method": "string enum",
+			"oiaRequest": {
+				"requester": "string",
+				"id": "string",
+				"responseUrl": "url",
+				"withholdings": "Undetermined"
+			},
+			"withholdings": "Undetermined",
+			"published": "date",
+			"extracted": "date",
+			"released": "date",
+			"retrieved": "date",
+			"url": "url",
+			"archiveUrl": "url",
+			"fileUrl": "url",
+			"archiveFileUrl": "url"
+		}
+	],
 	"versions": [
 		{
 			"name": "string",
