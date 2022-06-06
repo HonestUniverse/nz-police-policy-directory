@@ -6,7 +6,7 @@
 %>
 
 <section
-	class="policy-summary js-search__item"
+	class="policy-summary<%= policy.versions.length === 0 ? ' policy-summary--stub' : '' %> js-search__item"
 	data-search-name="<%= policy.name %>"
 	data-search-type="<%= policy.type %>"
 	<% if (policy.previousNames) {
@@ -31,16 +31,20 @@
 
 	<span class="policy-summary__type"><%= policy.type %></span>
 
-	<%
-		const latestVersion = policy.versions[0];
-		const mainFile = policy.versions[0].files[0];
+	<% if (policy.versions.length > 0) { %>
+		<%
+			const latestVersion = policy.versions[0];
+			const mainFile = policy.versions[0].files[0];
 
-		const provenance = mainFile.provenance || latestVersion.provenance;
+			const provenance = mainFile.provenance || latestVersion.provenance;
 
-		// From provenance objects with a `retrieved` date, create an array of retrieved dates and sort it from most recent to oldest
-		const retrievedDates = provenance.filter((prov) => prov.retrieved).map((prov) => new Date(prov.retrieved)).sort();
-	%>
-	<% if (retrievedDates.length) { %>
-		<span class="policy-summary__date">Last Updated: <%- include('../helpers/date-partial', { date: retrievedDates[0] }); %></span>
+			// From provenance objects with a `retrieved` date, create an array of retrieved dates and sort it from most recent to oldest
+			const retrievedDates = provenance.filter((prov) => prov.retrieved).map((prov) => new Date(prov.retrieved)).sort();
+		%>
+		<% if (retrievedDates.length) { %>
+			<span class="policy-summary__date">Last Updated: <%- include('../helpers/date-partial', { date: retrievedDates[0] }); %></span>
+		<% } %>
+	<% } else { %>
+		<span class="policy-summary__stub-notice">No versions</span>
 	<% } %>
 </section>

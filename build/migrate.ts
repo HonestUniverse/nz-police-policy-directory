@@ -422,6 +422,15 @@ const migrations: Record<string, Migration> = {
 			}
 		}
 	},
+
+	/**
+	 * Changes in v0.5.1
+	 *
+	 * Allow policies with 0 versions
+	 */
+	['0.5.1']: function (policy: Policy): void {
+		policy.schemaVersion = '0.5.1';
+	},
 }
 
 migrateAll();

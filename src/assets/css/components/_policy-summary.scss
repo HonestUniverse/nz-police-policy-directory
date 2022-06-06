@@ -18,6 +18,9 @@
 
 .policy-summary__link {
 	@include link;
+	.policy-summary--stub & {
+		@include link-stub;
+	}
 }
 
 %policy-summary__metadata {
@@ -28,7 +31,8 @@
 }
 
 .policy-summary__type,
-.policy-summary__date {
+.policy-summary__date,
+.policy-summary__stub-notice {
 	@extend %policy-summary__metadata;
 }
 
