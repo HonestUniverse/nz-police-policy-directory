@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 0.5.1",
+	"$comment": "Current version: 0.5.2",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
@@ -38,6 +38,13 @@
 		"obsolete": {
 			"description": "If the policy is no longer active",
 			"const": true
+		},
+		"provenance": {
+			"description": "The provenance of information known about a policy that doesn't come from a version",
+			"type": "array",
+			"items": {
+				"$ref": "provenance.schema.json"
+			}
 		},
 		"versions": {
 			"description": "A list of current and historical versions of this policy",
