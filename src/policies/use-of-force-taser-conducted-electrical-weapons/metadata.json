@@ -254,14 +254,8 @@
 		}
 	],
 	"schemaVersion": "0.5.0",
-<<<<<<< HEAD:src/policies/taser-conducted-electrical-weapons/metadata.json
-	"name": "TASER (Conducted Electrical Weapons)",
-	"previousNames": [
-		"TASER (Electronic Control Devices)"
-=======
 	"name": "Use of Force - TASER (Conducted Electrical Weapons)",
 	"previousNames": [
 		"Use of Force - TASER (Electronic Control Devices)"
->>>>>>> dev:src/policies/use-of-force-taser-conducted-electrical-weapons/metadata.json
 	]
 }
