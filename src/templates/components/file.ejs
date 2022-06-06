@@ -122,7 +122,15 @@
 		%>
 
 		<% for (const prov of provenance) { %>
-			<%- include('provenance', { provenance: prov, file }); %>
+			<%
+				const isOiaResponseLetter = file.documentType === 'OIA response letter';
+				const options = {
+					omitExtractedDate: isOiaResponseLetter,
+					omitEmptyWithholdings: isOiaResponseLetter,
+				};
+			%>
+
+			<%- include('provenance', { provenance: prov, options }); %>
 		<% } %>
 		</div>
 
