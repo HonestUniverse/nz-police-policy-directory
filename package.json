@@ -41,6 +41,7 @@
 		"watchTest": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode development --env test --watch",
 		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/migrate.ts",
 		"generateIds": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/generate-all-ids.ts",
+		"generateStubs": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/stubs/ir-01-21-31226.ts",
 		"lintJs": "eslint src/assets/js/**",
 		"lintCss": "stylelint src/assets/css/**",
 		"lint": "npm run lintJs && npm run lintCss",
