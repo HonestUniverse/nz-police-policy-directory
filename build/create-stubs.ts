@@ -1,17 +1,18 @@
 import { readFile, writeFile, mkdir } from 'fs/promises';
 
-import { PolicyType } from '../schema/Policy.js';
 import type { Policy } from '../schema/Policy.js';
 
 import { toUrlSegment } from './util/to-url-segment.js';
 import * as paths from './util/paths.js';
+
+type StubPolicy = Omit<Policy, 'name' | 'versions'>;
 
 const policiesSrc = paths.policies;
 
 /**
  * Create a stub for each document in a given list of names
  */
-export async function createStubs(names: Policy['name'][], type: Policy['type'], schemaVersion: Policy['schemaVersion']) {
+export async function createStubs(names: Policy['name'][], stubPolicy: StubPolicy) {
 	const promises: Promise<unknown>[] = [];
 
 	for (let name of names) {
@@ -20,10 +21,9 @@ export async function createStubs(names: Policy['name'][], type: Policy['type'],
 		}
 
 		const chapter: Policy = {
-			schemaVersion,
 			name,
-			type,
 			versions: [],
+			...stubPolicy,
 		};
 
 		const chapterDir = `${policiesSrc}/${toUrlSegment(name)}`;
