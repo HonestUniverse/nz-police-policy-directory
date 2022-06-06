@@ -2,11 +2,11 @@ import { OIARequest } from './OIARequest.js'
 import { OIAWithholdings } from './OIAWithholdings.js'
 import { DatePartial } from './DatePartial.js';
 
-declare enum ProvenanceSource {
+export enum ProvenanceSource {
 	NZ_POLICE = 'NZ Police',
 }
 
-declare enum ProvenanceMethod {
+export enum ProvenanceMethod {
 	RELEASED_UNDER_THE_OIA = 'Released under the OIA',
 	PROACTIVELY_RELEASED = 'Proactively released',
 	LEAKED = 'Leaked',
