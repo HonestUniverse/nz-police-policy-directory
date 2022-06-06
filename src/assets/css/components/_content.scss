@@ -1,6 +1,10 @@
 .content {
 	@extend %content;
 
+	+ .content {
+		margin-top: 1rem;
+	}
+
 	dl {
 		&,
 		> div {
