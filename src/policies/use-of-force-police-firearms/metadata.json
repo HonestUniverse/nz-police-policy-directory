@@ -1,0 +1,160 @@
+{
+	"schemaVersion": "0.5.0",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"duration": {
+				"on": [
+					"2022-02-09",
+					"2022-02-24"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Joshua Rogers",
+						"id": "IR-01-22-3361",
+						"responseUrl": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
+						"withholdings": {
+							"6(c)": "Some information has been withheld on pages 15–20, 34, 37, and 40–42."
+						}
+					},
+					"extracted": "2022-02-09",
+					"released": "2022-02-24",
+					"retrieved": "2022-05-22",
+					"url": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
+					"fileUrl": "https://fyi.org.nz/request/18483/response/70736/attach/4/Rogers%20Joshua%20IR%2001%2022%203361%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-02-24/Rogers Joshua IR 01 22 3361 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 63,
+					"size": 6128607,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 39–42 are images of text"
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-02-24/Rogers Joshua IR 01 22 3361 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 6128607,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-btukv"
+		},
+		{
+			"duration": {
+				"ended": true,
+				"on": [
+					"2019-06-28",
+					"2021-05-31"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-19-6782",
+						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
+						"withholdings": "None"
+					},
+					"released": "2019-06-28",
+					"retrieved": "2022-05-11",
+					"url": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
+					"fileUrl": "https://fyi.org.nz/request/9725/response/35815/attach/3/Police%20firearms.pdf"
+				},
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-19-6782",
+						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-58555",
+						"withholdings": "None"
+					},
+					"released": "2021-05-31",
+					"retrieved": "2022-05-11",
+					"url": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-58555",
+					"fileUrl": "https://fyi.org.nz/request/9725/response/58555/attach/12/Police%20firearms.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "unnamed-version-1/Police firearms.pdf",
+					"type": "application/pdf",
+					"size": 40148,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only the \"When can firearms be carried?\" section was released in this document."
+					},
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"documentType": "Policy"
+				}
+			],
+			"id": "u-ggvbk"
+		}
+	],
+	"name": "Use of Force - Police firearms"
+}

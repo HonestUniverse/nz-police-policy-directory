@@ -6,6 +6,10 @@
 }
 
 .directory__search {
+	body.no-js & {
+		display: none;
+	}
+
 	isolation: isolate;
 
 	@include bp-from("s") {
