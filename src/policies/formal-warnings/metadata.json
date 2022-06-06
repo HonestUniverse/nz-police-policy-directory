@@ -2,9 +2,62 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
+			"duration": {
+				"on": [
+					"2022-05-26"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"extracted": "2022-05-26",
+					"published": {
+						"year": 2022,
+						"month": 5
+					},
+					"retrieved": "2022-06-06",
+					"url": "https://www.police.govt.nz/about-us/publication/police-formal-warnings-policy",
+					"archiveUrl": "https://web.archive.org/web/20220606091452/https://www.police.govt.nz/about-us/publication/police-formal-warnings-policy",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/police-formal-warnings-policy.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220527043915/https://www.police.govt.nz/sites/default/files/publications/police-formal-warnings-policy.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-may/police-formal-warnings-policy.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 72527,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-dzykd"
+		},
+		{
 			"name": "Version 1",
 			"duration": {
 				"start": "2021-01-14",
+				"ended": true,
 				"on": [
 					"2021-05-24"
 				]
@@ -55,6 +108,6 @@
 			"id": "u-iohjy"
 		}
 	],
-	"schemaVersion": "0.5.0",
+	"schemaVersion": "0.5.2",
 	"name": "Formal warnings"
 }
