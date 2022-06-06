@@ -1,6 +1,9 @@
 {
 	"schemaVersion": "0.5.0",
-	"name": "People in Police Detention",
+	"name": "People in Police custody",
+	"previousNames": [
+		"People in Police Detention"
+	],
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -19,7 +22,7 @@
 						"responseUrl": "https://fyi.org.nz/request/13861-relevant-chapters-of-the-police-manual-on-deaths-in-police-custody#incoming-53023",
 						"withholdings": "None"
 					},
-					"released": "2022-11-25",
+					"released": "2020-11-25",
 					"retrieved": "2022-06-20",
 					"url": "https://fyi.org.nz/request/13861-relevant-chapters-of-the-police-manual-on-deaths-in-police-custody#incoming-53023",
 					"fileUrl": "https://fyi.org.nz/request/13861/response/53023/attach/2/Dennis%20Olivia%20IR%2001%2020%2028454%20final%20response.pdf"
