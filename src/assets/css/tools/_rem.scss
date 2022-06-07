@@ -10,7 +10,7 @@
 	$base-font-size-unitless: 16;
 	$value-unitless-scaled: math.div($value-unitless, $base-font-size-unitless);
 
-	$value-scaled-rem: #{$value-unitless-scaled}rem;
+	$value-scaled-rem: $value-unitless-scaled * 1rem;
 
 	@return $value-scaled-rem;
 }
