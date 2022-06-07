@@ -1,3 +1,5 @@
+import { toast } from '../toast/toast.js';
+
 enum Selector {
 	WRAPPER = '.js-copyable',
 	BUTTON = '.js-copyable__button',
@@ -25,6 +27,8 @@ function copyEvent(this: HTMLElement, e: MouseEvent) {
 
 	if ($content) {
 		copy($content);
+
+		toast('Copied!');
 	}
 };
 
