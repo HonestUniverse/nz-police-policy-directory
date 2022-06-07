@@ -55,4 +55,25 @@ export const contentBuildSteps: Record<string, BuildStep> = {
 			}),
 		];
 	},
+
+	/**
+	 * Generate the HTML for the Contributing page
+	 */
+	createContributingPage(src, dst, directory) {
+		return [
+			new HtmlWebpackPlugin({
+				filename: `${dst}/contributing/index.html`,
+				template: TemplateCustomizer({
+					htmlLoaderOption: {
+						sources: false,
+					},
+					templatePath: `${paths.templates}/pages/contributing.ejs`,
+					templateEjsLoaderOption: {
+						data: {},
+					},
+				}),
+				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+			}),
+		];
+	},
 };
