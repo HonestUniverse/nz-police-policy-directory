@@ -1,8 +1,9 @@
 .content {
 	@extend %content;
 
-	+ .content {
-		margin-top: 1rem;
+	margin-top: 1rem;
+	&:first-child {
+		margin-top: 0;
 	}
 
 	dl {

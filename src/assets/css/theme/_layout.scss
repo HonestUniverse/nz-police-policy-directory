@@ -1,4 +1,5 @@
 $layout-max-width: 800px;
+$layout-gutter: 1rem;
 
 ///////////////////
 // Layout Mixins //
@@ -14,8 +15,8 @@ $layout-max-width: 800px;
 
 /// The standard side padding
 @mixin layout-wrapper-gutter() {
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: $layout-gutter;
+	padding-right: $layout-gutter;
 }
 
 /// A horizontally centred area with a maximum width and the standard side padding
