@@ -9,6 +9,13 @@
 
 <%
 	const title = `${policy.name} ${version.name}`;
+
+	/**
+	 * A version is a stub if it doesn't have any files
+	 */
+	function isStub(version) {
+		return version.files.length === 0;
+	}
 %>
 
 <%- include('../layout/head', {
@@ -34,6 +41,10 @@
 
 	<div class="policy__version__body">
 		<%- include('../components/version', { version, policy }); %>
+
+		<% if (isStub(version)) { %>
+			<%- include ('../components/stub-notice', { provenance: policy.provenance }); %>
+		<% } %>
 	</div>
 </article>
 

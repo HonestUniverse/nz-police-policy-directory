@@ -39,18 +39,18 @@
 
 	@if ($icon == true) {
 		@if ($size == "m") {
-			$height: 44px;
+			$height: rem(44px);
+			font-size: rem(18px);
 		} @else {
 			@error "Unrecognised button size option #{$size}";
 		}
 
-		height: rem($height);
-		width: rem($height);
-		font-size: rem($height);
-		line-height: 1;
+		height: $height;
+		width: $height;
+		line-height: $height;
 	} @else {
 		@if ($size == "m") {
-			$height: 44px;
+			$height: rem(44px);
 			@include font-base-18;
 		} @else {
 			@error "Unrecognised button size option #{$size}";
