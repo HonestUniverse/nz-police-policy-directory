@@ -26,18 +26,20 @@
 		}
 	%>
 
-	<% primaryFiles.forEach((file) => { %>
-		<%- include('file', { file, version, policy }); %>
-	<% }) %>
+	<% if (version.files.length > 0) { %>
+		<% primaryFiles.forEach((file) => { %>
+			<%- include('file', { file, version, policy }); %>
+		<% }) %>
 
-	<% if (secondaryFiles.length) { %>
-		<div class="version__alternate-files">
-			<h3 class="version__alternate-files__title">Secondary files</h3>
-			<div class="version__alternate-files__contents">
-				<% secondaryFiles.forEach((file) => { %>
-					<%- include('file', { file, version, policy }); %>
-				<% }) %>
+		<% if (secondaryFiles.length) { %>
+			<div class="version__alternate-files">
+				<h3 class="version__alternate-files__title">Secondary files</h3>
+				<div class="version__alternate-files__contents">
+					<% secondaryFiles.forEach((file) => { %>
+						<%- include('file', { file, version, policy }); %>
+					<% }) %>
+				</div>
 			</div>
-		</div>
+		<% } %>
 	<% } %>
 </div>

@@ -37,7 +37,7 @@
 			const latestVersion = policy.versions[0];
 			const mainFile = policy.versions[0].files[0];
 
-			const provenance = mainFile.provenance || latestVersion.provenance;
+			const provenance = mainFile?.provenance || latestVersion.provenance;
 
 			// From provenance objects with a `retrieved` date, create an array of retrieved dates and sort it from most recent to oldest
 			const retrievedDates = provenance.filter((prov) => prov.retrieved).map((prov) => new Date(prov.retrieved)).sort();
