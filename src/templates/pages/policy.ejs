@@ -12,6 +12,23 @@
 		notices,
 		versions,
 	} = policy;
+
+	/**
+	 * A policy is a stub if none of its versions have any files
+	 */
+	 function isStub(policy) {
+		const hasVersions = policy.versions.length > 0;
+		if (!hasVersions) {
+			return true;
+		}
+
+		const hasFiles = policy.versions.find((version) => version.files.length > 0);
+		if (!hasFiles) {
+			return true;
+		}
+
+		return false;
+	}
 %>
 
 <%- include('../layout/head', {
@@ -81,34 +98,10 @@
 			</ol>
 		</div>
 	<% } %>
-<% } else { %>
-	<div class="content">
-		<h2>We don't have this document</h2>
+<% } %>
 
-		<% if (policy.provenance) { %>
-			<p>We know a document with this name exists, but we don't have a copy of it.</p>
-		<% } %>
-	</div>
-
-	<% if (policy.provenance) { %>
-		<% for (const prov of policy.provenance) { %>
-			<%
-				const options = {
-					omitEmptyWithholdings: true,
-				};
-			%>
-
-			<div class="provenance__card">
-				<%- include('../components/provenance', { provenance: prov, options, }); %>
-			</div>
-		<% } %>
-	<% } %>
-
-	<div class="content todo">
-		<p>Do you have a copy of this document? You can help us complete the directory by letting us know where it's publicly available, or by sending us a copy.</p>
-
-		<p>Otherwise, you can help us by requesting this document under the Official Information Act.</p>
-	</div>
+<% if (isStub(policy)) { %>
+	<%- include ('../components/stub-notice', { provenance: policy.provenance }); %>
 <% } %>
 
 <%- include('../layout/foot'); %>
