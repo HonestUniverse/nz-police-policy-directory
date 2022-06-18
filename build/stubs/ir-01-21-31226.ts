@@ -2,6 +2,7 @@ import { PolicyType } from '../../schema/Policy.js';
 import { ProvenanceSource, ProvenanceMethod } from '../../schema/Provenance.js';
 import { OIAWithholdingsSummary } from '../../schema/OIAWithholdings.js';
 
+import type { StubPolicyWith, StubPolicyWithout } from '../create-stubs.js';
 import { createStubs } from '../create-stubs.js';
 
 // Police Manual chapter names sourced from https://fyi.org.nz/request/16707-police-manual-for-investing-offences-under-the-crimes-act#incoming-67034
@@ -594,7 +595,10 @@ const knownChapterNames = [
 	'Youth justice - Part 3 Criminal procedure in the Youth Court',
 ];
 
-createStubs(knownChapterNames, {
+type StubProps = 'name';
+
+const stubs: StubPolicyWith<StubProps>[] = knownChapterNames.map((name) => ({ name }));
+const base: StubPolicyWithout<StubProps> = {
 	schemaVersion: '0.5.1',
 	type: PolicyType.POLICE_MANUAL_CHAPTER,
 	provenance: [{
@@ -611,4 +615,7 @@ createStubs(knownChapterNames, {
 			url: 'https://fyi.org.nz/request/16707-police-manual-for-investing-offences-under-the-crimes-act#incoming-67034',
 			fileUrl: 'https://fyi.org.nz/request/16707/response/67034/attach/3/Van%20Wey%20Lovatt%20Amy%20IR%2001%2021%2031226%20final%20response.pdf',
 	}],
-});
+	versions: [],
+};
+
+createStubs(stubs, base);
