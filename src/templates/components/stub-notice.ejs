@@ -1,0 +1,36 @@
+<%##
+	locals: {
+		provenance?: Provenance,
+	}
+%>
+
+<div class="content">
+	<h2>We don't have any files for this document</h2>
+
+	<% if (locals.provenance) { %>
+		<p>We know a document with this name exists, but we don't have a copy of it.</p>
+	<% } %>
+</div>
+
+<% if (locals.provenance) { %>
+	<%
+		const options = {
+			omitEmptyWithholdings: true,
+		};
+	%>
+
+	<% for (const prov of provenance) { %>
+		<div class="provenance__card">
+			<%- include('../components/provenance', {
+				provenance: prov,
+				options,
+			}); %>
+		</div>
+	<% } %>
+<% } %>
+
+<div class="content todo">
+	<p>Do you have a copy of this document? You can help us complete the directory by letting us know where it's publicly available, or by sending us a copy.</p>
+
+	<p>Otherwise, you can help us by requesting this document under the Official Information Act.</p>
+</div>

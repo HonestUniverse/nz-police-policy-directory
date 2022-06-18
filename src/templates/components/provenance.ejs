@@ -15,7 +15,7 @@
 		const [dateType, date] = (() => {
 			if (provenance.published) {
 				return ['Published', provenance.published];
-			} else if (provenance.extracted && !options?.omitExtractedDate) {
+			} else if (provenance.extracted && !locals.options?.omitExtractedDate) {
 				return ['Extracted', provenance.extracted];
 			} else if (provenance.released) {
 				return ['Released', provenance.released];
@@ -47,7 +47,7 @@
 		<% } %>
 
 		<% if (withholdings) { %>
-			<% if (!(options?.omitEmptyWithholdings && withholdings === 'None')) { %>
+			<% if (!(locals.options?.omitEmptyWithholdings && withholdings === 'None')) { %>
 				<div class="provenance__withholdings">
 					<%- include('../components/withholdings', { withholdings }) %>
 				</div>
