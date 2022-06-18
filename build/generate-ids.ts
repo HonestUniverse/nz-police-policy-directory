@@ -125,7 +125,7 @@ export function generateIdsPolicy(before: Policy): {
 /**
  * Generate a new ID for a policy version. It must be unique within that policy
  */
-function generateUniqueId(policy): string {
+function generateUniqueId(policy: Policy): string {
 	const existingIds = policy.versions.map((version) => version.id).filter((id) => !!id);
 
 	let id: string = generateId();
@@ -140,7 +140,7 @@ function generateUniqueId(policy): string {
 /**
  * Generate an ID for a policy version
  */
-function generateId(seed?: number): string {
+export function generateId(seed?: number): string {
 	// Alphabet with "l", "m", and "r" removed so there's never ambiguity between "i" and "l" or "rn" and "m"
 	const idChars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'n', 'o', 'p', 'q', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 	const idPrefix = 'u-';
