@@ -1,6 +1,6 @@
 {
-	"schemaVersion": "0.5.0",
-	"type": "Undetermined",
+	"schemaVersion": "0.5.4",
+	"type": "Guidelines",
 	"versions": [
 		{
 			"duration": {
