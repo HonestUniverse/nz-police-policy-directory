@@ -41,5 +41,13 @@
 				</div>
 			</div>
 		<% } %>
+	<% } else { %>
+		<%- include('notice', {
+			notice: {
+				type: 'error',
+				message: 'This version has no files.',
+			},
+		}); %>
+		<% } %>
 	<% } %>
 </div>
