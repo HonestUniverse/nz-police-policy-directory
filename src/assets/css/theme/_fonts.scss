@@ -117,6 +117,11 @@ $icon-tick: "\2714";
 	line-height: 1.4;
 }
 
+@mixin font-base-18bu {
+	@include font-base-18b;
+	text-transform: uppercase;
+}
+
 @mixin font-base-16 {
 	font-family: $font-base;
 	font-weight: $regular;
