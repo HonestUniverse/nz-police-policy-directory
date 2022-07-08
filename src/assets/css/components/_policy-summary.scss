@@ -7,6 +7,11 @@
 	> :last-child {
 		margin-bottom: 0;
 	}
+
+	position: relative;
+
+	border-bottom: 2px solid;
+	@include use-var(border-bottom-color, --accent, currentColor);
 }
 
 .policy-summary__title {

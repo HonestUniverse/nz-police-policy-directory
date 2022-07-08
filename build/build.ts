@@ -37,7 +37,6 @@ export async function createBuildPlugins(policiesPath = paths.policies) {
 	const policiesByNameSafe: Record<string, Policy> = {};
 
 	plugins.push(...await gatherBuildStepPlugins(assetBuildSteps, paths.assets, paths.distAssetsFull, null));
-	plugins.push(...await gatherBuildStepPlugins(contentBuildSteps, paths.assets, paths.distFull, null));
 
 	for (const [policyName, policy] of Object.entries(policiesByName)) {
 		const policyNameSafe = toUrlSegment(policyName);
@@ -48,6 +47,10 @@ export async function createBuildPlugins(policiesPath = paths.policies) {
 
 		plugins.push(...await gatherBuildStepPlugins(policyBuildSteps, policySrcPath, policyDstPath, policy));
 	}
+
+	plugins.push(...await gatherBuildStepPlugins(contentBuildSteps, paths.assets, paths.distFull, {
+		directory: policiesByNameSafe,
+	}));
 
 	plugins.push(...await gatherBuildStepPlugins(directoryBuildSteps, paths.src, paths.policiesDst, policiesByNameSafe));
 
