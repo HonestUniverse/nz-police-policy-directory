@@ -6,8 +6,16 @@
 	}
 %>
 
-<%- include('../layout/head', { title: 'Directory' }); %>
+<%- include('../layout/head', { title: 'NZ Police Policy Directory' }); %>
 
-<a href="<%= paths.policies %>" class="directory__section-link">Policies</a>
+<div class="content">
+	<h2>Welcome</h2>
+
+	<p>Welcome to the NZ Police Policy Directory. This website is an independent host of New Zealand Police policies and related documents, and is not associated with or controlled by NZ Police.</p>
+
+	<p>You can find a complete list of all Police policy documents we are aware of in our directory:</p>
+
+	<a href="<%= paths.policies %>" class="home__section-link">Policies</a>
+</div>
 
 <%- include('../layout/foot'); %>
