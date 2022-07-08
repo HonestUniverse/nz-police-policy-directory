@@ -3,8 +3,7 @@
 		paths: {
 			policies: string,
 		},
-		examplePolicy: Policy,
-		exampleStub: Policy,
+		directory: Record<string, Policy>,
 	}
 %>
 
@@ -37,7 +36,7 @@
 		return isStub(policy) === false;
 	});
 
-	const [exampleStubKey, exampleStub] = directoryEntries.find(([policyKey, policy]) => {
+	const exampleStubEntry = directoryEntries.find(([policyKey, policy]) => {
 		// Find a policy that is a stub
 		return isStub(policy) === true;
 	});
@@ -51,7 +50,10 @@
 
 <%- include('../components/policy-summary', { policy: examplePolicy, paths, key: examplePolicyKey }); %>
 
-<% if (exampleStub) { %>
+<% if (exampleStubEntry) { %>
+	<%
+		const [exampleStubKey, exampleStub] = exampleStubEntry;
+	%>
 	<div class="content">
 		<p>The directory also lists documents that we know exist, but which we don't have copies of. These documents are listed like this:</p>
 	</div>
