@@ -60,15 +60,51 @@
 	<% } else { %>
 		<%
 			const latestVersion = policy.versions[0];
-			const mainFile = policy.versions[0].files[0];
+			const duration = latestVersion.duration;
 
-			const provenance = mainFile?.provenance || latestVersion.provenance;
+			// Show the Latest single date we have for the latest version
+			if (duration.end) { %>
+				<span class="policy-summary__date">Latest version ended: <%- include('../helpers/date-partial', { date: duration.end }); %></span>
+			<% } else if (duration.on && duration.on.length >= 1) { %>
+				<%
+					const lastOnDate = duration.on.sort((a, b) => b.localeCompare(a))[0];
+				%>
+				<span class="policy-summary__date">Latest version active on: <%- include('../helpers/date-partial', { date: lastOnDate }); %></span>
+			<% } else if (duration.start) { %>
+				<span class="policy-summary__date">Latest version started: <%- include('../helpers/date-partial', { date: duration.start }); %></span>
+			<% } else { %>
+				<%
+					// We don't have any specific duration information, so say when it was published, extracted, released, or retrieved
+					const mainFile = latestVersion.files[0];
+					const provenance = mainFile?.provenance || latestVersion.provenance;
 
-			// From provenance objects with a `retrieved` date, create an array of retrieved dates and sort it from most recent to oldest
-			const retrievedDates = provenance.filter((prov) => prov.retrieved).map((prov) => new Date(prov.retrieved)).sort();
-		%>
-		<% if (retrievedDates.length) { %>
-			<span class="policy-summary__date">Last Updated: <%- include('../helpers/date-partial', { date: retrievedDates[0] }); %></span>
-		<% } %>
+					function getLatestDate(dateType, provenance) {
+						const dates = provenance.filter(
+							(prov) => prov[dateType]
+						).map(
+							(prov) => new Date(prov[dateType])
+						).sort(
+							(a, b) => b - a
+						)
+
+						return dates[0];
+					}
+
+					const publishedDate = getLatestDate('published', provenance);
+					const extractedDate = getLatestDate('extracted', provenance);
+					const releasedDate = getLatestDate('released', provenance);
+					const retrievedDate = getLatestDate('retrieved', provenance);
+				%>
+
+				<% if (publishedDate) { %>
+					<span class="policy-summary__date">Latest information published: <%- include('../helpers/date-partial', { date: publishedDate }); %></span>
+				<% } else if (extractedDate) { %>
+					<span class="policy-summary__date">Latest information extracted: <%- include('../helpers/date-partial', { date: extractedDate }); %></span>
+				<% } else if (releasedDate) { %>
+					<span class="policy-summary__date">Latest information released: <%- include('../helpers/date-partial', { date: releasedDate }); %></span>
+				<% } else if (retrievedDate) { %>
+					<span class="policy-summary__date">Latest information retrieved: <%- include('../helpers/date-partial', { date: retrievedDate }); %></span>
+				<% } %>
+			<% } %>
 	<% } %>
 </section>
