@@ -605,7 +605,11 @@ const stubsSource: [string, string][] = [
 function fixName(originalName: string): string {
 	const name = originalName
 		.replace('DealersTraders-', 'Dealers Traders - ')
-		.replace(/Maori/g, 'Māori');
+		.replace(/Maori/g, 'Māori')
+		.replace('Unacceptable behaviour - Kia Tu policy and guidelines', 'Unacceptable behaviour - Kia Tū policy and guidelines')
+		.replace(' (open access version)', '')
+		.replace(' (QID access only)', '')
+	;
 
 	return name;
 }
@@ -670,17 +674,8 @@ const base: StubPolicyWithout<StubProps> = {
 };
 
 /* TODO: These chapters need additional work to confirm, correct, clarify, or transform
-	Code of Conduct
-		Listed as a "Manual" type?
 	Interpreting Services - Ezispeak (previously Language Line)
-	Kidnapping for ransom (open access version)
-	Kidnapping for ransom (QID access only)
 	New Zealand Police Library (Kai)
-	OCEANZ operations (QID access only)
-	Search Part 15 - Government agency requests for assistance with search warrants
-	Name change? Used to have "and production orders" in its name, looks like this has caused a duplication
-		Unacceptable behaviour - Kia Tu policy and guidelines
-	Inconsistent whether it's called "Kia Tu" or "Kia Tū"
 */
 
 /* TODO: These chapters aren't present in the latest list:
