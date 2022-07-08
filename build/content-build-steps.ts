@@ -55,4 +55,46 @@ export const contentBuildSteps: Record<string, BuildStep> = {
 			}),
 		];
 	},
+
+	/**
+	 * Generate the HTML for the About page
+	 */
+	createAboutPage(src, dst, directory) {
+		return [
+			new HtmlWebpackPlugin({
+				filename: `${dst}/about/index.html`,
+				template: TemplateCustomizer({
+					htmlLoaderOption: {
+						sources: false,
+					},
+					templatePath: `${paths.templates}/pages/about.ejs`,
+					templateEjsLoaderOption: {
+						data: {},
+					},
+				}),
+				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+			}),
+		];
+	},
+
+	/**
+	 * Generate the HTML for the Accessibility page
+	 */
+	createAccessibilityPage(src, dst, directory) {
+		return [
+			new HtmlWebpackPlugin({
+				filename: `${dst}/accessibility/index.html`,
+				template: TemplateCustomizer({
+					htmlLoaderOption: {
+						sources: false,
+					},
+					templatePath: `${paths.templates}/pages/accessibility.ejs`,
+					templateEjsLoaderOption: {
+						data: {},
+					},
+				}),
+				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+			}),
+		];
+	},
 };
