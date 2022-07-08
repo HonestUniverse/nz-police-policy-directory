@@ -51,6 +51,14 @@
 
 <%- include('../components/policy-summary', { policy: examplePolicy, paths, key: examplePolicyKey }); %>
 
+<% if (exampleStub) { %>
+	<div class="content">
+		<p>The directory also lists documents that we know exist, but which we don't have copies of. These documents are listed like this:</p>
+	</div>
+
+	<%- include('../components/policy-summary', { policy: exampleStub, paths, key: exampleStubKey }); %>
+<% } %>
+
 <div class="content">
 	<p>Each policy has one or more versions, which were active for a period of time. Versions have information about when they were active, but we don't always have all the information about when a version was active. We display information about when a policy version was active like this:</p>
 </div>
@@ -58,7 +66,9 @@
 <%- include('../components/duration', { duration: examplePolicy.versions[0].duration }); %>
 
 <div class="content">
-	<p>Each of those versions has one or more files. Next to a version's files, we display have information about how the file was made public, what information it contains, and how accessible it is. Some more detailed information can be viewed by expanding sections behind a <strong>+</strong> icon.</p>
+	<p>Each of those versions has one or more files. Next to a version's files, we display have information about how the file was made public, what information it contains, and how accessible it is. For more information about our accessibility ratings, see our <a href="/accessibility/">Accessibility</a> page.</p>
+
+	<p>Some more detailed information can be viewed by expanding sections behind a <strong>+</strong> icon.</p>
 
 	<p>If a file has significant accessibility issues, we may also provided alternate versions which are more accessible. The original file will always be clearly marked.</p>
 </div>
@@ -68,13 +78,5 @@
 	version: examplePolicy.versions[0],
 	policy: examplePolicy,
 }); %>
-
-<% if (exampleStub) { %>
-	<div class="content">
-		<p>The directory also lists documents that we know exist, but which we don't have copies of. These documents are listed like this:</p>
-	</div>
-
-	<%- include('../components/policy-summary', { policy: exampleStub, paths, key: exampleStubKey }); %>
-<% } %>
 
 <%- include('../layout/foot'); %>
