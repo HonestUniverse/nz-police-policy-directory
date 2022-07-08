@@ -92,28 +92,33 @@ $icon-tick: "\2714";
 	font-family: $font-base;
 	font-weight: $bold;
 	font-size: rem(24px);
+	line-height: 1.4;
 }
 
 @mixin font-base-20 {
 	font-family: $font-base;
 	font-weight: $regular;
 	font-size: rem(20px);
+	line-height: 1.4;
 }
 
 @mixin font-base-18 {
 	font-family: $font-base;
 	font-weight: $regular;
 	font-size: rem(18px);
+	line-height: 1.4;
 }
 
 @mixin font-base-18b {
 	font-family: $font-base;
 	font-weight: $bold;
 	font-size: rem(18px);
+	line-height: 1.4;
 }
 
 @mixin font-base-16 {
 	font-family: $font-base;
 	font-weight: $regular;
 	font-size: rem(16px);
+	line-height: 1.4;
 }
