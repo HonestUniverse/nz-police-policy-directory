@@ -1,0 +1,22 @@
+.toast__container {
+	position: fixed;
+	pointer-events: none;
+
+	bottom: 1rem;
+	right: 1rem;
+	// Try to align with layout wrapper
+	right: max(1rem, calc(50% - 1920px / 2 + $layout-gutter));
+}
+
+.toast {
+	pointer-events: auto;
+
+	@extend %card;
+
+	padding: 0.5rem;
+	@include font-base-20;
+
+	+ .toast {
+		margin-top: 0.5rem;
+	}
+}
