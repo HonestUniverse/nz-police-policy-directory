@@ -1,0 +1,49 @@
+<%#
+	locals: {}
+%>
+
+<%- include('../layout/head', {
+	title: 'Accessibility',
+}); %>
+
+<div class="content">
+	<section>
+		<h2>Ratings</h2>
+
+		<p>Accessibility is important to us. We believe it's important that anyone, regardless of their disabilities, should have equal access to information.</p>
+
+		<p>Unfortunately, information released under the Official Information Act is often provided in formats that range from wholly inaccessible to poorly accessible.</p>
+
+		<p>We provide accessibility information for documents hosted on this website, which includes an accessibility rating. Here is how we determine those ratings:</p>
+
+		<dl>
+			<div>
+				<dt>None</dt>
+				<dd>This document is entirely inaccessible. For example, it may be text-based information provided as images of text embedded in a PDF.</dd>
+			</div>
+
+			<div>
+				<dt>Bad</dt>
+				<dd>Parts of this document are accessible, but it contains portions that are entirely inaccessible. For example, it may be a PDF where some pages are images of text.</dd>
+			</div>
+
+			<div>
+				<dt>Poor</dt>
+				<dd>This document's text-based content is accessible, but it has other accessibility issues such as a lack of semantics, an illogical reading order, or missing alt text.</dd>
+			</div>
+
+			<div>
+				<dt>Good</dt>
+				<dd>This document is as accessible as well-structured HTML. All text can be read, semantic information such as headings and lists is present, and all images have descriptive alt text.</dd>
+			</div>
+		</dl>
+	</section>
+
+	<section>
+		<h2>Alternate files</h2>
+
+		<p>In cases of documents with poor accessibility ratings, we may provide alternative versions of these files that have been modified to improve accessibility without changing the content. Where we have done this, files will be marked as not original, and any modifications we have made will be recorded.</p>
+	</section>
+</div>
+
+<%- include('../layout/foot'); %>
