@@ -1,0 +1,18 @@
+.copy-button {
+	@include button("m", true, "primary");
+
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+
+	body.no-js & {
+		display: none;
+	}
+}
+
+.copy-button__icon {
+	&::before {
+		font-family: $font-icons;
+		content: $icon-copy;
+	}
+}
