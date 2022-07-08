@@ -5,12 +5,17 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 
 import * as paths from './util/paths.js';
 import { makeRootRelative } from './util/make-root-relative.js';
+import { Policy } from '../schema/Policy.js';
 
-export const contentBuildSteps: Record<string, BuildStep> = {
+interface ContentBuildStepData {
+	directory: Record<string, Policy>,
+}
+
+export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> = {
 	/**
 	 * Generate the HTML for the index page
 	 */
-	createIndexPage(src, dst, directory) {
+	createIndexPage(src, dst, buildStepData) {
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/index.html`,
@@ -35,7 +40,7 @@ export const contentBuildSteps: Record<string, BuildStep> = {
 	/**
 	 * Generate the HTML for the 404 page
 	 */
-	create404Page(src, dst, directory) {
+	create404Page(src, dst, buildStepData) {
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/404.html`,
@@ -59,7 +64,7 @@ export const contentBuildSteps: Record<string, BuildStep> = {
 	/**
 	 * Generate the HTML for the About page
 	 */
-	createAboutPage(src, dst, directory) {
+	createAboutPage(src, dst, buildStepData) {
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/about/index.html`,
@@ -80,7 +85,7 @@ export const contentBuildSteps: Record<string, BuildStep> = {
 	/**
 	 * Generate the HTML for the Accessibility page
 	 */
-	createAccessibilityPage(src, dst, directory) {
+	createAccessibilityPage(src, dst, buildStepData) {
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/accessibility/index.html`,
@@ -94,6 +99,32 @@ export const contentBuildSteps: Record<string, BuildStep> = {
 					},
 				}),
 				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+			}),
+		];
+	},
+
+	/**
+	 * Generate the HTML for the How to Use page
+	 */
+	createHowToUsePage(src, dst, buildStepData) {
+		return [
+			new HtmlWebpackPlugin({
+				filename: `${dst}/how-to-use/index.html`,
+				template: TemplateCustomizer({
+					htmlLoaderOption: {
+						sources: false,
+					},
+					templatePath: `${paths.templates}/pages/how-to-use.ejs`,
+					templateEjsLoaderOption: {
+						data: {
+							paths: {
+								policies: makeRootRelative(paths.policiesDst),
+							},
+							directory: buildStepData.directory,
+						},
+					},
+				}),
+				chunks: ['priority', 'main', 'enhancements', 'style'],
 			}),
 		];
 	},
