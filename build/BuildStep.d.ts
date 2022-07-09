@@ -18,3 +18,6 @@ export type PolicyBuildStep = BuildStep<PageBuildData<{
 export type DirectoryBuildStep = BuildStep<PageBuildData<{
 	directory: Record<string, Policy>,
 }>>;
+export type ContentBuildStep = BuildStep<PageBuildData<{
+	directory: Record<string, Policy>,
+}>>;
