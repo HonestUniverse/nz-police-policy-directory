@@ -1,11 +1,19 @@
 <%#
 	locals: {
-		policy: Policy,
-		versionPaths: Record<string, string>,
+		siteData: SiteData,
+		pageData: {
+			policy: Policy,
+			versionPaths: Record<string, string>,
+		}
 	}
 %>
 
 <%
+	const {
+		policy,
+		versionPaths,
+	} = pageData;
+
 	const {
 		name,
 		type,
