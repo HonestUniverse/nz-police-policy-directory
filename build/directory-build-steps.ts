@@ -11,7 +11,8 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	/**
 	 * Generate the JSON file for the directory
 	 */
-	createDirectoryMetadata(src, dst, directory) {
+	createDirectoryMetadata(src, dst, buildData) {
+		const { directory } = buildData;
 		const data = Object.values(directory);
 
 		return [new GenerateJsonPlugin(
@@ -25,7 +26,8 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	/**
 	 * Generate the HTML for the Directory page
 	 */
-	createDirectoryPage(src, dst, directory) {
+	createDirectoryPage(src, dst, buildData) {
+		const { directory } = buildData;
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/index.html`,
@@ -51,7 +53,8 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	/**
 	 * Generate a page reporting which content needs attention
 	 */
-	createContentReportPage(src, dst, directory) {
+	createContentReportPage(src, dst, buildData) {
+		const { directory } = buildData;
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/content-report.html`,

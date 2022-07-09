@@ -5,6 +5,7 @@ import type { Policy } from '../schema/Policy.js';
 import { readAllPolicies } from './read-policy.js';
 
 import * as paths from './util/paths.js';
+import { getSiteData } from './util/get-site-data.js';
 
 import type { BuildStep } from './BuildStep.js';
 
@@ -31,6 +32,8 @@ async function gatherBuildStepPlugins<T = unknown>(steps: Record<string, BuildSt
  * Create all necessary Webpack plugins for policy and directory build steps
  */
 export async function createBuildPlugins(policiesPath = paths.policies) {
+	const siteData = getSiteData();
+
 	const plugins: ReturnType<BuildStep> = [];
 
 	const policiesByName = await readAllPolicies(policiesPath);
@@ -45,14 +48,21 @@ export async function createBuildPlugins(policiesPath = paths.policies) {
 		const policySrcPath = `${policiesPath}/${policyName}`;
 		const policyDstPath = `${paths.policiesDst}/${policyNameSafe}`;
 
-		plugins.push(...await gatherBuildStepPlugins(policyBuildSteps, policySrcPath, policyDstPath, policy));
+		plugins.push(...await gatherBuildStepPlugins(policyBuildSteps, policySrcPath, policyDstPath, {
+			siteData,
+			policy,
+		}));
 	}
 
 	plugins.push(...await gatherBuildStepPlugins(contentBuildSteps, paths.assets, paths.distFull, {
+		siteData,
 		directory: policiesByNameSafe,
 	}));
 
-	plugins.push(...await gatherBuildStepPlugins(directoryBuildSteps, paths.src, paths.policiesDst, policiesByNameSafe));
+	plugins.push(...await gatherBuildStepPlugins(directoryBuildSteps, paths.src, paths.policiesDst, {
+		siteData,
+		directory: policiesByNameSafe,
+	}));
 
 	return plugins;
 }
