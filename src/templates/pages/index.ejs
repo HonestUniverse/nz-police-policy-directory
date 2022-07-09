@@ -1,9 +1,12 @@
 <%##
 	locals: {
-		paths: {
-			policies: string,
-		},
+		siteData: SiteData,
+		pageData: {},
 	}
+%>
+
+<%
+	const { paths } = siteData;
 %>
 
 <%- include('../layout/head', { title: 'NZ Police Policy Directory' }); %>
