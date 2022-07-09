@@ -131,8 +131,14 @@ class AlterPlugin {
 
 				const bodyTag = source.match(/<body.*?>/)?.[0];
 				if (!bodyTag) {
-					callback(new Error(`Cannot find opening body tag in output ${data.outputName}`));
-					return;
+					if (source.includes('Error:')) {
+						// No need to report an error, since it will already be included in output
+						callback(false, data);
+						return;
+					} else {
+						callback(new Error(`Cannot find opening body tag in output ${data.outputName}`), data);
+						return;
+					}
 				}
 
 				const bodyStart = source.indexOf(bodyTag) + bodyTag.length;
