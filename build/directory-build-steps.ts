@@ -27,7 +27,11 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	 * Generate the HTML for the Directory page
 	 */
 	createDirectoryPage(src, dst, buildData) {
-		const { directory } = buildData;
+		const {
+			siteData,
+			...pageData
+		} = buildData;
+
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/index.html`,
@@ -38,10 +42,8 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 					templatePath: `${paths.templates}/pages/directory.ejs`,
 					templateEjsLoaderOption: {
 						data: {
-							directory,
-							paths: {
-								policies: makeRootRelative(paths.policiesDst),
-							},
+							siteData,
+							pageData,
 						},
 					},
 				}),
@@ -54,7 +56,11 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	 * Generate a page reporting which content needs attention
 	 */
 	createContentReportPage(src, dst, buildData) {
-		const { directory } = buildData;
+		const {
+			siteData,
+			...pageData
+		} = buildData;
+
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/content-report.html`,
@@ -65,11 +71,9 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 					templatePath: `${paths.templates}/pages/content-report.ejs`,
 					templateEjsLoaderOption: {
 						data: {
-							directory,
-							paths: {
-								policies: makeRootRelative(paths.policiesDst),
-							},
-						},
+							siteData,
+							pageData,
+						}
 					},
 				}),
 				chunks: ['priority', 'main', 'enhancements', 'style'],
