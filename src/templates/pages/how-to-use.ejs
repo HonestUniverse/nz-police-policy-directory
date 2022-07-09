@@ -1,10 +1,15 @@
 <%##
 	locals: {
-		paths: {
-			policies: string,
+		siteData: SiteData,
+		pageData: {
+			directory: Record<string, Policy>,
 		},
-		directory: Record<string, Policy>,
 	}
+%>
+
+<%
+	const { paths } = siteData;
+	const { directory } = pageData;
 %>
 
 <%

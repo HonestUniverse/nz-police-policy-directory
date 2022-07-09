@@ -7,15 +7,18 @@ import * as paths from './util/paths.js';
 import { makeRootRelative } from './util/make-root-relative.js';
 import { Policy } from '../schema/Policy.js';
 
-interface ContentBuildStepData {
-	directory: Record<string, Policy>,
-}
+import type { ContentBuildStep } from './BuildStep.js';
 
-export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> = {
+export const contentBuildSteps: Record<string, ContentBuildStep> = {
 	/**
 	 * Generate the HTML for the index page
 	 */
 	createIndexPage(src, dst, buildStepData) {
+		const {
+			siteData,
+			...pageData
+		} = buildStepData;
+
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/index.html`,
@@ -26,9 +29,8 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 					templatePath: `${paths.templates}/pages/index.ejs`,
 					templateEjsLoaderOption: {
 						data: {
-							paths: {
-								policies: makeRootRelative(paths.policiesDst),
-							},
+							siteData,
+							pageData,
 						},
 					},
 				}),
@@ -41,6 +43,17 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 	 * Generate the HTML for the 404 page
 	 */
 	create404Page(src, dst, buildStepData) {
+		const {
+			siteData,
+			...basePageData
+		} = buildStepData;
+
+		const pageData = {
+			...basePageData,
+			error: 404,
+			errorString: 'Page Not Found.',
+		};
+
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/404.html`,
@@ -51,8 +64,8 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 					templatePath: `${paths.templates}/pages/error.ejs`,
 					templateEjsLoaderOption: {
 						data: {
-							error: 404,
-							errorString: "Page Not Found.",
+							siteData,
+							pageData,
 						},
 					},
 				}),
@@ -65,6 +78,11 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 	 * Generate the HTML for the About page
 	 */
 	createAboutPage(src, dst, buildStepData) {
+		const {
+			siteData,
+			...pageData
+		} = buildStepData;
+
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/about/index.html`,
@@ -74,7 +92,10 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 					},
 					templatePath: `${paths.templates}/pages/about.ejs`,
 					templateEjsLoaderOption: {
-						data: {},
+						data: {
+							siteData,
+							pageData,
+						},
 					},
 				}),
 				chunks: ['priority', 'main', 'enhancements', 'style-content'],
@@ -86,6 +107,11 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 	 * Generate the HTML for the Accessibility page
 	 */
 	createAccessibilityPage(src, dst, buildStepData) {
+		const {
+			siteData,
+			...pageData
+		} = buildStepData;
+
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/accessibility/index.html`,
@@ -95,7 +121,10 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 					},
 					templatePath: `${paths.templates}/pages/accessibility.ejs`,
 					templateEjsLoaderOption: {
-						data: {},
+						data: {
+							siteData,
+							pageData,
+						},
 					},
 				}),
 				chunks: ['priority', 'main', 'enhancements', 'style-content'],
@@ -107,6 +136,11 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 	 * Generate the HTML for the How to Use page
 	 */
 	createHowToUsePage(src, dst, buildStepData) {
+		const {
+			siteData,
+			...pageData
+		} = buildStepData;
+
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/how-to-use/index.html`,
@@ -117,10 +151,8 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 					templatePath: `${paths.templates}/pages/how-to-use.ejs`,
 					templateEjsLoaderOption: {
 						data: {
-							paths: {
-								policies: makeRootRelative(paths.policiesDst),
-							},
-							directory: buildStepData.directory,
+							siteData,
+							pageData,
 						},
 					},
 				}),
@@ -133,6 +165,11 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 	 * Generate the HTML for the Contributing page
 	 */
 	createContributingPage(src, dst, buildStepData) {
+		const {
+			siteData,
+			...pageData
+		} = buildStepData;
+
 		return [
 			new HtmlWebpackPlugin({
 				filename: `${dst}/contributing/index.html`,
@@ -142,7 +179,10 @@ export const contentBuildSteps: Record<string, BuildStep<ContentBuildStepData>> 
 					},
 					templatePath: `${paths.templates}/pages/contributing.ejs`,
 					templateEjsLoaderOption: {
-						data: {},
+						data: {
+							siteData,
+							pageData,
+						},
 					},
 				}),
 				chunks: ['priority', 'main', 'enhancements', 'style-content'],
