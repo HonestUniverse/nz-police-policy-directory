@@ -1,13 +1,16 @@
 <%##
 	locals: {
-		directory: Record<string, Policy>,
-		paths: {
-			policies: string,
+		siteData: SiteData,
+		pageData: {
+			directory: Record<string, Policy>,
 		},
 	}
 %>
 
 <%
+	const { paths } = siteData;
+	const { directory } = pageData;
+
 	// Sort keys and policies by policy name
 	const directoryEntries = Object.entries(directory).sort((a, b) => a[1].name.localeCompare(b[1].name));
 	const keys = directoryEntries.map(([key, policy]) => key);
