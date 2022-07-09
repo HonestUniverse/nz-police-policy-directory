@@ -127,11 +127,20 @@ class AlterPlugin {
 			});
 
 			hooks.afterEmit.tapAsync('AlterPlugin', (data, callback) => {
-				const source = compilation.assets[data.outputName].source() as string;
+				const source = String(compilation.assets[data.outputName].source());
 
-				const bodyTag = source.match(/<body.*?>/)?.[0] as string;
+				const bodyTag = source.match(/<body.*?>/)?.[0];
+				if (!bodyTag) {
+					callback(new Error(`Cannot find opening body tag in output ${data.outputName}`));
+					return;
+				}
+
 				const bodyStart = source.indexOf(bodyTag) + bodyTag.length;
-				const body = source.match(/<body.+<\/body>/s)?.[0] as string;
+				const body = source.match(/<body.+<\/body>/s)?.[0];
+				if (!body) {
+					callback(new Error(`Cannot find closing body tag in output ${data.outputName}`));
+					return;
+				}
 
 				const scripts = body.match(/(<script[^>]+src.+?<\/script>)/g);
 
