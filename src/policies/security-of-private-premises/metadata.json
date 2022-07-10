@@ -3,7 +3,6 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Version 5.0",
 			"duration": {
 				"on": [
 					"2017-01-04"

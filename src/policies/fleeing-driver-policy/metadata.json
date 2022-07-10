@@ -2,7 +2,6 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Version 12",
 			"duration": {
 				"start": "2020-12-10",
 				"on": [
@@ -88,7 +87,6 @@
 			"id": "u-bueyv"
 		},
 		{
-			"name": "Version 11 (2)",
 			"duration": {
 				"start": "2020-07-24",
 				"ended": true,
@@ -139,17 +137,9 @@
 					"documentType": "Policy"
 				}
 			],
-			"notices": [
-				{
-					"type": "info",
-					"title": "Minor changes",
-					"message": "<p>The previously released version was also labelled as version 11, but minor changes were made on July 24 2020 without the version number being updated.</p><p>A typo was fixed in the \"Roles and responsibilities during a fleeing driver pursuit\" heading, and a \"See also\" link to a \"To pursue or not to pursue\" document was added on page 7.</p>"
-				}
-			],
 			"id": "u-iyccs"
 		},
 		{
-			"name": "Version 11",
 			"duration": {
 				"start": "2020-02-28",
 				"end": "2020-07-24"
