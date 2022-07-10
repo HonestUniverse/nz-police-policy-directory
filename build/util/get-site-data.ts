@@ -36,7 +36,8 @@ export function getSiteData(): SiteData {
 			},
 		],
 		contact: {
-			email: 'todo@example.com',
+			// TODO: Set up a proper email address
+			email: 'mark@honestuniverse.com',
 		},
 	};
 
