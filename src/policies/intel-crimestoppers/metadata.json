@@ -2,7 +2,6 @@
 	"type": "Memorandum of Understanding",
 	"versions": [
 		{
-			"name": "2021",
 			"duration": {
 				"start": "2021-06-09",
 				"on": [
@@ -83,7 +82,6 @@
 			"id": "u-qniis"
 		},
 		{
-			"name": "2014",
 			"duration": {
 				"start": "2014-07-16",
 				"ended": true
