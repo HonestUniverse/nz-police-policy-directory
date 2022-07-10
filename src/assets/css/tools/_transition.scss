@@ -52,7 +52,7 @@
 	@return $transitions;
 }
 
-/// Apply a standardised transitions
+/// Apply a standardised transition
 /// @param {string} $properties [all] - The properties to transition. If multiple, separate them by ", "
 /// @param {time} $duration [0.3s] - The transition duration
 /// @param {string} $easing [ease-in-out] - The transition easing
