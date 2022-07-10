@@ -1,0 +1,48 @@
+<%#
+	locals: {
+		siteData: SiteData,
+		pageData: {},
+	}
+%>
+
+<%- include('../layout/head', {
+	title: 'About',
+}); %>
+
+<div class="content">
+	<section>
+		<h2>Purpose</h2>
+
+		<p>This site serves as a public directory for policies and other associated documents used by New Zealand Police. It is not associated with New Zealand Police in any way, having been created by Mark Hanna and Dillon Pentz as a volunteer project.</p>
+
+		<p>Our goal is to facilitate public understanding of Police policy both in its current form and in how it has changed over time. We want this site to serve as an independent host for this information that is outside the control of Police, while still being reliable and verifiable.</p>
+
+		<p>We aim to support the work of journalists, academics, and activists, whose work regards the actions of Police and their relationship to the public. We also intend for this site to be useful to anyone who has interacted with Police, by helping them to understand the rules police officers are supposed to operate under.</p>
+
+		<p>Most of the documents on this site have been acquired through Official Information Act requests to Police. Some documents have been proactively released by Police, and have been backed up in this directory for posterity.</p>
+	</section>
+
+	<section>
+		<h2>Contributing</h2>
+
+		<p>We believe that these documents should be accessible to all as a matter of public interest, and we encourage you to help us build up the directory. If you are aware of a Police policy document we don't host, please <a href="mailto:<%- siteData.contact.email %>">contact us</a>.</p>
+
+		<p>You can also contribute to the directory by <a href="/contributing/">requesting a document we don't have</a>.</p>
+	</section>
+
+	<section>
+		<h2>About us</h2>
+
+		<h3>Mark Hanna</h3>
+
+		<p>Mark is a nerd who cares about doing the right thing. Mark has a background in web development, and is a transparency advocate experienced in using the Official Information Act 1982.</p>
+
+		<p>Mark has a special interest in Police accountability, particularly when it comes to how police use force, and has had work on this topic published by media outlets including <a href="https://www.rnz.co.nz/news/on-the-inside/401394/opinion-more-cops-with-guns-means-more-people-shot-by-police" target="_blank">RNZ</a>, <a href="https://insights.nzherald.co.nz/article/police-tactical-options/" target="_blank">NZ Herald</a>, and <a href="https://thespinoff.co.nz/society/10-03-2021/the-brutal-truth-about-police-dogs" target="_blank">The Spinoff</a>.</p>
+
+		<h3>Dillon Pentz</h3>
+
+		<p class="todo">short bios about Dillon</p>
+	</section>
+</div>
+
+<%- include('../layout/foot'); %>
