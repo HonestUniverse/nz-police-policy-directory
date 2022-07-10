@@ -13,7 +13,7 @@ $breakpoints: (
 // Breakpoint Mixins //
 ///////////////////////
 
-/// Use a media query for width >= the specified size
+/// Use a media query for width >= the specified size. Expects value in `px` or as a string label e.g. `"m"`
 /// @param {string | length} $from - A size label or size to use for the media query
 @mixin bp-from($from) {
 	$fromVal: map.get($breakpoints, $from);
@@ -26,7 +26,7 @@ $breakpoints: (
 	}
 }
 
-/// Use a media query for widths < the specified size. Expects value in `px`
+/// Use a media query for widths < the specified size. Expects value in `px` or as a string label e.g. `"m"`
 /// @param {string | length} $to - A size label or size to use for the media query
 @mixin bp-to($to) {
 	$toVal: map.get($breakpoints, $to) - 1px;
@@ -39,7 +39,7 @@ $breakpoints: (
 	}
 }
 
-/// Use a media query for widths between the specified sizes. Expects upper bount value in `px`
+/// Use a media query for widths between the specified sizes. Expects values in `px` or as a string label e.g. `"m"`
 /// @param {string | length} $from - A size label or size to use for the lower bound of the media query
 /// @param {string | length} $to - A size label or size to use for the upper bound of the media query
 @mixin bp-between($from, $to) {
