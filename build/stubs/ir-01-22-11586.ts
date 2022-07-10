@@ -678,23 +678,6 @@ const base: StubPolicyWithout<StubProps> = {
 	New Zealand Police Library (Kai)
 */
 
-/* TODO: These chapters aren't present in the latest list:
-	Arms
-		This appears to have been split into several different chapters
-	Fingerprints
-		There is now "Fingerprints and SOCO laboratory and crime scene safety" and "Fingerprints-biometric"
-	Intel - Evaluating effectiveness of intel
-	Intel - Intelligence for investigations
-	Intel - Issue motivated and protests groups' intelligence
-	Maintaining professional distance policy
-	Motor vehicle offences
-		This may have been split into "Motor vehicle noise enforcement' and "Motor vehicle registrationg and licensing"?
-	Police driving (V001)
-	Speed camera enforcement
-		Is this related to or replaced by the "Speed enforcement" policy?
-	Welfare services
-*/
-
 createStubs(stubs, base);
 
 // We can't create new versions for policies that already exist but
