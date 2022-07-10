@@ -1,0 +1,89 @@
+<%##
+	locals: {
+		siteData: SiteData,
+		pageData: {},
+	}
+%>
+
+<%- include('../layout/head', { title: 'Contributing' }); %>
+
+<div class="content">
+	<section>
+		<p>You can help us fill the directory by contributing content.</p>
+	</section>
+
+	<section>
+		<h2>Providing documents</h2>
+
+		<p>If you have a copy of a document that we don't have, but which you think should be included in the directory, you can <a href="mailto:<%- siteData.contact.email %>">send it to us</a>.</p>
+
+		<p>It's important to us that documents hosted on this site should be reliable and, where possible, verifiable. If you send us a copy of a document, please also let us know how you got it so we can provide this information alongside it.</p>
+
+		<p>If it isn't already publicly available then we may want to publish relevant information about its source alongside it, such as an OIA response letter. This may include personal information about you, but we won't publish any information about you without your consent.</p>
+	</section>
+
+	<section>
+		<h2>Requesting documents</h2>
+
+		<p>If you'd like to help us add missing documents to the directory, you can help us by requesting them under the Official Information Act (OIA). We recommend making these requests using <a href="https://fyi.org.nz/" target="_blank">fyi.org.nz</a> so the request and its response are published automatically. This also helps us because we can provide a link to the original source of the document you've requested.</p>
+
+		<p>You're welcome to write your own request, but we also provide a template you can use when requesting documents. This template assumes your request is asking for a Police Manual chapter that was included in the list released by Police on 8 June 2022, but you can change it to work for documents that weren't included in this list.</p>
+
+		<p>For more information about how to make a request under the OIA, see <a href="https://oia.nz" target="_blank">oia.nz</a>.</p>
+	</section>
+
+	<div class="request-template js-copyable">
+		<button class="copy-button js-copyable__button" title="Copy this template">
+			<span class="copy-button__icon" aria-hidden="true"></span>
+		</button>
+
+		<div class="js-copyable__content">
+			<p>Tēnā koutou,</p>
+
+			<p>I would like to request information on NZ Police's current policy on <span class="request-template__slot">topic</span>.</p>
+
+			<p>On 8 June 2022, NZ Police released a list of policy documents that included a document titled "<span class="request-template__slot">document title</span>"&nbsp;[1] (reference IR-01-22-11586).</p>
+
+			<p>Please release the following information:</p>
+
+			<p>1. If the latest version of "<span class="request-template__slot">document title</span>" is still in effect:</p>
+
+			<p>
+				1a. A copy of the latest version of "<span class="request-template__slot">document title</span>".<br />
+				1b. The date on which the current version of this document came into effect.<br />
+				1c. The next planned review date of this document.
+			</p>
+
+			<p>2. If the latest version of "<span class="request-template__slot">document title</span>" is no longer in effect:</p>
+
+			<p>
+				2a. The date on which the latest version of "<span class="request-template__slot">document title</span>" became inactive.<br />
+				2b. The document(s) that replaced "<span class="request-template__slot">document title</span>, if there are any.<br />
+				2c. The date on which the current version of the document(s) that replaced "<span class="request-template__slot">document title</span>" came into effect.<br />
+				2d. The next planned review date for the document(s) that replaced "<span class="request-template__slot">document title</span>".
+			</p>
+
+			<p>3. The licence under which this information is released.</p>
+
+			<p>If possible, I would prefer that the information be released under the Creative Commons Attribute 4.0 licence (CC BY 4.0)&nbsp;[2], which is recommended under the NZGOAL framework&nbsp;[3]. Cabinet has invited NZ Police to take NZGOAL into account when releasing copyright material and non-copyright material to the public for re-use&nbsp;[4].</p>
+
+			<p>Please provide this information in an accessible, searchable format without a watermark.</p>
+
+			<p>If any information needs to be withheld from the document, please ensure this is not done in a way that makes the surrounding content (such as other content on the same page) inaccessible.</p>
+
+			<p>
+				Ngā mihi,<br />
+				<span class="request-template__slot">requester name</span>
+			</p>
+
+			<p>
+				[1] <a href="https://fyi.org.nz/request/19200-police-policy-documents" target="_blank">https://fyi.org.nz/request/19200-police-policy-documents</a><br />
+				[2] <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">https://creativecommons.org/licenses/by/4.0/</a><br />
+				[3] <a href="https://www.data.govt.nz/toolkit/policies/nzgoal/" target="_blank">https://www.data.govt.nz/toolkit/policies/nzgoal/</a><br />
+				[4] <a href="https://www.data.govt.nz/assets/Uploads/cab-min-10-24-5a-5-july-2010.pdf" target="_blank">https://www.data.govt.nz/assets/Uploads/cab-min-10-24-5a-5-july-2010.pdf</a><br />
+			</p>
+		</div>
+	</div>
+</div>
+
+<%- include('../layout/foot'); %>

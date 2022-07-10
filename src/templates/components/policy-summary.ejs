@@ -1,11 +1,15 @@
 <%##
 	locals: {
 		policy: Policy,
+		paths: {
+			policies: string,
+		},
 		key: string,
 	}
 %>
 
 <%
+	// This function is copied on `pages/how-to-use.ejs`
 	/**
 	 * A policy is a stub if none of its versions have any files
 	 */
@@ -56,7 +60,7 @@
 	<% } %>
 >
 	<h2 class="policy-summary__title">
-		<a href="<%= key %>" class="policy-summary__link"><%= policy.name %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
+		<a href="<%= paths.policies %>/<%= key %>" class="policy-summary__link"><%= policy.name %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
 	</h2>
 
 	<% if (policy.previousNames) { %>

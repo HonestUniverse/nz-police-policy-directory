@@ -1,0 +1,22 @@
+.request-template {
+	@extend %card;
+	@extend %content;
+
+	a {
+		display: inline-block;
+		vertical-align: bottom;
+		max-width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	margin: 1rem 0;
+	padding-right: #{1rem + rem(44px) + 1rem};
+
+	position: relative;
+}
+
+.request-template__slot {
+	@include font-base-18bu;
+}
