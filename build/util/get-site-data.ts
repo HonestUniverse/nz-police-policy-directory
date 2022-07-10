@@ -35,6 +35,9 @@ export function getSiteData(): SiteData {
 				name: 'Accessibility',
 			},
 		],
+		contact: {
+			email: 'todo@example.com',
+		},
 	};
 
 	return siteData;
