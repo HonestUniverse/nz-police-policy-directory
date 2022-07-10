@@ -1,8 +1,11 @@
+$colour-scheme-bp: "s";
+
 .colour-scheme {
 	display: none;
 
 	@supports (color: var(--test)) {
-		display: block;
+		display: flex;
+		justify-content: flex-end;
 
 		body.no-js & {
 			display: none;
@@ -11,11 +14,18 @@
 	}
 
 	position: relative;
-	min-width: 13ch;
+	@include bp-from($colour-scheme-bp) {
+		min-width: 13ch;
+	}
 }
 
 .colour-scheme__face {
-	@include button($theme: "secondary");
+	@include bp-to($colour-scheme-bp) {
+		@include button($theme: "secondary", $icon: true);
+	}
+	@include bp-from($colour-scheme-bp) {
+		@include button($theme: "secondary");
+	}
 
 	&:focus-visible {
 		// Bring it in front of the menu to ensure its outline can display on top
@@ -30,18 +40,30 @@
 }
 
 .colour-scheme__face-icon {
+	@include bp-to($colour-scheme-bp) {
+		@include button__icon;
+	}
+
 	&::before {
 		font-family: $font-icons;
 		content: $icon-brightness;
 
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 0.2em;
+		@include bp-from($colour-scheme-bp) {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 0.2em;
+		}
 	}
 }
 
 .colour-scheme__face-text {
-	display: inline-block;
+	@include bp-to($colour-scheme-bp) {
+		display: none;
+	}
+	@include bp-from($colour-scheme-bp) {
+		display: inline-block;
+	}
+
 	vertical-align: middle;
 }
 
@@ -54,12 +76,14 @@
 	}
 
 	position: absolute;
+	top: 100%;
 	width: 100%;
+	min-width: 13ch;
 
 	@include contrast-secondary;
 	border: 1px solid;
 	@include use-var(border-color, --accent, currentColor);
-	border-top: 0;
+	margin-top: -1px;
 }
 
 .colour-scheme__menu__option {

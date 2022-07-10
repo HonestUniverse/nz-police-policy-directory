@@ -3,12 +3,15 @@
 	"obsolete": true,
 	"versions": [
 		{
-			"name": "Version 4.0.0",
 			"duration": {
 				"start": "2017-10-12",
 				"on": [
 					"2018-03-19",
-					"2020-03-19"
+					"2020-03-19",
+					{
+						"year": 2021,
+						"month": 1
+					}
 				],
 				"ended": true
 			},
@@ -221,7 +224,7 @@
 			"id": "u-dpfnp"
 		},
 		{
-			"name": "Version 3.0",
+			"name": "3.0",
 			"duration": {
 				"start": "2016-06-30",
 				"end": "2017-10-12"
@@ -284,7 +287,6 @@
 			"id": "u-awtyg"
 		},
 		{
-			"name": "Version 2.0.0",
 			"duration": {
 				"start": "2016-06-30",
 				"end": "2017-10-12"
