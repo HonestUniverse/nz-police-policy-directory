@@ -1,13 +1,23 @@
 <%##
 	locals: {
-		document: string,
-		parentFile: PolicyFile,
-		policy: Policy,
-		version: Version,
+		siteData: SiteData,
+		pageData: {
+			document: string,
+			parentFile: PolicyFile,
+			policy: Policy,
+			version: Version,
+		}
 	}
 %>
 
 <%
+	const {
+		document,
+		parentFile,
+		policy,
+		version,
+	} = pageData;
+
 	const parentFileName = parentFile.name || parentFile.path.replace(/^.*\//, '');
 %>
 
