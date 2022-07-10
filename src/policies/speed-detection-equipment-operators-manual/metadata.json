@@ -51,7 +51,7 @@
 								"value": "Undetermined"
 							},
 							"unwatermarked": {
-								"value": "Undetermined"
+								"value": true
 							}
 						}
 					},
