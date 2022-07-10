@@ -14,7 +14,9 @@ $colour-scheme-bp: "s";
 	}
 
 	position: relative;
-	min-width: 13ch;
+	@include bp-from($colour-scheme-bp) {
+		min-width: 13ch;
+	}
 }
 
 .colour-scheme__face {
@@ -76,6 +78,7 @@ $colour-scheme-bp: "s";
 	position: absolute;
 	top: 100%;
 	width: 100%;
+	min-width: 13ch;
 
 	@include contrast-secondary;
 	border: 1px solid;
