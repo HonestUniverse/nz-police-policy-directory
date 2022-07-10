@@ -1,8 +1,18 @@
 <%#
 	locals: {
-		error: number,
-		errorString: string,
+		siteData: SiteData,
+		pageData: {
+			error: number,
+			errorString: string,
+		},
 	}
+%>
+
+<%
+	const {
+		error,
+		errorString,
+	} = pageData;
 %>
 
 <%- include('../layout/head', {
