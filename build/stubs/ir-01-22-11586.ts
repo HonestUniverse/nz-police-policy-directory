@@ -673,11 +673,6 @@ const base: StubPolicyWithout<StubProps> = {
 	provenance: [provenance],
 };
 
-/* TODO: These chapters need additional work to confirm, correct, clarify, or transform
-	Interpreting Services - Ezispeak (previously Language Line)
-	New Zealand Police Library (Kai)
-*/
-
 createStubs(stubs, base);
 
 // We can't create new versions for policies that already exist but
