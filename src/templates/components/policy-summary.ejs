@@ -22,6 +22,27 @@
 
 		return false;
 	}
+
+	// This function is copied in `components/duration.ejs`
+	/**
+	 * For sorting, treat partial dates as their earliest possible date.
+	 */
+	 function partialToFullDate(dateObj) {
+		if (dateObj instanceof Date) {
+			return dateObj;
+		} else if (typeof dateObj === 'string') {
+			return new Date(dateObj);
+		}
+
+		// We'll always have year
+		const year = dateObj.year;
+		// Use month if available, otherwise first month of the quarter if available, otherwise January
+		const month = (dateObj.month || dateObj.quarter * 3 - 2 || 1) - 1;
+		// Use date if available, otherwise first day of the month
+		const date = dateObj.date || 1;
+
+		return new Date(year, month, date);
+	}
 %>
 
 <section
@@ -63,7 +84,15 @@
 				<span class="policy-summary__date">Latest version ended: <%- include('../helpers/date-partial', { date: duration.end }); %></span>
 			<% } else if (duration.on && duration.on.length >= 1) { %>
 				<%
-					const lastOnDate = duration.on.sort((a, b) => b.localeCompare(a))[0];
+					// Sort `on` dates chronologically
+					const onDates = duration.on.sort((a, b) => {
+						// Dates in `on` may be partial. For sorting assume they are the earliest date in the region of uncertainty
+						const dateA = partialToFullDate(a);
+						const dateB = partialToFullDate(b);
+
+						return dateB - dateA;
+					});
+					const lastOnDate = onDates[0];
 				%>
 				<span class="policy-summary__date">Latest version active on: <%- include('../helpers/date-partial', { date: lastOnDate }); %></span>
 			<% } else if (duration.start) { %>
