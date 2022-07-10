@@ -59,9 +59,9 @@
 				<div class="header__nav">
 					<nav class="menu">
 						<ul class="menu__list">
-							<li class="menu__list-item"><a class="menu__list-link" href="/">Home</a></li>
-							<li class="menu__list-item"><a class="menu__list-link" href="/about/">About</a></li>
-							<li class="menu__list-item"><a class="menu__list-link" href="/accessibility/">Accessibility</a></li>
+							<% for (const navItem of siteData.navigation) { %>
+								<li class="menu__list-item"><a class="menu__list-link" href="<%= navItem.path %>"><%= navItem.name %></a></li>
+							<% } %>
 						</ul>
 					</nav>
 				</div>
