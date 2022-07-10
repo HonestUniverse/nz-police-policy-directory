@@ -20,18 +20,18 @@ if (version.name) {
 		%><%
 	}
 } else if (duration.end) {
-	%><%=
+	%>Ended <%=
 		include('../helpers/date-partial', { date: duration.end, options });
 	%><%
 } else if (duration.on) {
 	if (duration.on.length > 1) {
-		%><%=
+		%>Active on <%=
 			include('../helpers/date-partial', { date: duration.on[0], options });
 		%> and <%=
 			include('../helpers/date-partial', { date: duration.on.at(-1), options });
 		%><%
 	} else {
-		%><%=
+		%>Active on <%=
 			include('../helpers/date-partial', { date: duration.on[0], options });
 		%><%
 	}
