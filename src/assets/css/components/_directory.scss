@@ -1,10 +1,5 @@
 .directory {}
 
-.directory__section-link {
-	@include font-heading-32b;
-	@include link;
-}
-
 .directory__search {
 	body.no-js & {
 		display: none;
@@ -115,9 +110,4 @@
 	@include list-reset;
 }
 
-.directory__item {
-	position: relative;
-
-	border-bottom: 2px solid;
-	@include use-var(border-bottom-color, --accent, currentColor);
-}
+.directory__item {}

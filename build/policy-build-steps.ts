@@ -16,6 +16,7 @@ import type { AlternateFile } from '../schema/AlternateFile.js';
 import type { Policy } from '../schema/Policy.js';
 import type { Version } from '../schema/PolicyVersion.js';
 import { readFile } from 'fs/promises';
+import { SiteData } from './util/get-site-data.js';
 
 /**
  * Build steps for a particular policy.
@@ -33,7 +34,9 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	/**
 	 * Copy all files for a policy to their destinations
 	 */
-	copyFiles(src, dst, policy) {
+	copyFiles(src, dst, buildData) {
+		const { policy } = buildData;
+
 		const plugins: CopyPlugin[] = [];
 
 		function copyFile(file: PolicyFile | AlternateFile, version: Version) {
@@ -70,7 +73,12 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	/**
 	 * Build any HTML-based alternate files
 	 */
-	async createHtmlAlternateFiles(src, dst, policy) {
+	async createHtmlAlternateFiles(src, dst, buildData) {
+		const {
+			siteData,
+			policy,
+		} = buildData;
+
 		const plugins: HtmlWebpackPlugin[] = [];
 
 		for (const version of policy.versions) {
@@ -92,10 +100,13 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 									templatePath: `${paths.templates}/pages/document.ejs`,
 									templateEjsLoaderOption: {
 										data: {
-											document,
-											parentFile,
-											version,
-											policy,
+											siteData,
+											pageData: {
+												document,
+												parentFile,
+												version,
+												policy,
+											},
 										},
 									},
 								}),
@@ -116,11 +127,23 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	/**
 	 * Generate the HTML for a Policy page
 	 */
-	createPolicyPage(src, dst, policy) {
+	createPolicyPage(src, dst, buildData) {
+		const { policy } = buildData;
+
+		const {
+			siteData,
+			...basePageData
+		} = buildData;
+
 		const versionPaths: Record<string, string> = {};
 		for (const version of policy.versions) {
 			versionPaths[version.id] = createVersionDstPath('.', version);
 		}
+
+		const pageData = {
+			...basePageData,
+			versionPaths,
+		};
 
 		return [new HtmlWebpackPlugin({
 			filename: `${dst}/index.html`,
@@ -131,8 +154,8 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 				templatePath: `${paths.templates}/pages/policy.ejs`,
 				templateEjsLoaderOption: {
 					data: {
-						policy,
-						versionPaths,
+						siteData,
+						pageData,
 					},
 				},
 			}),
@@ -143,7 +166,9 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	/**
 	 * Construct and copy all version metadata to its destination
 	 */
-	createVersionMetadata(src, dst, policy) {
+	createVersionMetadata(src, dst, buildData) {
+		const { policy } = buildData;
+
 		const plugins: GenerateJsonPlugin[] = [];
 
 		for (const version of policy.versions) {
@@ -166,11 +191,16 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	/**
 	 * Generate a page for each version of the policy
 	 */
-	createVersionPages(src, dst, policy) {
+	createVersionPages(src, dst, buildData) {
+		const {
+			siteData,
+			policy,
+		} = buildData;
+
 		const plugins: ReturnType<PolicyBuildStep> = [];
 
 		for (const version of policy.versions) {
-			plugins.push(createVersionPlugin(dst, policy, version));
+			plugins.push(createVersionPlugin(siteData, dst, policy, version));
 		}
 
 		const latest = policy.versions.find((version) => {
@@ -180,7 +210,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 		});
 
 		if (latest) {
-			plugins.push(createVersionPlugin(dst, policy, latest, true));
+			plugins.push(createVersionPlugin(siteData, dst, policy, latest, true));
 		}
 
 		return plugins;
@@ -254,12 +284,19 @@ function createVersionMetadata(
 }
 
 function createVersionPlugin(
+	siteData: SiteData,
 	dst: string,
 	policy: Policy,
 	version: Version,
 	latest: boolean = false,
 ): HtmlWebpackPlugin {
 	const versionDst = createVersionDstPath(dst, version);
+	const pageData = {
+		policy,
+		version,
+		latest,
+		versionDst,
+	};
 
 	return new HtmlWebpackPlugin({
 		filename: latest ? `${dst}/latest/index.html` : `${versionDst}/index.html`,
@@ -270,10 +307,8 @@ function createVersionPlugin(
 			templatePath: `${paths.templates}/pages/version.ejs`,
 			templateEjsLoaderOption: {
 				data: {
-					policy,
-					version,
-					latest,
-					versionDst,
+					siteData,
+					pageData,
 				},
 			},
 		}),

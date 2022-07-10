@@ -1,0 +1,89 @@
+<%##
+	locals: {
+		siteData: SiteData,
+		pageData: {
+			directory: Record<string, Policy>,
+		},
+	}
+%>
+
+<%
+	const { paths } = siteData;
+	const { directory } = pageData;
+%>
+
+<%
+	// This function is copied on `components/policy-summary.ejs`
+	/**
+	 * A policy is a stub if none of its versions have any files
+	 */
+	function isStub(policy) {
+		const hasVersions = policy.versions.length > 0;
+		if (!hasVersions) {
+			return true;
+		}
+
+		const hasFiles = policy.versions.find((version) => version.files.length > 0);
+		if (!hasFiles) {
+			return true;
+		}
+
+		return false;
+	}
+%>
+
+<%
+	// TODO: Create actual examples instead of picking something dynamically out of the directory
+	const directoryEntries = Object.entries(directory);
+
+	const [examplePolicyKey, examplePolicy] = directoryEntries.find(([policyKey, policy]) => {
+		// Find a policy that isn't a stub
+		return isStub(policy) === false;
+	});
+
+	const exampleStubEntry = directoryEntries.find(([policyKey, policy]) => {
+		// Find a policy that is a stub
+		return isStub(policy) === true;
+	});
+%>
+
+<%- include('../layout/head', { title: 'How to use this website' }); %>
+
+<div class="content">
+	<p>The main page is our <a href="<%= paths.policies %>">Policies directory</a>. There, you can find a list of all NZ Police policies we are aware of. Each of these policies has its own dedicated page, which has a link in the directory that looks like this:</p>
+</div>
+
+<%- include('../components/policy-summary', { policy: examplePolicy, paths, key: examplePolicyKey }); %>
+
+<% if (exampleStubEntry) { %>
+	<%
+		const [exampleStubKey, exampleStub] = exampleStubEntry;
+	%>
+	<div class="content">
+		<p>The directory also lists documents that we know exist, but which we don't have copies of. These documents are listed like this:</p>
+	</div>
+
+	<%- include('../components/policy-summary', { policy: exampleStub, paths, key: exampleStubKey }); %>
+<% } %>
+
+<div class="content">
+	<p>Each policy has one or more versions, which were active for a period of time. Versions have information about when they were active, but we don't always have all the information about when a version was active. We display information about when a policy version was active like this:</p>
+</div>
+
+<%- include('../components/duration', { duration: examplePolicy.versions[0].duration }); %>
+
+<div class="content">
+	<p>Each of those versions has one or more files. Next to a version's files, we display have information about how the file was made public, what information it contains, and how accessible it is. For more information about our accessibility ratings, see our <a href="/accessibility/">Accessibility</a> page.</p>
+
+	<p>Some more detailed information can be viewed by expanding sections behind a <strong>+</strong> icon.</p>
+
+	<p>If a file has significant accessibility issues, we may also provided alternate versions which are more accessible. The original file will always be clearly marked, and if we've made any changes to a file they will be described as well.</p>
+</div>
+
+<%- include('../components/file', {
+	file: examplePolicy.versions[0].files[0],
+	version: examplePolicy.versions[0],
+	policy: examplePolicy,
+}); %>
+
+<%- include('../layout/foot'); %>
