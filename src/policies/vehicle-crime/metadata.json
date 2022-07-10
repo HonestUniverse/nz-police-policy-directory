@@ -1,0 +1,49 @@
+{
+	"name": "Vehicle crime",
+	"versions": [
+		{
+			"name": "2018-03-22",
+			"id": "u-hdtuq",
+			"duration": {
+				"start": "2018-03-22"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-22-11586",
+						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+						"withholdings": "None"
+					},
+					"extracted": "2022-05-22",
+					"released": "2022-06-13",
+					"retrieved": "2022-06-18",
+					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+				}
+			],
+			"files": []
+		}
+	],
+	"schemaVersion": "0.5.4",
+	"type": "Police Manual chapter",
+	"provenance": [
+		{
+			"source": "NZ Police",
+			"method": "Released under the OIA",
+			"oiaRequest": {
+				"requester": "Mark Hanna",
+				"id": "IR-01-22-11586",
+				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+				"withholdings": "None"
+			},
+			"extracted": "2022-05-22",
+			"released": "2022-06-13",
+			"retrieved": "2022-06-18",
+			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+		}
+	]
+}

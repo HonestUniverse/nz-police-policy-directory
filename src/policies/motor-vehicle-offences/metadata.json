@@ -57,5 +57,11 @@
 			"id": "u-jwviu"
 		}
 	],
-	"name": "Motor vehicle offences"
+	"name": "Motor vehicle offences",
+	"notices": [
+		{
+			"type": "warning",
+			"message": "<p>This Police Manual chapter did not appear in the <a href=\"https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199\" target=\"_blank\">complete list of chapters</a> released by Police in June 2022, and may be obsolete.</p><p>It may have been replaced by the \"Motor vehicle noise enforcement\" or \"Motor vehicle registration and licensing\" chapters.</p>"
+		}
+	]
 }
