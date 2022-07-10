@@ -3,7 +3,6 @@
 	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "Version 14",
 			"duration": {
 				"start": "2019-11-28",
 				"on": [
@@ -62,7 +61,6 @@
 			"id": "u-xwbws"
 		},
 		{
-			"name": "Version 10.0",
 			"duration": {
 				"ended": true,
 				"on": [

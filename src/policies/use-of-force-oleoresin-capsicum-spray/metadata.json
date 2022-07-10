@@ -160,36 +160,28 @@
 							}
 						}
 					}
-				}
-			],
-			"id": "u-uaavi"
-		},
-		{
-			"duration": {
-				"end": "2022-03-01"
-			},
-			"provenance": [
-				{
-					"source": "NZ Police",
-					"method": "Released under the OIA",
-					"oiaRequest": {
-						"requester": "P Taylor",
-						"id": "IR-01-22-7033",
-						"responseUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
-						"withholdings": "None"
-					},
-					"extracted": "2022-05-02",
-					"released": "2022-05-27",
-					"retrieved": "2022-05-28",
-					"url": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
-					"fileUrl": "https://fyi.org.nz/request/18842/response/73590/attach/8/Taylor%20P%20IR%2001%2022%207033%20response.pdf"
-				}
-			],
-			"files": [
+				},
 				{
 					"path": "../../bulk-files/2022-05-27/Taylor P IR 01 22 7033 response.pdf",
 					"type": "application/pdf",
 					"documentType": "Policy",
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "P Taylor",
+								"id": "IR-01-22-7033",
+								"responseUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+								"withholdings": "None"
+							},
+							"extracted": "2022-05-02",
+							"released": "2022-05-27",
+							"retrieved": "2022-05-28",
+							"url": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+							"fileUrl": "https://fyi.org.nz/request/18842/response/73590/attach/8/Taylor%20P%20IR%2001%2022%207033%20response.pdf"
+						}
+					],
 					"startingPage": 3,
 					"size": 1436159,
 					"licence": {
@@ -224,6 +216,23 @@
 					"path": "../../bulk-files/2022-05-27/Taylor P IR 01 22 7033 response.pdf",
 					"type": "application/pdf",
 					"documentType": "OIA response letter",
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "P Taylor",
+								"id": "IR-01-22-7033",
+								"responseUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+								"withholdings": "None"
+							},
+							"extracted": "2022-05-02",
+							"released": "2022-05-27",
+							"retrieved": "2022-05-28",
+							"url": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+							"fileUrl": "https://fyi.org.nz/request/18842/response/73590/attach/8/Taylor%20P%20IR%2001%2022%207033%20response.pdf"
+						}
+					],
 					"startingPage": 1,
 					"size": 1436159,
 					"licence": {
@@ -246,10 +255,9 @@
 					}
 				}
 			],
-			"id": "u-sgguj"
+			"id": "u-uaavi"
 		},
 		{
-			"name": "Version 6.0",
 			"duration": {
 				"ended": true,
 				"on": [
