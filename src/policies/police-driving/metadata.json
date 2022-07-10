@@ -55,5 +55,11 @@
 			"id": "u-asnfk"
 		}
 	],
-	"name": "Police driving (V001)"
+	"name": "Police driving (V001)",
+	"notices": [
+		{
+			"type": "warning",
+			"message": "This Police Manual chapter did not appear in the <a href=\"https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199\" target=\"_blank\">complete list of chapters</a> released by Police in June 2022, and may be obsolete."
+		}
+	]
 }
