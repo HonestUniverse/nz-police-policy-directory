@@ -1,10 +1,16 @@
 <%##
 	locals: {
-		directory: Record<string, Policy>,
+		siteData: SiteData,
+		pageData: {
+			directory: Record<string, Policy>,
+		},
 	}
 %>
 
 <%
+	const { paths } = siteData;
+	const { directory } = pageData;
+
 	// Sort keys and policies by policy name
 	const directoryEntries = Object.entries(directory).sort((a, b) => a[1].name.localeCompare(b[1].name));
 	const keys = directoryEntries.map(([key, policy]) => key);
@@ -44,7 +50,7 @@
 		<ul class="directory__list">
 			<% policies.forEach((policy, idx) => { %>
 				<li class="directory__item js-search__item-wrapper">
-					<%- include('../components/policy-summary', { policy, key: keys[idx] }); %>
+					<%- include('../components/policy-summary', { policy, paths, key: keys[idx] }); %>
 				</li>
 			<% }) %>
 		</ul>

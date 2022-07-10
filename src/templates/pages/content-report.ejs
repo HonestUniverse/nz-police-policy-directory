@@ -1,10 +1,16 @@
 <%##
 	locals: {
-		directory: Record<string, Policy>,
+		siteData: SiteData,
+		pageData: {
+			directory: Record<string, Policy>,
+		},
 	}
 %>
 
 <%
+	const { paths } = siteData;
+	const { directory } = pageData;
+
 	const keys = Object.keys(directory).sort();
 	const policies = [];
 	for (const key of keys) {
@@ -116,7 +122,7 @@
 							const policyIndex = Object.values(directory).indexOf(policy);
 							const policyHref = Object.keys(directory)[policyIndex]; %>
 							<li class="directory__item">
-								<%- include('../components/policy-summary', { policy, key: policyHref }); %>
+								<%- include('../components/policy-summary', { policy, paths, key: policyHref }); %>
 							</li>
 						<% }) %>
 					</ul>

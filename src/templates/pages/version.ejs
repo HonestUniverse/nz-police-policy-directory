@@ -1,13 +1,23 @@
 <%#
 	locals: {
-		version: PolicyVersion,
-		policy: Policy,
-		latest?: boolean,
-		versionDst?: string,
+		siteData: SiteData,
+		pageData: {
+			version: PolicyVersion,
+			policy: Policy,
+			latest?: boolean,
+			versionDst?: string,
+		},
 	}
 %>
 
 <%
+	const {
+		version,
+		policy,
+		latest,
+		versionDst,
+	} = pageData;
+
 	const title = `${policy.name} ${version.name}`;
 
 	/**

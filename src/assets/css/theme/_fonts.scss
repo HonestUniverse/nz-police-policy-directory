@@ -15,6 +15,7 @@ $bold: 700;
 
 // Font icons
 // !IMPORTANT: When adding new icons, update ?v=${number} on font sources in `_fonts-icons.scss` and preload tags in `head.ejs`
+$icon-copy: "\1f5d0";
 $icon-plus: "\2b";
 $icon-minus: "\2d";
 $icon-search: "\1f50d";
@@ -92,28 +93,38 @@ $icon-tick: "\2714";
 	font-family: $font-base;
 	font-weight: $bold;
 	font-size: rem(24px);
+	line-height: 1.4;
 }
 
 @mixin font-base-20 {
 	font-family: $font-base;
 	font-weight: $regular;
 	font-size: rem(20px);
+	line-height: 1.4;
 }
 
 @mixin font-base-18 {
 	font-family: $font-base;
 	font-weight: $regular;
 	font-size: rem(18px);
+	line-height: 1.4;
 }
 
 @mixin font-base-18b {
 	font-family: $font-base;
 	font-weight: $bold;
 	font-size: rem(18px);
+	line-height: 1.4;
+}
+
+@mixin font-base-18bu {
+	@include font-base-18b;
+	text-transform: uppercase;
 }
 
 @mixin font-base-16 {
 	font-family: $font-base;
 	font-weight: $regular;
 	font-size: rem(16px);
+	line-height: 1.4;
 }
