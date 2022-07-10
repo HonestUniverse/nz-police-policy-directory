@@ -695,17 +695,6 @@ const base: StubPolicyWithout<StubProps> = {
 	Welfare services
 */
 
-/* TODO: These chapters are listed with slight differences in their names
-	Privacy breach management
-		This is now called "Privacy and official information - Privacy breach management" (it may always have had this name)
-	Sudden Death
-		Apparently capitalised as "Sudden death". We've only seen excerpts
-	TENR - Operational threat assessment
-		Listed as "TENR Operational threat assessment"
-	Use of Force - Oleoresin Capsicum Spray
-		Listed with different capitalisation as "Use of Force - Oleoresin Capsicum spray"
-*/
-
 createStubs(stubs, base);
 
 // We can't create new versions for policies that already exist but
