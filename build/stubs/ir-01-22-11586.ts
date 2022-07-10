@@ -708,4 +708,9 @@ const base: StubPolicyWithout<StubProps> = {
 
 createStubs(stubs, base);
 
-// TODO: Create new versions for policies that already exist but have newer versions in this list
+// We can't create new versions for policies that already exist but
+// have newer versions in this list because the "publication date"
+// column is not reliable. For example, it lists the publication date
+// of the OC spray chapter as being in October 2017, but we have versions
+// from January 2017 and March 2022 so that can't be either the first
+// publication date or the most recent publication date.
