@@ -3,7 +3,6 @@
 	"obsolete": true,
 	"versions": [
 		{
-			"name": "Version 4.0.0",
 			"duration": {
 				"start": "2017-10-12",
 				"on": [
@@ -225,7 +224,7 @@
 			"id": "u-jdjqk"
 		},
 		{
-			"name": "Version 3.0",
+			"name": "3.0",
 			"duration": {
 				"start": "2016-06-30",
 				"end": "2017-10-12"
@@ -288,7 +287,6 @@
 			"id": "u-wvxtf"
 		},
 		{
-			"name": "Version 2.0.0",
 			"duration": {
 				"start": "2016-06-30",
 				"end": "2017-10-12"
