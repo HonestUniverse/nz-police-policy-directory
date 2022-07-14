@@ -19,7 +19,7 @@ $duration-bp: "s";
 }
 
 $duration-sep-length: 2ch;
-$duration-sep-thickness: 2px;
+$duration-sep-thickness: rem(2px);
 $duration-sep-gap: 1ch;
 
 $duration-sep-margin: calc(#{$duration-sep-length} + #{$duration-sep-gap * 2});
