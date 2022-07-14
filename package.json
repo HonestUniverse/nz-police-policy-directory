@@ -1,7 +1,7 @@
 {
 	"name": "nz-police-policy-directory",
 	"version": "1.0.0",
-	"description": "Directory of NZ Police Policies and Manuals",
+	"description": "Directory of NZ Police policies and related documents",
 	"type": "module",
 	"devDependencies": {
 		"@types/jasmine": "^4.0.3",
@@ -48,7 +48,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Cipscis/nz-police-policy-directory.git"
+		"url": "git+https://github.com/HonestUniverse/nz-police-policy-directory.git"
 	},
 	"contributors": [
 		"Mark Hanna (https://honestuniverse.com/)",
@@ -56,9 +56,9 @@
 	],
 	"license": "Hippocratic-2.1",
 	"bugs": {
-		"url": "https://github.com/Cipscis/nz-police-policy-directory/issues"
+		"url": "https://github.com/HonestUniverse/nz-police-policy-directory/issues"
 	},
-	"homepage": "https://github.com/Cipscis/nz-police-policy-directory#readme",
+	"homepage": "https://github.com/HonestUniverse/nz-police-policy-directory#readme",
 	"engines": {
 		"node": ">= 16.14.2"
 	}
