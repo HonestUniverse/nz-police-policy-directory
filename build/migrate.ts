@@ -422,6 +422,15 @@ const migrations: Record<string, Migration> = {
 			}
 		}
 	},
+
+	/**
+	 * Changes in v1.0.0
+	 *
+	 * No changes, just updating `schemaVersion` as we hit our first release.
+	 */
+	['1.0.0']: function (policy: Policy): void {
+		policy.schemaVersion = '1.0.0';
+	},
 }
 
 migrateAll();
