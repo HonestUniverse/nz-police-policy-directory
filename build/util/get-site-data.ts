@@ -20,12 +20,29 @@ export type SiteData = {
 	},
 };
 
+/**
+ * Prepare a path to be used as a navigation link,
+ * by making it root-relative and adding a trailing slash if necessary.
+ *
+ * @param {string} dstPath - The path to prepare for use as a navigation link
+ */
+function prepareNavPath(dstPath: string): string {
+	const rootRelativePath = makeRootRelative(dstPath);
+
+	// Add a trailing slash if it doesn't have one already and it's not a link to a file
+	if (/\/$|\/[^.]+\.[^.]+$/.test(rootRelativePath)) {
+		return rootRelativePath;
+	} else {
+		return `${rootRelativePath}/`;
+	}
+}
+
 export function getSiteData(): SiteData {
 	const siteData: SiteData = {
 		name: 'policepolicy.nz',
 		// TODO: Move all these paths into the paths util, and use them in the build steps as well
 		paths: {
-			policies: makeRootRelative(paths.policiesDst),
+			policies: prepareNavPath(paths.policiesDst),
 		},
 		navigation: {
 			header: [
@@ -34,25 +51,25 @@ export function getSiteData(): SiteData {
 					name: 'Home',
 				},
 				{
-					path: makeRootRelative(paths.policiesDst),
+					path: prepareNavPath(paths.policiesDst),
 					name: 'Policies',
 				},
 			],
 			footer: [
 				{
-					path: '/about/',
+					path: prepareNavPath(paths.aboutDst),
 					name: 'About',
 				},
 				{
-					path: '/how-to-use/',
+					path: prepareNavPath(paths.howToUseDst),
 					name: 'How to use this website',
 				},
 				{
-					path: '/accessibility/',
+					path: prepareNavPath(paths.accessibilityDst),
 					name: 'Accessibility',
 				},
 				{
-					path: '/contributing/',
+					path: prepareNavPath(paths.contributingDst),
 					name: 'Contributing',
 				},
 			],
