@@ -37,7 +37,7 @@
 .page__head__back-link {
 	grid-area: back;
 
-	@include button($icon: true, $theme: "secondary");
+	@include button($icon: true, $theme: "secondary--darken");
 
 	margin-right: 1rem;
 

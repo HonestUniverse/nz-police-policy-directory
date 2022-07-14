@@ -16,6 +16,7 @@
 	justify-content: space-between;
 	@supports (display: grid) {
 		display: grid;
+		grid-row-gap: 0.5rem;
 		grid-template-areas:
 			"site-name tools"
 			"nav tools";
