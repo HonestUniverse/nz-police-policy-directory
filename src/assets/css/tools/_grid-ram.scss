@@ -1,5 +1,10 @@
 /// For applying the "RAM" pattern of columns for CSS grid
 /// @param {length} $min-width - The minimum width of each column
-@mixin grid-ram($min-width) {
-	grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+/// @param {string} $method - Either `auto-fit` or `auto-fill`
+@mixin grid-ram($min-width, $method: auto-fill) {
+	@if ($method != auto-fill and $method != auto-fit) {
+		@error "Only `auto-fill` and `auto-fit` methods are allowed for `grid-ram`";
+	}
+
+	grid-template-columns: repeat($method, minmax($min-width, 1fr));
 }

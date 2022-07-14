@@ -1,0 +1,26 @@
+.pathway__layout {
+	margin: 2rem 0;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.pathway {}
+
+.pathway__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include button-theme("secondary");
+	@include font-base-24b;
+
+	padding: 1rem;
+	border: 1px solid;
+	@include use-var(border-color, --accent, currentColor);
+
+	page-break-inside: avoid;
+}
