@@ -108,7 +108,14 @@
 	};
 %>
 
-<%- include('../layout/head', { title: 'Content Report' }); %>
+<%- include(
+	'../layout/head',
+	{
+		title: 'Content Report',
+		description: 'A report on how much content may have issues or require additional refinement.',
+		backLink: true,
+	}
+); %>
 
 <% for (const [sectionName, filterFn] of Object.entries(sections)) {
 	const sectionPolicies = policies.filter(filterFn); %>

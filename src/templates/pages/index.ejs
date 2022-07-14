@@ -9,7 +9,13 @@
 	const { paths } = siteData;
 %>
 
-<%- include('../layout/head', { title: 'NZ Police Policy Directory' }); %>
+<%- include(
+	'../layout/head',
+	{
+		title: 'NZ Police Policy Directory',
+		description: `This website is an independent host of New Zealand Police policies and related documents, and is not associated with or controlled by NZ Police.`,
+	}
+); %>
 
 <div class="home-hero">
 	<h2 class="home-hero__title">Welcome</h2>

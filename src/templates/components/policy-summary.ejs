@@ -60,7 +60,7 @@
 	<% } %>
 >
 	<h2 class="policy-summary__title">
-		<a href="<%= paths.policies %>/<%= key %>" class="policy-summary__link"><%= policy.name %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
+		<a href="<%= paths.policies %><%= key %>" class="policy-summary__link"><%= policy.name %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
 	</h2>
 
 	<% if (policy.previousNames) { %>
