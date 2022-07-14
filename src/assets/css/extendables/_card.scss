@@ -1,12 +1,11 @@
 %card {
 	@include contrast-secondary;
-	box-shadow: 0 0 5px 0px var(--accent);
 	@media print {
 		box-shadow: none;
 	}
 
 	padding: 1rem;
-	border: 1px solid;
+	border: rem(4px) solid;
 	@include use-var(border-color, --accent, currentColor);
 	border-radius: 0.5rem;
 
