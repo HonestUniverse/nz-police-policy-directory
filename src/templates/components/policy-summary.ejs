@@ -60,7 +60,7 @@
 	<% } %>
 >
 	<h2 class="policy-summary__title">
-		<a href="<%= paths.policies %>/<%= key %>" class="policy-summary__link"><%= policy.name %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
+		<a href="<%= paths.policies %><%= key %>" class="policy-summary__link"><%= policy.name %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
 	</h2>
 
 	<% if (policy.previousNames) { %>
@@ -82,12 +82,12 @@
 
 	<%
 		const latestVersion = policy.versions[0];
-		const duration = latestVersion.duration;
+		const duration = latestVersion?.duration;
 
 		// Show the Latest single date we have for the latest version
-		if (duration.end) { %>
+		if (duration?.end) { %>
 			<span class="policy-summary__date">Latest version ended: <%- include('../helpers/date-partial', { date: duration.end }); %></span>
-		<% } else if (duration.on && duration.on.length >= 1) { %>
+		<% } else if (duration?.on && duration?.on.length >= 1) { %>
 			<%
 				// Sort `on` dates chronologically
 				const onDates = duration.on.sort((a, b) => {
@@ -100,13 +100,13 @@
 				const lastOnDate = onDates[0];
 			%>
 			<span class="policy-summary__date">Latest version active on: <%- include('../helpers/date-partial', { date: lastOnDate }); %></span>
-		<% } else if (duration.start) { %>
+		<% } else if (duration?.start) { %>
 			<span class="policy-summary__date">Latest version started: <%- include('../helpers/date-partial', { date: duration.start }); %></span>
 		<% } else { %>
 			<%
 				// We don't have any specific duration information, so say when it was published, extracted, released, or retrieved
-				const mainFile = latestVersion.files[0];
-				const provenance = mainFile?.provenance || latestVersion.provenance;
+				const mainFile = latestVersion?.files[0];
+				const provenance = mainFile?.provenance || latestVersion?.provenance || policy.provenance;
 
 				function getLatestDate(dateType, provenance) {
 					const dates = provenance.filter(

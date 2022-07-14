@@ -16,6 +16,10 @@ export const templates = `${src}/templates`;
 export const assets = `${src}/assets`;
 
 export const policiesDst = `./policies`;
+export const aboutDst = `./about`;
+export const howToUseDst = './how-to-use';
+export const accessibilityDst = './accessibility';
+export const contributingDst = './contributing';
 
 export const schema = `./schema`;
 
