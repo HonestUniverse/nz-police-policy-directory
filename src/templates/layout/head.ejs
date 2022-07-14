@@ -6,6 +6,11 @@
 		h1?: string,
 		subtitle?: string,
 		backLink?: boolean,
+
+		meta?: Array<{
+			name: string,
+			content: string,
+		}>,
 	}
 %>
 
@@ -33,6 +38,12 @@
 
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="<%= title %>" />
+
+		<% if (locals.meta) { %>
+			<% for (const { name, content } of locals.meta) { %>
+				<meta name="<%= name %>" content="<%= content %>" />
+			<% } %>
+		<% } %>
 
 		<link rel="preload" href="/assets/fonts/montserrat/montserrat-bold-latin.woff2?v=1" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="/assets/fonts/roboto/roboto-regular-latin.woff2?v=1" as="font" type="font/woff2" crossorigin />
