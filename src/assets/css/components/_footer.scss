@@ -5,16 +5,43 @@
 	padding-bottom: 1em;
 
 	@include contrast-dark;
-
-	@include font-base-16;
 }
 
 .footer__layout {
 	@include layout-wrapper;
 }
 
+.footer__navigation {}
+
+.footer__navigation__list {
+	@include list-reset;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	margin-left: -1em;
+	margin-top: -0.5em;
+}
+
+.footer__navigation__item {
+	padding-left: 1em;
+	padding-top: 0.5em;
+}
+
+.footer__navigation__link {
+	@include font-base-18;
+	@include link;
+	text-decoration: underline;
+}
+
 .footer__by {
+	@include font-base-18;
 	a {
 		@include link;
 	}
+}
+
+.footer__disclaimer {
+	@include font-base-16;
 }

@@ -22,7 +22,9 @@
 %>
 
 <%- include('../layout/head', {
-	title: `${policy.name} ${version.name}`,
+	title: `${policy.name} - ${include('../helpers/version-name', { version })}`,
+	description: ``,
+
 	h1: policy.name,
 	subtitle: version.name,
 	backLink: true,

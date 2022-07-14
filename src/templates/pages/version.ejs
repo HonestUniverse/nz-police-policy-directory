@@ -30,6 +30,7 @@
 
 <%- include('../layout/head', {
 	title,
+	description: `This page describes the ${include('../helpers/version-name', { version })} version of the "${policy.name}" ${policy.type}`,
 	h1: policy.name,
 	subtitle: policy.type,
 	backLink: true,

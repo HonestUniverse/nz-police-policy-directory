@@ -17,6 +17,10 @@
 
 <%- include('../layout/head', {
 	title: error,
+	meta: [{
+		name: 'robots',
+		content: 'noindex',
+	}],
 }); %>
 
 <div class="content">

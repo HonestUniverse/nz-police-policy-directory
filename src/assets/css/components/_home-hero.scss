@@ -1,0 +1,9 @@
+.home-hero {}
+
+.home-hero__title {
+	@include font-heading-40b;
+}
+
+.home-hero__text {
+	@include font-base-20;
+}

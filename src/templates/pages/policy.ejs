@@ -41,6 +41,7 @@
 
 <%- include('../layout/head', {
 	title: name,
+	description: `This page describes the "${policy.name}" ${policy.type}`,
 	h1: `${name}${policy.obsolete ? ' (obsolete)' : ''}`,
 	subtitle: type,
 	backLink: true,

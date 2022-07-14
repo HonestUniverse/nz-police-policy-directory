@@ -1,10 +1,10 @@
 // File structure:
-//	theme
-//		Theme files contain SCSS variables and mixins, so they will not generate any CSS on their own.
-//		These mixins are part of the theme.
 //	tools
 //		Tool files contain only mixins and functions, so they will not generate any CSS on their own.
 //		These mixins and functions are general purpose, and shouldn't need to change from theme to theme.
+//	theme
+//		Theme files contain SCSS variables and mixins, so they will not generate any CSS on their own.
+//		These mixins are part of the theme.
 //	patterns
 //		Pattern files contain mixins that are used to generate variations of similar components, like buttons.
 //	base
@@ -15,12 +15,6 @@
 //		Component files each contain the SCSS for a single component.
 
 // Doesn't generate CSS
-@import "theme/breakpoints";
-@import "theme/focus-outline";
-@import "theme/fonts";
-@import "theme/layout";
-@import "theme/palette";
-
 @import "tools/active";
 @import "tools/grid-ram";
 @import "tools/print-hide";
@@ -29,6 +23,12 @@
 @import "tools/transition";
 @import "tools/use-var";
 @import "tools/visually-hidden";
+
+@import "theme/breakpoints";
+@import "theme/focus-outline";
+@import "theme/fonts";
+@import "theme/layout";
+@import "theme/palette";
 
 @import "patterns/button";
 @import "patterns/icon-indicator";
