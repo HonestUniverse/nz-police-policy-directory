@@ -54,10 +54,10 @@
 
 /// Apply a standardised transition
 /// @param {string} $properties [all] - The properties to transition. If multiple, separate them by ", "
-/// @param {time} $duration [0.3s] - The transition duration
+/// @param {time} $duration [0.2s] - The transition duration
 /// @param {string} $easing [ease-in-out] - The transition easing
 /// @param {time} $delay [0s] - The transition delay
-@mixin transition($properties: all, $duration: 0.3s, $easing: ease-in-out, $delay: 0s) {
+@mixin transition($properties: all, $duration: 0.2s, $easing: ease-in-out, $delay: 0s) {
 	$props: string-split($properties);
 	$transitions: props-to-transitions($props, $duration, $easing, $delay);
 

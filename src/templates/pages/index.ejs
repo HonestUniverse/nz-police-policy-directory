@@ -11,21 +11,31 @@
 
 <%- include('../layout/head', { title: 'NZ Police Policy Directory' }); %>
 
+<div class="home-hero">
+	<h2 class="home-hero__title">Welcome</h2>
+
+	<div class="home-hero__text">
+		<p>Welcome to the NZ Police Policy Directory.</p>
+
+		<p>This website is an independent host of New Zealand Police policies and related documents, and is not associated with or controlled by NZ Police.</p>
+	</div>
+</div>
+
+<div class="pathway__layout">
+	<div class="pathway">
+		<a href="<%= paths.policies %>" class="pathway__link">View Police Policies</a>
+	</div>
+</div>
+
 <div class="content">
-	<h2>Welcome</h2>
-
-	<p>Welcome to the NZ Police Policy Directory. This website is an independent host of New Zealand Police policies and related documents, and is not associated with or controlled by NZ Police.</p>
-
 	<p>Police in New Zealand operate under several sets of rules. Some of these rules are set in legislation by parliament and are publicly available, such as the <a href="https://www.legislation.govt.nz/act/public/2008/0072/latest/whole.html" target="_blank">Policing Act 2008</a> and the <a href="https://www.legislation.govt.nz/act/public/2012/0024/latest/DLM2136536.html" target="_blank">Search and Surveillance Act 2012</a>.</p>
 
 	<p>Other rules are set internally by NZ Police. These rules are typically not available unless you request them under the Official Information Act, or NZ Police chooses to publish them somewhere.</p>
 
 	<p>Having rules that are only known internally to Police makes external accountability difficult.</p>
 
-	<p>This website holds a collection of NZ Police's internal rules, which have been released or published in various places over the years. You can find a complete list of all Police policy documents we are aware of in our directory:</p>
+	<p>This website holds a collection of NZ Police's internal rules, which have been released or published in various places over the years. You can find a complete list of all Police policy documents we are aware of in <a href="<%= paths.policies %>">our directory</a>.</p>
 </div>
-
-<a href="<%= paths.policies %>" class="home__section-link">Policies</a>
 
 <div class="content">
 	<p>For information on how to use this website, see our <a href="/how-to-use/">How to use this website</a> page.</p>
