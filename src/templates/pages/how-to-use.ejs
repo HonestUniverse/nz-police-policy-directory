@@ -95,4 +95,14 @@
 	policy: examplePolicy,
 }); %>
 
+<div class="content" id="json-api">
+	<h2>JSON API</h2>
+
+	<p>Each policy's page is driven by a JSON file, which uses a schema created for this website. This JSON data is available for anyone who wishes to use it. For any policy or version detail page, or for the directory itself, you can add ".json" to the end of the URL to load JSON instead of HTML.</p>
+
+	<p>For example, here is the JSON for the <%= examplePolicy.name %> <%= examplePolicy.type %>: <a href="<%= siteData.paths.policies %><%= examplePolicyKey %>.json"><%= siteData.paths.policies %><%= examplePolicyKey %>.json</a></p>
+
+	<p>You can find our JSON schema definition, along with the rest of the code for policepolicy.nz, in our GitHub repo: <a href="https://github.com/HonestUniverse/nz-police-policy-directory" target="_blank">HonestUniverse/nz-police-policy-directory</a></p>
+</div>
+
 <%- include('../layout/foot'); %>
