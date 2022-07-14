@@ -1,6 +1,8 @@
 <%##
 	locals: {
 		title: string,
+		description?: string,
+
 		h1?: string,
 		subtitle?: string,
 		backLink?: boolean,
@@ -21,11 +23,10 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 		<title><%= title %></title>
 		<% if (locals.description) { %>
-		<meta name="description" content="<%= description %>" />
-		<meta property="twitter:description" content="<%= description %>" />
-		<meta property="og:description" content="<%= description %>" />
+			<meta name="description" content="<%= description %>" />
+			<meta property="twitter:description" content="<%= description %>" />
+			<meta property="og:description" content="<%= description %>" />
 		<% } %>
-		<meta name="keywords" content="tags" />
 
 		<meta property="twitter:card" content="summary" />
 		<meta property="twitter:title" content="<%= title %>" />
