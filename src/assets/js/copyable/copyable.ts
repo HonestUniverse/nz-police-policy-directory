@@ -18,7 +18,7 @@ function initEvents() {
 	$buttons.forEach(($button) => {
 		$button.addEventListener('click', copyEvent);
 	});
-};
+}
 
 function copyEvent(this: HTMLElement, e: MouseEvent) {
 	const $button = this;
@@ -30,7 +30,7 @@ function copyEvent(this: HTMLElement, e: MouseEvent) {
 
 		toast('Copied!');
 	}
-};
+}
 
 /**
  * Copy the text content of an element to the clipboard

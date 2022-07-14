@@ -1,11 +1,7 @@
-import type { BuildStep } from './BuildStep.js';
-
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
 import * as paths from './util/paths.js';
-import { makeRootRelative } from './util/make-root-relative.js';
-import { Policy } from '../schema/Policy.js';
 
 import type { ContentBuildStep } from './BuildStep.js';
 
@@ -85,7 +81,7 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 
 		return [
 			new HtmlWebpackPlugin({
-				filename: `${dst}/about/index.html`,
+				filename: `${dst}/${paths.aboutDst}/index.html`,
 				template: TemplateCustomizer({
 					htmlLoaderOption: {
 						sources: false,
@@ -114,7 +110,7 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 
 		return [
 			new HtmlWebpackPlugin({
-				filename: `${dst}/accessibility/index.html`,
+				filename: `${dst}/${paths.accessibilityDst}/index.html`,
 				template: TemplateCustomizer({
 					htmlLoaderOption: {
 						sources: false,
@@ -143,7 +139,7 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 
 		return [
 			new HtmlWebpackPlugin({
-				filename: `${dst}/how-to-use/index.html`,
+				filename: `${dst}/${paths.howToUseDst}/index.html`,
 				template: TemplateCustomizer({
 					htmlLoaderOption: {
 						sources: false,
@@ -172,7 +168,7 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 
 		return [
 			new HtmlWebpackPlugin({
-				filename: `${dst}/contributing/index.html`,
+				filename: `${dst}/${paths.contributingDst}/index.html`,
 				template: TemplateCustomizer({
 					htmlLoaderOption: {
 						sources: false,
