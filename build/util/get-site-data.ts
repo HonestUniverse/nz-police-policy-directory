@@ -40,7 +40,6 @@ function prepareNavPath(dstPath: string): string {
 export function getSiteData(): SiteData {
 	const siteData: SiteData = {
 		name: 'policepolicy.nz',
-		// TODO: Move all these paths into the paths util, and use them in the build steps as well
 		paths: {
 			policies: prepareNavPath(paths.policiesDst),
 		},
