@@ -7,10 +7,14 @@ type NavigationItem = {
 };
 
 export type SiteData = {
+	name: string,
 	paths: {
 		policies: string,
 	},
-	navigation: NavigationItem[],
+	navigation: {
+		header: NavigationItem[],
+		footer?: NavigationItem[],
+	},
 	contact: {
 		email: string,
 	},
@@ -18,26 +22,43 @@ export type SiteData = {
 
 export function getSiteData(): SiteData {
 	const siteData: SiteData = {
+		name: 'policepolicy.nz',
+		// TODO: Move all these paths into the paths util, and use them in the build steps as well
 		paths: {
 			policies: makeRootRelative(paths.policiesDst),
 		},
-		navigation: [
-			{
-				path: '/',
-				name: 'Home',
-			},
-			{
-				path: '/about/',
-				name: 'About',
-			},
-			{
-				path: '/accessibility/',
-				name: 'Accessibility',
-			},
-		],
+		navigation: {
+			header: [
+				{
+					path: '/',
+					name: 'Home',
+				},
+				{
+					path: makeRootRelative(paths.policiesDst),
+					name: 'Policies',
+				},
+			],
+			footer: [
+				{
+					path: '/about/',
+					name: 'About',
+				},
+				{
+					path: '/how-to-use/',
+					name: 'How to use this website',
+				},
+				{
+					path: '/accessibility/',
+					name: 'Accessibility',
+				},
+				{
+					path: '/contributing/',
+					name: 'Contributing',
+				},
+			],
+		},
 		contact: {
-			// TODO: Set up a proper email address
-			email: 'mark@honestuniverse.com',
+			email: 'contact@policepolicy.nz',
 		},
 	};
 
