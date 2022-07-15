@@ -105,6 +105,20 @@
 
 			return false;
 		},
+
+		'May have versions not correctly marked as "ended"': (policy) => {
+			for (const [i, version] of policy.versions.entries()) {
+				if (i === 0) {
+					continue;
+				}
+
+				if (!(version.duration.end || version.duration.ended)) {
+					return true;
+				}
+			}
+
+			return false;
+		},
 	};
 %>
 
