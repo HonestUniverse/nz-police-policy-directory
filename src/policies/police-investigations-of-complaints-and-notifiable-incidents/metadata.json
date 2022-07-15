@@ -4,8 +4,14 @@
 		{
 			"duration": {
 				"on": [
+					{
+						"year": 2022,
+						"month": 1
+					},
 					"2022-04-22",
-					"2022-05-11"
+					"2022-05-11",
+					"2022-06-21",
+					"2022-07-15"
 				]
 			},
 			"provenance": [
@@ -26,6 +32,52 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2022-06-21/police-investigations-of-complaints-and-notifiable-incidents-210622.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 967534,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2022,
+								"month": 6
+							},
+							"extracted": "2022-06-21",
+							"retrieved": "2022-07-15",
+							"url": "https://www.police.govt.nz/about-us/publication/police-investigations-complaints-and-notifiable-incidents-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20220715050222/https://www.police.govt.nz/about-us/publication/police-investigations-complaints-and-notifiable-incidents-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/police-investigations-of-complaints-and-notifiable-incidents-210622.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20220705/https://www.police.govt.nz/sites/default/files/publications/police-investigations-of-complaints-and-notifiable-incidents-210622.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": ["Page 22 is an image of text."]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "../../bulk-files/2022-05-11/Bates John IR 01 22 8010 Response.pdf",
 					"type": "application/pdf",
@@ -78,38 +130,24 @@
 							}
 						}
 					}
-				}
-			],
-			"id": "u-znzik"
-		},
-		{
-			"duration": {
-				"ended": true,
-				"on": [
-					{
-						"year": 2022,
-						"month": 1
-					}
-				]
-			},
-			"provenance": [
-				{
-					"source": "NZ Police",
-					"method": "Proactively released",
-					"withholdings": "None",
-					"extracted": "2022-01-17",
-					"retrieved": "2022-05-01",
-					"url": "https://www.police.govt.nz/about-us/about-new-zealand-police/police-professional-conduct",
-					"archiveUrl": "https://web.archive.org/web/20220301190034/www.police.govt.nz/about-us/about-new-zealand-police/police-professional-conduct",
-					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/policy-police-investigations-complaints-notifiable-incidents.pdf",
-					"archiveFileUrl": "https://web.archive.org/web/20220308000300/www.police.govt.nz/sites/default/files/publications/policy-police-investigations-complaints-notifiable-incidents.pdf"
-				}
-			],
-			"files": [
+				},
 				{
 					"path": "january-2022/policy-police-investigations-complaints-notifiable-incidents.pdf",
 					"type": "application/pdf",
 					"size": 948156,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"extracted": "2022-01-17",
+							"retrieved": "2022-05-01",
+							"url": "https://www.police.govt.nz/about-us/about-new-zealand-police/police-professional-conduct",
+							"archiveUrl": "https://web.archive.org/web/20220301190034/www.police.govt.nz/about-us/about-new-zealand-police/police-professional-conduct",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/policy-police-investigations-complaints-notifiable-incidents.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20220308000300/www.police.govt.nz/sites/default/files/publications/policy-police-investigations-complaints-notifiable-incidents.pdf"
+						}
+					],
 					"licence": {
 						"name": "None"
 					},
@@ -134,7 +172,7 @@
 					"documentType": "Policy"
 				}
 			],
-			"id": "u-bdsvs"
+			"id": "u-znzik"
 		}
 	],
 	"schemaVersion": "0.5.0",
