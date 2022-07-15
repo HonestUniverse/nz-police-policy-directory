@@ -6,8 +6,62 @@
 		{
 			"duration": {
 				"on": [
-					"2021-12-16"
+					"2022-06-14",
+					"2022-07-15"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 6
+					},
+					"extracted": "2022-06-14",
+					"retrieved": "2022-07-15",
+					"url": "https://www.police.govt.nz/about-us/publication/managing-conflicts-interest-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220715051428/https://www.police.govt.nz/about-us/publication/managing-conflicts-interest-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/managing-conflicts-of-interest-140622.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220705/https://www.police.govt.nz/sites/default/files/publications/managing-conflicts-of-interest-140622.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-06-14/managing-conflicts-of-interest-140622.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 688088,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-aqywd"
+		},
+		{
+			"duration": {
+				"on": [
+					"2021-12-16"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
