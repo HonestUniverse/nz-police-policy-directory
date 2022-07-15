@@ -60,6 +60,13 @@
 					}
 				}
 			],
+			"notices": [
+				{
+					"type": "warning",
+					"title": "Under review",
+					"message": "<p>When this file was retrieved, the NZ Police website stated that:</p><blockquote>the Police Adult Diversion Policy is under review and an updated set of materials will be published in 2022.</blockquote></p>"
+				}
+			],
 			"id": "u-enaio"
 		},
 		{
