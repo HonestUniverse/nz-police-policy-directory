@@ -6,11 +6,71 @@
 		{
 			"duration": {
 				"on": [
+					"2022-06-09",
+					"2022-07-15"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 6
+					},
+					"extracted": "2022-06-09",
+					"retrieved": "2022-07-15",
+					"url": "https://www.police.govt.nz/about-us/publication/privacy-breach-management-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220715042837/https://www.police.govt.nz/about-us/publication/privacy-breach-management-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/privacy-breach-management-090622.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220705/https://www.police.govt.nz/sites/default/files/publications/privacy-breach-management-090622.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-06/privacy-breach-management-090622.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 904231,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There is an image of text on pages 8–10."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-fbexw"
+		},
+		{
+			"duration": {
+				"on": [
 					{
 						"year": 2021,
 						"month": 11
 					}
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
