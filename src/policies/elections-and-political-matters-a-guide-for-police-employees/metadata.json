@@ -5,9 +5,63 @@
 		{
 			"duration": {
 				"on": [
+					"2022-06-09",
+					"2022-07-15"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 6
+					},
+					"extracted": "2022-06-09",
+					"retrieved": "2022-07-15",
+					"url": "https://www.police.govt.nz/about-us/publication/elections-and-political-matters-police-manual-chapter",
+					"archiveUrl": "https://www.police.govt.nz/sites/default/files/publications/elections-and-political-matters-090622.pdf",
+					"fileUrl": "https://web.archive.org/web/20220715050747/https://www.police.govt.nz/about-us/publication/elections-and-political-matters-police-manual-chapter",
+					"archiveFileUrl": "https://web.archive.org/web/20220705213013/https://www.police.govt.nz/sites/default/files/publications/elections-and-political-matters-090622.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-06-09/elections-and-political-matters-090622.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 704437,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-iuuza"
+		},
+		{
+			"duration": {
+				"on": [
 					"2021-12-15",
 					"2022-05-24"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
