@@ -55,6 +55,22 @@ export const assetBuildSteps: Record<string, BuildStep> = {
 	},
 
 	/**
+	 * Copy images
+	 */
+	copyImages(src, dst) {
+		return [
+			new CopyPlugin({
+				patterns: [{
+					from: `${src}/images/**/*`,
+					to() {
+						return `${dst}/images/[name][ext]`;
+					},
+				}],
+			}),
+		];
+	},
+
+	/**
 	 * Copy assets that should sit in the root to dist
 	 */
 	copyRootAssets(src, dst) {
