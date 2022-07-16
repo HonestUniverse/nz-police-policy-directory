@@ -44,10 +44,13 @@
 					},
 					"original": true,
 					"accessibility": {
-						"rating": "Poor",
+						"rating": "Bad",
 						"features": {
 							"text-based": {
-								"value": true
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing from the table of contents."
+								]
 							},
 							"semantics": {
 								"value": false
