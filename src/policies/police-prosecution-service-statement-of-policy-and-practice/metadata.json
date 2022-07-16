@@ -3,10 +3,63 @@
 	"versions": [
 		{
 			"duration": {
+				"on": [
+					"2022-07-13"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 7
+					},
+					"extracted": "2022-07-13",
+					"retrieved": "2022-07-16",
+					"url": "https://www.police.govt.nz/about-us/publication/police-prosecution-service-statement-policy-and-practice-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220716012659/https://www.police.govt.nz/about-us/publication/police-prosecution-service-statement-policy-and-practice-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/pps-statement-of-policy-and-practice-130722.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220716012709/https://www.police.govt.nz/sites/default/files/publications/pps-statement-of-policy-and-practice-130722.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-07-13/pps-statement-of-policy-and-practice-130722.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 747517,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-eeiez"
+		},
+		{
+			"duration": {
 				"start": "2018-04-16",
 				"on": [
 					"2020-09-03"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
