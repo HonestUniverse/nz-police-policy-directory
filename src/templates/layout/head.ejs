@@ -23,10 +23,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<title><%= title %></title>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta charset="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
-		<title><%= title %></title>
+
+		<!--
+			Favicon generated based on Twemoji Green Book icon
+
+			Copyright 2020 Twitter, Inc and other contributors
+			Code licensed under the MIT License: http://opensource.org/licenses/MIT
+			Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
+		-->
+		<link rel="icon" href="/favicon.ico" />
+
 		<% if (locals.description) { %>
 			<meta name="description" content="<%= description %>" />
 			<meta property="twitter:description" content="<%= description %>" />
