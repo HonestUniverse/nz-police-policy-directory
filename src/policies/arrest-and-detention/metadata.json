@@ -1,49 +1,117 @@
 {
+	"schemaVersion": "0.5.4",
 	"name": "Arrest and detention",
+	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"name": "2016-07-01",
-			"id": "u-ikcqt",
 			"duration": {
-				"start": "2016-07-01"
+				"on": [
+					"2022-07-13"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+						"requester": "S.I",
+						"id": "IR-01-22-18456",
+						"responseUrl": "https://fyi.org.nz/request/19749-all-resources-relating-to-reasonable-grounds-including-guidelines-and-instructions#incoming-75071",
 						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2022-07-13",
+					"retrieved": "2022-07-17",
+					"url": "https://fyi.org.nz/request/19749-all-resources-relating-to-reasonable-grounds-including-guidelines-and-instructions?nocache=incoming-75071",
+					"fileUrl": "https://fyi.org.nz/request/19749/response/75071/attach/8/SI%20IR%2001%2022%2018456%20Response.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "0.5.4",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "../../bulk-files/2022-07-13/SI IR 01 22 18456 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 3,
+					"size": 423503,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only pages 14–16 of 57 are included."
+					},
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-07-13/SI IR 01 22 18456 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 423503,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-07-13/SI IR 01 22 18456 Response.pdf",
+					"name": "Detective Training Programme module \"Search and Surveillance Act\"",
+					"type": "application/pdf",
+					"documentType": "Supplementary document",
+					"startingPage": 10,
+					"size": 423503,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only pages 8 and 9 are included."
+					},
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-ukwhk"
 		}
 	]
 }
