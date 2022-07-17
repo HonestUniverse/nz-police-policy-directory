@@ -1,15 +1,17 @@
 {
 	"schemaVersion": "0.5.4",
-	"name": "Privacy and official information -  Introduction to disclosure of information",
+	"name": "Privacy and official information  - Disclosure under the Privacy Act 1993",
 	"type": "Police Manual chapter",
+	"obsolete": true,
 	"versions": [
 		{
 			"duration": {
-				"start": "2020-06-17",
+				"start": "2017-10-02",
 				"on": [
-					"2020-07-07",
+					"2020-03-13",
 					"2020-07-20"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -21,20 +23,20 @@
 						"responseUrl": "https://fyi.org.nz/request/13044-oia-procedures#incoming-50068",
 						"withholdings": "None"
 					},
-					"extracted": "2020-07-07",
+					"extracted": "2020-03-13",
 					"released": "2020-07-20",
 					"retrieved": "2022-07-17",
 					"url": "https://fyi.org.nz/request/13044-oia-procedures",
-					"fileUrl": "https://fyi.org.nz/request/13044/response/50068/attach/2/Introduction%20to%20disclosure%20of%20information.pdf"
+					"fileUrl": "https://fyi.org.nz/request/13044/response/50068/attach/3/Disclosure%20under%20the%20Privacy%20Act%201993.pdf"
 				}
 			],
 			"files": [
 				{
-					"path": "2020-07-07/Introduction to disclosure of information.pdf",
+					"path": "2020-03-13/Disclosure under the Privacy Act 1993.pdf",
 					"type": "application/pdf",
 					"documentType": "Policy",
 					"startingPage": 1,
-					"size": 140752,
+					"size": 248321,
 					"licence": {
 						"name": "None"
 					},
@@ -86,7 +88,7 @@
 					"message": "The OIA response letter advised that this document was \"currently under review\" when it was released."
 				}
 			],
-			"id": "u-yushv"
+			"id": "u-kgett"
 		}
 	]
 }
