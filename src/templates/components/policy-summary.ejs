@@ -60,7 +60,7 @@
 	<% } %>
 >
 	<h2 class="policy-summary__title">
-		<a href="<%= paths.policies %><%= key %>" class="policy-summary__link"><%= policy.name %><%= policy.obsolete ? ' (obsolete)' : '' %></a>
+		<a href="<%= paths.policies %><%= key %>" class="policy-summary__link"><%= policy.name %></a>
 	</h2>
 
 	<% if (policy.previousNames) { %>
@@ -74,7 +74,7 @@
 		</div>
 	<% } %>
 
-	<span class="policy-summary__type"><%= policy.type %></span>
+	<span class="policy-summary__type"><%= policy.type %><%= policy.obsolete ? ' (obsolete)' : '' %></span>
 
 	<% if (isStub(policy)) { %>
 		<span class="policy-summary__stub-notice">No files</span>
