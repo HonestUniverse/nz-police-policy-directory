@@ -108,11 +108,15 @@
 
 		'May have versions not correctly marked as "ended"': (policy) => {
 			for (const [i, version] of policy.versions.entries()) {
-				if (i === 0) {
-					continue;
+				const versionEnded = !!(version.duration.end || version.duration.ended);
+
+				// Obsolete policies must have ended
+				if (policy.obsolete && !versionEnded) {
+					return true;
 				}
 
-				if (!(version.duration.end || version.duration.ended)) {
+				// Versions that aren't the latest must have ended
+				if (i >= 1 && !versionEnded) {
 					return true;
 				}
 			}
