@@ -32,7 +32,7 @@
 	title,
 	description: `This page describes the ${include('../helpers/version-name', { version })} version of the "${policy.name}" ${policy.type}`,
 	h1: policy.name,
-	subtitle: policy.type,
+	subtitle: `${policy.type}${policy.obsolete ? ' (obsolete)' : ''}`,
 	backLink: true,
 }); %>
 
