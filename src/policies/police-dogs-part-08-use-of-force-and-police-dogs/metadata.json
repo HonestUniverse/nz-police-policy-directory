@@ -5,9 +5,66 @@
 		{
 			"duration": {
 				"on": [
+					"2022-06-14",
+					{
+						"year": 2022,
+						"month": 7
+					}
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 7
+					},
+					"extracted": "2022-06-14",
+					"retrieved": "2022-07-19",
+					"url": "https://www.police.govt.nz/about-us/publication/police-dogs-police-manual-chapter",
+					"archiveUrl": "https://www.police.govt.nz/sites/default/files/publications/police-dogs-8-use-of-force-and-police-dogs-140622.pdf",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/police-dogs-8-use-of-force-and-police-dogs-140622.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220719112629/https://www.police.govt.nz/sites/default/files/publications/police-dogs-8-use-of-force-and-police-dogs-140622.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-06-14/police-dogs-8-use-of-force-and-police-dogs-140622.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 701112,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-bpsgc"
+		},
+		{
+			"duration": {
+				"on": [
 					"2019-08-09",
 					"2019-08-26"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -28,7 +85,7 @@
 			],
 			"files": [
 				{
-					"path": "unnamed-version-1/Part 8 Use of force and Police dogs.pdf",
+					"path": "2019-08-23/Part 8 Use of force and Police dogs.pdf",
 					"type": "application/pdf",
 					"size": 175854,
 					"licence": {
