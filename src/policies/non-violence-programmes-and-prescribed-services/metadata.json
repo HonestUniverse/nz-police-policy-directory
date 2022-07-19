@@ -5,7 +5,12 @@
 			"duration": {
 				"start": "2019-07-02",
 				"on": [
-					"2021-05-24"
+					"2021-05-24",
+					"2022-06-14",
+					{
+						"year": 2022,
+						"month": 7
+					}
 				]
 			},
 			"provenance": [
@@ -26,6 +31,48 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2022-06-14/nonviolence-programmes-and-prescribed-services-140622.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 675142,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2022,
+								"month": 7
+							},
+							"extracted": "2022-06-14",
+							"retrieved": "2022-07-19",
+							"url": "https://www.police.govt.nz/about-us/publication/non-violence-programmes-and-prescribed-services-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20220719004801/https://www.police.govt.nz/about-us/publication/non-violence-programmes-and-prescribed-services-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/nonviolence-programmes-and-prescribed-services-140622.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20220719004802/https://www.police.govt.nz/sites/default/files/publications/nonviolence-programmes-and-prescribed-services-140622.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "version-1/Nonviolence programmes and prescribed services.pdf",
 					"type": "application/pdf",
