@@ -3,6 +3,10 @@
 	"description": "A specific version of a policy",
 	"type": "object",
 	"properties": {
+		"isFirst": {
+			"description": "If known, whether or not this version is the first version of its policy.",
+			"type": "boolean"
+		},
 		"name": {
 			"description": "The name of this version of the policy",
 			"type": "string"
