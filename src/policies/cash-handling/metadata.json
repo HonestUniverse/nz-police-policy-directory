@@ -2,7 +2,6 @@
 	"name": "Cash handling",
 	"versions": [
 		{
-			"name": "2020-10-06",
 			"id": "u-hchcu",
 			"duration": {
 				"start": "2020-10-06"

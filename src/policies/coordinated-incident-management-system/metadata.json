@@ -2,7 +2,6 @@
 	"name": "Coordinated Incident Management System",
 	"versions": [
 		{
-			"name": "2019-09-02",
 			"id": "u-boxui",
 			"duration": {
 				"start": "2019-09-02"

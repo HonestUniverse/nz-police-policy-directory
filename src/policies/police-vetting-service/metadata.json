@@ -2,7 +2,6 @@
 	"name": "Police Vetting Service",
 	"versions": [
 		{
-			"name": "2022-01-20",
 			"id": "u-qsnet",
 			"duration": {
 				"start": "2022-01-20"

@@ -2,7 +2,6 @@
 	"name": "Traffic control at special events",
 	"versions": [
 		{
-			"name": "2016-02-15",
 			"id": "u-uniak",
 			"duration": {
 				"start": "2016-02-15"

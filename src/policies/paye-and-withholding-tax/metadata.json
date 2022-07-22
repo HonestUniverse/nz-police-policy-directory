@@ -2,7 +2,6 @@
 	"name": "PAYE and withholding tax",
 	"versions": [
 		{
-			"name": "2017-06-29",
 			"id": "u-dxbio",
 			"duration": {
 				"start": "2017-06-29"
