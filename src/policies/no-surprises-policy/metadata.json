@@ -2,7 +2,6 @@
 	"name": "No surprises policy",
 	"versions": [
 		{
-			"name": "2019-09-05",
 			"id": "u-scdio",
 			"duration": {
 				"start": "2019-09-05"

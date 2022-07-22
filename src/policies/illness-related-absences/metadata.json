@@ -2,7 +2,6 @@
 	"name": "Illness related absences",
 	"versions": [
 		{
-			"name": "2018-09-03",
 			"id": "u-cdgdk",
 			"duration": {
 				"start": "2018-09-03"

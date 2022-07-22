@@ -2,7 +2,6 @@
 	"name": "Probationary Constables Policy",
 	"versions": [
 		{
-			"name": "2021-07-05",
 			"id": "u-dynay",
 			"duration": {
 				"start": "2021-07-05"
