@@ -38,8 +38,14 @@
 	}
 }
 
+.policy__version__label {
+	display: block;
+	margin: 0.5rem 0;
+	@include font-heading-20b;
+}
+
 .policy__version__name {
-	margin: 0 0 0.5rem;
+	margin: 0.5rem 0;
 	@include font-heading-32b;
 }
 
@@ -54,3 +60,9 @@
 }
 
 .policy__version__details {}
+
+.policy__older-versions-notice {
+	margin-top: 2rem;
+
+	@include font-base-20;
+}
