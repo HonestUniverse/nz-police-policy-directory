@@ -56,6 +56,8 @@
 <% if (policy.versions.length > 0) { %>
 	<article class="policy__version">
 		<div class="policy__version__head">
+			<span class="policy__version__label">Version</span>
+
 			<h2 class="policy__version__name">
 				<%
 					const version = policy.versions[0];
@@ -105,6 +107,12 @@
 					</li>
 				<% }); %>
 			</ol>
+		</div>
+	<% } %>
+
+	<% if (!policy.versions.find((version) => version.isFirst)) { %>
+		<div class="policy__older-versions-notice">
+			Older versions may exist
 		</div>
 	<% } %>
 <% } %>
