@@ -1,9 +1,10 @@
 {
-	"schemaVersion": "0.5.4",
+	"schemaVersion": "0.5.5",
 	"type": "Police Manual chapter",
 	"name": "Family harm - Parental control (section 59 Crimes Act)",
 	"versions": [
 		{
+			"isFirst": true,
 			"id": "u-cycay",
 			"duration": {
 				"start": "2018-08-15",
