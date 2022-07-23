@@ -1,0 +1,60 @@
+{
+	"schemaVersion": "0.5.4",
+	"type": "Police Manual chapter",
+	"name": "Family harm - Parental control (section 59 Crimes Act)",
+	"versions": [
+		{
+			"id": "u-cycay",
+			"duration": {
+				"start": "2018-08-15",
+				"on": [
+					"2020-07-02"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "K Baird",
+						"id": "IR-01-20-18227",
+						"responseUrl": "https://fyi.org.nz/request/13205-section-59-crimes-act#incoming-50712",
+						"withholdings": "None"
+					},
+					"extracted": "2020-07-02",
+					"released": "2020-08-17",
+					"retrieved": "2022-07-24",
+					"url": "https://fyi.org.nz/request/13205-section-59-crimes-act#incoming-50712",
+					"fileUrl": "https://fyi.org.nz/request/13205/response/50712/attach/2/Baird%20K%20IR%2001%2020%2018227%20attachments.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2020-08-17/Baird K IR 01 20 18227 attachments.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 173,
+					"size": 3755495,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
+		}
+	]
+}
