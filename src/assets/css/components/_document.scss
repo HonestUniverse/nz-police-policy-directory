@@ -9,6 +9,11 @@
 		content: "Page " counter(page);
 		margin-bottom: 2rem;
 	}
+	&:first-child:last-child {
+		&::before {
+			display: none;
+		}
+	}
 
 	@extend %content;
 
