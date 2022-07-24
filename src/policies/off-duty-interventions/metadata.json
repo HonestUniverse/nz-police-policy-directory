@@ -7,6 +7,7 @@
 			"id": "u-qneod",
 			"duration": {
 				"on": [
+					"2019-11-15",
 					"2020-07-14",
 					"2020-07-22"
 				]
@@ -77,6 +78,48 @@
 							}
 						}
 					]
+				},
+				{
+					"path": "2019-11-15/off duty interventions policy.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 56539,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Daniel Thomas",
+								"id": "IR-01-19-30512",
+								"responseUrl": "https://fyi.org.nz/request/11603-off-duty-police-powers#incoming-43364",
+								"withholdings": "None"
+							},
+							"extracted": "2019-11-15",
+							"released": "2019-12-04",
+							"retrieved": "2022-07-24",
+							"url": "https://fyi.org.nz/request/11603-off-duty-police-powers#incoming-43364",
+							"fileUrl": "https://fyi.org.nz/request/11603/response/43364/attach/3/off%20duty%20interventions%20policy.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
 				}
 			]
 		}
