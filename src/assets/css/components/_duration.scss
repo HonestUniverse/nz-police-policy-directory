@@ -81,6 +81,9 @@ $duration-sep-offset: calc(100% + #{$duration-sep-gap});
 	display: block;
 	flex-grow: 1;
 	@include font-base-20;
+	@include bp-from($duration-bp) {
+		line-height: #{math.div(20, 20)};
+	}
 	white-space: nowrap;
 }
 
