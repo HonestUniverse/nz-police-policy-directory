@@ -41,13 +41,45 @@ export const assetBuildSteps: Record<string, BuildStep> = {
 	/**
 	 * Copy font icons to dist
 	 */
-	 copyFontIcons(src, dst) {
+	copyFontIcons(src, dst) {
 		return [
 			new CopyPlugin({
 				patterns: [{
 					from: `${src}/fonts/font-icons/fonts/**/*`,
 					to() {
 						return `${dst}/fonts/font-icons/[name][ext]`;
+					},
+				}],
+			}),
+		];
+	},
+
+	/**
+	 * Copy images
+	 */
+	copyImages(src, dst) {
+		return [
+			new CopyPlugin({
+				patterns: [{
+					from: `${src}/images/**/*`,
+					to() {
+						return `${dst}/images/[name][ext]`;
+					},
+				}],
+			}),
+		];
+	},
+
+	/**
+	 * Copy assets that should sit in the root to dist
+	 */
+	copyRootAssets(src, dst) {
+		return [
+			new CopyPlugin({
+				patterns: [{
+					from: `${src}/root/**/*`,
+					to() {
+						return `${dst}/../[name][ext]`;
 					},
 				}],
 			}),
