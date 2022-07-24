@@ -9,12 +9,15 @@
 	"provenance": "If there's policy information not associated with a version",
 	"versions": [
 		{
+			"isFirst": "boolean",
 			"name": "string",
 			"duration": {
 				"start": "date",
 				"end": "date",
 				"ended": false,
-				"on": ["date"]
+				"on": [
+					"date"
+				]
 			},
 			"provenance": [
 				{

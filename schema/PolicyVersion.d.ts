@@ -4,6 +4,7 @@ import { File } from './File.js';
 import { Notice } from './Notice.js';
 
 export type Version = {
+	isFirst?: boolean,
 	name?: string,
 	id: string,
 	duration: PolicyVersionDuration,
