@@ -1,48 +1,65 @@
 {
+	"schemaVersion": "0.5.5",
+	"type": "Police Manual chapter",
 	"name": "Investigative interviewing - suspects requiring special consideration",
 	"versions": [
 		{
-			"id": "u-cwbaf",
 			"duration": {
-				"start": "2017-06-07"
+				"on": [
+					"2020-05-01"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+						"requester": "H Rogers",
+						"id": "IR-01-20-5087",
+						"responseUrl": "https://fyi.org.nz/request/12270-use-of-interpreters-in-taking-formal-written-statements-at-the-police-station#incoming-47887",
 						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2020-05-01",
+					"retrieved": "2022-07-24",
+					"url": "https://fyi.org.nz/request/12270-use-of-interpreters-in-taking-formal-written-statements-at-the-police-station#incoming-47887",
+					"fileUrl": "https://fyi.org.nz/request/12270/response/47887/attach/3/Rogers%20H%20IR%2001%2020%205087%20attachment.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "0.5.4",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "../../bulk-files/2020-05-01/Rogers H IR 01 20 5087 attachment.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 75727,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only pages 16–17 of 18 are included."
+					},
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-cwbaf"
 		}
 	]
 }
