@@ -1,0 +1,64 @@
+{
+	"schemaVersion": "0.5.5",
+	"type": "Police Manual chapter",
+	"name": "Crime Prevention Cameras (CCTV) in Public Places",
+	"versions": [
+		{
+			"duration": {
+				"on": [
+					"2020-05-06"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Amy Ferguson",
+						"id": "IR-01-20-3244",
+						"responseUrl": "https://fyi.org.nz/request/12139-policy-procedures-re-personal-information#incoming-47988",
+						"withholdings": "None"
+					},
+					"released": "2020-05-06",
+					"retrieved": "2022-07-24",
+					"url": "https://fyi.org.nz/request/12139-policy-procedures-re-personal-information#incoming-47988",
+					"fileUrl": "https://fyi.org.nz/request/12139/response/47988/attach/3/Ferguson%20Amy%20IR%2001%2020%203244%20response%20attachment%202.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2020-05-06/Ferguson Amy IR 01 20 3244 response attachment 2.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 755942,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are images of text on pages 17 and 18."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-eowav"
+		}
+	]
+}
