@@ -1,48 +1,64 @@
 {
+	"schemaVersion": "0.5.4",
+	"type": "Police Manual chapter",
 	"name": "Civil defence and emergency management",
 	"versions": [
 		{
-			"id": "u-hbeoy",
 			"duration": {
-				"start": "2017-05-01"
+				"on": [
+					"2020-04-21"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+						"requester": "Riki G",
+						"id": "IR-01-20-7054",
+						"responseUrl": "https://fyi.org.nz/request/12345-police-manual-civil-defence-emergency-management#incoming-47682",
 						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2020-04-21",
+					"retrieved": "2022-07-24",
+					"url": "https://fyi.org.nz/request/12345-police-manual-civil-defence-emergency-management#incoming-47682",
+					"fileUrl": "https://fyi.org.nz/request/12345/response/47682/attach/3/Gurden%20Rikki%20IR%2001%2020%207054%20Police%20Instruction%20Civil%20defence%20and%20emergency%20management.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "0.5.4",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2020-04-21/Gurden Rikki IR 01 20 7054 Police Instruction Civil defence and emergency management.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1006675,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are images of text on pages 4, 39, 40, and 60."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-hbeoy"
 		}
 	]
 }
