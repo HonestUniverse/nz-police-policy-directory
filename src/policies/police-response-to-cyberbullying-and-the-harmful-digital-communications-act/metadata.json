@@ -1,48 +1,85 @@
 {
+	"schemaVersion": "0.5.5",
+	"type": "Police Manual chapter",
 	"name": "Police response to cyberbullying and the Harmful Digital Communications Act",
 	"versions": [
 		{
-			"id": "u-hkaoa",
 			"duration": {
-				"start": "2021-09-15"
+				"start": "2019-12-16",
+				"on": [
+					"2020-05-25"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+						"requester": "Alice Haden",
+						"id": "IR-01-20-12388",
+						"responseUrl": "https://fyi.org.nz/request/12792-harmful-digital-communications-act-police-manual-chapters-policies-or-guidelines-for-prosecutions-under-this-act#incoming-49253",
 						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2020-05-25",
+					"released": "2020-06-16",
+					"retrieved": "2022-07-24",
+					"url": "https://fyi.org.nz/request/12792-harmful-digital-communications-act-police-manual-chapters-policies-or-guidelines-for-prosecutions-under-this-act#incoming-49253",
+					"fileUrl": "https://fyi.org.nz/request/12792/response/49253/attach/2/Karvelas%20Alice%20IR%2001%2020%2012388%20release%20docs.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "0.5.4",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "../../bulk-files/2020-06-16/Karvelas Alice IR 01 20 12388 release docs.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 2895520,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2020-06-16/Karvelas Alice IR 01 20 12388 release docs.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 2895520,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-hkaoa"
 		}
 	]
 }
