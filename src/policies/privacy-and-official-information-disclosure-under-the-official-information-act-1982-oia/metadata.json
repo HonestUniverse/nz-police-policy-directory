@@ -1,48 +1,59 @@
 {
+	"schemaVersion": "0.5.4",
+	"type": "Police Manual chapter",
 	"name": "Privacy and official information - Disclosure under the Official Information Act 1982 (OIA)",
 	"versions": [
 		{
-			"id": "u-eqjvy",
 			"duration": {
-				"start": "2020-12-01"
+				"on": [
+					"2020-01-30"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+						"requester": "Andrew Ecclestone",
+						"id": "IR-01-19-25383",
+						"responseUrl": "https://fyi.org.nz/request/11064-oia-authorisation-and-training-of-the-national-manager-response-and-operations#incoming-47673",
 						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2020-01-30",
+					"released": "2020-04-20",
+					"retrieved": "2020-07-25",
+					"url": "https://fyi.org.nz/request/11064-oia-authorisation-and-training-of-the-national-manager-response-and-operations#incoming-47673",
+					"fileUrl": "https://fyi.org.nz/request/11064/response/47673/attach/4/2.FULL%20RELEASE%20Disclosure%20under%20the%20Official%20Information%20Act%201982%20OIA.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "0.5.4",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2020-01-30/2.FULL RELEASE Disclosure under the Official Information Act 1982 OIA.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 413686,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-eqjvy"
 		}
 	]
 }
