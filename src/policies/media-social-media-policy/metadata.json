@@ -1,13 +1,68 @@
 {
-	"schemaVersion": "0.5.0",
+	"schemaVersion": "0.5.5",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"duration": {
 				"on": [
+					"2022-07-21"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": {
+						"9(2)(g)(ii)": "Some information has been withheld on page 10. Only \"s.9(2)(g) OIA\" was specified, but from previous releases s9(2)(g)(ii) seems most likely."
+					},
+					"published": {
+						"year": 2022,
+						"month": 7
+					},
+					"extracted": "2022-07-21",
+					"retrieved": "2022-07-25",
+					"url": "https://www.police.govt.nz/about-us/publication/social-media-policy-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220725051800/https://www.police.govt.nz/about-us/publication/social-media-policy-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/social-media-policy-redacted-210722.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220725051838/https://www.police.govt.nz/sites/default/files/publications/social-media-policy-redacted-210722.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-07-21/social-media-policy-redacted-210722.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 676062,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-zhddg"
+		},
+		{
+			"duration": {
+				"on": [
 					"2022-04-21",
 					"2022-05-16"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -31,7 +86,7 @@
 			],
 			"files": [
 				{
-					"path": "unnamed-version-1/South Junior Michael IR 01 22 11011 Response.pdf",
+					"path": "2022-04-21/South Junior Michael IR 01 22 11011 Response.pdf",
 					"type": "application/pdf",
 					"startingPage": 3,
 					"size": 669589,
@@ -56,7 +111,7 @@
 					"documentType": "Policy"
 				},
 				{
-					"path": "unnamed-version-1/South Junior Michael IR 01 22 11011 Response.pdf",
+					"path": "2022-04-21/South Junior Michael IR 01 22 11011 Response.pdf",
 					"type": "application/pdf",
 					"startingPage": 1,
 					"size": 669589,
