@@ -1,48 +1,65 @@
 {
+	"schemaVersion": "0.5.5",
+	"type": "Police Manual chapter",
 	"name": "Police air operations",
 	"versions": [
 		{
-			"id": "u-jpnxt",
 			"duration": {
-				"start": "2018-01-29"
+				"on": [
+					"2019-06-12"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None"
+						"requester": "Emmy Rākete",
+						"id": "IR-01-19-18768",
+						"responseUrl": "https://fyi.org.nz/request/10712-use-of-police-helicopter-rotor-wash#incoming-38429",
+						"withholdings": {
+							"Out of scope": "Information has been withheld on pages 1, 10, and 14"
+						}
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2019-06-12",
+					"released": "2019-08-09",
+					"retrieved": "2022-07-25",
+					"url": "https://fyi.org.nz/request/10712-use-of-police-helicopter-rotor-wash#incoming-38429",
+					"fileUrl": "https://fyi.org.nz/request/10712/response/38429/attach/3/Police%20manual%20chapter.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "0.5.4",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2019-06-12/Police manual chapter.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 336143,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only pages 1 and 10–14 of 14 are included."
+					},
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-jpnxt"
 		}
 	]
 }
