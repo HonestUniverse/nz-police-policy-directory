@@ -1,13 +1,19 @@
 {
-	"schemaVersion": "0.5.0",
+	"schemaVersion": "0.5.5",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"duration": {
 				"on": [
 					"2021-08-09",
-					"2021-09-01"
-				]
+					"2021-09-01",
+					"2022-05-04",
+					{
+						"year": 2022,
+						"month": 7
+					}
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -28,7 +34,55 @@
 			],
 			"files": [
 				{
-					"path": "unnamed-version-1/Murtagh Amanda IR 01 21 24277 Final Response.pdf",
+					"path": "2022-05-04/victims-police-service-to-victims-200522.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1213076,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2022,
+								"month": 7
+							},
+							"extracted": "2022-05-04",
+							"retrieved": "2022-07-25",
+							"url": "https://www.police.govt.nz/about-us/publication/victims-police-service-victims-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20220725051756/https://www.police.govt.nz/about-us/publication/victims-police-service-victims-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/victims-police-service-to-victims-200522.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20220725051757/https://www.police.govt.nz/sites/default/files/publications/victims-police-service-to-victims-200522.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are images of text on pages 27 and 55."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2021-08-09/Murtagh Amanda IR 01 21 24277 Final Response.pdf",
 					"type": "application/pdf",
 					"documentType": "Policy",
 					"startingPage": 2,
@@ -59,7 +113,7 @@
 					}
 				},
 				{
-					"path": "unnamed-version-1/Murtagh Amanda IR 01 21 24277 Final Response.pdf",
+					"path": "2021-08-09/Murtagh Amanda IR 01 21 24277 Final Response.pdf",
 					"type": "application/pdf",
 					"documentType": "OIA response letter",
 					"startingPage": 1,
