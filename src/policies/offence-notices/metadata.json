@@ -1,5 +1,6 @@
 {
-	"schemaVersion": "0.5.0",
+	"schemaVersion": "0.5.5",
+	"name": "Offence notices",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -26,7 +27,7 @@
 			],
 			"files": [
 				{
-					"path": "unnamed-version-1/C Cody IR 01 22 142 Response.pdf",
+					"path": "2022-01-21/C Cody IR 01 22 142 Response.pdf",
 					"type": "application/pdf",
 					"documentType": "Policy",
 					"startingPage": 2,
@@ -55,7 +56,7 @@
 					}
 				},
 				{
-					"path": "unnamed-version-1/C Cody IR 01 22 142 Response.pdf",
+					"path": "2022-01-21/C Cody IR 01 22 142 Response.pdf",
 					"type": "application/pdf",
 					"documentType": "OIA response letter",
 					"startingPage": 1,
@@ -81,7 +82,61 @@
 				}
 			],
 			"id": "u-osniv"
+		},
+		{
+			"duration": {
+				"ended": true,
+				"on": [
+					"2018-08-28"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Joseph",
+						"id": "IR-01-18-8327",
+						"responseUrl": "https://fyi.org.nz/request/8493-section-113-lta#incoming-27581",
+						"withholdings": "None"
+					},
+					"released": "2018-08-28",
+					"retrieved": "2022-07-25",
+					"url": "https://fyi.org.nz/request/8493-section-113-lta#incoming-27581",
+					"fileUrl": "https://fyi.org.nz/request/8493/response/27581/attach/6/Joseph%20IR%2001%2018%208327%20Reply%20Offence%20Notices%20Chapter%20Section%20113%20Land%20Transport%20Act.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2018-08-28/Joseph IR 01 18 8327 Reply Offence Notices Chapter Section 113 Land Transport Act.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 4537827,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-xghhx"
 		}
-	],
-	"name": "Offence notices"
+	]
 }
