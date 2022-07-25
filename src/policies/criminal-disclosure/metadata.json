@@ -1,48 +1,71 @@
 {
+	"schemaVersion": "0.5.5",
+	"type": "Police Manual chapter",
 	"name": "Criminal disclosure",
 	"versions": [
 		{
-			"id": "u-jzzse",
 			"duration": {
-				"start": "2016-07-19"
+				"on": [
+					"2016-07-07"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+						"requester": "Chloe Kim",
+						"id": "16-5212-1",
+						"responseUrl": "https://fyi.org.nz/request/4125-chapters-from-police-manual#incoming-13679",
 						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2016-07-07",
+					"retrieved": "2022-07-25",
+					"url": "https://fyi.org.nz/request/4125-chapters-from-police-manual#incoming-13679",
+					"fileUrl": "https://fyi.org.nz/request/4125/response/13679/attach/5/Criminal%20Disclosure.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "0.5.4",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2016-07-07/Criminal Disclosure.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 456381,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are images of text on pages 7, 9, 14, 16, 19, 20, and 28."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "warning",
+					"title": "Under review",
+					"message": "<p>When this document was released, it was under review:</p><blockquote>Please note that the Criminal Disclosurue chapter attached is currently under review and will shortly reflect some changse, particularly the removal of references to prosecutions commencing prior to 30 June 2013 (the commencement of the Criminal Procedure Act 2011).</blockquote>"
+				}
+			],
+			"id": "u-jzzse"
 		}
 	]
 }
