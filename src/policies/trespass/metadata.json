@@ -1,48 +1,58 @@
 {
+	"schemaVersion": "0.5.5",
+	"type": "Police Manual chapter",
 	"name": "Trespass",
 	"versions": [
 		{
-			"id": "u-wzawg",
 			"duration": {
-				"start": "2021-12-15"
+				"on": [
+					"2016-07-20"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+						"requester": "Laura Drew",
+						"id": "16-5605",
+						"responseUrl": "https://fyi.org.nz/request/4164-police-manual-trespass-chapter#incoming-13998",
 						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2016-07-20",
+					"retrieved": "2022-07-25",
+					"url": "https://fyi.org.nz/request/4164-police-manual-trespass-chapter#incoming-13998",
+					"fileUrl": "https://fyi.org.nz/request/4164/response/13998/attach/5/drew%20l%20trespass%20chapter%2016%205605.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "0.5.4",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2016-07-20/drew l trespass chapter 16 5605.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 254824,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-wzawg"
 		}
 	]
 }
