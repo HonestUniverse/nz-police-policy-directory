@@ -58,6 +58,6 @@
 			"message": "<p>This Police Manual chapter did not appear in the <a href=\"https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199\" target=\"_blank\">complete list of chapters</a> released by Police in June 2022, and may be obsolete.</p><p>It may have been replaced with a number of different chapters within a combined \"Arms\" section.</p>"
 		}
 	],
-	"schemaVersion": "0.5.0",
+	"schemaVersion": "1.0.0",
 	"name": "Arms"
 }
