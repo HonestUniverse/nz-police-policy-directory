@@ -54,6 +54,57 @@
 				}
 			],
 			"id": "u-eqjvy"
+		},
+		{
+			"duration": {
+				"ended": true,
+				"on": [
+					"2017-02-17"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"responseUrl": "https://fyi.org.nz/request/5237-guidelines-for-processing-information-requests#incoming-17095",
+						"withholdings": "None"
+					},
+					"released": "2017-02-17",
+					"retrieved": "2022-07-25",
+					"url": "https://fyi.org.nz/request/5237-guidelines-for-processing-information-requests#incoming-17095",
+					"fileUrl": "https://fyi.org.nz/request/5237/response/17095/attach/3/Disclosure%20under%20the%20OIA.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2017-02-17/Disclosure under the OIA.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 154926,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-iaeeu"
 		}
 	]
 }
