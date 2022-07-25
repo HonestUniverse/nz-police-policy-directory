@@ -1,48 +1,60 @@
 {
+	"schemaVersion": "0.5.5",
+	"type": "Police Manual chapter",
 	"name": "Family harm - Protection and related property orders",
 	"versions": [
 		{
-			"id": "u-eksqs",
 			"duration": {
-				"start": "2019-07-01"
+				"ended": true,
+				"on": [
+					"2018-03-23"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
+						"requester": "Zane Collins",
+						"id": "16/889/7",
+						"responseUrl": "https://fyi.org.nz/request/7455-police-manual-explaining-about-section-50-of-the-dv-act-1995#incoming-24500",
 						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2018-03-23",
+					"released": "2018-04-19",
+					"retrieved": "2022-07-25",
+					"url": "https://fyi.org.nz/request/7455-police-manual-explaining-about-section-50-of-the-dv-act-1995#incoming-24500",
+					"fileUrl": "https://fyi.org.nz/request/7455/response/24500/attach/9/Collins%20Zane%2016%20889%207%20chapter%20refer.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "0.5.4",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2018-03-23/Collins Zane 16 889 7 chapter refer.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 7270445,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-eksqs"
 		}
 	]
 }
