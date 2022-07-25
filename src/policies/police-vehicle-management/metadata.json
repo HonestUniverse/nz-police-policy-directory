@@ -1,12 +1,65 @@
 {
-	"schemaVersion": "0.5.0",
+	"schemaVersion": "0.5.5",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"duration": {
 				"on": [
-					"2014-09-08"
+					"2017-11-09"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Thomas Holmes",
+						"id": "17-7980/3",
+						"responseUrl": "https://fyi.org.nz/request/6699-police-driver-programme#incoming-22468",
+						"withholdings": "None"
+					},
+					"extracted": "2017-11-09",
+					"released": "2017-11-13",
+					"retrieved": "2022-07-25",
+					"url": "https://fyi.org.nz/request/6699-police-driver-programme#incoming-22468",
+					"fileUrl": "https://fyi.org.nz/request/6699/response/22468/attach/5/police%20vehicle%20management.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2017-11-09/police vehicle management.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 141754,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-yifpi"
+		},
+		{
+			"duration": {
+				"on": [
+					"2014-09-08"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -26,7 +79,7 @@
 			],
 			"files": [
 				{
-					"path": "version-6-0/Kelly M 14 5411 speed measuring devices PMV policy.pdf",
+					"path": "2014-09-09/Kelly M 14 5411 speed measuring devices PMV policy.pdf",
 					"type": "application/pdf",
 					"documentType": "Policy",
 					"startingPage": 1,
