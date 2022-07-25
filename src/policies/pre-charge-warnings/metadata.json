@@ -1,0 +1,66 @@
+{
+	"schemaVersion": "0.5.5",
+	"name": "Pre-charge warnings",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"duration": {
+				"on": [
+					"2018-01-18"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Zane Collins",
+						"responseUrl": "https://fyi.org.nz/request/7068-police-power-and-official-statue#incoming-23724",
+						"withholdings": {
+							"9(2)(a)": "Some information was withheld on page 12."
+						}
+					},
+					"extracted": "2018-01-18",
+					"released": "2018-02-16",
+					"retrieved": "2022-07-25",
+					"url": "https://fyi.org.nz/request/7068-police-power-and-official-statue#incoming-23724",
+					"fileUrl": "https://fyi.org.nz/request/7068/response/23724/attach/3/Pre%20Charge%20warnings%20Redacted.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2018-01-18/Pre Charge warnings Redacted.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 3667946,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-ddnfe"
+		}
+	],
+	"notices": [
+		{
+			"type": "warning",
+			"message": "This document was not listed in lists of all Police Manual chapters released in November 2021 and June 2022. It may be obsolete."
+		}
+	]
+}
