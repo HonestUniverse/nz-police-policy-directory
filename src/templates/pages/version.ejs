@@ -18,7 +18,7 @@
 		versionDst,
 	} = pageData;
 
-	const title = `${policy.name} ${version.name}`;
+	const title = `${policy.name} — ${include('../helpers/version-name', { version })}`;
 
 	/**
 	 * A version is a stub if it doesn't have any files
