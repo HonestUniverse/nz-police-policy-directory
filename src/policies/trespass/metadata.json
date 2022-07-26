@@ -6,8 +6,115 @@
 		{
 			"duration": {
 				"on": [
-					"2016-07-20"
+					"2022-06-13"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"id": "IR-01-22-16840",
+						"responseUrl": "https://www.police.govt.nz/about-us/publication/parliament-protest-feb-mar-2022-official-information-act-public-releases",
+						"withholdings": "None"
+					},
+					"published": {
+						"year": 2022,
+						"month": 7
+					},
+					"extracted": "2022-06-13",
+					"released": "2022-06-21",
+					"retrieved": "2022-07-26",
+					"url": "https://www.police.govt.nz/about-us/publication/parliament-protest-feb-mar-2022-official-information-act-public-releases",
+					"archiveUrl": "https://web.archive.org/web/20220726073352/https://www.police.govt.nz/about-us/publication/parliament-protest-feb-mar-2022-official-information-act-public-releases",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/parliament-protest-oia-releases-policing-response-21jul2022.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220726073347/https://www.police.govt.nz/sites/default/files/publications/parliament-protest-oia-releases-policing-response-21jul2022.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-06-13/parliament-protest-oia-releases-policing-response-21jul2022.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 45,
+					"size": 7407902,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2022-06-13/parliament-protest-oia-releases-policing-response-21jul2022.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 43,
+					"size": 7407902,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"id": "IR-01-22-16840",
+								"responseUrl": "https://www.police.govt.nz/about-us/publication/parliament-protest-feb-mar-2022-official-information-act-public-releases",
+								"withholdings": {
+									"Out of scope": "The requester's name and contact details have been removed."
+								}
+							},
+							"published": {
+								"year": 2022,
+								"month": 7
+							},
+							"extracted": "2022-06-13",
+							"released": "2022-06-21",
+							"retrieved": "2022-07-26",
+							"url": "https://www.police.govt.nz/about-us/publication/parliament-protest-feb-mar-2022-official-information-act-public-releases",
+							"archiveUrl": "https://web.archive.org/web/20220726073352/https://www.police.govt.nz/about-us/publication/parliament-protest-feb-mar-2022-official-information-act-public-releases",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/parliament-protest-oia-releases-policing-response-21jul2022.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20220726073347/https://www.police.govt.nz/sites/default/files/publications/parliament-protest-oia-releases-policing-response-21jul2022.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-xqatk"
+		},
+		{
+			"duration": {
+				"on": [
+					"2016-07-20"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
