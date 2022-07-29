@@ -7,7 +7,8 @@
 			"duration": {
 				"on": [
 					"2020-01-30"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -105,6 +106,12 @@
 				}
 			],
 			"id": "u-iaeeu"
+		}
+	],
+	"notices": [
+		{
+			"type": "info",
+			"message": "There is <a href=\"https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia/\" target=\"_blank\">a pending OIA request</a> for more recent versions of this document."
 		}
 	]
 }
