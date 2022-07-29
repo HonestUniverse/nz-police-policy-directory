@@ -44,5 +44,11 @@
 			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
 			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
 		}
+	],
+	"notices": [
+		{
+			"type": "info",
+			"message": "There is <a href=\"https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals\" target=\"_blank\">a pending OIA request</a> for this document."
+		}
 	]
 }
