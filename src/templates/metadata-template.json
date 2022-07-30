@@ -154,5 +154,13 @@
 			"title": "[string]",
 			"message": "string"
 		}
-	]
+	],
+	"pendingRequest": {
+		"oiaRequest": {
+			"requester": "string",
+			"id": "string",
+			"requestUrl": "url",
+			"withholdings": "Undetermined"
+		}
+	}
 }
