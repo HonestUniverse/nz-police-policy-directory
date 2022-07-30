@@ -17,7 +17,6 @@
 	const {
 		name,
 		type,
-		notices,
 		versions,
 	} = policy;
 
@@ -36,6 +35,15 @@
 		}
 
 		return false;
+	}
+
+	const notices = policy.notices?.concat() ?? [];
+
+	if (policy.pendingRequest?.requestUrl) {
+		notices.push({
+			type: 'info',
+			message: `There is <a href="${policy.pendingRequest.requestUrl}" target="_blank">a pending OIA request</a> regarding this document.`,
+		});
 	}
 %>
 
