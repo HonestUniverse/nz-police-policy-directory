@@ -1,6 +1,7 @@
 import type { Version as PolicyVersion } from './PolicyVersion.js';
 import type { Notice } from './Notice.js';
 import type { Provenance } from './Provenance.js';
+import type { OIARequest } from './OIARequest.js';
 
 export enum PolicyType {
 	GENERAL_INSTRUCTIONS = 'General Instructions',
@@ -21,4 +22,5 @@ export type Policy = {
 	provenance?: Provenance[],
 	versions: PolicyVersion[],
 	notices?: Notice[],
+	pendingRequest?: OIARequest,
 };

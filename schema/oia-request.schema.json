@@ -11,6 +11,11 @@
 			"description": "The releasing agency's internal reference ID for this request",
 			"type": "string"
 		},
+		"requestUrl": {
+			"description": "The URL of this OIA request",
+			"type": "string",
+			"format": "uri"
+		},
 		"responseUrl": {
 			"description": "The URL of the response to this OIA request",
 			"type": "string",
