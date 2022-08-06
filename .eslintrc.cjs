@@ -1,4 +1,4 @@
-{
+module.exports = {
 	"root": true,
 	"env": { "browser": true, "es2021": true, "node": false },
 	"extends": [
@@ -123,4 +123,4 @@
 		// TypeScript-specific rules
 		"@typescript-eslint/consistent-type-assertions": ["error", { "assertionStyle": "as" }]
 	}
-}
+};
