@@ -24,6 +24,5 @@
 			"@/*": ["build/*"]
 		},
 		"noEmit": true,
-	},
-	"include": ["**/*"]
+	}
 }

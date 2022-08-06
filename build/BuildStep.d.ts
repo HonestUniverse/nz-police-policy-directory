@@ -1,14 +1,15 @@
 import type { Configuration } from 'webpack';
 import type { Policy } from '../schema/Policy.js';
 import type { SiteData } from './util/get-site-data.js';
+import type GenerateJsonPlugin from 'generate-json-webpack-plugin';
 
 declare type PageBuildData<T extends Record<string, unknown>> = {
 	siteData: SiteData,
 } & T;
 
-declare type WebpackPlugins = NonNullable<Configuration["plugins"]>;
+declare type WebpackPlugins = (NonNullable<Configuration['plugins']>[number] | GenerateJsonPlugin)[];
 
-declare interface BuildStep<Data = unknown> {
+export interface BuildStep<Data = unknown> {
 	(src: string, dst: string, data: Data): WebpackPlugins | Promise<WebpackPlugins>,
 }
 
