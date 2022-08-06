@@ -141,12 +141,18 @@ module.exports = {
 				'exceptions': ['/'],
 				'block': {
 					'balanced': true,
-				}
+				},
 			},
 		],
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 	},
 	overrides: [
+		{
+			files: ['**/*.cjs'],
+			env: {
+				commonjs: true,
+			},
+		},
 		{
 			files: ['**/*.ts'],
 			extends: [
@@ -230,7 +236,7 @@ module.exports = {
 						'enums': 'always-multiline',
 						'generics': 'always-multiline',
 						'tuples': 'always-multiline',
-					}
+					},
 				],
 
 				'@typescript-eslint/consistent-type-assertions': [
@@ -279,6 +285,6 @@ module.exports = {
 				es2021: true,
 				node: true,
 			},
-		}
+		},
 	],
 };
