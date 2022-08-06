@@ -164,6 +164,8 @@ module.exports = {
 				project: [
 					'./tsconfig.json',
 					'./build/tsconfig.json',
+					'./schema/tsconfig.json',
+					'./spec/tsconfig.json',
 				],
 			},
 			plugins: ['@typescript-eslint'],
@@ -288,6 +290,14 @@ module.exports = {
 		},
 		{
 			files: ['schema/**/*.ts'],
+			env: {
+				browser: false,
+				es2021: true,
+				node: true,
+			},
+		},
+		{
+			files: ['spec/**/*.ts'],
 			env: {
 				browser: false,
 				es2021: true,
