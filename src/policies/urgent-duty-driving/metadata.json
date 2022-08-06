@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -19,7 +19,8 @@
 						"requester": "David Horner",
 						"id": "IR-01-20-22828",
 						"responseUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-51202",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters"
 					},
 					"extracted": "2020-08-14",
 					"released": "2020-09-03",

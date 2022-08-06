@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Undetermined",
 	"versions": [
 		{
@@ -17,7 +17,8 @@
 						"requester": "Mark Hanna",
 						"id": "IR-01-19-6782",
 						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers"
 					},
 					"released": "2019-06-28",
 					"retrieved": "2022-05-11",
@@ -31,7 +32,8 @@
 						"requester": "Mark Hanna",
 						"id": "IR-01-19-6782",
 						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-58555",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers"
 					},
 					"released": "2021-05-31",
 					"retrieved": "2022-05-11",
