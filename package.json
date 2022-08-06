@@ -43,7 +43,10 @@
 		"watchTest": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode development --env test --watch",
 		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/migrate.ts",
 		"generateIds": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/generate-all-ids.ts",
-		"lintJs": "eslint src/assets/js/** build/**/*.ts",
+		"lintJsSrc": "eslint src/assets/js/**",
+		"lintJsBuild": "eslint build/**/*.ts",
+		"lintJsSchema": "eslint schema/**/*.ts",
+		"lintJs": "npm run lintJsSrc && npm run lintJsBuild && npm run lintJsSchema",
 		"lintCss": "stylelint src/assets/css/**",
 		"lint": "npm run lintJs && npm run lintCss",
 		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" jasmine"
