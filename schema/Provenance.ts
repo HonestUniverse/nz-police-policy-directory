@@ -1,5 +1,5 @@
-import type { OIARequest } from './OIARequest.js'
-import type { OIAWithholdings } from './OIAWithholdings.js'
+import type { OIARequest } from './OIARequest.js';
+import type { OIAWithholdings } from './OIAWithholdings.js';
 import type { DatePartial } from './DatePartial.js';
 
 export enum ProvenanceSource {
