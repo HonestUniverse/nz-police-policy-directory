@@ -5,7 +5,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
 import * as paths from './util/paths.js';
-import { makeRootRelative } from './util/make-root-relative.js';
 
 export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	/**
@@ -73,7 +72,7 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 						data: {
 							siteData,
 							pageData,
-						}
+						},
 					},
 				}),
 				chunks: ['priority', 'main', 'enhancements', 'style'],
