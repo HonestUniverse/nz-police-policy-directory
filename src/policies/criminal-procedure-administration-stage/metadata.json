@@ -17,7 +17,8 @@
 						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
 						"withholdings": {
 							"Out of scope": "Only the section on \"Suppression of names and information before the court\" was requested, so other sections were not released."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/5014-selected-police-manuals"
 					},
 					"released": "2017-01-04",
 					"retrieved": "2022-05-08",
@@ -64,6 +65,6 @@
 			"id": "u-vxijv"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Criminal procedure - Administration stage"
 }

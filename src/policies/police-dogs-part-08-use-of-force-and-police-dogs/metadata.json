@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -17,7 +17,8 @@
 						"requester": "Mark Hanna",
 						"id": "IR-01-19-19055",
 						"responseUrl": "https://fyi.org.nz/request/10536-use-of-force-and-police-dogs-chapter-of-the-police-manual#incoming-39362",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/10536-use-of-force-and-police-dogs-chapter-of-the-police-manual"
 					},
 					"extracted": "2019-08-23",
 					"released": "2019-08-26",

@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -20,7 +20,8 @@
 						"withholdings": {
 							"6(a)": "Information on pages 15, 16, 17, and 21 may have been withheld under section 6(a)",
 							"6(c)": "Information on pages 15, 16, 17, and 21 may have been withheld under section 6(c)"
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/11049-use-of-tear-gas-and-other-nlw-in-riot-control"
 					},
 					"extracted": "2019-09-25",
 					"released": "2019-10-14",
