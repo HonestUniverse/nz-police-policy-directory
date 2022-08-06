@@ -58,14 +58,14 @@ describe('toUrlSegment', () => {
 	]));
 
 	it(`converts remaining non-alphanumeric characters into a '-'`, testExpectations([
-		['this string has spaces (and brackets), see?', 'this-string-has-spaces-and-brackets-see']
+		['this string has spaces (and brackets), see?', 'this-string-has-spaces-and-brackets-see'],
 	]));
 
 	it(`collapses consecutive '-' characters into one`, testExpectations([
-		['this string     has spaces ((and brackets):;, see?', 'this-string-has-spaces-and-brackets-see']
+		['this string     has spaces ((and brackets):;, see?', 'this-string-has-spaces-and-brackets-see'],
 	]));
 
 	it(`removes leading or trailing '-' characters`, testExpectations([
-		['___this string has spaces (and brackets), see???', 'this-string-has-spaces-and-brackets-see']
+		['___this string has spaces (and brackets), see???', 'this-string-has-spaces-and-brackets-see'],
 	]));
 });
