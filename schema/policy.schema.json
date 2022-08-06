@@ -1,5 +1,5 @@
 {
-	"$comment": "Current version: 1.0.0",
+	"$comment": "Current version: 1.1.0",
 	"title": "Policy",
 	"description": "A policy document",
 	"type": "object",
@@ -60,6 +60,10 @@
 			"items": {
 				"$ref": "notice.schema.json"
 			}
+		},
+		"pendingRequest": {
+			"description": "A pending OIA request regarding this document, if there is one",
+			"$ref": "oia-request.schema.json"
 		}
 	},
 	"required": [
