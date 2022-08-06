@@ -76,13 +76,13 @@ async function migrateDir(path: string): Promise<number> {
 			continue;
 		}
 
-		const policy: unknown = (
+		const policy = ((
 			await import(`../${path}/${entry.name}/metadata.json`, {
 				assert: {
 					type: 'json',
 				},
 			})
-		).default;
+		) as { default: unknown }).default;
 
 		const migratedPolicy = migrate(policy);
 
