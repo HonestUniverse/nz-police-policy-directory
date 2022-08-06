@@ -32,7 +32,7 @@ export const validatePolicy: ValidateFunction<Policy> = await (async () => {
 	const schemaPromises = schemaFileNames.map(async (name) => {
 		return (await import(`${root}/${schemaPath}/${name}`, {
 			assert: { type: 'json' },
-		})).default;
+		}) as { default: unknown }).default;
 	});
 
 	const schemas = await Promise.all(schemaPromises);
