@@ -25,14 +25,13 @@ export async function generateIdsAll() {
 /**
  * Loop through all policies, and attempt to generate IDs for any version without an ID
  */
-async function generateIdsDir(path): Promise<number> {
+async function generateIdsDir(path: string): Promise<number> {
 	const dir = await readdir(path, {
 		withFileTypes: true,
 	});
 
 	const promises: Promise<void>[] = [];
 	let idsGenerated = 0;
-	let policiesWithIdsGenerated = 0;
 
 	// Loop through all metadata files
 	for (const entry of dir) {
@@ -69,7 +68,6 @@ async function generateIdsDir(path): Promise<number> {
 			const policyWithIds = generateIdsPolicyResult.policy;
 
 			idsGenerated += generateIdsPolicyResult.idsGenerated;
-			policiesWithIdsGenerated += 1;
 
 			console.log(`INFO: Generated ${generateIdsPolicyResult.idsGenerated} IDs for versions of  ${entry.name}`);
 
@@ -118,7 +116,7 @@ export function generateIdsPolicy(before: Policy): {
 
 	return {
 		policy: after,
-		idsGenerated
+		idsGenerated,
 	};
 }
 

@@ -9,7 +9,7 @@ import * as paths from './util/paths.js';
  * Reads and validates the metadata file for a `Policy`, and returns that data.
  */
 async function readPolicyFile(dirName: string): Promise<Policy> {
-	const policyFolderName = dirName.match(/\/[^\/]+\/?$/)?.[0];
+	const policyFolderName = dirName.match(/\/[^/]+\/?$/)?.[0];
 
 	const dir = await readdir(dirName);
 
