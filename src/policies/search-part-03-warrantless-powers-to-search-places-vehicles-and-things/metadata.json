@@ -114,5 +114,10 @@
 			],
 			"id": "u-qeihx"
 		}
-	]
+	],
+	"pendingRequest": {
+		"requester": "John Walter",
+		"requestUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022",
+		"withholdings": "Undetermined"
+	}
 }
