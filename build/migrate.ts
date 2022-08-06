@@ -5,6 +5,8 @@ import { readdir, writeFile } from 'fs/promises';
 import { PolicyType } from '../schema/Policy.js';
 import type { Policy } from '../schema/Policy.js';
 
+import type { Provenance } from '../schema/Provenance.js';
+
 import {
 	FileType,
 	FileDocumentType,
@@ -430,6 +432,49 @@ const migrations: Record<string, Migration> = {
 	 */
 	['1.0.0']: function (policy: Policy): void {
 		policy.schemaVersion = '1.0.0';
+	},
+
+	/**
+	 * Changes in v1.1.0
+	 *
+	 * Added `Policy['pendingRequest']?: OIARequest`
+	 *
+	 * Added `OIARequest['requestUrl']?: string`
+	 *
+	 * This migration adds a `requestUrl` to OIA requests when it can be derived from `responseUrl`.
+	 */
+	['1.1.0']: function (policy: Policy): void {
+		policy.schemaVersion = '1.1.0';
+
+		function updateProvenance(prov: Provenance): Provenance {
+			// Requests on FYI have structured URLs that can be used to determine request URL from response URL
+			const requestUrl = prov.oiaRequest?.responseUrl?.replace(/(^https:\/\/fyi.org.nz\/request\/\d+(-\w+)+)#incoming-\d+$/, '$1');
+
+			if (requestUrl) {
+				const newProv = JSON.parse(JSON.stringify(prov));
+				newProv.oiaRequest.requestUrl = requestUrl;
+
+				return newProv;
+			} else {
+				return prov;
+			}
+		}
+
+		if (policy.provenance) {
+			policy.provenance = policy.provenance.map(updateProvenance);
+		}
+
+		for (const version of policy.versions) {
+			if (version.provenance) {
+				version.provenance = version.provenance.map(updateProvenance);
+			}
+
+			for (const file of version.files) {
+				if (file.provenance) {
+					file.provenance = file.provenance.map(updateProvenance);
+				}
+			}
+		}
 	},
 }
 
