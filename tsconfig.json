@@ -19,10 +19,11 @@
 		"noImplicitAny": false,
 		"incremental": true,
 
-		"baseUrl": "../",
+		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/assets/js/*"]
 		},
 		"outDir": "dist/assets/js"
-	}
+	},
+	"include": ["src/assets/js/**/*"]
 }

@@ -154,12 +154,12 @@ module.exports = {
 				'plugin:@typescript-eslint/recommended-requiring-type-checking',
 			],
 			parser: '@typescript-eslint/parser',
-				parserOptions: {
-					project: [
-						'./src/tsconfig.json',
-						'./build/tsconfig.json',
-					],
-				},
+			parserOptions: {
+				project: [
+					'./tsconfig.json',
+					'./build/tsconfig.json',
+				],
+			},
 			plugins: ['@typescript-eslint'],
 			rules: {
 				/////////////////////////
