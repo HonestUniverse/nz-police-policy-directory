@@ -1,8 +1,8 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import type { Compiler } from 'webpack';
+import type { Compiler, WebpackPluginInstance } from 'webpack';
 
-class AlterPlugin {
+class AlterPlugin implements WebpackPluginInstance {
 	private async: string[];
 	private defer: string[];
 	private body: string[];
