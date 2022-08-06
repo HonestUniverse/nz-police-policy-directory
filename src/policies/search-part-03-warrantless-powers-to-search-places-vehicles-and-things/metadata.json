@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Search Part 03 - Warrantless powers to search places, vehicles and things",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -17,7 +17,8 @@
 						"requester": "S.I",
 						"id": "IR-01-22-18456",
 						"responseUrl": "https://fyi.org.nz/request/19749-all-resources-relating-to-reasonable-grounds-including-guidelines-and-instructions#incoming-75071",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/19749-all-resources-relating-to-reasonable-grounds-including-guidelines-and-instructions"
 					},
 					"released": "2022-07-13",
 					"retrieved": "2022-07-17",

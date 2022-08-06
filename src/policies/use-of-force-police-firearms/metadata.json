@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -19,7 +19,8 @@
 						"responseUrl": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
 						"withholdings": {
 							"6(c)": "Some information has been withheld on pages 15–20, 34, 37, and 40–42."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/18483-tazer-policy"
 					},
 					"extracted": "2022-02-09",
 					"released": "2022-02-24",
@@ -101,7 +102,8 @@
 						"requester": "Mark Hanna",
 						"id": "IR-01-19-6782",
 						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers"
 					},
 					"released": "2019-06-28",
 					"retrieved": "2022-05-11",
@@ -115,7 +117,8 @@
 						"requester": "Mark Hanna",
 						"id": "IR-01-19-6782",
 						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-58555",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers"
 					},
 					"released": "2021-05-31",
 					"retrieved": "2022-05-11",

@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Pre-charge warnings",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -18,7 +18,8 @@
 						"responseUrl": "https://fyi.org.nz/request/7068-police-power-and-official-statue#incoming-23724",
 						"withholdings": {
 							"9(2)(a)": "Some information was withheld on page 12."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/7068-police-power-and-official-statue"
 					},
 					"extracted": "2018-01-18",
 					"released": "2018-02-16",
