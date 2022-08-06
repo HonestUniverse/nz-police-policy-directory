@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Offence notices",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -17,7 +17,8 @@
 						"requester": "Cody C",
 						"id": "IR-01-22-142",
 						"responseUrl": "https://fyi.org.nz/request/18080-stationary-vehicle-enforcement-policy#incoming-69253",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/18080-stationary-vehicle-enforcement-policy"
 					},
 					"released": "2022-01-21",
 					"retrieved": "2022-05-29",
@@ -98,7 +99,8 @@
 						"requester": "Joseph",
 						"id": "IR-01-18-8327",
 						"responseUrl": "https://fyi.org.nz/request/8493-section-113-lta#incoming-27581",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/8493-section-113-lta"
 					},
 					"released": "2018-08-28",
 					"retrieved": "2022-07-25",

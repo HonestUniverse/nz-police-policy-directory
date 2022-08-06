@@ -17,7 +17,8 @@
 						"requester": "Jeremy Roundill",
 						"id": "16-8540-4",
 						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/5014-selected-police-manuals"
 					},
 					"released": "2017-01-04",
 					"retrieved": "2022-05-10",
@@ -31,7 +32,8 @@
 						"requester": "Mark Hanna",
 						"id": "IR-01-19-6782",
 						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-35815",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers"
 					},
 					"released": "2019-06-28",
 					"retrieved": "2022-05-10",
@@ -45,7 +47,8 @@
 						"requester": "Mark Hanna",
 						"id": "IR-01-19-6782",
 						"responseUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers#incoming-58555",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/9725-decision-to-start-general-arming-of-christchurch-frontline-officers"
 					},
 					"released": "2021-05-31",
 					"retrieved": "2022-05-10",
@@ -85,6 +88,6 @@
 			"id": "u-kakfp"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Tactical Options Framework"
 }

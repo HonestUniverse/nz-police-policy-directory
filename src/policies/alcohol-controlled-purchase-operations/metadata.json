@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Alcohol - Controlled purchase operations",
 	"versions": [
@@ -18,7 +18,8 @@
 						"requester": "Felix Lee",
 						"id": "IR-01-20-5926",
 						"responseUrl": "https://fyi.org.nz/request/12312-police-manual-alcohol-controlled-purchase-operations#incoming-47681",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/12312-police-manual-alcohol-controlled-purchase-operations"
 					},
 					"extracted": "2020-02-28",
 					"released": "2020-04-21",

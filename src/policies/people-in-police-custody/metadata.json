@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "People in Police custody",
 	"previousNames": [
 		"People in Police Detention"
@@ -20,7 +20,8 @@
 						"requester": "Olivia Dennis",
 						"id": "IR-01-20-28454",
 						"responseUrl": "https://fyi.org.nz/request/13861-relevant-chapters-of-the-police-manual-on-deaths-in-police-custody#incoming-53023",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/13861-relevant-chapters-of-the-police-manual-on-deaths-in-police-custody"
 					},
 					"released": "2020-11-25",
 					"retrieved": "2022-06-20",

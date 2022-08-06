@@ -16,7 +16,8 @@
 						"requester": "Joshua Rogers",
 						"id": "IR-01-22-3361",
 						"responseUrl": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/18483-tazer-policy"
 					},
 					"extracted": "2022-02-09",
 					"released": "2022-02-24",
@@ -94,7 +95,8 @@
 						"requester": "Jeremy Roundill",
 						"id": "16-8540-4",
 						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/5014-selected-police-manuals"
 					},
 					"released": "2017-04-01",
 					"retrieved": "2022-05-01",
@@ -131,6 +133,6 @@
 			"id": "u-aueqa"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Use of Force - Batons"
 }

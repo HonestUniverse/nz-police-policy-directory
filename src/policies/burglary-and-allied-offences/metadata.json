@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -18,7 +18,8 @@
 						"responseUrl": "https://fyi.org.nz/request/12018-procedure-to-investigate-a-burglary-complaint-when-suspect-is-known#incoming-45955",
 						"withholdings": {
 							"6(c)": "Information has been withheld on all pages."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/12018-procedure-to-investigate-a-burglary-complaint-when-suspect-is-known"
 					},
 					"released": "2020-02-14",
 					"retrieved": "2022-07-24",
@@ -79,7 +80,8 @@
 						"requester": "Joseph",
 						"id": "IR-01-18-11600",
 						"responseUrl": "https://fyi.org.nz/request/8675-police-chapters#incoming-29058",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/8675-police-chapters"
 					},
 					"released": "2018-10-26",
 					"retrieved": "2022-05-22",

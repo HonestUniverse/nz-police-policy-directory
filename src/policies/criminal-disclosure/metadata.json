@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Criminal disclosure",
 	"versions": [
@@ -17,7 +17,8 @@
 						"requester": "Chloe Kim",
 						"id": "16-5212-1",
 						"responseUrl": "https://fyi.org.nz/request/4125-chapters-from-police-manual#incoming-13679",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/4125-chapters-from-police-manual"
 					},
 					"released": "2016-07-07",
 					"retrieved": "2022-07-25",

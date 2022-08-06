@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Privacy and official information - Disclosure under the Official Information Act 1982 (OIA)",
 	"versions": [
@@ -18,7 +18,8 @@
 						"requester": "Andrew Ecclestone",
 						"id": "IR-01-19-25383",
 						"responseUrl": "https://fyi.org.nz/request/11064-oia-authorisation-and-training-of-the-national-manager-response-and-operations#incoming-47673",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/11064-oia-authorisation-and-training-of-the-national-manager-response-and-operations"
 					},
 					"extracted": "2020-01-30",
 					"released": "2020-04-20",
@@ -70,7 +71,8 @@
 					"oiaRequest": {
 						"requester": "Mark Hanna",
 						"responseUrl": "https://fyi.org.nz/request/5237-guidelines-for-processing-information-requests#incoming-17095",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/5237-guidelines-for-processing-information-requests"
 					},
 					"released": "2017-02-17",
 					"retrieved": "2022-07-25",
