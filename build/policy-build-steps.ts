@@ -1,7 +1,7 @@
 import type { PolicyBuildStep } from './BuildStep.js';
 
 import CopyPlugin from 'copy-webpack-plugin';
-import GenerateJsonPlugin from 'generate-json-webpack-plugin';
+import WriteJsonPlugin from './util/write-json-plugin.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
@@ -176,7 +176,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	createVersionMetadata(src, dst, buildData) {
 		const { policy } = buildData;
 
-		const plugins: GenerateJsonPlugin[] = [];
+		const plugins: ReturnType<PolicyBuildStep> = [];
 
 		for (const version of policy.versions) {
 			plugins.push(createVersionMetadata(dst, policy, version));
@@ -282,7 +282,7 @@ function createVersionMetadata(
 		(version) => version.id === versionId
 	);
 
-	return new GenerateJsonPlugin(
+	return new WriteJsonPlugin(
 		`${latest ? `${dst}/latest` : versionDst}.json`,
 		singleVersionPolicy,
 		null,

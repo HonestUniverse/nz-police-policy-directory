@@ -4,7 +4,6 @@
 	"description": "Directory of NZ Police policies and related documents",
 	"type": "module",
 	"devDependencies": {
-		"@types/generate-json-webpack-plugin": "^0.3.4",
 		"@types/jasmine": "^4.0.3",
 		"@types/node": "^17.0.25",
 		"@types/semver": "^7.3.10",
@@ -17,7 +16,6 @@
 		"css-loader": "^6.7.1",
 		"dotenv": "^16.0.0",
 		"eslint": "^8.13.0",
-		"generate-json-webpack-plugin": "^2.0.0",
 		"html-loader": "^3.1.0",
 		"html-webpack-exclude-assets-plugin": "^0.0.7",
 		"html-webpack-plugin": "^5.5.0",
