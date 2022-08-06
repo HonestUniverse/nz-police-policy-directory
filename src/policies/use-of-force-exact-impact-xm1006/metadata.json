@@ -97,10 +97,9 @@
 			"id": "u-jawnf"
 		}
 	],
-	"notices": [
-		{
-			"type": "info",
-			"message": "There is <a href=\"https://fyi.org.nz/request/20027-police-manual-chapters-relating-to-sponge-rounds\" target=\"_blank\">a pending OIA request</a> for more information about this document."
-		}
-	]
+	"pendingRequest": {
+		"requester": "Mark Hanna",
+		"requestUrl": "https://fyi.org.nz/request/20027-police-manual-chapters-relating-to-sponge-rounds",
+		"withholdings": "Undetermined"
+	}
 }
