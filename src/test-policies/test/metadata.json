@@ -353,5 +353,12 @@
 	"name": "Test Policy",
 	"previousNames": [
 		"Previous Test Policy"
-	]
+	],
+	"pendingRequest": {
+		"requester": "Requester Name",
+		"id": "Request ID",
+		"requestUrl": "https://policepolicy.nz#request",
+		"responseUrl": "https://policepolicy.nz#response",
+		"withholdings": "Undetermined"
+	}
 }
