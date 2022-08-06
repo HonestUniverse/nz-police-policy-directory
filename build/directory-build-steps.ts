@@ -1,6 +1,6 @@
 import type { DirectoryBuildStep } from './BuildStep.js';
 
-import WriteJsonPlugin from './util/write-json-plugin.js';
+import WriteFilePlugin from './util/write-file-plugin.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
@@ -14,11 +14,9 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 		const { directory } = buildData;
 		const data = Object.values(directory);
 
-		return [new WriteJsonPlugin(
+		return [new WriteFilePlugin(
 			`${dst}.json`,
-			data,
-			null,
-			'\t'
+			JSON.stringify(data, null, '\t'),
 		)];
 	},
 

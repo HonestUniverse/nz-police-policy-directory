@@ -1,7 +1,7 @@
 import type { PolicyBuildStep } from './BuildStep.js';
 
 import CopyPlugin from 'copy-webpack-plugin';
-import WriteJsonPlugin from './util/write-json-plugin.js';
+import WriteFilePlugin from './util/write-file-plugin.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
@@ -276,11 +276,9 @@ function createVersionMetadata(
 		(version) => version.id === versionId
 	);
 
-	return new WriteJsonPlugin(
+	return new WriteFilePlugin(
 		`${latest ? `${dst}/latest` : versionDst}.json`,
-		singleVersionPolicy,
-		null,
-		'\t'
+		JSON.stringify(singleVersionPolicy, null, '\t'),
 	);
 }
 
