@@ -17,7 +17,8 @@
 						"requester": "David Horner",
 						"id": "IR-01-20-30532",
 						"responseUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-52829",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters"
 					},
 					"extracted": "2020-11-04",
 					"released": "2020-11-16",
@@ -58,6 +59,6 @@
 			"id": "u-dwabv"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Notebooks and Job Sheets"
 }
