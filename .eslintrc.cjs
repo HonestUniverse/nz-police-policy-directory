@@ -286,5 +286,13 @@ module.exports = {
 				node: true,
 			},
 		},
+		{
+			files: ['schema/**/*.ts'],
+			env: {
+				browser: false,
+				es2021: true,
+				node: true,
+			},
+		},
 	],
 };
