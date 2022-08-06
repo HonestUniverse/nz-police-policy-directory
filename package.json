@@ -45,7 +45,7 @@
 		"lintJsBuild": "eslint build/**/*.ts",
 		"lintJsSchema": "eslint schema/**/*.ts",
 		"lintJsSpec": "eslint spec/**/*.ts",
-		"lintJs": "npm run lintJsSrc && npm run lintJsBuild && npm run lintJsSchema && npm run lintJsSpec",
+		"lintJs": "eslint src/assets/js/** build/**/*.ts schema/**/*.ts spec/**/*.ts",
 		"lintCss": "stylelint src/assets/css/**",
 		"lint": "npm run lintJs && npm run lintCss",
 		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" jasmine"
