@@ -26,6 +26,8 @@ import { OIAWithholdingsSummary } from '../schema/OIAWithholdings.js';
 import { validatePolicy } from './validate-policy.js';
 import { generateIdsPolicy } from './generate-ids.js';
 
+import { jsonClone } from './util/json-clone.js';
+
 import * as paths from './util/paths.js';
 
 /**
@@ -453,8 +455,10 @@ const migrations: Record<string, Migration> = {
 			const requestUrl = prov.oiaRequest?.responseUrl?.replace(/(^https:\/\/fyi.org.nz\/request\/\d+(-\w+)+)#incoming-\d+$/, '$1');
 
 			if (requestUrl) {
-				const newProv = JSON.parse(JSON.stringify(prov));
-				newProv.oiaRequest.requestUrl = requestUrl;
+				const newProv = jsonClone(prov);
+				if (newProv.oiaRequest) {
+					newProv.oiaRequest.requestUrl = requestUrl;
+				}
 
 				return newProv;
 			} else {
