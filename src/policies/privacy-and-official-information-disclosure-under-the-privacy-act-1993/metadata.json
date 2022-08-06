@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Privacy and official information  - Disclosure under the Privacy Act 1993",
 	"type": "Police Manual chapter",
 	"obsolete": true,
@@ -21,7 +21,8 @@
 						"requester": "Sean Richards",
 						"id": "IR-01-20-15549",
 						"responseUrl": "https://fyi.org.nz/request/13044-oia-procedures#incoming-50068",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/13044-oia-procedures"
 					},
 					"extracted": "2020-03-13",
 					"released": "2020-07-20",

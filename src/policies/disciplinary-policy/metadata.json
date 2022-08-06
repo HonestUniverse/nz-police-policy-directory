@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -17,7 +17,8 @@
 						"requester": "John Bates",
 						"id": "IR-01-22-8010",
 						"responseUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents"
 					},
 					"extracted": "2022-04-22",
 					"released": "2022-05-11",

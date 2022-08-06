@@ -19,7 +19,8 @@
 						"withholdings": {
 							"6(d)": "Some information was withheld on page 2.",
 							"9(2)(a)": "Some information was withheld on page 2."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/5014-selected-police-manuals"
 					},
 					"released": "2017-01-04",
 					"retrieved": "2022-05-01",
@@ -130,7 +131,8 @@
 								"requester": "Jeremy Roundill",
 								"id": "16-8540-4",
 								"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
-								"withholdings": "None"
+								"withholdings": "None",
+								"requestUrl": "https://fyi.org.nz/request/5014-selected-police-manuals"
 							},
 							"released": "2017-01-04",
 							"retrieved": "2022-05-19",
@@ -164,6 +166,6 @@
 			"id": "u-vnbtu"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Armoury"
 }

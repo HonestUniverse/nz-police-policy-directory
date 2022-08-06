@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -17,7 +17,8 @@
 						"requester": "Matt Brown",
 						"id": "IR-01-21-23305",
 						"responseUrl": "https://fyi.org.nz/request/16225-anpr-camera-counts-and-privacy#incoming-63960",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/16225-anpr-camera-counts-and-privacy"
 					},
 					"extracted": "2022-05-28",
 					"released": "2022-09-30",
@@ -97,7 +98,8 @@
 								"responseUrl": "https://fyi.org.nz/request/16225-anpr-camera-counts-and-privacy#incoming-63960",
 								"withholdings": {
 									"9(2)(g)(i)": "Pages 1–5, and any pages after page 8, were withheld. Some information was withheld on page 6."
-								}
+								},
+								"requestUrl": "https://fyi.org.nz/request/16225-anpr-camera-counts-and-privacy"
 							},
 							"released": "2022-09-30",
 							"retrieved": "2022-06-01",

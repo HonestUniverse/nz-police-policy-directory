@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Police response to cyberbullying and the Harmful Digital Communications Act",
 	"versions": [
@@ -18,7 +18,8 @@
 						"requester": "Alice Haden",
 						"id": "IR-01-20-12388",
 						"responseUrl": "https://fyi.org.nz/request/12792-harmful-digital-communications-act-police-manual-chapters-policies-or-guidelines-for-prosecutions-under-this-act#incoming-49253",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/12792-harmful-digital-communications-act-police-manual-chapters-policies-or-guidelines-for-prosecutions-under-this-act"
 					},
 					"extracted": "2020-05-25",
 					"released": "2020-06-16",

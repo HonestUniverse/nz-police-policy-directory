@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -16,7 +16,8 @@
 						"requester": "Thomas Holmes",
 						"id": "17-7980/3",
 						"responseUrl": "https://fyi.org.nz/request/6699-police-driver-programme#incoming-22468",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/6699-police-driver-programme"
 					},
 					"extracted": "2017-11-09",
 					"released": "2017-11-13",
@@ -69,7 +70,8 @@
 						"requester": "M Kelly",
 						"id": "14/5411",
 						"responseUrl": "https://fyi.org.nz/request/1901-practice-policy-and-procedure-in-regards-to-speed-enforcement-and-the-use-of-speed-measuring-devices-by-the-new-zealand-police#incoming-6695",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/1901-practice-policy-and-procedure-in-regards-to-speed-enforcement-and-the-use-of-speed-measuring-devices-by-the-new-zealand-police"
 					},
 					"released": "2014-09-08",
 					"retrieved": "2022-05-22",
