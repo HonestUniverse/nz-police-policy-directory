@@ -19,7 +19,8 @@
 						"requester": "David Horner",
 						"id": "IR-01-20-30532",
 						"responseUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-52829",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters"
 					},
 					"released": "2020-11-06",
 					"retrieved": "2022-05-09",
@@ -62,6 +63,6 @@
 			"id": "u-oujdw"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Speed Detection Equipment Operators Manual"
 }
