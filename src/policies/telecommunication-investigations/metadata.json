@@ -84,5 +84,10 @@
 			"id": "u-qxzcq"
 		}
 	],
-	"name": "Telecommunication investigations"
+	"name": "Telecommunication investigations",
+	"pendingRequest": {
+		"requester": "Mason",
+		"requestUrl": "https://fyi.org.nz/request/20081-police-manual-chapters?nocache=outgoing-33466#outgoing-33466",
+		"withholdings": "Undetermined"
+	}
 }
