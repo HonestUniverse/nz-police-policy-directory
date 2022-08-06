@@ -89,5 +89,10 @@
 			"id": "u-xfpyz"
 		}
 	],
-	"name": "Intel - Introduction to Intelligence"
+	"name": "Intel - Introduction to Intelligence",
+	"pendingRequest": {
+		"requester": "Mason",
+		"requestUrl": "https://fyi.org.nz/request/20081-police-manual-chapters?nocache=outgoing-33466#outgoing-33466",
+		"withholdings": "Undetermined"
+	}
 }
