@@ -4,30 +4,22 @@ import type { Compiler, WebpackPluginInstance } from 'webpack';
 import Webpack from 'webpack';
 const { Compilation } = Webpack;
 
-const PLUGIN_NAME = 'WriteJsonPlugin';
+const PLUGIN_NAME = 'WriteFilePlugin';
 
-export default class WriteJsonPlugin implements WebpackPluginInstance {
+export default class WriteFilePlugin implements WebpackPluginInstance {
 	private filename: string;
-	private value: unknown;
-	private replacer: Parameters<typeof JSON.stringify>[1];
-	private space: Parameters<typeof JSON.stringify>[2];
+	private value: string;
 
 	constructor(
 		filename: string,
-		value: unknown,
-		replacer: Parameters<typeof JSON.stringify>[1],
-		space: Parameters<typeof JSON.stringify>[2],
+		value: string,
 	) {
 		this.filename = filename;
 		this.value = value;
-		this.replacer = replacer;
-		this.space = space;
 	}
 
 	apply(compiler: Compiler) {
 		compiler.hooks.compilation.tap(PLUGIN_NAME, (compilation) => {
-			const jsonString = JSON.stringify(this.value, this.replacer, this.space);
-
 			compilation.hooks.processAssets.tap(
 				{
 					name: PLUGIN_NAME,
@@ -36,8 +28,8 @@ export default class WriteJsonPlugin implements WebpackPluginInstance {
 				(assets) => {
 					// @ts-expect-error I'm not really sure why the `Source` type is defined to need the properties missing here
 					assets[this.filename] = {
-						source: () => jsonString,
-						size: () => jsonString.length,
+						source: () => this.value,
+						size: () => this.value.length,
 					};
 				}
 			);
