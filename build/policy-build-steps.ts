@@ -17,13 +17,7 @@ import type { Policy } from '../schema/Policy.js';
 import type { Version } from '../schema/PolicyVersion.js';
 import { readFile } from 'fs/promises';
 import { SiteData } from './util/get-site-data.js';
-
-/**
- * Create a deep copy of an object that can be converted to JSON.
- */
-function jsonClone<T extends object>(obj: T): T {
-	return JSON.parse(JSON.stringify(obj)) as T;
-}
+import { jsonClone } from './util/json-clone.js';
 
 /**
  * Build steps for a particular policy.
