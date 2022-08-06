@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -15,7 +15,8 @@
 					"oiaRequest": {
 						"requester": "Alex Harris",
 						"responseUrl": "https://fyi.org.nz/request/police_manual_on_police_filming#incoming-3221",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/police_manual_on_police_filming#incoming-3221"
 					},
 					"released": "2012-10-18",
 					"retrieved": "2022-05-16",

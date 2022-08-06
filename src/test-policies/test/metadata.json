@@ -349,9 +349,16 @@
 			"message": "This is a test error notice"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Test Policy",
 	"previousNames": [
 		"Previous Test Policy"
-	]
+	],
+	"pendingRequest": {
+		"requester": "Requester Name",
+		"id": "Request ID",
+		"requestUrl": "https://policepolicy.nz#request",
+		"responseUrl": "https://policepolicy.nz#response",
+		"withholdings": "Undetermined"
+	}
 }

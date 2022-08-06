@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Abduction",
 	"type": "Police Manual chapter",
 	"provenance": [
@@ -10,7 +10,8 @@
 				"requester": "Amy S Van Wey Lovatt",
 				"id": "IR-01-21-31226",
 				"responseUrl": "https://fyi.org.nz/request/16707-police-manual-for-investing-offences-under-the-crimes-act#incoming-67034",
-				"withholdings": "None"
+				"withholdings": "None",
+				"requestUrl": "https://fyi.org.nz/request/16707-police-manual-for-investing-offences-under-the-crimes-act"
 			},
 			"released": "2021-11-23",
 			"retrieved": "2022-06-06",

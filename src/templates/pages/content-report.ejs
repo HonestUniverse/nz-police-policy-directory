@@ -18,6 +18,8 @@
 	}
 
 	const sections = {
+		'Has pending request': (policy) => !!policy.pendingRequest,
+
 		'Needs OCR': (policy) => {
 			for (const version of policy.versions) {
 				for (const file of version.files) {

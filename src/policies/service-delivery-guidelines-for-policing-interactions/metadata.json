@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -17,7 +17,8 @@
 						"requester": "Joe",
 						"id": "IR-02-22-10690",
 						"responseUrl": "https://fyi.org.nz/request/19125-guidelines-for-policing-interactions#incoming-73038",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/19125-guidelines-for-policing-interactions"
 					},
 					"extracted": "2022-04-14",
 					"released": "2022-05-11",

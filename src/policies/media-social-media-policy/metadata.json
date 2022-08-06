@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -20,7 +20,8 @@
 						"withholdings": {
 							"9(2)(a)": "Information has been withheld on pages 1 and 10.",
 							"9(2)(g)(ii)": "Information has been withheld on pages 1, 3-9, 12, and 13."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/19153-publishing-a-persons-private-info-online"
 					},
 					"extracted": "2022-04-21",
 					"released": "2022-05-16",
