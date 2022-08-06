@@ -54,7 +54,7 @@ async function migrateAll() {
 /**
  * Loop through all policies, and attempt to migrate any with invalid metadata.
  */
-async function migrateDir(path): Promise<number> {
+async function migrateDir(path: string): Promise<number> {
 	const dir = await readdir(path, {
 		withFileTypes: true,
 	});
@@ -235,7 +235,7 @@ const migrations: Record<string, Migration> = {
 					file.accessibility.unwatermarked = {
 						value: 'Unknown',
 						// value: AccessibilityFeatureString.UNKNOWN,
-					}
+					};
 				}
 			}
 		}
@@ -349,11 +349,13 @@ const migrations: Record<string, Migration> = {
 		}
 
 		// @ts-expect-error 'title' is no longer an allowed property
+		// eslint-disable-next-line
 		policy.name = policy.title;
 		// @ts-expect-error 'title' is no longer an allowed property
 		delete policy.title;
 
 		// @ts-expect-error 'previousTitles' is no longer an allowed property
+		// eslint-disable-next-line
 		policy.previousNames = policy.previousTitles;
 		// @ts-expect-error 'previousTitles' is no longer an allowed property
 		delete policy.previousTitles;
@@ -395,7 +397,7 @@ const migrations: Record<string, Migration> = {
 		policy.schemaVersion = '0.4.1';
 
 		const policyWithIds = generateIdsPolicy(policy).policy;
-		for (const [i, version] of Object.entries(policy.versions)) {
+		for (const [i, version] of policy.versions.entries()) {
 			version.id = policyWithIds.versions[i].id;
 			if (version.name && /\bunnamed version\b/i.test(version.name)) {
 				delete version.name;
@@ -431,6 +433,6 @@ const migrations: Record<string, Migration> = {
 	['1.0.0']: function (policy: Policy): void {
 		policy.schemaVersion = '1.0.0';
 	},
-}
+};
 
 migrateAll();

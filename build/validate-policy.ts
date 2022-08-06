@@ -1,4 +1,4 @@
-import Ajv, { ValidateFunction } from 'ajv';
+import Ajv, { ValidateFunction, Schema } from 'ajv';
 import addFormats from 'ajv-formats';
 
 import { readdir, readFile } from 'fs/promises';
@@ -45,10 +45,12 @@ export const validatePolicy: ValidateFunction<Policy> = await (async () => {
 	for (const [i, schema] of schemas.entries()) {
 		const name = schemaFileNames[i];
 
-		ajv.addSchema(schema, name);
+		// If the schema is not a valid `Schema`, expect an error to be thrown
+		ajv.addSchema(schema as Schema, name);
 	}
 
-	return ajv.compile<Policy>(policySchema);
+	// If the schema is not a valid `Schema`, expect an error to be thrown
+	return ajv.compile<Policy>(policySchema as Schema);
 })();
 
 /**
@@ -74,7 +76,7 @@ function getFileSizeValidator(dirName: string) {
 		}
 
 		return valid;
-	}
+	};
 }
 
 /**

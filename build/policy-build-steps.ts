@@ -19,6 +19,13 @@ import { readFile } from 'fs/promises';
 import { SiteData } from './util/get-site-data.js';
 
 /**
+ * Create a deep copy of an object that can be converted to JSON.
+ */
+function jsonClone<T extends object>(obj: T): T {
+	return JSON.parse(JSON.stringify(obj)) as T;
+}
+
+/**
  * Build steps for a particular policy.
  */
 export const policyBuildSteps: Record<string, PolicyBuildStep> = {
@@ -270,7 +277,7 @@ function createVersionMetadata(
 
 	// Construct a version of this policy with only the current version
 	const versionId = version.id;
-	const singleVersionPolicy = JSON.parse(JSON.stringify(policy));
+	const singleVersionPolicy = jsonClone(policy);
 	singleVersionPolicy.versions = singleVersionPolicy.versions.filter(
 		(version) => version.id === versionId
 	);
