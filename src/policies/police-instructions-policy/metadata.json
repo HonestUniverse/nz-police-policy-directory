@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Police Instructions Policy",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -23,7 +23,8 @@
 						"requester": "Mark Hanna",
 						"id": "IR-01-22-11586",
 						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
 					},
 					"extracted": "2022-06-13",
 					"released": "2022-06-13",
@@ -114,7 +115,8 @@
 								"requester": "Mark Hanna",
 								"id": "IR-01-22-11586",
 								"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-73965",
-								"withholdings": "None"
+								"withholdings": "None",
+								"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
 							},
 							"extracted": "2022-05-16",
 							"released": "2022-06-08",
@@ -156,7 +158,8 @@
 								"requester": "Mark Hanna",
 								"id": "IR-01-22-11586",
 								"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-73965",
-								"withholdings": "None"
+								"withholdings": "None",
+								"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
 							},
 							"extracted": "2022-05-16",
 							"released": "2022-06-08",

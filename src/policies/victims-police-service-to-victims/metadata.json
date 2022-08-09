@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -23,7 +23,8 @@
 						"requester": "Amanda Murtagh",
 						"id": "IR-01-21-24277",
 						"responseUrl": "https://fyi.org.nz/request/16304-instructions-to-victim-support-by-police#incoming-62326",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/16304-instructions-to-victim-support-by-police"
 					},
 					"extracted": "2021-08-09",
 					"released": "2021-09-01",

@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Written Traffic Warnings",
 	"versions": [
@@ -17,7 +17,8 @@
 						"requester": "Grace Haden",
 						"id": "94/3138/18",
 						"responseUrl": "https://fyi.org.nz/request/4132-official-information-act-request-enforcement-and-prosecution-of-offences-what-role-does-economics-play-in-decision-making#incoming-13649",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/4132-official-information-act-request-enforcement-and-prosecution-of-offences-what-role-does-economics-play-in-decision-making"
 					},
 					"released": "2016-07-05",
 					"retrieved": "2022-07-25",

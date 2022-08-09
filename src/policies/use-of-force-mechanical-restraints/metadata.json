@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -17,7 +17,8 @@
 						"requester": "Joshua Rogers",
 						"id": "IR-01-22-3361",
 						"responseUrl": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/18483-tazer-policy"
 					},
 					"extracted": "2022-02-09",
 					"released": "2022-02-24",
