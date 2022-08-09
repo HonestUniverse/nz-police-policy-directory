@@ -1,50 +1,59 @@
 {
+	"schemaVersion": "1.1.0",
 	"name": "Unpublished names on the electoral roll",
+	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"id": "u-szcpa",
 			"duration": {
-				"start": "2017-10-10"
+				"on": [
+					"2022-07-28"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
-					"method": "Released under the OIA",
-					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"month": 8,
+						"year": 2022
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2022-07-28",
+					"retrieved": "2022-08-09",
+					"url": "https://www.police.govt.nz/about-us/publication/unpublished-names-electoral-role-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220808204936/https://www.police.govt.nz/about-us/publication/unpublished-names-electoral-role-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/unpublished-names-on-electoral-roll-290722.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220808205106/https://www.police.govt.nz/sites/default/files/publications/unpublished-names-on-electoral-roll-290722.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "1.1.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2022-07-28/unpublished-names-on-electoral-roll-290722.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 622431,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
 		}
 	]
 }
