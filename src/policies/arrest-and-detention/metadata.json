@@ -6,8 +6,66 @@
 		{
 			"duration": {
 				"on": [
-					"2022-07-13"
+					"2022-08-01"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": {
+						"6(c)": "Information has been withheld on pages 51 and 52."
+					},
+					"published": {
+						"month": 8,
+						"year": 2022
+					},
+					"extracted": "2022-08-01",
+					"retrieved": "2022-08-09",
+					"url": "https://www.police.govt.nz/about-us/publication/arrest-and-detention-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220808205216/https://www.police.govt.nz/about-us/publication/arrest-and-detention-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/arrest-and-detention-redacted-010822.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220808205218/https://www.police.govt.nz/sites/default/files/publications/arrest-and-detention-redacted-010822.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-08-01/arrest-and-detention-redacted-010822.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 2030421,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 45 and 52–56 are images of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-vvxjc"
+		},
+		{
+			"duration": {
+				"on": [
+					"2022-07-13"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
