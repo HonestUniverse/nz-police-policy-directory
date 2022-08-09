@@ -15,7 +15,8 @@
 						"requester": "Jeremy Roundill",
 						"id": "16-8540-6",
 						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16311",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/5014-selected-police-manuals"
 					},
 					"released": "2016-12-15",
 					"retrieved": "2022-05-09",
@@ -52,7 +53,7 @@
 			"id": "u-kcqgk"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Maintaining professional distance policy",
 	"notices": [
 		{

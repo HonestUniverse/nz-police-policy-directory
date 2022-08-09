@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Fingerprints",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -17,7 +17,8 @@
 						"requester": "Paul White",
 						"id": "IR-01-20-23846",
 						"responseUrl": "https://fyi.org.nz/request/13547-ace-v#incoming-51844",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/13547-ace-v"
 					},
 					"released": "2020-09-28",
 					"retrieved": "2022-06-04",

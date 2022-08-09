@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Privacy and official information -  Introduction to disclosure of information",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -19,7 +19,8 @@
 						"requester": "Sean Richards",
 						"id": "IR-01-20-15549",
 						"responseUrl": "https://fyi.org.nz/request/13044-oia-procedures#incoming-50068",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/13044-oia-procedures"
 					},
 					"extracted": "2020-07-07",
 					"released": "2020-07-20",

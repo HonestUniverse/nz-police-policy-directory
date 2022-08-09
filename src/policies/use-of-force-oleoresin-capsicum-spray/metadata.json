@@ -13,7 +13,8 @@
 						"requester": "P Taylor",
 						"id": "IR-01-22-7033",
 						"responseUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes"
 					},
 					"extracted": "2022-04-29",
 					"released": "2022-05-27",
@@ -97,7 +98,8 @@
 						"responseUrl": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
 						"withholdings": {
 							"6(c)": "Some information has been withheld on page 13"
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/18483-tazer-policy"
 					},
 					"extracted": "2022-02-09",
 					"released": "2022-02-24",
@@ -172,7 +174,8 @@
 								"requester": "P Taylor",
 								"id": "IR-01-22-7033",
 								"responseUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
-								"withholdings": "None"
+								"withholdings": "None",
+								"requestUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes"
 							},
 							"extracted": "2022-05-02",
 							"released": "2022-05-27",
@@ -223,7 +226,8 @@
 								"requester": "P Taylor",
 								"id": "IR-01-22-7033",
 								"responseUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
-								"withholdings": "None"
+								"withholdings": "None",
+								"requestUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes"
 							},
 							"extracted": "2022-05-02",
 							"released": "2022-05-27",
@@ -271,7 +275,8 @@
 						"requester": "Jeremy Roundill",
 						"id": "16-8540-4",
 						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/5014-selected-police-manuals"
 					},
 					"released": "2017-01-04",
 					"retrieved": "2022-05-01",
@@ -308,7 +313,7 @@
 			"id": "u-gsdxy"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Use of Force - Oleoresin Capsicum Spray",
 	"previousNames": [
 		"Use of Force - Oleoresin Capsicum (OC) Spray"

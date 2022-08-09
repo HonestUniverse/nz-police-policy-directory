@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Family harm - Parental control (section 59 Crimes Act)",
 	"versions": [
@@ -19,7 +19,8 @@
 						"requester": "K Baird",
 						"id": "IR-01-20-18227",
 						"responseUrl": "https://fyi.org.nz/request/13205-section-59-crimes-act#incoming-50712",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/13205-section-59-crimes-act"
 					},
 					"extracted": "2020-07-02",
 					"released": "2020-08-17",

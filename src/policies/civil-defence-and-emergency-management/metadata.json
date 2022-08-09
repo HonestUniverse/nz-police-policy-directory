@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Civil defence and emergency management",
 	"versions": [
@@ -17,7 +17,8 @@
 						"requester": "Riki G",
 						"id": "IR-01-20-7054",
 						"responseUrl": "https://fyi.org.nz/request/12345-police-manual-civil-defence-emergency-management#incoming-47682",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/12345-police-manual-civil-defence-emergency-management"
 					},
 					"released": "2020-04-21",
 					"retrieved": "2022-07-24",

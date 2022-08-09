@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Adult sexual assault investigation policy and procedures",
 	"previousNames": [
@@ -21,7 +21,8 @@
 						"requester": "Zane Collins",
 						"id": "IR-01-20-14293",
 						"responseUrl": "https://fyi.org.nz/request/12892-sexual-violence-charging-and-prosecution-guidelines#incoming-49344",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/12892-sexual-violence-charging-and-prosecution-guidelines"
 					},
 					"extracted": "2020-06-02",
 					"released": "2020-06-22",

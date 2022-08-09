@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -19,7 +19,8 @@
 						"responseUrl": "https://fyi.org.nz/request/14795-police-manual-chapters-related-to-intelligence-collection#incoming-58331",
 						"withholdings": {
 							"6(c)": "Information was withheld on page 9."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/14795-police-manual-chapters-related-to-intelligence-collection"
 					},
 					"extracted": "2021-04-01",
 					"released": "2021-05-21",
@@ -90,5 +91,10 @@
 			"id": "u-odgsv"
 		}
 	],
-	"name": "Intel - Intelligence products"
+	"name": "Intel - Intelligence products",
+	"pendingRequest": {
+		"requester": "Mason",
+		"requestUrl": "https://fyi.org.nz/request/20081-police-manual-chapters?nocache=outgoing-33466#outgoing-33466",
+		"withholdings": "Undetermined"
+	}
 }

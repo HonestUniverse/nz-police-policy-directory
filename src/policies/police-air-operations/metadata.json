@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Police air operations",
 	"versions": [
@@ -19,7 +19,8 @@
 						"responseUrl": "https://fyi.org.nz/request/10712-use-of-police-helicopter-rotor-wash#incoming-38429",
 						"withholdings": {
 							"Out of scope": "Information has been withheld on pages 1, 10, and 14"
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/10712-use-of-police-helicopter-rotor-wash"
 					},
 					"extracted": "2019-06-12",
 					"released": "2019-08-09",

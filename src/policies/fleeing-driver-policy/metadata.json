@@ -18,7 +18,8 @@
 						"responseUrl": "https://fyi.org.nz/request/14470-new-pursuit-policy#incoming-54584",
 						"withholdings": {
 							"6(c)": "Some information was withheld on pages 21–24."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/14470-new-pursuit-policy"
 					},
 					"extracted": "2021-02-10",
 					"released": "2021-02-19",
@@ -102,7 +103,8 @@
 						"requester": "David Horner",
 						"id": "IR-01-20-30532",
 						"responseUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters#incoming-52829",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/13497-request-for-specific-police-policy-chapters"
 					},
 					"extracted": "2020-08-14",
 					"released": "2020-09-03",
@@ -152,7 +154,8 @@
 						"requester": "Thomas Holmes",
 						"id": "IR-01-20-11722",
 						"responseUrl": "https://fyi.org.nz/request/12732-fleeing-driver-and-urgent-duty-driving-policies#incoming-49533",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/12732-fleeing-driver-and-urgent-duty-driving-policies"
 					},
 					"extracted": "2020-06-26",
 					"released": "2020-06-29",
@@ -205,7 +208,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -253,7 +257,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -301,7 +306,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -349,7 +355,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -397,7 +404,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -445,7 +453,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -493,7 +502,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -541,7 +551,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -589,7 +600,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -637,7 +649,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -685,7 +698,8 @@
 						"requester": "Mark Hanna",
 						"id": "16/7758/13",
 						"responseUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics"
 					},
 					"released": "2018-03-19",
 					"url": "https://fyi.org.nz/request/7257-police-pursuit-policy-and-statistics#incoming-24263",
@@ -721,6 +735,6 @@
 			"id": "u-eojes"
 		}
 	],
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Fleeing driver policy"
 }

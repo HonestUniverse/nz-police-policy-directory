@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -19,7 +19,8 @@
 						"responseUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
 						"withholdings": {
 							"9(2)(a)": "Some information has been withheld on page 20."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents"
 					},
 					"extracted": "2022-04-22",
 					"released": "2022-05-11",

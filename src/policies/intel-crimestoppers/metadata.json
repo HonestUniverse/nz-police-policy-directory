@@ -18,7 +18,8 @@
 						"responseUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
 						"withholdings": {
 							"9(2)(a)": "Some information was withheld on pages 7 and 8."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents"
 					},
 					"extracted": "2022-04-04",
 					"released": "2022-05-11",
@@ -96,7 +97,8 @@
 						"responseUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents#incoming-73037",
 						"withholdings": {
 							"9(2)(a)": "Some information was withheld on pages 18 and 19."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/18931-oia-request-for-the-following-documents"
 					},
 					"extracted": "2022-04-04",
 					"released": "2022-05-11",
@@ -160,6 +162,11 @@
 			"id": "u-aaouy"
 		}
 	],
-	"schemaVersion": "1.0.0",
-	"name": "Intel - Crimestoppers"
+	"schemaVersion": "1.1.0",
+	"name": "Intel - Crimestoppers",
+	"pendingRequest": {
+		"requester": "Mason",
+		"requestUrl": "https://fyi.org.nz/request/20081-police-manual-chapters?nocache=outgoing-33466#outgoing-33466",
+		"withholdings": "Undetermined"
+	}
 }

@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -19,7 +19,8 @@
 						"responseUrl": "https://fyi.org.nz/request/19246-nz-police-telecommunication-investigations-manual#incoming-73648",
 						"withholdings": {
 							"6(c)": "Large amounts of information have been withheld on all pages."
-						}
+						},
+						"requestUrl": "https://fyi.org.nz/request/19246-nz-police-telecommunication-investigations-manual"
 					},
 					"extracted": "2022-02-01",
 					"released": "2022-05-30",
@@ -83,5 +84,10 @@
 			"id": "u-qxzcq"
 		}
 	],
-	"name": "Telecommunication investigations"
+	"name": "Telecommunication investigations",
+	"pendingRequest": {
+		"requester": "Mason",
+		"requestUrl": "https://fyi.org.nz/request/20081-police-manual-chapters?nocache=outgoing-33466#outgoing-33466",
+		"withholdings": "Undetermined"
+	}
 }
