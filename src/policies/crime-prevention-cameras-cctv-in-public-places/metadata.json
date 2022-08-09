@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Police Manual chapter",
 	"name": "Crime Prevention Cameras (CCTV) in Public Places",
 	"versions": [
@@ -17,7 +17,8 @@
 						"requester": "Amy Ferguson",
 						"id": "IR-01-20-3244",
 						"responseUrl": "https://fyi.org.nz/request/12139-policy-procedures-re-personal-information#incoming-47988",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/12139-policy-procedures-re-personal-information"
 					},
 					"released": "2020-05-06",
 					"retrieved": "2022-07-24",
@@ -60,5 +61,10 @@
 			],
 			"id": "u-eowav"
 		}
-	]
+	],
+	"pendingRequest": {
+		"requester": "Mason",
+		"requestUrl": "https://fyi.org.nz/request/20081-police-manual-chapters?nocache=outgoing-33466#outgoing-33466",
+		"withholdings": "Undetermined"
+	}
 }

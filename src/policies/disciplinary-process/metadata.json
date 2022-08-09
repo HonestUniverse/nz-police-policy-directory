@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"type": "Guidelines",
 	"versions": [
 		{
@@ -16,7 +16,8 @@
 						"requester": "Mark Hanna",
 						"id": "IR-01-18-5493",
 						"responseUrl": "https://fyi.org.nz/request/8308-taser-policy-compliance#incoming-27162",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/8308-taser-policy-compliance"
 					},
 					"released": "2018-08-07",
 					"retrieved": "2022-05-16",

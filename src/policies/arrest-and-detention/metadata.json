@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.1.0",
 	"name": "Arrest and detention",
 	"type": "Police Manual chapter",
 	"versions": [
@@ -17,7 +17,8 @@
 						"requester": "S.I",
 						"id": "IR-01-22-18456",
 						"responseUrl": "https://fyi.org.nz/request/19749-all-resources-relating-to-reasonable-grounds-including-guidelines-and-instructions#incoming-75071",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/19749-all-resources-relating-to-reasonable-grounds-including-guidelines-and-instructions"
 					},
 					"released": "2022-07-13",
 					"retrieved": "2022-07-17",
@@ -128,7 +129,8 @@
 						"requester": "Richard Keam",
 						"id": "16/9512",
 						"responseUrl": "https://fyi.org.nz/request/4727-police-arrest-and-detention-manual#incoming-15860",
-						"withholdings": "None"
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/4727-police-arrest-and-detention-manual"
 					},
 					"released": "2016-11-17",
 					"retrieved": "2022-07-25",
