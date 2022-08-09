@@ -3,10 +3,63 @@
 	"versions": [
 		{
 			"duration": {
+				"on": [
+					"2022-07-27"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"month": 8,
+						"year": 2022
+					},
+					"extracted": "2022-07-27",
+					"retrieved": "2022-08-09",
+					"url": "https://www.police.govt.nz/about-us/publication/perjury-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220808211341/https://www.police.govt.nz/about-us/publication/perjury-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/perjury-280722.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220808000948/https://www.police.govt.nz/sites/default/files/publications/perjury-280722.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-07-27/perjury-280722.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 645957,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-basod"
+		},
+		{
+			"duration": {
 				"start": "2020-02-24",
 				"on": [
 					"2021-05-24"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -28,7 +81,7 @@
 			],
 			"files": [
 				{
-					"path": "version-6/Perjury.pdf",
+					"path": "2021-05-03/Perjury.pdf",
 					"type": "application/pdf",
 					"size": 91934,
 					"licence": {
