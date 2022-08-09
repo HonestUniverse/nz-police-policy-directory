@@ -6,7 +6,8 @@
 			"duration": {
 				"on": [
 					"2021-06-14",
-					"2021-06-28"
+					"2021-06-28",
+					"2022-07-26"
 				]
 			},
 			"provenance": [
@@ -28,6 +29,48 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2022-07-26/pi-security-consultants-requests-to-police-for-assistance-280722.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 688893,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"month": 8,
+								"year": 2022
+							},
+							"extracted": "2022-07-26",
+							"retrieved": "2022-08-09",
+							"url": "https://www.police.govt.nz/about-us/publication/private-investigators-and-security-consultants-requests-police-assistance",
+							"archiveUrl": "https://web.archive.org/web/20220808211303/https://www.police.govt.nz/about-us/publication/private-investigators-and-security-consultants-requests-police-assistance",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/pi-security-consultants-requests-to-police-for-assistance-280722.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20220808211304/https://www.police.govt.nz/sites/default/files/publications/pi-security-consultants-requests-to-police-for-assistance-280722.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "../../bulk-files/2021-06-28/Sebastian IR 01 21 18135 Supporting docs for release.pdf",
 					"type": "application/pdf",
