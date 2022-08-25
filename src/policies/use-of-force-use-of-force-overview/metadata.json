@@ -5,6 +5,66 @@
 		{
 			"duration": {
 				"on": [
+					"2022-08-05"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 8
+					},
+					"extracted": "2022-08-05",
+					"retrieved": "2022-08-22",
+					"url": "https://www.police.govt.nz/about-us/publication/use-force-overview-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220821212141/https://www.police.govt.nz/about-us/publication/use-force-overview-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/use-of-force-overview-050822.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220821212408/https://www.police.govt.nz/sites/default/files/publications/use-of-force-overview-050822.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-08-05/use-of-force-overview-050822.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 2867800,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 33, 37, 38, 41, 42, and 44–46 are images of text.",
+									"There are images of text on pages 24, 35, and 48."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-wwfif"
+		},
+		{
+			"duration": {
+				"ended": true,
+				"on": [
 					"2022-05-05",
 					"2022-05-24"
 				]

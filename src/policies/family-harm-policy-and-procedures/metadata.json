@@ -3,10 +3,130 @@
 	"versions": [
 		{
 			"duration": {
+				"on": [
+					"2022-08-24"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 8
+					},
+					"extracted": "2022-08-24",
+					"retrieved": "2022-08-24",
+					"url": "https://www.police.govt.nz/about-us/publication/family-harm-policy-and-procedures-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220824204002/https://www.police.govt.nz/about-us/publication/family-harm-policy-and-procedures-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/family-harm-policy-and-procedures-240822.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220824204002/https://www.police.govt.nz/sites/default/files/publications/family-harm-policy-and-procedures-240822.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-08-24/family-harm-policy-and-procedures-240822.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1760575,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 33, 34, and 42 are images of text.",
+									"There is an image of text on page 15."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-puhbo"
+		},
+		{
+			"duration": {
+				"on": [
+					"2022-08-22"
+				],
+				"ended": true
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 8
+					},
+					"extracted": "2022-08-22",
+					"retrieved": "2022-08-22",
+					"url": "https://www.police.govt.nz/about-us/publication/family-harm-policy-and-procedures-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220821212259/https://www.police.govt.nz/about-us/publication/family-harm-policy-and-procedures-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/family-harm-policy-and-procedures-220822.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220821212410/https://www.police.govt.nz/sites/default/files/publications/family-harm-policy-and-procedures-220822.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-08-22/family-harm-policy-and-procedures-220822.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 2734961,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 33, 34, and 42 are images of text.",
+									"There is an image of text on page 15."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-qthee"
+		},
+		{
+			"duration": {
 				"start": "2020-12-02",
 				"on": [
 					"2021-05-24"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -28,7 +148,7 @@
 			],
 			"files": [
 				{
-					"path": "version-22/Family harm policy and procedures.pdf",
+					"path": "2021-05-03/Family harm policy and procedures.pdf",
 					"type": "application/pdf",
 					"size": 590270,
 					"licence": {
