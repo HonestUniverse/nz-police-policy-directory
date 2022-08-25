@@ -6,6 +6,65 @@
 		{
 			"duration": {
 				"on": [
+					"2022-08-11"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 8
+					},
+					"extracted": "2022-08-11",
+					"retrieved": "2022-08-22",
+					"url": "https://www.police.govt.nz/about-us/publication/sudden-death-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20220821212151/https://www.police.govt.nz/about-us/publication/sudden-death-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/sudden-death-110822.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20220821212327/https://www.police.govt.nz/sites/default/files/publications/sudden-death-110822.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-08-11/sudden-death-110822.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 3241191,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 31, 33–36, 39–42, 47, and 49 are images of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-ddbpw"
+		},
+		{
+			"duration": {
+				"ended": true,
+				"on": [
 					"2020-11-25"
 				]
 			},
