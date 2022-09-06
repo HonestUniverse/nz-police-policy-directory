@@ -21,3 +21,6 @@ export type DirectoryBuildStep = BuildStep<PageBuildData<{
 export type ContentBuildStep = BuildStep<PageBuildData<{
 	directory: Record<string, Policy>,
 }>>;
+export type RedirectBuildStep = BuildStep<{
+	directory: Record<string, Policy>,
+}>;
