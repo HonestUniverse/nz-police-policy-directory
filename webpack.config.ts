@@ -107,6 +107,6 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 	}
 
 	return config;
-};
+}
 
 export default getConfig;

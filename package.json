@@ -6,6 +6,7 @@
 	"devDependencies": {
 		"@types/jasmine": "^4.0.3",
 		"@types/node": "^17.0.25",
+		"@types/semver": "^7.3.10",
 		"@typescript-eslint/eslint-plugin": "^5.20.0",
 		"@typescript-eslint/parser": "^5.20.0",
 		"ajv": "^8.11.0",
@@ -15,7 +16,6 @@
 		"css-loader": "^6.7.1",
 		"dotenv": "^16.0.0",
 		"eslint": "^8.13.0",
-		"generate-json-webpack-plugin": "^2.0.0",
 		"html-loader": "^3.1.0",
 		"html-webpack-exclude-assets-plugin": "^0.0.7",
 		"html-webpack-plugin": "^5.5.0",
@@ -41,7 +41,11 @@
 		"watchTest": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode development --env test --watch",
 		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/migrate.ts",
 		"generateIds": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/generate-all-ids.ts",
-		"lintJs": "eslint src/assets/js/**",
+		"lintJsSrc": "eslint src/assets/js/**",
+		"lintJsBuild": "eslint build/**/*.ts",
+		"lintJsSchema": "eslint schema/**/*.ts",
+		"lintJsSpec": "eslint spec/**/*.ts",
+		"lintJs": "eslint src/assets/js/** build/**/*.ts schema/**/*.ts spec/**/*.ts",
 		"lintCss": "stylelint src/assets/css/**",
 		"lint": "npm run lintJs && npm run lintCss",
 		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" jasmine"
