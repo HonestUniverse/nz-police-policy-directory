@@ -39,9 +39,10 @@ export const redirectBuildSteps: Record<string, RedirectBuildStep> = {
 			}
 
 			const policyRedirectsString = policyRedirects.map((redirect) => {
+				const selfRedirect = `${redirect.from} ${redirect.to} ${redirect.code}`;
 				const ancestorsRedirect = `${redirect.from}/* ${redirect.to}/:splat ${redirect.code}`;
 
-				return ancestorsRedirect;
+				return `${selfRedirect}\n${ancestorsRedirect}`;
 			}).join('\n');
 
 			return policyRedirectsString;
