@@ -63,6 +63,7 @@
 		&::after {
 			position: absolute;
 			font-size: 3em;
+			max-height: 100%;
 		}
 		&::before {
 			content: "“";
