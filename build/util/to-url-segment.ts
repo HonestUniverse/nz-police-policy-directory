@@ -3,8 +3,8 @@
  * For example, 'Kōkako Café's new coffee (strong)' becomes 'kookako-cafes-new-coffee-strong'
  */
 export function toUrlSegment(str: string): string {
-	let prefix = str.replace(/(^\.*\/*).*/, '$1');
-	let suffix = str.replace(/^.*?(\/*$)/, '$1');
+	const prefix = str.replace(/(^\.*\/*).*/, '$1');
+	const suffix = str.replace(/^.*?(\/*$)/, '$1');
 
 	let urlSegment = str.toLowerCase();
 
@@ -59,7 +59,7 @@ export function stripAccents(str: string): string {
 		}
 
 		// Otherwise, remove it and re-sync the strings for the next iteration
-		let normalisedChars = normalisedStr.split('');
+		const normalisedChars = normalisedStr.split('');
 		normalisedChars.splice(i, 1);
 		i -= 1;
 		normalisedStr = normalisedChars.join('');
