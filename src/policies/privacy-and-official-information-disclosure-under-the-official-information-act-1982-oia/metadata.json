@@ -5,10 +5,581 @@
 	"versions": [
 		{
 			"duration": {
+				"start": "2022-02-10",
 				"on": [
-					"2020-01-30"
-				],
-				"ended": true
+					"2022-08-26"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-22-22497",
+						"requestUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia",
+						"responseUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+						"withholdings": "None"
+					},
+					"released": "2022-08-26",
+					"retrieved": "2022-09-06",
+					"url": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+					"fileUrl": "https://fyi.org.nz/request/20076/response/76701/attach/8/IR%2001%2022%2022497%20M%20Hanna%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 4,
+					"size": 7086464,
+					"licence": {
+						"name": "None",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing at small font sizes."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7086464,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "info",
+					"title": "Change note",
+					"message": "<p>In its response letter, NZ Police described the contents of this change:</p><blockquote><b>10 February 2022</b> - update to 'fixing a charge to process a request' section, due to the introduction of the new 'Charging for an OIA' policy</blockquote>"
+				}
+			],
+			"id": "u-kiuua"
+		},
+		{
+			"duration": {
+				"start": "2021-09-07",
+				"end": "2022-02-10"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-22-22497",
+						"requestUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia",
+						"responseUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+						"withholdings": "None"
+					},
+					"released": "2022-08-26",
+					"retrieved": "2022-09-06",
+					"url": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+					"fileUrl": "https://fyi.org.nz/request/20076/response/76701/attach/8/IR%2001%2022%2022497%20M%20Hanna%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 35,
+					"size": 7086464,
+					"licence": {
+						"name": "None",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing at small font sizes."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7086464,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "info",
+					"title": "Change note",
+					"message": "<p>In its response letter, NZ Police described the contents of this change:</p><blockquote><b>6 September 2021</b> - a typographical error was amended, and a link added: <a href=\"https://tenone.police.govt.nz/pi/acceptable-use-information-and-ict\" target=\"_blank\">https://tenone.police.govt.nz/pi/acceptable-use-information-and-ict</a></blockquote>"
+				}
+			],
+			"id": "u-gyaxa"
+		},
+		{
+			"duration": {
+				"start": "2021-09-06",
+				"end": "2022-09-07"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-22-22497",
+						"requestUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia",
+						"responseUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+						"withholdings": "None"
+					},
+					"released": "2022-08-26",
+					"retrieved": "2022-09-06",
+					"url": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+					"fileUrl": "https://fyi.org.nz/request/20076/response/76701/attach/8/IR%2001%2022%2022497%20M%20Hanna%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 66,
+					"size": 7086464,
+					"licence": {
+						"name": "None",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing at small font sizes."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7086464,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "info",
+					"title": "Change note",
+					"message": "<p>In its response letter, NZ Police described the contents of this change:</p><blockquote><b>6 September 2021</b> - a typographical error was amended, and a link added: <a href=\"https://tenone.police.govt.nz/pi/acceptable-use-information-and-ict\" target=\"_blank\">https://tenone.police.govt.nz/pi/acceptable-use-information-and-ict</a></blockquote>"
+				}
+			],
+			"id": "u-gakso"
+		},
+		{
+			"duration": {
+				"start": "2021-06-10",
+				"end": "2021-09-06"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-22-22497",
+						"requestUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia",
+						"responseUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+						"withholdings": "None"
+					},
+					"released": "2022-08-26",
+					"retrieved": "2022-09-06",
+					"url": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+					"fileUrl": "https://fyi.org.nz/request/20076/response/76701/attach/8/IR%2001%2022%2022497%20M%20Hanna%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 97,
+					"size": 7086464,
+					"licence": {
+						"name": "None",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing at small font sizes."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7086464,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "info",
+					"title": "Change note",
+					"message": "<p>In its response letter, NZ Police described the contents of this change:</p><blockquote><b>10 June 2021</b> - heading levels were changed, a link was added to \"Make redactions in Adobe Acrobat\", updated internal anchor links and updates to \"Who can make a request\" section and \"compiling the information for release\"</blockquote>"
+				}
+			],
+			"id": "u-jyfwi"
+		},
+		{
+			"duration": {
+				"start": "2020-12-01",
+				"end": "2021-06-10"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-22-22497",
+						"requestUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia",
+						"responseUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+						"withholdings": "None"
+					},
+					"released": "2022-08-26",
+					"retrieved": "2022-09-06",
+					"url": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+					"fileUrl": "https://fyi.org.nz/request/20076/response/76701/attach/8/IR%2001%2022%2022497%20M%20Hanna%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 128,
+					"size": 7086464,
+					"licence": {
+						"name": "None",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing at small font sizes."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7086464,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "info",
+					"title": "Change note",
+					"message": "<p>In its response letter, NZ Police described the contents of this change:</p><blockquote><b>1 December 2020</b> - relinked to 2020 Disclosure Act and deleted Privacy Act 1993 disclaimer</blockquote>"
+				}
+			],
+			"id": "u-nkidt"
+		},
+		{
+			"duration": {
+				"start": "2020-11-16",
+				"end": "2020-12-01"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-22-22497",
+						"requestUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia",
+						"responseUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+						"withholdings": "None"
+					},
+					"released": "2022-08-26",
+					"retrieved": "2022-09-06",
+					"url": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+					"fileUrl": "https://fyi.org.nz/request/20076/response/76701/attach/8/IR%2001%2022%2022497%20M%20Hanna%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 160,
+					"size": 7086464,
+					"licence": {
+						"name": "None",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing at small font sizes.",
+									"Page 31 is an image of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7086464,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "info",
+					"title": "Change note",
+					"message": "<p>In its response letter, NZ Police described the contents of this change:</p><blockquote><b>16 November 2020</b> - updated Privacy Act 1993 references and links to Privacy Act 2020 and added a disclaimer</blockquote>"
+				}
+			],
+			"id": "u-huysc"
+		},
+		{
+			"duration": {
+				"start": "2019-09-05",
+				"end": "2020-11-16"
 			},
 			"provenance": [
 				{
@@ -26,6 +597,21 @@
 					"retrieved": "2020-07-25",
 					"url": "https://fyi.org.nz/request/11064-oia-authorisation-and-training-of-the-national-manager-response-and-operations#incoming-47673",
 					"fileUrl": "https://fyi.org.nz/request/11064/response/47673/attach/4/2.FULL%20RELEASE%20Disclosure%20under%20the%20Official%20Information%20Act%201982%20OIA.pdf"
+				},
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-22-22497",
+						"requestUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia",
+						"responseUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+						"withholdings": "None"
+					},
+					"released": "2022-08-26",
+					"retrieved": "2022-09-06",
+					"url": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+					"fileUrl": "https://fyi.org.nz/request/20076/response/76701/attach/8/IR%2001%2022%2022497%20M%20Hanna%20Response.pdf"
 				}
 			],
 			"files": [
@@ -53,6 +639,54 @@
 							}
 						}
 					}
+				},
+				{
+					"path": "../../bulk-files/2022-08-26/IR 01 22 22497 M Hanna Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Mark Hanna",
+								"id": "IR-01-22-22497",
+								"requestUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia",
+								"responseUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+								"withholdings": "None"
+							},
+							"released": "2022-08-26",
+							"retrieved": "2022-09-06",
+							"url": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-76701",
+							"fileUrl": "https://fyi.org.nz/request/20076/response/76701/attach/8/IR%2001%2022%2022497%20M%20Hanna%20Response.pdf"
+						}
+					],
+					"startingPage": 1,
+					"size": 7086464,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"message": "This OIA response details the start and end dates of this version."
+						}
+					]
 				}
 			],
 			"id": "u-eqjvy"
@@ -108,12 +742,6 @@
 				}
 			],
 			"id": "u-iaeeu"
-		}
-	],
-	"notices": [
-		{
-			"type": "info",
-			"message": "There is <a href=\"https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia/\" target=\"_blank\">a pending OIA request</a> for more recent versions of this document."
 		}
 	]
 }
