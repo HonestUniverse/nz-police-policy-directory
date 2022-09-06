@@ -1,11 +1,10 @@
 import type { DirectoryBuildStep } from './BuildStep.js';
 
-import GenerateJsonPlugin from 'generate-json-webpack-plugin';
+import WriteFilePlugin from './util/write-file-plugin.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
 import * as paths from './util/paths.js';
-import { makeRootRelative } from './util/make-root-relative.js';
 
 export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	/**
@@ -15,11 +14,9 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 		const { directory } = buildData;
 		const data = Object.values(directory);
 
-		return [new GenerateJsonPlugin(
+		return [new WriteFilePlugin(
 			`${dst}.json`,
-			data,
-			null,
-			'\t'
+			JSON.stringify(data, null, '\t'),
 		)];
 	},
 
@@ -73,7 +70,7 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 						data: {
 							siteData,
 							pageData,
-						}
+						},
 					},
 				}),
 				chunks: ['priority', 'main', 'enhancements', 'style'],
