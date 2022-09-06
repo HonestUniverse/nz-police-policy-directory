@@ -1,7 +1,7 @@
 import type { PolicyBuildStep } from './BuildStep.js';
 
 import CopyPlugin from 'copy-webpack-plugin';
-import GenerateJsonPlugin from 'generate-json-webpack-plugin';
+import WriteFilePlugin from './util/write-file-plugin.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
@@ -17,6 +17,7 @@ import type { Policy } from '../schema/Policy.js';
 import type { Version } from '../schema/PolicyVersion.js';
 import { readFile } from 'fs/promises';
 import { SiteData } from './util/get-site-data.js';
+import { jsonClone } from './util/json-clone.js';
 
 /**
  * Build steps for a particular policy.
@@ -169,7 +170,7 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 	createVersionMetadata(src, dst, buildData) {
 		const { policy } = buildData;
 
-		const plugins: GenerateJsonPlugin[] = [];
+		const plugins: ReturnType<PolicyBuildStep> = [];
 
 		for (const version of policy.versions) {
 			plugins.push(createVersionMetadata(dst, policy, version));
@@ -270,16 +271,14 @@ function createVersionMetadata(
 
 	// Construct a version of this policy with only the current version
 	const versionId = version.id;
-	const singleVersionPolicy = JSON.parse(JSON.stringify(policy));
+	const singleVersionPolicy = jsonClone(policy);
 	singleVersionPolicy.versions = singleVersionPolicy.versions.filter(
 		(version) => version.id === versionId
 	);
 
-	return new GenerateJsonPlugin(
+	return new WriteFilePlugin(
 		`${latest ? `${dst}/latest` : versionDst}.json`,
-		singleVersionPolicy,
-		null,
-		'\t'
+		JSON.stringify(singleVersionPolicy, null, '\t'),
 	);
 }
 

@@ -1,8 +1,8 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import type { Compiler } from 'webpack';
+import type { Compiler, WebpackPluginInstance } from 'webpack';
 
-class AlterPlugin {
+class AlterPlugin implements WebpackPluginInstance {
 	private async: string[];
 	private defer: string[];
 	private body: string[];
@@ -47,7 +47,7 @@ class AlterPlugin {
 					return [...chunk.files].includes(filePath);
 				});
 
-				if (chunk) return chunk.name;
+				if (chunk) { return chunk.name; }
 				return '';
 			};
 
@@ -96,7 +96,7 @@ class AlterPlugin {
 						data.publicPath
 					);
 
-					if (this.preload.includes(name))
+					if (this.preload.includes(name)) {
 						headTags.unshift({
 							tagName: 'link',
 							attributes: {
@@ -109,10 +109,11 @@ class AlterPlugin {
 								plugin: 'AlterPlugin',
 							},
 						});
+					}
 
-					if (tag.tagName !== 'script') return tagLoc.push(tag);
+					if (tag.tagName !== 'script') { return tagLoc.push(tag); }
 
-					if (this.body.includes(name)) return bodyTags.push(tag);
+					if (this.body.includes(name)) { return bodyTags.push(tag); }
 					headTags.push(tag);
 				};
 

@@ -9,7 +9,7 @@ import * as paths from './util/paths.js';
  * Reads and validates the metadata file for a `Policy`, and returns that data.
  */
 async function readPolicyFile(dirName: string): Promise<Policy> {
-	const policyFolderName = dirName.match(/\/[^\/]+\/?$/)?.[0];
+	const policyFolderName = dirName.match(/\/[^/]+\/?$/)?.[0];
 
 	const dir = await readdir(dirName);
 
@@ -17,13 +17,13 @@ async function readPolicyFile(dirName: string): Promise<Policy> {
 		throw new Error(`WARNING: No metadata.json file found for ${policyFolderName}`);
 	}
 
-	const policy: unknown = (
+	const policy = ((
 		await import(`${paths.root}/${dirName}/metadata.json`, {
 			assert: {
 				type: 'json',
 			},
 		})
-	).default;
+	) as { default: unknown }).default;
 
 	const valid = validatePolicy(policy);
 	if (!valid) {

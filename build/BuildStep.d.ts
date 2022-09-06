@@ -6,9 +6,9 @@ declare type PageBuildData<T extends Record<string, unknown>> = {
 	siteData: SiteData,
 } & T;
 
-declare type WebpackPlugins = NonNullable<Configuration["plugins"]>;
+declare type WebpackPlugins = NonNullable<Configuration['plugins']>;
 
-declare interface BuildStep<Data = unknown> {
+export interface BuildStep<Data = unknown> {
 	(src: string, dst: string, data: Data): WebpackPlugins | Promise<WebpackPlugins>,
 }
 
