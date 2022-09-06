@@ -1,55 +1,69 @@
 {
-	"name": "Search Part 15 - Government agency requests for assistance with search warrants",
+	"schemaVersion": "1.0.0",
+	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"id": "u-uewgx",
 			"duration": {
-				"start": "2021-12-07"
+				"on": [
+					"2021-06-14",
+					"2021-06-28"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "Sebastian",
+						"id": "IR-01-21-18135",
+						"responseUrl": "https://fyi.org.nz/request/14795-police-manual-chapters-related-to-intelligence-collection#incoming-59742",
+						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2021-06-14",
+					"released": "2021-06-28",
+					"retrieved": "2022-05-13",
+					"url": "https://fyi.org.nz/request/14795-police-manual-chapters-related-to-intelligence-collection#incoming-59742",
+					"fileUrl": "https://fyi.org.nz/request/14795/response/59742/attach/4/Sebastian%20IR%2001%2021%2018135%20Supporting%20docs%20for%20release.pdf"
 				}
 			],
-			"files": []
+			"files": [
+				{
+					"path": "../../bulk-files/2021-06-28/Sebastian IR 01 21 18135 Supporting docs for release.pdf",
+					"type": "application/pdf",
+					"size": 896703,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"title": "Bulk file",
+							"message": "This file contains multiple documents. \"Government agency requests for assistance with search warrants and production orders\" covers pages 1-27 of the file."
+						}
+					],
+					"documentType": "Policy"
+				}
+			],
+			"id": "u-kwoyj"
 		}
 	],
-	"schemaVersion": "1.1.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
-		}
-	],
-	"pendingRequest": {
-		"requester": "John Walter",
-		"requestUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022",
-		"withholdings": "Undetermined"
-	}
+	"name": "Search Part 15 - Government agency requests for assistance with search warrants",
+	"previousNames": [
+		"Search Part 15 - Government agency requests for assistance with search warrants and production orders"
+	]
 }
