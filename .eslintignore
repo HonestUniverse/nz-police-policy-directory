@@ -1,7 +1,1 @@
 node_modules
-*.*.ts
-*.*.js
-*.*.cjs
-*.*.mjs
-
-data.ts

@@ -26,6 +26,8 @@ import { OIAWithholdingsSummary } from '../schema/OIAWithholdings.js';
 import { validatePolicy } from './validate-policy.js';
 import { generateIdsPolicy } from './generate-ids.js';
 
+import { jsonClone } from './util/json-clone.js';
+
 import * as paths from './util/paths.js';
 
 /**
@@ -56,7 +58,7 @@ async function migrateAll() {
 /**
  * Loop through all policies, and attempt to migrate any with invalid metadata.
  */
-async function migrateDir(path): Promise<number> {
+async function migrateDir(path: string): Promise<number> {
 	const dir = await readdir(path, {
 		withFileTypes: true,
 	});
@@ -78,13 +80,13 @@ async function migrateDir(path): Promise<number> {
 			continue;
 		}
 
-		const policy: unknown = (
+		const policy = ((
 			await import(`../${path}/${entry.name}/metadata.json`, {
 				assert: {
 					type: 'json',
 				},
 			})
-		).default;
+		) as { default: unknown }).default;
 
 		const migratedPolicy = migrate(policy);
 
@@ -237,7 +239,7 @@ const migrations: Record<string, Migration> = {
 					file.accessibility.unwatermarked = {
 						value: 'Unknown',
 						// value: AccessibilityFeatureString.UNKNOWN,
-					}
+					};
 				}
 			}
 		}
@@ -351,11 +353,13 @@ const migrations: Record<string, Migration> = {
 		}
 
 		// @ts-expect-error 'title' is no longer an allowed property
+		// eslint-disable-next-line
 		policy.name = policy.title;
 		// @ts-expect-error 'title' is no longer an allowed property
 		delete policy.title;
 
 		// @ts-expect-error 'previousTitles' is no longer an allowed property
+		// eslint-disable-next-line
 		policy.previousNames = policy.previousTitles;
 		// @ts-expect-error 'previousTitles' is no longer an allowed property
 		delete policy.previousTitles;
@@ -397,7 +401,7 @@ const migrations: Record<string, Migration> = {
 		policy.schemaVersion = '0.4.1';
 
 		const policyWithIds = generateIdsPolicy(policy).policy;
-		for (const [i, version] of Object.entries(policy.versions)) {
+		for (const [i, version] of policy.versions.entries()) {
 			version.id = policyWithIds.versions[i].id;
 			if (version.name && /\bunnamed version\b/i.test(version.name)) {
 				delete version.name;
@@ -451,8 +455,10 @@ const migrations: Record<string, Migration> = {
 			const requestUrl = prov.oiaRequest?.responseUrl?.replace(/(^https:\/\/fyi.org.nz\/request\/\d+(-\w+)+)#incoming-\d+$/, '$1');
 
 			if (requestUrl) {
-				const newProv = JSON.parse(JSON.stringify(prov));
-				newProv.oiaRequest.requestUrl = requestUrl;
+				const newProv = jsonClone(prov);
+				if (newProv.oiaRequest) {
+					newProv.oiaRequest.requestUrl = requestUrl;
+				}
 
 				return newProv;
 			} else {
@@ -476,6 +482,6 @@ const migrations: Record<string, Migration> = {
 			}
 		}
 	},
-}
+};
 
 migrateAll();
