@@ -6,9 +6,9 @@ declare type PageBuildData<T extends Record<string, unknown>> = {
 	siteData: SiteData,
 } & T;
 
-declare type WebpackPlugins = NonNullable<Configuration["plugins"]>;
+declare type WebpackPlugins = NonNullable<Configuration['plugins']>;
 
-declare interface BuildStep<Data = unknown> {
+export interface BuildStep<Data = unknown> {
 	(src: string, dst: string, data: Data): WebpackPlugins | Promise<WebpackPlugins>,
 }
 
@@ -21,3 +21,6 @@ export type DirectoryBuildStep = BuildStep<PageBuildData<{
 export type ContentBuildStep = BuildStep<PageBuildData<{
 	directory: Record<string, Policy>,
 }>>;
+export type RedirectBuildStep = BuildStep<{
+	directory: Record<string, Policy>,
+}>;
