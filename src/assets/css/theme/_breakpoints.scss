@@ -29,9 +29,9 @@ $breakpoints: (
 /// Use a media query for widths < the specified size. Expects value in `px` or as a string label e.g. `"m"`
 /// @param {string | length} $to - A size label or size to use for the media query
 @mixin bp-to($to) {
-	$toVal: map.get($breakpoints, $to) - 1px;
+	$toVal: map.get($breakpoints, $to) - 0.01px;
 	@if (not $toVal) {
-		$toVal: $to - 1px;
+		$toVal: $to - 0.01px;
 	}
 
 	@media (max-width: $toVal) {
