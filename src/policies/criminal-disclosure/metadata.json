@@ -68,5 +68,10 @@
 			],
 			"id": "u-jzzse"
 		}
-	]
+	],
+	"pendingRequest": {
+		"requester": "I Brown",
+		"requestUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure",
+		"withholdings": "Undetermined"
+	}
 }
