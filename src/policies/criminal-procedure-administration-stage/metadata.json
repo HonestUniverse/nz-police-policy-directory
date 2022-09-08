@@ -66,5 +66,10 @@
 		}
 	],
 	"schemaVersion": "1.1.0",
-	"name": "Criminal procedure - Administration stage"
+	"name": "Criminal procedure - Administration stage",
+	"pendingRequest": {
+		"requester": "I Brown",
+		"requestUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure",
+		"withholdings": "Undetermined"
+	}
 }
