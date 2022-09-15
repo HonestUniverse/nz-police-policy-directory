@@ -1,6 +1,9 @@
 <%##
 	locals: {
 		withholdings: OIAWithholdings,
+		options?: {
+			expandWithholdings?: boolean,
+		},
 	}
 %>
 
@@ -61,12 +64,14 @@
 		</div>
 	<% } else { %>
 		<%# Information was withheld %>
-		<details class="provenance__withholdings provenance__withholdings--fail">
-			<summary class="provenance__withholdings__summary">
+		<<%- locals.options?.expandWithholdings ? 'div' : 'details' %> class="provenance__withholdings provenance__withholdings--fail">
+			<<%- locals.options?.expandWithholdings ? 'div' : 'summary' %> class="provenance__withholdings__summary">
 				<span class="provenance__withholdings__summary-icon" aria-hidden="true"></span>
 				<span class="provenance__withholdings__summary-text">Information was withheld</span>
-				<span class="provenance__withholdings__summary-expand-icon" aria-hidden="true"></span>
-			</summary>
+				<% if (!locals.options?.expandWithholdings) { %>
+					<span class="provenance__withholdings__summary-expand-icon" aria-hidden="true"></span>
+				<% } %>
+			</<%- locals.options?.expandWithholdings ? 'div' : 'summary' %>>
 			<div class="provenance__withholdings__details">
 				<dl class="provenance__withholdings__list">
 					<% Object.entries(withholdings).forEach(([key, val]) => { %>
@@ -83,6 +88,6 @@
 					<% }) %>
 				</dl>
 			</div>
-		</details>
+		</<%- locals.options?.expandWithholdings ? 'div' : 'details' %>>
 	<% } %>
 <% } %>
