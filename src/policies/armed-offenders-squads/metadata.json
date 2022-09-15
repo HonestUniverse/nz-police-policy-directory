@@ -1,0 +1,91 @@
+{
+	"schemaVersion": "1.2.0",
+	"type": "Police Manual chapter",
+	"name": "Armed Offenders Squads",
+	"previousNames": [
+		"Armed Offenders Squad (AOS)"
+	],
+	"versions": [
+		{
+			"id": "u-jyssj",
+			"duration": {
+				"on": [
+					"2022-09-15"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Scott",
+						"id": "IR-01-22-20909",
+						"requestUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals",
+						"responseUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals#incoming-77362",
+						"withholdings": {
+							"6(c)": "Information has been withheld on pages 3–8"
+						}
+					},
+					"released": "2022-09-15",
+					"url": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals#incoming-77362",
+					"fileUrl": "https://fyi.org.nz/request/19946/response/77362/attach/8/Scott%20IR%2001%2022%2020909%20response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-09-15/Scott IR 01 22 20909 response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 3,
+					"size": 789221,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are some characters missing in the table of contents."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-09-15/Scott IR 01 22 20909 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 789221,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
+		}
+	]
+}
