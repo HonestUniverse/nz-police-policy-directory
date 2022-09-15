@@ -1,10 +1,13 @@
 {
 	"schemaVersion": "1.2.0",
 	"type": "Police Manual chapter",
-	"name": "Special Tactics Group (STG)",
+	"name": "Armed Offenders Squads",
+	"previousNames": [
+		"Armed Offenders Squad (AOS)"
+	],
 	"versions": [
 		{
-			"id": "u-pziea",
+			"id": "u-jyssj",
 			"duration": {
 				"on": [
 					"2022-09-15"
@@ -20,7 +23,7 @@
 						"requestUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals",
 						"responseUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals#incoming-77362",
 						"withholdings": {
-							"6(c)": "Information has been withheld on pages 3–9"
+							"6(c)": "Information has been withheld on pages 3–8"
 						}
 					},
 					"released": "2022-09-15",
@@ -33,7 +36,7 @@
 					"path": "../../bulk-files/2022-09-15/Scott IR 01 22 20909 response.pdf",
 					"type": "application/pdf",
 					"documentType": "Policy",
-					"startingPage": 11,
+					"startingPage": 3,
 					"size": 789221,
 					"licence": {
 						"name": "None"
@@ -45,7 +48,7 @@
 							"text-based": {
 								"value": "Partial",
 								"notes": [
-									"Pages 5 and 6 are images of text."
+									"There are some characters missing in the table of contents."
 								]
 							},
 							"semantics": {
