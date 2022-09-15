@@ -34,6 +34,22 @@
 			"source": "NZ Police",
 			"method": "Released under the OIA",
 			"oiaRequest": {
+				"requester": "Scott",
+				"id": "IR-01-22-20909",
+				"requestUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals",
+				"responseUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals#incoming-77362",
+				"withholdings": {
+					"6(c)": "The document was withheld in full"
+				}
+			},
+			"refused": "2022-09-15",
+			"url": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals#incoming-77362",
+			"fileUrl": "https://fyi.org.nz/request/19946/response/77362/attach/8/Scott%20IR%2001%2022%2020909%20response.pdf"
+		},
+		{
+			"source": "NZ Police",
+			"method": "Released under the OIA",
+			"oiaRequest": {
 				"requester": "Mark Hanna",
 				"id": "IR-01-22-11586",
 				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
@@ -46,11 +62,5 @@
 			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
 			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
 		}
-	],
-	"pendingRequest": {
-		"id": "IR-01-22-20909",
-		"requester": "Scott",
-		"requestUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals",
-		"withholdings": "Undetermined"
-	}
+	]
 }
