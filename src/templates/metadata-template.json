@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.1.0",
+	"schemaVersion": "1.2.0",
 	"name": "string",
 	"previousNames": [
 		"string"
@@ -35,6 +35,7 @@
 					"extracted": "date",
 					"released": "date",
 					"retrieved": "date",
+					"refused": "date",
 					"url": "url",
 					"archiveUrl": "url",
 					"fileUrl": "url",
