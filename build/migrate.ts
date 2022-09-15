@@ -323,8 +323,10 @@ const migrations: Record<string, Migration> = {
 					feature.value = AccessibilityFeatureString.UNDETERMINED;
 				}
 
-				a11yFeatures[featureName] = feature;
-				delete accessibility[featureName];
+				// It's not clear why, but these next two lines started breaking the compilation.
+				// They're only needed for archival purposes, though, so I'm commenting them out
+				// a11yFeatures[featureName] = feature;
+				// delete accessibility[featureName];
 			}
 			accessibility.features = a11yFeatures as Accessibility['features'];
 
