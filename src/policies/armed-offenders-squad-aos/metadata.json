@@ -1,56 +1,91 @@
 {
-	"name": "Armed Offenders Squad (AOS)",
+	"schemaVersion": "1.1.0",
+	"type": "Police Manual chapter",
+	"name": "Armed Offenders Squads",
+	"previousNames": [
+		"Armed Offenders Squad (AOS)"
+	],
 	"versions": [
 		{
 			"id": "u-jyssj",
 			"duration": {
-				"start": "2017-07-18"
+				"on": [
+					"2022-09-15"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "Scott",
+						"id": "IR-01-22-20909",
+						"requestUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals",
+						"responseUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals#incoming-77362",
+						"withholdings": {
+							"6(c)": "Information has been withheld on pages 3–8"
+						}
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2022-09-15",
+					"url": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals#incoming-77362",
+					"fileUrl": "https://fyi.org.nz/request/19946/response/77362/attach/8/Scott%20IR%2001%2022%2020909%20response.pdf"
 				}
 			],
-			"files": []
+			"files": [
+				{
+					"path": "../../bulk-files/2022-09-15/Scott IR 01 22 20909 response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 3,
+					"size": 789221,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are some characters missing in the table of contents."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-09-15/Scott IR 01 22 20909 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 789221,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
 		}
-	],
-	"schemaVersion": "1.1.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
-		}
-	],
-	"pendingRequest": {
-		"id": "IR-01-22-20909",
-		"requester": "Scott",
-		"requestUrl": "https://fyi.org.nz/request/19946-armed-offenders-squad-special-tactics-group-and-counter-terrorism-manuals",
-		"withholdings": "Undetermined"
-	}
+	]
 }
