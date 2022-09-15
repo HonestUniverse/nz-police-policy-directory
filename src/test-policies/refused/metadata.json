@@ -1,0 +1,22 @@
+{
+	"type": "General Instructions",
+	"obsolete": true,
+	"schemaVersion": "1.1.0",
+	"name": "Refused Policy",
+	"provenance": [
+		{
+			"source": "NZ Police",
+			"method": "Released under the OIA",
+			"oiaRequest": {
+				"requester": "Test Requester",
+				"requestUrl": "https://policepolicy.nz#request",
+				"responseUrl": "https://policepolicy.nz#response",
+				"withholdings": {
+					"6(c)": "The document was withheld in full"
+				}
+			},
+			"refused": "2022-09-15"
+		}
+	],
+	"versions": []
+}

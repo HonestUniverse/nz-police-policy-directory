@@ -43,6 +43,10 @@
 			"description": "If the information was retrieved or released after its initial publication, the date on which it was retrieved",
 			"$ref": "date-partial.schema.json"
 		},
+		"refused": {
+			"description": "The date on which the release of the information was refused",
+			"$ref": "date-partial.schema.json"
+		},
 		"url": {
 			"description": "The URL of the page where the information was retrieved from",
 			"type": "string",
@@ -70,11 +74,17 @@
 	],
 	"allOf": [
 		{
-			"anyOf": [
-				{ "required": ["published"] },
-				{ "required": ["extracted"] },
-				{ "required": ["released"] },
-				{ "required": ["retrieved"] }
+			"$comment": "The \"refused\" property must only be used if none of the others are relevant",
+			"oneOf": [
+				{
+					"anyOf": [
+						{ "required": ["published"] },
+						{ "required": ["extracted"] },
+						{ "required": ["released"] },
+						{ "required": ["retrieved"] }
+					]
+				},
+				{ "required": ["refused"] }
 			]
 		},
 		{
