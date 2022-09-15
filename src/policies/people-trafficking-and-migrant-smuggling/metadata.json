@@ -1,50 +1,97 @@
 {
+	"schemaVersion": "1.1.0",
+	"type": "Police Manual chapter",
 	"name": "People trafficking and migrant smuggling",
 	"versions": [
 		{
 			"id": "u-nucqw",
 			"duration": {
-				"start": "2015-06-24"
+				"on": [
+					"2022-09-14"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "Jason Renes",
+						"id": "IR-01-22-21197",
+						"requestUrl": "https://fyi.org.nz/request/19965-police-manual-chapters?nocache=incoming-77299#incoming-77299",
+						"responseUrl": "https://fyi.org.nz/request/19965-police-manual-chapters#incoming-77299",
+						"withholdings": {
+							"6(c)": "Information withheld on pages 10 and 16 may have been withheld for this reason. No specific reason was given.",
+							"6(d)": "Information withheld on pages 10 and 16 may have been withheld for this reason. No specific reason was given."
+						}
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2022-09-14",
+					"retrieved": "2022-09-15",
+					"url": "https://fyi.org.nz/request/19965-police-manual-chapters?nocache=incoming-77299#incoming-77299",
+					"fileUrl": "https://fyi.org.nz/request/19965/response/77299/attach/8/Renes%20Jason%20IR%2001%2022%2021197%20Response.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "1.1.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "../../bulk-files/2022-09-14/Renes Jason IR 01 22 21197 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 41,
+					"size": 1382024,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing in the table of contents."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-09-14/Renes Jason IR 01 22 21197 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 1382024,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "warning",
+					"title": "Under review",
+					"message": "<p>In their response, Police told the requester:</p><blockquote>Please note that the Police manual chapter 'People trafficking and migrant smuggling' is cuurrently under review, due to the introduction of the Maritime Powers Act 2022.</blockquote>"
+				}
+			]
 		}
 	]
 }
