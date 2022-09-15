@@ -109,15 +109,15 @@
 				const provenance = mainFile?.provenance || latestVersion?.provenance || policy.provenance;
 
 				function getLatestDate(dateType, provenance) {
-					const dates = provenance.filter(
+					const dates = provenance?.filter(
 						(prov) => prov[dateType]
-					).map(
+					)?.map(
 						(prov) => new Date(prov[dateType])
-					).sort(
+					)?.sort(
 						(a, b) => b - a
 					)
 
-					return dates[0];
+					return dates?.[0];
 				}
 
 				const publishedDate = getLatestDate('published', provenance);
