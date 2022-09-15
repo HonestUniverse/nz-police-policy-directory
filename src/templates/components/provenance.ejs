@@ -8,6 +8,20 @@
 	}
 %>
 
+<%
+	const method = (() => {
+		if (provenance.refused) {
+			if (provenance.method === 'Released under the OIA') {
+				return 'Requested under the OIA';
+			} else {
+				return provenance.method;
+			}
+		} else {
+			return provenance.method;
+		}
+	})();
+%>
+
 <div class="provenance">
 	<%
 		const withholdings = provenance.withholdings || provenance.oiaRequest?.withholdings;
@@ -21,20 +35,23 @@
 				return ['Released', provenance.released];
 			} else if (provenance.retrieved) {
 				return ['Retrieved', provenance.retrieved];
+			} else if (provenance.refused) {
+				return ['Refused', provenance.refused];
 			}
 		})();
 	%>
 
-	<% if (provenance.method) { %>
+	<% if (method) { %>
 		<div class="provenance__source">
 			<% if (provenance.url) { %>
 				<a
 					<%- include('../helpers/href-with-target', { href: provenance.url }); %>
 					class="provenance__source__link"
-				><%= provenance.method %></a>
+				><%= method %></a>
 			<% } else { %>
-				<%= provenance.method %>
+				<%= method %>
 			<% } %>
+
 			<% if (provenance.source) { %>
 				by <%= provenance.source %>
 			<% } %>
@@ -49,7 +66,12 @@
 		<% if (withholdings) { %>
 			<% if (!(locals.options?.omitEmptyWithholdings && withholdings === 'None')) { %>
 				<div class="provenance__withholdings">
-					<%- include('../components/withholdings', { withholdings }) %>
+					<%- include('../components/withholdings', {
+						withholdings,
+						options: {
+							expandWithholdings: !!provenance.refused,
+						},
+					}) %>
 				</div>
 			<% } %>
 		<% } %>
@@ -66,7 +88,12 @@
 
 		<% if (withholdings) { %>
 			<div class="provenance__withholdings">
-				<%- include('../components/withholdings', { withholdings }) %>
+				<%- include('../components/withholdings', {
+					withholdings,
+					options: {
+						expandWithholdings: !!provenance.refused,
+					},
+				}) %>
 			</div>
 		<% } %>
 	<% } %>
