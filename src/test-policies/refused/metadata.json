@@ -1,7 +1,7 @@
 {
 	"type": "General Instructions",
 	"obsolete": true,
-	"schemaVersion": "1.1.0",
+	"schemaVersion": "1.2.0",
 	"name": "Refused Policy",
 	"provenance": [
 		{
