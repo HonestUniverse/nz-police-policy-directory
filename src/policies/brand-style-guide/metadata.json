@@ -1,0 +1,90 @@
+{
+	"schemaVersion": "1.1.0",
+	"name": "Brand Style Guide",
+	"type": "Guidelines",
+	"versions": [
+		{
+			"duration": {
+				"start": {
+					"year": 2017,
+					"month": 12
+				},
+				"on": [
+					"2022-09-15"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Tommi Joyce",
+						"id": "IR-01-22-22255",
+						"requestUrl": "https://fyi.org.nz/request/20050-new-zealand-police-visual-identity-guidelines",
+						"responseUrl": "https://fyi.org.nz/request/20050-new-zealand-police-visual-identity-guidelines#incoming-77363",
+						"withholdings": "None"
+					},
+					"released": "2022-09-15",
+					"url": "https://fyi.org.nz/request/20050-new-zealand-police-visual-identity-guidelines",
+					"fileUrl": "https://fyi.org.nz/request/20050/response/77363/attach/8/Joyce%20Tommi%20IR%2001%2022%2022255%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-09-15/Joyce Tommi IR 01 22 22255 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 7427942,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2022-09-15/Joyce Tommi IR 01 22 22255 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 7427942,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-atoby"
+		}
+	]
+}
