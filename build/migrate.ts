@@ -482,6 +482,17 @@ const migrations: Record<string, Migration> = {
 			}
 		}
 	},
+
+	/**
+	 * Changes in v1.2.0
+	 *
+	 * Added `Provenance['refused']?: DatePartial`
+	 *
+	 * This migration just increments the schema version number.
+	 */
+	['1.2.0']: function (policy: Policy): void {
+		policy.schemaVersion = '1.2.0';
+	},
 };
 
 migrateAll();
