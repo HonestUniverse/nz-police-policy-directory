@@ -58,7 +58,8 @@
 					"licence": {
 						"name": "None"
 					},
-					"original": true,
+					"original": false,
+					"modifications": ["The requester's contact details have been removed."],
 					"accessibility": {
 						"rating": "Poor",
 						"features": {
