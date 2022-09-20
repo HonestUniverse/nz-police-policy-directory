@@ -82,6 +82,87 @@
 				}
 			],
 			"id": "u-qxzcq"
+		},
+		{
+			"duration": {
+				"on": [
+					"2020-06-17"
+				],
+				"ended": true
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Tim",
+						"id": "IR-01-20-12379",
+						"withholdings": {
+							"Out of scope": "Pages 1–15, parts of pages 16 and 17, and page 18–24 were withheld."
+						}
+					},
+					"released": "2020-06-17",
+					"retrieved": "2022-09-20"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2020-06-17/Tim IR-01-20-12379 release docs - redacted.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 4,
+					"size": 584589,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only parts of pages 16 and 17 are included."
+					},
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2020-06-17/Tim IR-01-20-12379 release docs - redacted.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 584589,
+					"licence": {
+						"name": "None"
+					},
+					"original": false,
+					"modifications": ["The requester's contact details have been removed."],
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-fnihp"
 		}
 	],
 	"name": "Telecommunication investigations",
