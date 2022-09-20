@@ -6,8 +6,96 @@
 		{
 			"duration": {
 				"on": [
-					"2016-07-07"
+					"2022-09-20"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "I Brown",
+						"id": "IR-01-22-27114",
+						"requestUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure",
+						"responseUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure#incoming-77495",
+						"withholdings": "None"
+					},
+					"extracted": "2022-09-09",
+					"released": "2022-09-20",
+					"retrieved": "2022-09-20",
+					"url": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure#incoming-77495",
+					"fileUrl": "https://fyi.org.nz/request/20480/response/77495/attach/8/i%20Brown%20IR%2001%2022%2027114%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-09-20/i Brown IR 01 22 27114 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 142,
+					"size": 8841556,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are images of text on pages 7, 9, 16, 18, 22, 23, 34, and 66."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-09-20/i Brown IR 01 22 27114 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 8841556,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"The sign-off is an image of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-ivugj"
+		},
+		{
+			"duration": {
+				"on": [
+					"2016-07-07"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
