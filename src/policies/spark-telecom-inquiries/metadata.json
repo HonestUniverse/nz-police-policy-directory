@@ -1,0 +1,102 @@
+{
+	"schemaVersion": "1.2.0",
+	"name": "Spark (Telecom) inquiries",
+	"type": "Police Manual chapter",
+	"obsolete": true,
+	"provenance": [
+		{
+			"source": "NZ Police",
+			"method": "Released under the OIA",
+			"oiaRequest": {
+				"requester": "Tim",
+				"id": "IR-01-20-12379",
+				"withholdings": "None"
+			},
+			"released": "2020-06-17",
+			"retrieved": "2022-09-20"
+		}
+	],
+	"versions": [
+		{
+			"duration": {
+				"ended": true,
+				"on": [
+					"2014-11-26"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Alex Harris",
+						"id": "12/1658/16",
+						"requestUrl": "https://fyi.org.nz/request/1069-telecom-inquiries-and-vodafone-protocol-police-manual-chapters",
+						"responseUrl": "https://fyi.org.nz/request/1069-telecom-inquiries-and-vodafone-protocol-police-manual-chapters#incoming-7303",
+						"withholdings": {
+							"6(c)": "Information has been withheld on page 1",
+							"9(2)(a)": "Information has been withheld on page 1."
+						}
+					},
+					"released": "2014-11-26",
+					"retrieved": "2022-09-20",
+					"url": "https://fyi.org.nz/request/1069-telecom-inquiries-and-vodafone-protocol-police-manual-chapters#incoming-7303",
+					"fileUrl": "https://fyi.org.nz/request/1069/response/7303/attach/3/Final%20Vodafone%20protocol%20redacted.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2014-11-26/Final Spark telecom inquires manual 2014 redacted.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 110686,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2014-11-26/Final Alex Harris response Nov 2014.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 39038,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-ecgoa"
+		}
+	]
+}
