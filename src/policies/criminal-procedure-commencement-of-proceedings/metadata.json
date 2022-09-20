@@ -1,55 +1,94 @@
 {
+	"schemaVersion": "1.2.0",
+	"type": "Police Manual chapter",
 	"name": "Criminal procedure - Commencement of proceedings ",
 	"versions": [
 		{
 			"id": "u-xazuu",
 			"duration": {
-				"start": "2018-08-16"
+				"on": [
+					"2022-09-20"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "I Brown",
+						"id": "IR-01-22-27114",
+						"requestUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure",
+						"responseUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure#incoming-77495",
+						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2022-09-09",
+					"released": "2022-09-20",
+					"retrieved": "2022-09-20",
+					"url": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure#incoming-77495",
+					"fileUrl": "https://fyi.org.nz/request/20480/response/77495/attach/8/i%20Brown%20IR%2001%2022%2027114%20Response.pdf"
 				}
 			],
-			"files": []
+			"files": [
+				{
+					"path": "../../bulk-files/2022-09-20/i Brown IR 01 22 27114 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 36,
+					"size": 8841556,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There is an image of text on page 1."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-09-20/i Brown IR 01 22 27114 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 8841556,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"The sign-off is an image of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
 		}
-	],
-	"schemaVersion": "1.2.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
-		}
-	],
-	"pendingRequest": {
-		"requester": "I Brown",
-		"requestUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure",
-		"withholdings": "Undetermined"
-	}
+	]
 }
