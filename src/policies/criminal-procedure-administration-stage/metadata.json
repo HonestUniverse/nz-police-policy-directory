@@ -1,11 +1,101 @@
 {
+	"schemaVersion": "1.2.0",
+	"name": "Criminal procedure - Administration stage",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"duration": {
 				"on": [
-					"2017-01-04"
+					"2022-09-20"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "I Brown",
+						"id": "IR-01-22-27114",
+						"requestUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure",
+						"responseUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure#incoming-77495",
+						"withholdings": "None"
+					},
+					"extracted": "2022-09-09",
+					"released": "2022-09-20",
+					"retrieved": "2022-09-20",
+					"url": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure#incoming-77495",
+					"fileUrl": "https://fyi.org.nz/request/20480/response/77495/attach/8/i%20Brown%20IR%2001%2022%2027114%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-09-20/i Brown IR 01 22 27114 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 8841556,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are images of text on pages 1 and 32."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-09-20/i Brown IR 01 22 27114 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 8841556,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"The sign-off is an image of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-efjfk"
+		},
+		{
+			"duration": {
+				"on": [
+					"2017-01-04"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -64,12 +154,5 @@
 			],
 			"id": "u-vxijv"
 		}
-	],
-	"schemaVersion": "1.2.0",
-	"name": "Criminal procedure - Administration stage",
-	"pendingRequest": {
-		"requester": "I Brown",
-		"requestUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure",
-		"withholdings": "Undetermined"
-	}
+	]
 }

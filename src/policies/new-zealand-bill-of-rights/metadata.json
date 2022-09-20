@@ -6,8 +6,83 @@
 		{
 			"duration": {
 				"on": [
-					"2016-06-27"
+					"2020-06-17"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Tim",
+						"id": "IR-01-20-12379",
+						"withholdings": "None"
+					},
+					"released": "2020-06-17",
+					"retrieved": "2022-09-20"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2020-06-17/Tim IR-01-20-12379 release docs - redacted.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 81,
+					"size": 584589,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2020-06-17/Tim IR-01-20-12379 release docs - redacted.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 584589,
+					"licence": {
+						"name": "None"
+					},
+					"original": false,
+					"modifications": ["The requester's contact details have been removed."],
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-gzbnp"
+		},
+		{
+			"duration": {
+				"on": [
+					"2016-06-27"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
