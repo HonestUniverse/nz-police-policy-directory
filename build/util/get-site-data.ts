@@ -11,6 +11,7 @@ export type SiteData = {
 	paths: {
 		policies: string,
 	},
+	domain: string,
 	navigation: {
 		header: NavigationItem[],
 		footer?: NavigationItem[],
@@ -43,6 +44,7 @@ export function getSiteData(): SiteData {
 		paths: {
 			policies: prepareNavPath(paths.policiesDst),
 		},
+		domain: 'policepolicy.nz',
 		navigation: {
 			header: [
 				{
