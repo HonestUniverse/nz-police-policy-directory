@@ -1,0 +1,103 @@
+{
+	"schemaVersion": "1.2.0",
+	"name": "Vodafone New Zealand Limited",
+	"type": "Police Manual chapter",
+	"obsolete": true,
+	"provenance": [
+		{
+			"source": "NZ Police",
+			"method": "Released under the OIA",
+			"oiaRequest": {
+				"requester": "Tim",
+				"id": "IR-01-20-12379",
+				"withholdings": "None"
+			},
+			"released": "2020-06-17",
+			"retrieved": "2022-09-20"
+		}
+	],
+	"versions": [
+		{
+			"duration": {
+				"ended": true,
+				"on": [
+					"2014-11-26"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Alex Harris",
+						"id": "12/1658/16",
+						"requestUrl": "https://fyi.org.nz/request/1069-telecom-inquiries-and-vodafone-protocol-police-manual-chapters",
+						"responseUrl": "https://fyi.org.nz/request/1069-telecom-inquiries-and-vodafone-protocol-police-manual-chapters#incoming-7303",
+						"withholdings": {
+							"6(c)": "Information has been withheld on pages 3, 8, and 11.",
+							"9(2)(a)": "Information has been withheld on pages 9 and 16–21.",
+							"9(2)(b)(ii)": "Information has been withheld on page 4."
+						}
+					},
+					"released": "2014-11-26",
+					"retrieved": "2022-09-20",
+					"url": "https://fyi.org.nz/request/1069-telecom-inquiries-and-vodafone-protocol-police-manual-chapters#incoming-7303",
+					"fileUrl": "https://fyi.org.nz/request/1069/response/7303/attach/3/Final%20Vodafone%20protocol%20redacted.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2014-11-26/Final Vodafone protocol redacted.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 334930,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2014-11-26/Final Alex Harris response Nov 2014.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 39038,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-huahe"
+		}
+	]
+}
