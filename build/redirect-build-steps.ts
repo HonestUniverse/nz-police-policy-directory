@@ -22,12 +22,20 @@ export const redirectBuildSteps: Record<string, RedirectBuildStep> = {
 		const { directory } = buildData;
 
 		const oldPolicyNames: Record<string, string[]> = {};
+		const oldPolicyIds: Record<string, Record<string, string[]>> = {};
 		for (const [policyName, policy] of Object.entries(directory)) {
 			if (policy.previousNames) {
 				oldPolicyNames[policyName] = policy.previousNames.concat();
 			}
+			for (const version of policy.versions) {
+				if (version.previousIds) {
+					oldPolicyIds[policyName] = oldPolicyIds[policyName] ?? {};
+					oldPolicyIds[policyName][version.id] = version.previousIds.concat();
+				}
+			}
 		}
-		const allRedirects = Object.entries(oldPolicyNames).map(([currentName, oldNames]) => {
+
+		const nameRedirects = Object.entries(oldPolicyNames).flatMap(([currentName, oldNames]) => {
 			const policyRedirects: Redirect[] = [];
 
 			for (const oldName of oldNames) {
@@ -38,18 +46,38 @@ export const redirectBuildSteps: Record<string, RedirectBuildStep> = {
 				});
 			}
 
-			const policyRedirectsString = policyRedirects.map((redirect) => {
-				const selfRedirect = `${redirect.from} ${redirect.to} ${redirect.code}`;
-				const ancestorsRedirect = `${redirect.from}/* ${redirect.to}/:splat ${redirect.code}`;
+			return policyRedirects;
+		});
 
-				return `${selfRedirect}\n${ancestorsRedirect}`;
-			}).join('\n');
+		const idRedirects = Object.entries(oldPolicyIds).flatMap(([currentName, idRedirects]) => {
+			const policyRedirects: Redirect[] = [];
 
-			return policyRedirectsString;
-		}).join('\n');
+			for (const [id, oldIds] of Object.entries(idRedirects)) {
+				for (const oldId of oldIds) {
+					policyRedirects.push({
+						from: makeRootRelative(`${paths.policiesDst}/${toUrlSegment(currentName)}/${oldId}`),
+						to: makeRootRelative(`${paths.policiesDst}/${toUrlSegment(currentName)}/${id}`),
+						code: HttpStatusCode.MOVED_PERMANENTLY,
+					});
+				}
+			}
+
+			return policyRedirects;
+		});
+
+		const allRedirects = [...nameRedirects, ...idRedirects];
+
+		const allRedirectStrings = allRedirects.map((redirect) => {
+			const selfRedirect = `${redirect.from} ${redirect.to} ${redirect.code}`;
+			const ancestorsRedirect = `${redirect.from}/* ${redirect.to}/:splat ${redirect.code}`;
+
+			return `${selfRedirect}\n${ancestorsRedirect}`;
+		});
+
+		const allRedirectsString = allRedirectStrings.join('\n');
 
 		return [
-			new WriteFilePlugin('_redirects', allRedirects),
+			new WriteFilePlugin('_redirects', allRedirectsString),
 		];
 	},
 };
