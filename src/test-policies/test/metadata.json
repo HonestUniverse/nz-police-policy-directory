@@ -221,7 +221,10 @@
 					"message": "This is a test notice on a version"
 				}
 			],
-			"id": "u-jdjqk"
+			"id": "u-jdjqk",
+			"previousIds": [
+				"u-aaaaa"
+			]
 		},
 		{
 			"name": "3.0",
