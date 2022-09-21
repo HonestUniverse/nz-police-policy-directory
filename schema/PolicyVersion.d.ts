@@ -7,6 +7,7 @@ export type Version = {
 	isFirst?: boolean,
 	name?: string,
 	id: string,
+	previousIds?: string[],
 	duration: PolicyVersionDuration,
 	provenance: Provenance[],
 	files: File[],
