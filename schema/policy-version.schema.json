@@ -15,6 +15,13 @@
 			"description": "A generated ID string used to construct a unique URL for versions without a name",
 			"type": "string"
 		},
+		"previousIds": {
+			"description": "A list of generated ID strings that that should redirect to this version, e.g. if two versions were merged",
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
 		"duration": {
 			"description": "When this version of the policy was in effect",
 			"$ref": "policy-version-duration.schema.json"
