@@ -495,6 +495,17 @@ const migrations: Record<string, Migration> = {
 	['1.2.0']: function (policy: Policy): void {
 		policy.schemaVersion = '1.2.0';
 	},
+
+	/**
+	 * Changes in v1.3.0
+	 *
+	 * Added `Version['previousIds']?: string[]`
+	 *
+	 * This migration just increments the schema version number.
+	 */
+	['1.3.0']: function (policy: Policy): void {
+		policy.schemaVersion = '1.3.0';
+	},
 };
 
 migrateAll();
