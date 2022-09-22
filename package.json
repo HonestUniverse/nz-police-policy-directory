@@ -30,7 +30,7 @@
 		"stylelint-config-recommended-scss": "^6.0.0",
 		"template-ejs-loader": "^0.9.1",
 		"ts-loader": "^9.2.8",
-		"ts-node": "^10.7.0",
+		"ts-node": "^10.9.1",
 		"typescript": "^4.6.3",
 		"webpack": "^5.72.0",
 		"webpack-cli": "^4.9.2"
