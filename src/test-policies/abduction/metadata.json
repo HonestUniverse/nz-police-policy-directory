@@ -1,0 +1,84 @@
+{
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
+	"name": "Abduction",
+	"versions": [
+		{
+			"id": "u-gpcpx",
+			"duration": {
+				"on": [
+					"2022-09-14"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Jason Renes",
+						"id": "IR-01-22-21197",
+						"requestUrl": "https://fyi.org.nz/request/19965-police-manual-chapters?nocache=incoming-77299#incoming-77299",
+						"responseUrl": "https://fyi.org.nz/request/19965-police-manual-chapters#incoming-77299",
+						"withholdings": "None"
+					},
+					"released": "2022-09-14",
+					"retrieved": "2022-09-15",
+					"url": "https://fyi.org.nz/request/19965-police-manual-chapters?nocache=incoming-77299#incoming-77299",
+					"fileUrl": "https://fyi.org.nz/request/19965/response/77299/attach/8/Renes%20Jason%20IR%2001%2022%2021197%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-09-14/Renes Jason IR 01 22 21197 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 93,
+					"size": 1382024,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-09-14/Renes Jason IR 01 22 21197 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 1382024,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
+		}
+	]
+}

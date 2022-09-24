@@ -17,11 +17,11 @@ The project has a Jasmine test suite, with tests in the `spec` folder.
 
 ## npm scripts
 
-`build` - Run a production build.
+`build` - Build the static site, using the contents of the `policies` folder.
 
-`watch` - Watch assets for changes and rebuild. Useful when editing templates or styles, but content changes via JSON files will not be reflected.
+`watch` - Watch assets for changes and build the static site, using the contents of the `policies` folder. Useful when editing templates or styles, but content changes via JSON files will not be reflected.
 
-`buildTest` - Run a production build, but only include the contents of the `test-policies` folder.
+`buildTest` - Same as `build`, but only includes the contents of the `test-policies` folder.
 
 `watchTest` - Same as `watch`, but only includes the contents of the `test-policies` folder.
 
@@ -39,20 +39,18 @@ The project has a Jasmine test suite, with tests in the `spec` folder.
 
 ## Branching strategy
 
-The main development branch is `dev`. Small changes can be made here directly, but features should generally be worked on in a branch off `dev`.
+New feature branches should be created off `main` as necessary, and merged via pull request.
 
-Parallel to `dev` is the `content` branch. This is where any new content not needed for test cases should be added. The `content` branch should never be merged to `dev`, but changes from `dev` need to be merged through `content` on their way to deployment. We have organised things this way to keep the build time on `dev` minimal by reducing the amount of content it has to build.
+Any time the schema is updated, a new tag should be created with the form `schema-x.y.z` and a new migration should be created. See [Schema migrations](#schema-migrations) for details on creating and running a schema migration.
 
 Pushes to the `staging` and `main` branches will automatically trigger deployments to the staging and main websites via Cloudflare Pages.
 
+No work should be done directly on the `staging` branch. If you need to use it to preview a build, point it to a commit on your feature branch and run a force push.
+
 ## Schema migrations
 
-If any breaking changes are made to the schema, a migration is likely necessary to update existing JSON to match the new version. Migrations can be added to `build/migrate.ts`.
+If any changes are made to the schema, you should create a migration to update existing JSON to match the new version. Migrations can be created in `build/migrate.ts`. Every schema should update the value of the `schemaVersion` property to match the latest version.
 
-In order to preserve the separation of `dev` and `content` branches, migrations should be created and run in these steps:
+Breaking changes will also likely require you to make modifications to many JSON files, such as restructuring some existing data.
 
-1. Write the migration in `dev` or a branch off `dev`, but don't commit migrated JSON files.
-2. Once working correctly, merge the migration only to `dev` and then to `content`.
-3. Run the migration on `content` and commit the migrated JSON files.
-4. Run the migration on `dev` and commit the migrated JSON files.
-5. Merge `dev` to `content` again.
+Once a migration has been created, you should run it with `npm run migrate` and, if successful, commit the changes.
