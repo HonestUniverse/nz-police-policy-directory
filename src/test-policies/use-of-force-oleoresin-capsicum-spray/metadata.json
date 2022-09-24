@@ -1,0 +1,321 @@
+{
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"duration": {
+				"start": "2022-03-01"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "P Taylor",
+						"id": "IR-01-22-7033",
+						"responseUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes"
+					},
+					"extracted": "2022-04-29",
+					"released": "2022-05-27",
+					"retrieved": "2022-05-28",
+					"url": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+					"fileUrl": "https://fyi.org.nz/request/18842/response/73590/attach/8/Taylor%20P%20IR%2001%2022%207033%20response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-05-27/Taylor P IR 01 22 7033 response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 15,
+					"size": 1436159,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-05-27/Taylor P IR 01 22 7033 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 1436159,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-sotbe"
+		},
+		{
+			"duration": {
+				"end": "2022-03-01",
+				"on": [
+					"2022-02-09",
+					"2022-02-24"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Joshua Rogers",
+						"id": "IR-01-22-3361",
+						"responseUrl": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
+						"withholdings": {
+							"6(c)": "Some information has been withheld on page 13"
+						},
+						"requestUrl": "https://fyi.org.nz/request/18483-tazer-policy"
+					},
+					"extracted": "2022-02-09",
+					"released": "2022-02-24",
+					"retrieved": "2022-05-29",
+					"url": "https://fyi.org.nz/request/18483-tazer-policy#incoming-70736",
+					"fileUrl": "https://fyi.org.nz/request/18483/response/70736/attach/4/Rogers%20Joshua%20IR%2001%2022%203361%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-02-24/Rogers Joshua IR 01 22 3361 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 50,
+					"size": 6128607,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-02-24/Rogers Joshua IR 01 22 3361 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 6128607,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-05-27/Taylor P IR 01 22 7033 response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "P Taylor",
+								"id": "IR-01-22-7033",
+								"responseUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+								"withholdings": "None",
+								"requestUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes"
+							},
+							"extracted": "2022-05-02",
+							"released": "2022-05-27",
+							"retrieved": "2022-05-28",
+							"url": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+							"fileUrl": "https://fyi.org.nz/request/18842/response/73590/attach/8/Taylor%20P%20IR%2001%2022%207033%20response.pdf"
+						}
+					],
+					"startingPage": 3,
+					"size": 1436159,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"notices": [
+						{
+							"type": "warning",
+							"message": "Page 13 of this document is out of order, and appears on page 28 of the PDF."
+						}
+					]
+				},
+				{
+					"path": "../../bulk-files/2022-05-27/Taylor P IR 01 22 7033 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "P Taylor",
+								"id": "IR-01-22-7033",
+								"responseUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+								"withholdings": "None",
+								"requestUrl": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes"
+							},
+							"extracted": "2022-05-02",
+							"released": "2022-05-27",
+							"retrieved": "2022-05-28",
+							"url": "https://fyi.org.nz/request/18842-information-on-police-policy-or-operating-procedure-changes#incoming-73590",
+							"fileUrl": "https://fyi.org.nz/request/18842/response/73590/attach/8/Taylor%20P%20IR%2001%2022%207033%20response.pdf"
+						}
+					],
+					"startingPage": 1,
+					"size": 1436159,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-uaavi"
+		},
+		{
+			"duration": {
+				"ended": true,
+				"on": [
+					"2017-01-04"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Jeremy Roundill",
+						"id": "16-8540-4",
+						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+						"withholdings": "None",
+						"requestUrl": "https://fyi.org.nz/request/5014-selected-police-manuals"
+					},
+					"released": "2017-01-04",
+					"retrieved": "2022-05-01",
+					"url": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+					"fileUrl": "https://fyi.org.nz/request/5014/response/16479/attach/14/OC%20Spray.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "version-6-0/OC Spray.pdf",
+					"type": "application/pdf",
+					"size": 94739,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"documentType": "Policy"
+				}
+			],
+			"id": "u-gsdxy"
+		}
+	],
+	"schemaVersion": "1.3.0",
+	"name": "Use of Force - Oleoresin Capsicum Spray",
+	"previousNames": [
+		"Use of Force - Oleoresin Capsicum (OC) Spray"
+	]
+}
