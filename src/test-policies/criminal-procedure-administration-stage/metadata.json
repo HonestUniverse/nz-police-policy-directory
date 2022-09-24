@@ -1,0 +1,158 @@
+{
+	"schemaVersion": "1.3.0",
+	"name": "Criminal procedure - Administration stage",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"duration": {
+				"on": [
+					"2022-09-20"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "I Brown",
+						"id": "IR-01-22-27114",
+						"requestUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure",
+						"responseUrl": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure#incoming-77495",
+						"withholdings": "None"
+					},
+					"extracted": "2022-09-09",
+					"released": "2022-09-20",
+					"retrieved": "2022-09-20",
+					"url": "https://fyi.org.nz/request/20480-police-manual-chapters-on-criminal-procedure#incoming-77495",
+					"fileUrl": "https://fyi.org.nz/request/20480/response/77495/attach/8/i%20Brown%20IR%2001%2022%2027114%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-09-20/i Brown IR 01 22 27114 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 8841556,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are images of text on pages 1 and 32."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-09-20/i Brown IR 01 22 27114 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 8841556,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"The sign-off is an image of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-efjfk"
+		},
+		{
+			"duration": {
+				"on": [
+					"2017-01-04"
+				],
+				"ended": true
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Jeremy Roundill",
+						"id": "16-8540-4",
+						"responseUrl": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+						"withholdings": {
+							"Out of scope": "Only the section on \"Suppression of names and information before the court\" was requested, so other sections were not released."
+						},
+						"requestUrl": "https://fyi.org.nz/request/5014-selected-police-manuals"
+					},
+					"released": "2017-01-04",
+					"retrieved": "2022-05-08",
+					"url": "https://fyi.org.nz/request/5014-selected-police-manuals#incoming-16479",
+					"fileUrl": "https://fyi.org.nz/request/5014/response/16479/attach/13/Criminal%20Procedure%20Name%20Suppression.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "suppression-of-names-and-information-before-the-court-january-2017/Criminal Procedure Name Suppression.pdf",
+					"type": "application/pdf",
+					"size": 320131,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"incomplete": {
+						"value": true,
+						"note": "Only one section of this Police Manual chapter was requested. A list of other sections in this chapter is included at the top of the file."
+					},
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"All pages are text-based except for an image of text on page 5"
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"documentType": "Policy"
+				}
+			],
+			"id": "u-vxijv"
+		}
+	]
+}
