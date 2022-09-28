@@ -1,7 +1,10 @@
 {
 	"schemaVersion": "1.3.0",
 	"type": "Police Manual chapter",
-	"name": "Exhibits and property - Disposal of non-Police firearms",
+	"name": "Exhibits and property - Destruction of non-Police firearms",
+	"previousNames": [
+		"Exhibits and property - Disposal of non-Police firearms"
+	],
 	"versions": [
 		{
 			"id": "u-qqvvs",
