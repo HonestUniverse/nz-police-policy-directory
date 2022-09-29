@@ -4,7 +4,8 @@
 		{
 			"duration": {
 				"on": [
-					"2022-09-14"
+					"2022-09-14",
+					"2022-09-15"
 				]
 			},
 			"provenance": [
@@ -26,6 +27,51 @@
 			],
 			"files": [
 				{
+					"path": "2022-09-15/offensive-weapons-knives-and-disabling-substances-150922.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1389585,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2022,
+								"month": 9
+							},
+							"extracted": "2022-09-15",
+							"retrieved": "2022-09-29",
+							"url": "https://www.police.govt.nz/about-us/publication/offensive-weapons-knives-and-disabling-substances-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20220929020243/https://www.police.govt.nz/about-us/publication/offensive-weapons-knives-and-disabling-substances-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/offensive-weapons-knives-and-disabling-substances-150922.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20220929020243/https://www.police.govt.nz/sites/default/files/publications/offensive-weapons-knives-and-disabling-substances-150922.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
 					"path": "../../bulk-files/2022-09-14/Renes Jason IR 01 22 21197 Response.pdf",
 					"type": "application/pdf",
 					"documentType": "Policy",
@@ -41,7 +87,7 @@
 							"text-based": {
 								"value": "Partial",
 								"notes": [
-									"Some characters are missing in the table of contents."
+									"Some characters are missing in the table of contents and at the beginning of sentences throughout the document."
 								]
 							},
 							"semantics": {
@@ -107,7 +153,7 @@
 			],
 			"files": [
 				{
-					"path": "version-15-0/Offensive Weapons Knives Disabling Substances.pdf",
+					"path": "2017-01-04/Offensive Weapons Knives Disabling Substances.pdf",
 					"type": "application/pdf",
 					"size": 130317,
 					"licence": {
