@@ -37,18 +37,19 @@ export async function createBuildPlugins(policiesPath = paths.policies) {
 
 	const plugins: ReturnType<BuildStep> = [];
 
-	const policiesByName = await readAllPolicies(policiesPath);
+	const policiesByDirName = await readAllPolicies(policiesPath);
 	const policiesByNameSafe: Record<string, Policy> = {};
 
 	// Asset build steps
 	plugins.push(...await gatherBuildStepPlugins(assetBuildSteps, paths.assets, paths.distAssetsFull, null));
 
 	// Loop through policies and generate each policy's build steps
-	for (const [policyName, policy] of Object.entries(policiesByName)) {
+	for (const [policySrcDir, policy] of Object.entries(policiesByDirName)) {
+		const policyName = policy.name;
 		const policyNameSafe = toUrlSegment(policyName);
 		policiesByNameSafe[policyNameSafe] = policy;
 
-		const policySrcPath = `${policiesPath}/${policyName}`;
+		const policySrcPath = `${policiesPath}/${policySrcDir}`;
 		const policyDstPath = `${paths.policiesDst}/${policyNameSafe}`;
 
 		plugins.push(...await gatherBuildStepPlugins(policyBuildSteps, policySrcPath, policyDstPath, {
@@ -71,7 +72,7 @@ export async function createBuildPlugins(policiesPath = paths.policies) {
 
 	// Redirect build steps
 	plugins.push(...await gatherBuildStepPlugins(redirectBuildSteps, paths.src, paths.policiesDst, {
-		directory: policiesByName,
+		directory: policiesByNameSafe,
 	}));
 
 	return plugins;
