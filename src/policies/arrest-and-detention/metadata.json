@@ -6,7 +6,8 @@
 		{
 			"duration": {
 				"on": [
-					"2022-08-01"
+					"2022-08-01",
+					"2022-08-29"
 				]
 			},
 			"provenance": [
@@ -56,6 +57,54 @@
 							}
 						}
 					}
+				},
+				{
+					"path": "2022-08-29/IR 01 22 21705 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 393587,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "John Smith",
+								"id": "IR-01-22-21705",
+								"requestUrl": "https://fyi.org.nz/request/20010-police-general-instructions-etc",
+								"responseUrl": "https://fyi.org.nz/request/20010-police-general-instructions-etc#incoming-76768",
+								"withholdings": "None"
+							},
+							"released": "2022-08-29",
+							"retrieved": "2022-09-29",
+							"url": "https://fyi.org.nz/request/20010-police-general-instructions-etc#incoming-76768",
+							"fileUrl": "https://fyi.org.nz/request/20010/response/76768/attach/8/IR%2001%2022%2021705%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"message": "This document was requested under the OIA before its proactive release in August 2022. In response, NZ Police said the version published on their website was current."
+						}
+					]
 				}
 			],
 			"id": "u-vvxjc"
