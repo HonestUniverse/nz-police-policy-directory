@@ -1,50 +1,85 @@
 {
 	"name": "Deception",
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"versions": [
 		{
 			"id": "u-zkfej",
 			"duration": {
-				"start": "2018-05-08"
+				"on": [
+					"2021-08-23"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "Amanda Murtagh",
+						"id": "IR-01-21-24217",
+						"requestUrl": "https://fyi.org.nz/request/16300-internal-policies-and-guidelines",
+						"responseUrl": "https://fyi.org.nz/request/16300-internal-policies-and-guidelines#incoming-62440",
+						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2021-08-23",
+					"released": "2021-09-06",
+					"retrieved": "2022-10-06",
+					"url": "https://fyi.org.nz/request/16300-internal-policies-and-guidelines#incoming-62440",
+					"fileUrl": "https://fyi.org.nz/request/16300/response/62440/attach/3/Murtagh%20Amanda%20IR%2001%2021%2024217%20final%20response.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2021-08-23/Murtagh Amanda IR 01 21 24217 final response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 7,
+					"size": 657990,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2021-08-23/Murtagh Amanda IR 01 21 24217 final response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 657990,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
 		}
 	]
 }
