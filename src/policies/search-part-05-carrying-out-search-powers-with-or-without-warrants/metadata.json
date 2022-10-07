@@ -4,11 +4,99 @@
 	"name": "Search Part 05 - Carrying out search powers with or without warrants",
 	"versions": [
 		{
+			"duration": {
+				"on": [
+					"2021-06-08",
+					"2022-10-07"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "John Walter",
+						"id": "IR-01-22-22523",
+						"requestUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022",
+						"responseUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022#incoming-78193",
+						"withholdings": {
+							"6(c)": "Information has been withheld on pages 11, 13, 14, 21, 27–29, and 31–33."
+						}
+					},
+					"extracted": "2021-06-08",
+					"released": "2022-10-07",
+					"retrieved": "2022-10-07",
+					"url": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022#incoming-78193",
+					"fileUrl": "https://fyi.org.nz/request/20078/response/78193/attach/4/Walter%20John%20IR%2001%2022%2022523%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-10-07/Walter John IR 01 22 22523 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 77,
+					"size": 5136884,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-10-07/Walter John IR 01 22 22523 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5136884,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "info",
+					"message": "Most parts of this document that were withheld when this version was released in October 2022 were not withheld when it was released in 2020."
+				}
+			],
+			"id": "u-fwyvi"
+		},
+		{
 			"id": "u-yhkuu",
 			"duration": {
 				"on": [
 					"2020-06-17"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -79,10 +167,5 @@
 				}
 			]
 		}
-	],
-	"pendingRequest": {
-		"requester": "John Walter",
-		"requestUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022",
-		"withholdings": "Undetermined"
-	}
+	]
 }
