@@ -1,13 +1,95 @@
 {
 	"schemaVersion": "1.3.0",
 	"type": "Police Manual chapter",
+	"name": "Search Part 15 - Government agency requests for assistance with search warrants",
+	"previousNames": [
+		"Search Part 15 - Government agency requests for assistance with search warrants and production orders"
+	],
 	"versions": [
+		{
+			"duration": {
+				"on": [
+					"2022-10-07"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "John Walter",
+						"id": "IR-01-22-22523",
+						"requestUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022",
+						"responseUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022#incoming-78193",
+						"withholdings": "None"
+					},
+					"released": "2022-10-07",
+					"retrieved": "2022-10-07",
+					"url": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022#incoming-78193",
+					"fileUrl": "https://fyi.org.nz/request/20078/response/78193/attach/4/Walter%20John%20IR%2001%2022%2022523%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-10-07/Walter John IR 01 22 22523 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 263,
+					"size": 5136884,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-10-07/Walter John IR 01 22 22523 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5136884,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-sweia"
+		},
 		{
 			"duration": {
 				"on": [
 					"2021-06-14",
 					"2021-06-28"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -50,21 +132,10 @@
 							}
 						}
 					},
-					"notices": [
-						{
-							"type": "info",
-							"title": "Bulk file",
-							"message": "This file contains multiple documents. \"Government agency requests for assistance with search warrants and production orders\" covers pages 1-27 of the file."
-						}
-					],
 					"documentType": "Policy"
 				}
 			],
 			"id": "u-kwoyj"
 		}
-	],
-	"name": "Search Part 15 - Government agency requests for assistance with search warrants",
-	"previousNames": [
-		"Search Part 15 - Government agency requests for assistance with search warrants and production orders"
 	]
 }
