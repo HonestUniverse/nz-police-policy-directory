@@ -1,55 +1,86 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Search Part 16 - Property damage incurred during searches or exercise of statutory powers",
 	"versions": [
 		{
 			"id": "u-wjjnx",
 			"duration": {
-				"start": "2021-01-26"
+				"on": [
+					"2021-06-08",
+					"2022-10-07"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "John Walter",
+						"id": "IR-01-22-22523",
+						"requestUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022",
+						"responseUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022#incoming-78193",
+						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2021-06-08",
+					"released": "2022-10-07",
+					"retrieved": "2022-10-07",
+					"url": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022#incoming-78193",
+					"fileUrl": "https://fyi.org.nz/request/20078/response/78193/attach/4/Walter%20John%20IR%2001%2022%2022523%20Response.pdf"
 				}
 			],
-			"files": []
+			"files": [
+				{
+					"path": "../../bulk-files/2022-10-07/Walter John IR 01 22 22523 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 289,
+					"size": 5136884,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-10-07/Walter John IR 01 22 22523 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5136884,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
 		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
-		}
-	],
-	"pendingRequest": {
-		"requester": "John Walter",
-		"requestUrl": "https://fyi.org.nz/request/20078-police-manuals-all-search-and-surveillance-chapters-2022",
-		"withholdings": "Undetermined"
-	}
+	]
 }
