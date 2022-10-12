@@ -29,9 +29,9 @@ enum MatchResult {
 }
 
 interface SearchQuery {
-	name: string,
-	type: string,
-	includeStubs: boolean,
+	name: string;
+	type: string;
+	includeStubs: boolean;
 }
 
 /** The delay between the user stopping typing and the auto-search happening */
@@ -39,6 +39,48 @@ const inputDelay = 200;
 
 function init() {
 	initEvents();
+
+	const $form: HTMLFormElement | null = document.querySelector(Selector.FORM);
+	if (!$form) {
+		return;
+	}
+
+	const targetId = $form.getAttribute('aria-controls');
+	if (!targetId) {
+		return;
+	}
+
+	const $target = document.getElementById(targetId);
+	if (!$target) {
+		return;
+	}
+
+	const params = new URLSearchParams(window.location.search);
+
+	const name = params.get('name') ?? '';
+	const type = params.get('type') ?? '';
+	const includeStubs = (params.get('includeStubs') ?? 'true') === 'true';
+
+	const $name: HTMLInputElement | null = $form.querySelector('input[name="name"]');
+	if ($name) {
+		$name.value = name;
+	}
+
+	const $type: HTMLSelectElement | null = $form.querySelector('select[name="type"]');
+	if ($type) {
+		$type.value = type;
+	}
+
+	const $stubs: HTMLInputElement | null = $form.querySelector('input[name="include-stubs"]');
+	if ($stubs) {
+		$stubs.checked = includeStubs;
+	}
+
+	applySearch($target, {
+		name,
+		type,
+		includeStubs,
+	});
 }
 
 /**
@@ -103,10 +145,7 @@ function performSearch($form: HTMLFormElement) {
 	const type = data.get('type');
 	const includeStubs = data.get('include-stubs') === 'true';
 
-	if (
-		typeof name !== 'string' ||
-		typeof type !== 'string'
-	) {
+	if (typeof name !== 'string' || typeof type !== 'string') {
 		return;
 	}
 
@@ -132,6 +171,19 @@ function performSearch($form: HTMLFormElement) {
  * Apply a search query to a target area containing searchable items
  */
 function applySearch($target: HTMLElement, query: SearchQuery) {
+	const params = new URLSearchParams({
+		name: query.name,
+		type: query.type,
+		includeStubs: query.includeStubs ? 'true' : 'false',
+	});
+
+	const paramString =
+		!query.name && !query.type && query.includeStubs
+			? location.pathname
+			: `?${params.toString()}`;
+
+	window.history.replaceState(null, '', paramString);
+
 	const $items = Array.from($target.querySelectorAll<HTMLElement>(Selector.ITEM));
 	const $matchedItems: HTMLElement[] = [];
 
@@ -249,7 +301,7 @@ function getItemNames($item: HTMLElement): string[] {
 		}
 	})();
 
-	const names = [nameAttr, ...(previousNames)];
+	const names = [nameAttr, ...previousNames];
 
 	return names;
 }
