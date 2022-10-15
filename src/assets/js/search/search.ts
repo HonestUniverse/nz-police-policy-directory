@@ -20,6 +20,12 @@ enum CssClass {
 	SHOW_PREVIOUS_NAMES = 'show-previous-names',
 }
 
+enum InputName {
+	NAME = 'name',
+	TYPE = 'type',
+	INCLUDE_STUBS = 'include-stubs',
+}
+
 enum MatchResult {
 	NO_MATCH,
 	EMPTY_QUERY,
@@ -40,47 +46,7 @@ const inputDelay = 200;
 function init() {
 	initEvents();
 
-	const $form: HTMLFormElement | null = document.querySelector(Selector.FORM);
-	if (!$form) {
-		return;
-	}
-
-	const targetId = $form.getAttribute('aria-controls');
-	if (!targetId) {
-		return;
-	}
-
-	const $target = document.getElementById(targetId);
-	if (!$target) {
-		return;
-	}
-
-	const params = new URLSearchParams(window.location.search);
-
-	const name = params.get('name') ?? '';
-	const type = params.get('type') ?? '';
-	const includeStubs = (params.get('includeStubs') ?? 'true') === 'true';
-
-	const $name: HTMLInputElement | null = $form.querySelector('input[name="name"]');
-	if ($name) {
-		$name.value = name;
-	}
-
-	const $type: HTMLSelectElement | null = $form.querySelector('select[name="type"]');
-	if ($type) {
-		$type.value = type;
-	}
-
-	const $stubs: HTMLInputElement | null = $form.querySelector('input[name="include-stubs"]');
-	if ($stubs) {
-		$stubs.checked = includeStubs;
-	}
-
-	applySearch($target, {
-		name,
-		type,
-		includeStubs,
-	});
+	applySearchFromQueryString();
 }
 
 /**
@@ -102,6 +68,134 @@ function initEvents() {
 			$input.addEventListener('change', handleSearchInputEvent);
 		}
 	});
+}
+
+/**
+ * Apply a search query based on the current query string
+ */
+function applySearchFromQueryString() {
+	if (!window.location.search) {
+		return;
+	}
+
+	const $form = document.querySelector<HTMLFormElement>(Selector.FORM);
+	if (!$form) {
+		return;
+	}
+
+	const $target = getSearchFormResultsElement($form);
+	if (!$target) {
+		return;
+	}
+
+	const params = new URLSearchParams(window.location.search);
+
+	applyQueryStringToForm($form, params);
+
+	const query = getSearchQueryFromUrlParams(params);
+	applySearch($target, query);
+}
+
+/**
+ * Apply the values from a query string to an HTML form
+ */
+function applyQueryStringToForm($form: HTMLFormElement, queryString: URLSearchParams): void {
+	const $textareas = Array.from($form.querySelectorAll('textarea'));
+	const $selects = Array.from($form.querySelectorAll('select'));
+	const $inputs = Array.from($form.querySelectorAll('input'));
+
+	const $fields = [
+		...$textareas,
+		...$selects,
+		...$inputs,
+	];
+
+	for (const $field of $fields) {
+		const name = $field.name;
+		const value = queryString.get(name);
+
+		if (value !== null) {
+			$field.value = value;
+		} else {
+			$field.value = '';
+		}
+	}
+}
+
+/**
+ * Build a `SearchQuery` based on a set of `URLSearchParams`
+ */
+function getSearchQueryFromUrlParams(params: URLSearchParams): SearchQuery {
+	const name = params.get(InputName.NAME) ?? '';
+	const type = params.get(InputName.TYPE) ?? '';
+	const includeStubs = params.get(InputName.INCLUDE_STUBS) === String(true);
+
+	const query: SearchQuery = {
+		name,
+		type,
+		includeStubs,
+	};
+
+	return query;
+}
+
+/**
+ * Build a `SearchQuery` based on a `FormData` object
+ */
+function getSearchQueryFromFormData(data: FormData): SearchQuery | null {
+	const name = data.get(InputName.NAME);
+	const type = data.get(InputName.TYPE);
+	const includeStubs = data.get(InputName.INCLUDE_STUBS) === String(true);
+
+	if (typeof name !== 'string' || typeof type !== 'string') {
+		return null;
+	}
+
+	const searchQuery: SearchQuery = {
+		name,
+		type,
+		includeStubs,
+	};
+
+	return searchQuery;
+}
+
+/**
+ * Build a set of `URLSearchParams` based on a `SearchQuery`
+ */
+function getUrlParamsFromSearchQuery(query: SearchQuery): URLSearchParams {
+	const {
+		name,
+		type,
+		includeStubs,
+	} = query;
+
+	const params = new URLSearchParams();
+
+	if (name) {
+		params.set(InputName.NAME, name);
+	}
+
+	if (type) {
+		params.set(InputName.TYPE, type);
+	}
+
+	params.set(InputName.INCLUDE_STUBS, String(includeStubs));
+
+	return params;
+}
+
+/**
+ * Retrieve the `HTMLElement` where a search form's results are displayed, if it can be found.
+ */
+function getSearchFormResultsElement($form: HTMLElement) {
+	const targetId = $form.getAttribute('aria-controls');
+	if (!targetId) {
+		return null;
+	}
+
+	const $target = document.getElementById(targetId);
+	return $target;
 }
 
 /**
@@ -130,30 +224,16 @@ function handleSearchInputEvent(this: HTMLInputElement | HTMLSelectElement, e: E
  * Perform a search with a given form
  */
 function performSearch($form: HTMLFormElement) {
-	const targetId = $form.getAttribute('aria-controls');
-	if (!targetId) {
-		return;
-	}
-
-	const $target = document.getElementById(targetId);
+	const $target = getSearchFormResultsElement($form);
 	if (!$target) {
 		return;
 	}
 
 	const data = new FormData($form);
-	const name = data.get('name');
-	const type = data.get('type');
-	const includeStubs = data.get('include-stubs') === 'true';
-
-	if (typeof name !== 'string' || typeof type !== 'string') {
+	const searchQuery = getSearchQueryFromFormData(data);
+	if (!searchQuery) {
 		return;
 	}
-
-	const searchQuery: SearchQuery = {
-		name,
-		type,
-		includeStubs,
-	};
 
 	const $results = applySearch($target, searchQuery);
 
@@ -165,25 +245,18 @@ function performSearch($form: HTMLFormElement) {
 			$noResultsArea.hidden = false;
 		}
 	}
+
+	// Update the URL to match the `SearchQuery`
+	const params = getUrlParamsFromSearchQuery(searchQuery);
+	const paramString = `?${params.toString()}`;
+
+	window.history.replaceState(null, '', paramString);
 }
 
 /**
- * Apply a search query to a target area containing searchable items
+ * Apply a `SearchQuery` to a target area containing searchable items
  */
 function applySearch($target: HTMLElement, query: SearchQuery) {
-	const params = new URLSearchParams({
-		name: query.name,
-		type: query.type,
-		includeStubs: query.includeStubs ? 'true' : 'false',
-	});
-
-	const paramString =
-		!query.name && !query.type && query.includeStubs
-			? location.pathname
-			: `?${params.toString()}`;
-
-	window.history.replaceState(null, '', paramString);
-
 	const $items = Array.from($target.querySelectorAll<HTMLElement>(Selector.ITEM));
 	const $matchedItems: HTMLElement[] = [];
 
@@ -216,7 +289,7 @@ function applySearch($target: HTMLElement, query: SearchQuery) {
 }
 
 /**
- * Hide or show an item based on a search query
+ * Hide or show an item based on a `SearchQuery`
  */
 function applySearchToItem(query: SearchQuery, $item: HTMLElement): MatchResult {
 	const isStub = $item.getAttribute(DataAttribute.STUB) === 'true';
@@ -240,7 +313,7 @@ function applySearchToItem(query: SearchQuery, $item: HTMLElement): MatchResult 
 }
 
 /**
- * Determine if an item matches the name part of a query
+ * Determine if an item matches the name part of a `SearchQuery`
  */
 function applySearchToItemName(query: SearchQuery, $item: HTMLElement): MatchResult {
 	const { name } = query;
