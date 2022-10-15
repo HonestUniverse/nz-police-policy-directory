@@ -92,10 +92,20 @@ function applyQueryStringToForm($form: HTMLFormElement, queryString: URLSearchPa
 		const name = $field.name;
 		const value = queryString.get(name);
 
-		if (value !== null) {
-			$field.value = value;
+		if ($field instanceof HTMLInputElement && $field.type === 'checkbox') {
+			// Only set the value of a checkbox if it was recorded as a boolean,
+			// otherwise let the input keep its default value
+			if (value === String(false)) {
+				$field.checked = false;
+			} else if (value === String(true)) {
+				$field.checked = true;
+			}
 		} else {
-			$field.value = '';
+			// Update the value of a field if it was recorded, otherwise let the
+			// field keep its default value
+			if (value !== null) {
+				$field.value = value;
+			}
 		}
 	}
 }
@@ -166,11 +176,26 @@ function performSearch($form: HTMLFormElement) {
 		}
 	}
 
+	updateUrlToMatchSearchQuery(searchQuery);
+}
+
+/**
+ * Update the current URL to reflect a given `SearchQuery`
+ */
+function updateUrlToMatchSearchQuery(searchQuery: SearchQuery): void {
 	// Update the URL to match the `SearchQuery`
 	const params = getUrlParamsFromSearchQuery(searchQuery);
-	const paramString = `?${params.toString()}`;
+	const paramsString = params.toString();
 
-	window.history.replaceState(null, '', paramString);
+	// Replacing the entire URL lets us remove the `?` if there are no query parameters
+	const newUrl = new URL(document.location.toString());
+	if (paramsString) {
+		newUrl.search = paramsString;
+	} else {
+		newUrl.search = '';
+	}
+
+	window.history.replaceState(null, '', String(newUrl));
 }
 
 // Self-initialise
