@@ -1,55 +1,400 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "No surprises policy",
 	"versions": [
 		{
-			"id": "u-scdio",
 			"duration": {
-				"start": "2019-09-05"
+				"start": "2021-09-06",
+				"on": [
+					"2022-10-17"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "Mohammed Khan",
+						"id": "IR-01-22-27621",
+						"responseUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+						"requestUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy",
+						"withholdings": {
+							"9(2)(a)": "Information was withheld on page 5."
+						}
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2022-10-17",
+					"retrieved": "2022-10-18",
+					"url": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+					"fileUrl": "https://fyi.org.nz/request/20509/response/78516/attach/4/Khan%20Mohammed%20IR%2001%2022%2027621%20Response.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
+			"files": [
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 29,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-wxoyj"
+		},
 		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+			"id": "u-scdio",
+			"duration": {
+				"start": "2019-09-05",
+				"end": "2021-09-06"
 			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mohammed Khan",
+						"id": "IR-01-22-27621",
+						"responseUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+						"requestUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy",
+						"withholdings": {
+							"9(2)(a)": "Information was withheld on page 5."
+						}
+					},
+					"released": "2022-10-17",
+					"retrieved": "2022-10-18",
+					"url": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+					"fileUrl": "https://fyi.org.nz/request/20509/response/78516/attach/4/Khan%20Mohammed%20IR%2001%2022%2027621%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 22,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"duration": {
+				"start": "2018-03-21",
+				"end": "2019-09-05"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mohammed Khan",
+						"id": "IR-01-22-27621",
+						"responseUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+						"requestUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy",
+						"withholdings": {
+							"9(2)(a)": "Information was withheld on page 5."
+						}
+					},
+					"released": "2022-10-17",
+					"retrieved": "2022-10-18",
+					"url": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+					"fileUrl": "https://fyi.org.nz/request/20509/response/78516/attach/4/Khan%20Mohammed%20IR%2001%2022%2027621%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 15,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-oiexx"
+		},
+		{
+			"duration": {
+				"start": "2017-10-02",
+				"end": "2018-03-21"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mohammed Khan",
+						"id": "IR-01-22-27621",
+						"responseUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+						"requestUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy",
+						"withholdings": {
+							"9(2)(a)": "Information was withheld on page 5."
+						}
+					},
+					"released": "2022-10-17",
+					"retrieved": "2022-10-18",
+					"url": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+					"fileUrl": "https://fyi.org.nz/request/20509/response/78516/attach/4/Khan%20Mohammed%20IR%2001%2022%2027621%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 8,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-jkjod"
+		},
+		{
+			"isFirst": true,
+			"duration": {
+				"start": "2012-08-15",
+				"end": "2017-10-02"
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mohammed Khan",
+						"id": "IR-01-22-27621",
+						"responseUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+						"requestUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy",
+						"withholdings": {
+							"9(2)(a)": "Information was withheld on pages 3 and 4."
+						}
+					},
+					"released": "2022-10-17",
+					"retrieved": "2022-10-18",
+					"url": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy#incoming-78516",
+					"fileUrl": "https://fyi.org.nz/request/20509/response/78516/attach/4/Khan%20Mohammed%20IR%2001%2022%2027621%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 3,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-10-17/Khan Mohammed IR 01 22 27621 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5983745,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-cvxjx"
 		}
-	],
-	"pendingRequest": {
-		"requester": "Mohammed Khan",
-		"requestUrl": "https://fyi.org.nz/request/20509-police-manual-chapters-relating-to-no-surprises-policy",
-		"withholdings": "Undetermined"
-	}
+	]
 }
