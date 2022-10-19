@@ -25,6 +25,8 @@ export const schema = `./schema`;
 
 const buildFull = path.resolve(fileURLToPath(import.meta.url), '../../');
 export const srcFull = path.resolve(buildFull, '../src');
-export const assetsFull = `${srcFull}/assets`;
+export const assetsFull = path.resolve(srcFull, './assets');
+export const sharedFull = path.resolve(srcFull, './shared');
+
 export const distFull = path.resolve(buildFull, '../dist');
 export const distAssetsFull = path.resolve(buildFull, '../dist/assets');
