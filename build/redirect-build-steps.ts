@@ -5,7 +5,7 @@ import type { RedirectBuildStep } from './BuildStep.js';
 import WriteFilePlugin from './util/write-file-plugin.js';
 
 import { makeRootRelative } from './util/make-root-relative.js';
-import { toUrlSegment } from './util/to-url-segment.js';
+import { toUrlSegment } from '../src/shared/to-url-segment.js';
 import * as paths from './util/paths.js';
 
 type Redirect = {

@@ -162,8 +162,9 @@ module.exports = {
 			parser: '@typescript-eslint/parser',
 			parserOptions: {
 				project: [
-					'./tsconfig.json',
+					'./tsconfig.dom.json',
 					'./tsconfig.node.json',
+					'./tsconfig.shared.json',
 				],
 			},
 			plugins: ['@typescript-eslint'],

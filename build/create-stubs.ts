@@ -2,7 +2,7 @@ import { readFile, writeFile, mkdir } from 'fs/promises';
 
 import type { Policy } from '../schema/Policy.js';
 
-import { toUrlSegment } from './util/to-url-segment.js';
+import { toUrlSegment } from '../src/shared/to-url-segment.js';
 import * as paths from './util/paths.js';
 
 export type StubPolicyWith<TProps extends keyof Policy> = Omit<Policy, Exclude<keyof Policy, TProps>>
