@@ -7,7 +7,8 @@
 			"id": "u-vzudx",
 			"duration": {
 				"on": [
-					"2022-09-20"
+					"2022-09-20",
+					"2022-10-03"
 				]
 			},
 			"provenance": [
@@ -29,6 +30,51 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2022-10-03/criminal-procedure-intro-and-jurisdiction-031022.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1084265,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2022,
+								"month": 10
+							},
+							"extracted": "2022-10-03",
+							"retrieved": "2022-10-04",
+							"url": "https://www.police.govt.nz/about-us/publication/criminal-procedure-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20221003194743/https://www.police.govt.nz/about-us/publication/criminal-procedure-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/criminal-procedure-intro-and-jurisdiction-031022.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20221003195103/https://www.police.govt.nz/sites/default/files/publications/criminal-procedure-intro-and-jurisdiction-031022.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Images of text on pages 5 and 6 have been automatically converted to text using Optical Character Recognition. However, many characters have been inferred incorrectly or missed, so this text is largely incorrect."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "../../bulk-files/2022-09-20/i Brown IR 01 22 27114 Response.pdf",
 					"type": "application/pdf",
