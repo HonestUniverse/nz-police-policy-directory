@@ -3,9 +3,6 @@ import * as webpack from 'webpack';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import resolveTypeScriptPluginModule from 'resolve-typescript-plugin';
-const ResolveTypeScriptPlugin = resolveTypeScriptPluginModule;
-
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import AlterPlugin from './build/util/alter-plugin.js';
 
@@ -43,7 +40,9 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 		},
 		resolve: {
 			fullySpecified: true,
-			plugins: [new ResolveTypeScriptPlugin()],
+			extensionAlias: {
+				'.js': ['.ts', '.js'],
+			},
 		},
 		module: {
 			rules: [
