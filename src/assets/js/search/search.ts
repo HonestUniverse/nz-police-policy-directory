@@ -1,4 +1,4 @@
-import { stripAccents } from '../../../../build/util/to-url-segment.js';
+import { stripAccents } from '../../../shared/to-url-segment.js';
 import { debounce } from '../utils/debounce.js';
 
 enum Selector {

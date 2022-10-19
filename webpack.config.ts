@@ -48,7 +48,32 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 			rules: [
 				{
 					test: /\.ts$/,
-					loader: 'ts-loader',
+					include: [
+						`${paths.sharedFull}\\`,
+					],
+					use: [
+						{
+							loader: 'ts-loader',
+							options: {
+								configFile: 'tsconfig.shared.json',
+							},
+						},
+					],
+				},
+				{
+					test: /\.ts$/,
+					include: [
+						`${paths.assetsFull}\\`,
+					],
+					use: [
+						{
+							loader: 'ts-loader',
+							options: {
+								configFile: 'tsconfig.dom.json',
+							},
+						},
+					],
+					],
 				},
 				{
 					test: /\.scss$/,
