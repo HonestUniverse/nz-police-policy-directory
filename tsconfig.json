@@ -1,0 +1,5 @@
+// This file, called `tsconfig.json`, needs to exist so `ts-node` can find it when running npm scripts
+// TODO: Ideally, this file shouldn't be necessary, and the project file should be specified in the npm scripts
+{
+	"extends": "./tsconfig.node.json",
+}

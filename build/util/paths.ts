@@ -14,6 +14,7 @@ export const policies = `${src}/policies`;
 export const testPolicies = `${src}/test-policies`;
 export const templates = `${src}/templates`;
 export const assets = `${src}/assets`;
+export const workers = `${src}/workers`;
 
 export const policiesDst = `./policies`;
 export const aboutDst = `./about`;
@@ -27,6 +28,7 @@ const buildFull = path.resolve(fileURLToPath(import.meta.url), '../../');
 export const srcFull = path.resolve(buildFull, '../src');
 export const assetsFull = path.resolve(srcFull, './assets');
 export const sharedFull = path.resolve(srcFull, './shared');
+export const workersFull = path.resolve(srcFull, './workers');
 
 export const distFull = path.resolve(buildFull, '../dist');
 export const distAssetsFull = path.resolve(buildFull, '../dist/assets');
