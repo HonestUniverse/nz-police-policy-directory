@@ -87,7 +87,8 @@
 					"startingPage": 45,
 					"size": 7407902,
 					"licence": {
-						"name": "None"
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 					},
 					"original": true,
 					"accessibility": {
@@ -137,7 +138,8 @@
 						}
 					],
 					"licence": {
-						"name": "None"
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 					},
 					"original": true,
 					"accessibility": {
