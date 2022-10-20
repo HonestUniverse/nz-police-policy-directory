@@ -40,7 +40,8 @@ async function addToCache(request: Request, response: Response): Promise<void> {
 }
 
 async function getCachedResponse(request: Request): Promise<Response | undefined> {
-	const cacheResponse = await caches.match(request);
+	const cache = await caches.open(cacheName);
+	const cacheResponse = await cache.match(request);
 	return cacheResponse;
 }
 
