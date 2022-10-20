@@ -24,7 +24,9 @@ function transformName(name: string): string {
 /**
  * TypeScript doesn't automatically narrow a type based on `in`, but a custom typeguard can do this
  */
-function hasNameProp(obj: any): obj is { name: string } {
+function hasNameProp(testObj: unknown): testObj is { name: string } {
+	const obj = testObj as { name: string };
+
 	return typeof obj?.name === 'string';
 }
 
@@ -62,21 +64,22 @@ export async function createStubs<TProps extends keyof Policy>(stubsOriginal: St
 		promises.push(new Promise<void>((resolve, reject) => {
 			// Try to read the file. If it doesn't exist, create a stub page
 			readFile(chapterMetadataLocation).catch(() => {
-				mkdir(chapterDir, { recursive: true }).then(() => {
-					writeFile(chapterMetadataLocation, JSON.stringify(policy, null, '\t'))
-				})
-				.then(() => {
-					console.log(`INFO: Created stub for ${policy.name}`);
-					resolve();
-				})
-				.catch((reason) => {
-					console.error(`ERROR: Failed to created stub for ${policy.name}`);
-					console.error(reason);
-					reject(reason);
-				});
+				mkdir(chapterDir, { recursive: true })
+					.then(() => {
+						writeFile(chapterMetadataLocation, JSON.stringify(policy, null, '\t'));
+					})
+					.then(() => {
+						console.log(`INFO: Created stub for ${policy.name}`);
+						resolve();
+					})
+					.catch((reason) => {
+						console.error(`ERROR: Failed to created stub for ${policy.name}`);
+						console.error(reason);
+						reject(reason);
+					});
 			});
 		}));
 	}
 
 	await Promise.allSettled(promises);
-};
+}

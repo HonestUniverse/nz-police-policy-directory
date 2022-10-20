@@ -118,7 +118,6 @@ module.exports = {
 				'after': true,
 			},
 		],
-		'semi-style': ['error', 'last'],
 		'space-before-blocks': ['error', 'always'],
 		'space-before-function-paren': [
 			'error',

@@ -42,7 +42,7 @@
 		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/migrate.ts",
 		"generateIds": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/generate-all-ids.ts",
 		"generateStubs": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/stubs/ir-01-22-11586.ts",
-		"lintJs": "eslint src/assets/js/**",
+		"lintJs": "eslint build/** src/assets/js/** src/shared/** src/workers/**",
 		"lintCss": "stylelint src/assets/css/**",
 		"lint": "npm run lintJs && npm run lintCss",
 		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" jasmine"
