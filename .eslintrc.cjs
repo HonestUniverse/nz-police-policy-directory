@@ -139,6 +139,7 @@ module.exports = {
 			'always',
 			{
 				'exceptions': ['/'],
+				'markers': ['/'],
 				'block': {
 					'balanced': true,
 				},
@@ -165,6 +166,7 @@ module.exports = {
 					'./tsconfig.dom.json',
 					'./tsconfig.node.json',
 					'./tsconfig.shared.json',
+					'./tsconfig.workers.json',
 				],
 			},
 			plugins: ['@typescript-eslint'],

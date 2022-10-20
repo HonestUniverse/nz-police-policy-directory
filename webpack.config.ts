@@ -20,9 +20,23 @@ enum Mode {
 async function getConfig(env: Record<string, unknown>, argsv: Record<string, unknown>) {
 	const mode = argsv.mode === Mode.DEVELOPMENT ? Mode.DEVELOPMENT : Mode.PRODUCTION;
 	const cacheBustingString = mode === Mode.PRODUCTION ? `-${generateCacheBustingString()}` : '';
+	const optimization = mode === Mode.DEVELOPMENT ? { minimize: false } : {};
+	const devtool = mode === Mode.DEVELOPMENT ? 'eval-source-map' : 'source-map';
 
-	const config: webpack.Configuration = {
+	const baseConfig = {
 		mode,
+		optimization,
+		devtool,
+
+		resolve: {
+			fullySpecified: true,
+			extensionAlias: {
+				'.js': ['.ts', '.js'],
+			},
+		},
+	};
+
+	const mainConfig: webpack.Configuration = Object.assign({}, baseConfig, {
 		entry: {
 			main: `${paths.assetsFull}/js/main.ts`,
 			enhancements: `${paths.assetsFull}/js/enhancements.ts`,
@@ -37,12 +51,6 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 			path: paths.distFull,
 			filename: `assets/js/[name]${cacheBustingString}.js`,
 			publicPath: '/',
-		},
-		resolve: {
-			fullySpecified: true,
-			extensionAlias: {
-				'.js': ['.ts', '.js'],
-			},
 		},
 		module: {
 			rules: [
@@ -72,7 +80,6 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 								configFile: 'tsconfig.dom.json',
 							},
 						},
-					],
 					],
 				},
 				{
@@ -115,22 +122,49 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 				],
 			}),
 		],
-	};
+	});
 
-	switch (mode) {
-		case 'development':
-			config.optimization = {
-				minimize: false,
-			};
-			config.devtool = 'eval-source-map';
-			break;
-		case 'production':
-		default:
-			config.devtool = 'source-map';
-			break;
-	}
+	const serviceWorkerConfig: webpack.Configuration = Object.assign({}, baseConfig, {
+		mode,
+		optimization,
+		devtool,
 
-	return config;
+		entry: {
+			'service-worker': `${paths.workers}/service-worker.ts`,
+		},
+		output: {
+			path: paths.distFull,
+			filename: `[name].js`,
+			publicPath: '/',
+		},
+		resolve: {
+			fullySpecified: true,
+			extensionAlias: {
+				'.js': ['.ts', '.js'],
+			},
+		},
+		module: {
+			rules: [
+				{
+					test: /\.ts$/,
+					include: [
+						`${paths.workersFull}\\`,
+					],
+					use: [
+						{
+							loader: 'ts-loader',
+							options: {
+								configFile: 'tsconfig.workers.json',
+							},
+						},
+					],
+				},
+			],
+		},
+	});
+
+	// Returning an array of configs is necessary to specify different output paths
+	return [mainConfig, serviceWorkerConfig];
 }
 
 export default getConfig;
