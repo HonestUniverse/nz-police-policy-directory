@@ -46,42 +46,83 @@ async function getCachedResponse(request: Request): Promise<Response | undefined
 }
 
 /**
+ * Determine whether or not a resource should be able to be served from the Service Worker's cache
+ */
+function shouldCache(request: Request): boolean {
+	let shouldCache = false;
+
+	const cachePatterns: (string | RegExp)[] = [
+		`/favicon.ico`,
+		/^\/assets\//,
+	];
+
+	const url = new URL(request.url);
+	const path = url.pathname;
+	for (const pattern of cachePatterns) {
+		if (typeof pattern === 'string') {
+			if (path === pattern) {
+				shouldCache = true;
+				break;
+			}
+		} else {
+			if (pattern.test(path)) {
+				shouldCache = true;
+				break;
+			}
+		}
+	}
+
+	return shouldCache;
+}
+
+/**
  * Try to fall back to a cached response if the network response fails
  */
 async function networkFirst(request: Request): Promise<Response> {
+	const shouldBeCached = shouldCache(request);
+
 	try {
 		const networkResponse = await fetch(request);
 
 		if (networkResponse.ok) {
-			// TODO: Because we're using a cache-busting string, many assets' filenames change from deploy to deploy. Should we be doing cleanup here?
-			addToCache(request, networkResponse.clone());
+			if (shouldBeCached) {
+				// TODO: Because we're using a cache-busting string, many assets' filenames change from deploy to deploy. Should we be doing cleanup here?
+				addToCache(request, networkResponse.clone());
+			}
 			return networkResponse;
 		} else {
-			const cachedResponse = await getCachedResponse(request);
-			if (cachedResponse) {
-				return cachedResponse;
-			} else {
-				// If we don't have a cached response, return back to the network response
-				return networkResponse;
+			// If the request should be in the cache, try to return a cached response
+			if (shouldBeCached) {
+				const cachedResponse = await getCachedResponse(request);
+				if (cachedResponse) {
+					return cachedResponse;
+				}
 			}
+
+			// If we don't have a cached response, return back to the network response
+			return networkResponse;
 		}
 	} catch (error) {
 		// `fetch` can throw an error if there was a network error
-		const cachedResponse = await getCachedResponse(request);
-		if (cachedResponse) {
-			return cachedResponse;
-		} else {
-			// TODO: Show a custom error page instead, if possible
 
-			const message = error instanceof Error ? error.message : 'Network error';
-			// If we don't have a cached response, return a generic network error
-			return new Response(message, {
-				status: 408, // REQUEST_TIMEOUT
-				headers: {
-					'Content-Type': 'text/plain',
-				},
-			});
+		// If the request should be in the cache, try to return a cached response
+		if (shouldBeCached) {
+			const cachedResponse = await getCachedResponse(request);
+			if (cachedResponse) {
+				return cachedResponse;
+			}
 		}
+
+		// TODO: Show a custom error page instead for relevant requests, if possible?
+
+		// If we don't have a cached response, return a generic network error
+		const message = error instanceof Error ? error.message : 'Network error';
+		return new Response(message, {
+			status: 408, // REQUEST_TIMEOUT
+			headers: {
+				'Content-Type': 'text/plain',
+			},
+		});
 	}
 }
 
@@ -97,6 +138,5 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-	// TODO: Should we be filtering which requests we pass to this handler?
 	event.respondWith(networkFirst(event.request));
 });
