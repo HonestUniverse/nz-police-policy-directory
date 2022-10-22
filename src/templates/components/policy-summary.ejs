@@ -51,13 +51,7 @@
 
 <section
 	class="policy-summary<%= isStub(policy) ? ' policy-summary--stub' : '' %> js-search__item"
-	data-search-name="<%= policy.name %>"
-	data-search-type="<%= policy.type %>"
-	data-search-stub="<%= isStub(policy) %>"
-	<% if (policy.previousNames) {
-		const previousNamesList = policy.previousNames ? JSON.stringify(policy.previousNames).replace(/"/g, '&quot;') : null; %>
-		data-search-previous-names="<%= previousNamesList %>"
-	<% } %>
+	data-search-key="<%= key %>"
 >
 	<h2 class="policy-summary__title">
 		<a href="<%= paths.policies %><%= key %>" class="policy-summary__link"><%= policy.name %></a>

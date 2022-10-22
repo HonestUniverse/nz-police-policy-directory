@@ -1,45 +1,45 @@
-export interface SearchQuery {
-	name: string;
-	type: string;
-	includeStubs: boolean;
-}
-
-enum InputName {
+export enum SearchQueryParam {
 	NAME = 'name',
 	TYPE = 'type',
 	INCLUDE_STUBS = 'include-stubs',
 }
 
+export interface SearchQuery {
+	[SearchQueryParam.NAME]: string;
+	[SearchQueryParam.TYPE]: string;
+	[SearchQueryParam.INCLUDE_STUBS]: boolean;
+}
+
 const defaultQuery: SearchQuery = {
-	name: '',
-	type: '',
-	includeStubs: true,
+	[SearchQueryParam.NAME]: '',
+	[SearchQueryParam.TYPE]: '',
+	[SearchQueryParam.INCLUDE_STUBS]: true,
 };
 
 /**
  * Build a `SearchQuery` based on a `FormData` object
  */
 export function getSearchQueryFromFormData(data: FormData): SearchQuery {
-	let name = data.get(InputName.NAME) ?? defaultQuery.name;
+	let name = data.get(SearchQueryParam.NAME) ?? defaultQuery[SearchQueryParam.NAME];
 	if (name instanceof File) {
-		name = defaultQuery.name;
+		name = defaultQuery[SearchQueryParam.NAME];
 	}
 
-	let type = data.get(InputName.TYPE) ?? defaultQuery.type;
+	let type = data.get(SearchQueryParam.TYPE) ?? defaultQuery[SearchQueryParam.TYPE];
 	if (type instanceof File) {
-		type = defaultQuery.type;
+		type = defaultQuery[SearchQueryParam.TYPE];
 	}
 
-	const includeStubsEntry = data.get(InputName.INCLUDE_STUBS);
+	const includeStubsEntry = data.get(SearchQueryParam.INCLUDE_STUBS);
 	// `FormData` encodes checkboxes as `'true'` or `null`
 	const includeStubs = includeStubsEntry === String(true) ? true :
 		includeStubsEntry === null ? false :
-			defaultQuery.includeStubs;
+			defaultQuery[SearchQueryParam.INCLUDE_STUBS];
 
 	const searchQuery: SearchQuery = {
-		name,
-		type,
-		includeStubs,
+		[SearchQueryParam.NAME]: name,
+		[SearchQueryParam.TYPE]: type,
+		[SearchQueryParam.INCLUDE_STUBS]: includeStubs,
 	};
 
 	return searchQuery;
@@ -50,23 +50,23 @@ export function getSearchQueryFromFormData(data: FormData): SearchQuery {
  */
 export function getUrlParamsFromSearchQuery(query: SearchQuery): URLSearchParams {
 	const {
-		name,
-		type,
-		includeStubs,
+		[SearchQueryParam.NAME]: name,
+		[SearchQueryParam.TYPE]: type,
+		[SearchQueryParam.INCLUDE_STUBS]: includeStubs,
 	} = query;
 
 	const params = new URLSearchParams();
 
-	if (name !== defaultQuery.name) {
-		params.set(InputName.NAME, name);
+	if (name !== defaultQuery[SearchQueryParam.NAME]) {
+		params.set(SearchQueryParam.NAME, name);
 	}
 
-	if (type !== defaultQuery.type) {
-		params.set(InputName.TYPE, type);
+	if (type !== defaultQuery[SearchQueryParam.TYPE]) {
+		params.set(SearchQueryParam.TYPE, type);
 	}
 
-	if (includeStubs !== defaultQuery.includeStubs) {
-		params.set(InputName.INCLUDE_STUBS, String(includeStubs));
+	if (includeStubs !== defaultQuery[SearchQueryParam.INCLUDE_STUBS]) {
+		params.set(SearchQueryParam.INCLUDE_STUBS, String(includeStubs));
 	}
 
 	return params;
