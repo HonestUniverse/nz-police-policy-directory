@@ -1,23 +1,15 @@
 import { stripAccents } from '../../../../build/util/to-url-segment.js';
 
-import { SearchQuery } from './SearchQuery.js';
+import {
+	SearchQuery,
+	SearchQueryParam,
+} from './SearchQuery.js';
+import {
+	SearchIndex,
+	SearchIndexEntry,
+} from '../../../../schema/SearchIndex.js';
 
-enum Selector {
-	WRAPPER = '.js-search__item-wrapper',
-}
-
-enum DataAttribute {
-	NAME = 'data-search-name',
-	PREVIOUS_NAMES = 'data-search-previous-names',
-	TYPE = 'data-search-type',
-	STUB = 'data-search-stub',
-}
-
-enum CssClass {
-	SHOW_PREVIOUS_NAMES = 'show-previous-names',
-}
-
-enum MatchResult {
+export enum MatchResult {
 	NO_MATCH,
 	EMPTY_QUERY,
 	TYPE,
@@ -25,52 +17,41 @@ enum MatchResult {
 	PREVIOUS_NAME,
 }
 
+// TODO: Add a relevance value
+type SearchResultEntry = {
+	match: MatchResult;
+};
+
+type SearchResult = [string, SearchResultEntry][];
+
 /**
- * Apply a `SearchQuery` to a list of searchable `HTMLElement` items
+ * Apply a `SearchQuery` to a `SearchIndex`
  */
-export function applySearch($items: HTMLElement[], query: SearchQuery) {
-	const $matchedItems: HTMLElement[] = [];
+export function applySearch(index: SearchIndex, query: SearchQuery): SearchResult {
+	const results: SearchResult = [];
 
-	for (const $item of $items) {
-		const itemResult = applySearchToItem(query, $item);
-		const shouldShow = itemResult !== MatchResult.NO_MATCH;
-		if (shouldShow) {
-			$matchedItems.push($item);
-		}
-
-		const $wrapper = $item.closest<HTMLElement>(Selector.WRAPPER) || $item;
-
-		if (shouldShow === $wrapper.hidden) {
-			$wrapper.hidden = !shouldShow;
-		}
-
-		const previousNameMatch = itemResult === MatchResult.PREVIOUS_NAME;
-		const hasPreviousNamesClass = $item.classList.contains(CssClass.SHOW_PREVIOUS_NAMES);
-
-		if (previousNameMatch !== hasPreviousNamesClass) {
-			if (hasPreviousNamesClass) {
-				$item.classList.remove(CssClass.SHOW_PREVIOUS_NAMES);
-			} else {
-				$item.classList.add(CssClass.SHOW_PREVIOUS_NAMES);
-			}
-		}
+	for (const [key, item] of Object.entries(index)) {
+		const itemResult = applySearchToItem(query, item);
+		results.push([key, {
+			match: itemResult,
+		}]);
 	}
 
-	return $matchedItems;
+	return results;
 }
 
 /**
  * Hide or show an item based on a `SearchQuery`
  */
-function applySearchToItem(query: SearchQuery, $item: HTMLElement): MatchResult {
-	const isStub = $item.getAttribute(DataAttribute.STUB) === 'true';
+function applySearchToItem(query: SearchQuery, item: SearchIndexEntry): MatchResult {
+	const isStub = item.isStub;
 
-	if (isStub && !query.includeStubs) {
+	if (isStub && !query[SearchQueryParam.INCLUDE_STUBS]) {
 		return MatchResult.NO_MATCH;
 	}
 
-	const nameMatch = applySearchToItemName(query, $item);
-	const typeMatch = applySearchToItemType(query, $item);
+	const nameMatch = applySearchToItemName(query, item);
+	const typeMatch = applySearchToItemType(query, item);
 
 	if (nameMatch === MatchResult.NO_MATCH || typeMatch === MatchResult.NO_MATCH) {
 		return MatchResult.NO_MATCH;
@@ -86,23 +67,23 @@ function applySearchToItem(query: SearchQuery, $item: HTMLElement): MatchResult 
 /**
  * Determine if an item matches the name part of a `SearchQuery`
  */
-function applySearchToItemName(query: SearchQuery, $item: HTMLElement): MatchResult {
-	const { name } = query;
+function applySearchToItemName(query: SearchQuery, item: SearchIndexEntry): MatchResult {
+	const {
+		[SearchQueryParam.NAME]: name,
+	} = query;
 
 	if (name === '') {
 		return MatchResult.EMPTY_QUERY;
 	} else {
-		const itemNames = getItemNames($item);
+		const itemNames = getItemNames(item);
 
 		for (const [i, itemName] of itemNames.entries()) {
-			if (typeof itemName === 'string') {
-				const match = matchQueryToName(name, itemName);
-				if (match) {
-					if (i === 0) {
-						return MatchResult.CURRENT_NAME;
-					} else {
-						return MatchResult.PREVIOUS_NAME;
-					}
+			const match = matchQueryToName(name, itemName);
+			if (match) {
+				if (i === 0) {
+					return MatchResult.CURRENT_NAME;
+				} else {
+					return MatchResult.PREVIOUS_NAME;
 				}
 			}
 		}
@@ -114,36 +95,9 @@ function applySearchToItemName(query: SearchQuery, $item: HTMLElement): MatchRes
 /**
  * Retrieve an array of a search item's current name and previous names it has.
  */
-function getItemNames($item: HTMLElement): string[] {
-	const nameAttr = $item.getAttribute(DataAttribute.NAME);
-	if (nameAttr === null) {
-		console.error(`ERROR: Search item has no name`);
-		console.error($item);
-		throw new TypeError();
-	}
-
-	const previousNamesAttr = $item.getAttribute(DataAttribute.PREVIOUS_NAMES);
-
-	const previousNames: string[] = (() => {
-		// Try to parse previous names from markup. If any part fails, return `[]`
-		if (previousNamesAttr) {
-			try {
-				const parsedNames: unknown = JSON.parse(previousNamesAttr.replace(/&quot;/g, '"'));
-				if (
-					Array.isArray(parsedNames) &&
-					parsedNames.every((el: unknown): el is string => typeof el === 'string')
-				) {
-					return parsedNames;
-				} else {
-					return [];
-				}
-			} catch (e) {
-				return [];
-			}
-		} else {
-			return [];
-		}
-	})();
+function getItemNames(item: SearchIndexEntry): string[] {
+	const nameAttr = item.name;
+	const previousNames = item.previousNames;
 
 	const names = [nameAttr, ...previousNames];
 
@@ -153,13 +107,15 @@ function getItemNames($item: HTMLElement): string[] {
 /**
  * Determine if an item matches the type part of a query
  */
-function applySearchToItemType(query: SearchQuery, $item: HTMLElement): MatchResult {
-	const { type } = query;
+function applySearchToItemType(query: SearchQuery, item: SearchIndexEntry): MatchResult {
+	const {
+		[SearchQueryParam.TYPE]: type,
+	} = query;
 
 	if (type === '') {
 		return MatchResult.EMPTY_QUERY;
 	} else {
-		const itemType = getItemType($item);
+		const itemType = item.type;
 
 		if (itemType === type) {
 			return MatchResult.TYPE;
@@ -167,15 +123,6 @@ function applySearchToItemType(query: SearchQuery, $item: HTMLElement): MatchRes
 			return MatchResult.NO_MATCH;
 		}
 	}
-}
-
-/**
- * Retrieve a search item's type
- */
-function getItemType($item: HTMLElement): string | null {
-	const typeAttr = $item.getAttribute(DataAttribute.TYPE);
-
-	return typeAttr;
 }
 
 /**

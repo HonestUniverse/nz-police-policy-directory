@@ -6,6 +6,8 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 
 import * as paths from './util/paths.js';
 
+import { toSearchIndex } from '../schema/SearchIndex.js';
+
 export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	/**
 	 * Generate the JSON file for the directory
@@ -17,6 +19,19 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 		return [new WriteFilePlugin(
 			`${dst}.json`,
 			JSON.stringify(data, null, '\t'),
+		)];
+	},
+
+	/**
+	 * Generate the JSON file used as a search index
+	 */
+	createSearchIndex(src, dst, buildData) {
+		const index = toSearchIndex(buildData.directory);
+		const fileDst = `${dst}/../search.json`;
+
+		return [new WriteFilePlugin(
+			fileDst,
+			JSON.stringify(index, null, '\t'),
 		)];
 	},
 

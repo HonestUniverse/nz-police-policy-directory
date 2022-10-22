@@ -23,6 +23,12 @@
 	title: 'NZ Police Policy Directory',
 	description: `An independent directory of NZ Police policies and related documents.`,
 	backLink: true,
+	preload: [
+		{
+			href: '/search.json',
+			as: 'fetch',
+		},
+	],
 }); %>
 
 <article class="directory">
