@@ -73,7 +73,9 @@ export function isSearchIndex(testData: unknown): testData is SearchIndex {
 	}
 
 	const entries = Object.entries(data);
-	if (!entries.every(([key, val]) => typeof key === 'string' || isSearchIndexEntry(val))) {
+	if (!entries.every(
+		([key, val]) => typeof key === 'string' && isSearchIndexEntry(val)
+	)) {
 		return false;
 	}
 
