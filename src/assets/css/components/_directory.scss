@@ -1,10 +1,6 @@
 .directory {}
 
 .directory__search {
-	body.no-js & {
-		display: none;
-	}
-
 	isolation: isolate;
 }
 
@@ -98,7 +94,22 @@
 	}
 }
 
+.directory__search__submit {
+	@include button($theme: "secondary");
+}
+
 .directory__search-results {}
+
+.directory__search-summary {
+	display: block;
+	margin-top: 1rem;
+
+	@include font-base-20;
+}
+
+.directory__search-summary__query {
+	@include font-base-20b;
+}
 
 .directory__no-search-results {
 	margin-top: 1rem;
