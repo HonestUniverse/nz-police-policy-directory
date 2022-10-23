@@ -1,4 +1,4 @@
-import { toUrlSegment } from '../build/util/to-url-segment.js';
+import { toUrlSegment } from '../src/shared/to-url-segment.js';
 
 const testExpectations = (expectations: Iterable<[string, string]>) => () => {
 	for (const [before, after] of expectations) {

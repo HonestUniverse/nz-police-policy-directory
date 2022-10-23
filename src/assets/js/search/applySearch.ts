@@ -1,4 +1,4 @@
-import { stripAccents } from '../../../../build/util/to-url-segment.js';
+import { stripAccents } from '../../../shared/to-url-segment.js';
 
 import {
 	SearchQuery,
@@ -7,7 +7,7 @@ import {
 import {
 	SearchIndex,
 	SearchIndexEntry,
-} from '../../../../schema/SearchIndex.js';
+} from '../../../shared/SearchIndex.js';
 
 export enum MatchResult {
 	NO_MATCH,

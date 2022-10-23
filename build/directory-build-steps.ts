@@ -6,7 +6,7 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 
 import * as paths from './util/paths.js';
 
-import { toSearchIndex } from '../schema/SearchIndex.js';
+import { toSearchIndex } from '../src/shared/SearchIndex.js';
 
 export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 	/**

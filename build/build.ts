@@ -1,4 +1,4 @@
-import { toUrlSegment } from './util/to-url-segment.js';
+import { toUrlSegment } from '../src/shared/to-url-segment.js';
 
 import type { Policy } from '../schema/Policy.js';
 
