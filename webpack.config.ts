@@ -83,6 +83,23 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 					],
 				},
 				{
+					test: /\.ts$/,
+					include: [
+						`${paths.schemaFull}\\`,
+					],
+					use: [
+						{
+							loader: 'ts-loader',
+							options: {
+								configFile: 'tsconfig.schema.json',
+								compilerOptions: {
+									noEmit: false,
+								},
+							},
+						},
+					],
+				},
+				{
 					test: /\.scss$/,
 					use: [
 						{
