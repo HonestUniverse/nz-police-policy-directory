@@ -53,6 +53,7 @@ function shouldCache(request: Request): boolean {
 
 	const cachePatterns: (string | RegExp)[] = [
 		`/favicon.ico`,
+		`/search.json`,
 		/^\/assets\//,
 	];
 
