@@ -1,4 +1,4 @@
-import { Policy } from './Policy.js';
+import { Policy } from '../../schema/Policy.js';
 
 export type SearchIndexEntry = {
 	name: Policy['name'],

@@ -3,7 +3,7 @@ import { debounce } from '../utils/debounce.js';
 import {
 	SearchIndex,
 	isSearchIndex,
-} from '../../../../schema/SearchIndex.js';
+} from '../../../shared/SearchIndex.js';
 
 import {
 	SearchQuery,
