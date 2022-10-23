@@ -30,5 +30,7 @@ export const assetsFull = path.resolve(srcFull, './assets');
 export const sharedFull = path.resolve(srcFull, './shared');
 export const workersFull = path.resolve(srcFull, './workers');
 
+export const schemaFull = path.resolve(buildFull, '../schema');
+
 export const distFull = path.resolve(buildFull, '../dist');
 export const distAssetsFull = path.resolve(buildFull, '../dist/assets');
