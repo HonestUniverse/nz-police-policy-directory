@@ -14,7 +14,10 @@ import {
 	SearchQueryParam,
 } from './SearchQuery.js';
 
-import { applySearch } from './applySearch.js';
+import {
+	SearchResult,
+	applySearch,
+} from './applySearch.js';
 
 import { MatchResult } from './applySearch.js';
 
@@ -23,7 +26,7 @@ enum Selector {
 	INPUT = '.js-search__input',
 	WRAPPER = '.js-search__item-wrapper',
 	ITEM = '.js-search__item',
-	NO_RESULTS = '.js-search__no-results',
+	SUMMARY = '.js-search__summary',
 }
 
 enum DataAttribute {
@@ -176,11 +179,6 @@ function createInputHandler(index: SearchIndex) {
  * Perform a search with a given form and show the results
  */
 function performSearch($form: HTMLFormElement, index: SearchIndex) {
-	const $target = getSearchFormResultsElement($form);
-	if (!$target) {
-		return;
-	}
-
 	const data = new FormData($form);
 	const searchQuery = getSearchQueryFromFormData(data);
 
@@ -191,9 +189,19 @@ function performSearch($form: HTMLFormElement, index: SearchIndex) {
 		lastSearchQuery = searchQuery;
 	}
 
-	const $items = Array.from($target.querySelectorAll<HTMLElement>(Selector.ITEM));
-	// const $results = applySearch($items, searchQuery);
 	const results = applySearch(index, searchQuery);
+	applySearchResultsToDom($form, results, searchQuery);
+
+	updateUrlToMatchSearchQuery(searchQuery);
+}
+
+function applySearchResultsToDom($form: HTMLFormElement, results: SearchResult, query: SearchQuery): void {
+	const $target = getSearchFormResultsElement($form);
+	if (!$target) {
+		return;
+	}
+
+	const $items = Array.from($target.querySelectorAll<HTMLElement>(Selector.ITEM));
 
 	for (const [key, result] of results) {
 		const $item = $items.find(($el) => $el.getAttribute(DataAttribute.key) === key);
@@ -224,16 +232,14 @@ function performSearch($form: HTMLFormElement, index: SearchIndex) {
 		// TODO: Reorder based on relevance
 	}
 
-	const $noResultsArea = $target.querySelector<HTMLElement>(Selector.NO_RESULTS);
-	if ($noResultsArea) {
-		if (results.some(([key, result]) => result.match !== MatchResult.NO_MATCH)) {
-			$noResultsArea.hidden = true;
-		} else {
-			$noResultsArea.hidden = false;
-		}
+	// TODO: Update current search summary
+	const $summary = $target.querySelector<HTMLElement>(Selector.SUMMARY);
+	if ($summary) {
+		const summaryString = getSearchSummaryHTML(results, query);
+		console.log(summaryString);
+		$summary.innerHTML = summaryString;
+		$summary.hidden = !summaryString;
 	}
-
-	updateUrlToMatchSearchQuery(searchQuery);
 }
 
 /**
@@ -265,6 +271,21 @@ function updateUrlToMatchSearchQuery(searchQuery: SearchQuery): void {
 	}
 
 	window.history.replaceState(null, '', String(newUrl));
+}
+
+/**
+ * Construct an HTML string summarising a `SearchQuery`
+ */
+function getSearchSummaryHTML(results: SearchResult, query: SearchQuery): string {
+	if (!query[SearchQueryParam.NAME]) {
+		return '';
+	}
+
+	const numResults = results.filter(([key, result]) => result.match !== MatchResult.NO_MATCH).length;
+
+	const summary = `${numResults} result${numResults === 1 ? '' : 's'} for <span class="directory__search-summary__query">${query[SearchQueryParam.NAME]}</span>`;
+
+	return summary;
 }
 
 // Self-initialise

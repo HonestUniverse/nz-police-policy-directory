@@ -103,6 +103,13 @@ $icon-tick: "\2714";
 	line-height: 1.4;
 }
 
+@mixin font-base-20b {
+	font-family: $font-base;
+	font-weight: $bold;
+	font-size: rem(20px);
+	line-height: 1.4;
+}
+
 @mixin font-base-18 {
 	font-family: $font-base;
 	font-weight: $regular;
