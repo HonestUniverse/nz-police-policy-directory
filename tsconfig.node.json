@@ -7,7 +7,6 @@
 	"include": [
 		"webpack.config.ts",
 		"build/**/*.ts",
-		"schema/**/*.ts",
 		"spec/**/*.ts",
-	]
+	],
 }
