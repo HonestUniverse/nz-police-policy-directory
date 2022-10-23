@@ -4,6 +4,7 @@ import {
 	SearchQuery,
 	SearchQueryParam,
 } from './SearchQuery.js';
+
 import {
 	SearchIndex,
 	SearchIndexEntry,
@@ -22,7 +23,7 @@ type SearchResultEntry = {
 	match: MatchResult;
 };
 
-type SearchResult = [string, SearchResultEntry][];
+export type SearchResult = [string, SearchResultEntry][];
 
 /**
  * Apply a `SearchQuery` to a `SearchIndex`
