@@ -13,6 +13,8 @@ export {};
 /** The name of the current version of the cache being used */
 const cacheName = 'v1';
 
+const networkErrorPath = '/408.html';
+
 /**
  * Alias for `caches.delete`, used with `Array.prototype.map`
  */
@@ -34,9 +36,18 @@ async function deleteOldCaches(): Promise<void> {
 /**
  * Cache a network response for a particular request
  */
-async function addToCache(request: Request, response: Response): Promise<void> {
+async function addToCache(request: Request, response: Response): Promise<void>
+async function addToCache(assetPath: string | string[]): Promise<void>
+async function addToCache(request: RequestInfo | RequestInfo[], response?: Response): Promise<void> {
 	const cache = await caches.open(cacheName);
-	await cache.put(request, response);
+
+	if (Array.isArray(request)) {
+		await cache.addAll(request);
+	} else if (response) {
+		await cache.put(request, response);
+	} else {
+		await cache.add(request);
+	}
 }
 
 async function getCachedResponse(request: Request): Promise<Response | undefined> {
@@ -114,9 +125,15 @@ async function networkFirst(request: Request): Promise<Response> {
 			}
 		}
 
-		// TODO: Show a custom error page instead for relevant requests, if possible?
+		// If the request is for a page, and we don't have a cached response, try to return the generic network error page
+		if (request.destination === 'document') {
+			const fallbackPage = await caches.match(networkErrorPath);
+			if (fallbackPage) {
+				return fallbackPage;
+			}
+		}
 
-		// If we don't have a cached response, return a generic network error
+		// Otherwise, return a generic network error in plain text instead
 		const message = error instanceof Error ? error.message : 'Network error';
 		return new Response(message, {
 			status: 408, // REQUEST_TIMEOUT
@@ -128,6 +145,11 @@ async function networkFirst(request: Request): Promise<Response> {
 }
 
 self.addEventListener('install', (event) => {
+	event.waitUntil(
+		// TODO: Need to ensure necessary assets, e.g. CSS, are also cached
+		addToCache(networkErrorPath),
+	);
+
 	self.skipWaiting();
 });
 

@@ -2,7 +2,8 @@
 	locals: {
 		siteData: SiteData,
 		pageData: {
-			error: number,
+			error: number | string,
+			errorTitle?: string,
 			errorString: string,
 		},
 	}
@@ -16,7 +17,7 @@
 %>
 
 <%- include('../layout/head', {
-	title: error,
+	title: String(error),
 	meta: [{
 		name: 'robots',
 		content: 'noindex',
@@ -24,6 +25,10 @@
 }); %>
 
 <div class="content">
+	<% if (locals.errorTitle) { %>
+		<h1><%- locals.errorTitle %></h1>
+	<% } %>
+
 	<p><%- errorString %></p>
 </div>
 

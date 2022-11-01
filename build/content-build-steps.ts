@@ -71,6 +71,42 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 	},
 
 	/**
+	 * Generate the HTML for the 408 (Request Timeout) page
+	 */
+	create408Page(src, dst, buildStepData) {
+		const {
+			siteData,
+			...basePageData
+		} = buildStepData;
+
+		const pageData = {
+			...basePageData,
+			error: 'Network Error',
+			errorTitle: 'Network Error',
+			errorString: 'Please check your internet connection.',
+		};
+
+		return [
+			new HtmlWebpackPlugin({
+				filename: `${dst}/408.html`,
+				template: TemplateCustomizer({
+					htmlLoaderOption: {
+						sources: false,
+					},
+					templatePath: `${paths.templates}/pages/error.ejs`,
+					templateEjsLoaderOption: {
+						data: {
+							siteData,
+							pageData,
+						},
+					},
+				}),
+				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+			}),
+		];
+	},
+
+	/**
 	 * Generate the HTML for the About page
 	 */
 	createAboutPage(src, dst, buildStepData) {
