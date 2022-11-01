@@ -34,6 +34,10 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 				'.js': ['.ts', '.js'],
 			},
 		},
+
+		performance: {
+			maxAssetSize: 20 * 1024 * 1024, // 25 MB - max file size on Cloudflare Pages
+		},
 	};
 
 	const mainConfig: webpack.Configuration = Object.assign({}, baseConfig, {
