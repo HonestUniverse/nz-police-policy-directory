@@ -232,11 +232,10 @@ function applySearchResultsToDom($form: HTMLFormElement, results: SearchResult, 
 		// TODO: Reorder based on relevance
 	}
 
-	// TODO: Update current search summary
+	// Update current search summary
 	const $summary = $target.querySelector<HTMLElement>(Selector.SUMMARY);
 	if ($summary) {
 		const summaryString = getSearchSummaryHTML(results, query);
-		console.log(summaryString);
 		$summary.innerHTML = summaryString;
 		$summary.hidden = !summaryString;
 	}
