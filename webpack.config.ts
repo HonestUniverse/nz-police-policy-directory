@@ -61,7 +61,7 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 				{
 					test: /\.ts$/,
 					include: [
-						`${paths.sharedFull}\\`,
+						`${paths.sharedFull}`,
 					],
 					use: [
 						{
@@ -75,7 +75,7 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 				{
 					test: /\.ts$/,
 					include: [
-						`${paths.assetsFull}\\`,
+						`${paths.assetsFull}`,
 					],
 					use: [
 						{
@@ -89,7 +89,7 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 				{
 					test: /\.ts$/,
 					include: [
-						`${paths.schemaFull}\\`,
+						`${paths.schemaFull}`,
 					],
 					use: [
 						{
@@ -169,7 +169,7 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 				{
 					test: /\.ts$/,
 					include: [
-						`${paths.workersFull}\\`,
+						`${paths.workersFull}`,
 					],
 					use: [
 						{
