@@ -35,17 +35,17 @@
 		"webpack-cli": "^4.9.2"
 	},
 	"scripts": {
-		"build": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" webpack --config webpack.config.ts --mode production",
-		"watch": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" webpack --config webpack.config.ts --mode development --watch",
-		"buildTest": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" webpack --config webpack.config.ts --mode development --env test",
-		"watchTest": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" webpack --config webpack.config.ts --mode development --env test --watch",
-		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" node build/migrate.ts",
-		"generateIds": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" node build/generate-all-ids.ts",
-		"generateStubs": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" node build/stubs/ir-01-22-11586.ts",
+		"build": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode production",
+		"watch": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode development --watch",
+		"buildTest": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode development --env test",
+		"watchTest": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode development --env test --watch",
+		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/migrate.ts",
+		"generateIds": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/generate-all-ids.ts",
+		"generateStubs": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/stubs/ir-01-22-11586.ts",
 		"lintJs": "eslint build/**/*.ts src/assets/js/**/*.ts src/shared/**/*.ts src/workers/**/*.ts",
 		"lintCss": "stylelint src/assets/css/**",
 		"lint": "npm run lintJs && npm run lintCss",
-		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" jasmine"
+		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" jasmine"
 	},
 	"repository": {
 		"type": "git",
