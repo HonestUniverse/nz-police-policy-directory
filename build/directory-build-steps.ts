@@ -5,6 +5,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
 import * as paths from './util/paths.js';
+import { defaultChunks } from './util/defaultChunks.js';
 
 import { toSearchIndex } from '../src/shared/SearchIndex.js';
 
@@ -59,7 +60,10 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style'],
+				chunks: [
+					...defaultChunks,
+					'style-main',
+				],
 			}),
 		];
 	},
@@ -88,7 +92,10 @@ export const directoryBuildSteps: Record<string, DirectoryBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style'],
+				chunks: [
+					...defaultChunks,
+					'style-main',
+				],
 			}),
 		];
 	},

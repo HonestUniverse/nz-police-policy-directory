@@ -1,20 +1,8 @@
-// File structure:
-//	tools
-//		Tool files contain only mixins and functions, so they will not generate any CSS on their own.
-//		These mixins and functions are general purpose, and shouldn't need to change from theme to theme.
-//	theme
-//		Theme files contain SCSS variables and mixins, so they will not generate any CSS on their own.
-//		These mixins are part of the theme.
-//	patterns
-//		Pattern files contain mixins that are used to generate variations of similar components, like buttons.
-//	base
-//		Base files generate CSS that has the lowest priority, such as reset CSS, @font-face declarations, and custom properties on the `:root`.
-//	extendables
-//		Extendable files contain SCSS placeholder selectors, which may be extended by components.
-//	components
-//		Component files each contain the SCSS for a single component.
+// This file doesn't generate any CSS, but sets up the necessary scaffolding for other SCSS files to use.
 
-// Doesn't generate CSS
+// # Tools
+// Tool files contain only mixins and functions, so they will not generate any CSS on their own.
+// These mixins and functions are general purpose, and shouldn't need to change from theme to theme.
 @import "tools/active";
 @import "tools/grid-ram";
 @import "tools/print-hide";
@@ -24,20 +12,16 @@
 @import "tools/use-var";
 @import "tools/visually-hidden";
 
+// # Theme
+// Theme files contain SCSS variables and mixins, so they will not generate any CSS on their own.
+// These mixins are part of the theme.
 @import "theme/breakpoints";
 @import "theme/focus-outline";
 @import "theme/fonts";
 @import "theme/layout";
 @import "theme/palette";
 
+// # Patterns
+// Pattern files contain mixins that are used to generate variations of similar components, like buttons.
 @import "patterns/button";
 @import "patterns/icon-indicator";
-
-// Generates CSS
-@import "base/reset";
-@import "base/palette";
-@import "base/fonts";
-
-@import "extendables/card";
-@import "extendables/content";
-@import "extendables/file-metadata";
