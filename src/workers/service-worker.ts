@@ -146,7 +146,8 @@ async function networkFirst(request: Request): Promise<Response> {
 
 self.addEventListener('install', (event) => {
 	event.waitUntil(
-		// TODO: Need to ensure necessary assets, e.g. CSS, are also cached
+		// Necessary assets to display the network error page are cached when
+		// any page is loaded once the service worker is installed
 		addToCache(networkErrorPath),
 	);
 

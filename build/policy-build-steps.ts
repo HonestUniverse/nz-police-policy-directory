@@ -8,6 +8,7 @@ import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'templ
 import { toUrlSegment } from '../src/shared/to-url-segment.js';
 import { makeRootRelative } from './util/make-root-relative.js';
 import * as paths from './util/paths.js';
+import { defaultChunks } from './util/defaultChunks.js';
 
 import { FileDocumentType } from '../schema/File.js';
 
@@ -111,7 +112,10 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 										},
 									},
 								}),
-								chunks: ['priority', 'main', 'enhancements', 'style-document'],
+								chunks: [
+									...defaultChunks,
+									'style-document',
+								],
 							}));
 
 							// Update file.path to ensure the build HTML points to the correct place
@@ -160,7 +164,10 @@ export const policyBuildSteps: Record<string, PolicyBuildStep> = {
 					},
 				},
 			}),
-			chunks: ['priority', 'main', 'enhancements', 'style'],
+			chunks: [
+				...defaultChunks,
+				'style-main',
+			],
 		})];
 	},
 
@@ -311,6 +318,9 @@ function createVersionPlugin(
 				},
 			},
 		}),
-		chunks: ['priority', 'main', 'enhancements', 'style'],
+		chunks: [
+			...defaultChunks,
+			'style-main',
+		],
 	});
 }

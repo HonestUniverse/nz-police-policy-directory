@@ -2,6 +2,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
 import * as paths from './util/paths.js';
+import { defaultChunks } from './util/defaultChunks.js';
 
 import type { ContentBuildStep } from './BuildStep.js';
 
@@ -30,7 +31,10 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style'],
+				chunks: [
+					...defaultChunks,
+					'style-main',
+				],
 			}),
 		];
 	},
@@ -65,7 +69,9 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+				chunks: [
+					...defaultChunks,
+				],
 			}),
 		];
 	},
@@ -101,7 +107,9 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+				chunks: [
+					...defaultChunks,
+				],
 			}),
 		];
 	},
@@ -130,7 +138,9 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+				chunks: [
+					...defaultChunks,
+				],
 			}),
 		];
 	},
@@ -159,7 +169,9 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+				chunks: [
+					...defaultChunks,
+				],
 			}),
 		];
 	},
@@ -188,7 +200,10 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style'],
+				chunks: [
+					...defaultChunks,
+					'style-main',
+				],
 			}),
 		];
 	},
@@ -217,7 +232,10 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+				chunks: [
+					...defaultChunks,
+					'style-contributing',
+				],
 			}),
 		];
 	},
