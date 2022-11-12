@@ -10,10 +10,19 @@
 declare const self: ServiceWorkerGlobalScope;
 export {};
 
+interface CacheAction {
+	/** A cache busting string for a set of assets to be cleared from a Service Worker cache */
+	clear?: string,
+	add: boolean,
+}
+
 /** The name of the current version of the cache being used */
-const cacheName = 'v1';
+const cacheName = 'v2';
 
 const networkErrorPath = '/408.html';
+
+/** This `Set` is used to prevent the same sets of assets from being cleared from the cache multiple times */
+const clearedCacheBustingStrings = new Set<string>();
 
 /**
  * Alias for `caches.delete`, used with `Array.prototype.map`
@@ -34,6 +43,33 @@ async function deleteOldCaches(): Promise<void> {
 }
 
 /**
+ * Clears all assets in the current cache that contain a given cache busting string.
+ */
+async function clearCacheBatch(cacheBustingString: string): Promise<void> {
+	if (clearedCacheBustingStrings.has(cacheBustingString)) {
+		return;
+	}
+	clearedCacheBustingStrings.add(cacheBustingString);
+
+	const cache = await caches.open(cacheName);
+	const keys = await cache.keys();
+
+	// Do a `map` with `Promise.all` and then a `filter` in order to filter by an asynchronous function
+	const filterResults = await Promise.all(keys.map(async (req) => {
+		// Find all items with a cache busting string that isn't the current one
+		const reqCacheBustingString = await getCacheBustingString(req);
+		const shouldRemove = Boolean(
+			reqCacheBustingString &&
+			reqCacheBustingString !== cacheBustingString
+		);
+		return shouldRemove;
+	}));
+	const cachesToClear = keys.filter((req, i) => filterResults[i]);
+
+	await Promise.all(cachesToClear.map((req) => removeFromCache(req, cache)));
+}
+
+/**
  * Cache a network response for a particular request
  */
 async function addToCache(request: Request, response: Response): Promise<void>
@@ -50,6 +86,17 @@ async function addToCache(request: RequestInfo | RequestInfo[], response?: Respo
 	}
 }
 
+/**
+ * Remove a network response from the cache
+ */
+async function removeFromCache(request: RequestInfo, cache?: Cache): Promise<void> {
+	cache = cache || await caches.open(cacheName);
+	await cache.delete(request);
+}
+
+/**
+ * Retrieve a cached `Response` for a given `Request` from the cache
+ */
 async function getCachedResponse(request: Request): Promise<Response | undefined> {
 	const cache = await caches.open(cacheName);
 	const cacheResponse = await cache.match(request);
@@ -57,10 +104,38 @@ async function getCachedResponse(request: Request): Promise<Response | undefined
 }
 
 /**
- * Determine whether or not a resource should be able to be served from the Service Worker's cache
+ * We apply a cache busting string to many assets. This function looks in the cache for
+ * assets with this string and, if it finds one, returns it.
+ *
+ * @param {Request} [req] - If specified, determines the cache busting string for a specific request. Otherwise, finds the first one in the current cache.
  */
-function shouldCache(request: Request): boolean {
-	let shouldCache = false;
+async function getCacheBustingString(req?: Request): Promise<string | null> {
+	let paths: string[];
+
+	if (req) {
+		paths = [new URL(req.url).pathname];
+	} else {
+		const cache = await caches.open(cacheName);
+		const keys = await cache.keys();
+		// Important to reverse this array so more recently cached items appear first
+		paths = keys.map((req) => new URL(req.url).pathname).reverse();
+	}
+
+	const cacheBustingString = paths.map((path) => {
+		const cacheBustingString = path.match(/.+(\.v-[^.]+\.)/)?.[1] ?? null;
+
+		return cacheBustingString;
+	}).find(Boolean) ?? null;
+
+	return cacheBustingString;
+}
+
+/**
+ * Determine what action to take with the Service Worker's cache when faced with a given `Request`
+ */
+async function determineCacheAction(request: Request): Promise<CacheAction> {
+	let cacheBustingStringToClear: string | undefined;
+	let shouldAddToCache = false;
 
 	const cachePatterns: (string | RegExp)[] = [
 		`/favicon.ico`,
@@ -73,38 +148,58 @@ function shouldCache(request: Request): boolean {
 	for (const pattern of cachePatterns) {
 		if (typeof pattern === 'string') {
 			if (path === pattern) {
-				shouldCache = true;
+				shouldAddToCache = true;
 				break;
 			}
 		} else {
 			if (pattern.test(path)) {
-				shouldCache = true;
+				shouldAddToCache = true;
+
+				// Because we're using a cache-busting string, many assets' filenames change
+				// from deploy to deploy. So we may need to clear them from the cache
+				const currentCacheBustingString = await getCacheBustingString();
+				const reqCacheBustingString = await getCacheBustingString(request);
+				if (currentCacheBustingString && reqCacheBustingString) {
+					if (currentCacheBustingString !== reqCacheBustingString) {
+						cacheBustingStringToClear = reqCacheBustingString;
+					}
+				}
+
 				break;
 			}
 		}
 	}
 
-	return shouldCache;
+	const cacheAction: CacheAction = {
+		clear: cacheBustingStringToClear,
+		add: shouldAddToCache,
+	};
+	return cacheAction;
 }
 
 /**
  * Try to fall back to a cached response if the network response fails
  */
 async function networkFirst(request: Request): Promise<Response> {
-	const shouldBeCached = shouldCache(request);
+	const cacheAction = await determineCacheAction(request);
 
 	try {
 		const networkResponse = await fetch(request);
 
 		if (networkResponse.ok) {
-			if (shouldBeCached) {
-				// TODO: Because we're using a cache-busting string, many assets' filenames change from deploy to deploy. Should we be doing cleanup here?
+			// Kick off cache actions, but don't wait for them to complete before returning a response
+			if (cacheAction.clear) {
+				clearCacheBatch(cacheAction.clear);
+			}
+
+			if (cacheAction.add) {
 				addToCache(request, networkResponse.clone());
 			}
+
 			return networkResponse;
 		} else {
 			// If the request should be in the cache, try to return a cached response
-			if (shouldBeCached) {
+			if (cacheAction.add) {
 				const cachedResponse = await getCachedResponse(request);
 				if (cachedResponse) {
 					return cachedResponse;
@@ -118,7 +213,7 @@ async function networkFirst(request: Request): Promise<Response> {
 		// `fetch` can throw an error if there was a network error
 
 		// If the request should be in the cache, try to return a cached response
-		if (shouldBeCached) {
+		if (cacheAction.add) {
 			const cachedResponse = await getCachedResponse(request);
 			if (cachedResponse) {
 				return cachedResponse;
