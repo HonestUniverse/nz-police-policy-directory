@@ -19,7 +19,7 @@ enum Mode {
 
 async function getConfig(env: Record<string, unknown>, argsv: Record<string, unknown>) {
 	const mode = argsv.mode === Mode.DEVELOPMENT ? Mode.DEVELOPMENT : Mode.PRODUCTION;
-	const cacheBustingString = mode === Mode.PRODUCTION ? `-${generateCacheBustingString()}` : '';
+	const cacheBustingString = mode === Mode.PRODUCTION ? `.v-${generateCacheBustingString()}` : '';
 	const optimization = mode === Mode.DEVELOPMENT ? { minimize: false } : {};
 	const devtool = mode === Mode.DEVELOPMENT ? 'eval-source-map' : 'source-map';
 
