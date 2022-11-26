@@ -1,6 +1,10 @@
 .directory {}
 
 .directory__search {
+	body.no-js & {
+		display: none;
+	}
+
 	isolation: isolate;
 }
 
