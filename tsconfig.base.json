@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"target": "esnext",
+		"module": "esnext",
+		"declaration": true,
+		"sourceMap": true,
+		"skipLibCheck": true,
+
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"importsNotUsedAsValues": "preserve",
+		"forceConsistentCasingInFileNames": true,
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"noImplicitAny": true,
+		"incremental": true,
+
+		"baseUrl": "./",
+	}
+}

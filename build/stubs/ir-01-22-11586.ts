@@ -642,18 +642,18 @@ const stubsSourceFiltered = stubsSourceFixed.filter(([name]) => !excludedNames.i
 
 const provenance: Provenance = {
 	source: ProvenanceSource.NZ_POLICE,
-		method: ProvenanceMethod.RELEASED_UNDER_THE_OIA,
-		oiaRequest: {
-			requester: 'Mark Hanna',
-			id: 'IR-01-22-11586',
-			responseUrl: 'https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199',
-			withholdings: OIAWithholdingsSummary.NONE,
-		},
-		extracted: '2022-05-22',
-		released: '2022-06-13',
-		retrieved: '2022-06-18',
-		url: 'https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199',
-		fileUrl: 'https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx',
+	method: ProvenanceMethod.RELEASED_UNDER_THE_OIA,
+	oiaRequest: {
+		requester: 'Mark Hanna',
+		id: 'IR-01-22-11586',
+		responseUrl: 'https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199',
+		withholdings: OIAWithholdingsSummary.NONE,
+	},
+	extracted: '2022-05-22',
+	released: '2022-06-13',
+	retrieved: '2022-06-18',
+	url: 'https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199',
+	fileUrl: 'https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx',
 };
 
 const stubs: StubPolicyWith<StubProps>[] = stubsSourceFiltered.map(([name, date]) => ({
