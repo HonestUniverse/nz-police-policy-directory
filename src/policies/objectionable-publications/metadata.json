@@ -7,7 +7,8 @@
 			"id": "u-qkjhq",
 			"duration": {
 				"on": [
-					"2022-10-12"
+					"2022-10-12",
+					"2022-10-18"
 				]
 			},
 			"provenance": [
@@ -30,6 +31,53 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2022-10-18/objectionable-publications-redacted-191022.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 4888774,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": {
+								"6(c)": "Information was withheld on pages 14–16, 33, 35, and 36."
+							},
+							"published": {
+								"year": 2022,
+								"month": 10
+							},
+							"extracted": "2022-10-18",
+							"retrieved": "2022-10-21",
+							"url": "https://www.police.govt.nz/about-us/publication/objectionable-publications-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20221020201130/https://www.police.govt.nz/about-us/publication/objectionable-publications-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/objectionable-publications-redacted-191022.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20221020201130/https://www.police.govt.nz/sites/default/files/publications/objectionable-publications-redacted-191022.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 37–40 are images of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "2022-10-12/Brown Roger IR 01 22 27618 Response.pdf",
 					"type": "application/pdf",

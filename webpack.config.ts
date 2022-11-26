@@ -23,7 +23,7 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 	const optimization = mode === Mode.DEVELOPMENT ? { minimize: false } : {};
 	const devtool = mode === Mode.DEVELOPMENT ? 'eval-source-map' : 'source-map';
 
-	const baseConfig = {
+	const baseConfig: Partial<webpack.Configuration> = {
 		mode,
 		optimization,
 		devtool,

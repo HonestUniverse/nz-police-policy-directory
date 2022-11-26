@@ -1,4 +1,4 @@
-import { Policy } from '../../schema/Policy.js';
+import { Policy, PolicyType } from '../../schema/Policy.js';
 
 export type SearchIndexEntry = {
 	name: Policy['name'],
@@ -42,6 +42,10 @@ function isSearchIndexEntry(testData: unknown): testData is SearchIndexEntry {
 		Array.isArray(data.previousNames) &&
 		data.previousNames.every((el) => typeof el === 'string')
 	)) {
+		return false;
+	}
+
+	if (!Object.values(PolicyType).includes(data.type)) {
 		return false;
 	}
 
