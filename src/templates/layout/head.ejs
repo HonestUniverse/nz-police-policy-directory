@@ -13,6 +13,10 @@
 			name: string,
 			content: string,
 		}>,
+		preload?: Array<{
+			href: string,
+			as: string,
+		}>,
 	}
 %>
 
@@ -67,7 +71,10 @@
 
 		<% if (locals.meta) { %>
 			<% for (const { name, content } of locals.meta) { %>
-				<meta name="<%= name %>" content="<%= content %>" />
+				<meta
+					name="<%= name %>"
+					content="<%= content %>"
+				/>
 			<% } %>
 		<% } %>
 
@@ -75,6 +82,17 @@
 		<link rel="preload" href="/assets/fonts/roboto/roboto-regular-latin.woff2?v=1" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="/assets/fonts/roboto/roboto-bold-latin.woff2?v=1" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="/assets/fonts/font-icons/font-icons.ttf?v=2" as="font" type="font/ttf" crossorigin />
+
+		<% if (locals.preload) { %>
+			<% for (const { href, as } of locals.preload) { %>
+				<link
+					rel="preload"
+					href="<%= href %>"
+					as="<%= as %>"
+					<%= ['font', 'fetch'].includes(as) ? 'crossorigin' : '' %>
+				/>
+			<% } %>
+		<% } %>
 	</head>
 
 	<body class="no-js">
