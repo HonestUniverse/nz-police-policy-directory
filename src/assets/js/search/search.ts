@@ -1,146 +1,216 @@
-import { stripAccents } from '../../../../build/util/to-url-segment.js';
 import { debounce } from '../utils/debounce.js';
+
+import {
+	SearchIndex,
+	isSearchIndex,
+} from '../../../shared/SearchIndex.js';
+
+import {
+	SearchQuery,
+
+	getSearchQueryFromFormData,
+	getUrlParamsFromSearchQuery,
+	compareSearchQuery,
+	SearchQueryParam,
+} from './SearchQuery.js';
+
+import {
+	SearchResult,
+	applySearch,
+} from './applySearch.js';
+
+import { MatchResult } from './applySearch.js';
 
 enum Selector {
 	FORM = '.js-search',
 	INPUT = '.js-search__input',
-	ITEM = '.js-search__item',
 	WRAPPER = '.js-search__item-wrapper',
-	NO_RESULTS = '.js-search__no-results',
+	ITEM = '.js-search__item',
+	SUMMARY = '.js-search__summary',
 }
 
 enum DataAttribute {
-	NAME = 'data-search-name',
-	PREVIOUS_NAMES = 'data-search-previous-names',
-	TYPE = 'data-search-type',
-	STUB = 'data-search-stub',
+	KEY = 'data-search-key',
 }
 
 enum CssClass {
 	SHOW_PREVIOUS_NAMES = 'show-previous-names',
 }
 
-enum MatchResult {
-	NO_MATCH,
-	EMPTY_QUERY,
-	TYPE,
-	CURRENT_NAME,
-	PREVIOUS_NAME,
-}
-
-interface SearchQuery {
-	name: string,
-	type: string,
-	includeStubs: boolean,
-}
-
 /** The delay between the user stopping typing and the auto-search happening */
 const inputDelay = 200;
 
-function init() {
-	initEvents();
+/** The last `SearchQuery` that was executed */
+let lastSearchQuery: SearchQuery | null = null;
+
+async function init() {
+	const $form = document.querySelector<HTMLFormElement>(Selector.FORM);
+	if (!$form) {
+		return;
+	}
+	const params = new URLSearchParams(window.location.search);
+	applyQueryStringToForm($form, params);
+
+	try {
+		const indexResponse = await fetch('/search.json');
+		const index = await indexResponse.json() as unknown;
+
+		if (!isSearchIndex(index)) {
+			return;
+		}
+
+		initEvents(index);
+
+		performSearch($form, index);
+	} catch (e: unknown) {
+		// If we can't load the search index, don't do anything
+	}
 }
 
 /**
  * Bind all necessary event listeners
  */
-function initEvents() {
+function initEvents(index: SearchIndex) {
 	const $forms = document.querySelectorAll(Selector.FORM);
 	$forms.forEach(($form) => {
 		if ($form instanceof HTMLFormElement) {
-			$form.addEventListener('submit', handleSearchSubmitEvent);
+			$form.addEventListener('submit', createSubmitHandler(index));
 		}
 	});
 
-	const debouncedHandleSearchInputEvent = debounce(handleSearchInputEvent, inputDelay);
+	const inputHandler = createInputHandler(index);
+	const debouncedInputHandler = debounce(inputHandler, inputDelay);
+
 	const $inputs = document.querySelectorAll(Selector.INPUT);
 	$inputs.forEach(($input) => {
-		if ($input instanceof HTMLInputElement || $input instanceof HTMLSelectElement) {
-			$input.addEventListener('input', debouncedHandleSearchInputEvent);
-			$input.addEventListener('change', handleSearchInputEvent);
+		if (
+			$input instanceof HTMLInputElement ||
+			$input instanceof HTMLSelectElement ||
+			$input instanceof HTMLTextAreaElement
+		) {
+			$input.addEventListener('input', debouncedInputHandler);
+			$input.addEventListener('change', inputHandler);
 		}
 	});
 }
 
 /**
- * Handle the search form's submit event by performing a search
+ * Apply the values from a query string to an HTML form
  */
-function handleSearchSubmitEvent(this: HTMLFormElement, e: SubmitEvent) {
-	e.preventDefault();
-	const $form = this;
+function applyQueryStringToForm($form: HTMLFormElement, queryString: URLSearchParams): void {
+	const $textareas = Array.from($form.querySelectorAll('textarea'));
+	const $selects = Array.from($form.querySelectorAll('select'));
+	const $inputs = Array.from($form.querySelectorAll('input'));
 
-	performSearch($form);
-}
+	const $fields = [
+		...$textareas,
+		...$selects,
+		...$inputs,
+	];
 
-/**
- * Handle a search input's input or change event by performing a search
- */
-function handleSearchInputEvent(this: HTMLInputElement | HTMLSelectElement, e: Event) {
-	const $input = this;
-	const $form = $input.form;
+	for (const $field of $fields) {
+		const name = $field.name;
+		const value = queryString.get(name);
 
-	if ($form) {
-		performSearch($form);
+		if ($field instanceof HTMLInputElement && $field.type === 'checkbox') {
+			// Only set the value of a checkbox if it was recorded as a boolean,
+			// otherwise let the input keep its default value
+			if (value === String(false)) {
+				$field.checked = false;
+			} else if (value === String(true)) {
+				$field.checked = true;
+			}
+		} else {
+			// Update the value of a field if it was recorded, otherwise let the
+			// field keep its default value
+			if (value !== null) {
+				$field.value = value;
+			}
+		}
 	}
 }
 
 /**
- * Perform a search with a given form
+ * Retrieve the `HTMLElement` where a search form's results are displayed, if it can be found.
  */
-function performSearch($form: HTMLFormElement) {
+function getSearchFormResultsElement($form: HTMLElement) {
 	const targetId = $form.getAttribute('aria-controls');
 	if (!targetId) {
-		return;
+		return null;
 	}
 
 	const $target = document.getElementById(targetId);
+	return $target;
+}
+
+/**
+ * Create a submit event handler based on a `SearchIndex`
+ */
+function createSubmitHandler(index: SearchIndex) {
+	/**
+	 * Handle the search form's submit event by performing a search
+	 */
+	return function handleSearchSubmit(this: HTMLFormElement, e: SubmitEvent) {
+		e.preventDefault();
+		const $form = this;
+
+		performSearch($form, index);
+	};
+}
+
+/**
+ * Create an input event handler based on a `SearchIndex`
+ */
+function createInputHandler(index: SearchIndex) {
+	/**
+	 * Handle a search input's input or change event by performing a search
+	 */
+	return function handleSearchInput(this: HTMLInputElement | HTMLSelectElement, e: Event) {
+		const $input = this;
+		const $form = $input.form;
+
+		if ($form) {
+			performSearch($form, index);
+		}
+	};
+}
+
+/**
+ * Perform a search with a given form and show the results
+ */
+function performSearch($form: HTMLFormElement, index: SearchIndex) {
+	const data = new FormData($form);
+	const searchQuery = getSearchQueryFromFormData(data);
+
+	if (lastSearchQuery && compareSearchQuery(searchQuery, lastSearchQuery)) {
+		// Don't re-apply a `SearchQuery` if it's the same as the last executed query
+		return;
+	} else {
+		lastSearchQuery = searchQuery;
+	}
+
+	const results = applySearch(index, searchQuery);
+	applySearchResultsToDom($form, results, searchQuery);
+
+	updateUrlToMatchSearchQuery(searchQuery);
+}
+
+function applySearchResultsToDom($form: HTMLFormElement, results: SearchResult, query: SearchQuery): void {
+	const $target = getSearchFormResultsElement($form);
 	if (!$target) {
 		return;
 	}
 
-	const data = new FormData($form);
-	const name = data.get('name');
-	const type = data.get('type');
-	const includeStubs = data.get('include-stubs') === 'true';
-
-	if (
-		typeof name !== 'string' ||
-		typeof type !== 'string'
-	) {
-		return;
-	}
-
-	const searchQuery: SearchQuery = {
-		name,
-		type,
-		includeStubs,
-	};
-
-	const $results = applySearch($target, searchQuery);
-
-	const $noResultsArea = $target.querySelector<HTMLElement>(Selector.NO_RESULTS);
-	if ($noResultsArea) {
-		if ($results.length) {
-			$noResultsArea.hidden = true;
-		} else {
-			$noResultsArea.hidden = false;
-		}
-	}
-}
-
-/**
- * Apply a search query to a target area containing searchable items
- */
-function applySearch($target: HTMLElement, query: SearchQuery) {
 	const $items = Array.from($target.querySelectorAll<HTMLElement>(Selector.ITEM));
-	const $matchedItems: HTMLElement[] = [];
 
-	for (const $item of $items) {
-		const itemResult = applySearchToItem(query, $item);
-		const shouldShow = itemResult !== MatchResult.NO_MATCH;
-		if (shouldShow) {
-			$matchedItems.push($item);
+	for (const [key, result] of results) {
+		const $item = $items.find(($el) => $el.getAttribute(DataAttribute.KEY) === key);
+		if (!$item) {
+			// The item doesn't exist in the DOM, so we can't do anything with it
+			continue;
 		}
+
+		const shouldShow = result.match !== MatchResult.NO_MATCH;
 
 		const $wrapper = $item.closest<HTMLElement>(Selector.WRAPPER) || $item;
 
@@ -148,7 +218,7 @@ function applySearch($target: HTMLElement, query: SearchQuery) {
 			$wrapper.hidden = !shouldShow;
 		}
 
-		const previousNameMatch = itemResult === MatchResult.PREVIOUS_NAME;
+		const previousNameMatch = result.match === MatchResult.PREVIOUS_NAME;
 		const hasPreviousNamesClass = $item.classList.contains(CssClass.SHOW_PREVIOUS_NAMES);
 
 		if (previousNameMatch !== hasPreviousNamesClass) {
@@ -158,172 +228,64 @@ function applySearch($target: HTMLElement, query: SearchQuery) {
 				$item.classList.add(CssClass.SHOW_PREVIOUS_NAMES);
 			}
 		}
+
+		// TODO: Reorder based on relevance
 	}
 
-	return $matchedItems;
+	// Update current search summary
+	const $summary = $target.querySelector<HTMLElement>(Selector.SUMMARY);
+	if ($summary) {
+		const summaryString = getSearchSummaryHTML(results, query);
+		$summary.innerHTML = summaryString;
+		$summary.hidden = !summaryString;
+	}
 }
 
 /**
- * Hide or show an item based on a search query
+ * Update the current URL to reflect a given `SearchQuery`
  */
-function applySearchToItem(query: SearchQuery, $item: HTMLElement): MatchResult {
-	const isStub = $item.getAttribute(DataAttribute.STUB) === 'true';
+function updateUrlToMatchSearchQuery(searchQuery: SearchQuery): void {
+	const params = new URLSearchParams(document.location.search);
+	const searchParams = getUrlParamsFromSearchQuery(searchQuery);
 
-	if (isStub && !query.includeStubs) {
-		return MatchResult.NO_MATCH;
+	// Update any existing params to include the current search params
+	for (const [key, val] of searchParams) {
+		params.set(key, val);
 	}
 
-	const nameMatch = applySearchToItemName(query, $item);
-	const typeMatch = applySearchToItemType(query, $item);
-
-	if (nameMatch === MatchResult.NO_MATCH || typeMatch === MatchResult.NO_MATCH) {
-		return MatchResult.NO_MATCH;
-	} else if (nameMatch === MatchResult.EMPTY_QUERY) {
-		return typeMatch;
-	} else if (typeMatch === MatchResult.EMPTY_QUERY) {
-		return nameMatch;
+	// Remove any params relevant to the search if they're absent from the search query
+	for (const param of Object.values(SearchQueryParam)) {
+		if (!searchParams.get(param)) {
+			params.delete(param);
+		}
 	}
 
-	return nameMatch;
-}
+	const paramsString = params.toString();
 
-/**
- * Determine if an item matches the name part of a query
- */
-function applySearchToItemName(query: SearchQuery, $item: HTMLElement): MatchResult {
-	const { name } = query;
-
-	if (name === '') {
-		return MatchResult.EMPTY_QUERY;
+	// Replacing the entire URL lets us remove the `?` if there are no query parameters
+	const newUrl = new URL(document.location.toString());
+	if (paramsString) {
+		newUrl.search = paramsString;
 	} else {
-		const itemNames = getItemNames($item);
-
-		for (const [i, itemName] of itemNames.entries()) {
-			if (typeof itemName === 'string') {
-				const match = matchQueryToName(name, itemName);
-				if (match) {
-					if (i === 0) {
-						return MatchResult.CURRENT_NAME;
-					} else {
-						return MatchResult.PREVIOUS_NAME;
-					}
-				}
-			}
-		}
-
-		return MatchResult.NO_MATCH;
-	}
-}
-
-/**
- * Retrieve an array of a search item's current name and previous names it has.
- */
-function getItemNames($item: HTMLElement): string[] {
-	const nameAttr = $item.getAttribute(DataAttribute.NAME);
-	if (nameAttr === null) {
-		console.error(`ERROR: Search item has no name`);
-		console.error($item);
-		throw new TypeError();
+		newUrl.search = '';
 	}
 
-	const previousNamesAttr = $item.getAttribute(DataAttribute.PREVIOUS_NAMES);
-
-	const previousNames: string[] = (() => {
-		// Try to parse previous names from markup. If any part fails, return `[]`
-		if (previousNamesAttr) {
-			try {
-				const parsedNames: unknown = JSON.parse(previousNamesAttr.replace(/&quot;/g, '"'));
-				if (
-					Array.isArray(parsedNames) &&
-					parsedNames.every((el: unknown): el is string => typeof el === 'string')
-				) {
-					return parsedNames;
-				} else {
-					return [];
-				}
-			} catch (e) {
-				return [];
-			}
-		} else {
-			return [];
-		}
-	})();
-
-	const names = [nameAttr, ...(previousNames)];
-
-	return names;
+	window.history.replaceState(null, '', String(newUrl));
 }
 
 /**
- * Determine if an item matches the type part of a query
+ * Construct an HTML string summarising a `SearchQuery`
  */
-function applySearchToItemType(query: SearchQuery, $item: HTMLElement): MatchResult {
-	const { type } = query;
-
-	if (type === '') {
-		return MatchResult.EMPTY_QUERY;
-	} else {
-		const itemType = getItemType($item);
-
-		if (itemType === type) {
-			return MatchResult.TYPE;
-		} else {
-			return MatchResult.NO_MATCH;
-		}
+function getSearchSummaryHTML(results: SearchResult, query: SearchQuery): string {
+	if (!query[SearchQueryParam.NAME]) {
+		return '';
 	}
-}
 
-/**
- * Retrieve a search item's type
- */
-function getItemType($item: HTMLElement): string | null {
-	const typeAttr = $item.getAttribute(DataAttribute.TYPE);
+	const numResults = results.filter(([key, result]) => result.match !== MatchResult.NO_MATCH).length;
 
-	return typeAttr;
-}
+	const summary = `${numResults} result${numResults === 1 ? '' : 's'} for <span class="directory__search-summary__query">${query[SearchQueryParam.NAME]}</span>`;
 
-/**
- * Normalise a string and split it into tokens
- */
-function tokenise(str: string): string[] {
-	let normalisedStr = str;
-
-	normalisedStr = normalisedStr.toLowerCase();
-	normalisedStr = stripAccents(normalisedStr);
-	// Convert all whitespace to ' '
-	normalisedStr = normalisedStr.replace(/\s+/g, ' ');
-	// Remove all characters that aren't letters, numbers, or spaces
-	normalisedStr = normalisedStr.replace(/[^a-z0-9 ]/g, '');
-
-	const tokens = normalisedStr.split(' ');
-	return tokens;
-}
-
-/**
- * Determine whether or not a name matches a given query
- */
-function matchQueryToName(query: string, name: string) {
-	const queryTokens = tokenise(query);
-	const nameTokens = tokenise(name);
-
-	const matchFn = matchTokens(nameTokens);
-
-	return queryTokens.every(matchFn);
-}
-
-/**
- * Create a function that determines whether or not a string matches against a set of tokens
- */
-function matchTokens(tokens: string[]) {
-	return (str: string): boolean => {
-		for (const token of tokens) {
-			if (token.includes(str)) {
-				return true;
-			}
-		}
-
-		return false;
-	};
+	return summary;
 }
 
 // Self-initialise

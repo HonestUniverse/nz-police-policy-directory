@@ -1,29 +1,5 @@
+// This file, called `tsconfig.json`, needs to exist so `ts-node` can find it when running npm scripts
+// TODO: Ideally, this file shouldn't be necessary, and the project file should be specified in the npm scripts
 {
-	"compilerOptions": {
-		"strict": true,
-		"target": "esnext",
-		"module": "esnext",
-		"declaration": true,
-		"sourceMap": true,
-		"lib": ["DOM", "ES2020"],
-		"skipLibCheck": true,
-
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"importsNotUsedAsValues": "preserve",
-		"forceConsistentCasingInFileNames": true,
-		"allowSyntheticDefaultImports": true,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true,
-		"esModuleInterop": true,
-		"noImplicitAny": true,
-		"incremental": true,
-
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["src/assets/js/*"]
-		},
-		"outDir": "dist/assets/js"
-	},
-	"include": ["src/assets/js/**/*"]
+	"extends": "./tsconfig.node.json",
 }

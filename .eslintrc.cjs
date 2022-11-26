@@ -118,7 +118,6 @@ module.exports = {
 				'after': true,
 			},
 		],
-		'semi-style': ['error', 'last'],
 		'space-before-blocks': ['error', 'always'],
 		'space-before-function-paren': [
 			'error',
@@ -139,6 +138,7 @@ module.exports = {
 			'always',
 			{
 				'exceptions': ['/'],
+				'markers': ['/'],
 				'block': {
 					'balanced': true,
 				},
@@ -162,8 +162,10 @@ module.exports = {
 			parser: '@typescript-eslint/parser',
 			parserOptions: {
 				project: [
-					'./tsconfig.json',
+					'./tsconfig.dom.json',
 					'./tsconfig.node.json',
+					'./tsconfig.shared.json',
+					'./tsconfig.workers.json',
 				],
 			},
 			plugins: ['@typescript-eslint'],

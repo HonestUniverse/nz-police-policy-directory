@@ -23,6 +23,12 @@
 	title: 'NZ Police Policy Directory',
 	description: `An independent directory of NZ Police policies and related documents.`,
 	backLink: true,
+	preload: [
+		{
+			href: '/search.json',
+			as: 'fetch',
+		},
+	],
 }); %>
 
 <article class="directory">
@@ -35,6 +41,11 @@
 					<option><%= type %></option>
 				<% } %>
 			</select>
+
+			<button
+				type="submit"
+				class="directory__search__submit"
+			>Search</button>
 		</div>
 
 		<div class="directory__search__row">
@@ -48,6 +59,8 @@
 	</form>
 
 	<div class="directory__search-results" id="policy-search-results">
+		<span class="directory__search-summary js-search__summary" hidden></span>
+
 		<ul class="directory__list">
 			<% policies.forEach((policy, idx) => { %>
 				<li class="directory__item js-search__item-wrapper">
@@ -55,10 +68,6 @@
 				</li>
 			<% }) %>
 		</ul>
-
-		<div class="directory__no-search-results js-search__no-results" hidden>
-			There were no results for your search.
-		</div>
 	</div>
 </article>
 
