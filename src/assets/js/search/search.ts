@@ -30,7 +30,7 @@ enum Selector {
 }
 
 enum DataAttribute {
-	key = 'data-search-key',
+	KEY = 'data-search-key',
 }
 
 enum CssClass {
@@ -204,7 +204,7 @@ function applySearchResultsToDom($form: HTMLFormElement, results: SearchResult, 
 	const $items = Array.from($target.querySelectorAll<HTMLElement>(Selector.ITEM));
 
 	for (const [key, result] of results) {
-		const $item = $items.find(($el) => $el.getAttribute(DataAttribute.key) === key);
+		const $item = $items.find(($el) => $el.getAttribute(DataAttribute.KEY) === key);
 		if (!$item) {
 			// The item doesn't exist in the DOM, so we can't do anything with it
 			continue;
@@ -245,14 +245,15 @@ function applySearchResultsToDom($form: HTMLFormElement, results: SearchResult, 
  * Update the current URL to reflect a given `SearchQuery`
  */
 function updateUrlToMatchSearchQuery(searchQuery: SearchQuery): void {
-	// Update any existing params to include the current search params
 	const params = new URLSearchParams(document.location.search);
 	const searchParams = getUrlParamsFromSearchQuery(searchQuery);
 
+	// Update any existing params to include the current search params
 	for (const [key, val] of searchParams) {
 		params.set(key, val);
 	}
 
+	// Remove any params relevant to the search if they're absent from the search query
 	for (const param of Object.values(SearchQueryParam)) {
 		if (!searchParams.get(param)) {
 			params.delete(param);

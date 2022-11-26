@@ -69,9 +69,7 @@ function applySearchToItem(query: SearchQuery, item: SearchIndexEntry): MatchRes
  * Determine if an item matches the name part of a `SearchQuery`
  */
 function applySearchToItemName(query: SearchQuery, item: SearchIndexEntry): MatchResult {
-	const {
-		[SearchQueryParam.NAME]: name,
-	} = query;
+	const name = query[SearchQueryParam.NAME];
 
 	if (name === '') {
 		return MatchResult.EMPTY_QUERY;

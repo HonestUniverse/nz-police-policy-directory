@@ -9,6 +9,8 @@ export enum PolicyType {
 	CODE_OF_CONDUCT = 'Code of Conduct',
 	POLICE_MANUAL_CHAPTER = 'Police Manual chapter',
 	EQUIPMENT_OPERATORS_MANUAL = 'Equipment Operator\'s Manual',
+	MEMORANDUM_OF_UNDERSTANDING = 'Memorandum of Understanding',
+	GUIDELINES = 'Guidelines',
 
 	UNDETERMINED = 'Undetermined',
 }
