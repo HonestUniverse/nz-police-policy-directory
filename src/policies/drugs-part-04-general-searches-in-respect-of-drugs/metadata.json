@@ -15,21 +15,6 @@
 			"provenance": [
 				{
 					"source": "NZ Police",
-					"method": "Proactively released",
-					"withholdings": "None",
-					"published": {
-						"year": 2022,
-						"month": 7
-					},
-					"extracted": "2022-06-28",
-					"retrieved": "2022-09-27",
-					"url": "https://www.police.govt.nz/about-us/publication/drugs-police-manual-chapter",
-					"archiveUrl": "https://web.archive.org/web/20220927081212/https://www.police.govt.nz/about-us/publication/drugs-police-manual-chapter",
-					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/drugs-part-4-general-searches-in-respect-of-drugs-280622.pdf",
-					"archiveFileUrl": "https://web.archive.org/web/20220927081634/https://www.police.govt.nz/sites/default/files/publications/drugs-part-4-general-searches-in-respect-of-drugs-280622.pdf"
-				},
-				{
-					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
 						"requester": "M B",
@@ -51,6 +36,23 @@
 					"documentType": "Policy",
 					"startingPage": 1,
 					"size": 699011,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2022,
+								"month": 7
+							},
+							"extracted": "2022-06-28",
+							"retrieved": "2022-09-27",
+							"url": "https://www.police.govt.nz/about-us/publication/drugs-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20220927081212/https://www.police.govt.nz/about-us/publication/drugs-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/drugs-part-4-general-searches-in-respect-of-drugs-280622.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20220927081634/https://www.police.govt.nz/sites/default/files/publications/drugs-part-4-general-searches-in-respect-of-drugs-280622.pdf"
+						}
+					],
 					"licence": {
 						"name": "None"
 					},
