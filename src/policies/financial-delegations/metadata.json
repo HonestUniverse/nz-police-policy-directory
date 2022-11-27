@@ -1,4 +1,6 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Financial delegations",
 	"versions": [
 		{
@@ -27,8 +29,6 @@
 			"files": []
 		}
 	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
 	"provenance": [
 		{
 			"source": "NZ Police",
@@ -46,5 +46,11 @@
 			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
 			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
 		}
-	]
+	],
+	"pendingRequest": {
+		"requester": "S.I",
+		"id": "IR-01-22-36036",
+		"requestUrl": "https://fyi.org.nz/request/21163-specific-case-studies-case-law-and-discussion-documents-linked-in-police-policy-documents",
+		"withholdings": "Undetermined"
+	}
 }
