@@ -1,5 +1,6 @@
 {
 	"schemaVersion": "1.3.0",
+	"name": "Telecommunication investigations",
 	"type": "Police Manual chapter",
 	"versions": [
 		{
@@ -260,6 +261,5 @@
 			],
 			"id": "u-fnihp"
 		}
-	],
-	"name": "Telecommunication investigations"
+	]
 }
