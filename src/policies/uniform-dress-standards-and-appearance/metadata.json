@@ -7,7 +7,8 @@
 			"id": "u-ivbtv",
 			"duration": {
 				"on": [
-					"2022-09-02"
+					"2022-09-02",
+					"2022-10-12"
 				]
 			},
 			"provenance": [
@@ -55,6 +56,48 @@
 								"notes": [
 									"Images in this document have alt text, but the alt text only describes the type of information conveyed by each image."
 								]
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2022-10-12/Tangata Whenua IR 01 22 25995 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 390948,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Tangata Whenua",
+								"id": "IR-01-22-25995",
+								"requestUrl": "https://fyi.org.nz/request/20374-are-police-employees-required-to-identify-themselves-to-the-public-when-asked-for-identification",
+								"responseUrl": "https://fyi.org.nz/request/20374-are-police-employees-required-to-identify-themselves-to-the-public-when-asked-for-identification#incoming-78361",
+								"withholdings": "None"
+							},
+							"released": "2022-10-12",
+							"retrieved": "2022-11-27",
+							"url": "https://fyi.org.nz/request/20374-are-police-employees-required-to-identify-themselves-to-the-public-when-asked-for-identification#incoming-78361",
+							"fileUrl": "https://fyi.org.nz/request/20374/response/78361/attach/4/Tangata%20Whenua%20IR%2001%2022%2025995%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
 							},
 							"unwatermarked": {
 								"value": true
