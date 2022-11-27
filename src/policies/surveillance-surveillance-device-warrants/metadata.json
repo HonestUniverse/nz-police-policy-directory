@@ -4,12 +4,94 @@
 	"name": "Surveillance - Surveillance device warrants",
 	"versions": [
 		{
+			"duration": {
+				"on": [
+					"2022-11-02"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "M B",
+						"id": "IR-01-22-29516",
+						"requestUrl": "https://fyi.org.nz/request/20081-police-manual-chapters",
+						"responseUrl": "https://fyi.org.nz/request/20081-police-manual-chapters#incoming-78994",
+						"withholdings": "None"
+					},
+					"released": "2022-11-02",
+					"retrieved": "2022-11-27",
+					"url": "https://fyi.org.nz/request/20081-police-manual-chapters",
+					"fileUrl": "https://fyi.org.nz/request/20081/response/78994/attach/8/Mason%20IR%2001%2022%2029516%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2022-11-02/Mason IR 01 22 29516 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 804240,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing in the table of contents and at the beginning of sentences throughout the document.",
+									"Pages 30 and 31 are images of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-11-02/Mason IR 01 22 29516 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 804240,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-tyijv"
+		},
+		{
 			"id": "u-ejgtc",
 			"duration": {
 				"on": [
 					"2021-07-12",
 					"2022-10-07"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
