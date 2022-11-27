@@ -8,7 +8,8 @@
 			"duration": {
 				"on": [
 					"2022-06-28",
-					"2022-07-05"
+					"2022-07-05",
+					"2022-11-02"
 				]
 			},
 			"provenance": [
@@ -26,6 +27,21 @@
 					"archiveUrl": "https://web.archive.org/web/20220927081212/https://www.police.govt.nz/about-us/publication/drugs-police-manual-chapter",
 					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/drugs-part-2-offences-under-the-misuse-of-drugs-act-1975-280622.pdf",
 					"archiveFileUrl": "https://web.archive.org/web/20220927081543/https://www.police.govt.nz/sites/default/files/publications/drugs-part-2-offences-under-the-misuse-of-drugs-act-1975-280622.pdf"
+				},
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "M B",
+						"id": "IR-01-22-29516",
+						"requestUrl": "https://fyi.org.nz/request/20081-police-manual-chapters",
+						"responseUrl": "https://fyi.org.nz/request/20081-police-manual-chapters#incoming-78994",
+						"withholdings": "None"
+					},
+					"released": "2022-11-02",
+					"retrieved": "2022-11-27",
+					"url": "https://fyi.org.nz/request/20081-police-manual-chapters",
+					"fileUrl": "https://fyi.org.nz/request/20081/response/78994/attach/8/Mason%20IR%2001%2022%2029516%20Response.pdf"
 				}
 			],
 			"files": [
