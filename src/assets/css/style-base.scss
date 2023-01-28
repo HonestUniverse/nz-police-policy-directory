@@ -1,5 +1,12 @@
 @import "scaffolding";
 
+@import "base/reset";
+@import "base/palette";
+@import "base/fonts";
+
+@import "extendables/card";
+@import "extendables/content";
+
 @import "components/header";
 @import "components/menu";
 @import "components/footer";
@@ -7,9 +14,9 @@
 
 @import "components/skip-link";
 @import "components/page";
+@import "components/content";
 @import "components/notice";
 @import "components/toast";
-
 
 body {
 	@include contrast-primary;
