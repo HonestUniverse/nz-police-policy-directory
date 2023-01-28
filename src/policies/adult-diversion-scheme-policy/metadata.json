@@ -34,7 +34,8 @@
 					"startingPage": 1,
 					"size": 1469732,
 					"licence": {
-						"name": "None"
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 					},
 					"original": true,
 					"accessibility": {
@@ -58,6 +59,12 @@
 							}
 						}
 					}
+				}
+			],
+			"notices": [
+				{
+					"type": "info",
+					"message": "<p>The NZ Police website contains a note against this policy:</p><blockquote>Note that the Police Adult Diversion Policy is under review and an updated set of materials will be published in 2022.</blockquote>"
 				}
 			],
 			"id": "u-scqyt"
