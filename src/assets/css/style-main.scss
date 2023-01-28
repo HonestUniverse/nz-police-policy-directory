@@ -1,6 +1,8 @@
-@import "style-base";
+@import "scaffolding";
 
-@import "components/content";
+@import "extendables/card";
+@import "extendables/content";
+@import "extendables/file-metadata";
 
 @import "components/policy";
 @import "components/version";
