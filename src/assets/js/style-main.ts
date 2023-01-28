@@ -1,2 +1,2 @@
 // This line is required for Webpack to find the CSS entry point without generating an empty JS file
-import '../css/style-content.scss';
+import '../css/style-main.scss';

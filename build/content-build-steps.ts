@@ -2,6 +2,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { htmlWebpackPluginTemplateCustomizer as TemplateCustomizer } from 'template-ejs-loader';
 
 import * as paths from './util/paths.js';
+import { defaultChunks } from './util/defaultChunks.js';
 
 import type { ContentBuildStep } from './BuildStep.js';
 
@@ -30,7 +31,10 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style'],
+				chunks: [
+					...defaultChunks,
+					'style-main',
+				],
 			}),
 		];
 	},
@@ -65,7 +69,47 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+				chunks: [
+					...defaultChunks,
+				],
+			}),
+		];
+	},
+
+	/**
+	 * Generate the HTML for the 408 (Request Timeout) page
+	 */
+	create408Page(src, dst, buildStepData) {
+		const {
+			siteData,
+			...basePageData
+		} = buildStepData;
+
+		const pageData = {
+			...basePageData,
+			error: 'Network Error',
+			errorTitle: 'Network Error',
+			errorString: 'Please check your internet connection.',
+		};
+
+		return [
+			new HtmlWebpackPlugin({
+				filename: `${dst}/408.html`,
+				template: TemplateCustomizer({
+					htmlLoaderOption: {
+						sources: false,
+					},
+					templatePath: `${paths.templates}/pages/error.ejs`,
+					templateEjsLoaderOption: {
+						data: {
+							siteData,
+							pageData,
+						},
+					},
+				}),
+				chunks: [
+					...defaultChunks,
+				],
 			}),
 		];
 	},
@@ -94,7 +138,9 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+				chunks: [
+					...defaultChunks,
+				],
 			}),
 		];
 	},
@@ -123,7 +169,9 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+				chunks: [
+					...defaultChunks,
+				],
 			}),
 		];
 	},
@@ -152,7 +200,10 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style'],
+				chunks: [
+					...defaultChunks,
+					'style-main',
+				],
 			}),
 		];
 	},
@@ -181,7 +232,10 @@ export const contentBuildSteps: Record<string, ContentBuildStep> = {
 						},
 					},
 				}),
-				chunks: ['priority', 'main', 'enhancements', 'style-content'],
+				chunks: [
+					...defaultChunks,
+					'style-contributing',
+				],
 			}),
 		];
 	},

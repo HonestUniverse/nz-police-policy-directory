@@ -19,7 +19,7 @@ enum Mode {
 
 async function getConfig(env: Record<string, unknown>, argsv: Record<string, unknown>) {
 	const mode = argsv.mode === Mode.DEVELOPMENT ? Mode.DEVELOPMENT : Mode.PRODUCTION;
-	const cacheBustingString = mode === Mode.PRODUCTION ? `-${generateCacheBustingString()}` : '';
+	const cacheBustingString = mode === Mode.PRODUCTION ? `.v-${generateCacheBustingString()}` : '';
 	const optimization = mode === Mode.DEVELOPMENT ? { minimize: false } : {};
 	const devtool = mode === Mode.DEVELOPMENT ? 'eval-source-map' : 'source-map';
 
@@ -46,8 +46,9 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 			enhancements: `${paths.assetsFull}/js/enhancements.ts`,
 			priority: `${paths.assetsFull}/js/priority.ts`,
 
-			style: `${paths.assetsFull}/js/style.ts`,
-			'style-content': `${paths.assetsFull}/js/style-content.ts`,
+			'style-base': `${paths.assetsFull}/js/style-base.ts`,
+			'style-main': `${paths.assetsFull}/js/style-main.ts`,
+			'style-contributing': `${paths.assetsFull}/js/style-contributing.ts`,
 			'style-directory': `${paths.assetsFull}/js/style-directory.ts`,
 			'style-document': `${paths.assetsFull}/js/style-document.ts`,
 		},
@@ -136,10 +137,11 @@ async function getConfig(env: Record<string, unknown>, argsv: Record<string, unk
 				preload: ['priority'],
 				module: ['enhancements'],
 				remove: [
-					'style',
-					'style-content',
+					'style-base',
+					'style-contributing',
 					'style-directory',
 					'style-document',
+					'style-main',
 				],
 			}),
 		],
