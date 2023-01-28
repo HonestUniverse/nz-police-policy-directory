@@ -2,6 +2,7 @@
 	"schemaVersion": "1.3.0",
 	"name": "Privacy and official information - Privacy Impact Assessments - Privacy by design",
 	"type": "Police Manual chapter",
+	"obsolete": true,
 	"versions": [
 		{
 			"duration": {
@@ -11,7 +12,8 @@
 						"year": 2022,
 						"month": 7
 					}
-				]
+				],
+				"end": "2022-11-17"
 			},
 			"provenance": [
 				{
@@ -38,7 +40,8 @@
 					"startingPage": 1,
 					"size": 661135,
 					"licence": {
-						"name": "None"
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 					},
 					"original": true,
 					"accessibility": {
@@ -55,6 +58,12 @@
 							}
 						}
 					}
+				}
+			],
+			"notices": [
+				{
+					"type": "warning",
+					"message": "<p>The NZ Police website notes that:</p><blockquote>[This document] was cancelled on November 17, 2022 and replaced with updated guidance for employees, accessible via the Privacy team's page on the Police intranet.</blockquote>"
 				}
 			],
 			"id": "u-pjfze"
