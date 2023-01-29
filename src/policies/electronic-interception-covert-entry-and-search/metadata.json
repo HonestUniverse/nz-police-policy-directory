@@ -47,9 +47,10 @@
 			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
 		}
 	],
-	"pendingRequest": {
-		"requester": "AS Van Wey",
-		"requestUrl": "https://fyi.org.nz/request/20866-electronic-interception-police-manual-chapter",
-		"withholdings": "Undetermined"
-	}
+	"notices": [
+		{
+			"type": "info",
+			"message": "This document was within the scope of <a href=\"https://fyi.org.nz/request/20866-electronic-interception-police-manual-chapter\" target=\"blank\">an OIA request</a> for \"a copy of the Police Manual chapters about Electronic interception\" made on 16 October 2022. However, in its response NZ Police neither released this document nor withheld it."
+		}
+	]
 }
