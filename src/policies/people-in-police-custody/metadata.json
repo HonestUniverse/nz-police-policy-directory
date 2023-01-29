@@ -9,8 +9,92 @@
 		{
 			"duration": {
 				"on": [
-					"2020-11-25"
+					"2023-01-20"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Connor Johnson",
+						"id": "IR-01-22-37553",
+						"requestUrl": "https://fyi.org.nz/request/21328-policies-relating-to-custodial-officers-authorised-officers",
+						"responseUrl": "https://fyi.org.nz/request/21328-policies-relating-to-custodial-officers-authorised-officers#incoming-81183",
+						"withholdings": {
+							"6(c)": "Information has been withheld on pages 9, 12, 13, 21, 22, 33, and 35–37"
+						}
+					},
+					"released": "2023-01-20",
+					"retrieved": "2023-01-28",
+					"url": "https://fyi.org.nz/request/21328-policies-relating-to-custodial-officers-authorised-officers#incoming-81183",
+					"fileUrl": "https://fyi.org.nz/request/21328/response/81183/attach/4/Johnson%20Connor%20IR%2001%2022%2037553%20Response.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "../../bulk-files/2023-01-20/Johnson Connor IR 01 22 37553 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 15,
+					"size": 2388392,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Undetermined",
+								"notes": [
+									"Some characters are missing in the table of contents and at the beginning of sentences throughout the document.",
+									"Pages 33 and 35–44 are images of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2023-01-20/Johnson Connor IR 01 22 37553 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 2388392,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-zphkq"
+		},
+		{
+			"duration": {
+				"on": [
+					"2020-11-25"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
