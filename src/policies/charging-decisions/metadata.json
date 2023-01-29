@@ -8,7 +8,8 @@
 					{
 						"year": 2022,
 						"month": 7
-					}
+					},
+					"2022-12-05"
 				]
 			},
 			"provenance": [
@@ -38,6 +39,47 @@
 					"licence": {
 						"name": "CC BY-NC-ND 4.0",
 						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-12-05/Van Wey AS IR 01 22 31928 Final response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 873512,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "AS Van Wey",
+								"id": "IR-01-22-31928",
+								"requestUrl": "https://fyi.org.nz/request/20866-electronic-interception-police-manual-chapter",
+								"responseUrl": "https://fyi.org.nz/request/20866-electronic-interception-police-manual-chapter#incoming-80064",
+								"withholdings": "None"
+							},
+							"released": "2022-12-05",
+							"url": "https://fyi.org.nz/request/20866-electronic-interception-police-manual-chapter#incoming-80064",
+							"fileUrl": "https://fyi.org.nz/request/20866/response/80064/attach/4/Van%20Wey%20AS%20IR%2001%2022%2031928%20Final%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
 					},
 					"original": true,
 					"accessibility": {
