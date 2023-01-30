@@ -1,55 +1,88 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Electronic Interception - Introduction to electronic interception",
 	"versions": [
 		{
-			"id": "u-vvwyg",
 			"duration": {
-				"start": "2021-06-29"
+				"on": [
+					"2022-12-05"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "AS Van Wey",
+						"id": "IR-01-22-31928",
+						"requestUrl": "https://fyi.org.nz/request/20866-electronic-interception-police-manual-chapter",
+						"responseUrl": "https://fyi.org.nz/request/20866-electronic-interception-police-manual-chapter#incoming-80064",
+						"withholdings": {
+							"6(c)": "Information was withheld on pages 4–9."
+						}
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2022-12-05",
+					"url": "https://fyi.org.nz/request/20866-electronic-interception-police-manual-chapter#incoming-80064",
+					"fileUrl": "https://fyi.org.nz/request/20866/response/80064/attach/4/Van%20Wey%20AS%20IR%2001%2022%2031928%20Final%20response.pdf"
 				}
 			],
-			"files": []
+			"files": [
+				{
+					"path": "../../bulk-files/2022-12-05/Van Wey AS IR 01 22 31928 Final response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 3,
+					"size": 873512,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 6, 7, and 8 are images of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-12-05/Van Wey AS IR 01 22 31928 Final response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 873512,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-vvwyg"
 		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
-		}
-	],
-	"pendingRequest": {
-		"requester": "AS Van Wey",
-		"requestUrl": "https://fyi.org.nz/request/20866-electronic-interception-police-manual-chapter",
-		"withholdings": "Undetermined"
-	}
+	]
 }
