@@ -4,12 +4,71 @@
 	"name": "Search Part 02 - Search warrants ",
 	"versions": [
 		{
+			"duration": {
+				"on": [
+					"2022-11-01"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": {
+						"6(c)": "Information has been withheld on page 19."
+					},
+					"published": {
+						"year": 2022,
+						"month": 11
+					},
+					"extracted": "2022-11-01",
+					"retrieved": "2022-11-04",
+					"url": "https://www.police.govt.nz/about-us/publication/search-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20221103194418/https://www.police.govt.nz/about-us/publication/search-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/search-part-2-search-warrants-redacted-011122.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20221103194654/https://www.police.govt.nz/sites/default/files/publications/search-part-2-search-warrants-redacted-011122.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-11-01/search-part-2-search-warrants-redacted-011122.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1443508,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 11 and 19 are images of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-utpwe"
+		},
+		{
 			"id": "u-nwfpk",
 			"duration": {
 				"on": [
 					"2021-06-08",
 					"2022-10-07"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{

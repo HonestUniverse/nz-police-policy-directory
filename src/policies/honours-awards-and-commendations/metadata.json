@@ -7,7 +7,8 @@
 			"id": "u-ugzkb",
 			"duration": {
 				"on": [
-					"2022-10-18"
+					"2022-10-18",
+					"2022-12-15"
 				]
 			},
 			"provenance": [
@@ -25,6 +26,21 @@
 					"archiveUrl": "https://web.archive.org/web/20221020200631/https://www.police.govt.nz/about-us/publication/honours-awards-and-commendations-police-manual-chapter",
 					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/honours-awards-and-commendations-181022.pdf",
 					"archiveFileUrl": "https://web.archive.org/web/20221020200526/https://www.police.govt.nz/sites/default/files/publications/honours-awards-and-commendations-181022.pdf"
+				},
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "john luke",
+						"id": "IR-01-22-29528",
+						"requestUrl": "https://fyi.org.nz/request/20655-medal-policy-and-mounting",
+						"responseUrl": "https://fyi.org.nz/request/20655-medal-policy-and-mounting#incoming-80472",
+						"withholdings": "None"
+					},
+					"released": "2022-12-15",
+					"retrieved": "2023-01-27",
+					"url": "https://fyi.org.nz/request/20655-medal-policy-and-mounting#incoming-80472",
+					"fileUrl": "https://fyi.org.nz/request/20655/response/80472/attach/3/Luke%20John%20IR%2001%2022%2029528%20final%20response.pdf"
 				}
 			],
 			"files": [

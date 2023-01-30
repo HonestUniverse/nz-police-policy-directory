@@ -6,8 +6,72 @@
 		{
 			"duration": {
 				"on": [
-					"2022-08-23"
+					"2022-12-23"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2022,
+						"month": 12
+					},
+					"extracted": "2022-12-23",
+					"retrieved": "2022-12-23",
+					"url": "https://www.police.govt.nz/about-us/publication/adult-diversion-scheme-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20221223030655/https://www.police.govt.nz/about-us/publication/adult-diversion-scheme-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/adult-diversion-scheme-policy-231222.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20221223030703/https://www.police.govt.nz/sites/default/files/publications/adult-diversion-scheme-policy-231222.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2022-12-23/adult-diversion-scheme-policy-231222.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1926163,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Images of text on pages 6, 7, and 28 appear to have been partially and incorrectly converted to text via optical character recognition software."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "warning",
+					"title": "Under review",
+					"message": "<p>When this file was retrieved, the NZ Police website stated that:</p><blockquote>Note that the Police Adult Diversion Policy is under review and an updated set of materials will be published in 2023.</blockquote></p>"
+				}
+			],
+			"id": "u-htice"
+		},
+		{
+			"duration": {
+				"on": [
+					"2022-08-23"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -63,8 +127,9 @@
 			],
 			"notices": [
 				{
-					"type": "info",
-					"message": "<p>The NZ Police website contains a note against this policy:</p><blockquote>Note that the Police Adult Diversion Policy is under review and an updated set of materials will be published in 2022.</blockquote>"
+					"type": "warning",
+					"title": "Under review",
+					"message": "<p>When this file was retrieved, the NZ Police website stated that:</p><blockquote>Note that the Police Adult Diversion Policy is under review and an updated set of materials will be published in 2022.</blockquote>"
 				}
 			],
 			"id": "u-scqyt"
