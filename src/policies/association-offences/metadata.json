@@ -1,55 +1,118 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Association offences",
 	"versions": [
 		{
-			"id": "u-yiwgb",
 			"duration": {
-				"start": "2018-04-13"
+				"start": "2018-04-13",
+				"on": [
+					"2022-12-19",
+					"2023-01-12"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "J. Beddek",
+						"id": "IR-01-22-34776",
+						"requestUrl": "https://fyi.org.nz/request/21077-police-manual-chapters",
+						"responseUrl": "https://fyi.org.nz/request/21077-police-manual-chapters#incoming-80953",
+						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2023-01-12",
+					"retrieved": "2023-01-27",
+					"url": "https://fyi.org.nz/request/21077-police-manual-chapters#incoming-80953",
+					"fileUrl": "https://fyi.org.nz/request/21077/response/80953/attach/3/Association%20Offences.pdf"
 				}
 			],
-			"files": []
+			"files": [
+				{
+					"path": "2023-01-12/Association Offences.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 140900,
+					"licence": {
+						"name": "None",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing in the table of contents."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-12-19/Beddek J IR 01 22 34776 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 140900,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "J. Beddek",
+								"id": "IR-01-22-34776",
+								"requestUrl": "https://fyi.org.nz/request/21077-police-manual-chapters",
+								"responseUrl": "https://fyi.org.nz/request/21077-police-manual-chapters#incoming-80953",
+								"withholdings": "None"
+							},
+							"released": "2023-01-12",
+							"retrieved": "2023-01-27",
+							"url": "https://fyi.org.nz/request/21077-police-manual-chapters#incoming-80953",
+							"fileUrl": "https://fyi.org.nz/request/21077/response/80953/attach/7/Beddek%20J%20IR%2001%2022%2034776%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-yiwgb"
 		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
-		}
-	],
-	"pendingRequest": {
-		"requester": "J. Beddek",
-		"requestUrl": "https://fyi.org.nz/request/21077-police-manual-chapters",
-		"withholdings": "Undetermined"
-	}
+	]
 }
