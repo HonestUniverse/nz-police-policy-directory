@@ -64,6 +64,56 @@
 							}
 						}
 					}
+				},
+				{
+					"path": "../../bulk-files/2022-11-29/0 Beddek J IR 01 22 32446 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 2626282,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "J. Beddek",
+								"id": "IR-01-22-32446",
+								"requestUrl": "https://fyi.org.nz/request/20924-police-manual-chapters",
+								"responseUrl": "https://fyi.org.nz/request/20924-police-manual-chapters#incoming-79913",
+								"withholdings": {
+									"6(c)": "Information was withheld on pages 4–12."
+								}
+							},
+							"released": "2022-11-29",
+							"retrieved": "2023-01-27",
+							"url": "https://fyi.org.nz/request/20924-police-manual-chapters#incoming-79913",
+							"fileUrl": "https://fyi.org.nz/request/20924/response/79913/attach/8/0%20Beddek%20J%20IR%2001%2022%2032446%20Response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
 				}
 			],
 			"id": "u-qvbxy"
