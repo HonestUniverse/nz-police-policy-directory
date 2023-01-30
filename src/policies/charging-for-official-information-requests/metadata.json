@@ -114,13 +114,6 @@
 					}
 				}
 			],
-			"notices": [
-				{
-					"type": "info | warning | error",
-					"title": "string",
-					"message": "string"
-				}
-			],
 			"id": "u-sibzq"
 		}
 	]
