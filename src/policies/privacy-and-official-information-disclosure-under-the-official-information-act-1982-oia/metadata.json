@@ -5,10 +5,73 @@
 	"versions": [
 		{
 			"duration": {
+				"on": [
+					"2023-02-15"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "Mark Hanna",
+						"id": "IR-01-22-22497",
+						"requestUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia",
+						"responseUrl": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-81897",
+						"withholdings": "None"
+					},
+					"released": "2023-02-15",
+					"retrieved": "2023-02-18",
+					"url": "https://fyi.org.nz/request/20076-police-manual-chapter-privacy-and-official-information-disclosure-under-the-official-information-act-1982-oia#incoming-81897",
+					"fileUrl": "https://fyi.org.nz/request/20076/response/81897/attach/8/Disclosure%20under%20the%20Official%20Information%20Act%201982%20OIA.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2023-02-15/Disclosure under the Official Information Act 1982 OIA.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 210773,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing at small font sizes."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-peicq"
+		},
+		{
+			"duration": {
 				"start": "2022-02-10",
 				"on": [
 					"2022-08-26"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
