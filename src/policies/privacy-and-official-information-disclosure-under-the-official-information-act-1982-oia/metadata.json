@@ -6,7 +6,8 @@
 		{
 			"duration": {
 				"on": [
-					"2023-02-15"
+					"2023-02-15",
+					"2023-02-16"
 				]
 			},
 			"provenance": [
@@ -27,6 +28,45 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2023-02-16/disclosure-under-the-oia-160223.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1671657,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"extracted": "2023-02-16",
+							"retrieved": "2023-02-18",
+							"url": "https://www.police.govt.nz/about-us/publication/disclosure-under-official-information-act-1982-oia-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20230216160731/https://www.police.govt.nz/about-us/publication/disclosure-under-official-information-act-1982-oia-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/disclosure-under-the-oia-160223.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20230216214139/https://www.police.govt.nz/sites/default/files/publications/disclosure-under-the-oia-160223.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "2023-02-15/Disclosure under the Official Information Act 1982 OIA.pdf",
 					"type": "application/pdf",
