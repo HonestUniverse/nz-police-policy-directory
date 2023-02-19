@@ -9,7 +9,8 @@
 				"on": [
 					"2022-05-05",
 					"2022-09-27",
-					"2022-10-20"
+					"2022-10-20",
+					"2023-02-16"
 				]
 			},
 			"provenance": [
@@ -32,6 +33,156 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2023-02-16/exact-impact-xm1006-redacted-160223.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1480162,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": {
+								"6(c)": "Information was withheld from page 8."
+							},
+							"extracted": "2023-02-16",
+							"retrieved": "2023-02-18",
+							"url": "https://www.police.govt.nz/about-us/publication/use-force-police-manual-chapters",
+							"archiveUrl": "https://web.archive.org/web/20230217225200/https://www.police.govt.nz/about-us/publication/use-force-police-manual-chapters",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/exact-impact-xm1006-redacted-160223.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20230217223154/https://www.police.govt.nz/sites/default/files/publications/exact-impact-xm1006-redacted-160223.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2023-02-15/eXact Impact XM1006 Redacted.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 218530,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Mark Hanna",
+								"id": "IR-01-22-22024",
+								"requestUrl": "https://fyi.org.nz/request/20027-police-manual-chapters-relating-to-sponge-rounds",
+								"responseUrl": "https://fyi.org.nz/request/20027-police-manual-chapters-relating-to-sponge-rounds#incoming-81905",
+								"withholdings": {
+									"6(c)": "Information was withheld from page 8."
+								}
+							},
+							"released": "2023-02-15",
+							"retrieved": "2023-02-18",
+							"url": "https://fyi.org.nz/request/20027-police-manual-chapters-relating-to-sponge-rounds",
+							"fileUrl": "https://fyi.org.nz/request/20027/response/81905/attach/3/eXact%20Impact%20XM1006%20Redacted.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2023-02-15/Mark Hanna IR 01 22 22024 Ombudsman review response.pdf",
+					"name": "Ombudsman review response",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 377983,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Mark Hanna",
+								"id": "IR-01-22-22024",
+								"requestUrl": "https://fyi.org.nz/request/20027-police-manual-chapters-relating-to-sponge-rounds",
+								"responseUrl": "https://fyi.org.nz/request/20027-police-manual-chapters-relating-to-sponge-rounds#incoming-81905",
+								"withholdings": {
+									"6(c)": "Information was withheld from page 8."
+								}
+							},
+							"released": "2023-02-15",
+							"retrieved": "2023-02-18",
+							"url": "https://fyi.org.nz/request/20027-police-manual-chapters-relating-to-sponge-rounds",
+							"fileUrl": "https://fyi.org.nz/request/20027/response/81905/attach/3/eXact%20Impact%20XM1006%20Redacted.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+						"notices": [
+							{
+								"type": "info",
+								"message": "Police were asked to release this document under a CC BY 4.0 licence, but refused."
+							}
+						]
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "2022-10-20/exact-impact-redacted-201022_0.pdf",
 					"type": "application/pdf",
@@ -258,7 +409,7 @@
 			"notices": [
 				{
 					"type": "info",
-					"message": "This version has been released multiple times, with different information withheld each time."
+					"message": "This version has been released multiple times, with different information withheld each time. Following a complaint to the Ombudsman, the most recent releases have consolidated the previously released information."
 				}
 			]
 		},
