@@ -86,6 +86,13 @@
 					}
 				}
 			],
+			"notices": [
+				{
+					"type": "warning",
+					"title": "Under review",
+					"message": "<p>When this file was released, NZ Police said that:</p><blockquote>Police is currently reviewing this chapter due to legislative and operational changes.</blockquote></p>"
+				}
+			],
 			"id": "u-saxwo"
 		}
 	]
