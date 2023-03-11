@@ -1,50 +1,88 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Investigative interviewing witness guide",
 	"versions": [
 		{
-			"id": "u-jonhx",
 			"duration": {
-				"start": "2019-05-28"
+				"on": [
+					"2022-12-21"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "J A Harris",
+						"id": "IR-01-22-37549",
+						"requestUrl": "https://fyi.org.nz/request/21325-guidelines-for-questioning-in-a-non-formal-interview",
+						"responseUrl": "https://fyi.org.nz/request/21325-guidelines-for-questioning-in-a-non-formal-interview#incoming-80666",
+						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2022-12-21",
+					"retrieved": "2023-01-28",
+					"url": "https://fyi.org.nz/request/21325-guidelines-for-questioning-in-a-non-formal-interview#incoming-80666",
+					"fileUrl": "https://fyi.org.nz/request/21325/response/80666/attach/3/Harris%20JA%20IR%2001%2022%2037549%20signed%20response.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "../../bulk-files/2022-12-21/Harris JA IR 01 22 37549 signed response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 1190906,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing in the table of contents and at the start of sentences throughout the document",
+									"Pages 30 and 32 are images of text"
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2022-12-21/Harris JA IR 01 22 37549 signed response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 1190906,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "None",
+						"features": {
+							"text-based": {
+								"value": false
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-jonhx"
 		}
 	]
 }
