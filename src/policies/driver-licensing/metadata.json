@@ -1,50 +1,92 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Driver licensing",
 	"versions": [
 		{
-			"id": "u-saxwo",
 			"duration": {
-				"start": "2017-07-07"
+				"on": [
+					"2023-02-27"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "Lewis T",
+						"id": "IR-01-23-2880",
+						"requestUrl": "https://fyi.org.nz/request/21656-driver-licensing-chapter-police-policy",
+						"responseUrl": "https://fyi.org.nz/request/21656-driver-licensing-chapter-police-policy#incoming-82250",
+						"withholdings": {
+							"9(2)(k)": "Information was withheld on pages 9, 17, and 19."
+						}
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2023-02-27",
+					"retrieved": "2023-03-12",
+					"url": "https://fyi.org.nz/request/21656-driver-licensing-chapter-police-policy#incoming-82250",
+					"fileUrl": "https://fyi.org.nz/request/21656/response/82250/attach/3/T%20Lewis%20IR%2001%2023%202880%20response.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2023-02-27/T Lewis IR 01 23 2880 response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 1844786,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"The table of contents and pages 5–7 are images of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2023-02-27/T Lewis IR 01 23 2880 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 1844786,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-saxwo"
 		}
 	]
 }
