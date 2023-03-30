@@ -1,55 +1,83 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Police Integrated Tactical Training (PITT)",
 	"versions": [
 		{
-			"id": "u-tqjpn",
 			"duration": {
-				"start": "2021-08-04"
+				"on": [
+					"2023-03-27"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"id": "IR-01-23-2223",
+						"requestUrl": "https://fyi.org.nz/request/21593-pitt-manuals",
+						"responseUrl": "https://fyi.org.nz/request/21593-pitt-manuals#incoming-83366",
+						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2023-03-27",
+					"retrieved": "2023-03-27",
+					"url": "https://fyi.org.nz/request/21593-pitt-manuals#incoming-83366",
+					"fileUrl": "https://fyi.org.nz/request/21593/response/83366/attach/4/Smith%20IR%2001%2023%202223%20Response.pdf"
 				}
 			],
-			"files": []
+			"files": [
+				{
+					"path": "../../bulk-files/2023-03-27/Smith IR 01 23 2223 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 2,
+					"size": 698235,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2023-03-27/Smith IR 01 23 2223 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 698235,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-tqjpn"
 		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
-		}
-	],
-	"pendingRequest": {
-		"id": "IR-01-23-2223",
-		"requestUrl": "https://fyi.org.nz/request/21593-pitt-manuals",
-		"withholdings": "Undetermined"
-	}
+	]
 }

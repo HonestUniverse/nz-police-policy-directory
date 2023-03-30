@@ -4,6 +4,7 @@
 	"versions": [
 		{
 			"duration": {
+				"start": "2021-06-01",
 				"on": [
 					"2021-12-08",
 					"2021-12-21"
@@ -28,6 +29,99 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2023-03-03/Brown Shaun IR 01 23 3550 response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 3,
+					"size": 1120380,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Shaun Brown",
+								"id": "IR-01-23-3550",
+								"requestUrl": "https://fyi.org.nz/request/21731-police-policy-around-speed-cameras",
+								"responseUrl": "https://fyi.org.nz/request/21731-police-policy-around-speed-cameras#incoming-82450",
+								"withholdings": "None"
+							},
+							"released": "2023-03-03",
+							"retrieved": "2023-03-06",
+							"url": "https://fyi.org.nz/request/21731-police-policy-around-speed-cameras#incoming-82450",
+							"fileUrl": "https://fyi.org.nz/request/21731/response/82450/attach/3/Brown%20Shaun%20IR%2001%2023%203550%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Some characters are missing from the table of contents.",
+									"There are images containing text on pages 21 and 22."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2023-03-03/Brown Shaun IR 01 23 3550 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 1120380,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Shaun Brown",
+								"id": "IR-01-23-3550",
+								"requestUrl": "https://fyi.org.nz/request/21731-police-policy-around-speed-cameras",
+								"responseUrl": "https://fyi.org.nz/request/21731-police-policy-around-speed-cameras#incoming-82450",
+								"withholdings": "None"
+							},
+							"released": "2023-03-03",
+							"retrieved": "2023-03-06",
+							"url": "https://fyi.org.nz/request/21731-police-policy-around-speed-cameras#incoming-82450",
+							"fileUrl": "https://fyi.org.nz/request/21731/response/82450/attach/3/Brown%20Shaun%20IR%2001%2023%203550%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "unnamed-version-1/Oscar IR 01 21 34705 Speed enforcement documents.pdf",
 					"type": "application/pdf",
