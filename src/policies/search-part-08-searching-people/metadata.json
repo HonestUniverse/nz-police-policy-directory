@@ -28,6 +28,54 @@
 			],
 			"files": [
 				{
+					"path": "2023-05-05/search-part-8-searching-people-redacted-090523.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1832627,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": {
+								"6(c)": "Information has been withheld on page 21."
+							},
+							"published": {
+								"year": 2023,
+								"month": 5
+							},
+							"extracted": "2023-05-05",
+							"retrieved": "2023-05-13",
+							"url": "https://www.police.govt.nz/about-us/publication/search-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20230513002355/https://www.police.govt.nz/about-us/publication/search-police-manual-chapter",
+							"fileUrl": "https://web.archive.org/web/20230513002355/https://www.police.govt.nz/about-us/publication/search-police-manual-chapter",
+							"archiveFileUrl": "https://web.archive.org/web/20230513010841/https://www.police.govt.nz/sites/default/files/publications/search-part-8-searching-people-redacted-090523.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 9, 13, 16, 21, and 22 are images of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
 					"path": "2022-11-01/search-part-8-searching-people-redacted-031122.pdf",
 					"type": "application/pdf",
 					"documentType": "Policy",
