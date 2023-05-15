@@ -71,8 +71,9 @@
 		}
 	],
 	"pendingRequest": {
-		"requester": "Mason",
-		"requestUrl": "https://fyi.org.nz/request/20081-police-manual-chapters#outgoing-34313",
+		"requester": "J. Beddeck",
+		"id": "IR-01-23-14580",
+		"requestUrl": "https://fyi.org.nz/request/22802-police-manual-chapters/",
 		"withholdings": "Undetermined"
 	}
 }
