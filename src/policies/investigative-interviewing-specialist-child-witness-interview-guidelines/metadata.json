@@ -46,5 +46,11 @@
 			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
 			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
 		}
+	],
+	"notices": [
+		{
+			"type": "warning",
+			"message": "When NZ Police <a href=\"https://www.police.govt.nz/about-us/publication/investigative-interviewing-police-manual-chapter\" target=\"blank\">proactively released</a> chapters in the \"Investigative interviewing\" section of the Police Manual in May 2023, this chapter was not included. It's possible that this chapter is obsolete."
+		}
 	]
 }
