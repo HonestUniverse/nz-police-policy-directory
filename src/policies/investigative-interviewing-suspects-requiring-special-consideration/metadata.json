@@ -6,8 +6,62 @@
 		{
 			"duration": {
 				"on": [
-					"2020-05-01"
+					"2023-05-18"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2023,
+						"month": 5
+					},
+					"extracted": "2023-05-18",
+					"retrieved": "2023-05-20",
+					"url": "https://www.police.govt.nz/about-us/publication/investigative-interviewing-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20230520005559/https://www.police.govt.nz/about-us/publication/investigative-interviewing-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/suspects-requiring-special-consideration-180523.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20230520005950/https://www.police.govt.nz/sites/default/files/publications/suspects-requiring-special-consideration-180523.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2023-05-18/suspects-requiring-special-consideration-180523.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 831419,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-ifhtv"
+		},
+		{
+			"duration": {
+				"on": [
+					"2020-05-01"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
