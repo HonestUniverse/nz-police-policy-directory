@@ -6,8 +6,69 @@
 		{
 			"duration": {
 				"on": [
-					"2022-08-11"
+					"2023-05-12",
+					"2023-05-18"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2023,
+						"month": 5
+					},
+					"extracted": "2023-05-12",
+					"retrieved": "2023-05-20",
+					"url": "https://www.police.govt.nz/about-us/publication/sudden-death-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20230520005642/https://www.police.govt.nz/about-us/publication/sudden-death-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/sudden-death-180523.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20230520005635/https://www.police.govt.nz/sites/default/files/publications/sudden-death-180523.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2023-05-18/sudden-death-180523.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1264857,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": false,
+								"notes": [
+									"An image on page 24 has had parts of it converted incorrectly to text."
+								]
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-oivkx"
+		},
+		{
+			"duration": {
+				"on": [
+					"2022-08-11"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
