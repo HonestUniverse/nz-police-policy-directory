@@ -203,5 +203,10 @@
 			],
 			"id": "u-jzzse"
 		}
-	]
+	],
+	"pendingRequest": {
+		"requester": "J.Montgomery",
+		"requestUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals",
+		"withholdings": "Undetermined"
+	}
 }
