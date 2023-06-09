@@ -1,52 +1,64 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Banking, currency and card policy",
 	"versions": [
 		{
-			"id": "u-diutv",
 			"duration": {
-				"start": "2022-09-27",
 				"on": [
-					"2023-01-12"
+					"2023-05-31",
+					{
+						"year": 2023,
+						"month": 6
+					}
 				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
-					"method": "Released under the OIA",
-					"oiaRequest": {
-						"requester": "J. Beddek",
-						"id": "IR-01-22-34776",
-						"requestUrl": "https://fyi.org.nz/request/21077-police-manual-chapters",
-						"responseUrl": "https://fyi.org.nz/request/21077-police-manual-chapters#incoming-80953",
-						"withholdings": "None"
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2023,
+						"month": 6
 					},
-					"released": "2023-01-12",
-					"retrieved": "2023-01-27",
-					"url": "https://fyi.org.nz/request/21077-police-manual-chapters#incoming-80953",
-					"fileUrl": "https://fyi.org.nz/request/21077/response/80953/attach/7/Beddek%20J%20IR%2001%2022%2034776%20response.pdf"
+					"extracted": "2023-05-31",
+					"retrieved": "2023-06-10",
+					"url": "https://www.police.govt.nz/about-us/publication/finance-police-manual-chapters",
+					"archiveUrl": "https://web.archive.org/web/20230609211916/https://www.police.govt.nz/about-us/publication/finance-police-manual-chapters",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/banking-currency-and-card-policy-310523.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20230609211936/https://www.police.govt.nz/sites/default/files/publications/banking-currency-and-card-policy-310523.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2023-05-31/banking-currency-and-card-policy-310523.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 948278,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-diutv"
 		}
 	],
 	"notices": [
