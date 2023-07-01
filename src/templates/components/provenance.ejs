@@ -27,12 +27,14 @@
 		const withholdings = provenance.withholdings || provenance.oiaRequest?.withholdings;
 
 		const [dateType, date] = (() => {
-			if (provenance.published) {
+			if (provenance.published && provenance.method !== 'Released under the OIA') {
 				return ['Published', provenance.published];
 			} else if (provenance.extracted && !locals.options?.omitExtractedDate) {
 				return ['Extracted', provenance.extracted];
 			} else if (provenance.released) {
 				return ['Released', provenance.released];
+			} else if (provenance.published && provenance.method === 'Released under the OIA') {
+				return ['Published', provenance.published];
 			} else if (provenance.retrieved) {
 				return ['Retrieved', provenance.retrieved];
 			} else if (provenance.refused) {
