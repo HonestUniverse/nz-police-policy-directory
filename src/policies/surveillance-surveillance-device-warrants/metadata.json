@@ -5,8 +5,10 @@
 	"versions": [
 		{
 			"duration": {
+				"start": "2018-10-02",
 				"on": [
-					"2022-11-02"
+					"2022-11-02",
+					"2023-06-27"
 				]
 			},
 			"provenance": [
@@ -74,6 +76,111 @@
 							},
 							"semantics": {
 								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2023-06-20/surveillance-device-warrants-200623.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 2377357,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "J. Beddek",
+								"id": "IR-01-23-14580",
+								"responseUrl": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+								"withholdings": "None",
+								"requestUrl": "https://fyi.org.nz/request/22802-police-manual-chapters"
+							},
+							"published": {
+								"year": 2023,
+								"month": 6
+							},
+							"extracted": "2023-06-20",
+							"released": "2023-06-27",
+							"retrieved": "2023-06-29",
+							"url": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+							"fileUrl": "https://fyi.org.nz/request/22802/response/86671/attach/4/J%20Beddek%20IR%2001%2023%2014580%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 9, 15–17, 19, and 29 are images of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"message": "This file contains a header stating that it was \"Proactively released by New Zealand Police\". However, it was published on the NZ Police website 11 working days after the legal deadline for NZ Police to release it under the OIA following a request received on 14 May 2023. The response to that OIA request, sent on the same day as this document was published, provided a link to the NZ Police website."
+						}
+					]
+				},
+				{
+					"path": "../../bulk-files/2023-06-27/J Beddek IR 01 23 14580 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 434004,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "J. Beddek",
+								"id": "IR-01-23-14580",
+								"responseUrl": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+								"withholdings": "None",
+								"requestUrl": "https://fyi.org.nz/request/22802-police-manual-chapters"
+							},
+							"published": {
+								"year": 2023,
+								"month": 6
+							},
+							"extracted": "2023-06-20",
+							"released": "2023-06-27",
+							"retrieved": "2023-06-29",
+							"url": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+							"fileUrl": "https://fyi.org.nz/request/22802/response/86671/attach/4/J%20Beddek%20IR%2001%2023%2014580%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
 							},
 							"unwatermarked": {
 								"value": true
