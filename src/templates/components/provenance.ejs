@@ -53,7 +53,12 @@
 			<% } %>
 
 			<% if (provenance.source) { %>
-				by <%= provenance.source %>
+				<% if (provenance.refused) { %>
+					from
+				<% } else { %>
+					by
+				<% } %>
+				<%= provenance.source %>
 			<% } %>
 		</div>
 
