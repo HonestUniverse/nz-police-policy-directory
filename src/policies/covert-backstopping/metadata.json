@@ -1,4 +1,6 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Covert backstopping",
 	"versions": [
 		{
@@ -11,46 +13,47 @@
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "J. Beddek",
+						"id": "IR-01-23-14580",
+						"responseUrl": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+						"withholdings": {
+							"6(c)": "The entire document was withheld"
+						},
+						"requestUrl": "https://fyi.org.nz/request/22802-police-manual-chapters"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"refused": "2023-06-27",
+					"url": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+					"fileUrl": "https://fyi.org.nz/request/22802/response/86671/attach/4/J%20Beddek%20IR%2001%2023%2014580%20response.pdf"
 				}
 			],
-			"files": []
+			"files": [
+				{
+					"path": "../../bulk-files/2023-06-27/J Beddek IR 01 23 14580 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 434004,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			]
 		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
-		}
-	],
-	"pendingRequest": {
-		"requester": "J. Beddeck",
-		"id": "IR-01-23-14580",
-		"requestUrl": "https://fyi.org.nz/request/22802-police-manual-chapters/",
-		"withholdings": "Undetermined"
-	}
+	]
 }
