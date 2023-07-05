@@ -6,9 +6,11 @@
 		{
 			"id": "u-pfeuq",
 			"duration": {
+				"start": "2018-08-22",
 				"on": [
 					"2021-07-12",
-					"2022-10-07"
+					"2022-10-07",
+					"2023-06-27"
 				]
 			},
 			"provenance": [
@@ -75,6 +77,109 @@
 							},
 							"semantics": {
 								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2023-06-20/categories-surveillance-device-redacted-200623.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1040014,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "J. Beddek",
+								"id": "IR-01-23-14580",
+								"responseUrl": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+								"withholdings": {
+									"6(c)": "Information was withheld on page 15"
+								},
+								"requestUrl": "https://fyi.org.nz/request/22802-police-manual-chapters"
+							},
+							"published": {
+								"year": 2023,
+								"month": 6
+							},
+							"extracted": "2023-06-20",
+							"released": "2023-06-27",
+							"retrieved": "2023-06-29",
+							"url": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+							"fileUrl": "https://fyi.org.nz/request/22802/response/86671/attach/4/J%20Beddek%20IR%2001%2023%2014580%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Page 14 is an image of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": false
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2023-06-27/J Beddek IR 01 23 14580 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 434004,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "J. Beddek",
+								"id": "IR-01-23-14580",
+								"responseUrl": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+								"withholdings": {
+									"6(c)": "Information was withheld on page 15"
+								},
+								"requestUrl": "https://fyi.org.nz/request/22802-police-manual-chapters"
+							},
+							"published": {
+								"year": 2023,
+								"month": 6
+							},
+							"extracted": "2023-06-20",
+							"released": "2023-06-27",
+							"retrieved": "2023-06-29",
+							"url": "https://fyi.org.nz/request/22802-police-manual-chapters#incoming-86671",
+							"fileUrl": "https://fyi.org.nz/request/22802/response/86671/attach/4/J%20Beddek%20IR%2001%2023%2014580%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
 							},
 							"unwatermarked": {
 								"value": true
