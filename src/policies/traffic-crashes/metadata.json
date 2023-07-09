@@ -6,6 +6,7 @@
 		{
 			"duration": {
 				"on": [
+					"2023-06-28",
 					"2023-07-07"
 				]
 			},
@@ -27,6 +28,59 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2023-06-28/traffic-crashes-060723.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1334402,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2023,
+								"month": 7
+							},
+							"extracted": "2023-06-28",
+							"retrieved": "2023-07-07",
+							"url": "https://www.police.govt.nz/about-us/publication/traffic-crashes-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20230706222210/https://www.police.govt.nz/about-us/publication/traffic-crashes-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/traffic-crashes-060723.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20230706222302/https://www.police.govt.nz/sites/default/files/publications/traffic-crashes-060723.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"An image of text on page 6 has been incorrectly and partially converted to text.",
+									"Pages 12 and 13 are images of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"message": "This file contains a header stating that it was \"Proactively released by New Zealand Police\". However, it was published on the NZ Police website the day before the legal deadline for NZ Police to release it under the OIA following a request received on 10 June 2023."
+						}
+					]
+				},
 				{
 					"path": "../../bulk-files/2023-07-07/Montgomery J IR 01 23 18051 Response.pdf",
 					"type": "application/pdf",
