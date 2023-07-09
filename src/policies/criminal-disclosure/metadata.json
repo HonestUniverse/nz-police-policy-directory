@@ -7,7 +7,8 @@
 			"duration": {
 				"on": [
 					"2022-09-20",
-					"2022-10-03"
+					"2022-10-03",
+					"2023-07-07"
 				]
 			},
 			"provenance": [
@@ -29,6 +30,48 @@
 				}
 			],
 			"files": [
+				{
+					"path": "../../bulk-files/2023-07-07/Montgomery J IR 01 23 18051 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5184757,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "J.Montgomery",
+								"id": "IR-01-23-18051",
+								"requestUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals",
+								"responseUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals#incoming-87806",
+								"withholdings": "None"
+							},
+							"released": "2023-07-07",
+							"retrieved": "2023-07-07",
+							"url": "https://fyi.org.nz/request/23071-requesting-police-manuals#incoming-87806",
+							"fileUrl": "https://fyi.org.nz/request/23071/response/87806/attach/4/Montgomery%20J%20IR%2001%2023%2018051%20Response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "2022-10-03/criminal_disclosure.pdf",
 					"type": "application/pdf",
@@ -203,10 +246,5 @@
 			],
 			"id": "u-jzzse"
 		}
-	],
-	"pendingRequest": {
-		"requester": "J.Montgomery",
-		"requestUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals",
-		"withholdings": "Undetermined"
-	}
+	]
 }
