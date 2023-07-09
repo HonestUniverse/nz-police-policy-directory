@@ -6,7 +6,8 @@
 		{
 			"duration": {
 				"on": [
-					"2023-05-18"
+					"2023-05-18",
+					"2023-07-04"
 				]
 			},
 			"provenance": [
@@ -27,6 +28,48 @@
 				}
 			],
 			"files": [
+				{
+					"path": "../../bulk-files/2023-07-04/Requestor of FYI IR 01 23 19658 response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 304993,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Requestor",
+								"id": "IR-01-23-19658",
+								"requestUrl": "https://fyi.org.nz/request/23221-manuals-guidelines",
+								"responseUrl": "https://fyi.org.nz/request/23221-manuals-guidelines#incoming-87650",
+								"withholdings": "None"
+							},
+							"released": "2023-07-04",
+							"retrieved": "2023-07-09",
+							"url": "https://fyi.org.nz/request/23221-manuals-guidelines#incoming-87650",
+							"fileUrl": "https://fyi.org.nz/request/23221/response/87650/attach/4/Requestor%20of%20FYI%20IR%2001%2023%2019658%20response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "2023-05-18/suspects-requiring-special-consideration-180523.pdf",
 					"type": "application/pdf",
