@@ -72,8 +72,7 @@
 								"value": true
 							},
 							"semantics": {
-								"value": "Undetermined",
-								"notes": ["string"]
+								"value": "Undetermined"
 							},
 							"unwatermarked": {
 								"value": true
