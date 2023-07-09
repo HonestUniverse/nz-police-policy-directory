@@ -461,10 +461,7 @@
 								"value": true
 							},
 							"semantics": {
-								"value": "Undetermined",
-								"notes": [
-									"string"
-								]
+								"value": "Undetermined"
 							},
 							"alt text": {
 								"value": false,
