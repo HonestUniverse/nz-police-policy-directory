@@ -65,23 +65,6 @@
 					"documentType": "OIA response letter",
 					"startingPage": 1,
 					"size": 5184757,
-					"provenance": [
-						{
-							"source": "NZ Police",
-							"method": "Released under the OIA",
-							"oiaRequest": {
-								"requester": "J.Montgomery",
-								"id": "IR-01-23-18051",
-								"requestUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals",
-								"responseUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals#incoming-87806",
-								"withholdings": "None"
-							},
-							"released": "2023-07-07",
-							"retrieved": "2023-07-07",
-							"url": "https://fyi.org.nz/request/23071-requesting-police-manuals#incoming-87806",
-							"fileUrl": "https://fyi.org.nz/request/23071/response/87806/attach/4/Montgomery%20J%20IR%2001%2023%2018051%20Response.pdf"
-						}
-					],
 					"licence": {
 						"name": "None"
 					},

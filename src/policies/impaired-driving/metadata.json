@@ -45,8 +45,7 @@
 						"rating": "Poor",
 						"features": {
 							"text-based": {
-								"value": "Undetermined",
-								"notes": ["string"]
+								"value": true
 							},
 							"semantics": {
 								"value": "Undetermined"
