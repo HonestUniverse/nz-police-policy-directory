@@ -70,7 +70,8 @@
 			"duration": {
 				"on": [
 					"2018-10-26"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
