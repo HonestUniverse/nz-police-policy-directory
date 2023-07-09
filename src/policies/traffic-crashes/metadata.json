@@ -1,55 +1,108 @@
 {
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"name": "Traffic crashes",
 	"versions": [
 		{
-			"id": "u-fjoku",
 			"duration": {
-				"start": "2019-10-08"
+				"on": [
+					"2023-07-07"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
 					"method": "Released under the OIA",
 					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+						"requester": "J.Montgomery",
+						"id": "IR-01-23-18051",
+						"requestUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals",
+						"responseUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals#incoming-87806",
+						"withholdings": "None"
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"released": "2023-07-07",
+					"retrieved": "2023-07-07",
+					"url": "https://fyi.org.nz/request/23071-requesting-police-manuals#incoming-87806",
+					"fileUrl": "https://fyi.org.nz/request/23071/response/87806/attach/4/Montgomery%20J%20IR%2001%2023%2018051%20Response.pdf"
 				}
 			],
-			"files": []
+			"files": [
+				{
+					"path": "../../bulk-files/2023-07-07/Montgomery J IR 01 23 18051 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 30,
+					"size": 5184757,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There is an image of text on page 6.",
+									"Page 17 is an image of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2023-07-07/Montgomery J IR 01 23 18051 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 5184757,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "J.Montgomery",
+								"id": "IR-01-23-18051",
+								"requestUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals",
+								"responseUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals#incoming-87806",
+								"withholdings": "None"
+							},
+							"released": "2023-07-07",
+							"retrieved": "2023-07-07",
+							"url": "https://fyi.org.nz/request/23071-requesting-police-manuals#incoming-87806",
+							"fileUrl": "https://fyi.org.nz/request/23071/response/87806/attach/4/Montgomery%20J%20IR%2001%2023%2018051%20Response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-fjoku"
 		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
-		}
-	],
-	"pendingRequest": {
-		"requester": "J.Montgomery",
-		"requestUrl": "https://fyi.org.nz/request/23071-requesting-police-manuals",
-		"withholdings": "Undetermined"
-	}
+	]
 }
