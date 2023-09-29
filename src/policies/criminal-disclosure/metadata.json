@@ -6,10 +6,68 @@
 		{
 			"duration": {
 				"on": [
+					"2023-09-20"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2023,
+						"month": 9
+					},
+					"extracted": "2023-09-20",
+					"retrieved": "2023-09-21",
+					"url": "https://www.police.govt.nz/about-us/publication/criminal-disclosure-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20230920213756/https://www.police.govt.nz/about-us/publication/criminal-disclosure-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/criminal-disclosure-200923.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20230920213756/https://www.police.govt.nz/sites/default/files/publications/criminal-disclosure-200923.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2023-09-20/criminal-disclosure-200923.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 2201047,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Page 8 is an image of text.",
+									"Images of text on pages 11, 12, 16–18, 22, 24, 25, 29, 31 have been partially and partly incorrectly translated into text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-bnhqt"
+		},
+		{
+			"duration": {
+				"on": [
 					"2022-09-20",
 					"2022-10-03",
 					"2023-07-07"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
