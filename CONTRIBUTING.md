@@ -1,6 +1,6 @@
-# `policepolicy.nz` contributing guide
+# policepolicy.nz contributing guide
 
-This guide explains how to set up the `policepolicy.nz` project so you can contribute, as well as the workflow for managing contributions.
+This guide explains how to set up the **policepolicy.nz** project so you can contribute, as well as the workflow for managing contributions.
 
 ## Setup
 
@@ -70,11 +70,11 @@ The project has a Jasmine test suite, with tests in the `spec` folder.
 
 ## Contributing
 
-Thank you for taking the time to contribute to `policepolicy.nz`. If you're not sure where to get started, you can view out [issues](https://github.com/HonestUniverse/nz-police-policy-directory/issues) page to see what work needs doing.
+Thank you for taking the time to contribute to **policepolicy.nz**. If you're not sure where to get started, you can view out [issues](https://github.com/HonestUniverse/nz-police-policy-directory/issues) page to see what work needs doing.
 
 ### Content
 
-Most work done on `policepolicy.nz` is updating content. You can find [issues related to updating content](https://github.com/HonestUniverse/nz-police-policy-directory/labels/content) tagged with "content".
+Most work done on **policepolicy.nz** is updating content. You can find [issues related to updating content](https://github.com/HonestUniverse/nz-police-policy-directory/labels/content) tagged with "content".
 
 Each policy has a dedicated folder in [`src/policies`](./src/policies/). In that folder there is a single file called `metadata.json`, which describes the metadata for every version of that document. There are also folders for each version, which contain that version's files. By convention, these folders are named based on the date when the document was extracted, or when it was published or released, in `YYYY-MM-DD` format.
 
