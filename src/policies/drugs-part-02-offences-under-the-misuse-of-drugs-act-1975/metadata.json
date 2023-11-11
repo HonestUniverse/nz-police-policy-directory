@@ -4,13 +4,70 @@
 	"name": "Drugs - Part 02 Offences under the Misuse of Drugs Act 1975",
 	"versions": [
 		{
+			"duration": {
+				"on": [
+					"2023-11-09"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2023,
+						"month": 11
+					},
+					"extracted": "2023-11-09",
+					"retrieved": "2023-11-11",
+					"url": "https://www.police.govt.nz/about-us/publication/drugs-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20231109204752/https://www.police.govt.nz/about-us/publication/drugs-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/part-2-offences-under-misuse-drugs-act-1975-091123.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20231109204751/https://www.police.govt.nz/sites/default/files/publications/part-2-offences-under-misuse-drugs-act-1975-091123.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2023-11-09/part-2-offences-under-misuse-drugs-act-1975-091123.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1018022,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Page 16 is an image of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-gcfvd"
+		},
+		{
 			"id": "u-sgwnh",
 			"duration": {
 				"on": [
 					"2022-06-28",
 					"2022-07-05",
 					"2022-11-02"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
