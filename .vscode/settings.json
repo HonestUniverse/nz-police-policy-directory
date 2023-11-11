@@ -1,0 +1,10 @@
+{
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"*/metadata.json"
+			],
+			"url": "./schema/policy.schema.json"
+		}
+	]
+}
