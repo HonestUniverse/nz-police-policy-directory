@@ -132,7 +132,9 @@ dist
 # Project-specific
 dist/
 
-.vscode
+.vscode/*
+!.vscode/settings.json
+
 .DS_STORE
 
 *.backup.json
