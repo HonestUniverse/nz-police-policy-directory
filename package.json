@@ -19,6 +19,7 @@
 		"html-loader": "^3.1.0",
 		"html-webpack-exclude-assets-plugin": "^0.0.7",
 		"html-webpack-plugin": "^5.5.0",
+		"http-server": "^14.1.1",
 		"http-status-codes": "^2.2.0",
 		"jasmine": "^4.1.0",
 		"mini-css-extract-plugin": "^2.6.0",
@@ -41,11 +42,12 @@
 		"watchTest": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" webpack --config webpack.config.ts --mode development --env test --watch",
 		"migrate": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/migrate.ts",
 		"generateIds": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/generate-all-ids.ts",
-		"generateStubs": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" node build/stubs/ir-01-22-11586.ts",
 		"lintJs": "eslint build/**/*.ts src/assets/js/**/*.ts src/shared/**/*.ts src/workers/**/*.ts",
 		"lintCss": "stylelint src/assets/css/**",
 		"lint": "npm run lintJs && npm run lintCss",
-		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" jasmine"
+		"test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --experimental-json-modules\" jasmine",
+		"server": "http-server ./dist -c-1",
+		"start": "npm run build && npm run server"
 	},
 	"repository": {
 		"type": "git",
