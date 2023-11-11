@@ -1,6 +1,6 @@
-# policepolicy.nz contributing guide
+# `policepolicy.nz` contributing guide
 
-Thank you for considering contributing to this project. This guide will explain how to set up the project so you can contribute, as well as the workflow for managing contributions.
+This guide explains how to set up the `policepolicy.nz` project so you can contribute, as well as the workflow for managing contributions.
 
 ## Setup
 
@@ -18,7 +18,7 @@ Once you have git installed and you've made a fork, you can [clone your forked r
 
 After cloning the project, you can install the project's dependencies so you can build it on your computer.
 
-Before you start, you will need to have [NodeJS](https://nodejs.org/en/) installed. This project requires at least version 16.14.2.
+You will need to have [NodeJS](https://nodejs.org/en/) installed. This project requires at least version 16.14.2.
 
 Once Node is installed, run this on your command line in the project directory to install its dependencies:
 
@@ -28,7 +28,7 @@ Once Node is installed, run this on your command line in the project directory t
 
 Once you have the project set up locally, you are ready to build and run it on your computer.
 
-This project relies on [npm](https://www.npmjs.com/) for package management and running build scripts. The npm docs contain instructions on [how to use npm scripts](https://docs.npmjs.com/cli/v10/using-npm/scripts).
+This project relies on [npm](https://www.npmjs.com/) for package management and running build scripts. The npm documentation contains instructions on [how to use npm scripts](https://docs.npmjs.com/cli/v10/using-npm/scripts).
 
 To get started, run `npm start` in your command line to build the site and run a simple HTTP server on port 8080. This will allow you to view the project in a web browser at [`http://localhost:8080/`](http://localhost:8080/).
 
@@ -81,6 +81,8 @@ Each policy has a dedicated folder in [`src/policies`](./src/policies/). In that
 Sometimes, typically in the response to requests made under the OIA, multiple documents are released in a single file. As multiple metadata files need to refer to the same source files, these bulk files instead live in [`src/bulk-files`](./src/bulk-files/).
 
 When adding an entirely new document, we recommend you begin by creating a copy of [`metadata-template.json`](./src/templates/metadata-template.json) to create a new file called `metadata.json`. If you're updating an existing document, e.g. to add a new version, we recommend copying the relevant section from `metadata-template.json` into the existing file.
+
+After adding a new version of any document, you will need to run `npm run generateIds` to generate a unique ID for that version.
 
 If you use VS Code it should automatically validate metadata files against our JSON schema, and provide autocompletion to help guide you.
 
