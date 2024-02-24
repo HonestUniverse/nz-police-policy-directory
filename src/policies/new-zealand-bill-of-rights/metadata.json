@@ -6,8 +6,65 @@
 		{
 			"duration": {
 				"on": [
-					"2020-06-17"
+					"2023-12-06"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2023,
+						"month": 12
+					},
+					"extracted": "2023-12-06",
+					"retrieved": "2024-02-25",
+					"url": "https://www.police.govt.nz/about-us/publication/new-zealand-bill-rights",
+					"archiveUrl": "https://web.archive.org/web/20231217203230/https://www.police.govt.nz/about-us/publication/new-zealand-bill-rights",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/new-zealand-bill-of-rights-061223.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20231217203229/https://www.police.govt.nz/sites/default/files/publications/new-zealand-bill-of-rights-061223.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2023-12-06/new-zealand-bill-of-rights-061223.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1338828,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Page 6 is an image of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-pviji"
+		},
+		{
+			"duration": {
+				"on": [
+					"2020-06-17"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{

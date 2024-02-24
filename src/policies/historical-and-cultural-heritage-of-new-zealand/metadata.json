@@ -1,50 +1,60 @@
 {
 	"name": "Historical and cultural heritage of New Zealand",
+	"schemaVersion": "1.3.0",
+	"type": "Police Manual chapter",
 	"versions": [
 		{
-			"id": "u-szuxe",
 			"duration": {
-				"start": "2017-10-02"
+				"on": [
+					"2023-12-06"
+				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
-					"method": "Released under the OIA",
-					"oiaRequest": {
-						"requester": "Mark Hanna",
-						"id": "IR-01-22-11586",
-						"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-						"withholdings": "None",
-						"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2023,
+						"month": 12
 					},
-					"extracted": "2022-05-22",
-					"released": "2022-06-13",
-					"retrieved": "2022-06-18",
-					"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-					"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+					"extracted": "2023-12-06",
+					"retrieved": "2024-02-25",
+					"url": "https://www.police.govt.nz/about-us/publication/historical-and-cultural-heritage-new-zealand",
+					"archiveUrl": "https://web.archive.org/web/20231217203128/https://www.police.govt.nz/about-us/publication/historical-and-cultural-heritage-new-zealand",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/historical-cultural-heritage-new-zealand-061223.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20231217203127/https://www.police.govt.nz/sites/default/files/publications/historical-cultural-heritage-new-zealand-061223.pdf"
 				}
 			],
-			"files": []
-		}
-	],
-	"schemaVersion": "1.3.0",
-	"type": "Police Manual chapter",
-	"provenance": [
-		{
-			"source": "NZ Police",
-			"method": "Released under the OIA",
-			"oiaRequest": {
-				"requester": "Mark Hanna",
-				"id": "IR-01-22-11586",
-				"responseUrl": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-				"withholdings": "None",
-				"requestUrl": "https://fyi.org.nz/request/19200-police-policy-documents"
-			},
-			"extracted": "2022-05-22",
-			"released": "2022-06-13",
-			"retrieved": "2022-06-18",
-			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
-			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
+			"files": [
+				{
+					"path": "2023-12-06/historical-cultural-heritage-new-zealand-061223.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 686708,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-szuxe"
 		}
 	]
 }
