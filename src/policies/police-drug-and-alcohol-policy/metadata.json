@@ -6,24 +6,26 @@
 		{
 			"duration": {
 				"on": [
-					"2023-11-02"
+					"2023-11-02",
+					"2023-12-01"
 				]
 			},
 			"provenance": [
 				{
 					"source": "NZ Police",
-					"method": "Proactively released",
-					"withholdings": "None",
-					"published": {
-						"year": 2023,
-						"month": 11
+					"method": "Released under the OIA",
+					"oiaRequest": {
+						"requester": "F Cook",
+						"id": "IR-01-23-34244",
+						"requestUrl": "https://fyi.org.nz/request/24539-police-chapter-manuals-alcohol-and-drugs",
+						"responseUrl": "https://fyi.org.nz/request/24539-police-chapter-manuals-alcohol-and-drugs#incoming-93780",
+						"withholdings": "None"
 					},
 					"extracted": "2023-11-02",
-					"retrieved": "2023-11-11",
-					"url": "https://www.police.govt.nz/about-us/publication/police-drug-and-alcohol-policy-police-manual-chapter",
-					"archiveUrl": "https://web.archive.org/web/20231110235435/https://www.police.govt.nz/about-us/publication/police-drug-and-alcohol-policy-police-manual-chapter",
-					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/police-drug-and-alcohol-policy-081123.pdf",
-					"archiveFileUrl": "https://web.archive.org/web/20231110235438/https://www.police.govt.nz/sites/default/files/publications/police-drug-and-alcohol-policy-081123.pdf"
+					"released": "2023-12-01",
+					"retrieved": "2024-02-25",
+					"url": "https://fyi.org.nz/request/24539-police-chapter-manuals-alcohol-and-drugs#incoming-93780",
+					"fileUrl": "https://fyi.org.nz/request/24539/response/93780/attach/3/Cook%20F%20IR%2001%2023%2034244%20OIA%20response%20letter.pdf"
 				}
 			],
 			"files": [
@@ -33,6 +35,23 @@
 					"documentType": "Policy",
 					"startingPage": 1,
 					"size": 771314,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2023,
+								"month": 11
+							},
+							"extracted": "2023-11-02",
+							"retrieved": "2023-11-11",
+							"url": "https://www.police.govt.nz/about-us/publication/police-drug-and-alcohol-policy-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20231110235435/https://www.police.govt.nz/about-us/publication/police-drug-and-alcohol-policy-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/police-drug-and-alcohol-policy-081123.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20231110235438/https://www.police.govt.nz/sites/default/files/publications/police-drug-and-alcohol-policy-081123.pdf"
+						}
+					],
 					"licence": {
 						"name": "CC BY-NC-ND 4.0",
 						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
@@ -55,9 +74,62 @@
 					"notices": [
 						{
 							"type": "info",
-							"message": "This file contains a header stating that it was \"Proactively released by New Zealand Police\". However, it was published on the NZ Police website after NZ Police received a request release it under the OIA on 26 October 2023."
+							"message": "This file contains a header stating that it was \"Proactively released by New Zealand Police\". However, it was published on the NZ Police website after NZ Police received a request release it under the OIA on 26 October 2023. The response to that OIA request, sent on 1 December 2023, provided a link to the NZ Police website."
 						}
 					]
+				},
+				{
+					"path": "../../bulk-files/2023-12-01/Cook F IR 01 23 34244 OIA response documentation.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 15,
+					"size": 1087262,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"There are some characters missing in areas with small font sizes, such as the table of contents."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "../../bulk-files/2023-12-01/Cook F IR 01 23 34244 OIA response letter.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 435924,
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
 				}
 			],
 			"id": "u-vicbc"
