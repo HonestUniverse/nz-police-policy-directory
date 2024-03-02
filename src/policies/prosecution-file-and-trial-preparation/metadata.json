@@ -6,8 +6,72 @@
 		{
 			"duration": {
 				"on": [
-					"2016-07-07"
+					"2024-02-15"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2024,
+						"month": 2
+					},
+					"extracted": "2024-02-15",
+					"retrieved": "2024-03-02",
+					"url": "https://www.police.govt.nz/about-us/publication/prosecution-file-and-trial-preparation-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20240215013449/https://www.police.govt.nz/about-us/publication/prosecution-file-and-trial-preparation-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/prosecution-file-and-trial-preparation-150224.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20240215013450/https://www.police.govt.nz/sites/default/files/publications/prosecution-file-and-trial-preparation-150224.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2024-02-15/prosecution-file-and-trial-preparation-150224.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 4019016,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 5, 6, 13, 15, 16, 18–21, and 23 are images of text",
+									"An image of text on page 22 has been partially and incorrectly converted to text"
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Partial",
+								"notes": [
+									"An image of text on page 22 has alt text describing the type and purpose of the image, but it does not convey the information in the image."
+								]
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-btpho"
+		},
+		{
+			"duration": {
+				"on": [
+					"2016-07-07"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
