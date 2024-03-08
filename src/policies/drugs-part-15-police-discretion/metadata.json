@@ -4,12 +4,75 @@
 	"name": "Drugs - Part 15 Police discretion with possession/use of controlled drugs and/or possession of utensils offences",
 	"versions": [
 		{
+			"duration": {
+				"on": [
+					"2024-02-16"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2024,
+						"month": 2
+					},
+					"extracted": "2024-02-16",
+					"retrieved": "2024-03-09",
+					"url": "https://www.police.govt.nz/about-us/publication/drugs-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20240224084122/https://www.police.govt.nz/about-us/publication/drugs-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/drugs-part-15-police-discretion-with-possession-220224.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20240224084238/https://www.police.govt.nz/sites/default/files/publications/drugs-part-15-police-discretion-with-possession-220224.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2024-02-16/drugs-part-15-police-discretion-with-possession-220224.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1014193,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"An image of text on page 15 has been partially and incorrectly converted to text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Partial",
+								"notes": [
+									"An image of text on page 15 is described as a flowchart, but none of the information in the image is conveyed through alt text."
+								]
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-zvhcb"
+		},
+		{
 			"id": "u-sphev",
 			"duration": {
 				"on": [
 					"2022-06-28",
 					"2022-07-05"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
