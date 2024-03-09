@@ -11,7 +11,8 @@
 					{
 						"year": 2023,
 						"month": 6
-					}
+					},
+					"2024-02-16"
 				]
 			},
 			"provenance": [
@@ -32,6 +33,52 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2024-02-16/financial-delegations-160224.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1147378,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2024,
+								"month": 2
+							},
+							"extracted": "2024-02-16",
+							"retrieved": "2024-03-09",
+							"url": "https://www.police.govt.nz/about-us/publication/finance-police-manual-chapters",
+							"archiveUrl": "https://web.archive.org/web/20240228002533/https://www.police.govt.nz/about-us/publication/finance-police-manual-chapters",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/financial-delegations-160224.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20240228002352/https://www.police.govt.nz/sites/default/files/publications/financial-delegations-160224.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Page 27 is an image of text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "2023-05-31/financial-delegations-310523.pdf",
 					"type": "application/pdf",
