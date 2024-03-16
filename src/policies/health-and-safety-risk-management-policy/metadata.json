@@ -6,7 +6,8 @@
 		{
 			"duration": {
 				"on": [
-					"2023-10-18"
+					"2023-10-18",
+					"2024-02-16"
 				]
 			},
 			"provenance": [
@@ -27,6 +28,58 @@
 				}
 			],
 			"files": [
+				{
+					"path": "2024-02-16/health-and-safety-risk-management-policy-160224.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1061541,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Proactively released",
+							"withholdings": "None",
+							"published": {
+								"year": 2024,
+								"month": 3
+							},
+							"extracted": "2024-02-16",
+							"retrieved": "2024-03-16",
+							"url": "https://www.police.govt.nz/about-us/publication/health-and-safety-risk-management-police-manual-chapter",
+							"archiveUrl": "https://web.archive.org/web/20240229205521/https://www.police.govt.nz/about-us/publication/health-and-safety-risk-management-police-manual-chapter",
+							"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/health-and-safety-risk-management-policy-160224.pdf",
+							"archiveFileUrl": "https://web.archive.org/web/20240229205432/https://www.police.govt.nz/sites/default/files/publications/health-and-safety-risk-management-policy-160224.pdf"
+						}
+					],
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Images of text on pages 4 and 9 have been partiall and incorrectly converted to text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Partial",
+								"notes": [
+									"Images of text on pages 4 and 9 have alt text describing the type of diagram, but not conveying the same information as the image."
+								]
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
 				{
 					"path": "2023-10-18/health-safety-risk-management-191023.pdf",
 					"type": "application/pdf",
@@ -49,6 +102,12 @@
 							},
 							"semantics": {
 								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": "Partial",
+								"notes": [
+									"Images of text on pages 4 and 9 have alt text describing the title of the image, but not conveying the same information as the image."
+								]
 							},
 							"unwatermarked": {
 								"value": true
