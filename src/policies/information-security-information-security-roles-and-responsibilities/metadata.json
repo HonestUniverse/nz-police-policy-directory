@@ -14,7 +14,8 @@
 					"source": "NZ Police",
 					"method": "Proactively released",
 					"withholdings": {
-						"6(c)": "Information has been withheld from the table of contents and page 3."
+						"6(a)": "Information has been withheld from page 3.",
+						"6(c)": "Information has been withheld from the table of contents"
 					},
 					"published": {
 						"year": 2024,
