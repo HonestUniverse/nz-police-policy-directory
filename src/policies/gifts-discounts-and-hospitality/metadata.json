@@ -51,10 +51,7 @@
 								"value": true
 							},
 							"unwatermarked": {
-								"value": "Undetermined",
-								"notes": [
-									"string"
-								]
+								"value": "Undetermined"
 							}
 						}
 					}
