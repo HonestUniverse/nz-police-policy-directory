@@ -6,7 +6,8 @@
 		{
 			"duration": {
 				"on": [
-					"2023-03-07"
+					"2023-03-07",
+					"2024-05-21"
 				]
 			},
 			"provenance": [
@@ -46,6 +47,48 @@
 							},
 							"semantics": {
 								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2024-05-21/Abbey IR 01 24 16200 Response.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 276585,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "Abbey",
+								"id": "IR-01-24-16200",
+								"requestUrl": "https://fyi.org.nz/request/26741-off-duty-interventions-policy",
+								"responseUrl": "https://fyi.org.nz/request/26741-off-duty-interventions-policy#incoming-100931",
+								"withholdings": "None"
+							},
+							"released": "2024-05-21",
+							"retrieved": "2024-08-17",
+							"url": "https://fyi.org.nz/request/26741-off-duty-interventions-policy#incoming-100931",
+							"fileUrl": "https://fyi.org.nz/request/26741/response/100931/attach/3/Abbey%20IR%2001%2024%2016200%20Response.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
 							},
 							"unwatermarked": {
 								"value": true
