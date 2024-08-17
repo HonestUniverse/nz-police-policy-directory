@@ -46,5 +46,11 @@
 			"url": "https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199",
 			"fileUrl": "https://fyi.org.nz/request/19200/response/74199/attach/2/List%20of%20all%20Police%20Manual%20chapters%20as%20at%20May%202022%20searchable.xlsx"
 		}
-	]
+	],
+	"pendingRequest": {
+		"requester": "malcolm daniel",
+		"id": "IR-01-24-18539",
+		"requestUrl": "https://fyi.org.nz/request/27032-policy-chapter-manuals",
+		"withholdings": "Undetermined"
+	}
 }
