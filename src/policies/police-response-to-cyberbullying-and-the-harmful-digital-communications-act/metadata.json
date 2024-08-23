@@ -6,8 +6,65 @@
 		{
 			"duration": {
 				"on": [
-					"2022-08-04"
+					"2024-08-16"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": {
+						"6(c)": "Information was withheld on pages 12–14.",
+						"6(d)": "Information was withheld on page 12."
+					},
+					"published": {
+						"year": 2024,
+						"month": 8
+					},
+					"extracted": "2024-08-16",
+					"retrieved": "2024-08-24",
+					"url": "https://www.police.govt.nz/about-us/publication/police-response-cyberbullying-and-harmful-digital-communications-act-police",
+					"archiveUrl": "https://web.archive.org/web/20240816230815/https://www.police.govt.nz/about-us/publication/police-response-cyberbullying-and-harmful-digital-communications-act-police",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/police-response-to-cyberbullying-redacted-160824.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20240816230632/https://www.police.govt.nz/sites/default/files/publications/police-response-to-cyberbullying-redacted-160824.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2024-08-16/police-response-to-cyberbullying-redacted-160824.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 838270,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-uuzvs"
+		},
+		{
+			"duration": {
+				"on": [
+					"2022-08-04"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
