@@ -4,6 +4,70 @@
 	"name": "Surveillance - Categories of surveillance with a device",
 	"versions": [
 		{
+			"duration": {
+				"on": [
+					"2024-08-16"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": {
+						"6(c)": "Information was witheld on pages 7 and 15."
+					},
+					"published": {
+						"year": 2024,
+						"month": 8
+					},
+					"extracted": "2024-08-16",
+					"retrieved": "2024-08-24",
+					"url": "https://www.police.govt.nz/about-us/publication/surveillance-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20240816230633/https://www.police.govt.nz/about-us/publication/surveillance-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/categories-of-surveillance-with-device-redacted-160824.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20240816230635/https://www.police.govt.nz/sites/default/files/publications/categories-of-surveillance-with-device-redacted-160824.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2024-08-16/categories-of-surveillance-with-device-redacted-160824.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1376456,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Pages 7 and 14 are images of text."
+								]
+							},
+							"semantics": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					},
+					"notices": [
+						{
+							"type": "info",
+							"message": "Information withheld on page 7 may not have changed since it was released in the previous version."
+						}
+					]
+				}
+			],
+			"id": "u-qjpcn"
+		},
+		{
 			"id": "u-pfeuq",
 			"duration": {
 				"start": "2018-08-22",
@@ -11,7 +75,8 @@
 					"2021-07-12",
 					"2022-10-07",
 					"2023-06-27"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
