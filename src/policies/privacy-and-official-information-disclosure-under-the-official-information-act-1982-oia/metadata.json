@@ -7,7 +7,8 @@
 			"duration": {
 				"on": [
 					"2023-02-15",
-					"2023-02-16"
+					"2023-02-16",
+					"2024-06-21"
 				]
 			},
 			"provenance": [
@@ -95,6 +96,48 @@
 							},
 							"semantics": {
 								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				},
+				{
+					"path": "2024-06-21/OIA Response IR 01 24 18368.pdf",
+					"type": "application/pdf",
+					"documentType": "OIA response letter",
+					"startingPage": 1,
+					"size": 282042,
+					"provenance": [
+						{
+							"source": "NZ Police",
+							"method": "Released under the OIA",
+							"oiaRequest": {
+								"requester": "J Dough",
+								"id": "IR-01-24-18368",
+								"requestUrl": "https://fyi.org.nz/request/27008-partial-oia-request",
+								"responseUrl": "https://fyi.org.nz/request/27008-partial-oia-request#incoming-102683",
+								"withholdings": "None"
+							},
+							"released": "2024-06-21",
+							"retrieved": "2024-08-24",
+							"url": "https://fyi.org.nz/request/27008-partial-oia-request",
+							"fileUrl": "https://fyi.org.nz/request/27008/response/102683/attach/4/OIA%20Response%20IR%2001%2024%2018368.pdf"
+						}
+					],
+					"licence": {
+						"name": "None"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Poor",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
 							},
 							"unwatermarked": {
 								"value": true
