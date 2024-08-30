@@ -5,8 +5,64 @@
 		{
 			"duration": {
 				"on": [
-					"2022-07-21"
+					"2024-08-26"
 				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": {
+						"9(2)(g)(ii)": "Some information has been withheld on page 7. Only \"s.9(2)(g) OIA\" was specified, but from previous releases s9(2)(g)(ii) seems most likely."
+					},
+					"published": {
+						"year": 2024,
+						"month": 8
+					},
+					"extracted": "2024-08-26",
+					"retrieved": "2024-08-31",
+					"url": "https://www.police.govt.nz/about-us/publication/social-media-policy-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20240830224354/https://www.police.govt.nz/about-us/publication/social-media-policy-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/social-media-policy-redacted-260824.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20240830224437/https://www.police.govt.nz/sites/default/files/publications/social-media-policy-redacted-260824.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2024-08-26/social-media-policy-redacted-260824.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 719746,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-avuxs"
+		},
+		{
+			"duration": {
+				"on": [
+					"2022-07-21"
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
