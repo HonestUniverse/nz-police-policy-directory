@@ -6,9 +6,69 @@
 		{
 			"duration": {
 				"on": [
+					"2024-08-27"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2024,
+						"month": 8
+					},
+					"extracted": "2024-08-27",
+					"retrieved": "2024-08-31",
+					"url": "https://www.police.govt.nz/about-us/publication/health-and-safety-risk-management-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20240830224612/https://www.police.govt.nz/about-us/publication/health-and-safety-risk-management-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/health-and-safety-risk-management-policy-270824-1.pdf",
+					"archiveFileUrl": "https://web.archive.org/web/20240830224650/https://www.police.govt.nz/sites/default/files/publications/health-and-safety-risk-management-policy-270824-1.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2024-08-27/health-and-safety-risk-management-policy-270824-1.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 1112037,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Bad",
+						"features": {
+							"text-based": {
+								"value": "Partial",
+								"notes": [
+									"Images of text on pages 4, 7, and 11 have been partially and incorrectly converted to text."
+								]
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"alt text": {
+								"value": false
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"id": "u-hafvv"
+		},
+		{
+			"duration": {
+				"on": [
 					"2023-10-18",
 					"2024-02-16"
-				]
+				],
+				"ended": true
 			},
 			"provenance": [
 				{
@@ -62,7 +122,7 @@
 							"text-based": {
 								"value": "Partial",
 								"notes": [
-									"Images of text on pages 4 and 9 have been partiall and incorrectly converted to text."
+									"Images of text on pages 4 and 9 have been partially and incorrectly converted to text."
 								]
 							},
 							"semantics": {
