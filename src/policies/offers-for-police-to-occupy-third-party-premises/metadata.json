@@ -1,0 +1,66 @@
+{
+	"schemaVersion": "1.3.0",
+	"name": "Offers for Police to occupy third-party premises",
+	"type": "Police Manual chapter",
+	"versions": [
+		{
+			"duration": {
+				"on": [
+					"2024-10-10"
+				]
+			},
+			"provenance": [
+				{
+					"source": "NZ Police",
+					"method": "Proactively released",
+					"withholdings": "None",
+					"published": {
+						"year": 2024,
+						"month": 10
+					},
+					"extracted": "2024-10-10",
+					"retrieved": "2024-10-13",
+					"url": "https://www.police.govt.nz/about-us/publication/offers-police-occupy-third-party-premises-police-manual-chapter",
+					"archiveUrl": "https://web.archive.org/web/20241108194432/https://www.police.govt.nz/about-us/publication/offers-police-occupy-third-party-premises-police-manual-chapter",
+					"fileUrl": "https://www.police.govt.nz/sites/default/files/publications/offers-for-police-to-occupy-third-party-premises-101024.pdf",
+					"archiveFileUrl": "https://www.police.govt.nz/sites/default/files/publications/offers-for-police-to-occupy-third-party-premises-101024.pdf"
+				}
+			],
+			"files": [
+				{
+					"path": "2024-10-10/offers-for-police-to-occupy-third-party-premises-101024.pdf",
+					"type": "application/pdf",
+					"documentType": "Policy",
+					"startingPage": 1,
+					"size": 670123,
+					"licence": {
+						"name": "CC BY-NC-ND 4.0",
+						"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					},
+					"original": true,
+					"accessibility": {
+						"rating": "Undetermined",
+						"features": {
+							"text-based": {
+								"value": true
+							},
+							"semantics": {
+								"value": "Undetermined"
+							},
+							"unwatermarked": {
+								"value": true
+							}
+						}
+					}
+				}
+			],
+			"notices": [
+				{
+					"type": "info",
+					"message": "This document was not listed in <a href=\"https://fyi.org.nz/request/19200-police-policy-documents#incoming-74199\" target=\"blank\">a list of all Police Manual chapters</a> released under the OIA on 22 May 2022. This may be the first active version of the policy."
+				}
+			],
+			"id": "u-bwwos"
+		}
+	]
+}
